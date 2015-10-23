@@ -18,16 +18,17 @@
 #include <Style.h>
 #include <action.h>
 #include <Gadget.h>
+#include <gadgets\Image.h>          // --->    affiche image ou couleur
 #include <gadgets\Label.h>          // --->    affiche txt
-#include <gadgets\Groupe.h>         // --->    interface graphique   grp
+#include <gadgets\Groupe.h>         // --->    groupe de gadgets   grp
+#include <gadgets\Bouton.h>         // --->    declenche des fcts
 
 
 
 
-//#include <gadgets\Image.h>       // --->    affiche image
+//
 ////SaisieTexte                    // --->    Champs de saisie de texte
 //
-//#include <gadgets\Bouton.h>      // --->    declenche fct
 //#include <gadgets\BoutonTexte.h> // --->    declenche fct
 ////BoutonCurseur                     --->    de 0. à 1.
 //#include <gadgets\BoutonCocher.h>//--->    0 ou 1

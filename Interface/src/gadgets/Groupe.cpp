@@ -51,29 +51,6 @@ Groupe::getSize ( ){
              ,   getLocalBounds().height };
 };
 
-
-/////////////////////////////////////////////////
-void
-Groupe::actualiser ( float deltaT )    {
-    Gadget::actualiser( deltaT );
-  /*  for ( ptr enfant : m_enfants )
-        enfant->actualiser ( deltaT );*/
-}
-
-/////////////////////////////////////////////////
-void
-Groupe::traiter_evenements ( const sf::Event& event )    {
-    for ( ptr enfant : m_enfants )
-        enfant->traiter_evenements ( event );
-}
-
-/////////////////////////////////////////////////
-void
-Groupe::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
-    states.transform *= getTransform();
-    for ( ptr enfant : m_enfants )
-        target.draw      ( *enfant , states );
-}
 } // fin namespace gui
 
 

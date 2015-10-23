@@ -397,7 +397,7 @@
 	"Config.h"
 	"ecrans\EcranDemo.h"
 
-1445611861 r:\06 - c++\107 - interface\main\include\config.h
+1445626676 r:\06 - c++\107 - interface\main\include\config.h
 	<SFML/Graphics.hpp>
 	<map>
 	<ResourceMgr.h>
@@ -518,13 +518,15 @@
 1445555078 r:\06 - c++\107 - interface\main\include\resourcemgr.inl
 	"ResourceMgr.h"
 
-1445614515 r:\06 - c++\107 - interface\interface\gui.h
+1445621664 r:\06 - c++\107 - interface\interface\gui.h
 	<Skin.h>
 	<Style.h>
 	<action.h>
 	<Gadget.h>
+	<gadgets\Image.h>
 	<gadgets\Label.h>
 	<gadgets\Groupe.h>
+	<gadgets\Bouton.h>
 
 1445613107 r:\06 - c++\107 - interface\interface\include\style.h
 	<SFML/Graphics.hpp>
@@ -536,7 +538,7 @@
 	<list>
 	<map>
 
-1445619207 r:\06 - c++\107 - interface\interface\include\gadget.h
+1445639967 r:\06 - c++\107 - interface\interface\include\gadget.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<vector>
@@ -549,28 +551,28 @@
 	"Gadget.h"
 	<iostream>
 
-1445619207 r:\06 - c++\107 - interface\interface\include\gadgets\label.h
+1445626055 r:\06 - c++\107 - interface\interface\include\gadgets\label.h
 	<SFML/Graphics.hpp>
 	<string>
 	<Gadget.h>
 
-1445619207 r:\06 - c++\107 - interface\interface\include\gadgets\groupe.h
+1445625025 r:\06 - c++\107 - interface\interface\include\gadgets\groupe.h
 	<Gadget.h>
 
-1445615440 r:\06 - c++\107 - interface\main\include\ecrans\ecrandemo.h
+1445638998 r:\06 - c++\107 - interface\main\include\ecrans\ecrandemo.h
 	<SFML/Graphics.hpp>
 	<Ecran.h>
 	<Application.h>
 	<GUI.h>
 
-1445614430 source:r:\06 - c++\107 - interface\main\src\config.cpp
+1445626684 source:r:\06 - c++\107 - interface\main\src\config.cpp
 	"Config.h"
 	<iostream>
 
 1445552257 source:r:\06 - c++\107 - interface\main\src\ecran.cpp
 	"Ecran.h"
 
-1445619507 source:r:\06 - c++\107 - interface\main\src\ecrans\ecrandemo.cpp
+1445640042 source:r:\06 - c++\107 - interface\main\src\ecrans\ecrandemo.cpp
 	"ecrans\EcranDemo.h"
 	<iostream>
 	<Config.h>
@@ -579,6 +581,14 @@
 1445595768 source:r:\06 - c++\107 - interface\main\src\gestion_ecrans.cpp
 	"Gestion_ecrans.h"
 
-1445610245 r:\06 - c++\107 - interface\interface\include\skin.h
+1445628227 r:\06 - c++\107 - interface\interface\include\skin.h
 	<Style.h>
+
+1445381966 r:\06 - c++\107 - interface\interface\include\gadgets\image.h
+	<Gadget.h>
+
+1445626005 r:\06 - c++\107 - interface\interface\include\gadgets\bouton.h
+	<SFML/Graphics.hpp>
+	<iostream>
+	<Gadget.h>
 

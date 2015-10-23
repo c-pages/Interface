@@ -15,44 +15,50 @@ Action::FuncType     Action::defaultFunc = [](  )->void{};
 
 /////////////////////////////////////////////////
 void
-Action::lier       ( Evenements evt ,      const FuncType& fonction )    {
+Action::lier    ( Evenements evt ,      const FuncType& fonction )
+{
     this->_evtsSouris.insert( { evt , fonction } );
 }
 
 
 /////////////////////////////////////////////////
 void
-Action::lier      (  sf::Keyboard::Key touche ,  const FuncType& fonction )    {
+Action::lier      (  sf::Keyboard::Key touche ,  const FuncType& fonction )
+{
     _evtsClavier.insert( { touche  , fonction } );
 }
 
 
 /////////////////////////////////////////////////
 void
-Action::delier     ( Evenements evt )    {
+Action::delier     ( Evenements evt )
+{
     _evtsSouris.erase( evt  );
 }
 
 
 /////////////////////////////////////////////////
 void
-Action::delier  ( sf::Keyboard::Key  touche)   {
+Action::delier  ( sf::Keyboard::Key  touche)
+{
     _evtsClavier.erase( touche  );
 }
 
 
 /////////////////////////////////////////////////
 void
-Action::declencher (Evenements evt )    {
+Action::declencher (Evenements evt )
+{
     auto fct = _evtsSouris.find( evt );
     if( fct != _evtsSouris.end())
-            fct->second();
+        fct->second();
 }
 
 
 /////////////////////////////////////////////////
 bool
-Action::traiter_evenements   (const sf::Event& event)    {
+Action::traiter_evenements   (const sf::Event& event)
+{
     if ( event.type == sf::Event::KeyReleased )
         for (auto evt : _evtsClavier)
             if (event.key.code == evt.first)

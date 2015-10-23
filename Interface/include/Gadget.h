@@ -39,13 +39,31 @@ public:
     /// \param  style   Le style à appliquer (Configuration::Styles).
     ///
     /////////////////////////////////////////////////
-    Gadget  ( Style*    style );
+    Gadget  ( Style    style );
+
+    /////////////////////////////////////////////////
+    /// \brief  Constructeur avec un style existant
+    ///
+    /// \param  skin   Le skin à appliquer (Configuration::Skins).
+    ///
+    /////////////////////////////////////////////////
+    Gadget  ( Skin    skin );
+
 
     /////////////////////////////////////////////////
     /// \brief Destructeur
     ///
     /////////////////////////////////////////////////
     virtual ~Gadget();
+
+    /////////////////////////////////////////////////
+    /// \brief Acceder à la taille du gadget
+    ///
+    /// \return   La taille
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    setSize ( sf::Vector2f taille ){};
 
     /////////////////////////////////////////////////
     /// \brief Acceder à la taille du gadget
@@ -124,7 +142,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual void
-    setSkin( Skin *    skin ) {
+    setSkin( Skin    skin ) {
         m_skin = skin ;
         updateStyle( );
     };
@@ -138,7 +156,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual void
-    setStyle( Style *    style ) {
+    setStyle( Style     style ) {
         std::cout << "setStyle\n";
         m_style = style ;
         updateStyle( );
@@ -166,6 +184,15 @@ public:
     /////////////////////////////////////////////////
     void
     supprimer(){  m_aSupprimer = true; };
+
+   /////////////////////////////////////////////////
+    /// \brief overload de la fonction rotate
+    ///
+    /// permet de bloquer la rotation sur les gadgets
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    rotate(float x )  {} ;
 
 protected:
 
@@ -199,7 +226,7 @@ public:
     /// \return Rien
     ///
     /////////////////////////////////////////////////
-    void traiter_evenements ( const sf::Event& event );
+    virtual void traiter_evenements ( const sf::Event& event );
 
     /////////////////////////////////////////////////
     /// \brief Actualiser les éléments.
@@ -209,7 +236,7 @@ public:
     /// \return Rien
     ///
     /////////////////////////////////////////////////
-    void actualiser ( float deltaT );
+    virtual void actualiser ( float deltaT );
 
     /////////////////////////////////////////////////
     /// \brief Rendre les éléments.
@@ -221,19 +248,21 @@ public:
     virtual void
     draw( sf::RenderTarget& target, sf::RenderStates states ) const;
 
+
+
     /////////////////////////////////////////////////
     // Les membres
     /////////////////////////////////////////////////
 
 protected:
 
-    std::string                 m_nom;          ///< le nom du gadget, (pour l'instant on s'en sert pas mais peut etre un jour...).
-    Gadget*                     m_parent;       ///< le gadget m_parent.
-    std::vector< ptr >      m_enfants;      ///< Les enfants du bouton.
-    Skin*                       m_skin;         ///< le skin du gadget.
-    Style*                      m_style;        ///< le style du gadget.
-    bool                        m_enable;       ///< l'état du gadget.
-    bool                        m_aSupprimer;   ///<
+    std::string         m_nom;          ///< le nom du gadget, (pour l'instant on s'en sert pas mais peut etre un jour...).
+    Gadget*             m_parent;       ///< le gadget m_parent.
+    std::vector< ptr >  m_enfants;      ///< Les enfants du bouton.
+    Skin                m_skin;         ///< le skin du gadget.
+    Style               m_style;        ///< le style du gadget.
+    bool                m_enable;       ///< l'état du gadget.
+    bool                m_aSupprimer;   ///<
 
 };// fin de class Gadget
 };// fin du namespace gui

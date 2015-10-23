@@ -12,7 +12,8 @@ namespace gui
 Gadget::Gadget  ()
 : m_parent      ( 0 )
 , m_enfants     ( 0 )
-, m_style       ( new Style () )
+, m_skin        ( Skin () )
+, m_style       ( Style () )
 , m_enable      ( true )
 , m_aSupprimer  ( false )
 //, m_texte   ( new sf::Text () )
@@ -20,10 +21,21 @@ Gadget::Gadget  ()
 
 
 /////////////////////////////////////////////////
-Gadget::Gadget  ( Style*    style )
+Gadget::Gadget  ( Style    style )
 : m_parent      ( 0 )
 , m_enfants     ( 0 )
+, m_skin        ( Skin () )
 , m_style       ( style )
+, m_enable      ( true )
+, m_aSupprimer  ( false )
+{ }
+
+/////////////////////////////////////////////////
+Gadget::Gadget  ( Skin    skin )
+: m_parent      ( 0 )
+, m_enfants     ( 0 )
+, m_skin        ( skin )
+, m_style       ( m_skin.fenetre )
 , m_enable      ( true )
 , m_aSupprimer  ( false )
 { }

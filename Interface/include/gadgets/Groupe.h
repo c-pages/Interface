@@ -24,7 +24,6 @@ public:
     sf::FloatRect
     getLocalBounds ( ) ;
 
-
     /////////////////////////////////////////////////
     /// \brief Accesseur de la boundingBox globale
     ///
@@ -34,7 +33,6 @@ public:
     sf::FloatRect
     getGlobalBounds ( ) ;
 
-
     /////////////////////////////////////////////////
     /// \brief Accesseur de la taille
     ///
@@ -43,36 +41,6 @@ public:
     /////////////////////////////////////////////////
     sf::Vector2f
     getSize ( );
-
-    /////////////////////////////////////////////////
-    /// \brief La gestion des évènements utilisateurs.
-    ///
-    /// Gère les entrées claviers, souris, fenetre ...
-    ///\return Rien
-    ///
-    /////////////////////////////////////////////////
-    virtual     void
-    traiter_evenements ( const sf::Event& event ) ;
-
-    /////////////////////////////////////////////////
-    /// \brief Actualiser les éléments.
-    ///
-    /// Actualiser les différents éléments du ou des écrans actifs.
-    /// \param    deltaT          Un \e float qui indique le delta du temps écoulé depuis la dernière actualisation.
-    ///\return Rien
-    ///
-    /////////////////////////////////////////////////
-    virtual     void
-    actualiser ( float deltaT ) ;
-
-    /////////////////////////////////////////////////
-    /// \brief Dessiner les différents éléments du ou des écrans actifs.
-    ///
-    ///\return Rien
-    ///
-    /////////////////////////////////////////////////
-    virtual void
-    draw( sf::RenderTarget& target, sf::RenderStates states ) const;
 
 };
 };

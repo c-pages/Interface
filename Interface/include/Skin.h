@@ -23,14 +23,28 @@ struct Skin
     Skin();
 
     /////////////////////////////////////////////////
+    /// \brief Constructeurs de copie
+    ///
+    /// Constructeur en copie d'un autre skin.
+    /// \param skin le skin à copier
+    ///
+    /////////////////////////////////////////////////
+    Skin( const Skin& skin );
+
+    //T& T::operator=(T arg)
+
+
+
+    /////////////////////////////////////////////////
     // Les membres
     /////////////////////////////////////////////////
-    Style * fenetre;          ///< le style des fenêtres.
-    Style * btnRepos;         ///< le style des boutons au repos.
-    Style * btnSurvol;        ///< le style des boutons au survol.
-    Style * btnPress;         ///< le style des boutons au press.
-    Style * lblTitre;         ///< le style des titres.
-    Style * lblCourant;       ///< le style des champs de texte courant.
+    Style  desactive;        ///< le style des gadget désactivés
+    Style  fenetre;          ///< le style des fenêtres.
+    Style  btnRepos;         ///< le style des boutons au repos.
+    Style  btnSurvol;        ///< le style des boutons au survol.
+    Style  btnPress;         ///< le style des boutons au press.
+    Style  lblTitre;         ///< le style des titres.
+    Style  lblCourant;       ///< le style des champs de texte courant.
 
 };
 }; // fin namespace gui

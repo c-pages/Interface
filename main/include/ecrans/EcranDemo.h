@@ -90,8 +90,9 @@ private:
     /////////////////////////////////////////////////
 //    sf::View            m_vue;      ///< La vue SFML de l'écran jeu.
 //    sf::View            m_vueIG;    ///< La vue SFML de l'interface graphique.
-    sf::RectangleShape  m_fond;     ///< Le shape SFML du fond de l'écran.
-    gui::Groupe         m_gui;      ///< Le groupe de GUI du menu principal.
+    sf::RectangleShape      m_fond;     ///< Le shape SFML du fond de l'écran.
+    gui::Groupe             m_gui;      ///< Le groupe de GUI du menu principal.
+    gui::Gadget::ptr        boutonA ;
 
 
 }; // fin EcranDemo

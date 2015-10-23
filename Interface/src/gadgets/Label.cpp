@@ -16,16 +16,14 @@ Label::Label    ( std::string     texte )
 : Gadget    ( )
 , m_texte   ( new sf::Text() )
 {
-
-
     m_texte->setString  ( texte );
     updateStyle         ( );
 }
 
 
 /////////////////////////////////////////////////
-Label::Label    ( std::string     texte
-                , Style*    style )
+Label::Label    ( std::string   texte
+                , Style         style )
 : Gadget    ( style )
 , m_texte   ( new sf::Text () )
 {
@@ -68,11 +66,10 @@ Label::getSize( )    {
 /////////////////////////////////////////////////
 void
 Label::updateStyle( )    {
-    m_texte->setFont             ( m_style->txt_police );
-    m_texte->setStyle            ( m_style->txt_style );
-    m_texte->setCharacterSize    ( m_style->txt_taille );
-    m_texte->setColor            ( m_style->txt_couleur);
-    std::cout << "Style mis a jour.\n";
+    m_texte->setFont             ( m_style.txt_police );
+    m_texte->setStyle            ( m_style.txt_style );
+    m_texte->setCharacterSize    ( m_style.txt_taille );
+    m_texte->setColor            ( m_style.txt_couleur);
 }
 
 
