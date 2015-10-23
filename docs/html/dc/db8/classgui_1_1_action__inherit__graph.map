@@ -1,0 +1,5 @@
+<map id="gui::Action" name="gui::Action">
+<area shape="rect" id="node2" href="$d9/d0b/classgui_1_1_gadget.html" title="La classe virtuelle commune aux gadgets formant l&#39;interface. " alt="" coords="59,80,148,107"/>
+<area shape="rect" id="node3" href="$df/d39/classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets au sein d&#39;un groupe. " alt="" coords="5,155,95,181"/>
+<area shape="rect" id="node4" href="$d5/d3f/classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. " alt="" coords="119,155,197,181"/>
+</map>

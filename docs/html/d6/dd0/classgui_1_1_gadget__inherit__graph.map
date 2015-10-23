@@ -1,0 +1,5 @@
+<map id="gui::Gadget" name="gui::Gadget">
+<area shape="rect" id="node5" href="$df/d39/classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets au sein d&#39;un groupe. " alt="" coords="63,155,152,181"/>
+<area shape="rect" id="node6" href="$d5/d3f/classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. " alt="" coords="176,155,255,181"/>
+<area shape="rect" id="node2" href="$d6/d90/classgui_1_1_action.html" title="Classe gérant les évenement d&#39;un gadget. " alt="" coords="5,5,89,32"/>
+</map>

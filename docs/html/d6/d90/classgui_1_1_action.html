@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Application de base: Référence de la classe gui::Action</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Application de base
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">La structure de base d&#39;une application SFML avec debut de GUI</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="../../pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="../../modules.html"><span>Modules</span></a></li>
+      <li><a href="../../namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="../../files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="../../classes.html"><span>Index&#160;des&#160;structures&#160;de&#160;données</span></a></li>
+      <li><a href="../../inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="../../functions.html"><span>Champs&#160;de&#160;donnée</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d6/d90/classgui_1_1_action.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Types publics</a> &#124;
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pub-static-attribs">Attributs publics statiques</a> &#124;
+<a href="#pro-methods">Fonctions membres protégées</a> &#124;
+<a href="#pro-attribs">Attributs protégés</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence de la classe gui::Action<div class="ingroups"><a class="el" href="../../d8/d60/group__interface.html">Module pour interface graphique</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Classe gérant les évenement d'un gadget.  
+ <a href="../../d6/d90/classgui_1_1_action.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d7/d6a/_action_8h_source.html">Action.h</a>&gt;</code></p>
+<div class="dynheader">
+Graphe d'héritage de gui::Action:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/db8/classgui_1_1_action__inherit__graph.png" border="0" usemap="#gui_1_1_action_inherit__map" alt="Inheritance graph"/></div>
+<map name="gui_1_1_action_inherit__map" id="gui_1_1_action_inherit__map">
+<area shape="rect" id="node2" href="../../d9/d0b/classgui_1_1_gadget.html" title="La classe virtuelle commune aux gadgets formant l&#39;interface. " alt="" coords="59,80,148,107"/>
+<area shape="rect" id="node3" href="../../df/d39/classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets au sein d&#39;un groupe. " alt="" coords="5,155,95,181"/>
+<area shape="rect" id="node4" href="../../d5/d3f/classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. " alt="" coords="119,155,197,181"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">légende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Types publics</h2></td></tr>
+<tr class="memitem:a4223568d083f940e94c80829f63ae817"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> = std::function&lt; void()&gt;</td></tr>
+<tr class="separator:a4223568d083f940e94c80829f63ae817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a85a606811b45e6232414b1d4e29bed"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; sf::Keyboard::Key, <a class="el" href="../../d6/d90/classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a7a85a606811b45e6232414b1d4e29bed">evtClavier</a></td></tr>
+<tr class="separator:a7a85a606811b45e6232414b1d4e29bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a359295e3ccae6767582f4450b6c49ec4"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="../../d7/dc4/namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e">Evenements</a>, <a class="el" href="../../d6/d90/classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a359295e3ccae6767582f4450b6c49ec4">evtSouris</a></td></tr>
+<tr class="separator:a359295e3ccae6767582f4450b6c49ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a70035bc714f01d2f47c58b4dc159fb32"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a70035bc714f01d2f47c58b4dc159fb32">lier</a> (<a class="el" href="../../d7/dc4/namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e">Evenements</a> evt, const <a class="el" href="../../d6/d90/classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> &amp;fonction)</td></tr>
+<tr class="memdesc:a70035bc714f01d2f47c58b4dc159fb32"><td class="mdescLeft">&#160;</td><td class="mdescRight">lier un evenement et une fonction labmda (FuncType).  <a href="#a70035bc714f01d2f47c58b4dc159fb32">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a70035bc714f01d2f47c58b4dc159fb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eb8461689c5b9800c3b652423dc53d3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a5eb8461689c5b9800c3b652423dc53d3">lier</a> (sf::Keyboard::Key touche, const <a class="el" href="../../d6/d90/classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> &amp;fonction)</td></tr>
+<tr class="memdesc:a5eb8461689c5b9800c3b652423dc53d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">lier un evenement et une fonction labmda (FuncType).  <a href="#a5eb8461689c5b9800c3b652423dc53d3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5eb8461689c5b9800c3b652423dc53d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e82dcc2a557564140171006f21b6739"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a2e82dcc2a557564140171006f21b6739">delier</a> (<a class="el" href="../../d7/dc4/namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e">Evenements</a> evt)</td></tr>
+<tr class="memdesc:a2e82dcc2a557564140171006f21b6739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Délier un évenement.  <a href="#a2e82dcc2a557564140171006f21b6739">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2e82dcc2a557564140171006f21b6739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a588807ec36e45f27c2520de5a1e22aed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a588807ec36e45f27c2520de5a1e22aed">delier</a> (sf::Keyboard::Key touche)</td></tr>
+<tr class="memdesc:a588807ec36e45f27c2520de5a1e22aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Délier un évenement clavier.  <a href="#a588807ec36e45f27c2520de5a1e22aed">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a588807ec36e45f27c2520de5a1e22aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Attributs publics statiques</h2></td></tr>
+<tr class="memitem:a7338e98b0107777d8168bb12a021167b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d6/d90/classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a7338e98b0107777d8168bb12a021167b">defaultFunc</a> = []( )-&gt;void{}</td></tr>
+<tr class="separator:a7338e98b0107777d8168bb12a021167b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Fonctions membres protégées</h2></td></tr>
+<tr class="memitem:aa7481b3efcebd774ad68bf1a4308041a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a">declencher</a> (<a class="el" href="../../d7/dc4/namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e">Evenements</a> evt)</td></tr>
+<tr class="memdesc:aa7481b3efcebd774ad68bf1a4308041a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déclencher la fonction associé à l'évenement souris.  <a href="#aa7481b3efcebd774ad68bf1a4308041a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa7481b3efcebd774ad68bf1a4308041a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c0cd2dd198d840342cbd6b0ac193a02"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a7c0cd2dd198d840342cbd6b0ac193a02">traiter_evenements</a> (const sf::Event &amp;event)</td></tr>
+<tr class="memdesc:a7c0cd2dd198d840342cbd6b0ac193a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">La gestion des évènements utilisateurs.  <a href="#a7c0cd2dd198d840342cbd6b0ac193a02">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7c0cd2dd198d840342cbd6b0ac193a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Attributs protégés</h2></td></tr>
+<tr class="memitem:ae3dfea6e15a336d6095fcddeccee27ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a359295e3ccae6767582f4450b6c49ec4">evtSouris</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/classgui_1_1_action.html#ae3dfea6e15a336d6095fcddeccee27ac">_evtsSouris</a></td></tr>
+<tr class="memdesc:ae3dfea6e15a336d6095fcddeccee27ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">La liste des evenements souris enregistrés.  <a href="#ae3dfea6e15a336d6095fcddeccee27ac">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae3dfea6e15a336d6095fcddeccee27ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb4c5836898b8221986f90a5b226908e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a7a85a606811b45e6232414b1d4e29bed">evtClavier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/classgui_1_1_action.html#acb4c5836898b8221986f90a5b226908e">_evtsClavier</a></td></tr>
+<tr class="memdesc:acb4c5836898b8221986f90a5b226908e"><td class="mdescLeft">&#160;</td><td class="mdescRight">La liste des evenements Claviers enregistrés.  <a href="#acb4c5836898b8221986f90a5b226908e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acb4c5836898b8221986f90a5b226908e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Classe gérant les évenement d'un gadget. </p>
+<p>Gère les évenements, permet de déclencher des fonctions associées à des évènements ...</p>
+<dl class="section see"><dt>Voir également</dt><dd>sf::Shape, sf::CircleShape, sf::ConvexShape </dd></dl>
+</div><h2 class="groupheader">Documentation des définitions de type membres</h2>
+<a class="anchor" id="a7a85a606811b45e6232414b1d4e29bed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::map&lt; sf::Keyboard::Key , <a class="el" href="../../d6/d90/classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> &gt; <a class="el" href="../../d6/d90/classgui_1_1_action.html#a7a85a606811b45e6232414b1d4e29bed">gui::Action::evtClavier</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a359295e3ccae6767582f4450b6c49ec4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::map&lt; <a class="el" href="../../d7/dc4/namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e">Evenements</a> , <a class="el" href="../../d6/d90/classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> &gt; <a class="el" href="../../d6/d90/classgui_1_1_action.html#a359295e3ccae6767582f4450b6c49ec4">gui::Action::evtSouris</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4223568d083f940e94c80829f63ae817"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d6/d90/classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">gui::Action::FuncType</a> =  std::function&lt;void()&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="aa7481b3efcebd774ad68bf1a4308041a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui::Action::declencher </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/dc4/namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e">Evenements</a>&#160;</td>
+          <td class="paramname"><em>evt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Déclencher la fonction associé à l'évenement souris. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">evt</td><td>L'evenement souris à declencher. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Rien. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e82dcc2a557564140171006f21b6739"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui::Action::delier </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/dc4/namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e">Evenements</a>&#160;</td>
+          <td class="paramname"><em>evt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Délier un évenement. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">evt</td><td>Un evenement souris de la liste _evtsSouris.. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Rien. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a588807ec36e45f27c2520de5a1e22aed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui::Action::delier </td>
+          <td>(</td>
+          <td class="paramtype">sf::Keyboard::Key&#160;</td>
+          <td class="paramname"><em>touche</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Délier un évenement clavier. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">touche</td><td>Une touche du clavier sf::Keyboard::Key. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Rien. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a70035bc714f01d2f47c58b4dc159fb32"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui::Action::lier </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/dc4/namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e">Evenements</a>&#160;</td>
+          <td class="paramname"><em>evt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d6/d90/classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> &amp;&#160;</td>
+          <td class="paramname"><em>fonction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>lier un evenement et une fonction labmda (FuncType). </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">evt</td><td>Un evenement de la liste Evenements. </td></tr>
+    <tr><td class="paramname">fonction</td><td>la fonction lambda associé. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Rien. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5eb8461689c5b9800c3b652423dc53d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui::Action::lier </td>
+          <td>(</td>
+          <td class="paramtype">sf::Keyboard::Key&#160;</td>
+          <td class="paramname"><em>touche</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d6/d90/classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> &amp;&#160;</td>
+          <td class="paramname"><em>fonction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>lier un evenement et une fonction labmda (FuncType). </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">touche</td><td>Une touche du clavier sf::Keyboard::Key. </td></tr>
+    <tr><td class="paramname">fonction</td><td>la fonction lambda associé. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Rien. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7c0cd2dd198d840342cbd6b0ac193a02"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gui::Action::traiter_evenements </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Event &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>La gestion des évènements utilisateurs. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>les évènements claviers </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d90/classgui_1_1_action_a7c0cd2dd198d840342cbd6b0ac193a02_icgraph.png" border="0" usemap="#d6/d90/classgui_1_1_action_a7c0cd2dd198d840342cbd6b0ac193a02_icgraph" alt=""/></div>
+<map name="d6/d90/classgui_1_1_action_a7c0cd2dd198d840342cbd6b0ac193a02_icgraph" id="d6/d90/classgui_1_1_action_a7c0cd2dd198d840342cbd6b0ac193a02_icgraph">
+<area shape="rect" id="node2" href="../../d5/d3f/classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf" title="La gestion des évènements utilisateurs. " alt="" coords="179,5,297,47"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des champs</h2>
+<a class="anchor" id="acb4c5836898b8221986f90a5b226908e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a7a85a606811b45e6232414b1d4e29bed">evtClavier</a> gui::Action::_evtsClavier</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>La liste des evenements Claviers enregistrés. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae3dfea6e15a336d6095fcddeccee27ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a359295e3ccae6767582f4450b6c49ec4">evtSouris</a> gui::Action::_evtsSouris</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>La liste des evenements souris enregistrés. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7338e98b0107777d8168bb12a021167b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d90/classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">Action::FuncType</a> gui::Action::defaultFunc = []( )-&gt;void{}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li>Interface/include/<a class="el" href="../../d7/d6a/_action_8h_source.html">Action.h</a></li>
+<li>Interface/src/<a class="el" href="../../da/d28/_action_8cpp.html">Action.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/dc4/namespacegui.html">gui</a></li><li class="navelem"><a class="el" href="../../d6/d90/classgui_1_1_action.html">Action</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

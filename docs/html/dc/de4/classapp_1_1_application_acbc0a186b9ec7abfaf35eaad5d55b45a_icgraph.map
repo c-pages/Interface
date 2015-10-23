@@ -1,0 +1,5 @@
+<map id="app::Application::getFenetre" name="app::Application::getFenetre">
+<area shape="rect" id="node2" href="$df/d42/classapp_1_1_ecran_demo.html#a8d3884c4d641036feae4b562a381b84a" title="Rendre les éléments. " alt="" coords="241,5,417,32"/>
+<area shape="rect" id="node3" href="$df/d42/classapp_1_1_ecran_demo.html#aa61d4d976b54eb8fa13ccbef328da064" title="Initialisation de la scene ... le monde du jeu ou tout autre bazard... " alt="" coords="239,56,420,83"/>
+<area shape="rect" id="node4" href="$df/d42/classapp_1_1_ecran_demo.html#aaf234861fb458c3375c6f038acfe172f" title="Constructeur. " alt="" coords="468,56,663,83"/>
+</map>
