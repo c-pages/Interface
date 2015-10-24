@@ -40,7 +40,7 @@ enum Evenements {
 
 
 /////////////////////////////////////////////////
-/// \brief Classe gérant les évenement d'un gadget.
+/// \brief Classe virtuelle permetant de lier des évenements à des fonctions.
 ///
 /// Gère les évenements, permet de déclencher des fonctions associées à des évènements ...
 ///

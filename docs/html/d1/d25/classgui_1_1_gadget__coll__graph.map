@@ -1,5 +1,3 @@
 <map id="gui::Gadget" name="gui::Gadget">
-<area shape="rect" id="node2" href="$d6/d90/classgui_1_1_action.html" title="Classe gérant les évenement d&#39;un gadget. " alt="" coords="5,168,89,195"/>
-<area shape="rect" id="node5" href="$d5/d3a/structgui_1_1_style.html" title="Un style pour l&#39;affichage dans la fenêtre. " alt="" coords="402,5,479,32"/>
-<area shape="rect" id="node6" href="$d0/d61/structgui_1_1_skin.html" title="Un Skin définie le style de tout les éléments d&#39;une interface graphique. " alt="" coords="477,168,551,195"/>
+<area shape="rect" id="node2" href="$d6/d90/classgui_1_1_action.html" title="Classe virtuelle permetant de lier des évenements à des fonctions. " alt="" coords="5,5,89,32"/>
 </map>

@@ -1,9 +1,11 @@
 <map id="Interface/include/gadgets/Label.h" name="Interface/include/gadgets/Label.h">
-<area shape="rect" id="node2" href="$da/d5d/_g_u_i_8h.html" title="Interface/GUI.h" alt="" coords="332,102,440,129"/>
-<area shape="rect" id="node8" href="$db/db4/_label_8cpp.html" title="Interface/src/gadgets\l/Label.cpp" alt="" coords="464,95,607,136"/>
-<area shape="rect" id="node3" href="$d4/d71/_config_8h.html" title="main/include/Config.h" alt="" coords="146,191,293,218"/>
-<area shape="rect" id="node6" href="$d0/d88/_ecran_demo_8cpp.html" title="main/src/ecrans/EcranDemo.cpp" alt="" coords="357,273,569,300"/>
-<area shape="rect" id="node7" href="$d9/dff/_ecran_demo_8h.html" title="main/include/ecrans\l/EcranDemo.h" alt="" coords="317,184,455,225"/>
-<area shape="rect" id="node4" href="$d0/d42/_application_8cpp.html" title="main/src/Application.cpp" alt="" coords="167,273,333,300"/>
-<area shape="rect" id="node5" href="$d7/dd3/_config_8cpp.html" title="main/src/Config.cpp" alt="" coords="5,273,143,300"/>
+<area shape="rect" id="node2" href="$da/d5d/_g_u_i_8h.html" title="Interface/GUI.h" alt="" coords="332,191,440,218"/>
+<area shape="rect" id="node8" href="$d3/d0a/_bouton_texte_8h.html" title="Interface/include/gadgets\l/BoutonTexte.h" alt="" coords="401,95,568,136"/>
+<area shape="rect" id="node9" href="$d4/d37/_bouton_texte_8cpp.html" title="Interface/src/gadgets\l/BoutonTexte.cpp" alt="" coords="511,184,653,225"/>
+<area shape="rect" id="node10" href="$db/db4/_label_8cpp.html" title="Interface/src/gadgets\l/Label.cpp" alt="" coords="644,95,787,136"/>
+<area shape="rect" id="node3" href="$d4/d71/_config_8h.html" title="main/include/Config.h" alt="" coords="146,281,293,307"/>
+<area shape="rect" id="node6" href="$d0/d88/_ecran_demo_8cpp.html" title="main/src/ecrans/EcranDemo.cpp" alt="" coords="357,363,569,389"/>
+<area shape="rect" id="node7" href="$d9/dff/_ecran_demo_8h.html" title="main/include/ecrans\l/EcranDemo.h" alt="" coords="317,273,455,315"/>
+<area shape="rect" id="node4" href="$d0/d42/_application_8cpp.html" title="main/src/Application.cpp" alt="" coords="167,363,333,389"/>
+<area shape="rect" id="node5" href="$d7/dd3/_config_8cpp.html" title="main/src/Config.cpp" alt="" coords="5,363,143,389"/>
 </map>

@@ -22,7 +22,7 @@ var classapp_1_1_config =
     [ "initTextures", "df/dbe/classapp_1_1_config.html#a690065179d9ef7ade6a67193f44acb89", null ],
     [ "m_dureeImage", "df/dbe/classapp_1_1_config.html#a3cd597c93472e36b707e3cf2e3eb0d74", null ],
     [ "m_polices", "df/dbe/classapp_1_1_config.html#affadef60c92912efa871fff516f844de", null ],
-    [ "m_skins", "df/dbe/classapp_1_1_config.html#a87d74b8a0d50296688748feec743724d", null ],
-    [ "m_styles", "df/dbe/classapp_1_1_config.html#a7e448c1bc83a2aae6627ccb9eb5b995a", null ],
+    [ "m_skins", "df/dbe/classapp_1_1_config.html#a0f5031fe192ad475a316f76af23dad5b", null ],
+    [ "m_styles", "df/dbe/classapp_1_1_config.html#aca7399e3ebaf8448a94a809c471cd4e7", null ],
     [ "m_textures", "df/dbe/classapp_1_1_config.html#a673cf82df5a28f6087aa1992a5667ce2", null ]
 ];

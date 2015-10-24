@@ -51,7 +51,7 @@ public:
     /////////////////////////////////////////////////
     /// \brief Rendre les éléments.
     ///
-    /// \param Dessiner les différents éléments du ou des écrans actifs.
+    /// Dessiner les différents éléments du ou des écrans actifs.
     /// \return Rien
     ///
     /////////////////////////////////////////////////

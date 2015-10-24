@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['changer',['changer',['../da/d5d/classapp_1_1_gestion__ecrans.html#addd582c82b53c7c142d23dbee83c5bbd',1,'app::Gestion_ecrans']]],
-  ['config',['Config',['../df/dbe/classapp_1_1_config.html#a6b5877b87cbfef7bb28ed405dfa3ea62',1,'app::Config']]],
-  ['contient',['contient',['../d9/d0b/classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3',1,'gui::Gadget']]],
-  ['courant',['courant',['../da/d5d/classapp_1_1_gestion__ecrans.html#a7ab21cf757223d379edf67796b8dae99',1,'app::Gestion_ecrans']]]
+  ['bouton',['Bouton',['../d4/daa/classgui_1_1_bouton.html#a98cf47d074d64c2915a24f3e9b76dfc7',1,'gui::Bouton::Bouton()'],['../d4/daa/classgui_1_1_bouton.html#acb71294b84e82f435f81f272db595a3b',1,'gui::Bouton::Bouton(std::shared_ptr&lt; Skin &gt; skin)']]],
+  ['boutontexte',['BoutonTexte',['../d4/d47/classgui_1_1_bouton_texte.html#a5781fca8e5397fad46a7e7ca0ba39c48',1,'gui::BoutonTexte::BoutonTexte(std::string texte=&quot;&quot;)'],['../d4/d47/classgui_1_1_bouton_texte.html#a3372d6e64187d162203dc1ca3081243b',1,'gui::BoutonTexte::BoutonTexte(std::shared_ptr&lt; Skin &gt; skin, std::string texte=&quot;&quot;)']]]
 ];

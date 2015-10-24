@@ -1,12 +1,7 @@
 var searchData=
 [
-  ['gadget',['Gadget',['../d9/d0b/classgui_1_1_gadget.html#a62dfd5bd962b252b792f00b183df9462',1,'gui::Gadget::Gadget()'],['../d9/d0b/classgui_1_1_gadget.html#ac570f7cbd8d34d8b5becd2505e97cb65',1,'gui::Gadget::Gadget(Style *style)']]],
-  ['get',['get',['../d2/dc2/classapp_1_1_resource_mgr.html#a3bfe5f76db7efb5a3e5491c3b16853b6',1,'app::ResourceMgr::get()'],['../de/d49/classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_e_r_01_4.html#a1ac2c1273e10b7571fe41a684f8ae78d',1,'app::ResourceMgr&lt; sf::Music, IDENTIFIER &gt;::get()']]],
-  ['getdureeimage',['getDureeImage',['../df/dbe/classapp_1_1_config.html#a300d3ecafed165cfe44b93c555116ff5',1,'app::Config']]],
-  ['getfenetre',['getFenetre',['../dc/de4/classapp_1_1_application.html#acbc0a186b9ec7abfaf35eaad5d55b45a',1,'app::Application']]],
-  ['getglobalbounds',['getGlobalBounds',['../d9/d0b/classgui_1_1_gadget.html#a698682665f65f54e0798887955f32f2e',1,'gui::Gadget::getGlobalBounds()'],['../df/d39/classgui_1_1_groupe.html#aaa70e4ae758c941a1be7965814e11cff',1,'gui::Groupe::getGlobalBounds()'],['../d5/d3f/classgui_1_1_label.html#a3d1724b9ebd2f1ff450ccfe725c0ac04',1,'gui::Label::getGlobalBounds()']]],
-  ['getlocalbounds',['getLocalBounds',['../d9/d0b/classgui_1_1_gadget.html#a4552567e63384c6a30519303f4052f11',1,'gui::Gadget::getLocalBounds()'],['../df/d39/classgui_1_1_groupe.html#a79907182be4a24d8a2248febc8f7c31a',1,'gui::Groupe::getLocalBounds()'],['../d5/d3f/classgui_1_1_label.html#a17b939dc928de9a6f826514f655348d2',1,'gui::Label::getLocalBounds()']]],
-  ['getposabs',['getPosAbs',['../d9/d0b/classgui_1_1_gadget.html#a400166ff460a6747a6e6b4cb77d161fe',1,'gui::Gadget']]],
-  ['getsize',['getSize',['../d9/d0b/classgui_1_1_gadget.html#a8d17e7736249da941358b9e09e70ea2c',1,'gui::Gadget::getSize()'],['../df/d39/classgui_1_1_groupe.html#ad26b41a6a0c6f831244bb1917314d285',1,'gui::Groupe::getSize()'],['../d5/d3f/classgui_1_1_label.html#a762c8ea73d28b6312d5f323670e002c4',1,'gui::Label::getSize()']]],
-  ['gettexte',['getTexte',['../d5/d3f/classgui_1_1_label.html#ad3fe935d963c77375d9a958bc23f9a41',1,'gui::Label']]]
+  ['ecran',['Ecran',['../da/df8/classapp_1_1_ecran.html#a06a27f001c26fb8d6f38e04764fd343e',1,'app::Ecran']]],
+  ['ecrandemo',['EcranDemo',['../df/d42/classapp_1_1_ecran_demo.html#aaf234861fb458c3375c6f038acfe172f',1,'app::EcranDemo']]],
+  ['estvide',['estVide',['../da/d5d/classapp_1_1_gestion__ecrans.html#a7424aab98a8b01f5b5e201ee77bbb7bb',1,'app::Gestion_ecrans']]],
+  ['executer',['executer',['../dc/de4/classapp_1_1_application.html#ae375e0fdeb21265f93cff8958a26f95d',1,'app::Application']]]
 ];

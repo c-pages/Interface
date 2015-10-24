@@ -20,7 +20,7 @@ Label::Label    ( std::string   texte )
 
 /////////////////////////////////////////////////
 Label::Label    ( std::string   texte
-                , Style    style )
+                , std::shared_ptr<Style>    style )
 : Gadget    ( style )
 , m_texte   ( new sf::Text () )
 {
@@ -63,12 +63,10 @@ Label::getSize( )    {
 /////////////////////////////////////////////////
 void
 Label::updateStyle( )    {
-    std::cout << "Label::updateStyle( )\n";
-    //    m_style.print();
-    m_texte->setFont             ( m_style.txt_police );
-    m_texte->setStyle            ( m_style.txt_style );
-    m_texte->setCharacterSize    ( m_style.txt_taille );
-    m_texte->setColor            ( m_style.txt_couleur);
+    m_texte->setFont             ( m_style->txt_police );
+    m_texte->setStyle            ( m_style->txt_style );
+    m_texte->setCharacterSize    ( m_style->txt_taille );
+    m_texte->setColor            ( m_style->txt_couleur);
 }
 
 
@@ -92,8 +90,6 @@ void
 Label::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
     states.transform *= getTransform();
     target.draw      ( *this->m_texte , states );
-//    std::cout << "Label::m_texte->setColor : " << float(m_style.txt_couleur.r ) << " " << float(m_style.txt_couleur.g ) << " " << float(m_style.txt_couleur.b ) << " " << float(m_style.txt_couleur.a ) << "\n" ;
-
 
     for ( ptr enfant : m_enfants )
         target.draw      ( *enfant , states );

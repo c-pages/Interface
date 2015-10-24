@@ -16,7 +16,7 @@ namespace gui
 
 
 /////////////////////////////////////////////////
-/// \brief La classe virtuelle commune aux gadgets formant l'interface.
+/// \brief Classe virtuelle, la base commune aux gadgets formant l'interface.
 ///
 /////////////////////////////////////////////////
 class Gadget : public Action , public sf::Drawable , public sf::Transformable
@@ -39,7 +39,7 @@ public:
     /// \param  style   Le style à appliquer (Configuration::Styles).
     ///
     /////////////////////////////////////////////////
-    Gadget  ( Style   style );
+    Gadget  ( std::shared_ptr<Style>   style );
 
     /////////////////////////////////////////////////
     /// \brief  Constructeur avec un style existant
@@ -136,16 +136,13 @@ public:
     /////////////////////////////////////////////////
     /// \brief Définie le skin du Label.
     ///
-    /// \param style   Le skin à appliquer (Configuration::Styles).
+    /// \param skin   Le skin à appliquer (Configuration::Styles).
     ///
     /// return Rien
     ///
     /////////////////////////////////////////////////
     virtual void
-    setSkin( std::shared_ptr<Skin>    skin ) {
-        m_skin = skin ;
-        updateStyle( );
-    };
+    setSkin( std::shared_ptr<Skin>    skin );
 
     /////////////////////////////////////////////////
     /// \brief Définie le style du Label.
@@ -156,11 +153,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual void
-    setStyle( Style     style ) {
-        m_style = style ;
-        m_style.print();
-        updateStyle( );
-    };
+    setStyle( std::shared_ptr<Style>     style );
 
     /////////////////////////////////////////////////
     /// \brief Aligne le gadget sur un autre
@@ -195,14 +188,14 @@ public:
     supprimer(){  m_aSupprimer = true; };
 
    /////////////////////////////////////////////////
-    /// \brief overload de la fonction rotate
+    /// \brief overload annulant la fonction rotate
     ///
     /// Permet de bloquer la rotation sur les gadgets,
     /// car rotate() n'est pas pris en compte par les gadgets.
     ///
     /////////////////////////////////////////////////
     virtual void
-    rotate(float x )  { std::cout <<"Erreur: rotate() n'est pas pris en compte par les gadgets.\n"; } ;
+    rotate(float x )  { std::cout <<"ATTENTION: rotate() n'est pas pris en compte pour les gui::gadgets!\n"; } ;
 
 protected:
 
@@ -270,17 +263,24 @@ protected:
     Gadget*                 m_parent;       ///< le gadget m_parent.
     std::vector< ptr >      m_enfants;      ///< Les enfants du bouton.
     std::shared_ptr<Skin>   m_skin;         ///< le skin du gadget.
-    Style                   m_style;        ///< le style du gadget.
+    std::shared_ptr<Style>  m_style;        ///< le style du gadget.
     bool                    m_enable;       ///< l'état du gadget.
     bool                    m_aSupprimer;   ///< On le passe à true quand on veut supprimer ce gadget (il sera supprimé par son parent au debut de l'actualisation).
-    bool                    m_besoinActua; ///< Si on a chnger un truc qui necessite d'actualiser le gadget.
+    bool                    m_besoinActua;  ///< Si on a chnger un truc qui necessite d'actualiser le gadget.
 
 };// fin de class Gadget
 };// fin du namespace gui
 
+
+/////////////////////////////////////////////////
+// Include des templates *.inl
+/////////////////////////////////////////////////
 #include <Gadget.inl>
 
+
 #endif // GADGET_H
+
+
 
 
 ////////////////////////////////////////////////////////////

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['config',['Config',['../df/dbe/classapp_1_1_config.html',1,'app']]]
+  ['bouton',['Bouton',['../d4/daa/classgui_1_1_bouton.html',1,'gui']]],
+  ['boutontexte',['BoutonTexte',['../d4/d47/classgui_1_1_bouton_texte.html',1,'gui']]]
 ];

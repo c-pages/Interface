@@ -38,7 +38,7 @@ public:
     ///
     /////////////////////////////////////////////////
     Label   ( std::string               texte
-            , Style    style );
+            , std::shared_ptr<Style>    style );
 
     /////////////////////////////////////////////////
     /// \brief Destructeur
@@ -67,7 +67,7 @@ public:
     /////////////////////////////////////////////////
     /// \brief Accesseur de la boundingBox en global
     ///
-    /// \returnLa boundingBox
+    /// \return La boundingBox
     ///
     /////////////////////////////////////////////////
     sf::FloatRect
@@ -124,7 +124,9 @@ public:
     /////////////////////////////////////////////////
     /// \brief La gestion des évènements utilisateurs.
     ///
-    /// \param Gère les entrées claviers, souris, fenetre ...
+    /// Gère les entrées claviers, souris, fenetre ...
+    ///
+    /// \param event evenement SFML
     /// \return Rien
     ///
     /////////////////////////////////////////////////

@@ -74,30 +74,36 @@ EcranDemo::initGUI  ( )
 {
     // le skin qu'on va utiliser dans cette interface
     auto skinCourant =  Config::m_skins[ Config::Skins::Skin1 ] ;
-/*
-    // creation du label
-    gui::Gadget::ptr    lblTest ( new gui::Label ( "ça sent l'cornichon" , *skinCourant->lblCourant ) );
-    m_gui.ajouter ( lblTest );
 
+    // creation du label
+    this->lblTest = std::shared_ptr<gui::Label> ( new gui::Label ( "Ceci est un label." , skinCourant->lblCourant ) );
+
+    m_gui.ajouter ( lblTest );
+    lblTest->setPosition  ( 20,20);
     // creation du Bouton simple A, c'est un shared_ptr de l'ecranDemo
-    this->boutonA = std::shared_ptr<gui::Bouton>   ( new gui::Bouton ( skinCourant ) );
+    this->boutonA = std::shared_ptr<gui::Bouton> ( new gui::Bouton ( skinCourant ) );
+
     m_gui.ajouter                 ( this->boutonA );
-    this->boutonA->setPosition    ( 50, 50 );
-    this->boutonA->setSize        ({25, 25});
+    this->boutonA->setPosition    ( 20, 50 );
+    this->boutonA->setSize        ({5, 5});
     this->boutonA->lier           ( gui::Evenements::onGRelache , [this]() {
         std::cout << "boutonA \n";
+        lblTest->setTexte( "Ce bouton est simple bouton gui::Bouton");
     });
-*/
+
     // creation du BoutonTexte B, nouveau pointeur, ajouté aux enfants du groupe GUI principal.
-    std::shared_ptr<gui::BoutonTexte>  boutonB ( new gui::BoutonTexte ( "Bouton B" , skinCourant ) );
+    std::shared_ptr<gui::BoutonTexte>  boutonB ( new gui::BoutonTexte ( skinCourant , "Bouton B" ) );
     m_gui.ajouter           ( boutonB );
-    boutonB->setPosition    ( 150, 50 );
-    boutonB->setSize        ({25, 25});
+    boutonB->setPosition    ( 50, 50 );
+    boutonB->setSize        ({5, 5});
     boutonB->setBordure     ( 5 );
     boutonB->ajusterAuTexte ( );
     boutonB->lier           ( gui::Evenements::onGRelache , [this]() {
-        std::cout << "déclenchement de la fonction associé au boutonB.\n";
+        std::cout << "boutonB.\n";
+        lblTest->setTexte( "Ce bouton est bouton texte gui::BoutonTexte");
     });
+
+    this->boutonA->setSize (  { boutonB->getSize().y , boutonB->getSize().y } );
 
 
 }   // fin init GUI

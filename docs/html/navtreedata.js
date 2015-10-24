@@ -17,7 +17,7 @@ var NAVTREE =
       [ "Index des structures de données", "classes.html", null ],
       [ "Hiérarchie des classes", "hierarchy.html", "hierarchy" ],
       [ "Champs de donnée", "functions.html", [
-        [ "Tout", "functions.html", null ],
+        [ "Tout", "functions.html", "functions_dup" ],
         [ "Fonctions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Définitions de type", "functions_type.html", null ],
@@ -38,7 +38,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"dir_9ab5a57497ef2c36b4a22954635ab49a.html"
+"de/d49/classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_e_r_01_4.html#a1792dec334662afb26c194462cfc252d"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

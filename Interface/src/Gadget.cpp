@@ -12,23 +12,23 @@ Gadget::Gadget  ()
 : m_parent      ( 0 )
 , m_enfants     ( 0 )
 , m_skin        ( std::make_shared <Skin> () )
-, m_style       ( Style () )
+, m_style       ( std::make_shared <Style> () )
 , m_enable      ( true )
 , m_aSupprimer  ( false )
-, m_besoinActua( true )
+, m_besoinActua ( true )
 //, m_texte   ( new sf::Text () )
 { }
 
 
 /////////////////////////////////////////////////
-Gadget::Gadget  ( Style    style )
+Gadget::Gadget  ( std::shared_ptr<Style>    style )
 : m_parent      ( 0 )
 , m_enfants     ( 0 )
 , m_skin        ( std::make_shared <Skin>() )
 , m_style       ( style )
 , m_enable      ( true )
 , m_aSupprimer  ( false )
-, m_besoinActua( true )
+, m_besoinActua ( true )
 { }
 
 /////////////////////////////////////////////////
@@ -36,7 +36,7 @@ Gadget::Gadget  ( std::shared_ptr <Skin>    skin )
 : m_parent      ( 0 )
 , m_enfants     ( 0 )
 , m_skin        ( skin )
-, m_style       ( *m_skin->fenetre )
+, m_style       ( m_skin->fenetre )
 , m_enable      ( true )
 , m_aSupprimer  ( false )
 , m_besoinActua( true )
@@ -63,9 +63,24 @@ void
 Gadget::ajouter ( ptr enfant ) {
     m_enfants.push_back(  enfant );
     enfant->m_parent = this;
-    std::cout << "enfant ajouté, enfants: " << m_enfants.size() << "\n";
+}
+
+
+/////////////////////////////////////////////////
+void
+Gadget::setSkin( std::shared_ptr<Skin>    skin ) {
+    m_skin = skin ;
+    updateStyle( );
 };
 
+
+/////////////////////////////////////////////////
+void
+Gadget::setStyle( std::shared_ptr<Style>     style ) {
+    m_style = style ;
+//    m_style->print();
+    updateStyle( );
+};
 
 /////////////////////////////////////////////////
 void

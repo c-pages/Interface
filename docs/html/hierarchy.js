@@ -2,7 +2,11 @@ var hierarchy =
 [
     [ "gui::Action", "d6/d90/classgui_1_1_action.html", [
       [ "gui::Gadget", "d9/d0b/classgui_1_1_gadget.html", [
+        [ "gui::Bouton", "d4/daa/classgui_1_1_bouton.html", [
+          [ "gui::BoutonTexte", "d4/d47/classgui_1_1_bouton_texte.html", null ]
+        ] ],
         [ "gui::Groupe", "df/d39/classgui_1_1_groupe.html", null ],
+        [ "gui::Image", "d3/dbe/classgui_1_1_image.html", null ],
         [ "gui::Label", "d5/d3f/classgui_1_1_label.html", null ]
       ] ]
     ] ],

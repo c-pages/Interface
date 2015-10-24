@@ -15,7 +15,7 @@ namespace app
 {
 
 /////////////////////////////////////////////////
-/// \brief Manager de ressource.
+/// \brief Manager de ressource (polices, images).
 ///
 /// Classe template des polices, images
 ///
@@ -40,7 +40,7 @@ class ResourceMgr
 
 
 /////////////////////////////////////////////////
-/// \brief Manager de ressource.
+/// \brief Manager de ressource (music).
 ///
 /// Classe template des musiques
 ///

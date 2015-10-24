@@ -79,9 +79,14 @@ void Config::initSkins()
     m_skins.insert ( { Config::Skins::Skin1 , std::make_shared<gui::Skin> () } ) ;
     auto skin1 = m_skins[ Config::Skins::Skin1 ];
 
+    //// quleques variables pour simplifier l'ecriture
     //  la police du style
     sf::Font  police;
     police = m_polices.get( Polices::police_2 );
+
+    // texte
+    float taille_Btn_Text  = 14;
+
 
     //// DESACTIVE ///////////////////////////////////
     skin1->desactive->txt_police       = police;
@@ -110,8 +115,8 @@ void Config::initSkins()
     //// BOUTON REPOS ///////////////////////////////////
     skin1->btnRepos->txt_police        = police;
     skin1->btnRepos->txt_style         = sf::Text::Style::Regular ;
-    skin1->btnRepos->txt_taille        = 10;
-    skin1->btnRepos->txt_couleur       = sf::Color ( 200,200,200 , 50);
+    skin1->btnRepos->txt_taille        = taille_Btn_Text;
+    skin1->btnRepos->txt_couleur       = sf::Color ( 200,200,200 , 150);
     skin1->btnRepos->lgn_epaisseur     = 1;
     skin1->btnRepos->lgn_couleur       = sf::Color ( 255,255,255 , 50 );
     skin1->btnRepos->fnd_couleur       = sf::Color ( 150,150,255 , 50 );
@@ -122,7 +127,7 @@ void Config::initSkins()
     //// BOUTON SURVOL ///////////////////////////////////
     skin1->btnSurvol->txt_police       = police;
     skin1->btnSurvol->txt_style        = sf::Text::Style::Regular;
-    skin1->btnSurvol->txt_taille       = 10;
+    skin1->btnSurvol->txt_taille       = taille_Btn_Text;
     skin1->btnSurvol->txt_couleur      = sf::Color ( 200,200,200 , 150 );
     skin1->btnSurvol->lgn_epaisseur    = 1;
     skin1->btnSurvol->lgn_couleur      = sf::Color ( 255,255,255 , 150 );
@@ -134,7 +139,7 @@ void Config::initSkins()
     //// BOUTON PRESS ///////////////////////////////////
     skin1->btnPress->txt_police        = police;
     skin1->btnPress->txt_style         = sf::Text::Style::Regular;
-    skin1->btnPress->txt_taille        = 10;
+    skin1->btnPress->txt_taille        = taille_Btn_Text;
     skin1->btnPress->txt_couleur       = sf::Color ( 200,200,200 , 255 );
     skin1->btnPress->lgn_epaisseur     = 1;
     skin1->btnPress->lgn_couleur       = sf::Color ( 255,255,255 , 200 );
@@ -158,7 +163,7 @@ void Config::initSkins()
     //// LABEL COURANT ///////////////////////////////////
     skin1->lblCourant->txt_police      = police;
     skin1->lblCourant->txt_style       = sf::Text::Style::Regular;
-    skin1->lblCourant->txt_taille      = 10;
+    skin1->lblCourant->txt_taille      = 15;
     skin1->lblCourant->txt_couleur     = sf::Color ( 200,200,200);
     skin1->lblCourant->lgn_epaisseur   = 1;
     skin1->lblCourant->lgn_couleur     = sf::Color ( 255,255,255 , 200 );

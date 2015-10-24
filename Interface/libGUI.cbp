@@ -62,7 +62,6 @@
 		<Unit filename="include/Skin.h" />
 		<Unit filename="include/Style.h" />
 		<Unit filename="include/gadgets/Bouton.h" />
-		<Unit filename="include/gadgets/BoutonTexte.h" />
 		<Unit filename="include/gadgets/Groupe.h" />
 		<Unit filename="include/gadgets/Image.h" />
 		<Unit filename="include/gadgets/Label.h" />

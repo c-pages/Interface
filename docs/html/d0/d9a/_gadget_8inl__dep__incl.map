@@ -1,14 +1,20 @@
 <map id="Interface/include/Gadget.inl" name="Interface/include/Gadget.inl">
-<area shape="rect" id="node2" href="$d5/d66/_gadget_8h.html" title="Interface/include/Gadget.h" alt="" coords="359,80,533,107"/>
-<area shape="rect" id="node3" href="$da/d5d/_g_u_i_8h.html" title="Interface/GUI.h" alt="" coords="332,251,440,278"/>
-<area shape="rect" id="node9" href="$d7/d12/_groupe_8h.html" title="Interface/include/gadgets\l/Groupe.h" alt="" coords="181,155,348,196"/>
-<area shape="rect" id="node11" href="$de/dfe/_label_8h.html" title="Interface/include/gadgets\l/Label.h" alt="" coords="424,155,591,196"/>
-<area shape="rect" id="node13" href="$da/deb/_gadget_8cpp.html" title="Interface/src/Gadget.cpp" alt="" coords="615,162,779,189"/>
-<area shape="rect" id="node4" href="$d4/d71/_config_8h.html" title="main/include/Config.h" alt="" coords="146,341,293,367"/>
-<area shape="rect" id="node7" href="$d0/d88/_ecran_demo_8cpp.html" title="main/src/ecrans/EcranDemo.cpp" alt="" coords="357,423,569,449"/>
-<area shape="rect" id="node8" href="$d9/dff/_ecran_demo_8h.html" title="main/include/ecrans\l/EcranDemo.h" alt="" coords="317,333,455,375"/>
-<area shape="rect" id="node5" href="$d0/d42/_application_8cpp.html" title="main/src/Application.cpp" alt="" coords="167,423,333,449"/>
-<area shape="rect" id="node6" href="$d7/dd3/_config_8cpp.html" title="main/src/Config.cpp" alt="" coords="5,423,143,449"/>
-<area shape="rect" id="node10" href="$df/d02/_groupe_8cpp.html" title="Interface/src/gadgets\l/Groupe.cpp" alt="" coords="165,244,308,285"/>
-<area shape="rect" id="node12" href="$db/db4/_label_8cpp.html" title="Interface/src/gadgets\l/Label.cpp" alt="" coords="464,244,607,285"/>
+<area shape="rect" id="node2" href="$d5/d66/_gadget_8h.html" title="Interface/include/Gadget.h" alt="" coords="536,80,709,107"/>
+<area shape="rect" id="node3" href="$da/d5d/_g_u_i_8h.html" title="Interface/GUI.h" alt="" coords="334,341,442,367"/>
+<area shape="rect" id="node9" href="$db/d91/_bouton_8h.html" title="Interface/include/gadgets\l/Bouton.h" alt="" coords="185,155,351,196"/>
+<area shape="rect" id="node13" href="$d7/d12/_groupe_8h.html" title="Interface/include/gadgets\l/Groupe.h" alt="" coords="635,155,802,196"/>
+<area shape="rect" id="node15" href="$d9/de5/_image_8h.html" title="Interface/include/gadgets\l/Image.h" alt="" coords="923,244,1090,285"/>
+<area shape="rect" id="node17" href="$de/dfe/_label_8h.html" title="Interface/include/gadgets\l/Label.h" alt="" coords="445,155,611,196"/>
+<area shape="rect" id="node19" href="$da/deb/_gadget_8cpp.html" title="Interface/src/Gadget.cpp" alt="" coords="878,162,1042,189"/>
+<area shape="rect" id="node4" href="$d4/d71/_config_8h.html" title="main/include/Config.h" alt="" coords="148,430,295,457"/>
+<area shape="rect" id="node7" href="$d0/d88/_ecran_demo_8cpp.html" title="main/src/ecrans/EcranDemo.cpp" alt="" coords="359,512,571,539"/>
+<area shape="rect" id="node8" href="$d9/dff/_ecran_demo_8h.html" title="main/include/ecrans\l/EcranDemo.h" alt="" coords="319,423,457,464"/>
+<area shape="rect" id="node5" href="$d0/d42/_application_8cpp.html" title="main/src/Application.cpp" alt="" coords="169,512,335,539"/>
+<area shape="rect" id="node6" href="$d7/dd3/_config_8cpp.html" title="main/src/Config.cpp" alt="" coords="7,512,145,539"/>
+<area shape="rect" id="node10" href="$d3/d0a/_bouton_texte_8h.html" title="Interface/include/gadgets\l/BoutonTexte.h" alt="" coords="245,244,411,285"/>
+<area shape="rect" id="node12" href="$d5/d77/_bouton_8cpp.html" title="Interface/src/gadgets\l/Bouton.cpp" alt="" coords="26,244,169,285"/>
+<area shape="rect" id="node11" href="$d4/d37/_bouton_texte_8cpp.html" title="Interface/src/gadgets\l/BoutonTexte.cpp" alt="" coords="597,333,739,375"/>
+<area shape="rect" id="node14" href="$df/d02/_groupe_8cpp.html" title="Interface/src/gadgets\l/Groupe.cpp" alt="" coords="757,244,899,285"/>
+<area shape="rect" id="node16" href="$d0/dac/_image_8cpp.html" title="Interface/src/gadgets\l/Image.cpp" alt="" coords="935,333,1078,375"/>
+<area shape="rect" id="node18" href="$db/db4/_label_8cpp.html" title="Interface/src/gadgets\l/Label.cpp" alt="" coords="487,244,630,285"/>
 </map>

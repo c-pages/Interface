@@ -7,6 +7,8 @@ var classapp_1_1_ecran_demo =
     [ "initScene", "df/d42/classapp_1_1_ecran_demo.html#aa61d4d976b54eb8fa13ccbef328da064", null ],
     [ "test", "df/d42/classapp_1_1_ecran_demo.html#a87deb4261fb1d021eda0e9c88654f786", null ],
     [ "traiter_evenements", "df/d42/classapp_1_1_ecran_demo.html#a8487f9c53ed72e5bb99b3819fe5efc29", null ],
+    [ "boutonA", "df/d42/classapp_1_1_ecran_demo.html#adbfbc938c4a3820b3d21f6a8c507ee9e", null ],
+    [ "lblTest", "df/d42/classapp_1_1_ecran_demo.html#a0bb7cab12cbb897bf76b15490751800e", null ],
     [ "m_fond", "df/d42/classapp_1_1_ecran_demo.html#a5a253769dce7378efc2de34b479e3517", null ],
     [ "m_gui", "df/d42/classapp_1_1_ecran_demo.html#a4dc8dc175d929eddf5902549cdfd38bd", null ]
 ];

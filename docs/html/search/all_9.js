@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['init',['init',['../df/dbe/classapp_1_1_config.html#a48395c7e382fb68f5283676847b4fb58',1,'app::Config']]],
+  ['image',['Image',['../d3/dbe/classgui_1_1_image.html',1,'gui']]],
+  ['image',['Image',['../d3/dbe/classgui_1_1_image.html#aa4b21108e1237e921b3f506dd6ed1623',1,'gui::Image::Image()'],['../d3/dbe/classgui_1_1_image.html#a5ed373f6bbf722a849457e0feb2dc751',1,'gui::Image::Image(std::string fichier, sf::Vector2f taille={0, 0})'],['../d3/dbe/classgui_1_1_image.html#add526d45bff2c5464443ec09787f1907',1,'gui::Image::Image(sf::Color couleur, sf::Vector2f taille={0, 0})'],['../d3/dbe/classgui_1_1_image.html#af252cc1c7a94fe9b274bae55926a3097',1,'gui::Image::image()']]],
+  ['image_2ecpp',['Image.cpp',['../d0/dac/_image_8cpp.html',1,'']]],
+  ['image_2eh',['Image.h',['../d9/de5/_image_8h.html',1,'']]],
+  ['init',['Init',['../d3/dbe/classgui_1_1_image.html#a3c40ccc3daf57a5151678e20cb97c6e1',1,'gui::Image::Init()'],['../df/dbe/classapp_1_1_config.html#a48395c7e382fb68f5283676847b4fb58',1,'app::Config::init()']]],
   ['initgui',['initGUI',['../df/d42/classapp_1_1_ecran_demo.html#a8e26aa83dad5dea758fc8e445c9399c1',1,'app::EcranDemo']]],
   ['initpolices',['initPolices',['../df/dbe/classapp_1_1_config.html#ada2a8a71c6ef00e4726666af45c04d25',1,'app::Config']]],
   ['initscene',['initScene',['../df/d42/classapp_1_1_ecran_demo.html#aa61d4d976b54eb8fa13ccbef328da064',1,'app::EcranDemo']]],
