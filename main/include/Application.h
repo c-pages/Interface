@@ -25,11 +25,8 @@ namespace app {  ///<  app Espace de l'application.
 class Ecran;
 
 /////////////////////////////////////////////////
-/// \class  Application
 /// \brief  La classe de base du programme.
 ///
-/// Gère les différents écrans du programme
-/// (écran d'introduction, accueil, pause, écran du jeu ....)
 /////////////////////////////////////////////////
 class Application
 {
@@ -71,6 +68,7 @@ class Application
         ///
         /// Actualiser les différents éléments du ou des écrans actifs.
         /// \param deltaT          Un \e float qui indique le delta du temps écoulé depuis la dernière actualisation.
+        /// ca permet quand on actualise de ponderer les mouvement en fonction du temps et ainsi avoir une indépendance entre animation et frame rate.
         /// \return Rien
         ///
         /////////////////////////////////////////////////
@@ -96,7 +94,7 @@ class Application
     private:
 
         /////////////////////////////////////////////////
-        /// Les membres
+        // Les membres
         /////////////////////////////////////////////////
         Gestion_ecrans      m_ecrans;    ///< Le gestionnaire des écrans.
         sf::RenderWindow    m_fenetre;   ///< La fenêtre SFML
@@ -110,15 +108,20 @@ class Application
 
 ////////////////////////////////////////////////////////////
 /// \class app::Application
+/// \ingroup application
 /// \defgroup application Module pour Application
 ///
-/// Manipule les différents écrans de l'application à travers une boucle principale,
-/// coeur de l'application, en simplifiant légèrement:
-/// \li Ecouter les évenements utilisateurs ( claviers, cliques...).
-/// \li Actualiser les parametres de tout les éléments.
-/// \li Dessiner les éléments en vue dans la fenetre
+/// Gère les différents écrans du programme
+/// (écran d'introduction, accueil, pause, écran du jeu ....)
 ///
-/// C'est le gestionnaire des écrans (m_ecrans) qui se charge du traitement de la pile des écrans.
+/// Peut-être pour tester d'autre trucs, comme la bibilo d'interface graphique... ou comme base pour demarrer un nouveau projet.
+///
+/// Manipule les différents écrans de l'application à l'aide d'une boucle infernalede type :
+/// \li Ecouter les évenements utilisateurs ( claviers, cliques...).
+/// \li Actualiser les parametres de tout les éléments ( position, couleurs, points de vies ... ).
+/// \li Dessiner les éléments dans la fenetre
+///
+/// C'est le gestionnaire des écrans ( m_ecrans app:Gestion_Ecrans ) qui se charge du traitement de la pile des écrans.
 ///
 /// Quand il n'y a plus d'écrans dans la pile, l'application se ferme.
 ///

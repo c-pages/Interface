@@ -50,7 +50,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
       <li><a href="../../index.html"><span>Page&#160;principale</span></a></li>
       <li><a href="../../pages.html"><span>Pages&#160;associées</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
-      <li><a href="../../namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
       <li><a href="../../annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
       <li class="current"><a href="../../files.html"><span>Fichiers</span></a></li>
       <li>
@@ -74,7 +73,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
-      <li><a href="../../globals.html"><span>Variables&#160;globale</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -111,14 +109,14 @@ $(document).ready(function(){initNavTree('de/dfe/_label_8h_source.html','../../'
 <div class="title">Label.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../de/dfe/_label_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef LABEL_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define LABEL_H</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Headers</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span><span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../d5/d66/_gadget_8h.html">Gadget.h</a>&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;Gadget.h&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d7/dc4/namespacegui.html">gui</a></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
@@ -158,7 +156,7 @@ $(document).ready(function(){initNavTree('de/dfe/_label_8h_source.html','../../'
 <div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="../../d5/d3f/classgui_1_1_label.html#aa8846149890d23c198f1c366bff16008">  113</a></span>&#160;    <a class="code" href="../../d5/d3f/classgui_1_1_label.html#aa8846149890d23c198f1c366bff16008">setColor</a> ( sf::Color col ) { <a class="code" href="../../d5/d3f/classgui_1_1_label.html#a331d0837da428ac27b860277f198df82">m_texte</a>-&gt;setColor( col ); } ;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="../../d5/d3f/classgui_1_1_label.html#ab25a6abbb33da33bfaac8f21a1285719">updateStyle</a>( );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="../../d5/d3f/classgui_1_1_label.html#a57526d41486a70b1bce37800103887ae">majFormes</a>( );</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span></div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="../../d5/d3f/classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf">traiter_evenements</a> ( <span class="keyword">const</span> sf::Event&amp; event );</div>
@@ -199,6 +197,7 @@ $(document).ready(function(){initNavTree('de/dfe/_label_8h_source.html','../../'
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="ttc" id="classgui_1_1_label_html_a57526d41486a70b1bce37800103887ae"><div class="ttname"><a href="../../d5/d3f/classgui_1_1_label.html#a57526d41486a70b1bce37800103887ae">gui::Label::majFormes</a></div><div class="ttdeci">void majFormes()</div><div class="ttdoc">Actualise le style du label. </div><div class="ttdef"><b>Definition:</b> Label.cpp:65</div></div>
 <div class="ttc" id="classgui_1_1_label_html_ac186d541addb868de0d08dff76488732"><div class="ttname"><a href="../../d5/d3f/classgui_1_1_label.html#ac186d541addb868de0d08dff76488732">gui::Label::setTexteTaille</a></div><div class="ttdeci">void setTexteTaille(float taille)</div><div class="ttdoc">Definir la taille texte du Label. </div><div class="ttdef"><b>Definition:</b> Label.h:103</div></div>
 <div class="ttc" id="classgui_1_1_label_html_a5c0c354060b3e9e5f6fd813e68ec2cf6"><div class="ttname"><a href="../../d5/d3f/classgui_1_1_label.html#a5c0c354060b3e9e5f6fd813e68ec2cf6">gui::Label::setTexte</a></div><div class="ttdeci">void setTexte(std::string texte)</div><div class="ttdoc">Definir le texte du Label. </div><div class="ttdef"><b>Definition:</b> Label.h:84</div></div>
 <div class="ttc" id="classgui_1_1_label_html_a17b939dc928de9a6f826514f655348d2"><div class="ttname"><a href="../../d5/d3f/classgui_1_1_label.html#a17b939dc928de9a6f826514f655348d2">gui::Label::getLocalBounds</a></div><div class="ttdeci">sf::FloatRect getLocalBounds()</div><div class="ttdoc">Accesseur de la boundingBox en local. </div><div class="ttdef"><b>Definition:</b> Label.cpp:39</div></div>
@@ -214,15 +213,13 @@ $(document).ready(function(){initNavTree('de/dfe/_label_8h_source.html','../../'
 <div class="ttc" id="classgui_1_1_gadget_html"><div class="ttname"><a href="../../d9/d0b/classgui_1_1_gadget.html">gui::Gadget</a></div><div class="ttdoc">Classe virtuelle, la base commune aux gadgets formant l&#39;interface. </div><div class="ttdef"><b>Definition:</b> Gadget.h:22</div></div>
 <div class="ttc" id="classgui_1_1_label_html_a7d2d63e5b786ec093a4c7ea20db40208"><div class="ttname"><a href="../../d5/d3f/classgui_1_1_label.html#a7d2d63e5b786ec093a4c7ea20db40208">gui::Label::Label</a></div><div class="ttdeci">Label(std::string texte=&quot;&quot;)</div><div class="ttdoc">Constructeur defaut, avec ou sans texte. </div><div class="ttdef"><b>Definition:</b> Label.cpp:12</div></div>
 <div class="ttc" id="classgui_1_1_label_html_af940ee918cf3e72ce74383d609c08721"><div class="ttname"><a href="../../d5/d3f/classgui_1_1_label.html#af940ee918cf3e72ce74383d609c08721">gui::Label::actualiser</a></div><div class="ttdeci">void actualiser(float deltaT)</div><div class="ttdoc">Actualiser les éléments. </div><div class="ttdef"><b>Definition:</b> Label.cpp:83</div></div>
-<div class="ttc" id="classgui_1_1_label_html_ab25a6abbb33da33bfaac8f21a1285719"><div class="ttname"><a href="../../d5/d3f/classgui_1_1_label.html#ab25a6abbb33da33bfaac8f21a1285719">gui::Label::updateStyle</a></div><div class="ttdeci">void updateStyle()</div><div class="ttdoc">Actualise le style du label. </div><div class="ttdef"><b>Definition:</b> Label.cpp:65</div></div>
-<div class="ttc" id="_gadget_8h_html"><div class="ttname"><a href="../../d5/d66/_gadget_8h.html">Gadget.h</a></div></div>
 <div class="ttc" id="classgui_1_1_label_html_a35fe2fbca1f6c34beb66bfd9b3b9b609"><div class="ttname"><a href="../../d5/d3f/classgui_1_1_label.html#a35fe2fbca1f6c34beb66bfd9b3b9b609">gui::Label::~Label</a></div><div class="ttdeci">virtual ~Label()</div><div class="ttdoc">Destructeur. </div><div class="ttdef"><b>Definition:</b> Label.cpp:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_b7263c2df3abed61e1897d5e9e534860.html">Interface</a></li><li class="navelem"><a class="el" href="../../dir_b26ada46c7d42db83f11c4750604aea0.html">include</a></li><li class="navelem"><a class="el" href="../../dir_9ab5a57497ef2c36b4a22954635ab49a.html">gadgets</a></li><li class="navelem"><a class="el" href="../../de/dfe/_label_8h.html">Label.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_b7263c2df3abed61e1897d5e9e534860.html">Interface</a></li><li class="navelem"><a class="el" href="../../dir_b26ada46c7d42db83f11c4750604aea0.html">include</a></li><li class="navelem"><a class="el" href="../../dir_9ab5a57497ef2c36b4a22954635ab49a.html">gadgets</a></li><li class="navelem"><b>Label.h</b></li>
     <li class="footer">Généré par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>

@@ -24,18 +24,52 @@ template<typename RESOURCE,typename IDENTIFIANT = int>
 class ResourceMgr
 {
     public:
+        /////////////////////////////////////////////////
+        /// \brief constructeur
+        ///
+        ///  "= delete" c'est une manière de dire non copyable si j'ai bien compris, cf le bouquin SFML ...
+        ///
+        /////////////////////////////////////////////////
         ResourceMgr             ( const ResourceMgr& ) = delete;
-        ResourceMgr& operator=  ( const ResourceMgr& ) = delete;
+
+        /////////////////////////////////////////////////
+        /// \brief Constructeur
+        ///
+        ///  "= default" cf le bouquin SFML ...
+        ///
+        /////////////////////////////////////////////////
         ResourceMgr             ( ) = default;
 
+        /////////////////////////////////////////////////
+        /// \brief Surcharge de =
+        ///
+        ///  "= delete" cf le bouquin SFML, mais je crois que c'est pour dire ope= c'est copy...bref pas super claire encore
+        ///
+        /////////////////////////////////////////////////
+        ResourceMgr& operator=  ( const ResourceMgr& ) = delete;
+
+        /////////////////////////////////////////////////
+        /// \brief Charger une image ou une police depuis un fichier et l'associe à un identifiant.
+        ///
+        /// \param id l'identenfiant
+        /// \param args le fichier
+        ///
+        /////////////////////////////////////////////////
         template<typename ... Args>
         void        load(const IDENTIFIANT& id,Args&& ... args);
 
+        /////////////////////////////////////////////////
+        /// \brief demande une image ou une police à partir de son identifiant.
+        ///
+        /// \param id l'identenfiant
+        /// \return la ressource demandé.
+        ///
+        /////////////////////////////////////////////////
         RESOURCE&   get(const IDENTIFIANT& id)const;
 
     private:
 
-        std::unordered_map<IDENTIFIANT,std::unique_ptr<RESOURCE>>       mPlan;
+        std::unordered_map<IDENTIFIANT,std::unique_ptr<RESOURCE>>       mPlan;  ///< les resources enregistrés avec leur identifiant.
 };
 
 
@@ -45,20 +79,54 @@ class ResourceMgr
 /// Classe template des musiques
 ///
 /////////////////////////////////////////////////
-template<typename IDENTIFIER>
-class ResourceMgr<sf::Music,IDENTIFIER>
+template<typename IDENTIFIANT>
+class ResourceMgr<sf::Music,IDENTIFIANT>
 {
     public:
+        /////////////////////////////////////////////////
+        /// \brief constructeur
+        ///
+        ///  "= delete" c'est une manière de dire non copyable si j'ai bien compris, cf le bouquin SFML ...
+        ///
+        /////////////////////////////////////////////////
         ResourceMgr(const ResourceMgr&) = delete;
-        ResourceMgr& operator=(const ResourceMgr&) = delete;
+
+        /////////////////////////////////////////////////
+        /// \brief Constructeur
+        ///
+        ///  "= default" cf le bouquin SFML ...
+        ///
+        /////////////////////////////////////////////////
         ResourceMgr() = default;
 
-        template<typename ... Args>
-        void load(const IDENTIFIER& id,Args&& ... args);
+        /////////////////////////////////////////////////
+        /// \brief Surcharge de =
+        ///
+        ///  "= delete" cf le bouquin SFML, mais je crois que c'est pour dire ope= c'est copy...bref pas super claire encore
+        ///
+        /////////////////////////////////////////////////
+        ResourceMgr& operator=(const ResourceMgr&) = delete;
 
-        sf::Music& get(const IDENTIFIER& id)const;
+        /////////////////////////////////////////////////
+        /// \brief Charger une musique depuis un fichier et l'associe à un identifiant.
+        ///
+        /// \param id l'identifiant
+        /// \param args le fichier
+        ///
+        /////////////////////////////////////////////////
+        template<typename ... Args>
+        void load(const IDENTIFIANT& id,Args&& ... args);
+
+        /////////////////////////////////////////////////
+        /// \brief demande une musique à partir de son identifiant.
+        ///
+        /// \param id l'identifiant
+        /// \return la musique demandé.
+        ///
+        /////////////////////////////////////////////////
+        sf::Music& get(const IDENTIFIANT& id)const;
     private:
-        std::unordered_map<IDENTIFIER,std::unique_ptr<sf::Music>> mPlan;
+        std::unordered_map<IDENTIFIANT,std::unique_ptr<sf::Music>> mPlan; ///< les resources enregistrés avec leur identifiant.
 };
 
 
@@ -74,7 +142,7 @@ class ResourceMgr<sf::Music,IDENTIFIER>
 /// \class app::ResourceMgr
 /// \ingroup application
 ///
-/// Gère les ressource façon ASII (  recuperé dans \e SFML Blueprints [eBook] )
+/// Gère les ressource façon RAII
 ///
 /// \see app::Ecran, app::Gestion_ecrans
 ///

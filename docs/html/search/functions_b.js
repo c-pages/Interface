@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['setbordure',['setBordure',['../d4/d47/classgui_1_1_bouton_texte.html#ad0120baa693e47bcc17a403f136a840f',1,'gui::BoutonTexte']]],
+  ['setactif',['setActif',['../dd/d05/classgui_1_1_bouton_cocher.html#ad8f3c398a2fb5c4f86b43dd9d9521c39',1,'gui::BoutonCocher']]],
+  ['setbordure',['setBordure',['../d4/daa/classgui_1_1_bouton.html#a64b944ce671d491c2c14087b5727ee0b',1,'gui::Bouton']]],
   ['setcolor',['setColor',['../d5/d3f/classgui_1_1_label.html#aa8846149890d23c198f1c366bff16008',1,'gui::Label']]],
   ['setenable',['setEnable',['../d9/d0b/classgui_1_1_gadget.html#a72d54e3e05dbfd28e156ec72d1424410',1,'gui::Gadget']]],
   ['setfillcolor',['setFillColor',['../d4/daa/classgui_1_1_bouton.html#a84b817726afad13e2c93b458df712beb',1,'gui::Bouton::setFillColor()'],['../d3/dbe/classgui_1_1_image.html#ac7a34a5ab8ded879a98dac4c093ed8fc',1,'gui::Image::setFillColor()']]],

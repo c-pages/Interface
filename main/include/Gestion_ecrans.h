@@ -10,8 +10,6 @@ namespace app{
 /////////////////////////////////////////////////
 /// \brief  Gestionnaire des écrans
 ///
-/// Gère les différents écrans de l'application.
-/// C'est lui qui porte les écrans actifs du programme.
 /////////////////////////////////////////////////
 class Gestion_ecrans
 {
@@ -54,7 +52,7 @@ public:
     ///
     /// On retire l'écran en cours, puis on ajoute le nouveau.
     ///
-    /// \param ecran
+    /// \param ecran le nouvel \e Ecran à mettre à la place du dernier de la pile.
     /// \return Rien
     ///
     /////////////////////////////////////////////////
@@ -69,9 +67,7 @@ public:
     Ecran*    courant ();
 
     /////////////////////////////////////////////////
-    /// \brief Rendre les écrans de la pile.
-    ///
-    /// Dessine les différents éléments du ou des écrans de la pile.
+    /// \brief Gère les évenements  des écrans actifs.
     ///
     /// \return Rien
     ///
@@ -116,7 +112,9 @@ private:
 /// \class app::Gestion_ecrans
 /// \ingroup application
 ///
-///
+/// Gère les différents écrans de l'application.
+/// C'est lui qui porte les écrans actifs du programme.
+/// qui permet de passer d'un écran à l'autre, etc.
 /// \see app::Ecran
 ///
 ////////////////////////////////////////////////////////////

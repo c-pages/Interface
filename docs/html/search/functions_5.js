@@ -1,8 +1,8 @@
 var searchData=
 [
   ['gadget',['Gadget',['../d9/d0b/classgui_1_1_gadget.html#a62dfd5bd962b252b792f00b183df9462',1,'gui::Gadget::Gadget()'],['../d9/d0b/classgui_1_1_gadget.html#a48476e6533972ba171cc49ee6e31e157',1,'gui::Gadget::Gadget(std::shared_ptr&lt; Style &gt; style)'],['../d9/d0b/classgui_1_1_gadget.html#ace60df86fec3cb47537825612d3170d4',1,'gui::Gadget::Gadget(std::shared_ptr&lt; Skin &gt; skin)']]],
-  ['get',['get',['../d2/dc2/classapp_1_1_resource_mgr.html#a3bfe5f76db7efb5a3e5491c3b16853b6',1,'app::ResourceMgr::get()'],['../de/d49/classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_e_r_01_4.html#a1ac2c1273e10b7571fe41a684f8ae78d',1,'app::ResourceMgr&lt; sf::Music, IDENTIFIER &gt;::get()']]],
-  ['getbordure',['getBordure',['../d4/d47/classgui_1_1_bouton_texte.html#a4be5bb4101c076fedbe90d9b11ab9049',1,'gui::BoutonTexte']]],
+  ['get',['get',['../d2/dc2/classapp_1_1_resource_mgr.html#a6d50e13d521942530229e80f660ff004',1,'app::ResourceMgr::get()'],['../db/d66/classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_a_n_t_01_4.html#aba12cfd8fd57b314ab87c78e000a2290',1,'app::ResourceMgr&lt; sf::Music, IDENTIFIANT &gt;::get()']]],
+  ['getbordure',['getBordure',['../d4/daa/classgui_1_1_bouton.html#af4e656a92d7a1795a36d839ed9fa8501',1,'gui::Bouton']]],
   ['getdureeimage',['getDureeImage',['../df/dbe/classapp_1_1_config.html#a300d3ecafed165cfe44b93c555116ff5',1,'app::Config']]],
   ['getfenetre',['getFenetre',['../dc/de4/classapp_1_1_application.html#acbc0a186b9ec7abfaf35eaad5d55b45a',1,'app::Application']]],
   ['getglobalbounds',['getGlobalBounds',['../d9/d0b/classgui_1_1_gadget.html#a698682665f65f54e0798887955f32f2e',1,'gui::Gadget::getGlobalBounds()'],['../d4/daa/classgui_1_1_bouton.html#a610e908477ecc3eef1576380ef5eda53',1,'gui::Bouton::getGlobalBounds()'],['../df/d39/classgui_1_1_groupe.html#aaa70e4ae758c941a1be7965814e11cff',1,'gui::Groupe::getGlobalBounds()'],['../d3/dbe/classgui_1_1_image.html#a7a26b662467410938d9cfa01e4dcf50e',1,'gui::Image::getGlobalBounds()'],['../d5/d3f/classgui_1_1_label.html#a3d1724b9ebd2f1ff450ccfe725c0ac04',1,'gui::Label::getGlobalBounds()']]],

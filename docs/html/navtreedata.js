@@ -4,14 +4,6 @@ var NAVTREE =
     [ "libGUI", "d3/d3b/md__interface__r_e_a_d_m_e.html", null ],
     [ "Liste des choses à faire", "dd/da0/todo.html", null ],
     [ "Modules", "modules.html", "modules" ],
-    [ "Espaces de nommage", null, [
-      [ "Liste des espaces de nommage", "namespaces.html", "namespaces" ],
-      [ "Membres de l'espace de nommage", "namespacemembers.html", [
-        [ "Tout", "namespacemembers.html", null ],
-        [ "Énumérations", "namespacemembers_enum.html", null ],
-        [ "Valeurs énumérées", "namespacemembers_eval.html", null ]
-      ] ]
-    ] ],
     [ "Structures de données", "annotated.html", [
       [ "Structures de données", "annotated.html", "annotated_dup" ],
       [ "Index des structures de données", "classes.html", null ],
@@ -26,19 +18,15 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Fichiers", null, [
-      [ "Liste des fichiers", "files.html", "files" ],
-      [ "Variables globale", "globals.html", [
-        [ "Tout", "globals.html", null ],
-        [ "Fonctions", "globals_func.html", null ]
-      ] ]
+      [ "Liste des fichiers", "files.html", "files" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"de/d49/classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_e_r_01_4.html#a1792dec334662afb26c194462cfc252d"
+".html",
+"df/dbe/classapp_1_1_config.html#a48395c7e382fb68f5283676847b4fb58"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

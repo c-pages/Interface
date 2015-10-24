@@ -24,8 +24,8 @@ class Gadget : public Action , public sf::Drawable , public sf::Transformable
 
 public:
 
-    // definition du type des pointeurs de gadget
-    typedef     std::shared_ptr < Gadget >     ptr;
+
+    typedef     std::shared_ptr < Gadget >     ptr; ///<  definition du type des pointeurs de gadget
 
     /////////////////////////////////////////////////
     /// \brief Constructeur par defaut
@@ -114,26 +114,6 @@ public:
     ajouter ( ptr enfant );
 
     /////////////////////////////////////////////////
-    /// \brief Definir l'état du Gadget.
-    ///
-    /// \param val     bool.
-    ///
-    /// \return Rien
-    ///
-    /////////////////////////////////////////////////
-    void
-    setEnable ( bool val ) { m_enable = val; };
-
-    /////////////////////////////////////////////////
-    /// \brief Accesseur état du Gadget.
-    ///
-    /// \return true si le gadget est actif
-    ///
-    /////////////////////////////////////////////////
-    bool
-    isEnable (  ) { return m_enable ; };
-
-    /////////////////////////////////////////////////
     /// \brief Définie le skin du Label.
     ///
     /// \param skin   Le skin à appliquer (Configuration::Styles).
@@ -168,7 +148,27 @@ public:
     aligner (  Gadget& cible , Alignements    align  = Alignements::Ctre_Mili );
 
     /////////////////////////////////////////////////
-    /// \brief demande si le gadget est a supprimer
+    /// \brief Definir l'état du Gadget.
+    ///
+    /// \param val     bool.
+    ///
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    void
+    setEnable ( bool val ) { m_enable = val; };
+
+    /////////////////////////////////////////////////
+    /// \brief Accesseur état du Gadget.
+    ///
+    /// \return true si le gadget est actif
+    ///
+    /////////////////////////////////////////////////
+    bool
+    isEnable (  ) { return m_enable ; };
+
+    /////////////////////////////////////////////////
+    /// \brief demande si le gadget est en attente de suppression
     ///
     /// \return Rien
     ///
@@ -187,15 +187,17 @@ public:
     void
     supprimer(){  m_aSupprimer = true; };
 
-   /////////////////////////////////////////////////
+    /////////////////////////////////////////////////
     /// \brief overload annulant la fonction rotate
     ///
-    /// Permet de bloquer la rotation sur les gadgets,
-    /// car rotate() n'est pas pris en compte par les gadgets.
+    /// ne fait rien du tout ! juste là pour bloquer la rotation sur les gadgets !
+    /// C'est un peu tricky ce truc mais c'est simple et efficace.
+    /// ca bloque le souci de zone de clique qui ne suivent pas les rotate...
+    /// => rotate() n'est pas pris en compte.
     ///
     /////////////////////////////////////////////////
     virtual void
-    rotate(float x )  { std::cout <<"ATTENTION: rotate() n'est pas pris en compte pour les gui::gadgets!\n"; } ;
+    rotate(float x )  { std::cout <<"ATTENTION: rotate() n'est pas pris en compte pour tout les gui::gadgets!\n"; } ;
 
 protected:
 
@@ -211,13 +213,13 @@ protected:
     contient ( float x, float y );
 
     /////////////////////////////////////////////////
-    /// \brief Actualise le style du Gadget
+    /// \brief Actualise le model du Gadget
     ///
     /// \return Rien
     ///
     /////////////////////////////////////////////////
     virtual void
-    updateStyle(){};
+    majFormes(){};
 
 
 public:
@@ -264,9 +266,9 @@ protected:
     std::vector< ptr >      m_enfants;      ///< Les enfants du bouton.
     std::shared_ptr<Skin>   m_skin;         ///< le skin du gadget.
     std::shared_ptr<Style>  m_style;        ///< le style du gadget.
-    bool                    m_enable;       ///< l'état du gadget.
+    bool                    m_enable;       ///< si le gadget est actif ou pas.
     bool                    m_aSupprimer;   ///< On le passe à true quand on veut supprimer ce gadget (il sera supprimé par son parent au debut de l'actualisation).
-    bool                    m_besoinActua;  ///< Si on a chnger un truc qui necessite d'actualiser le gadget.
+    bool                    m_besoinActua;  ///< Si on a changer un truc qui necessite d'actualiser la geometrie, couleur... du gadget (comme un resize ou pendant le survol d'un bouton par exemple).
 
 };// fin de class Gadget
 };// fin du namespace gui
@@ -287,6 +289,7 @@ protected:
 /// \class gui::Gadget
 /// \ingroup interface
 ///
+/// hérite de sf::Transformable donc on peut utiliser les trucs SFML genre getPosition().
 /// \see gui::Label, gui::Groupe
 ///
 ////////////////////////////////////////////////////////////

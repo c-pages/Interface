@@ -1,4 +1,4 @@
 <map id="gui::Label::actualiser" name="gui::Label::actualiser">
 <area shape="rect" id="node2" href="$d9/d0b/classgui_1_1_gadget.html#a06c66be095e4d531ef307a3db36e2b4f" title="Actualiser les éléments. " alt="" coords="196,5,349,32"/>
-<area shape="rect" id="node3" href="$d9/d0b/classgui_1_1_gadget.html#ab2bd5264b770b78ecc59d2f1b7486aa6" title="demande si le gadget est a supprimer " alt="" coords="397,5,560,32"/>
+<area shape="rect" id="node3" href="$d9/d0b/classgui_1_1_gadget.html#ab2bd5264b770b78ecc59d2f1b7486aa6" title="demande si le gadget est en attente de suppression " alt="" coords="397,5,560,32"/>
 </map>

@@ -16,14 +16,14 @@ namespace app
 /// Classe template des musiques
 ///
 /////////////////////////////////////////////////
-template<typename IDENTIFIER>
+template<typename IDENTIFIANT>
 template<typename ... Args>
-void ResourceMgr<sf::Music,IDENTIFIER>::load(const IDENTIFIER& ident,Args&& ... args)
+void ResourceMgr<sf::Music,IDENTIFIANT>::load(const IDENTIFIANT& id,Args&& ... args)
 {
     std::unique_ptr<sf::Music> ptr(new sf::Music);
     if(not ptr->openFromFile(std::forward<Args>(args)...))
         throw std::runtime_error("Impossible de charger le fichier");
-    mPlan.emplace(ident,std::move(ptr));
+    mPlan.emplace(id,std::move(ptr));
 };
 
 /////////////////////////////////////////////////
@@ -32,10 +32,10 @@ void ResourceMgr<sf::Music,IDENTIFIER>::load(const IDENTIFIER& ident,Args&& ... 
 /// Class template des musiques
 ///
 /////////////////////////////////////////////////
-template<typename IDENTIFIER>
-sf::Music& ResourceMgr<sf::Music,IDENTIFIER>::get(const IDENTIFIER& ident) const
+template<typename IDENTIFIANT>
+sf::Music& ResourceMgr<sf::Music,IDENTIFIANT>::get(const IDENTIFIANT& id) const
 {
-    return *mPlan.at(ident);
+    return *mPlan.at(id);
 }
 
 
@@ -51,22 +51,22 @@ sf::Music& ResourceMgr<sf::Music,IDENTIFIER>::get(const IDENTIFIER& ident) const
 /// Class template des polices, images
 ///
 /////////////////////////////////////////////////
-template<typename RESOURCE,typename IDENTIFIER>
+template<typename RESOURCE,typename IDENTIFIANT>
 template<typename ... Args>
-void ResourceMgr<RESOURCE,IDENTIFIER>::load(const IDENTIFIER& ident , Args&& ... args)
+void ResourceMgr<RESOURCE,IDENTIFIANT>::load(const IDENTIFIANT& id , Args&& ... args)
 {
     std::unique_ptr<RESOURCE> ptr(new RESOURCE);
     if(not ptr->loadFromFile(std::forward<Args>(args)...))
         throw std::runtime_error("Impossible de charger le fichier");
-    mPlan.emplace(ident,std::move(ptr));
+    mPlan.emplace(id,std::move(ptr));
 }
 
 
 
-template<typename RESOURCE,typename IDENTIFIER>
-RESOURCE& ResourceMgr<RESOURCE,IDENTIFIER>::get(const IDENTIFIER& ident)const
+template<typename RESOURCE,typename IDENTIFIANT>
+RESOURCE& ResourceMgr<RESOURCE,IDENTIFIANT>::get(const IDENTIFIANT& id)const
 {
-    return *mPlan.at(ident);
+    return *mPlan.at(id);
 }
 
 } // fin app

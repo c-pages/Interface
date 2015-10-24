@@ -15,6 +15,7 @@
 namespace gui {
 
 /////////////////////////////////////////////////
+/// \enum Evenements
 /// \brief enumeration des differents dtype d'évenements.
 ///
 /////////////////////////////////////////////////
@@ -50,15 +51,13 @@ class Action
     public:
 
         //Déclarations de types des fonction lambda que l'on associe au evenements declenchés
-        using   FuncType = std::function<void()>;
-        static  FuncType    defaultFunc;
-
-        //Déclarations de types des collecteurs d'evenements
-        typedef  std::map< sf::Keyboard::Key    , FuncType >      evtClavier;
-        typedef  std::map< Evenements           , FuncType >      evtSouris;
+        using   FuncType = std::function<void()>;                               ///< la fonction lambda associé aux declenchements des evenements.
+        static  FuncType    defaultFunc;                                        ///< type par defaut de la fonction lambda.
+        typedef  std::map< sf::Keyboard::Key    , FuncType >      evtClavier;   ///< Collecteur d'évenements clavier
+        typedef  std::map< Evenements           , FuncType >      evtSouris;    ///< collecteur d'évenement déclenché par nos gui::Evenements (souris, fenetre ..)
 
         /////////////////////////////////////////////////
-        /// \brief lier un evenement et une fonction labmda (FuncType).
+        /// \brief Ajoute un ecouteur d'evenement associé à une fonction lambda(FuncType) à executer lors du déclenchement de l'evenement.
         ///
         /// \param evt          Un evenement de la liste Evenements.
         /// \param fonction     la fonction lambda associé.
@@ -69,7 +68,7 @@ class Action
         lier    ( Evenements evt ,      const FuncType& fonction);
 
         /////////////////////////////////////////////////
-        /// \brief lier un evenement et une fonction labmda (FuncType).
+        /// \brief Ajoute un ecouteur d'evenement associé à une fonction lambda(FuncType) à executer lors du déclenchement de l'evenement.
         ///
         /// \param touche          Une touche du clavier sf::Keyboard::Key.
         /// \param fonction     la fonction lambda associé.
@@ -80,7 +79,7 @@ class Action
         lier    ( sf::Keyboard::Key  touche ,      const FuncType& fonction);
 
         /////////////////////////////////////////////////
-        /// \brief Délier un évenement.
+        /// \brief supprimer un ecouteur d'évenement.
         ///
         /// \param evt        Un evenement souris de la liste _evtsSouris..
         /// \return Rien.
@@ -90,7 +89,7 @@ class Action
         delier  ( Evenements evt );
 
         /////////////////////////////////////////////////
-        /// \brief Délier un évenement clavier.
+        /// \brief supprimer un ecouteur d'évenement clavier.
         ///
         /// \param touche        Une touche du clavier sf::Keyboard::Key.
         /// \return Rien.
@@ -102,7 +101,7 @@ class Action
     protected:
 
         /////////////////////////////////////////////////
-        /// \brief Déclencher la fonction associé à l'évenement souris.
+        /// \brief Déclencher la fonction associé à l'évenement.
         ///
         /// \param evt        L'evenement souris à declencher.
         /// \return Rien.

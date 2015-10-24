@@ -23,6 +23,7 @@
 #include <gadgets/Groupe.h>         // --->    groupe de gadgets   grp
 #include <gadgets/Bouton.h>         // --->    declenche des fcts
 #include <gadgets/BoutonTexte.h>    // --->    declenche des fcts
+#include <gadgets/BoutonCocher.h>   // --->    0 ou 1
 
 
 
@@ -31,7 +32,6 @@
 ////SaisieTexte                    // --->    Champs de saisie de texte
 //
 ////BoutonCurseur                     --->    de 0. à 1.
-//#include <gadgets/BoutonCocher.h>//--->    0 ou 1
 ////barProgres                        --->    bar de chargement
 //
 //*============  groups     =========*/

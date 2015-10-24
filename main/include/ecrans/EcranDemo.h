@@ -15,8 +15,6 @@ namespace app {
 /// \class  EcranDemo
 /// \brief  Ecran de démonstration
 ///
-/// Peut-être pour tester d'autre trucs, comme la bibilo d'interface graphique...
-///
 /////////////////////////////////////////////////
 class EcranDemo : public Ecran
 {
@@ -92,8 +90,8 @@ private:
 //    sf::View            m_vueIG;    ///< La vue SFML de l'interface graphique.
     sf::RectangleShape      m_fond;     ///< Le shape SFML du fond de l'écran.
     gui::Groupe             m_gui;      ///< Le groupe de GUI du menu principal.
-    std::shared_ptr<gui::Bouton>        boutonA ;
-    std::shared_ptr<gui::Label>        lblTest ;
+   // std::shared_ptr<gui::Bouton>        boutonA ;
+    std::shared_ptr<gui::Label>        m_lblTest ; ///< Le label membre de cet ecran pour premettre aux boutons d'y accéder.
     //std::shared_ptr<Gadget>
 
 }; // fin EcranDemo

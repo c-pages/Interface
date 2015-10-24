@@ -50,7 +50,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
       <li><a href="../../index.html"><span>Page&#160;principale</span></a></li>
       <li><a href="../../pages.html"><span>Pages&#160;associées</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
-      <li><a href="../../namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
       <li><a href="../../annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
       <li class="current"><a href="../../files.html"><span>Fichiers</span></a></li>
       <li>
@@ -74,7 +73,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
-      <li><a href="../../globals.html"><span>Variables&#160;globale</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -111,7 +109,7 @@ $(document).ready(function(){initNavTree('d9/da1/_ecran_8h_source.html','../../'
 <div class="title">Ecran.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d9/da1/_ecran_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ECRAN_H</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ECRAN_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ECRAN_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Headers</span></div>
@@ -130,38 +128,38 @@ $(document).ready(function(){initNavTree('d9/da1/_ecran_8h_source.html','../../'
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../da/df8/classapp_1_1_ecran.html#ae428d4167b732b687fefc88379d62d9a">~Ecran</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span>     <span class="keywordtype">void</span> <a class="code" href="../../da/df8/classapp_1_1_ecran.html#a15b6695f6950903f11a378759aaa9a23">traiter_evenements</a> ( <span class="keyword">const</span> sf::Event&amp; event ) =0;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">virtual</span>     <span class="keywordtype">void</span> <a class="code" href="../../da/df8/classapp_1_1_ecran.html#a00b3dd3d538d9dcdeab2f0c3ec3c74c6">actualiser</a> ( <span class="keywordtype">float</span> deltaT ) =0;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">virtual</span>     <span class="keywordtype">void</span> <a class="code" href="../../da/df8/classapp_1_1_ecran.html#ab279679638e35645bbae78e3f8a3938a">dessiner</a>  ( ) =0;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// Les membres</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../da/df8/classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">   65</a></span>&#160;<span class="comment"></span>    <a class="code" href="../../dc/de4/classapp_1_1_application.html">Application</a>*    <a class="code" href="../../da/df8/classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">m_appli</a>; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}; <span class="comment">// fin Ecran</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}; <span class="comment">// fin app</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif // ECRAN_H</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span>     <span class="keywordtype">void</span> <a class="code" href="../../da/df8/classapp_1_1_ecran.html#a15b6695f6950903f11a378759aaa9a23">traiter_evenements</a> ( <span class="keyword">const</span> sf::Event&amp; event ) =0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span>     <span class="keywordtype">void</span> <a class="code" href="../../da/df8/classapp_1_1_ecran.html#a00b3dd3d538d9dcdeab2f0c3ec3c74c6">actualiser</a> ( <span class="keywordtype">float</span> deltaT ) =0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">virtual</span>     <span class="keywordtype">void</span> <a class="code" href="../../da/df8/classapp_1_1_ecran.html#ab279679638e35645bbae78e3f8a3938a">dessiner</a>  ( ) =0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// Les membres</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../da/df8/classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">   68</a></span>&#160;<span class="comment"></span>    <a class="code" href="../../dc/de4/classapp_1_1_application.html">Application</a>*    <a class="code" href="../../da/df8/classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">m_appli</a>; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}; <span class="comment">// fin Ecran</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}; <span class="comment">// fin app</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif // ECRAN_H</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="ttc" id="classapp_1_1_ecran_html_a00b3dd3d538d9dcdeab2f0c3ec3c74c6"><div class="ttname"><a href="../../da/df8/classapp_1_1_ecran.html#a00b3dd3d538d9dcdeab2f0c3ec3c74c6">app::Ecran::actualiser</a></div><div class="ttdeci">virtual void actualiser(float deltaT)=0</div><div class="ttdoc">Actualiser les éléments. </div></div>
 <div class="ttc" id="classapp_1_1_ecran_html"><div class="ttname"><a href="../../da/df8/classapp_1_1_ecran.html">app::Ecran</a></div><div class="ttdoc">La classe virtuelle communues aux écrans. </div><div class="ttdef"><b>Definition:</b> Ecran.h:18</div></div>
 <div class="ttc" id="namespaceapp_html"><div class="ttname"><a href="../../d8/d01/namespaceapp.html">app</a></div><div class="ttdef"><b>Definition:</b> Application.h:23</div></div>
-<div class="ttc" id="classapp_1_1_application_html"><div class="ttname"><a href="../../dc/de4/classapp_1_1_application.html">app::Application</a></div><div class="ttdoc">La classe de base du programme. </div><div class="ttdef"><b>Definition:</b> Application.h:34</div></div>
+<div class="ttc" id="classapp_1_1_application_html"><div class="ttname"><a href="../../dc/de4/classapp_1_1_application.html">app::Application</a></div><div class="ttdoc">La classe de base du programme. </div><div class="ttdef"><b>Definition:</b> Application.h:31</div></div>
 <div class="ttc" id="classapp_1_1_ecran_html_a15b6695f6950903f11a378759aaa9a23"><div class="ttname"><a href="../../da/df8/classapp_1_1_ecran.html#a15b6695f6950903f11a378759aaa9a23">app::Ecran::traiter_evenements</a></div><div class="ttdeci">virtual void traiter_evenements(const sf::Event &amp;event)=0</div><div class="ttdoc">Gère les entrées claviers, souris, fenetre ... </div></div>
 <div class="ttc" id="classapp_1_1_ecran_html_a06a27f001c26fb8d6f38e04764fd343e"><div class="ttname"><a href="../../da/df8/classapp_1_1_ecran.html#a06a27f001c26fb8d6f38e04764fd343e">app::Ecran::Ecran</a></div><div class="ttdeci">Ecran(Application *appli)</div><div class="ttdoc">Constructeur. </div><div class="ttdef"><b>Definition:</b> Ecran.cpp:6</div></div>
 <div class="ttc" id="classapp_1_1_ecran_html_ab279679638e35645bbae78e3f8a3938a"><div class="ttname"><a href="../../da/df8/classapp_1_1_ecran.html#ab279679638e35645bbae78e3f8a3938a">app::Ecran::dessiner</a></div><div class="ttdeci">virtual void dessiner()=0</div><div class="ttdoc">Rendre les éléments. </div></div>
-<div class="ttc" id="classapp_1_1_ecran_html_a4711fc3fedd9458041b1f15b2f05f1a1"><div class="ttname"><a href="../../da/df8/classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">app::Ecran::m_appli</a></div><div class="ttdeci">Application * m_appli</div><div class="ttdoc">La classe Apllication parent. </div><div class="ttdef"><b>Definition:</b> Ecran.h:65</div></div>
+<div class="ttc" id="classapp_1_1_ecran_html_a4711fc3fedd9458041b1f15b2f05f1a1"><div class="ttname"><a href="../../da/df8/classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">app::Ecran::m_appli</a></div><div class="ttdeci">Application * m_appli</div><div class="ttdoc">La classe Apllication parent. </div><div class="ttdef"><b>Definition:</b> Ecran.h:68</div></div>
 <div class="ttc" id="classapp_1_1_ecran_html_ae428d4167b732b687fefc88379d62d9a"><div class="ttname"><a href="../../da/df8/classapp_1_1_ecran.html#ae428d4167b732b687fefc88379d62d9a">app::Ecran::~Ecran</a></div><div class="ttdeci">virtual ~Ecran()</div><div class="ttdoc">Destructeur virtuel. </div><div class="ttdef"><b>Definition:</b> Ecran.cpp:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li><li class="navelem"><a class="el" href="../../dir_bad007344d42f4b5340fab5412b591e5.html">include</a></li><li class="navelem"><a class="el" href="../../d9/da1/_ecran_8h.html">Ecran.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li><li class="navelem"><a class="el" href="../../dir_bad007344d42f4b5340fab5412b591e5.html">include</a></li><li class="navelem"><b>Ecran.h</b></li>
     <li class="footer">Généré par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>

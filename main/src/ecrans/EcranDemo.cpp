@@ -76,34 +76,53 @@ EcranDemo::initGUI  ( )
     auto skinCourant =  Config::m_skins[ Config::Skins::Skin1 ] ;
 
     // creation du label
-    this->lblTest = std::shared_ptr<gui::Label> ( new gui::Label ( "Ceci est un label." , skinCourant->lblCourant ) );
+    this->m_lblTest = std::shared_ptr<gui::Label> ( new gui::Label ( "Ceci est un label." , skinCourant->lblCourant ) );
+    m_gui.ajouter ( m_lblTest );
+    m_lblTest->setPosition  ( 20,20);
 
-    m_gui.ajouter ( lblTest );
-    lblTest->setPosition  ( 20,20);
+
     // creation du Bouton simple A, c'est un shared_ptr de l'ecranDemo
-    this->boutonA = std::shared_ptr<gui::Bouton> ( new gui::Bouton ( skinCourant ) );
-
-    m_gui.ajouter                 ( this->boutonA );
-    this->boutonA->setPosition    ( 20, 50 );
-    this->boutonA->setSize        ({5, 5});
-    this->boutonA->lier           ( gui::Evenements::onGRelache , [this]() {
-        std::cout << "boutonA \n";
-        lblTest->setTexte( "Ce bouton est simple bouton gui::Bouton");
+    std::shared_ptr<gui::BoutonTexte>  boutonA ( new gui::BoutonTexte ( skinCourant ) );
+    m_gui.ajouter           ( boutonA );
+    boutonA->setPosition    ( 20, 50 );
+    boutonA->lier           ( gui::Evenements::onGRelache , [this]() {
+        m_lblTest->setTexte( "Ce bouton est simple bouton gui::Bouton");
     });
 
+
+
+
     // creation du BoutonTexte B, nouveau pointeur, ajouté aux enfants du groupe GUI principal.
-    std::shared_ptr<gui::BoutonTexte>  boutonB ( new gui::BoutonTexte ( skinCourant , "Bouton B" ) );
+    std::shared_ptr<gui::BoutonTexte>  boutonB ( new gui::BoutonTexte ( skinCourant , "Bouton" ) );
     m_gui.ajouter           ( boutonB );
     boutonB->setPosition    ( 50, 50 );
-    boutonB->setSize        ({5, 5});
     boutonB->setBordure     ( 5 );
     boutonB->ajusterAuTexte ( );
     boutonB->lier           ( gui::Evenements::onGRelache , [this]() {
-        std::cout << "boutonB.\n";
-        lblTest->setTexte( "Ce bouton est bouton texte gui::BoutonTexte");
+        m_lblTest->setTexte( "Ce bouton est bouton texte gui::BoutonTexte");
     });
 
-    this->boutonA->setSize (  { boutonB->getSize().y , boutonB->getSize().y } );
+
+
+
+
+    // creation du BoutonTexte B, nouveau pointeur, ajouté aux enfants du groupe GUI principal.
+    std::shared_ptr<gui::BoutonCocher>  boutonC ( new gui::BoutonCocher ( skinCourant ) );
+    m_gui.ajouter           ( boutonC );
+    boutonC->setPosition    ( 50, 50 );
+    boutonC->setSize        ( { boutonB->getSize().y , boutonB->getSize().y } );
+    boutonC->setBordure     ( 2 );
+    boutonC->lier           ( gui::Evenements::onChangeEtat , [this]() {
+        m_lblTest->setTexte( "Ce bouton est bouton à cocher gui::BoutonCocher"  );
+    });
+
+
+
+
+    // alignement des boutons
+    boutonA->setSize        ( { boutonB->getSize().y , boutonB->getSize().y } );
+    boutonB->setPosition    ( boutonA->getPosition().x + boutonA->getSize().x + 10 , 50 );
+    boutonC->setPosition    ( boutonB->getPosition().x + boutonB->getSize().x + 10 , 50 );
 
 
 }   // fin init GUI

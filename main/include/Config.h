@@ -21,15 +21,27 @@ namespace app
 class Config
 {
 public:
-
+    /////////////////////////////////////////////////
+    /// \brief listes les polices enregistrable dans le manager de polices
+    ///
+    /////////////////////////////////////////////////
     enum Polices                :  int  {   police_1
                                         ,   police_2   };
 
+    /////////////////////////////////////////////////
+    /// \brief listes les styles (gui::Style) enregistrable dans la pile des Styles
+    ///
+    /////////////////////////////////////////////////
     enum Styles                 :  int  {   root
                                         ,   Bouton
                                         ,   Fenetre   };
 
+    /////////////////////////////////////////////////
+    /// \brief listes les skins (gui::Skin) enregistrable dans la pile des skins.
+    ///
+    /////////////////////////////////////////////////
     enum Skins                  :  int  {   Skin1   };
+
 
     /////////////////////////////////////////////////
     /// \brief Constructeur
@@ -57,6 +69,14 @@ public:
     static void init();
 
     /////////////////////////////////////////////////
+    /// \brief recuperer la durée d'une image, DureeImage = 1.f / 60.f à 60Fps.
+    ///
+    /////////////////////////////////////////////////
+    static sf::Time getDureeImage();
+
+private:
+
+    /////////////////////////////////////////////////
     /// \brief Initialise le manager de textures.
     ///
     /////////////////////////////////////////////////
@@ -80,23 +100,20 @@ public:
     /////////////////////////////////////////////////
     static void initStyles();
 
-    /////////////////////////////////////////////////
-    /// \brief recuperer la durée d'une image
-    ///
-    /////////////////////////////////////////////////
-    static sf::Time getDureeImage();
-
 
     /////////////////////////////////////////////////
     // Les membres
     /////////////////////////////////////////////////
 
+public:
+
     static  ResourceMgr<sf::Texture,int>                        m_textures;     ///< Manager des textures
     static  ResourceMgr<sf::Font,int>                           m_polices;      ///< Manager des polices
     static  std::map < Styles , std::shared_ptr<gui::Style> >   m_styles;       ///< les styles pour le GUI \todo passer de pointer* à point shared_ptr ou unique_ptr ?
     static  std::map < Skins  , std::shared_ptr<gui::Skin > >   m_skins;        ///< les styles pour le GUI \todo passer de pointer* à point shared_ptr ou unique_ptr ?
+
 private:
-    static  sf::Time                            m_dureeImage;   ///< Durée d'une image, Autrement dit on a 1/FrameRate = \e DureeImage
+    static  sf::Time                                            m_dureeImage;   ///< Durée d'une image, Autrement dit on a 1/FrameRate = \e DureeImage
 
 
 

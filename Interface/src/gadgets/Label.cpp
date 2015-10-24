@@ -14,7 +14,7 @@ Label::Label    ( std::string   texte )
 , m_texte   ( new sf::Text( ) )
 {
     m_texte->setString  ( texte );
-    updateStyle         ( );
+    majFormes         ( );
 }
 
 
@@ -25,7 +25,7 @@ Label::Label    ( std::string   texte
 , m_texte   ( new sf::Text () )
 {
     m_texte->setString  ( texte );
-    updateStyle( ) ;
+    majFormes( ) ;
 }
 
 
@@ -62,7 +62,7 @@ Label::getSize( )    {
 
 /////////////////////////////////////////////////
 void
-Label::updateStyle( )    {
+Label::majFormes( )    {
     m_texte->setFont             ( m_style->txt_police );
     m_texte->setStyle            ( m_style->txt_style );
     m_texte->setCharacterSize    ( m_style->txt_taille );

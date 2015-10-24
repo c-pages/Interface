@@ -70,7 +70,7 @@ Gadget::ajouter ( ptr enfant ) {
 void
 Gadget::setSkin( std::shared_ptr<Skin>    skin ) {
     m_skin = skin ;
-    updateStyle( );
+    majFormes( );
 };
 
 
@@ -79,7 +79,7 @@ void
 Gadget::setStyle( std::shared_ptr<Style>     style ) {
     m_style = style ;
 //    m_style->print();
-    updateStyle( );
+    majFormes( );
 };
 
 /////////////////////////////////////////////////

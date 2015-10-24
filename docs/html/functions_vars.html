@@ -50,7 +50,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
       <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
-      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
       <li class="current"><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
       <li>
@@ -156,9 +155,6 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
-<li>boutonA
-: <a class="el" href="df/d42/classapp_1_1_ecran_demo.html#adbfbc938c4a3820b3d21f6a8c507ee9e">app::EcranDemo</a>
-</li>
 <li>btnPress
 : <a class="el" href="d0/d61/structgui_1_1_skin.html#ae6ff5c8929e4e61d092443282a34ef67">gui::Skin</a>
 </li>
@@ -205,9 +201,6 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>lblCourant
 : <a class="el" href="d0/d61/structgui_1_1_skin.html#a8de5deb80ea554c337da798869545ea8">gui::Skin</a>
 </li>
-<li>lblTest
-: <a class="el" href="df/d42/classapp_1_1_ecran_demo.html#a0bb7cab12cbb897bf76b15490751800e">app::EcranDemo</a>
-</li>
 <li>lblTitre
 : <a class="el" href="d0/d61/structgui_1_1_skin.html#abf49dd986593e33cd6afbdfb9157cdf2">gui::Skin</a>
 </li>
@@ -224,6 +217,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_1erClick
 : <a class="el" href="d4/daa/classgui_1_1_bouton.html#aed2b58479b336c984960936f3ce33caa">gui::Bouton</a>
 </li>
+<li>m_actif
+: <a class="el" href="dd/d05/classgui_1_1_bouton_cocher.html#a96e4be65c04e461c51a6450a8caff484">gui::BoutonCocher</a>
+</li>
 <li>m_appli
 : <a class="el" href="da/df8/classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">app::Ecran</a>
 </li>
@@ -234,7 +230,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="d9/d0b/classgui_1_1_gadget.html#aaa3667377bb36656be2f6b3f233aa318">gui::Gadget</a>
 </li>
 <li>m_bordure
-: <a class="el" href="d4/d47/classgui_1_1_bouton_texte.html#a9aac977d37e6bf0cb38cbf2eaa7343a7">gui::BoutonTexte</a>
+: <a class="el" href="d4/daa/classgui_1_1_bouton.html#a66fd43d3a26b7c86f43990d94217d5a1">gui::Bouton</a>
 </li>
 <li>m_clock_dblClique
 : <a class="el" href="d4/daa/classgui_1_1_bouton.html#aa16f60426d96ef6d73a7e436d5a31027">gui::Bouton</a>
@@ -257,6 +253,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_etatBack
 : <a class="el" href="d4/daa/classgui_1_1_bouton.html#a8f8714ab82973e57eb3ee4f85c4a324b">gui::Bouton</a>
 </li>
+<li>m_fctToggle
+: <a class="el" href="dd/d05/classgui_1_1_bouton_cocher.html#a944c1babbb13bb9dc5515c79fabc8780">gui::BoutonCocher</a>
+</li>
 <li>m_fenetre
 : <a class="el" href="dc/de4/classapp_1_1_application.html#a2b45d94b25a7b29cb7409b7701c3c2d5">app::Application</a>
 </li>
@@ -266,6 +265,12 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>m_gui
 : <a class="el" href="df/d42/classapp_1_1_ecran_demo.html#a4dc8dc175d929eddf5902549cdfd38bd">app::EcranDemo</a>
+</li>
+<li>m_imgCoche
+: <a class="el" href="dd/d05/classgui_1_1_bouton_cocher.html#a5a832444f9d527c678bcdcde9fb44d1a">gui::BoutonCocher</a>
+</li>
+<li>m_lblTest
+: <a class="el" href="df/d42/classapp_1_1_ecran_demo.html#a5b1b56f21f6391c6b31d169efd0fcee5">app::EcranDemo</a>
 </li>
 <li>m_lblTexte
 : <a class="el" href="d4/d47/classgui_1_1_bouton_texte.html#adedb7fc1377556a249211d9724f702f9">gui::BoutonTexte</a>
@@ -302,7 +307,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>mPlan
 : <a class="el" href="d2/dc2/classapp_1_1_resource_mgr.html#aaf3f11ff8309da00bbc6cce38bc156fa">app::ResourceMgr&lt; RESOURCE, IDENTIFIANT &gt;</a>
-, <a class="el" href="de/d49/classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_e_r_01_4.html#a1792dec334662afb26c194462cfc252d">app::ResourceMgr&lt; sf::Music, IDENTIFIER &gt;</a>
+, <a class="el" href="db/d66/classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_a_n_t_01_4.html#ae8c4bbb3a6a64b4d88d5224770d0cd92">app::ResourceMgr&lt; sf::Music, IDENTIFIANT &gt;</a>
 </li>
 </ul>
 

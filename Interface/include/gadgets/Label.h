@@ -119,7 +119,7 @@ public:
     ///
     /////////////////////////////////////////////////
     void
-    updateStyle( );
+    majFormes( );
 
     /////////////////////////////////////////////////
     /// \brief La gestion des évènements utilisateurs.

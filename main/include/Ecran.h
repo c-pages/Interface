@@ -34,6 +34,9 @@ public:
     /////////////////////////////////////////////////
     /// \brief Gère les entrées claviers, souris, fenetre ...
     ///
+    /// \param event evenement SFML a dispatcher
+    /// \return rien
+    ///
     /////////////////////////////////////////////////
     virtual     void traiter_evenements ( const sf::Event& event ) =0;
 

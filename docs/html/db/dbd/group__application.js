@@ -1,5 +1,16 @@
 var group__application =
 [
+    [ "Application", "dc/de4/classapp_1_1_application.html", [
+      [ "Application", "dc/de4/classapp_1_1_application.html#a3c480be05f51b91e648b2f6533a32f1b", null ],
+      [ "~Application", "dc/de4/classapp_1_1_application.html#addde1f674adf0f1d2cc4697e36f7c9e3", null ],
+      [ "actualiser", "dc/de4/classapp_1_1_application.html#a1b728d3f1b0717dee8d4e4190df1cd65", null ],
+      [ "dessiner", "dc/de4/classapp_1_1_application.html#a03b3bac56e523faa9669622eadd237f8", null ],
+      [ "executer", "dc/de4/classapp_1_1_application.html#ae375e0fdeb21265f93cff8958a26f95d", null ],
+      [ "getFenetre", "dc/de4/classapp_1_1_application.html#acbc0a186b9ec7abfaf35eaad5d55b45a", null ],
+      [ "traiter_evenements", "dc/de4/classapp_1_1_application.html#aee4bdeeb44c6b2a943acc8e651b0ff83", null ],
+      [ "m_ecrans", "dc/de4/classapp_1_1_application.html#ae619078005ea4200ea4db019c0f6d8de", null ],
+      [ "m_fenetre", "dc/de4/classapp_1_1_application.html#a2b45d94b25a7b29cb7409b7701c3c2d5", null ]
+    ] ],
     [ "Config", "df/dbe/classapp_1_1_config.html", [
       [ "Polices", "df/dbe/classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049", [
         [ "police_1", "df/dbe/classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049a759ba1bca9923fc3b3e61b9e0edd154a", null ],
@@ -50,8 +61,8 @@ var group__application =
     [ "ResourceMgr", "d2/dc2/classapp_1_1_resource_mgr.html", [
       [ "ResourceMgr", "d2/dc2/classapp_1_1_resource_mgr.html#a4f95e4f251a11a0cf368ed8b074fd297", null ],
       [ "ResourceMgr", "d2/dc2/classapp_1_1_resource_mgr.html#a9bb6d183effa248577c9e6df24f948ef", null ],
-      [ "get", "d2/dc2/classapp_1_1_resource_mgr.html#a3bfe5f76db7efb5a3e5491c3b16853b6", null ],
-      [ "load", "d2/dc2/classapp_1_1_resource_mgr.html#a34710e8487e78ef2156c8d02eefaa8da", null ],
+      [ "get", "d2/dc2/classapp_1_1_resource_mgr.html#a6d50e13d521942530229e80f660ff004", null ],
+      [ "load", "d2/dc2/classapp_1_1_resource_mgr.html#a43174877ac3bce3b43b68f94e0eb2815", null ],
       [ "operator=", "d2/dc2/classapp_1_1_resource_mgr.html#a8c06cc4165068e7aae8ba2aa505d4c1a", null ],
       [ "mPlan", "d2/dc2/classapp_1_1_resource_mgr.html#aaf3f11ff8309da00bbc6cce38bc156fa", null ]
     ] ]
