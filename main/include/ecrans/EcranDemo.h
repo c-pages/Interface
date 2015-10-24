@@ -93,7 +93,7 @@ private:
     sf::RectangleShape      m_fond;     ///< Le shape SFML du fond de l'écran.
     gui::Groupe             m_gui;      ///< Le groupe de GUI du menu principal.
     gui::Gadget::ptr        boutonA ;
-
+    //std::shared_ptr<Gadget>
 
 }; // fin EcranDemo
 }; // fin app

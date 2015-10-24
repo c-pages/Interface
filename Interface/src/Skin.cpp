@@ -21,7 +21,7 @@ Skin::Skin()
 
     std::cout << "Skin par defaut\n";
 
-    desactive.txt_police.loadFromFile   ( "C:\\Windows\\Fonts\\arial.ttf" );
+    desactive.txt_police.loadFromFile   ( "media/polices/arial.ttf" );
     desactive.txt_style                  = sf::Text::Style::Regular ;
     desactive.txt_taille                 = 12;
     desactive.txt_couleur                = sf::Color ( 200,200,200);
@@ -32,7 +32,7 @@ Skin::Skin()
     desactive.align                      = Alignements::Libre ;
     desactive.ajust                      = Ajustements::Sans ;
 
-    fenetre.txt_police.loadFromFile   ( "C:\\Windows\\Fonts\\arial.ttf" );
+    fenetre.txt_police.loadFromFile   ( "media/polices/arial.ttf" );
     fenetre.txt_style                  = sf::Text::Style::Regular ;
     fenetre.txt_taille                 = 12;
     fenetre.txt_couleur                = sf::Color ( 200,200,200);
@@ -44,7 +44,7 @@ Skin::Skin()
     fenetre.ajust                      = Ajustements::Sans ;
 
     // Style par defaut : Bouton repos
-    btnRepos.txt_police.loadFromFile   ( "C:\\Windows\\Fonts\\arial.ttf" );
+    btnRepos.txt_police.loadFromFile   ( "media/polices/arial.ttf" );
     btnRepos.txt_style                 = sf::Text::Style::Regular ;
     btnRepos.txt_taille                = 12;
     btnRepos.txt_couleur               = sf::Color ( 200,200,200);
@@ -56,7 +56,7 @@ Skin::Skin()
     btnRepos.ajust                     = Ajustements::Sans;
 
     // Style par defaut : Bouton survol
-    btnSurvol.txt_police.loadFromFile  ( "C:\\Windows\\Fonts\\arial.ttf" );
+    btnSurvol.txt_police.loadFromFile  ( "media/polices/arial.ttf" );
     btnSurvol.txt_style                = sf::Text::Style::Regular;
     btnSurvol.txt_taille               = 12;
     btnSurvol.txt_couleur              = sf::Color ( 200,200,200);
@@ -68,7 +68,7 @@ Skin::Skin()
     btnSurvol.ajust                    = Ajustements::Sans;
 
     // Style par defaut : Bouton press
-    btnPress.txt_police.loadFromFile   ( "C:\\Windows\\Fonts\\arial.ttf" );
+    btnPress.txt_police.loadFromFile   ( "media/polices/arial.ttf" );
     btnPress.txt_style                 = sf::Text::Style::Regular;
     btnPress.txt_taille                = 12;
     btnPress.txt_couleur               = sf::Color ( 200,200,200);
@@ -80,7 +80,7 @@ Skin::Skin()
     btnPress.ajust                     = Ajustements::Sans;
 
     // Style par defaut : Label Titre
-    lblTitre.txt_police.loadFromFile   ( "C:\\Windows\\Fonts\\arial.ttf" );
+    lblTitre.txt_police.loadFromFile   ( "media/polices/arial.ttf" );
     lblTitre.txt_style                 = sf::Text::Style::Regular ;
     lblTitre.txt_taille                = 15;
     lblTitre.txt_couleur               = sf::Color ( 200,200,200);
@@ -92,7 +92,7 @@ Skin::Skin()
     lblTitre.ajust                     = Ajustements::Sans;
 
     // Style par defaut : Label courant
-    lblCourant.txt_police.loadFromFile ( "C:\\Windows\\Fonts\\arial.ttf" );
+    lblCourant.txt_police.loadFromFile ( "media/polices/arial.ttf" );
     lblCourant.txt_style               = sf::Text::Style::Regular;
     lblCourant.txt_taille              = 12;
     lblCourant.txt_couleur             = sf::Color ( 200,200,200);

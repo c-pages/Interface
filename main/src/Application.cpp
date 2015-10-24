@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////
 #include "Application.h"
 #include "Config.h"
-#include "ecrans\EcranDemo.h"
+#include "ecrans/EcranDemo.h"
 
 
 namespace app

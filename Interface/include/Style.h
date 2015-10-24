@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
-//#include <..\GUI.h>
+//#include <../GUI.h>
 
 namespace gui
 {

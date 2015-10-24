@@ -3,8 +3,8 @@
 // Headers
 /////////////////////////////////////////////////
 #include <iostream>
-#include "gadgets\Label.h"
-//#include "..\GUI.h"
+#include "gadgets/Label.h"
+//#include "../GUI.h"
 
 
 #include <SFML/Graphics.hpp>

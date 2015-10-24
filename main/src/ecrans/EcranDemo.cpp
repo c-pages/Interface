@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////
 // Headers
 /////////////////////////////////////////////////
-#include "ecrans\EcranDemo.h"
+#include "ecrans/EcranDemo.h"
 #include <iostream>
 #include <Config.h>
 #include "GUI.h"
