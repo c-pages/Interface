@@ -10,7 +10,7 @@ namespace gui
 {
 
 /////////////////////////////////////////////////
-/// \brief Un Skin définie un ensemble de Style pour les éléments d'une interface graphique.
+/// \brief Structure de donnée. Un Skin définie un ensemble de Style pour les éléments d'une interface graphique.
 ///
 /// C'est l'assemblage de plein de Style dans lequel les Gadget viennent piocher en fonction des besoins.
 ///

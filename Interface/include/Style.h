@@ -44,7 +44,7 @@ enum Ajustements {
 };
 
 /////////////////////////////////////////////////
-/// \brief Un Style contient les infos visuelles d'un élément.
+/// \brief Structure de donnée. Un Style contient les infos visuelles d'un élément.
 ///
 /// Un Style contient les couleurs, tailles(lignes),
 /// polices, etc. qui seront appliqués à un Gadget.
@@ -97,6 +97,6 @@ public:
 /// Definie un style de rendu, commel'épaisseur des lignes, la couleur ou la texture
 /// du fond, la police utilisé ...
 ///
-/// \see sf::RectangleShape, sf::CircleShape, sf::ConvexShape, sf::Transformable
+/// \see gui::Skin, gui::Gadget
 ///
 ////////////////////////////////////////////////////////////

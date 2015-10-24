@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" href="$d6/d90/classgui_1_1_action.html" title="Classe virtuelle permetant de lier des évenements à des fonctions. " alt="" coords="15,56,99,83"/>
 <area shape="rect" id="node2" href="$d9/d0b/classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. " alt="" coords="156,107,245,133"/>
 <area shape="rect" id="node3" href="$d4/daa/classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. " alt="" coords="294,31,382,57"/>
-<area shape="rect" id="node6" href="$df/d39/classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets au sein d&#39;un groupe. " alt="" coords="293,81,383,108"/>
+<area shape="rect" id="node6" href="$df/d39/classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets. " alt="" coords="293,81,383,108"/>
 <area shape="rect" id="node7" href="$d3/dbe/classgui_1_1_image.html" title="Gadget Un simple gadget permettant d&#39;afficher une image ou une couleur uni. " alt="" coords="297,132,379,159"/>
 <area shape="rect" id="node8" href="$d5/d3f/classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. " alt="" coords="299,183,377,209"/>
 <area shape="rect" id="node4" href="$dd/d05/classgui_1_1_bouton_cocher.html" title="Gadget, bouton rectangulaire à cocher,. " alt="" coords="431,5,560,32"/>

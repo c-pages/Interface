@@ -8,7 +8,7 @@
 
 namespace gui {
 /////////////////////////////////////////////////
-/// \brief Gadget  Un élément invisible permettant de rassembler des Gadgets au sein d'un groupe.
+/// \brief Gadget  Un élément invisible permettant de rassembler des Gadgets.
 ///
 /////////////////////////////////////////////////
 class Groupe : public Gadget
@@ -18,7 +18,7 @@ public:
     /////////////////////////////////////////////////
     /// \brief Accesseur de la boundingBox locale
     ///
-    /// \return la boundingBox locale.
+    /// \return la boundingBox locale des éléments enfants du groupe.
     ///
     /////////////////////////////////////////////////
     sf::FloatRect
@@ -27,7 +27,7 @@ public:
     /////////////////////////////////////////////////
     /// \brief Accesseur de la boundingBox globale
     ///
-    /// \return la boundingBox globale.
+    /// \return la boundingBox globale des éléments enfants du groupe.
     ///
     /////////////////////////////////////////////////
     sf::FloatRect
@@ -36,7 +36,7 @@ public:
     /////////////////////////////////////////////////
     /// \brief Accesseur de la taille
     ///
-    /// \return la boundingBox taille.
+    /// \return la taille à l'aide la sa bounding box, donc c'est la taille de l'ensemmble des enfants.
     ///
     /////////////////////////////////////////////////
     sf::Vector2f
@@ -61,6 +61,7 @@ public:
 /// \class gui::Groupe
 /// \ingroup interface
 ///
+/// ça fait pas grand chose de plus qu'un Gadget, à part les trucs de taille et BB à partir des enfants du groupe.
 /// \see gui::Gadget
 ///
 ////////////////////////////////////////////////////////////

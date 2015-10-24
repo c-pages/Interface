@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('df/d39/classgui_1_1_groupe.html','../.
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="../../d9/d0b/classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a> Un élément invisible permettant de rassembler des Gadgets au sein d'un groupe.  
+<p><a class="el" href="../../d9/d0b/classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a> Un élément invisible permettant de rassembler des Gadgets.  
  <a href="../../df/d39/classgui_1_1_groupe.html#details">Plus de détails...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d7/d12/_groupe_8h_source.html">Groupe.h</a>&gt;</code></p>
@@ -302,8 +302,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="separator:acb4c5836898b8221986f90a5b226908e inherit pro_attribs_classgui_1_1_action"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p><a class="el" href="../../d9/d0b/classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a> Un élément invisible permettant de rassembler des Gadgets au sein d'un groupe. </p>
-<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="../../d9/d0b/classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">gui::Gadget</a> </dd></dl>
+<div class="textblock"><p><a class="el" href="../../d9/d0b/classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a> Un élément invisible permettant de rassembler des Gadgets. </p>
+<p>ça fait pas grand chose de plus qu'un <a class="el" href="../../d9/d0b/classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a>, à part les trucs de taille et BB à partir des enfants du groupe. </p><dl class="section see"><dt>Voir également</dt><dd><a class="el" href="../../d9/d0b/classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">gui::Gadget</a> </dd></dl>
 </div><h2 class="groupheader">Documentation des fonctions membres</h2>
 <a class="anchor" id="aa07de056f6d0aa21b7f8290b1ee01d58"></a>
 <div class="memitem">
@@ -382,7 +382,7 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><div class="memdoc">
 
 <p>Accesseur de la boundingBox globale. </p>
-<dl class="section return"><dt>Renvoie</dt><dd>la boundingBox globale. </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la boundingBox globale des éléments enfants du groupe. </dd></dl>
 
 <p>Réimplémentée à partir de <a class="el" href="../../d9/d0b/classgui_1_1_gadget.html#a698682665f65f54e0798887955f32f2e">gui::Gadget</a>.</p>
 
@@ -410,7 +410,7 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><div class="memdoc">
 
 <p>Accesseur de la boundingBox locale. </p>
-<dl class="section return"><dt>Renvoie</dt><dd>la boundingBox locale. </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la boundingBox locale des éléments enfants du groupe. </dd></dl>
 
 <p>Réimplémentée à partir de <a class="el" href="../../d9/d0b/classgui_1_1_gadget.html#a4552567e63384c6a30519303f4052f11">gui::Gadget</a>.</p>
 
@@ -448,7 +448,7 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><div class="memdoc">
 
 <p>Accesseur de la taille. </p>
-<dl class="section return"><dt>Renvoie</dt><dd>la boundingBox taille. </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la taille à l'aide la sa bounding box, donc c'est la taille de l'ensemmble des enfants. </dd></dl>
 
 <p>Réimplémentée à partir de <a class="el" href="../../d9/d0b/classgui_1_1_gadget.html#a8d17e7736249da941358b9e09e70ea2c">gui::Gadget</a>.</p>
 

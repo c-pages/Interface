@@ -79,6 +79,33 @@ var group__interface =
       [ "m_etatBack", "d4/daa/classgui_1_1_bouton.html#a8f8714ab82973e57eb3ee4f85c4a324b", null ],
       [ "m_fond", "d4/daa/classgui_1_1_bouton.html#a8a9c0b300e1af08d60200f29fc503031", null ]
     ] ],
+    [ "BoutonCocher", "dd/d05/classgui_1_1_bouton_cocher.html", [
+      [ "BoutonCocher", "dd/d05/classgui_1_1_bouton_cocher.html#a7b5e763ff726740b19ec6758e6431b92", null ],
+      [ "BoutonCocher", "dd/d05/classgui_1_1_bouton_cocher.html#ac6d72b56515735de4121a2623c3c1a17", null ],
+      [ "~BoutonCocher", "dd/d05/classgui_1_1_bouton_cocher.html#a47881be4183b985ba8957ed7f3219d7e", null ],
+      [ "draw", "dd/d05/classgui_1_1_bouton_cocher.html#aea6c305290640a14a3659713b9acb5bf", null ],
+      [ "init", "dd/d05/classgui_1_1_bouton_cocher.html#a92470d7fc9202d991e8499331660ba8c", null ],
+      [ "isActif", "dd/d05/classgui_1_1_bouton_cocher.html#a1bfe8ca9d1f45890f594ff392227fa28", null ],
+      [ "majFormes", "dd/d05/classgui_1_1_bouton_cocher.html#a939c2e90d3216483a92cd38968905df5", null ],
+      [ "setActif", "dd/d05/classgui_1_1_bouton_cocher.html#ad8f3c398a2fb5c4f86b43dd9d9521c39", null ],
+      [ "m_actif", "dd/d05/classgui_1_1_bouton_cocher.html#a96e4be65c04e461c51a6450a8caff484", null ],
+      [ "m_fctToggle", "dd/d05/classgui_1_1_bouton_cocher.html#a944c1babbb13bb9dc5515c79fabc8780", null ],
+      [ "m_imgCoche", "dd/d05/classgui_1_1_bouton_cocher.html#a5a832444f9d527c678bcdcde9fb44d1a", null ]
+    ] ],
+    [ "BoutonTexte", "d4/d47/classgui_1_1_bouton_texte.html", [
+      [ "BoutonTexte", "d4/d47/classgui_1_1_bouton_texte.html#a5781fca8e5397fad46a7e7ca0ba39c48", null ],
+      [ "BoutonTexte", "d4/d47/classgui_1_1_bouton_texte.html#a3372d6e64187d162203dc1ca3081243b", null ],
+      [ "~BoutonTexte", "d4/d47/classgui_1_1_bouton_texte.html#a33a4ef764ce7fe025f3d778274766d32", null ],
+      [ "ajusterAuTexte", "d4/d47/classgui_1_1_bouton_texte.html#a8d66645787dd0199b909b5fd52135c87", null ],
+      [ "draw", "d4/d47/classgui_1_1_bouton_texte.html#ac07e5e027d4d9d3544e8964d5d370714", null ],
+      [ "getTexte", "d4/d47/classgui_1_1_bouton_texte.html#ac4b5e2d15656cbc05f0a2d07bd77762d", null ],
+      [ "init", "d4/d47/classgui_1_1_bouton_texte.html#a2ee4ed04c1e2a20836e38a250d56311e", null ],
+      [ "majFormes", "d4/d47/classgui_1_1_bouton_texte.html#a5c364a14bca674e63eb4db871b5faa79", null ],
+      [ "setSize", "d4/d47/classgui_1_1_bouton_texte.html#a1725dffd7f645561ee4db8786d83a85e", null ],
+      [ "setSkin", "d4/d47/classgui_1_1_bouton_texte.html#ab8059cd7c83e678dd8b3c9dba62a2363", null ],
+      [ "setTexte", "d4/d47/classgui_1_1_bouton_texte.html#a6c4fcc7a5b0be6317245387d6078fb88", null ],
+      [ "m_lblTexte", "d4/d47/classgui_1_1_bouton_texte.html#adedb7fc1377556a249211d9724f702f9", null ]
+    ] ],
     [ "Groupe", "df/d39/classgui_1_1_groupe.html", [
       [ "actualiser", "df/d39/classgui_1_1_groupe.html#aa07de056f6d0aa21b7f8290b1ee01d58", null ],
       [ "getGlobalBounds", "df/d39/classgui_1_1_groupe.html#aaa70e4ae758c941a1be7965814e11cff", null ],
