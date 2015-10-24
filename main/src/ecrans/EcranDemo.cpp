@@ -73,23 +73,32 @@ void
 EcranDemo::initGUI  ( )
 {
     // le skin qu'on va utiliser dans cette interface
-    gui::Skin skinCourant = gui::Skin ( Config::m_skins[ Config::Skins::Skin1 ] );
-
+    auto skinCourant =  Config::m_skins[ Config::Skins::Skin1 ] ;
+/*
     // creation du label
-    gui::Gadget::ptr    lblTest ( new gui::Label ( "ça sent l'cornichon" , Config::m_skins[ Config::Skins::Skin1 ].lblCourant ) );
+    gui::Gadget::ptr    lblTest ( new gui::Label ( "ça sent l'cornichon" , *skinCourant->lblCourant ) );
     m_gui.ajouter ( lblTest );
 
-    // creation du Bouton
-    this->boutonA = gui::Gadget::ptr ( new gui::Bouton (  Config::m_skins[ Config::Skins::Skin1 ] ) );
-
-    m_gui.ajouter           ( this->boutonA );
+    // creation du Bouton simple A, c'est un shared_ptr de l'ecranDemo
+    this->boutonA = std::shared_ptr<gui::Bouton>   ( new gui::Bouton ( skinCourant ) );
+    m_gui.ajouter                 ( this->boutonA );
     this->boutonA->setPosition    ( 50, 50 );
     this->boutonA->setSize        ({25, 25});
-    this->boutonA->setSkin        ( Config::m_skins[ Config::Skins::Skin1 ] );
-    this->boutonA->lier           ( gui::Evenements::onEntre , [this]() {
-        this->boutonA->move (25,0);
-        this->boutonA->rotate (5);
+    this->boutonA->lier           ( gui::Evenements::onGRelache , [this]() {
+        std::cout << "boutonA \n";
     });
+*/
+    // creation du BoutonTexte B, nouveau pointeur, ajouté aux enfants du groupe GUI principal.
+    std::shared_ptr<gui::BoutonTexte>  boutonB ( new gui::BoutonTexte ( "Bouton B" , skinCourant ) );
+    m_gui.ajouter           ( boutonB );
+    boutonB->setPosition    ( 150, 50 );
+    boutonB->setSize        ({25, 25});
+    boutonB->setBordure     ( 5 );
+    boutonB->ajusterAuTexte ( );
+    boutonB->lier           ( gui::Evenements::onGRelache , [this]() {
+        std::cout << "déclenchement de la fonction associé au boutonB.\n";
+    });
+
 
 }   // fin init GUI
 

@@ -92,7 +92,7 @@ private:
 //    sf::View            m_vueIG;    ///< La vue SFML de l'interface graphique.
     sf::RectangleShape      m_fond;     ///< Le shape SFML du fond de l'écran.
     gui::Groupe             m_gui;      ///< Le groupe de GUI du menu principal.
-    gui::Gadget::ptr        boutonA ;
+    std::shared_ptr<gui::Bouton>        boutonA ;
     //std::shared_ptr<Gadget>
 
 }; // fin EcranDemo

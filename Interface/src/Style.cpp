@@ -22,8 +22,6 @@ Style::Style()
 , align         ( Alignements::Libre )
 , ajust         ( Ajustements::Sans )
 {
-    std::cout << "Style par defaut\n";
-    int colorR = lgn_couleur.r;
     txt_police.loadFromFile ( "media/polices/arial.ttf" );
 }
 
@@ -40,7 +38,6 @@ Style::Style( const Style& source )
 , align         ( source.align )
 , ajust         ( source.ajust )
 {
-    std::cout << "Style par copy\n";
 
 }
 

@@ -37,8 +37,8 @@ public:
     /// \param style       Le style à appliquer (Style).
     ///
     /////////////////////////////////////////////////
-    Label   ( std::string     texte
-            , Style  style );
+    Label   ( std::string               texte
+            , Style    style );
 
     /////////////////////////////////////////////////
     /// \brief Destructeur
@@ -90,7 +90,7 @@ public:
     ///
     /////////////////////////////////////////////////
     std::string
-    getTexte ( std::string texte ) {  return m_texte->getString();   } ;
+    getTexte ( ) {  return m_texte->getString();   } ;
 
     /////////////////////////////////////////////////
     /// \brief Definir la taille texte du Label.
@@ -156,7 +156,7 @@ public:
 
 protected:
     //sf::Text
-    sf::Text *              m_texte;    ///< Le text SFML.
+    sf::Text *              m_texte;        ///< Le text SFML.
 
 };
 }; // fin gui

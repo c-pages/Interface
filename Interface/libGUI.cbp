@@ -62,6 +62,7 @@
 		<Unit filename="include/Skin.h" />
 		<Unit filename="include/Style.h" />
 		<Unit filename="include/gadgets/Bouton.h" />
+		<Unit filename="include/gadgets/BoutonTexte.h" />
 		<Unit filename="include/gadgets/Groupe.h" />
 		<Unit filename="include/gadgets/Image.h" />
 		<Unit filename="include/gadgets/Label.h" />
@@ -70,6 +71,7 @@
 		<Unit filename="src/Skin.cpp" />
 		<Unit filename="src/Style.cpp" />
 		<Unit filename="src/gadgets/Bouton.cpp" />
+		<Unit filename="src/gadgets/BoutonTexte.cpp" />
 		<Unit filename="src/gadgets/Groupe.cpp" />
 		<Unit filename="src/gadgets/Image.cpp" />
 		<Unit filename="src/gadgets/Label.cpp" />

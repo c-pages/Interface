@@ -42,6 +42,15 @@ public:
     sf::Vector2f
     getSize ( );
 
+    /////////////////////////////////////////////////
+    /// \brief Actualiser les éléments.
+    ///
+    /// Actualiser les différents éléments du ou des écrans actifs.
+    /// \param deltaT          Un \e float qui indique le delta du temps écoulé depuis la dernière actualisation.
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    virtual void actualiser ( float deltaT ) ;
 };
 };
 #endif // GROUPE_H

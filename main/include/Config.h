@@ -91,10 +91,10 @@ public:
     // Les membres
     /////////////////////////////////////////////////
 
-    static  ResourceMgr<sf::Texture,int>        m_textures;     ///< Manager des textures
-    static  ResourceMgr<sf::Font,int>           m_polices;      ///< Manager des polices
-    static  std::map < Styles , gui::Style >   m_styles;       ///< les styles pour le GUI \todo passer de pointer* à point shared_ptr ou unique_ptr ?
-    static  std::map < Skins  , gui::Skin >    m_skins;        ///< les styles pour le GUI \todo passer de pointer* à point shared_ptr ou unique_ptr ?
+    static  ResourceMgr<sf::Texture,int>                        m_textures;     ///< Manager des textures
+    static  ResourceMgr<sf::Font,int>                           m_polices;      ///< Manager des polices
+    static  std::map < Styles , std::shared_ptr<gui::Style> >   m_styles;       ///< les styles pour le GUI \todo passer de pointer* à point shared_ptr ou unique_ptr ?
+    static  std::map < Skins  , std::shared_ptr<gui::Skin > >   m_skins;        ///< les styles pour le GUI \todo passer de pointer* à point shared_ptr ou unique_ptr ?
 private:
     static  sf::Time                            m_dureeImage;   ///< Durée d'une image, Autrement dit on a 1/FrameRate = \e DureeImage
 

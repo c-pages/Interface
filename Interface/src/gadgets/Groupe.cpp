@@ -43,7 +43,21 @@ Groupe::getGlobalBounds ( ) {
     return { result };
 }
 
+/////////////////////////////////////////////////
+void
+Groupe::actualiser ( float deltaT )
+{
 
+    // Supprimer les gadgets enfants en attente de suppression
+    for ( int i = m_enfants.size()-1 ; i >= 0; i-- )
+        if ( m_enfants[i]->aSupprimer() )
+            m_enfants.erase ( m_enfants.begin() + i );
+
+    // Actualiser les enfants
+    for ( ptr enfant : m_enfants )
+        enfant->actualiser ( deltaT );
+
+}
 /////////////////////////////////////////////////
 sf::Vector2f
 Groupe::getSize ( ){

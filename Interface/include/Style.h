@@ -2,7 +2,7 @@
 #define STYLE_H
 
 #include <SFML/Graphics.hpp>
-
+#include <iostream>
 //#include <../GUI.h>
 
 namespace gui
@@ -44,7 +44,7 @@ enum Ajustements {
 };
 
 /////////////////////////////////////////////////
-/// \brief Un style pour l'affichage dans la fenêtre.
+/// \brief Un style contient les infos visuelles d'un élément.
 ///
 /// Un Style contient les couleurs, tailles(lignes),
 /// polices, etc. qui seront appliqués à un Gadget.
@@ -69,6 +69,25 @@ public:
     ///
     /////////////////////////////////////////////////
     Style( const Style& source );
+
+
+
+
+    void
+    print()
+    {
+        std::cout << " Style ----------------------------";
+        std::cout << "\n      txt_taille = " << txt_taille;
+        std::cout << "\n      lgn_epaisseur = " << lgn_epaisseur;
+        std::cout << "\n      txt_couleur = " << int (txt_couleur.r) << " " << int (txt_couleur.g) << " " << int (txt_couleur.b) << " " << int (txt_couleur.a) << "\n" ;
+    }
+
+
+
+
+
+
+
 
     ////////////////////////////////////////////////////////////
     // Les membres

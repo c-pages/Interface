@@ -3,6 +3,7 @@
 /////////////////////////////////////////////////
 // Headers
 /////////////////////////////////////////////////
+#include <memory>
 #include <Style.h>
 
 namespace gui
@@ -38,13 +39,13 @@ struct Skin
     /////////////////////////////////////////////////
     // Les membres
     /////////////////////////////////////////////////
-    Style  desactive;        ///< le style des gadget désactivés
-    Style  fenetre;          ///< le style des fenêtres.
-    Style  btnRepos;         ///< le style des boutons au repos.
-    Style  btnSurvol;        ///< le style des boutons au survol.
-    Style  btnPress;         ///< le style des boutons au press.
-    Style  lblTitre;         ///< le style des titres.
-    Style  lblCourant;       ///< le style des champs de texte courant.
+    std::shared_ptr <Style>  desactive;        ///< le style des gadgets désactivés
+    std::shared_ptr <Style>  fenetre;          ///< le style des fenêtres.
+    std::shared_ptr <Style>  btnRepos;         ///< le style des boutons au repos.
+    std::shared_ptr <Style>  btnSurvol;        ///< le style des boutons au survol.
+    std::shared_ptr <Style>  btnPress;         ///< le style des boutons au press.
+    std::shared_ptr <Style>  lblTitre;         ///< le style des titres.
+    std::shared_ptr <Style>  lblCourant;       ///< le style des champs de texte courant.
 
 };
 }; // fin namespace gui

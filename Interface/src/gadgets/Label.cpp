@@ -2,19 +2,16 @@
 /////////////////////////////////////////////////
 // Headers
 /////////////////////////////////////////////////
+#include <SFML/Graphics.hpp>
 #include <iostream>
 #include "gadgets/Label.h"
-//#include "../GUI.h"
-
-
-#include <SFML/Graphics.hpp>
 
 namespace gui {
 
 /////////////////////////////////////////////////
-Label::Label    ( std::string     texte )
+Label::Label    ( std::string   texte )
 : Gadget    ( )
-, m_texte   ( new sf::Text() )
+, m_texte   ( new sf::Text( ) )
 {
     m_texte->setString  ( texte );
     updateStyle         ( );
@@ -23,12 +20,12 @@ Label::Label    ( std::string     texte )
 
 /////////////////////////////////////////////////
 Label::Label    ( std::string   texte
-                , Style         style )
+                , Style    style )
 : Gadget    ( style )
 , m_texte   ( new sf::Text () )
 {
     m_texte->setString  ( texte );
-    updateStyle();
+    updateStyle( ) ;
 }
 
 
@@ -66,6 +63,8 @@ Label::getSize( )    {
 /////////////////////////////////////////////////
 void
 Label::updateStyle( )    {
+    std::cout << "Label::updateStyle( )\n";
+    //    m_style.print();
     m_texte->setFont             ( m_style.txt_police );
     m_texte->setStyle            ( m_style.txt_style );
     m_texte->setCharacterSize    ( m_style.txt_taille );
@@ -93,6 +92,8 @@ void
 Label::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
     states.transform *= getTransform();
     target.draw      ( *this->m_texte , states );
+//    std::cout << "Label::m_texte->setColor : " << float(m_style.txt_couleur.r ) << " " << float(m_style.txt_couleur.g ) << " " << float(m_style.txt_couleur.b ) << " " << float(m_style.txt_couleur.a ) << "\n" ;
+
 
     for ( ptr enfant : m_enfants )
         target.draw      ( *enfant , states );

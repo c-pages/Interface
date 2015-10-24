@@ -4,7 +4,6 @@
 /////////////////////////////////////////////////
 #include "Gadget.h"
 #include <iostream>
-//#include "../GUI.h"
 
 namespace gui
 {
@@ -12,10 +11,11 @@ namespace gui
 Gadget::Gadget  ()
 : m_parent      ( 0 )
 , m_enfants     ( 0 )
-, m_skin        ( Skin () )
+, m_skin        ( std::make_shared <Skin> () )
 , m_style       ( Style () )
 , m_enable      ( true )
 , m_aSupprimer  ( false )
+, m_besoinActua( true )
 //, m_texte   ( new sf::Text () )
 { }
 
@@ -24,20 +24,22 @@ Gadget::Gadget  ()
 Gadget::Gadget  ( Style    style )
 : m_parent      ( 0 )
 , m_enfants     ( 0 )
-, m_skin        ( Skin () )
+, m_skin        ( std::make_shared <Skin>() )
 , m_style       ( style )
 , m_enable      ( true )
 , m_aSupprimer  ( false )
+, m_besoinActua( true )
 { }
 
 /////////////////////////////////////////////////
-Gadget::Gadget  ( Skin    skin )
+Gadget::Gadget  ( std::shared_ptr <Skin>    skin )
 : m_parent      ( 0 )
 , m_enfants     ( 0 )
 , m_skin        ( skin )
-, m_style       ( m_skin.fenetre )
+, m_style       ( *m_skin->fenetre )
 , m_enable      ( true )
 , m_aSupprimer  ( false )
+, m_besoinActua( true )
 { }
 
 
@@ -61,19 +63,20 @@ void
 Gadget::ajouter ( ptr enfant ) {
     m_enfants.push_back(  enfant );
     enfant->m_parent = this;
+    std::cout << "enfant ajouté, enfants: " << m_enfants.size() << "\n";
 };
 
 
 /////////////////////////////////////////////////
 void
-Gadget::aligner ( Gadget *cible , Alignements    align ){
+Gadget::aligner (  Gadget& cible , Alignements    align ){
 
     // distance a garder par rapport aux bords de la cible
     /// \todo rendre ecart accessible
     float           ecart           = 3;
 
     // le bounding box de la cible
-    sf::FloatRect   rect_cible      = cible->getLocalBounds() ;
+    sf::FloatRect   rect_cible      = cible.getLocalBounds() ;
 
     // les axes d'alignements sur la cible
     float    cbl_gauche  = rect_cible.left;
@@ -140,6 +143,9 @@ Gadget::contient ( float x, float y )
     /// une rotation sur un bouton et la zone de clique ne suivait pas.
     /////////////////////////////////////////////////
 
+    getTransform();
+
+
     // la bouding box globale du gadget
     sf::FloatRect rect = getGlobalBounds();
 
@@ -159,22 +165,21 @@ void
 Gadget::actualiser ( float deltaT )
 {
     // Supprimer les gadgets enfants en attente de suppression
-    for ( int i = m_enfants.size()-1 ; i >= 0; i-- )        {
-        if ( m_enfants[i].get()->m_aSupprimer ){
-            std::cout << "Supprimer les gadgets enfants en attente de suppression\n";
+    for ( int i = m_enfants.size()-1 ; i >= 0; i-- )
+        if ( m_enfants[i]->aSupprimer() )
             m_enfants.erase ( m_enfants.begin() + i );
-        }
-    }
 
     // Actualiser les enfants
     for ( ptr enfant : m_enfants )
         enfant->actualiser ( deltaT );
+
 }
 
 /////////////////////////////////////////////////
 void
 Gadget::traiter_evenements ( const sf::Event& event )
 {
+    // les evenements des gadgets enfants
     for ( ptr enfant : m_enfants )
         enfant->traiter_evenements ( event );
 }
@@ -183,7 +188,10 @@ Gadget::traiter_evenements ( const sf::Event& event )
 void
 Gadget::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const
 {
+    // le transform du gadget combiné au transform parents (states).
     states.transform *= getTransform();
+
+    // dessiner les gadgets enfants
     for ( const ptr& enfant : m_enfants )
         target.draw      ( *enfant , states );
 }
