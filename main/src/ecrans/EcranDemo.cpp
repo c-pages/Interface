@@ -129,16 +129,18 @@ EcranDemo::initGUI  ( )
     this->fenetreA = std::shared_ptr<gui::Fenetre> (  new gui::Fenetre ( &m_appli->getFenetre() , skinCourant ) );
     m_gui.ajouter           ( this->fenetreA );
     this->fenetreA->setPosition  (  250, 250  );
-    this->fenetreA->setSize       ( {250, 70} );
+    this->fenetreA->setSize       ( {220, 90} );
+    this->fenetreA->setBordure     ( 5 );
     // fenetreA->setSkin ( skinCourant );
 
 
     // creation  Bouton pr fenetre, c'est un shared_ptr de l'ecranDemo
-    std::shared_ptr<gui::BoutonTexte>  boutonA ( new gui::BoutonTexte (skinCourant ,  "  BoutonTEXTE  " ) );
+    std::shared_ptr<gui::BoutonTexte>  boutonA ( new gui::BoutonTexte (skinCourant ,  "      BoutonTEXTE      " ) );
     this->fenetreA->ajouter ( boutonA );
-    boutonA->setPosition    ( 0, 20 );
+    boutonA->setPosition    ( 15, 75 );
     boutonA->setSize        ( {30, 30} );
-    boutonA->ajusterAuTexte();
+    boutonA->setBordure     ( 3 )  ;
+    boutonA->ajusterAuTexte ();
     boutonA->lier  ( gui::Evenements::onGRelache , [this](){
                     std::cout << "cliclic\n";
                     });
@@ -146,10 +148,42 @@ EcranDemo::initGUI  ( )
     // creation d'un label a mettre dans le fenetre
     std::shared_ptr<gui::Label>  m_lblFENETRE ( new gui::Label ( "Ceci est un label : gui::Label" , skinCourant->lblCourant ) );
     this->fenetreA->ajouter    ( m_lblFENETRE );
-    m_lblFENETRE->setPosition ( 0, 30 );
-   // m_lblFENETRE->aligner    ( *boutonA , gui::Alignements::Ctre_Gche );
+    m_lblFENETRE->setPosition ( 15, 1 );
 
-  //  m_lblFENETRE->move    ( 20, 0 );
+
+    // creation du BoutonTexte B, nouveau pointeur, ajouté aux enfants du groupe GUI principal.
+    std::shared_ptr<gui::Bouton>  boutonC ( new gui::Bouton ( skinCourant ) );
+    this->fenetreA->ajouter           ( boutonC );
+    boutonC->setPosition    ( 15, 25 );
+    boutonC->setSize        ( { boutonA->getSize().y , boutonA->getSize().y } );
+    boutonC->setBordure     ( 2 );
+    boutonC->lier           ( gui::Evenements::onChangeEtat , [this]() {
+        //m_lblTest->setTexte( "Bouton à cocher : gui::BoutonCocher"  );
+    });
+
+    // creation d'un label a mettre dans le fenetre
+    std::shared_ptr<gui::Label>  m_lblC ( new gui::Label ( "<-- Simple Bouton" , skinCourant->lblCourant ) );
+    this->fenetreA->ajouter    ( m_lblC );
+    m_lblC->aligner ( *boutonC );
+    m_lblC->setPosition( 30 , int( m_lblC->getPosition().y)  );
+
+
+
+    // creation du BoutonTexte B, nouveau pointeur, ajouté aux enfants du groupe GUI principal.
+    std::shared_ptr<gui::BoutonCocher>  boutonD ( new gui::BoutonCocher ( skinCourant ) );
+    this->fenetreA->ajouter           ( boutonD );
+    boutonD->setPosition    ( 15, 50 );
+    boutonD->setSize        ( { boutonA->getSize().y , boutonA->getSize().y } );
+    boutonD->setBordure     ( 2 );
+    boutonD->lier           ( gui::Evenements::onChangeEtat , [this]() {
+        //m_lblTest->setTexte( "Bouton à cocher : gui::BoutonCocher"  );
+    });
+
+    // creation d'un label a mettre dans le fenetre
+    std::shared_ptr<gui::Label>  m_lblD ( new gui::Label ( "<-- Bouton à cocher" , skinCourant->lblCourant ) );
+    this->fenetreA->ajouter    ( m_lblD );
+    m_lblD->aligner ( *boutonD );
+    m_lblD->setPosition( 30 ,m_lblD->getPosition().y );
 
 
 
