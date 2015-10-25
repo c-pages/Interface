@@ -129,7 +129,7 @@ EcranDemo::initGUI  ( )
     this->fenetreA = std::shared_ptr<gui::Fenetre> (  new gui::Fenetre ( &m_appli->getFenetre() , skinCourant ) );
     m_gui.ajouter           ( this->fenetreA );
     this->fenetreA->setPosition  (  250, 250  );
-    this->fenetreA->setSize       ( {220, 90} );
+    this->fenetreA->setSize       ( {220, 100} );
     this->fenetreA->setBordure     ( 5 );
     // fenetreA->setSkin ( skinCourant );
 
