@@ -128,15 +128,15 @@ EcranDemo::initGUI  ( )
     // creation de la fenetre
     this->fenetreA = std::shared_ptr<gui::Fenetre> (  new gui::Fenetre ( &m_appli->getFenetre() , skinCourant ) );
     m_gui.ajouter           ( this->fenetreA );
-    this->fenetreA->setPosition  (  50, 50  );
-    this->fenetreA->setSize       ( {150, 150} );
+    this->fenetreA->setPosition  (  250, 250  );
+    this->fenetreA->setSize       ( {250, 70} );
     // fenetreA->setSkin ( skinCourant );
 
 
     // creation  Bouton pr fenetre, c'est un shared_ptr de l'ecranDemo
     std::shared_ptr<gui::BoutonTexte>  boutonA ( new gui::BoutonTexte (skinCourant ,  "  BoutonTEXTE  " ) );
     this->fenetreA->ajouter ( boutonA );
-    boutonA->setPosition    ( 0, 0 );
+    boutonA->setPosition    ( 0, 20 );
     boutonA->setSize        ( {30, 30} );
     boutonA->ajusterAuTexte();
     boutonA->lier  ( gui::Evenements::onGRelache , [this](){

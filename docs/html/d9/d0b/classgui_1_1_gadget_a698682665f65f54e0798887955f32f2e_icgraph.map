@@ -1,4 +1,0 @@
-<map id="gui::Gadget::getGlobalBounds" name="gui::Gadget::getGlobalBounds">
-<area shape="rect" id="node2" href="$d9/d0b/classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="249,29,392,56"/>
-<area shape="rect" id="node3" href="$d4/daa/classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="440,22,569,63"/>
-</map>

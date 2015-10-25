@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['operator_3d',['operator=',['../d2/dc2/classapp_1_1_resource_mgr.html#a8c06cc4165068e7aae8ba2aa505d4c1a',1,'app::ResourceMgr::operator=()'],['../db/d66/classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_a_n_t_01_4.html#abf1f4bce28d2f5cfb67fe32527f7fd66',1,'app::ResourceMgr&lt; sf::Music, IDENTIFIANT &gt;::operator=()']]]
+  ['main',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['majgeom',['majGeom',['../classgui_1_1_gadget.html#a8a72d0816ec1928958ff5dd3ccd983f5',1,'gui::Gadget::majGeom()'],['../classgui_1_1_bouton.html#a1ff3d7a1586eaab5873cc6e49be2332c',1,'gui::Bouton::majGeom()'],['../classgui_1_1_bouton_cocher.html#a03a7011fd1269a5502fd3b6e58652c4e',1,'gui::BoutonCocher::majGeom()'],['../classgui_1_1_bouton_texte.html#a6c66a5e34585fdb6054c2f56160db0a7',1,'gui::BoutonTexte::majGeom()'],['../classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d',1,'gui::Fenetre::majGeom()'],['../classgui_1_1_image.html#a2a8ce35cc6f459c337b9a00313d68d4a',1,'gui::Image::majGeom()'],['../classgui_1_1_label.html#ae310f44ef08900d558af5c5bc94c448d',1,'gui::Label::majGeom()']]],
+  ['manipulerfenetre',['ManipulerFenetre',['../classgui_1_1_fenetre.html#a714cf4ba2a7e1489204b68beaa594e27',1,'gui::Fenetre']]]
 ];

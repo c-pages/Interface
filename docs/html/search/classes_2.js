@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['config',['Config',['../df/dbe/classapp_1_1_config.html',1,'app']]]
+  ['config',['Config',['../classapp_1_1_config.html',1,'app']]]
 ];

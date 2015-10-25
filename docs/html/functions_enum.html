@@ -8,14 +8,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-  $(window).load(resizeHeight);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -50,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
       <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
       <li class="current"><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
       <li>
@@ -86,23 +79,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="functions_type.html"><span>Définitions&#160;de&#160;type</span></a></li>
       <li class="current"><a href="functions_enum.html"><span>Énumérations</span></a></li>
       <li><a href="functions_eval.html"><span>Valeurs&#160;énumérées</span></a></li>
+      <li><a href="functions_rela.html"><span>Fonctions&#160;associées</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('functions_enum.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -120,27 +100,24 @@ $(document).ready(function(){initNavTree('functions_enum.html','');});
 <div class="contents">
 &#160;<ul>
 <li>EtatBouton
-: <a class="el" href="d4/daa/classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5f">gui::Bouton</a>
+: <a class="el" href="classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5f">gui::Bouton</a>
 </li>
 <li>Polices
-: <a class="el" href="df/dbe/classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049">app::Config</a>
+: <a class="el" href="classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049">app::Config</a>
 </li>
 <li>Skins
-: <a class="el" href="df/dbe/classapp_1_1_config.html#a457412fb51e1853408f2201a69471e32">app::Config</a>
+: <a class="el" href="classapp_1_1_config.html#a457412fb51e1853408f2201a69471e32">app::Config</a>
 </li>
 <li>Styles
-: <a class="el" href="df/dbe/classapp_1_1_config.html#ab0fd2b7fe87a4b68c93d2a4a7209beda">app::Config</a>
+: <a class="el" href="classapp_1_1_config.html#ab0fd2b7fe87a4b68c93d2a4a7209beda">app::Config</a>
 </li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Généré par
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
 </body>
 </html>

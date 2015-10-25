@@ -1,9 +1,0 @@
-<map id="gui::Gadget" name="gui::Gadget">
-<area shape="rect" id="node5" href="$d4/daa/classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. " alt="" coords="101,155,189,181"/>
-<area shape="rect" id="node8" href="$df/d39/classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets. " alt="" coords="213,155,303,181"/>
-<area shape="rect" id="node9" href="$d3/dbe/classgui_1_1_image.html" title="Gadget Un simple gadget permettant d&#39;afficher une image ou une couleur uni. " alt="" coords="327,155,410,181"/>
-<area shape="rect" id="node10" href="$d5/d3f/classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. " alt="" coords="435,155,513,181"/>
-<area shape="rect" id="node2" href="$d6/d90/classgui_1_1_action.html" title="Classe virtuelle permetant de lier des évenements à des fonctions. " alt="" coords="157,5,241,32"/>
-<area shape="rect" id="node6" href="$dd/d05/classgui_1_1_bouton_cocher.html" title="Gadget, bouton rectangulaire à cocher,. " alt="" coords="5,229,135,256"/>
-<area shape="rect" id="node7" href="$d4/d47/classgui_1_1_bouton_texte.html" title="Gadget, bouton rectangulaire (gui::Bouton) combiné à un Label (gui::texte). " alt="" coords="159,229,279,256"/>
-</map>

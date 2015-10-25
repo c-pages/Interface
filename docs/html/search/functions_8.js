@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['majformes',['majFormes',['../d9/d0b/classgui_1_1_gadget.html#a2440d80d7e3962a5d5254a7f9dbe6e43',1,'gui::Gadget::majFormes()'],['../d4/daa/classgui_1_1_bouton.html#ac75a5b5f1506e79a2e69986e0999b4e8',1,'gui::Bouton::majFormes()'],['../dd/d05/classgui_1_1_bouton_cocher.html#a939c2e90d3216483a92cd38968905df5',1,'gui::BoutonCocher::majFormes()'],['../d4/d47/classgui_1_1_bouton_texte.html#a5c364a14bca674e63eb4db871b5faa79',1,'gui::BoutonTexte::majFormes()'],['../d5/d3f/classgui_1_1_label.html#a57526d41486a70b1bce37800103887ae',1,'gui::Label::majFormes()']]]
+  ['label',['Label',['../classgui_1_1_label.html#a7d2d63e5b786ec093a4c7ea20db40208',1,'gui::Label::Label(std::string texte=&quot;&quot;)'],['../classgui_1_1_label.html#ae0526095857c9e97d8927194ddd14889',1,'gui::Label::Label(std::string texte, std::shared_ptr&lt; Style &gt; style)']]],
+  ['lier',['lier',['../classgui_1_1_action.html#a70035bc714f01d2f47c58b4dc159fb32',1,'gui::Action::lier(Evenements evt, const FuncType &amp;fonction)'],['../classgui_1_1_action.html#a5eb8461689c5b9800c3b652423dc53d3',1,'gui::Action::lier(sf::Keyboard::Key touche, const FuncType &amp;fonction)']]],
+  ['load',['load',['../classapp_1_1_resource_mgr.html#a43174877ac3bce3b43b68f94e0eb2815',1,'app::ResourceMgr::load()'],['../classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_a_n_t_01_4.html#a02a377d1bf77adf8088c88f16c050b32',1,'app::ResourceMgr&lt; sf::Music, IDENTIFIANT &gt;::load()']]],
+  ['loadimage',['loadImage',['../classgui_1_1_image.html#afe71b9241ff197571ea252cf14a2dfa3',1,'gui::Image']]]
 ];
