@@ -64,7 +64,7 @@ EcranDemo::initScene  ( )
     // Initialisation du fond.
     m_fond.setPosition  ( 0,0 );
     m_fond.setSize      ( sf::Vector2f ( m_appli->getFenetre().getSize() ) );
-    m_fond.setFillColor ( sf::Color (50,50,50));
+    m_fond.setFillColor ( sf::Color (40,40,50));
 }
 
 
@@ -128,16 +128,17 @@ EcranDemo::initGUI  ( )
     // creation de la fenetre
     this->fenetreA = std::shared_ptr<gui::Fenetre> (  new gui::Fenetre ( &m_appli->getFenetre() , skinCourant ) );
     m_gui.ajouter           ( this->fenetreA );
-    this->fenetreA->setPosition   (  20, 300  );
+    this->fenetreA->setPosition  (  50, 50  );
     this->fenetreA->setSize       ( {150, 150} );
     // fenetreA->setSkin ( skinCourant );
 
 
     // creation  Bouton pr fenetre, c'est un shared_ptr de l'ecranDemo
-    std::shared_ptr<gui::BoutonTexte>  boutonA ( new gui::BoutonTexte ( skinCourant ) );
+    std::shared_ptr<gui::BoutonTexte>  boutonA ( new gui::BoutonTexte (skinCourant ,  "  BoutonTEXTE  " ) );
     this->fenetreA->ajouter ( boutonA );
     boutonA->setPosition    ( 0, 0 );
     boutonA->setSize        ( {30, 30} );
+    boutonA->ajusterAuTexte();
     boutonA->lier  ( gui::Evenements::onGRelache , [this](){
                     std::cout << "cliclic\n";
                     });
@@ -145,9 +146,10 @@ EcranDemo::initGUI  ( )
     // creation d'un label a mettre dans le fenetre
     std::shared_ptr<gui::Label>  m_lblFENETRE ( new gui::Label ( "Ceci est un label : gui::Label" , skinCourant->lblCourant ) );
     this->fenetreA->ajouter    ( m_lblFENETRE );
-    m_lblFENETRE->aligner    ( *boutonA , gui::Alignements::Ctre_Gche );
+    m_lblFENETRE->setPosition ( 0, 30 );
+   // m_lblFENETRE->aligner    ( *boutonA , gui::Alignements::Ctre_Gche );
 
-    m_lblFENETRE->move    ( 20, 0 );
+  //  m_lblFENETRE->move    ( 20, 0 );
 
 
 

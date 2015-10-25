@@ -60,8 +60,9 @@ Gadget::~Gadget(){
 sf::Vector2f
 Gadget::getPosAbs (  )        {
     sf::Vector2f  result = getPosition ();
-    if ( m_parent != 0 ) result += this->m_parent->getPosAbs();
-    return result ;
+    if ( m_parent != 0 )
+        result += this->m_parent->getPosAbs();
+    return result;
 }
 
 
@@ -168,24 +169,24 @@ Gadget::contient ( float x, float y )
     /////////////////////////////////////////////////
 
 // la bouding box globale du gadget
-    sf::FloatRect rect  ( getPosAbs().x
-                        , getPosAbs().y
-                        , getSize().x
-                         , getSize().y ) ;//getGlobalBounds();
+//    sf::FloatRect rect  ( getPosAbs().x
+//                        , getPosAbs().y
+//                        , getSize().x
+//                        , getSize().y ) ;//getGlobalBounds();
 
- //   sf::FloatRect rect  = getGlobalBounds();
+    sf::FloatRect rect  = getGlobalBounds();
 
 
 
     // S'il est contenu alors on verif le parent pour savoir par exemple si
     // le gadget est en vue dans la fenetre parent.
-//    if ( rect.contains( sf::Vector2f ( x , y ) ) ){
-//        if ( m_parent != 0 )
-//            return   m_parent->contient ( x, y );
-//        else return true;
-//    } else return false;
+    if ( rect.contains( sf::Vector2f ( x , y ) ) ){
+        if ( m_parent != 0 )
+            return   m_parent->contient ( x, y );
+        else return true;
+    } else return false;
 
-return( rect.contains( sf::Vector2f ( x , y ) ) );
+//return( rect.contains( sf::Vector2f ( x , y ) ) );
 
 
 /*
