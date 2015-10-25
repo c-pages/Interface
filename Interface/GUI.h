@@ -5,15 +5,6 @@
 /////////////////////////////////////////////////
 // Hearders
 /////////////////////////////////////////////////
-
-
-//namespace gui
-//{
-//    class Gadget;
-//    // definition du type des pointeurs de gadget
-//    typedef     std::shared_ptr < Gadget >     ptr;
-//}
-
 #include <Skin.h>
 #include <Style.h>
 #include <action.h>
@@ -24,11 +15,11 @@
 #include <gadgets/Bouton.h>         // --->    declenche des fcts
 #include <gadgets/BoutonTexte.h>    // --->    declenche des fcts
 #include <gadgets/BoutonCocher.h>   // --->    0 ou 1
+#include <gadgets/Fenetre.h>        // --->    fenetre               grp  + btn:(drag, redim, fermer)
 
 
 
-
-//
+// NOTES //////////////////////////////////////////////////////////////////////////////
 ////SaisieTexte                    // --->    Champs de saisie de texte
 //
 ////BoutonCurseur                     --->    de 0. à 1.
@@ -39,9 +30,10 @@
 ////liste                             --->    group listé           grp2D ( liste: élément + param...  ) )  + btn:(drag, redim, fermer)
 //
 //*============  fenetres     =========*/
-//#include <gadgets/Fenetre.h>     // --->    fenetre               grp  + btn:(drag, redim, fermer)
+//
 ////fenetreQuestion                   --->    fenetre oui ou non    grp  + btn:(drag, oui, non)
 ////fenetreOnglets                    --->    1 onglet / 1 fenetre  grps + btn:(drag, redim, fermer, onglets)
+///////////////////////////////////////////////////////////////////////////////////////
 
 
 

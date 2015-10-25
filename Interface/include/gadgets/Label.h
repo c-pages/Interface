@@ -118,8 +118,8 @@ public:
     /// \return Rien
     ///
     /////////////////////////////////////////////////
-    void
-    majFormes( );
+    virtual void
+    majGeom( );
 
     /////////////////////////////////////////////////
     /// \brief La gestion des évènements utilisateurs.

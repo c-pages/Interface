@@ -113,6 +113,20 @@ public:
     virtual     void
     ajouter ( ptr enfant );
 
+
+    /////////////////////////////////////////////////
+    /// \brief Ajouter un enfant.
+    ///
+    /// \param    enfant          Le \e Gadget à ajouter à m_enfants.
+    ///
+    /// \return La Rien
+    /// \todo     verifier que l'enfant est pas deja dans la liste ( cause erreur possible )
+    ///
+    /////////////////////////////////////////////////
+    virtual     void
+    setParent ( Gadget * parent ) { m_parent = parent ; };
+
+
     /////////////////////////////////////////////////
     /// \brief Définie le skin du Label.
     ///
@@ -219,7 +233,7 @@ protected:
     ///
     /////////////////////////////////////////////////
     virtual void
-    majFormes(){};
+    majGeom(){};
 
 
 public:
@@ -260,6 +274,7 @@ public:
     /////////////////////////////////////////////////
 
 protected:
+    friend class Fenetre; ///< \todo corriger le code pour supuprimer ce friend
 
     std::string             m_nom;          ///< le nom du gadget, (pour l'instant on s'en sert pas mais peut etre un jour...).
     Gadget*                 m_parent;       ///< le gadget m_parent.

@@ -17,7 +17,10 @@ Gadget::Gadget  ()
 , m_aSupprimer  ( false )
 , m_besoinActua ( true )
 //, m_texte   ( new sf::Text () )
-{ }
+{
+
+
+}
 
 
 /////////////////////////////////////////////////
@@ -29,7 +32,9 @@ Gadget::Gadget  ( std::shared_ptr<Style>    style )
 , m_enable      ( true )
 , m_aSupprimer  ( false )
 , m_besoinActua ( true )
-{ }
+{
+
+}
 
 /////////////////////////////////////////////////
 Gadget::Gadget  ( std::shared_ptr <Skin>    skin )
@@ -40,7 +45,9 @@ Gadget::Gadget  ( std::shared_ptr <Skin>    skin )
 , m_enable      ( true )
 , m_aSupprimer  ( false )
 , m_besoinActua( true )
-{ }
+{
+
+}
 
 
 /////////////////////////////////////////////////
@@ -53,7 +60,7 @@ Gadget::~Gadget(){
 sf::Vector2f
 Gadget::getPosAbs (  )        {
     sf::Vector2f  result = getPosition ();
-    if ( m_parent != 0) result += this->m_parent->getPosAbs();
+    if ( m_parent != 0 ) result += this->m_parent->getPosAbs();
     return result ;
 }
 
@@ -61,6 +68,7 @@ Gadget::getPosAbs (  )        {
 /////////////////////////////////////////////////
 void
 Gadget::ajouter ( ptr enfant ) {
+    std::cout << "      --- Gadget --- ajouter ---\n";
     m_enfants.push_back(  enfant );
     enfant->m_parent = this;
 }
@@ -70,7 +78,7 @@ Gadget::ajouter ( ptr enfant ) {
 void
 Gadget::setSkin( std::shared_ptr<Skin>    skin ) {
     m_skin = skin ;
-    majFormes( );
+    majGeom( );
 };
 
 
@@ -78,8 +86,9 @@ Gadget::setSkin( std::shared_ptr<Skin>    skin ) {
 void
 Gadget::setStyle( std::shared_ptr<Style>     style ) {
     m_style = style ;
+
 //    m_style->print();
-    majFormes( );
+    majGeom( );
 };
 
 /////////////////////////////////////////////////
@@ -158,11 +167,38 @@ Gadget::contient ( float x, float y )
     /// une rotation sur un bouton et la zone de clique ne suivait pas.
     /////////////////////////////////////////////////
 
-    getTransform();
+// la bouding box globale du gadget
+    sf::FloatRect rect  ( getPosAbs().x
+                        , getPosAbs().y
+                        , getSize().x
+                         , getSize().y ) ;//getGlobalBounds();
 
+ //   sf::FloatRect rect  = getGlobalBounds();
+
+
+
+    // S'il est contenu alors on verif le parent pour savoir par exemple si
+    // le gadget est en vue dans la fenetre parent.
+//    if ( rect.contains( sf::Vector2f ( x , y ) ) ){
+//        if ( m_parent != 0 )
+//            return   m_parent->contient ( x, y );
+//        else return true;
+//    } else return false;
+
+return( rect.contains( sf::Vector2f ( x , y ) ) );
+
+
+/*
 
     // la bouding box globale du gadget
-    sf::FloatRect rect = getGlobalBounds();
+//    sf::FloatRect rect  ( getPosAbs().x
+//                        , getPosAbs().y
+//                        , getSize().x
+//                         , getSize().y ) ;//getGlobalBounds();
+
+    sf::FloatRect rect  = getGlobalBounds();
+
+
 
     // S'il est contenu alors on verif le parent pour savoir par exemple si
     // le gadget est en vue dans la fenetre parent.
@@ -171,7 +207,7 @@ Gadget::contient ( float x, float y )
             return   m_parent->contient ( x, y );
         else return true;
     } else return false;
-
+*/
 };
 
 

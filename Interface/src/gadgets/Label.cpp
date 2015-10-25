@@ -13,8 +13,9 @@ Label::Label    ( std::string   texte )
 : Gadget    ( )
 , m_texte   ( new sf::Text( ) )
 {
+    std::cout << "  --- Label --- Label ---\n";
     m_texte->setString  ( texte );
-    majFormes         ( );
+    majGeom         ( );
 }
 
 
@@ -24,8 +25,9 @@ Label::Label    ( std::string   texte
 : Gadget    ( style )
 , m_texte   ( new sf::Text () )
 {
+    std::cout << "  --- Label --- Label ---\n";
     m_texte->setString  ( texte );
-    majFormes( ) ;
+    majGeom( ) ;
 }
 
 
@@ -62,7 +64,7 @@ Label::getSize( )    {
 
 /////////////////////////////////////////////////
 void
-Label::majFormes( )    {
+Label::majGeom( )    {
     m_texte->setFont             ( m_style->txt_police );
     m_texte->setStyle            ( m_style->txt_style );
     m_texte->setCharacterSize    ( m_style->txt_taille );
@@ -89,7 +91,7 @@ Label::actualiser ( float deltaT )    {
 void
 Label::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
     states.transform *= getTransform();
-    target.draw      ( *this->m_texte , states );
+    target.draw      ( *m_texte , states );
 
     for ( ptr enfant : m_enfants )
         target.draw      ( *enfant , states );

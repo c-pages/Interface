@@ -64,6 +64,7 @@
 		<Unit filename="include/gadgets/Bouton.h" />
 		<Unit filename="include/gadgets/BoutonCocher.h" />
 		<Unit filename="include/gadgets/BoutonTexte.h" />
+		<Unit filename="include/gadgets/Fenetre.h" />
 		<Unit filename="include/gadgets/Groupe.h" />
 		<Unit filename="include/gadgets/Image.h" />
 		<Unit filename="include/gadgets/Label.h" />
@@ -74,6 +75,7 @@
 		<Unit filename="src/gadgets/Bouton.cpp" />
 		<Unit filename="src/gadgets/BoutonCocher.cpp" />
 		<Unit filename="src/gadgets/BoutonTexte.cpp" />
+		<Unit filename="src/gadgets/Fenetre.cpp" />
 		<Unit filename="src/gadgets/Groupe.cpp" />
 		<Unit filename="src/gadgets/Image.cpp" />
 		<Unit filename="src/gadgets/Label.cpp" />

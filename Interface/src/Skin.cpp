@@ -17,6 +17,7 @@ Skin::Skin()
 , btnPress      ( std::make_shared <Style> () )
 , lblTitre      ( std::make_shared <Style> () )
 , lblCourant    ( std::make_shared <Style> () )
+, invisible     ( std::make_shared <Style> () )
 {
     /////////////////////////////////////////////////
     // Creation du Skin par defaut
@@ -106,6 +107,18 @@ Skin::Skin()
     lblCourant->lgn_epaisseur   = 1;
     lblCourant->lgn_couleur     = sf::Color ( 255,255,255 , 200 );
     lblCourant->fnd_couleur     = sf::Color ( 255,255,255 , 255 );
+    lblCourant->fnd_texture     = sf::Texture ();
+    lblCourant->align           = Alignements::Libre;
+    lblCourant->ajust           = Ajustements::Sans;
+
+    //// invisible ///////////////////////////////////
+    lblCourant->txt_police      = police;
+    lblCourant->txt_style       = sf::Text::Style::Regular;
+    lblCourant->txt_taille      = 2;
+    lblCourant->txt_couleur     = sf::Color ( 200,200,200);
+    lblCourant->lgn_epaisseur   = 1;
+    lblCourant->lgn_couleur     = sf::Color ( 255,255,255 , 0 );
+    lblCourant->fnd_couleur     = sf::Color ( 255,255,255 , 0 );
     lblCourant->fnd_texture     = sf::Texture ();
     lblCourant->align           = Alignements::Libre;
     lblCourant->ajust           = Ajustements::Sans;

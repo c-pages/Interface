@@ -92,6 +92,10 @@ private:
     gui::Groupe             m_gui;      ///< Le groupe de GUI du menu principal.
    // std::shared_ptr<gui::Bouton>        boutonA ;
     std::shared_ptr<gui::Label>        m_lblTest ; ///< Le label membre de cet ecran pour premettre aux boutons d'y accéder.
+
+    std::shared_ptr<gui::Fenetre>    fenetreA ;
+
+
     //std::shared_ptr<Gadget>
 
 }; // fin EcranDemo

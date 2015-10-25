@@ -103,11 +103,11 @@ void Config::initSkins()
     //// FENETRE ///////////////////////////////////
     skin1->fenetre->txt_police         = police;
     skin1->fenetre->txt_style          = sf::Text::Style::Regular ;
-    skin1->fenetre->txt_taille         = 12;
+    skin1->fenetre->txt_taille         = 17;
     skin1->fenetre->txt_couleur        = sf::Color ( 200,200,200);
     skin1->fenetre->lgn_epaisseur      = 1;
-    skin1->fenetre->lgn_couleur        = sf::Color ( 255,255,255 , 20 );
-    skin1->fenetre->fnd_couleur        = sf::Color ( 150,150,255 , 50 );
+    skin1->fenetre->lgn_couleur        = sf::Color ( 255,255,255 , 50 );
+    skin1->fenetre->fnd_couleur        = sf::Color ( 0,0,255 , 20 );
     skin1->fenetre->fnd_texture        = sf::Texture ();
     skin1->fenetre->align              = gui::Alignements::Libre ;
     skin1->fenetre->ajust              = gui::Ajustements::Sans ;
@@ -163,7 +163,7 @@ void Config::initSkins()
     //// LABEL COURANT ///////////////////////////////////
     skin1->lblCourant->txt_police      = police;
     skin1->lblCourant->txt_style       = sf::Text::Style::Regular;
-    skin1->lblCourant->txt_taille      = 15;
+    skin1->lblCourant->txt_taille      = 12;
     skin1->lblCourant->txt_couleur     = sf::Color ( 200,200,200);
     skin1->lblCourant->lgn_epaisseur   = 1;
     skin1->lblCourant->lgn_couleur     = sf::Color ( 255,255,255 , 200 );
@@ -172,79 +172,17 @@ void Config::initSkins()
     skin1->lblCourant->align           = gui::Alignements::Libre;
     skin1->lblCourant->ajust           = gui::Ajustements::Sans;
 
-
-//
-//    // Style par defaut des fenetres
-//    skin1->fenetre->txt_police      = police;
-//    skin1->fenetre->txt_style       = sf::Text::Style::Regular ;
-//    skin1->fenetre->txt_taille      = 14;
-//    skin1->fenetre->txt_couleur     = sf::Color ( 255,255,255);
-//    skin1->fenetre->lgn_epaisseur   = 1;
-//    skin1->fenetre->lgn_couleur     = sf::Color ( 50,255,255 , 20 );
-//    skin1->fenetre->fnd_couleur     = sf::Color ( 50,255,255 , 50 );
-//    //skin1->fenetre->fnd_texture                = ;
-//    skin1->fenetre->align           = gui::Alignements::Libre ;
-//    skin1->fenetre->ajust           = gui::Ajustements::Sans ;
-//
-//    // Style par defaut des Bouton repos
-//    skin1->btnRepos->txt_police     = police;
-//    skin1->btnRepos->txt_style      = sf::Text::Style::Regular ;
-//    skin1->btnRepos->txt_taille     = 10;
-//    skin1->btnRepos->txt_couleur    = sf::Color ( 255,255,255);
-//    skin1->btnRepos->lgn_epaisseur  = 1;
-//    skin1->btnRepos->lgn_couleur    = sf::Color ( 50,255,255 , 50 );
-//    skin1->btnRepos->fnd_couleur    = sf::Color ( 0,0,255 , 75 );
-//    //skin1->btnRepos->fnd_texture               = ;
-//    skin1->btnRepos->align          = gui::Alignements::Libre;
-//    skin1->btnRepos->ajust          = gui::Ajustements::Sans;
-//
-//    // Style par defaut des Bouton survol
-//    skin1->btnSurvol->txt_police    = police;
-//    skin1->btnSurvol->txt_style     = sf::Text::Style::Regular;
-//    skin1->btnSurvol->txt_taille    = 10;
-//    skin1->btnSurvol->txt_couleur   = sf::Color ( 255,255,255);
-//    skin1->btnSurvol->lgn_epaisseur = 1;
-//    skin1->btnSurvol->lgn_couleur   = sf::Color ( 50,255,255 , 150 );
-//    skin1->btnSurvol->fnd_couleur   = sf::Color ( 0,0,255 , 100 );
-//    //skin1->btnSurvol->fnd_texture              = ;
-//    skin1->btnSurvol->align         = gui::Alignements::Libre;
-//    skin1->btnSurvol->ajust         = gui::Ajustements::Sans;
-//
-//    // Style par defaut des Bouton press
-//    skin1->btnPress->txt_police     = police;
-//    skin1->btnPress->txt_style      = sf::Text::Style::Regular;
-//    skin1->btnPress->txt_taille     = 10;
-//    skin1->btnPress->txt_couleur    = sf::Color ( 255,255,255);
-//    skin1->btnPress->lgn_epaisseur  = 1;
-//    skin1->btnPress->lgn_couleur    = sf::Color ( 50,255,255 , 200 );
-//    skin1->btnPress->fnd_couleur    = sf::Color ( 0,0,255 , 255 );
-//    //skin1->btnPress->fnd_texture               = ;
-//    skin1->btnPress->align          = gui::Alignements::Libre;
-//    skin1->btnPress->ajust          = gui::Ajustements::Sans;
-//
-//    // Style par defaut des Label Titre
-//    skin1->lblTitre->txt_police     = police;
-//    skin1->lblTitre->txt_style      = sf::Text::Style::Regular ;
-//    skin1->lblTitre->txt_taille     = 14;
-//    skin1->lblTitre->txt_couleur    = sf::Color ( 255,255,255);
-//    skin1->lblTitre->lgn_epaisseur  = 1 ;
-//    skin1->lblTitre->lgn_couleur    = sf::Color ( 50,255,255 , 200 );
-//    skin1->lblTitre->fnd_couleur    = sf::Color ( 50,255,255 , 255 );
-//    //skin1->lblTitre->fnd_texture               = ;
-//    skin1->lblTitre->align          = gui::Alignements::Libre;
-//    skin1->lblTitre->ajust          = gui::Ajustements::Sans;
-//
-//    // Style par defaut des Label courant
-//    skin1->lblCourant->txt_police   = police;
-//    skin1->lblCourant->txt_style    = sf::Text::Style::Regular;
-//    skin1->lblCourant->txt_taille   = 10;
-//    skin1->lblCourant->txt_couleur  = sf::Color ( 255,255,255);
-//    skin1->lblCourant->lgn_epaisseur= 1;
-//    skin1->lblCourant->lgn_couleur  = sf::Color ( 50,255,255 , 200 );
-//    skin1->lblCourant->fnd_couleur  = sf::Color ( 50,255,255 , 255 );
-//    //skin1->lblCourant->fnd_texture             = ;
-//    skin1->lblCourant->align        = gui::Alignements::Libre;
-//    skin1->lblCourant->ajust        = gui::Ajustements::Sans;
+    //// invisible ///////////////////////////////////
+    skin1->invisible->txt_police      = police;
+    skin1->invisible->txt_style       = sf::Text::Style::Regular;
+    skin1->invisible->txt_taille      = 2;
+    skin1->invisible->txt_couleur     = sf::Color ( 255,255,255 , 0);
+    skin1->invisible->lgn_epaisseur   = 0;
+    skin1->invisible->lgn_couleur     = sf::Color ( 255,255,255 , 0 );
+    skin1->invisible->fnd_couleur     = sf::Color ( 255,255,255 , 0 );
+    skin1->invisible->fnd_texture     = sf::Texture ();
+    skin1->invisible->align           = gui::Alignements::Libre;
+    skin1->invisible->ajust           = gui::Ajustements::Sans;
 
 }
 

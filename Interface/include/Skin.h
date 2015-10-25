@@ -48,6 +48,7 @@ struct Skin
     std::shared_ptr <Style>  btnPress;         ///< le style des boutons au press.
     std::shared_ptr <Style>  lblTitre;         ///< le style des titres.
     std::shared_ptr <Style>  lblCourant;       ///< le style des champs de texte courant.
+    std::shared_ptr <Style>  invisible;        ///< le style pour les bouton invisible par exemple
 
 };
 }; // fin namespace gui
