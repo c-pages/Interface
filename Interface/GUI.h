@@ -14,7 +14,7 @@
 #include <gadgets/Groupe.h>         // --->    groupe de gadgets   grp
 #include <gadgets/Bouton.h>         // --->    declenche des fcts
 #include <gadgets/BoutonTexte.h>    // --->    declenche des fcts
-#include <gadgets/BoutonCocher.h>   // --->    0 ou 1
+#include <gadgets/BoutonEncoche.h>   // --->    0 ou 1
 #include <gadgets/Fenetre.h>        // --->    fenetre               grp  + btn:(drag, redim, fermer)
 
 

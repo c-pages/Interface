@@ -16,7 +16,7 @@
 			<Cursor1 position="661" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="GUI.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="GUI.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="712" topLine="0" />
 		</Cursor>
@@ -46,9 +46,9 @@
 			<Cursor1 position="5936" topLine="183" />
 		</Cursor>
 	</File>
-	<File name="include\gadgets\BoutonCocher.h" open="0" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\gadgets\BoutonEncoche.h" open="1" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2219" topLine="56" />
+			<Cursor1 position="3075" topLine="51" />
 		</Cursor>
 	</File>
 	<File name="include\gadgets\BoutonTexte.h" open="0" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -81,7 +81,7 @@
 			<Cursor1 position="736" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Gadget.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Gadget.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1490" topLine="42" />
 		</Cursor>
@@ -106,9 +106,9 @@
 			<Cursor1 position="6642" topLine="212" />
 		</Cursor>
 	</File>
-	<File name="src\gadgets\BoutonCocher.cpp" open="0" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\gadgets\BoutonEncoche.cpp" open="0" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="1640" topLine="23" />
 		</Cursor>
 	</File>
 	<File name="src\gadgets\BoutonTexte.cpp" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -116,7 +116,7 @@
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\gadgets\Fenetre.cpp" open="1" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\gadgets\Fenetre.cpp" open="1" top="1" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="75" />
 		</Cursor>

@@ -124,40 +124,18 @@ Gadget::aligner (  Gadget& cible , Alignements    align , float ecart  ){
     int centre    =  std::round ( - (rect_this.top + rect_this.height/2 )    + cbl_centre ) ;
     int bas       =  std::round ( - (rect_this.top + rect_this.height   )    + cbl_bas  - ecart ) ;
 
-
-
-
     // et donc on combine en fonction de l'alignement choisi
     switch ( align ) {
-        case Alignements::Haut_Gche:{
-            setPosition( gauche , haut );
-        }break;
-        case Alignements::Haut_Mili:{
-            setPosition( milieu , haut );
-        }break;
-        case Alignements::Haut_Drte:{
-            setPosition( droite , haut );
-        }break;
-        case Alignements::Ctre_Gche:{
-            setPosition( gauche , centre );
-        }break;
-        case Alignements::Ctre_Mili:{
-            setPosition( milieu , centre );
-        }break;
-        case Alignements::Ctre_Drte:{
-            setPosition( droite , centre );
-        }break;
-        case Alignements::Bas_Gche:{
-            setPosition( gauche , bas );
-        }break;
-        case Alignements::Bas_Mili:{
-            setPosition( milieu , bas );
-        }break;
-        case Alignements::Bas_Drte:{
-            setPosition( droite , bas );
-        }break;
-        case Alignements::Libre:{
-        }break;
+        case Alignements::Haut_Gche:{   setPosition( gauche , haut );   }break;
+        case Alignements::Haut_Mili:{   setPosition( milieu , haut );   }break;
+        case Alignements::Haut_Drte:{   setPosition( droite , haut );   }break;
+        case Alignements::Ctre_Gche:{   setPosition( gauche , centre ); }break;
+        case Alignements::Ctre_Mili:{   setPosition( milieu , centre ); }break;
+        case Alignements::Ctre_Drte:{   setPosition( droite , centre ); }break;
+        case Alignements::Bas_Gche:{    setPosition( gauche , bas );    }break;
+        case Alignements::Bas_Mili:{    setPosition( milieu , bas );    }break;
+        case Alignements::Bas_Drte:{    setPosition( droite , bas );    }break;
+        case Alignements::Libre:{}break;
         default:{}break;
     }
 }
@@ -166,20 +144,7 @@ Gadget::aligner (  Gadget& cible , Alignements    align , float ecart  ){
 bool
 Gadget::contient ( float x, float y )
 {
-    /////////////////////////////////////////////////
-    /// \todo ici c'est l'bordel, entre local, global et les transformations,
-    /// une rotation sur un bouton et la zone de clique ne suivait pas.
-    /////////////////////////////////////////////////
-
-// la bouding box globale du gadget
-//    sf::FloatRect rect  ( getPosAbs().x
-//                        , getPosAbs().y
-//                        , getSize().x
-//                        , getSize().y ) ;//getGlobalBounds();
-
     sf::FloatRect rect  = getGlobalBounds();
-
-
 
     // S'il est contenu alors on verif le parent pour savoir par exemple si
     // le gadget est en vue dans la fenetre parent.
@@ -189,29 +154,6 @@ Gadget::contient ( float x, float y )
         else return true;
     } else return false;
 
-//return( rect.contains( sf::Vector2f ( x , y ) ) );
-
-
-/*
-
-    // la bouding box globale du gadget
-//    sf::FloatRect rect  ( getPosAbs().x
-//                        , getPosAbs().y
-//                        , getSize().x
-//                         , getSize().y ) ;//getGlobalBounds();
-
-    sf::FloatRect rect  = getGlobalBounds();
-
-
-
-    // S'il est contenu alors on verif le parent pour savoir par exemple si
-    // le gadget est en vue dans la fenetre parent.
-    if ( rect.contains( sf::Vector2f ( x , y ) ) ){
-        if ( m_parent != 0 )
-            return   m_parent->contient ( x, y );
-        else return true;
-    } else return false;
-*/
 };
 
 

@@ -108,7 +108,7 @@ EcranDemo::initGUI  ( )
 /*
 
     // creation d'un label a mettre dans le fenetre
-    std::shared_ptr<gui::Label>  m_lblD ( new gui::Label ( "<-- ui::BoutonCocher, bouton boolean" , skinCourant->lblCourant ) );
+    std::shared_ptr<gui::Label>  m_lblD ( new gui::Label ( "<-- ui::BoutonEncoche, bouton boolean" , skinCourant->lblCourant ) );
     m_gui.ajouter    ( m_lblD );
     m_lblD->setTexteTaille( 20 );
     m_lblD->setPosition( 10 , 20 );
@@ -116,7 +116,7 @@ EcranDemo::initGUI  ( )
 
 
     // creation d'un label a mettre dans le fenetre
-    std::shared_ptr<gui::Label>  m_lblD1 ( new gui::Label ( "<-- ui::BoutonCocher, bouton boolean" , skinCourant->lblCourant ) );
+    std::shared_ptr<gui::Label>  m_lblD1 ( new gui::Label ( "<-- ui::BoutonEncoche, bouton boolean" , skinCourant->lblCourant ) );
     m_gui.ajouter    ( m_lblD1 );
     m_lblD1->setTexteTaille( 20 );
     m_lblD1->setPosition( 10.5 , 40.5 );
@@ -220,36 +220,36 @@ EcranDemo::initGUI  ( )
 
 
     // creation du BoutonTexte B, nouveau pointeur, ajouté aux enfants du groupe GUI principal.
-    std::shared_ptr<gui::BoutonCocher>  boutonD ( new gui::BoutonCocher ( skinCourant ) );
+    std::shared_ptr<gui::BoutonEncoche>  boutonD ( new gui::BoutonEncoche ( skinCourant ) );
     this->fenetreA->ajouter           ( boutonD );
     boutonD->setPosition    ( 15, 50 );
     boutonD->setSize        ( { boutonA->getSize().y , boutonA->getSize().y } );
     boutonD->setBordure     ( 2 );
 
-    boutonD->lier           ( gui::Evenements::onBtnG_DblClique         , [this]() {  std::cout << "gui::BoutonCocher ->  onBtnG_DblClique\n";   });
-    boutonD->lier           ( gui::Evenements::onBtnG_Press             , [this]() {  std::cout << "gui::BoutonCocher ->  onBtnG_Press\n";   });
-    boutonD->lier           ( gui::Evenements::onBtnG_Relache           , [this]() {  std::cout << "gui::BoutonCocher ->  onBtnG_Relache\n";   });
-    boutonD->lier           ( gui::Evenements::onBtnG_RelacheDehors     , [this]() {  std::cout << "gui::BoutonCocher ->  onBtnG_RelacheDehors\n";   });
+    boutonD->lier           ( gui::Evenements::onBtnG_DblClique         , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtnG_DblClique\n";   });
+    boutonD->lier           ( gui::Evenements::onBtnG_Press             , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtnG_Press\n";   });
+    boutonD->lier           ( gui::Evenements::onBtnG_Relache           , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtnG_Relache\n";   });
+    boutonD->lier           ( gui::Evenements::onBtnG_RelacheDehors     , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtnG_RelacheDehors\n";   });
 
-    boutonD->lier           ( gui::Evenements::onBtnD_Press             , [this]() {  std::cout << "gui::BoutonCocher ->  onBtnD_Press\n";   });
-    boutonD->lier           ( gui::Evenements::onBtnD_Relache           , [this]() {  std::cout << "gui::BoutonCocher ->  onBtnD_Relache\n";   });
-    boutonD->lier           ( gui::Evenements::onBtnD_RelacheDehors     , [this]() {  std::cout << "gui::BoutonCocher ->  onBtnD_RelacheDehors\n";   });
+    boutonD->lier           ( gui::Evenements::onBtnD_Press             , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtnD_Press\n";   });
+    boutonD->lier           ( gui::Evenements::onBtnD_Relache           , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtnD_Relache\n";   });
+    boutonD->lier           ( gui::Evenements::onBtnD_RelacheDehors     , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtnD_RelacheDehors\n";   });
 
-    boutonD->lier           ( gui::Evenements::onBtnM_Press             , [this]() {  std::cout << "gui::BoutonCocher ->  onBtnM_Press\n";   });
-    boutonD->lier           ( gui::Evenements::onBtnM_Relache           , [this]() {  std::cout << "gui::BoutonCocher ->  onBtnM_Relache\n";   });
-    boutonD->lier           ( gui::Evenements::onBtnM_RelacheDehors     , [this]() {  std::cout << "gui::BoutonCocher ->  onBtnM_RelacheDehors\n";   });
-    boutonD->lier           ( gui::Evenements::onBtnM_RollDown          , [this]() {  std::cout << "gui::BoutonCocher ->  onBtnM_RollDown\n";   });
-    boutonD->lier           ( gui::Evenements::onBtnM_RollUp            , [this]() {  std::cout << "gui::BoutonCocher ->  onBtnM_RollUp\n";   });
+    boutonD->lier           ( gui::Evenements::onBtnM_Press             , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtnM_Press\n";   });
+    boutonD->lier           ( gui::Evenements::onBtnM_Relache           , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtnM_Relache\n";   });
+    boutonD->lier           ( gui::Evenements::onBtnM_RelacheDehors     , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtnM_RelacheDehors\n";   });
+    boutonD->lier           ( gui::Evenements::onBtnM_RollDown          , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtnM_RollDown\n";   });
+    boutonD->lier           ( gui::Evenements::onBtnM_RollUp            , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtnM_RollUp\n";   });
 
-    boutonD->lier           ( gui::Evenements::onBtn_Entre              , [this]() {  std::cout << "gui::BoutonCocher ->  onBtn_Entre\n";   });
-    boutonD->lier           ( gui::Evenements::onBtn_Sort               , [this]() {  std::cout << "gui::BoutonCocher ->  onBtn_Sort\n";   });
+    boutonD->lier           ( gui::Evenements::onBtn_Entre              , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtn_Entre\n";   });
+    boutonD->lier           ( gui::Evenements::onBtn_Sort               , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtn_Sort\n";   });
 
-    boutonD->lier           ( gui::Evenements::onBtn_changeEtat         , [this]() {  std::cout << "gui::BoutonCocher ->  onBtn_changeEtat\n";   });
+    boutonD->lier           ( gui::Evenements::onBtn_changeEtat         , [this]() {  std::cout << "gui::BoutonEncoche ->  onBtn_changeEtat\n";   });
 
 
 
     // creation d'un label a mettre dans le fenetre
-    std::shared_ptr<gui::Label>  m_lblD ( new gui::Label ( "<-- ui::BoutonCocher, bouton boolean" , skinCourant->lblCourant ) );
+    std::shared_ptr<gui::Label>  m_lblD ( new gui::Label ( "<-- ui::BoutonEncoche, bouton boolean" , skinCourant->lblCourant ) );
     this->fenetreA->ajouter    ( m_lblD );
     m_lblD->aligner ( *boutonD );
     m_lblD->setPosition( 30 , int (m_lblD->getPosition().y) );
