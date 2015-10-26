@@ -182,7 +182,7 @@ void Config::initSkins()
     skin1->cadre->txt_taille      = 2;
     skin1->cadre->txt_couleur     = sf::Color ( 200,200,200);
     skin1->cadre->lgn_epaisseur   =  0;//          epaisseurLignes;
-    skin1->cadre->lgn_couleur     =            couleurLignesCadre;
+    skin1->cadre->lgn_couleur     = sf::Color ( 255,255,255 , 20);
     skin1->cadre->fnd_couleur     = sf::Color ( 255,255,255 , 0 );
     skin1->cadre->fnd_texture     = sf::Texture ();
     skin1->cadre->align           = gui::Alignements::Libre;
@@ -192,9 +192,9 @@ void Config::initSkins()
     skin1->invisible->txt_police      = police;
     skin1->invisible->txt_style       = sf::Text::Style::Regular;
     skin1->invisible->txt_taille      = 2;
-    skin1->invisible->txt_couleur     = sf::Color ( 255,255,255 , 0);
-    skin1->invisible->lgn_epaisseur   = 0;
-    skin1->invisible->lgn_couleur     = sf::Color ( 255,255,255 , 0 );
+    skin1->invisible->txt_couleur     = sf::Color ( 255,255,255 , 00);
+    skin1->invisible->lgn_epaisseur   = 1;
+    skin1->invisible->lgn_couleur     = sf::Color ( 255,255,255 , 00 );
     skin1->invisible->fnd_couleur     = sf::Color ( 255,255,255 , 0 );
     skin1->invisible->fnd_texture     = sf::Texture ();
     skin1->invisible->align           = gui::Alignements::Libre;

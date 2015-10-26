@@ -56,7 +56,9 @@ struct Style
 public:
 
     /////////////////////////////////////////////////
-    /// \brief Constructeurs
+    /// \brief Constructeurs par defaut
+    ///
+    /// creer un style par défaut.
     ///
     /////////////////////////////////////////////////
     Style();

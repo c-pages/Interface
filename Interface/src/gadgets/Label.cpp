@@ -13,7 +13,7 @@ Label::Label    ( std::string   texte )
 : Gadget    ( )
 , m_texte   ( new sf::Text( ) )
 {
-    std::cout << "  --- Label --- Label ---\n";
+//    std::cout << "  --- Label --- Label ---\n";
     m_texte->setString  ( texte );
     majGeom         ( );
 }
@@ -25,7 +25,7 @@ Label::Label    ( std::string   texte
 : Gadget    ( style )
 , m_texte   ( new sf::Text () )
 {
-    std::cout << "  --- Label --- Label ---\n";
+//    std::cout << "  --- Label --- Label ---\n";
     m_texte->setString  ( texte );
     majGeom( ) ;
 }

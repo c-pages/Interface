@@ -20,23 +20,29 @@ namespace gui {
 ///
 /////////////////////////////////////////////////
 enum Evenements {
-      onGRelache            ///<  Relache le bouton gauche de la souris.
-    , onGRelacheDehors      ///<  Relache le bouton gauche de la souris.
-    , onGPress              ///<  Presse le bouton gauche de la souris.
-    , onDRelache            ///<  Relache le bouton droit de la souris.
-    , onDRelacheDehors      ///<  Relache le bouton droit de la souris.
-    , onDPress              ///<  Presse le bouton droit de la souris.
-    , onMRelache            ///<  Relache le bouton du milieu de la souris.
-    , onMRelacheDehors      ///<  Relache le bouton du milieu de la souris.
-    , onMPress              ///<  Presse le bouton du milieu de la souris.
-    , onMRollUp             ///<  Roule vers le haut le bouton du milieu de la souris.
-    , onMRollDown           ///<  Roule vers le bas le bouton du milieu de la souris.
-    , onEntre               ///<  Survol.
-    , onSort                ///<  Quitte le survol.
-    , onDblClique           ///<  Double clique
-    , onChangeEtat          ///<  quand BoutonACocher change d'état
-    , onFerme               ///<  Quand on ferme une fenetre.
-    , onOuvre               ///<  Quand on ferme une fenetre.
+
+      onBtnG_DblClique          ///<  Double clique
+    , onBtnG_Relache            ///<  Relache le bouton gauche de la souris.
+    , onBtnG_RelacheDehors      ///<  Relache le bouton gauche de la souris.
+    , onBtnG_Press              ///<  Presse le bouton gauche de la souris.
+
+    , onBtnD_Relache            ///<  Relache le bouton droit de la souris.
+    , onBtnD_RelacheDehors      ///<  Relache le bouton droit de la souris.
+    , onBtnD_Press              ///<  Presse le bouton droit de la souris.
+
+    , onBtnM_Relache            ///<  Relache le bouton du milieu de la souris.
+    , onBtnM_RelacheDehors      ///<  Relache le bouton du milieu de la souris.
+    , onBtnM_Press              ///<  Presse le bouton du milieu de la souris.
+    , onBtnM_RollUp             ///<  Roule vers le haut le bouton du milieu de la souris.
+    , onBtnM_RollDown           ///<  Roule vers le bas le bouton du milieu de la souris.
+
+    , onBtn_Entre               ///<  Survol.
+    , onBtn_Sort                ///<  Quitte le survol.
+
+    , onBtn_changeEtat          ///<  quand BoutonACocher change d'état
+
+    , onFen_Ferme               ///<  Quand on ferme une fenetre.
+    , onFen_Ouvre               ///<  Quand on ferme une fenetre.
 };
 
 

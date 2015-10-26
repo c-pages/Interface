@@ -69,7 +69,7 @@ Gadget::getPosAbs (  )        {
 /////////////////////////////////////////////////
 void
 Gadget::ajouter ( ptr enfant ) {
-    std::cout << "      --- Gadget --- ajouter ---\n";
+//    std::cout << "      --- Gadget --- ajouter ---\n";
     m_enfants.push_back(  enfant );
     enfant->m_parent = this;
 }
