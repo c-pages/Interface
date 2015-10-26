@@ -4,6 +4,7 @@
 /////////////////////////////////////////////////
 #include "Gadget.h"
 #include <iostream>
+#include <math.h>
 
 namespace gui
 {
@@ -94,11 +95,9 @@ Gadget::setStyle( std::shared_ptr<Style>     style ) {
 
 /////////////////////////////////////////////////
 void
-Gadget::aligner (  Gadget& cible , Alignements    align ){
+Gadget::aligner (  Gadget& cible , Alignements    align , float ecart  ){
 
     // distance a garder par rapport aux bords de la cible
-    /// \todo rendre ecart accessible
-    float           ecart           = 3;
 
     // le bounding box de la cible
     sf::FloatRect   rect_cible      = cible.getLocalBounds() ;
@@ -115,14 +114,18 @@ Gadget::aligner (  Gadget& cible , Alignements    align ){
     // la boudning box du gadget
     sf::FloatRect   rect_this       = getLocalBounds() ;
 
-    // les axes de la nouvelle position pour l'alignements du gadget sur la cible
-    float gauche    = - rect_this.left  + cbl_gauche + ecart;
-    float milieu    = - (rect_this.left + rect_this.width/2 )    + cbl_milieu ;
-    float droite    = - (rect_this.left + rect_this.width   )    + cbl_droite  - ecart;
 
-    float haut      = - rect_this.top  + cbl_haut + ecart;
-    float centre    = - (rect_this.top + rect_this.height/2 )    + cbl_centre;
-    float bas       = - (rect_this.top + rect_this.height   )    + cbl_bas  - ecart;
+    // les axes de la nouvelle position pour l'alignements du gadget sur la cible
+    int gauche    =  std::round ( - rect_this.left  + cbl_gauche + ecart ) ;
+    int milieu    =  std::round ( - (rect_this.left + rect_this.width/2 )    + cbl_milieu  ) ;
+    int droite    =  std::round ( - (rect_this.left + rect_this.width   )    + cbl_droite  - ecart ) ;
+
+    int haut      =  std::round ( - rect_this.top  + cbl_haut + ecart ) ;
+    int centre    =  std::round ( - (rect_this.top + rect_this.height/2 )    + cbl_centre ) ;
+    int bas       =  std::round ( - (rect_this.top + rect_this.height   )    + cbl_bas  - ecart ) ;
+
+
+
 
     // et donc on combine en fonction de l'alignement choisi
     switch ( align ) {

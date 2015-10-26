@@ -459,7 +459,7 @@
 	<list>
 	<map>
 
-1445730286 r:\06 - c++\107 - interface\interface\include\gadget.h
+1445876638 r:\06 - c++\107 - interface\interface\include\gadget.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<vector>
@@ -475,7 +475,7 @@
 1445730371 r:\06 - c++\107 - interface\interface\include\gadgets\image.h
 	<Gadget.h>
 
-1445738059 r:\06 - c++\107 - interface\interface\include\gadgets\label.h
+1445879092 r:\06 - c++\107 - interface\interface\include\gadgets\label.h
 	<SFML/Graphics.hpp>
 	<string>
 	<Gadget.h>
@@ -483,9 +483,19 @@
 1445715586 r:\06 - c++\107 - interface\interface\include\gadgets\groupe.h
 	<Gadget.h>
 
-1445729686 r:\06 - c++\107 - interface\interface\include\gadgets\bouton.h
+1445871720 r:\06 - c++\107 - interface\interface\include\gadgets\bouton.h
 	<SFML/Graphics.hpp>
 	<iostream>
+	<Gadget.h>
+
+1445729686 r:\06 - c++\107 - interface\interface\include\gadgets\boutontexte.h
+	<gadgets\Bouton.h>
+	<gadgets\Label.h>
+
+1445729686 r:\06 - c++\107 - interface\interface\include\gadgets\boutoncocher.h
+	<gadgets\Bouton.h>
+
+1445763861 r:\06 - c++\107 - interface\interface\include\gadgets\fenetre.h
 	<Gadget.h>
 
 1445741054 r:\06 - c++\107 - interface\main\include\ecrans\ecrandemo.h
@@ -501,7 +511,7 @@
 1445606138 source:r:\06 - c++\107 - interface\main\src\ecran.cpp
 	"Ecran.h"
 
-1445856952 source:r:\06 - c++\107 - interface\main\src\ecrans\ecrandemo.cpp
+1445879036 source:r:\06 - c++\107 - interface\main\src\ecrans\ecrandemo.cpp
 	"ecrans/EcranDemo.h"
 	<iostream>
 	<Config.h>
@@ -509,14 +519,4 @@
 
 1445606138 source:r:\06 - c++\107 - interface\main\src\gestion_ecrans.cpp
 	"Gestion_ecrans.h"
-
-1445729686 r:\06 - c++\107 - interface\interface\include\gadgets\boutontexte.h
-	<gadgets\Bouton.h>
-	<gadgets\Label.h>
-
-1445729686 r:\06 - c++\107 - interface\interface\include\gadgets\boutoncocher.h
-	<gadgets\Bouton.h>
-
-1445763861 r:\06 - c++\107 - interface\interface\include\gadgets\fenetre.h
-	<Gadget.h>
 

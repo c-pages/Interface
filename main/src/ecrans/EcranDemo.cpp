@@ -75,6 +75,61 @@ EcranDemo::initGUI  ( )
     // le skin qu'on va utiliser dans cette interface
     auto skinCourant =  Config::m_skins[ Config::Skins::Skin1 ] ;
 
+/*
+    // creation  Bouton pr fenetre, c'est un shared_ptr de l'ecranDemo
+    std::shared_ptr<gui::BoutonTexte>  boutonA ( new gui::BoutonTexte (skinCourant ,  "       gui::BoutonTexte      " ) );
+    m_gui.ajouter ( boutonA );
+    boutonA->setPosition    ( 15, 75 );
+    boutonA->setSize        ( {30, 30} );
+    boutonA->setBordure     ( 3 )  ;
+    boutonA->ajusterAuTexte ( );
+
+    boutonA->lier           ( gui::Evenements::onBtnG_DblClique         , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnG_DblClique\n";   });
+    boutonA->lier           ( gui::Evenements::onBtnG_Press             , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnG_Press\n";   });
+    boutonA->lier           ( gui::Evenements::onBtnG_Relache           , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnG_Relache\n";   });
+    boutonA->lier           ( gui::Evenements::onBtnG_RelacheDehors     , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnG_RelacheDehors\n";   });
+
+    boutonA->lier           ( gui::Evenements::onBtnD_Press             , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnD_Press\n";   });
+    boutonA->lier           ( gui::Evenements::onBtnD_Relache           , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnD_Relache\n";   });
+    boutonA->lier           ( gui::Evenements::onBtnD_RelacheDehors     , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnD_RelacheDehors\n";   });
+
+    boutonA->lier           ( gui::Evenements::onBtnM_Press             , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnM_Press\n";   });
+    boutonA->lier           ( gui::Evenements::onBtnM_Relache           , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnM_Relache\n";   });
+    boutonA->lier           ( gui::Evenements::onBtnM_RelacheDehors     , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnM_RelacheDehors\n";   });
+    boutonA->lier           ( gui::Evenements::onBtnM_RollDown          , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnM_RollDown\n";   });
+    boutonA->lier           ( gui::Evenements::onBtnM_RollUp            , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnM_RollUp\n";   });
+
+    boutonA->lier           ( gui::Evenements::onBtn_Entre              , [this]() {  std::cout << "gui::BoutonTexte ->  onBtn_Entre\n";   });
+    boutonA->lier           ( gui::Evenements::onBtn_Sort               , [this]() {  std::cout << "gui::BoutonTexte ->  onBtn_Sort\n";   });
+
+*/
+
+
+/*
+
+    // creation d'un label a mettre dans le fenetre
+    std::shared_ptr<gui::Label>  m_lblD ( new gui::Label ( "<-- ui::BoutonCocher, bouton boolean" , skinCourant->lblCourant ) );
+    m_gui.ajouter    ( m_lblD );
+    m_lblD->setTexteTaille( 20 );
+    m_lblD->setPosition( 10 , 20 );
+
+
+
+    // creation d'un label a mettre dans le fenetre
+    std::shared_ptr<gui::Label>  m_lblD1 ( new gui::Label ( "<-- ui::BoutonCocher, bouton boolean" , skinCourant->lblCourant ) );
+    m_gui.ajouter    ( m_lblD1 );
+    m_lblD1->setTexteTaille( 20 );
+    m_lblD1->setPosition( 10.5 , 40.5 );
+
+
+
+
+*/
+
+
+
+
+
 
 
     // creation de la fenetre
@@ -87,7 +142,6 @@ EcranDemo::initGUI  ( )
     this->fenetreA->setTitre("Ceci est une gui::Fenetre");
     this->fenetreA->lier           ( gui::Evenements::onFen_Ouvre              , [this]() {  std::cout << "gui::Fenetre ->  onFen_Ouvre\n";   });
     this->fenetreA->lier           ( gui::Evenements::onFen_Ferme              , [this]() {  std::cout << "gui::Fenetre ->  onFen_Ferme\n";   });
-
 
 
 
@@ -154,11 +208,11 @@ EcranDemo::initGUI  ( )
     // creation d'un label a mettre dans le fenetre
     std::shared_ptr<gui::Label>  m_lblFENETRE ( new gui::Label ( "Ceci est un gui::Label" , skinCourant->lblCourant ) );
     this->fenetreA->ajouter    ( m_lblFENETRE );
-    m_lblFENETRE->setPosition ( 15, 1 );
+    m_lblFENETRE->setPosition ( 15, 5 );
 
 
     // creation d'un label a mettre dans le fenetre
-    std::shared_ptr<gui::Label>  m_lblC ( new gui::Label ( "<-- gui::Bouton" , skinCourant->lblCourant ) );
+    std::shared_ptr<gui::Label>  m_lblC ( new gui::Label ( "<-- gui::Bouton, simple bouton rectangulaire" , skinCourant->lblCourant ) );
     this->fenetreA->ajouter    ( m_lblC );
     m_lblC->aligner ( *boutonC );
     m_lblC->setPosition( 30 , int( m_lblC->getPosition().y)  );
@@ -195,11 +249,10 @@ EcranDemo::initGUI  ( )
 
 
     // creation d'un label a mettre dans le fenetre
-    std::shared_ptr<gui::Label>  m_lblD ( new gui::Label ( "<-- ui::BoutonCocher" , skinCourant->lblCourant ) );
+    std::shared_ptr<gui::Label>  m_lblD ( new gui::Label ( "<-- ui::BoutonCocher, bouton boolean" , skinCourant->lblCourant ) );
     this->fenetreA->ajouter    ( m_lblD );
     m_lblD->aligner ( *boutonD );
     m_lblD->setPosition( 30 , int (m_lblD->getPosition().y) );
-
 
 
 }   // fin init GUI

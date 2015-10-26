@@ -159,7 +159,7 @@ public:
     ///
     /////////////////////////////////////////////////
     void
-    aligner (  Gadget& cible , Alignements    align  = Alignements::Ctre_Mili );
+    aligner (  Gadget& cible , Alignements    align  = Alignements::Ctre_Mili , float ecart = 0 );
 
     /////////////////////////////////////////////////
     /// \brief Definir l'état du Gadget.

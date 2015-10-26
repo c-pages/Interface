@@ -9,6 +9,8 @@
 #include <string>
 #include <Gadget.h>
 
+//#include <gadgets/Label.h>
+
 namespace gui
 {
 
