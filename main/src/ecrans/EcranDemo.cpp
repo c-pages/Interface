@@ -13,8 +13,9 @@ namespace app {
 /////////////////////////////////////////////////
 EcranDemo::EcranDemo( Application*  appli )
 : Ecran     ( appli )
-, m_gui     (  )
+, m_gui     ( new gui::Groupe() )
 {
+   // m_gui = std::shared_ptr<gui::Groupe>  ( new gui::Groupe()  );
     // Initialisation de l'interface graphique.
     initGUI     ();
     initScene   ();
@@ -27,7 +28,7 @@ void EcranDemo::traiter_evenements  ( const sf::Event& event )
     // Evenements du jeu ...
 
     // Evenements de l'interface
-    m_gui.traiter_evenements    ( event );
+    m_gui->traiter_evenements    ( event );
 }
 
 
@@ -37,7 +38,7 @@ void EcranDemo::actualiser  ( float deltaT )
     // actualiser la fenetre du jeu ...
 
     // actualiser l'interface
-    m_gui.actualiser    ( deltaT );
+    m_gui->actualiser    ( deltaT );
 }
 
 
@@ -48,7 +49,7 @@ void EcranDemo::dessiner ()
     m_appli->getFenetre().draw ( m_fond );
 
     // Dessiner l'interface
-    m_appli->getFenetre().draw ( m_gui );
+    m_appli->getFenetre().draw ( *m_gui);
 }
 
 
@@ -78,7 +79,7 @@ EcranDemo::initGUI  ( )
 /*
     // creation  Bouton pr fenetre, c'est un shared_ptr de l'ecranDemo
     std::shared_ptr<gui::BoutonTexte>  boutonA ( new gui::BoutonTexte (skinCourant ,  "       gui::BoutonTexte      " ) );
-    m_gui.ajouter ( boutonA );
+    m_gui->ajouter ( boutonA );
     boutonA->setPosition    ( 15, 75 );
     boutonA->setSize        ( {30, 30} );
     boutonA->setBordure     ( 3 )  ;
@@ -102,56 +103,37 @@ EcranDemo::initGUI  ( )
     boutonA->lier           ( gui::Evenements::onBtn_Entre              , [this]() {  std::cout << "gui::BoutonTexte ->  onBtn_Entre\n";   });
     boutonA->lier           ( gui::Evenements::onBtn_Sort               , [this]() {  std::cout << "gui::BoutonTexte ->  onBtn_Sort\n";   });
 
-*/
 
-
-/*
-
-    // creation d'un label a mettre dans le fenetre
-    std::shared_ptr<gui::Label>  m_lblD ( new gui::Label ( "<-- ui::BoutonEncoche, bouton boolean" , skinCourant->lblCourant ) );
-    m_gui.ajouter    ( m_lblD );
-    m_lblD->setTexteTaille( 20 );
-    m_lblD->setPosition( 10 , 20 );
-
-
-
-    // creation d'un label a mettre dans le fenetre
-    std::shared_ptr<gui::Label>  m_lblD1 ( new gui::Label ( "<-- ui::BoutonEncoche, bouton boolean" , skinCourant->lblCourant ) );
-    m_gui.ajouter    ( m_lblD1 );
-    m_lblD1->setTexteTaille( 20 );
-    m_lblD1->setPosition( 10.5 , 40.5 );
-
-
+    std::shared_ptr<gui::Fenetre>  fenetreA ( new gui::Fenetre ( &m_appli->getFenetre() ));
+    m_gui->ajouter           ( fenetreA );
 
 
 */
 
 
-
-
-
-
+   // gui::Fenetre::
 
     // creation de la fenetre
-    this->fenetreA = std::shared_ptr<gui::Fenetre> (  new gui::Fenetre ( &m_appli->getFenetre() , skinCourant ) );
-    m_gui.ajouter           ( this->fenetreA );
-    this->fenetreA->setPosition  (  250, 250  );
-    this->fenetreA->setSize       ( {420, 100} );
-    this->fenetreA->setBordure     ( 5 );
+    //fenetreA = std::shared_ptr<gui::Fenetre> (  new gui::Fenetre ( &m_appli->getFenetre() , skinCourant ) );
+    std::shared_ptr<gui::Fenetre>  fenetreA ( new gui::Fenetre ( &m_appli->getFenetre() , skinCourant ));
+    m_gui->ajouter          ( fenetreA );
+    fenetreA->setPosition   (  250, 250  );
+    fenetreA->setSize       ( {420, 100} );
+    fenetreA->setBordure    ( 6 );
     // fenetreA->setSkin ( skinCourant );
-    this->fenetreA->setTitre("Ceci est une gui::Fenetre");
-    this->fenetreA->lier           ( gui::Evenements::onFen_Ouvre              , [this]() {  std::cout << "gui::Fenetre ->  onFen_Ouvre\n";   });
-    this->fenetreA->lier           ( gui::Evenements::onFen_Ferme              , [this]() {  std::cout << "gui::Fenetre ->  onFen_Ferme\n";   });
+    fenetreA->setTexte      ("Ceci est une gui::Fenetre");
+    fenetreA->lier          ( gui::Evenements::onFen_Ouvre              , [this]() {  std::cout << "gui::Fenetre ->  onFen_Ouvre\n";   });
+    fenetreA->lier          ( gui::Evenements::onFen_Ferme              , [this]() {  std::cout << "gui::Fenetre ->  onFen_Ferme\n";   });
 
 
-
+  //  std::cout << "TITRE : " << fenetreA->getTexte (  ) << "\n";
 
 
 
 
     // creation  Bouton pr fenetre, c'est un shared_ptr de l'ecranDemo
     std::shared_ptr<gui::BoutonTexte>  boutonA ( new gui::BoutonTexte (skinCourant ,  "       gui::BoutonTexte      " ) );
-    this->fenetreA->ajouter ( boutonA );
+    fenetreA->ajouter ( boutonA );
     boutonA->setPosition    ( 15, 75 );
     boutonA->setSize        ( {30, 30} );
     boutonA->setBordure     ( 3 )  ;
@@ -178,7 +160,7 @@ EcranDemo::initGUI  ( )
 
     // creation du BoutonTexte B, nouveau pointeur, ajouté aux enfants du groupe GUI principal.
     std::shared_ptr<gui::Bouton>  boutonC ( new gui::Bouton ( skinCourant ) );
-    this->fenetreA->ajouter           ( boutonC );
+    fenetreA->ajouter           ( boutonC );
     boutonC->setPosition    ( 15, 25 );
     boutonC->setSize        ( { boutonA->getSize().y , boutonA->getSize().y } );
     boutonC->setBordure     ( 2 );
@@ -207,13 +189,13 @@ EcranDemo::initGUI  ( )
 
     // creation d'un label a mettre dans le fenetre
     std::shared_ptr<gui::Label>  m_lblFENETRE ( new gui::Label ( "Ceci est un gui::Label" , skinCourant->lblCourant ) );
-    this->fenetreA->ajouter    ( m_lblFENETRE );
+    fenetreA->ajouter    ( m_lblFENETRE );
     m_lblFENETRE->setPosition ( 15, 5 );
 
 
     // creation d'un label a mettre dans le fenetre
     std::shared_ptr<gui::Label>  m_lblC ( new gui::Label ( "<-- gui::Bouton, simple bouton rectangulaire" , skinCourant->lblCourant ) );
-    this->fenetreA->ajouter    ( m_lblC );
+    fenetreA->ajouter    ( m_lblC );
     m_lblC->aligner ( *boutonC );
     m_lblC->setPosition( 30 , int( m_lblC->getPosition().y)  );
 
@@ -221,7 +203,7 @@ EcranDemo::initGUI  ( )
 
     // creation du BoutonTexte B, nouveau pointeur, ajouté aux enfants du groupe GUI principal.
     std::shared_ptr<gui::BoutonEncoche>  boutonD ( new gui::BoutonEncoche ( skinCourant ) );
-    this->fenetreA->ajouter           ( boutonD );
+    fenetreA->ajouter           ( boutonD );
     boutonD->setPosition    ( 15, 50 );
     boutonD->setSize        ( { boutonA->getSize().y , boutonA->getSize().y } );
     boutonD->setBordure     ( 2 );
@@ -250,7 +232,7 @@ EcranDemo::initGUI  ( )
 
     // creation d'un label a mettre dans le fenetre
     std::shared_ptr<gui::Label>  m_lblD ( new gui::Label ( "<-- ui::BoutonEncoche, bouton boolean" , skinCourant->lblCourant ) );
-    this->fenetreA->ajouter    ( m_lblD );
+    fenetreA->ajouter    ( m_lblD );
     m_lblD->aligner ( *boutonD );
     m_lblD->setPosition( 30 , int (m_lblD->getPosition().y) );
 

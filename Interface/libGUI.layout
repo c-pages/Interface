@@ -1,114 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+	<File name="include\Action.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5641" topLine="97" />
+		</Cursor>
+	</File>
+	<File name="GUI.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="762" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="src\gadgets\Groupe.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1427" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\gadgets\Image.cpp" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\gadgets\Fenetre.cpp" open="1" top="1" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="760" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\gadgets\Label.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="661" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="GUI.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="712" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Action.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1043" topLine="99" />
-		</Cursor>
-	</File>
-	<File name="include\Gadget.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="9362" topLine="260" />
-		</Cursor>
-	</File>
-	<File name="include\Skin.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1820" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="include\Style.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2238" topLine="58" />
-		</Cursor>
-	</File>
-	<File name="include\gadgets\Bouton.h" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5936" topLine="183" />
-		</Cursor>
-	</File>
-	<File name="include\gadgets\BoutonEncoche.h" open="1" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3075" topLine="51" />
-		</Cursor>
-	</File>
-	<File name="include\gadgets\BoutonTexte.h" open="0" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3778" topLine="90" />
-		</Cursor>
-	</File>
-	<File name="include\gadgets\Fenetre.h" open="1" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3224" topLine="93" />
-		</Cursor>
-	</File>
-	<File name="include\gadgets\Groupe.h" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="988" topLine="13" />
-		</Cursor>
-	</File>
-	<File name="include\gadgets\Image.h" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4343" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="include\gadgets\Label.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4969" topLine="149" />
-		</Cursor>
-	</File>
-	<File name="src\Action.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="736" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Gadget.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1490" topLine="42" />
-		</Cursor>
-		<Folding>
-			<Collapse line="79" />
-			<Collapse line="87" />
-			<Collapse line="96" />
-		</Folding>
-	</File>
-	<File name="src\Skin.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5081" topLine="96" />
-		</Cursor>
-	</File>
-	<File name="src\Style.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="400" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\gadgets\Bouton.cpp" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6642" topLine="212" />
-		</Cursor>
-	</File>
-	<File name="src\gadgets\BoutonEncoche.cpp" open="0" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1640" topLine="23" />
+			<Cursor1 position="1145" topLine="18" />
 		</Cursor>
 	</File>
 	<File name="src\gadgets\BoutonTexte.cpp" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -116,13 +26,97 @@
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\gadgets\Fenetre.cpp" open="1" top="1" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\gadgets\BoutonEncoche.cpp" open="0" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="75" />
+			<Cursor1 position="1640" topLine="23" />
+		</Cursor>
+	</File>
+	<File name="src\gadgets\Bouton.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9749" topLine="241" />
 		</Cursor>
 		<Folding>
-			<Collapse line="176" />
-			<Collapse line="183" />
+			<Collapse line="162" />
 		</Folding>
+	</File>
+	<File name="src\Style.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="400" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Skin.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5081" topLine="96" />
+		</Cursor>
+	</File>
+	<File name="src\Gadget.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="110" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Action.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="736" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\gadgets\Label.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1300" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="include\gadgets\Image.h" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4343" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="include\gadgets\Groupe.h" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="988" topLine="13" />
+		</Cursor>
+	</File>
+	<File name="src\gadgets\Image.cpp" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="760" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\gadgets\Fenetre.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="488" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="src\gadgets\Label.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1739" topLine="50" />
+		</Cursor>
+	</File>
+	<File name="include\gadgets\BoutonTexte.h" open="0" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3778" topLine="90" />
+		</Cursor>
+	</File>
+	<File name="include\gadgets\BoutonEncoche.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="410" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\gadgets\Bouton.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6386" topLine="223" />
+		</Cursor>
+	</File>
+	<File name="include\Style.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2238" topLine="58" />
+		</Cursor>
+	</File>
+	<File name="include\Skin.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1820" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="include\Gadget.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4883" topLine="161" />
+		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
