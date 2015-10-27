@@ -1,0 +1,6 @@
+<map id="gui::Image::majGeom" name="gui::Image::majGeom">
+<area shape="rect" id="node2" href="$classgui_1_1_image.html#a47e0a556fbe3ba63eab7644480daf801" title="Definir Couleur du cadre. " alt="" coords="215,5,393,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_image.html#aeb3014a3cf51b3bcff542d63a5737aad" title="Definir Couleur du cadre. " alt="" coords="200,56,408,83"/>
+<area shape="rect" id="node4" href="$classgui_1_1_image.html#aa7533a45edd754eaf6dffe7a559d0eb5" title="Definir la texture de l&#39;image. " alt="" coords="229,107,379,133"/>
+<area shape="rect" id="node5" href="$classgui_1_1_image.html#ac7a34a5ab8ded879a98dac4c093ed8fc" title="Definir Couleur du fond. " alt="" coords="227,157,381,184"/>
+</map>

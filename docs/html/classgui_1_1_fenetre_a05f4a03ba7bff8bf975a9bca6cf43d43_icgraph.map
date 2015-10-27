@@ -1,0 +1,4 @@
+<map id="gui::Fenetre::initSkinBouton" name="gui::Fenetre::initSkinBouton">
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a104f8f9143a7280d7d56ca2d2a539123" title="Initialisation lors de la création. " alt="" coords="236,5,352,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="400,5,543,32"/>
+</map>

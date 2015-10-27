@@ -1,0 +1,9 @@
+<map id="gui::Action::declencher" name="gui::Action::declencher">
+<area shape="rect" id="node2" href="$classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="221,5,350,47"/>
+<area shape="rect" id="node3" href="$classgui_1_1_bouton_cocher.html#a92470d7fc9202d991e8499331660ba8c" title="initialisation du gadget. " alt="" coords="208,71,363,98"/>
+<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#a104f8f9143a7280d7d56ca2d2a539123" title="Initialisation lors de la création. " alt="" coords="596,150,712,177"/>
+<area shape="rect" id="node7" href="$classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="221,173,349,215"/>
+<area shape="rect" id="node4" href="$classgui_1_1_bouton_cocher.html#a7b5e763ff726740b19ec6758e6431b92" title="Constructeur. " alt="" coords="411,56,548,97"/>
+<area shape="rect" id="node6" href="$classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="760,150,903,177"/>
+<area shape="rect" id="node8" href="$classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="415,177,543,203"/>
+</map>

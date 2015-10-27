@@ -1,0 +1,179 @@
+\section{Référence de la classe gui\+:\+:Groupe}
+\label{classgui_1_1_groupe}\index{gui\+::\+Groupe@{gui\+::\+Groupe}}
+
+
+\doxyref{Gadget}{p.}{classgui_1_1_gadget} Un élément invisible permettant de rassembler des Gadgets.  
+
+
+
+
+{\ttfamily \#include $<$Groupe.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de gui\+:\+:Groupe\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classgui_1_1_groupe__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de gui\+:\+:Groupe\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classgui_1_1_groupe__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Float\+Rect {\bf get\+Local\+Bounds} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de la bounding\+Box locale. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect {\bf get\+Global\+Bounds} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de la bounding\+Box globale. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f {\bf get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de la taille. \end{DoxyCompactList}\item 
+virtual void {\bf actualiser} (float delta\+T)
+\begin{DoxyCompactList}\small\item\em Actualiser les éléments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+\doxyref{Gadget}{p.}{classgui_1_1_gadget} Un élément invisible permettant de rassembler des Gadgets. 
+
+ça fait pas grand chose de plus qu\textquotesingle{}un \doxyref{Gadget}{p.}{classgui_1_1_gadget}, à part les trucs de taille et B\+B à partir des enfants du groupe. \begin{DoxySeeAlso}{Voir également}
+\doxyref{gui\+::\+Gadget}{p.}{classgui_1_1_gadget} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des fonctions membres}
+\index{gui\+::\+Groupe@{gui\+::\+Groupe}!actualiser@{actualiser}}
+\index{actualiser@{actualiser}!gui\+::\+Groupe@{gui\+::\+Groupe}}
+\subsubsection[{actualiser(float delta\+T)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Groupe\+::actualiser (
+\begin{DoxyParamCaption}
+\item[{float}]{delta\+T}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_groupe_aa07de056f6d0aa21b7f8290b1ee01d58}
+
+
+Actualiser les éléments. 
+
+Actualiser les différents éléments du ou des écrans actifs. 
+\begin{DoxyParams}{Paramètres}
+{\em delta\+T} & Un {\itshape float} qui indique le delta du temps écoulé depuis la dernière actualisation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a06c66be095e4d531ef307a3db36e2b4f}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_groupe_aa07de056f6d0aa21b7f8290b1ee01d58_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_groupe_aa07de056f6d0aa21b7f8290b1ee01d58_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Groupe@{gui\+::\+Groupe}!get\+Global\+Bounds@{get\+Global\+Bounds}}
+\index{get\+Global\+Bounds@{get\+Global\+Bounds}!gui\+::\+Groupe@{gui\+::\+Groupe}}
+\subsubsection[{get\+Global\+Bounds()}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect gui\+::\+Groupe\+::get\+Global\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_groupe_aaa70e4ae758c941a1be7965814e11cff}
+
+
+Accesseur de la bounding\+Box globale. 
+
+\begin{DoxyReturn}{Renvoie}
+la bounding\+Box globale des éléments enfants du groupe. 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a698682665f65f54e0798887955f32f2e}.
+
+\index{gui\+::\+Groupe@{gui\+::\+Groupe}!get\+Local\+Bounds@{get\+Local\+Bounds}}
+\index{get\+Local\+Bounds@{get\+Local\+Bounds}!gui\+::\+Groupe@{gui\+::\+Groupe}}
+\subsubsection[{get\+Local\+Bounds()}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect gui\+::\+Groupe\+::get\+Local\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_groupe_a79907182be4a24d8a2248febc8f7c31a}
+
+
+Accesseur de la bounding\+Box locale. 
+
+\begin{DoxyReturn}{Renvoie}
+la bounding\+Box locale des éléments enfants du groupe. 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a4552567e63384c6a30519303f4052f11}.
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_groupe_a79907182be4a24d8a2248febc8f7c31a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Groupe@{gui\+::\+Groupe}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!gui\+::\+Groupe@{gui\+::\+Groupe}}
+\subsubsection[{get\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f gui\+::\+Groupe\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_groupe_ad26b41a6a0c6f831244bb1917314d285}
+
+
+Accesseur de la taille. 
+
+\begin{DoxyReturn}{Renvoie}
+la taille à l\textquotesingle{}aide la sa bounding box, donc c\textquotesingle{}est la taille de l\textquotesingle{}ensemmble des enfants. 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a8d17e7736249da941358b9e09e70ea2c}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_groupe_ad26b41a6a0c6f831244bb1917314d285_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Interface/include/gadgets/{\bf Groupe.\+h}\item 
+Interface/src/gadgets/{\bf Groupe.\+cpp}\end{DoxyCompactItemize}

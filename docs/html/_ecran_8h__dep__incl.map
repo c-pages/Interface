@@ -1,0 +1,10 @@
+<map id="main/include/Ecran.h" name="main/include/Ecran.h">
+<area shape="rect" id="node2" href="$_application_8h.html" title="La classe principale du programme. " alt="" coords="241,169,416,196"/>
+<area shape="rect" id="node3" href="$_ecran_demo_8h.html" title="main/include/ecrans\l/EcranDemo.h" alt="" coords="143,244,282,285"/>
+<area shape="rect" id="node7" href="$_gestion__ecrans_8h.html" title="main/include/Gestion\l_ecrans.h" alt="" coords="329,80,473,121"/>
+<area shape="rect" id="node9" href="$_ecran_8cpp.html" title="main/src/Ecran.cpp" alt="" coords="497,87,632,114"/>
+<area shape="rect" id="node4" href="$_application_8cpp.html" title="main/src/Application.cpp" alt="" coords="242,333,407,360"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="main/main.cpp" alt="" coords="362,251,469,278"/>
+<area shape="rect" id="node5" href="$_ecran_demo_8cpp.html" title="main/src/ecrans/EcranDemo.cpp" alt="" coords="5,333,217,360"/>
+<area shape="rect" id="node8" href="$_gestion__ecrans_8cpp.html" title="main/src/Gestion_ecrans.cpp" alt="" coords="441,169,633,196"/>
+</map>

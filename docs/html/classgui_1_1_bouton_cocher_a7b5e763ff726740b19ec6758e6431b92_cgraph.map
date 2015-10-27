@@ -1,0 +1,5 @@
+<map id="gui::BoutonCocher::BoutonCocher" name="gui::BoutonCocher::BoutonCocher">
+<area shape="rect" id="node2" href="$classgui_1_1_bouton_cocher.html#a92470d7fc9202d991e8499331660ba8c" title="initialisation du gadget. " alt="" coords="191,31,345,57"/>
+<area shape="rect" id="node3" href="$classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="393,5,548,32"/>
+<area shape="rect" id="node4" href="$classgui_1_1_action.html#a70035bc714f01d2f47c58b4dc159fb32" title="Ajoute un ecouteur d&#39;evenement associé à une fonction lambda(FuncType) à executer lors du déclencheme..." alt="" coords="416,56,525,83"/>
+</map>

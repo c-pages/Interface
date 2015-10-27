@@ -1,0 +1,26 @@
+<map id="Interface/include/Action.h" name="Interface/include/Action.h">
+<area shape="rect" id="node2" href="$_g_u_i_8h.html" title="Interface/GUI.h" alt="" coords="471,341,579,367"/>
+<area shape="rect" id="node8" href="$_gadget_8h.html" title="Interface/include/Gadget.h" alt="" coords="460,80,633,107"/>
+<area shape="rect" id="node25" href="$_action_8cpp.html" title="Interface/src/Action.cpp" alt="" coords="658,80,816,107"/>
+<area shape="rect" id="node3" href="$_config_8h.html" title="main/include/Config.h" alt="" coords="285,430,432,457"/>
+<area shape="rect" id="node6" href="$_ecran_demo_8cpp.html" title="main/src/ecrans/EcranDemo.cpp" alt="" coords="496,512,708,539"/>
+<area shape="rect" id="node7" href="$_ecran_demo_8h.html" title="main/include/ecrans\l/EcranDemo.h" alt="" coords="456,423,594,464"/>
+<area shape="rect" id="node4" href="$_application_8cpp.html" title="main/src/Application.cpp" alt="" coords="306,512,472,539"/>
+<area shape="rect" id="node5" href="$_config_8cpp.html" title="main/src/Config.cpp" alt="" coords="144,512,282,539"/>
+<area shape="rect" id="node9" href="$_gadget_8inl.html" title="Interface/include/Gadget.inl" alt="" coords="457,162,636,189"/>
+<area shape="rect" id="node10" href="$_bouton_8h.html" title="Interface/include/gadgets\l/Bouton.h" alt="" coords="848,155,1015,196"/>
+<area shape="rect" id="node17" href="$_fenetre_8h.html" title="Interface/include/gadgets\l/Fenetre.h" alt="" coords="266,155,432,196"/>
+<area shape="rect" id="node18" href="$_groupe_8h.html" title="Interface/include/gadgets\l/Groupe.h" alt="" coords="75,155,242,196"/>
+<area shape="rect" id="node20" href="$_image_8h.html" title="Interface/include/gadgets\l/Image.h" alt="" coords="1336,155,1503,196"/>
+<area shape="rect" id="node22" href="$_label_8h.html" title="Interface/include/gadgets\l/Label.h" alt="" coords="1040,155,1207,196"/>
+<area shape="rect" id="node24" href="$_gadget_8cpp.html" title="Interface/src/Gadget.cpp" alt="" coords="660,162,824,189"/>
+<area shape="rect" id="node11" href="$_bouton_cocher_8h.html" title="Interface/include/gadgets\l/BoutonCocher.h" alt="" coords="920,244,1087,285"/>
+<area shape="rect" id="node13" href="$_bouton_texte_8h.html" title="Interface/include/gadgets\l/BoutonTexte.h" alt="" coords="730,244,896,285"/>
+<area shape="rect" id="node15" href="$_bouton_8cpp.html" title="Interface/src/gadgets\l/Bouton.cpp" alt="" coords="563,244,706,285"/>
+<area shape="rect" id="node16" href="$_fenetre_8cpp.html" title="Interface/src/gadgets\l/Fenetre.cpp" alt="" coords="344,244,487,285"/>
+<area shape="rect" id="node12" href="$_bouton_cocher_8cpp.html" title="Interface/src/gadgets\l/BoutonCocher.cpp" alt="" coords="1515,333,1658,375"/>
+<area shape="rect" id="node14" href="$_bouton_texte_8cpp.html" title="Interface/src/gadgets\l/BoutonTexte.cpp" alt="" coords="1272,333,1415,375"/>
+<area shape="rect" id="node19" href="$_groupe_8cpp.html" title="Interface/src/gadgets\l/Groupe.cpp" alt="" coords="75,244,218,285"/>
+<area shape="rect" id="node21" href="$_image_8cpp.html" title="Interface/src/gadgets\l/Image.cpp" alt="" coords="1483,244,1626,285"/>
+<area shape="rect" id="node23" href="$_label_8cpp.html" title="Interface/src/gadgets\l/Label.cpp" alt="" coords="1163,244,1306,285"/>
+</map>

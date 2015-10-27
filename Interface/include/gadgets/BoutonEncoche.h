@@ -1,0 +1,107 @@
+#ifndef BOUTONENCOCHE_H
+#define BOUTONENCOCHE_H
+
+/////////////////////////////////////////////////
+// Headers
+/////////////////////////////////////////////////
+#include <gadgets\Bouton.h>
+
+
+namespace gui {
+
+class Image;
+/////////////////////////////////////////////////
+/// \brief Gadget, bouton rectangulaire à cocher,
+///
+/////////////////////////////////////////////////
+class BoutonEncoche : public Bouton
+{
+
+public:
+    /////////////////////////////////////////////////
+    /// \brief Constructeur
+    ///
+    /////////////////////////////////////////////////
+    BoutonEncoche();
+
+    /////////////////////////////////////////////////
+    /// \brief  Constructeur avec definition du skin et valeur de l'état du bouton.
+    ///
+    /// \param skin les skin à utiliser pour ce bouton.
+    /// \param actif l'état du bouton.
+    ///
+    /////////////////////////////////////////////////
+    BoutonEncoche ( std::shared_ptr<Skin>    skin
+                  , bool                    actif  = false );
+
+    /////////////////////////////////////////////////
+    /// \brief Destructeur
+    ///
+    /////////////////////////////////////////////////
+    virtual ~BoutonEncoche();
+
+    /////////////////////////////////////////////////
+    /// \brief Définir l'état du bouton
+    ///
+    /// \param actif       true : coché, false : décoché.
+    ///
+    /////////////////////////////////////////////////
+    void
+    setActif ( bool actif ) { m_actif = actif; };
+
+    /////////////////////////////////////////////////
+    /// \brief demande l'état du bouton
+    ///
+    /// \return true : coché, false : décoché.
+    ///
+    /////////////////////////////////////////////////
+    bool
+    isActif ( ) { return m_actif; };
+
+    /////////////////////////////////////////////////
+    /// \brief Actualise le model du Gadget
+    ///
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    majGeom();
+
+    /////////////////////////////////////////////////
+    /// \brief Rendre les différents éléments du ou des écrans actifs.
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    draw( sf::RenderTarget& target, sf::RenderStates states ) const;
+
+protected:
+
+private:
+    /////////////////////////////////////////////////
+    /// \brief initialisation du gadget.
+    ///
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    init ();
+
+
+    /////////////////////////////////////////////////
+    // Les membres
+    /////////////////////////////////////////////////
+    bool        m_actif;        ///< l'état du bouton  (true: coché ou false:décoché).
+    Image*      m_imgCoche;     ///< le gadget Image qui est visible si le bouton est coché.
+    FuncType    m_fctToggle;    ///< la fonction qui change l'état du bouton a chaque clique.
+
+};
+};
+#endif // BOUTONENCOCHE_H
+
+////////////////////////////////////////////////////////////
+/// \class gui::BoutonEncoche
+/// \ingroup interface
+///
+/// \see gui::Gadget
+///
+////////////////////////////////////////////////////////////

@@ -1,0 +1,279 @@
+\section{Référence de la classe gui\+:\+:Bouton\+Cocher}
+\label{classgui_1_1_bouton_cocher}\index{gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}}
+
+
+\doxyref{Gadget}{p.}{classgui_1_1_gadget}, bouton rectangulaire à cocher,.  
+
+
+
+
+{\ttfamily \#include $<$Bouton\+Cocher.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de gui\+:\+:Bouton\+Cocher\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classgui_1_1_bouton_cocher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de gui\+:\+:Bouton\+Cocher\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classgui_1_1_bouton_cocher__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Bouton\+Cocher} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+{\bf Bouton\+Cocher} (std\+::shared\+\_\+ptr$<$ {\bf Skin} $>$ skin, bool actif=false)
+\begin{DoxyCompactList}\small\item\em Constructeur avec definition du skin et valeur de l\textquotesingle{}état du bouton. \end{DoxyCompactList}\item 
+virtual {\bf $\sim$\+Bouton\+Cocher} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+void {\bf set\+Actif} (bool actif)
+\begin{DoxyCompactList}\small\item\em Définir l\textquotesingle{}état du bouton. \end{DoxyCompactList}\item 
+bool {\bf is\+Actif} ()
+\begin{DoxyCompactList}\small\item\em demande l\textquotesingle{}état du bouton \end{DoxyCompactList}\item 
+virtual void {\bf maj\+Geom} ()
+\begin{DoxyCompactList}\small\item\em Actualise le model du \doxyref{Gadget}{p.}{classgui_1_1_gadget}. \end{DoxyCompactList}\item 
+virtual void {\bf draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const 
+\begin{DoxyCompactList}\small\item\em Rendre les différents éléments du ou des écrans actifs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf init} ()
+\begin{DoxyCompactList}\small\item\em initialisation du gadget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf m\+\_\+actif}
+\begin{DoxyCompactList}\small\item\em l\textquotesingle{}état du bouton (true\+: coché ou false\+:décoché). \end{DoxyCompactList}\item 
+{\bf Image} $\ast$ {\bf m\+\_\+img\+Coche}
+\begin{DoxyCompactList}\small\item\em le gadget \doxyref{Image}{p.}{classgui_1_1_image} qui est visible si le bouton est coché. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Toggle}
+\begin{DoxyCompactList}\small\item\em la fonction qui change l\textquotesingle{}état du bouton a chaque clique. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+\doxyref{Gadget}{p.}{classgui_1_1_gadget}, bouton rectangulaire à cocher,. 
+
+\begin{DoxySeeAlso}{Voir également}
+\doxyref{gui\+::\+Gadget}{p.}{classgui_1_1_gadget} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}!Bouton\+Cocher@{Bouton\+Cocher}}
+\index{Bouton\+Cocher@{Bouton\+Cocher}!gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}}
+\subsubsection[{Bouton\+Cocher()}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Bouton\+Cocher\+::\+Bouton\+Cocher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classgui_1_1_bouton_cocher_a7b5e763ff726740b19ec6758e6431b92}
+
+
+Constructeur. 
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_bouton_cocher_a7b5e763ff726740b19ec6758e6431b92_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}!Bouton\+Cocher@{Bouton\+Cocher}}
+\index{Bouton\+Cocher@{Bouton\+Cocher}!gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}}
+\subsubsection[{Bouton\+Cocher(std\+::shared\+\_\+ptr$<$ Skin $>$ skin, bool actif=false)}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Bouton\+Cocher\+::\+Bouton\+Cocher (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Skin} $>$}]{skin, }
+\item[{bool}]{actif = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{classgui_1_1_bouton_cocher_ac6d72b56515735de4121a2623c3c1a17}
+
+
+Constructeur avec definition du skin et valeur de l\textquotesingle{}état du bouton. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em skin} & les skin à utiliser pour ce bouton. \\
+\hline
+{\em actif} & l\textquotesingle{}état du bouton. \\
+\hline
+\end{DoxyParams}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_bouton_cocher_ac6d72b56515735de4121a2623c3c1a17_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}!````~Bouton\+Cocher@{$\sim$\+Bouton\+Cocher}}
+\index{````~Bouton\+Cocher@{$\sim$\+Bouton\+Cocher}!gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}}
+\subsubsection[{$\sim$\+Bouton\+Cocher()}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Bouton\+Cocher\+::$\sim$\+Bouton\+Cocher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_bouton_cocher_a47881be4183b985ba8957ed7f3219d7e}
+
+
+Destructeur. 
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}!draw@{draw}}
+\index{draw@{draw}!gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}}
+\subsubsection[{draw(sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const }]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Bouton\+Cocher\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Target \&}]{target, }
+\item[{sf\+::\+Render\+States}]{states}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_bouton_cocher_aea6c305290640a14a3659713b9acb5bf}
+
+
+Rendre les différents éléments du ou des écrans actifs. 
+
+
+
+Réimplémentée à partir de {\bf gui\+::\+Bouton} \doxyref{}{p.}{classgui_1_1_bouton_a8d736a0c912d7bb23551ccc0aaa0e20d}.
+
+\index{gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}!init@{init}}
+\index{init@{init}!gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}}
+\subsubsection[{init()}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Bouton\+Cocher\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\label{classgui_1_1_bouton_cocher_a92470d7fc9202d991e8499331660ba8c}
+
+
+initialisation du gadget. 
+
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classgui_1_1_bouton_cocher_a92470d7fc9202d991e8499331660ba8c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classgui_1_1_bouton_cocher_a92470d7fc9202d991e8499331660ba8c_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}!is\+Actif@{is\+Actif}}
+\index{is\+Actif@{is\+Actif}!gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}}
+\subsubsection[{is\+Actif()}]{\setlength{\rightskip}{0pt plus 5cm}bool gui\+::\+Bouton\+Cocher\+::is\+Actif (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classgui_1_1_bouton_cocher_a1bfe8ca9d1f45890f594ff392227fa28}
+
+
+demande l\textquotesingle{}état du bouton 
+
+\begin{DoxyReturn}{Renvoie}
+true \+: coché, false \+: décoché. 
+\end{DoxyReturn}
+\index{gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}!maj\+Geom@{maj\+Geom}}
+\index{maj\+Geom@{maj\+Geom}!gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}}
+\subsubsection[{maj\+Geom()}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Bouton\+Cocher\+::maj\+Geom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_bouton_cocher_a03a7011fd1269a5502fd3b6e58652c4e}
+
+
+Actualise le model du \doxyref{Gadget}{p.}{classgui_1_1_gadget}. 
+
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Bouton} \doxyref{}{p.}{classgui_1_1_bouton_a1ff3d7a1586eaab5873cc6e49be2332c}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_bouton_cocher_a03a7011fd1269a5502fd3b6e58652c4e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}!set\+Actif@{set\+Actif}}
+\index{set\+Actif@{set\+Actif}!gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}}
+\subsubsection[{set\+Actif(bool actif)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Bouton\+Cocher\+::set\+Actif (
+\begin{DoxyParamCaption}
+\item[{bool}]{actif}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classgui_1_1_bouton_cocher_ad8f3c398a2fb5c4f86b43dd9d9521c39}
+
+
+Définir l\textquotesingle{}état du bouton. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em actif} & true \+: coché, false \+: décoché. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des champs}
+\index{gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}!m\+\_\+actif@{m\+\_\+actif}}
+\index{m\+\_\+actif@{m\+\_\+actif}!gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}}
+\subsubsection[{m\+\_\+actif}]{\setlength{\rightskip}{0pt plus 5cm}bool gui\+::\+Bouton\+Cocher\+::m\+\_\+actif\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_bouton_cocher_a96e4be65c04e461c51a6450a8caff484}
+
+
+l\textquotesingle{}état du bouton (true\+: coché ou false\+:décoché). 
+
+\index{gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}!m\+\_\+fct\+Toggle@{m\+\_\+fct\+Toggle}}
+\index{m\+\_\+fct\+Toggle@{m\+\_\+fct\+Toggle}!gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}}
+\subsubsection[{m\+\_\+fct\+Toggle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Bouton\+Cocher\+::m\+\_\+fct\+Toggle\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_bouton_cocher_a944c1babbb13bb9dc5515c79fabc8780}
+
+
+la fonction qui change l\textquotesingle{}état du bouton a chaque clique. 
+
+\index{gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}!m\+\_\+img\+Coche@{m\+\_\+img\+Coche}}
+\index{m\+\_\+img\+Coche@{m\+\_\+img\+Coche}!gui\+::\+Bouton\+Cocher@{gui\+::\+Bouton\+Cocher}}
+\subsubsection[{m\+\_\+img\+Coche}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Image}$\ast$ gui\+::\+Bouton\+Cocher\+::m\+\_\+img\+Coche\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_bouton_cocher_a5a832444f9d527c678bcdcde9fb44d1a}
+
+
+le gadget \doxyref{Image}{p.}{classgui_1_1_image} qui est visible si le bouton est coché. 
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Interface/include/gadgets/{\bf Bouton\+Cocher.\+h}\item 
+Interface/src/gadgets/{\bf Bouton\+Cocher.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,279 @@
+\section{Référence de la classe gui\+:\+:Action}
+\label{classgui_1_1_action}\index{gui\+::\+Action@{gui\+::\+Action}}
+
+
+Classe virtuelle permetant de lier des évenements à des fonctions.  
+
+
+
+
+{\ttfamily \#include $<$Action.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de gui\+:\+:Action\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_action__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+using {\bf Func\+Type} = std\+::function$<$ void()$>$
+\begin{DoxyCompactList}\small\item\em la fonction lambda associé aux declenchements des evenements. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ sf\+::\+Keyboard\+::\+Key, {\bf Func\+Type} $>$ {\bf evt\+Clavier}
+\begin{DoxyCompactList}\small\item\em Collecteur d\textquotesingle{}évenements clavier. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ {\bf Evenements}, {\bf Func\+Type} $>$ {\bf evt\+Souris}
+\begin{DoxyCompactList}\small\item\em collecteur d\textquotesingle{}évenement déclenché par nos \doxyref{gui\+::\+Evenements}{p.}{namespacegui_a679a250c68f3a4f70b52673ccf7c843e} (souris, fenetre ..) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf lier} ({\bf Evenements} evt, const {\bf Func\+Type} \&fonction)
+\begin{DoxyCompactList}\small\item\em Ajoute un ecouteur d\textquotesingle{}evenement associé à une fonction lambda(\+Func\+Type) à executer lors du déclenchement de l\textquotesingle{}evenement. \end{DoxyCompactList}\item 
+virtual void {\bf lier} (sf\+::\+Keyboard\+::\+Key touche, const {\bf Func\+Type} \&fonction)
+\begin{DoxyCompactList}\small\item\em Ajoute un ecouteur d\textquotesingle{}evenement associé à une fonction lambda(\+Func\+Type) à executer lors du déclenchement de l\textquotesingle{}evenement. \end{DoxyCompactList}\item 
+virtual void {\bf delier} ({\bf Evenements} evt)
+\begin{DoxyCompactList}\small\item\em supprimer un ecouteur d\textquotesingle{}évenement. \end{DoxyCompactList}\item 
+virtual void {\bf delier} (sf\+::\+Keyboard\+::\+Key touche)
+\begin{DoxyCompactList}\small\item\em supprimer un ecouteur d\textquotesingle{}évenement clavier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Func\+Type} {\bf default\+Func} = [$\,$]( )-\/$>$void\{\}
+\begin{DoxyCompactList}\small\item\em type par defaut de la fonction lambda. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf declencher} ({\bf Evenements} evt)
+\begin{DoxyCompactList}\small\item\em Déclencher la fonction associé à l\textquotesingle{}évenement. \end{DoxyCompactList}\item 
+bool {\bf traiter\+\_\+evenements} (const sf\+::\+Event \&event)
+\begin{DoxyCompactList}\small\item\em La gestion des évènements utilisateurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+{\bf evt\+Souris} {\bf \+\_\+evts\+Souris}
+\begin{DoxyCompactList}\small\item\em La liste des evenements souris enregistrés. \end{DoxyCompactList}\item 
+{\bf evt\+Clavier} {\bf \+\_\+evts\+Clavier}
+\begin{DoxyCompactList}\small\item\em La liste des evenements Claviers enregistrés. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe virtuelle permetant de lier des évenements à des fonctions. 
+
+Gère les évenements, permet de déclencher des fonctions associées à des évènements ...
+
+\begin{DoxySeeAlso}{Voir également}
+sf\+::\+Shape, sf\+::\+Circle\+Shape, sf\+::\+Convex\+Shape 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des définitions de type membres}
+\index{gui\+::\+Action@{gui\+::\+Action}!evt\+Clavier@{evt\+Clavier}}
+\index{evt\+Clavier@{evt\+Clavier}!gui\+::\+Action@{gui\+::\+Action}}
+\subsubsection[{evt\+Clavier}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$ sf\+::\+Keyboard\+::\+Key , {\bf Func\+Type} $>$ {\bf gui\+::\+Action\+::evt\+Clavier}}\label{classgui_1_1_action_a7a85a606811b45e6232414b1d4e29bed}
+
+
+Collecteur d\textquotesingle{}évenements clavier. 
+
+\index{gui\+::\+Action@{gui\+::\+Action}!evt\+Souris@{evt\+Souris}}
+\index{evt\+Souris@{evt\+Souris}!gui\+::\+Action@{gui\+::\+Action}}
+\subsubsection[{evt\+Souris}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$ {\bf Evenements} , {\bf Func\+Type} $>$ {\bf gui\+::\+Action\+::evt\+Souris}}\label{classgui_1_1_action_a359295e3ccae6767582f4450b6c49ec4}
+
+
+collecteur d\textquotesingle{}évenement déclenché par nos \doxyref{gui\+::\+Evenements}{p.}{namespacegui_a679a250c68f3a4f70b52673ccf7c843e} (souris, fenetre ..) 
+
+\index{gui\+::\+Action@{gui\+::\+Action}!Func\+Type@{Func\+Type}}
+\index{Func\+Type@{Func\+Type}!gui\+::\+Action@{gui\+::\+Action}}
+\subsubsection[{Func\+Type}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf gui\+::\+Action\+::\+Func\+Type} =  std\+::function$<$void()$>$}\label{classgui_1_1_action_a4223568d083f940e94c80829f63ae817}
+
+
+la fonction lambda associé aux declenchements des evenements. 
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{gui\+::\+Action@{gui\+::\+Action}!declencher@{declencher}}
+\index{declencher@{declencher}!gui\+::\+Action@{gui\+::\+Action}}
+\subsubsection[{declencher(\+Evenements evt)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Action\+::declencher (
+\begin{DoxyParamCaption}
+\item[{{\bf Evenements}}]{evt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classgui_1_1_action_aa7481b3efcebd774ad68bf1a4308041a}
+
+
+Déclencher la fonction associé à l\textquotesingle{}évenement. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em evt} & L\textquotesingle{}evenement souris à declencher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien. 
+\end{DoxyReturn}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_action_aa7481b3efcebd774ad68bf1a4308041a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Action@{gui\+::\+Action}!delier@{delier}}
+\index{delier@{delier}!gui\+::\+Action@{gui\+::\+Action}}
+\subsubsection[{delier(\+Evenements evt)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Action\+::delier (
+\begin{DoxyParamCaption}
+\item[{{\bf Evenements}}]{evt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_action_a2e82dcc2a557564140171006f21b6739}
+
+
+supprimer un ecouteur d\textquotesingle{}évenement. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em evt} & Un evenement souris de la liste \+\_\+evts\+Souris.. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien. 
+\end{DoxyReturn}
+\index{gui\+::\+Action@{gui\+::\+Action}!delier@{delier}}
+\index{delier@{delier}!gui\+::\+Action@{gui\+::\+Action}}
+\subsubsection[{delier(sf\+::\+Keyboard\+::\+Key touche)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Action\+::delier (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Keyboard\+::\+Key}]{touche}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_action_a588807ec36e45f27c2520de5a1e22aed}
+
+
+supprimer un ecouteur d\textquotesingle{}évenement clavier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em touche} & Une touche du clavier sf\+::\+Keyboard\+::\+Key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien. 
+\end{DoxyReturn}
+\index{gui\+::\+Action@{gui\+::\+Action}!lier@{lier}}
+\index{lier@{lier}!gui\+::\+Action@{gui\+::\+Action}}
+\subsubsection[{lier(\+Evenements evt, const Func\+Type \&fonction)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Action\+::lier (
+\begin{DoxyParamCaption}
+\item[{{\bf Evenements}}]{evt, }
+\item[{const {\bf Func\+Type} \&}]{fonction}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_action_a70035bc714f01d2f47c58b4dc159fb32}
+
+
+Ajoute un ecouteur d\textquotesingle{}evenement associé à une fonction lambda(\+Func\+Type) à executer lors du déclenchement de l\textquotesingle{}evenement. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em evt} & Un evenement de la liste Evenements. \\
+\hline
+{\em fonction} & la fonction lambda associé. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien. 
+\end{DoxyReturn}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_action_a70035bc714f01d2f47c58b4dc159fb32_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Action@{gui\+::\+Action}!lier@{lier}}
+\index{lier@{lier}!gui\+::\+Action@{gui\+::\+Action}}
+\subsubsection[{lier(sf\+::\+Keyboard\+::\+Key touche, const Func\+Type \&fonction)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Action\+::lier (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Keyboard\+::\+Key}]{touche, }
+\item[{const {\bf Func\+Type} \&}]{fonction}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_action_a5eb8461689c5b9800c3b652423dc53d3}
+
+
+Ajoute un ecouteur d\textquotesingle{}evenement associé à une fonction lambda(\+Func\+Type) à executer lors du déclenchement de l\textquotesingle{}evenement. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em touche} & Une touche du clavier sf\+::\+Keyboard\+::\+Key. \\
+\hline
+{\em fonction} & la fonction lambda associé. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien. 
+\end{DoxyReturn}
+\index{gui\+::\+Action@{gui\+::\+Action}!traiter\+\_\+evenements@{traiter\+\_\+evenements}}
+\index{traiter\+\_\+evenements@{traiter\+\_\+evenements}!gui\+::\+Action@{gui\+::\+Action}}
+\subsubsection[{traiter\+\_\+evenements(const sf\+::\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}bool gui\+::\+Action\+::traiter\+\_\+evenements (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classgui_1_1_action_a7c0cd2dd198d840342cbd6b0ac193a02}
+
+
+La gestion des évènements utilisateurs. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em event} & les évènements claviers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classgui_1_1_action_a7c0cd2dd198d840342cbd6b0ac193a02_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Documentation des champs}
+\index{gui\+::\+Action@{gui\+::\+Action}!\+\_\+evts\+Clavier@{\+\_\+evts\+Clavier}}
+\index{\+\_\+evts\+Clavier@{\+\_\+evts\+Clavier}!gui\+::\+Action@{gui\+::\+Action}}
+\subsubsection[{\+\_\+evts\+Clavier}]{\setlength{\rightskip}{0pt plus 5cm}{\bf evt\+Clavier} gui\+::\+Action\+::\+\_\+evts\+Clavier\hspace{0.3cm}{\ttfamily [protected]}}\label{classgui_1_1_action_acb4c5836898b8221986f90a5b226908e}
+
+
+La liste des evenements Claviers enregistrés. 
+
+\index{gui\+::\+Action@{gui\+::\+Action}!\+\_\+evts\+Souris@{\+\_\+evts\+Souris}}
+\index{\+\_\+evts\+Souris@{\+\_\+evts\+Souris}!gui\+::\+Action@{gui\+::\+Action}}
+\subsubsection[{\+\_\+evts\+Souris}]{\setlength{\rightskip}{0pt plus 5cm}{\bf evt\+Souris} gui\+::\+Action\+::\+\_\+evts\+Souris\hspace{0.3cm}{\ttfamily [protected]}}\label{classgui_1_1_action_ae3dfea6e15a336d6095fcddeccee27ac}
+
+
+La liste des evenements souris enregistrés. 
+
+\index{gui\+::\+Action@{gui\+::\+Action}!default\+Func@{default\+Func}}
+\index{default\+Func@{default\+Func}!gui\+::\+Action@{gui\+::\+Action}}
+\subsubsection[{default\+Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Action\+::\+Func\+Type} gui\+::\+Action\+::default\+Func = [$\,$]( )-\/$>$void\{\}\hspace{0.3cm}{\ttfamily [static]}}\label{classgui_1_1_action_a7338e98b0107777d8168bb12a021167b}
+
+
+type par defaut de la fonction lambda. 
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Interface/include/{\bf Action.\+h}\item 
+Interface/src/{\bf Action.\+cpp}\end{DoxyCompactItemize}

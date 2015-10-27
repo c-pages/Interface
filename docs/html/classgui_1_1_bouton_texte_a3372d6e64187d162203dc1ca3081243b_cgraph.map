@@ -1,0 +1,8 @@
+<map id="gui::BoutonTexte::BoutonTexte" name="gui::BoutonTexte::BoutonTexte">
+<area shape="rect" id="node2" href="$classgui_1_1_bouton_texte.html#a2ee4ed04c1e2a20836e38a250d56311e" title="initialisation du gadget. " alt="" coords="223,56,368,83"/>
+<area shape="rect" id="node3" href="$classgui_1_1_bouton_texte.html#a6c66a5e34585fdb6054c2f56160db0a7" title="Actualise le style du label. " alt="" coords="416,56,600,83"/>
+<area shape="rect" id="node4" href="$classgui_1_1_bouton.html#a1ff3d7a1586eaab5873cc6e49be2332c" title="Actualise le style du label. " alt="" coords="648,56,800,83"/>
+<area shape="rect" id="node5" href="$classgui_1_1_bouton.html#a82ae2f53840fa81e95bad972a301bddb" title="Definir Couleur du cadre. " alt="" coords="863,5,1048,32"/>
+<area shape="rect" id="node6" href="$classgui_1_1_bouton.html#ae56f585c1463d258f7209ade57426421" title="Definir l&#39;épaisseur du cadre. " alt="" coords="848,56,1063,83"/>
+<area shape="rect" id="node7" href="$classgui_1_1_bouton.html#a84b817726afad13e2c93b458df712beb" title="Definir Couleur du fond. " alt="" coords="875,107,1036,133"/>
+</map>

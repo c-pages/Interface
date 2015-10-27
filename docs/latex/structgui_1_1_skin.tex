@@ -1,0 +1,153 @@
+\section{Référence de la structure gui\+:\+:Skin}
+\label{structgui_1_1_skin}\index{gui\+::\+Skin@{gui\+::\+Skin}}
+
+
+Structure de donnée. Un \doxyref{Skin}{p.}{structgui_1_1_skin} définie un ensemble de \doxyref{Style}{p.}{structgui_1_1_style} pour les éléments d\textquotesingle{}une interface graphique.  
+
+
+
+
+{\ttfamily \#include $<$Skin.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Skin} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par defaut. \end{DoxyCompactList}\item 
+{\bf Skin} (const {\bf Skin} \&skin)
+\begin{DoxyCompactList}\small\item\em Constructeurs de copie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ {\bf Style} $>$ {\bf desactive}
+\begin{DoxyCompactList}\small\item\em le style des gadgets désactivés \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Style} $>$ {\bf fenetre}
+\begin{DoxyCompactList}\small\item\em le style des fenêtres. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Style} $>$ {\bf btn\+Repos}
+\begin{DoxyCompactList}\small\item\em le style des boutons au repos. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Style} $>$ {\bf btn\+Survol}
+\begin{DoxyCompactList}\small\item\em le style des boutons au survol. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Style} $>$ {\bf btn\+Press}
+\begin{DoxyCompactList}\small\item\em le style des boutons au press. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Style} $>$ {\bf lbl\+Titre}
+\begin{DoxyCompactList}\small\item\em le style des titres. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Style} $>$ {\bf lbl\+Courant}
+\begin{DoxyCompactList}\small\item\em le style des champs de texte courant. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Style} $>$ {\bf cadre}
+\begin{DoxyCompactList}\small\item\em le style pour les cadre, cad lefill et transparent \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Style} $>$ {\bf invisible}
+\begin{DoxyCompactList}\small\item\em le style pour des boutons invisibles par exemple \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Structure de donnée. Un \doxyref{Skin}{p.}{structgui_1_1_skin} définie un ensemble de \doxyref{Style}{p.}{structgui_1_1_style} pour les éléments d\textquotesingle{}une interface graphique. 
+
+C\textquotesingle{}est l\textquotesingle{}assemblage de plein de \doxyref{Style}{p.}{structgui_1_1_style} dans lequel les \doxyref{Gadget}{p.}{classgui_1_1_gadget} viennent piocher en fonction des besoins.
+
+Definie un style global de la scene en cummulant les styles pour chaques types de gadgets.
+
+\begin{DoxySeeAlso}{Voir également}
+\doxyref{gui\+::\+Style}{p.}{structgui_1_1_style} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{gui\+::\+Skin@{gui\+::\+Skin}!Skin@{Skin}}
+\index{Skin@{Skin}!gui\+::\+Skin@{gui\+::\+Skin}}
+\subsubsection[{Skin()}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Skin\+::\+Skin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{structgui_1_1_skin_a216892ffb06a16a2aba1d0c8261496b3}
+
+
+Constructeur par defaut. 
+
+Créer un skin avec les valeurs par défaut. \index{gui\+::\+Skin@{gui\+::\+Skin}!Skin@{Skin}}
+\index{Skin@{Skin}!gui\+::\+Skin@{gui\+::\+Skin}}
+\subsubsection[{Skin(const Skin \&skin)}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Skin\+::\+Skin (
+\begin{DoxyParamCaption}
+\item[{const {\bf Skin} \&}]{skin}
+\end{DoxyParamCaption}
+)}\label{structgui_1_1_skin_a8470e7d8012434256c8b63b87413bbf2}
+
+
+Constructeurs de copie. 
+
+Constructeur en copie d\textquotesingle{}un autre skin. 
+\begin{DoxyParams}{Paramètres}
+{\em skin} & le skin à copier \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des champs}
+\index{gui\+::\+Skin@{gui\+::\+Skin}!btn\+Press@{btn\+Press}}
+\index{btn\+Press@{btn\+Press}!gui\+::\+Skin@{gui\+::\+Skin}}
+\subsubsection[{btn\+Press}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Style}$>$ gui\+::\+Skin\+::btn\+Press}\label{structgui_1_1_skin_ae6ff5c8929e4e61d092443282a34ef67}
+
+
+le style des boutons au press. 
+
+\index{gui\+::\+Skin@{gui\+::\+Skin}!btn\+Repos@{btn\+Repos}}
+\index{btn\+Repos@{btn\+Repos}!gui\+::\+Skin@{gui\+::\+Skin}}
+\subsubsection[{btn\+Repos}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Style}$>$ gui\+::\+Skin\+::btn\+Repos}\label{structgui_1_1_skin_a2ffb0e1c16580474ef4d224a171cab32}
+
+
+le style des boutons au repos. 
+
+\index{gui\+::\+Skin@{gui\+::\+Skin}!btn\+Survol@{btn\+Survol}}
+\index{btn\+Survol@{btn\+Survol}!gui\+::\+Skin@{gui\+::\+Skin}}
+\subsubsection[{btn\+Survol}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Style}$>$ gui\+::\+Skin\+::btn\+Survol}\label{structgui_1_1_skin_a8cca0462c051b5ed1b9d2fe8a9a5b404}
+
+
+le style des boutons au survol. 
+
+\index{gui\+::\+Skin@{gui\+::\+Skin}!cadre@{cadre}}
+\index{cadre@{cadre}!gui\+::\+Skin@{gui\+::\+Skin}}
+\subsubsection[{cadre}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Style}$>$ gui\+::\+Skin\+::cadre}\label{structgui_1_1_skin_adcb7d12316f7e80898af1f9ff0c2d28e}
+
+
+le style pour les cadre, cad lefill et transparent 
+
+\index{gui\+::\+Skin@{gui\+::\+Skin}!desactive@{desactive}}
+\index{desactive@{desactive}!gui\+::\+Skin@{gui\+::\+Skin}}
+\subsubsection[{desactive}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Style}$>$ gui\+::\+Skin\+::desactive}\label{structgui_1_1_skin_a68e4974d6ed7fef61c39561eb33687db}
+
+
+le style des gadgets désactivés 
+
+\index{gui\+::\+Skin@{gui\+::\+Skin}!fenetre@{fenetre}}
+\index{fenetre@{fenetre}!gui\+::\+Skin@{gui\+::\+Skin}}
+\subsubsection[{fenetre}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Style}$>$ gui\+::\+Skin\+::fenetre}\label{structgui_1_1_skin_af50b19d11f4b0942b1a37ee573523c78}
+
+
+le style des fenêtres. 
+
+\index{gui\+::\+Skin@{gui\+::\+Skin}!invisible@{invisible}}
+\index{invisible@{invisible}!gui\+::\+Skin@{gui\+::\+Skin}}
+\subsubsection[{invisible}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Style}$>$ gui\+::\+Skin\+::invisible}\label{structgui_1_1_skin_af4ed9848a6eb07ad02fd9f2b55ecc7ba}
+
+
+le style pour des boutons invisibles par exemple 
+
+\index{gui\+::\+Skin@{gui\+::\+Skin}!lbl\+Courant@{lbl\+Courant}}
+\index{lbl\+Courant@{lbl\+Courant}!gui\+::\+Skin@{gui\+::\+Skin}}
+\subsubsection[{lbl\+Courant}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Style}$>$ gui\+::\+Skin\+::lbl\+Courant}\label{structgui_1_1_skin_a8de5deb80ea554c337da798869545ea8}
+
+
+le style des champs de texte courant. 
+
+\index{gui\+::\+Skin@{gui\+::\+Skin}!lbl\+Titre@{lbl\+Titre}}
+\index{lbl\+Titre@{lbl\+Titre}!gui\+::\+Skin@{gui\+::\+Skin}}
+\subsubsection[{lbl\+Titre}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Style}$>$ gui\+::\+Skin\+::lbl\+Titre}\label{structgui_1_1_skin_abf49dd986593e33cd6afbdfb9157cdf2}
+
+
+le style des titres. 
+
+
+
+La documentation de cette structure a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Interface/include/{\bf Skin.\+h}\item 
+Interface/src/{\bf Skin.\+cpp}\end{DoxyCompactItemize}

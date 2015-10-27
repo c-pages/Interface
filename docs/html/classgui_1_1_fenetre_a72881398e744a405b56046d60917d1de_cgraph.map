@@ -1,0 +1,5 @@
+<map id="gui::Fenetre::initUI_drag" name="gui::Fenetre::initUI_drag">
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a8036216c6c1895f10b913581e1b6f493" title="Pour lier les élément de l&#39;interface de la fenetre à la fenêtre. " alt="" coords="213,5,364,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="412,5,567,32"/>
+<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#ad5955dbe8116150699472cb999e2b695" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="615,5,783,32"/>
+</map>

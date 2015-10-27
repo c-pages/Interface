@@ -1,0 +1,16 @@
+<map id="gui::Fenetre::majGeom" name="gui::Fenetre::majGeom">
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a0ef3d718be52458dc0c9137f669819fc" title="Definir la taille du contenu. " alt="" coords="236,5,379,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a5c9d501e681cd47ad4b7031d18352b9b" title="Definir l&#39;epaisseur de la bordure. " alt="" coords="226,56,389,83"/>
+<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="663,245,791,272"/>
+<area shape="rect" id="node7" href="$classgui_1_1_fenetre.html#a24b2816833602308807148bb523c518c" title="Definir le titre. " alt="" coords="236,161,379,188"/>
+<area shape="rect" id="node8" href="$classgui_1_1_fenetre.html#a8036216c6c1895f10b913581e1b6f493" title="Pour lier les élément de l&#39;interface de la fenetre à la fenêtre. " alt="" coords="232,216,383,243"/>
+<area shape="rect" id="node13" href="$classgui_1_1_fenetre.html#a77869f5bdb4c4a6c1d40a5cff3b9250b" title="ajouter un enfant " alt="" coords="238,267,377,293"/>
+<area shape="rect" id="node14" href="$classgui_1_1_fenetre.html#a714cf4ba2a7e1489204b68beaa594e27" title="les manipulation de drag et de redimensionnement. " alt="" coords="208,387,407,413"/>
+<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#a104f8f9143a7280d7d56ca2d2a539123" title="Initialisation lors de la création. " alt="" coords="839,245,955,272"/>
+<area shape="rect" id="node6" href="$classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="1003,245,1145,272"/>
+<area shape="rect" id="node9" href="$classgui_1_1_fenetre.html#ab067f6b1633c4f9d55bde57ac78832f8" title="Initialiser l&#39;interface pour le titre. " alt="" coords="471,209,599,250"/>
+<area shape="rect" id="node10" href="$classgui_1_1_fenetre.html#a72881398e744a405b56046d60917d1de" title="Initialiser l&#39;interface pour prendre en compte le drag. " alt="" coords="455,275,615,301"/>
+<area shape="rect" id="node11" href="$classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="471,326,599,367"/>
+<area shape="rect" id="node12" href="$classgui_1_1_fenetre.html#aefa0438688ee292fef0a641df62ff13a" title="Initialiser l&#39;interface pour les bouton de redimensionnements. " alt="" coords="471,391,599,433"/>
+<area shape="rect" id="node15" href="$classgui_1_1_fenetre.html#a73a3c50ce1248fbe0f251a3a3a1e8cb9" title="Actualiser les éléments. " alt="" coords="457,457,612,484"/>
+</map>

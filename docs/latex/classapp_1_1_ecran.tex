@@ -1,0 +1,167 @@
+\section{Référence de la classe app\+:\+:Ecran}
+\label{classapp_1_1_ecran}\index{app\+::\+Ecran@{app\+::\+Ecran}}
+
+
+La classe virtuelle communues aux écrans.  
+
+
+
+
+{\ttfamily \#include $<$Ecran.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de app\+:\+:Ecran\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classapp_1_1_ecran__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de app\+:\+:Ecran\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classapp_1_1_ecran__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Ecran} ({\bf Application} $\ast$appli)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+virtual {\bf $\sim$\+Ecran} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel. \end{DoxyCompactList}\item 
+virtual void {\bf traiter\+\_\+evenements} (const sf\+::\+Event \&event)=0
+\begin{DoxyCompactList}\small\item\em Gère les entrées claviers, souris, fenetre ... \end{DoxyCompactList}\item 
+virtual void {\bf actualiser} (float delta\+T)=0
+\begin{DoxyCompactList}\small\item\em Actualiser les éléments. \end{DoxyCompactList}\item 
+virtual void {\bf dessiner} ()=0
+\begin{DoxyCompactList}\small\item\em Rendre les éléments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Application} $\ast$ {\bf m\+\_\+appli}
+\begin{DoxyCompactList}\small\item\em La classe Apllication parent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+La classe virtuelle communues aux écrans. 
+
+\doxyref{app\+::\+Ecran}{p.}{classapp_1_1_ecran} la classe de base des écrans. Les écrans peuvent se superposer (par exemple l\textquotesingle{}écran pause-\/option avec en dessous l\textquotesingle{}écran jeu en pause).
+
+\begin{DoxySeeAlso}{Voir également}
+\doxyref{app\+::\+Ecran\+Demo}{p.}{classapp_1_1_ecran_demo} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{app\+::\+Ecran@{app\+::\+Ecran}!Ecran@{Ecran}}
+\index{Ecran@{Ecran}!app\+::\+Ecran@{app\+::\+Ecran}}
+\subsubsection[{Ecran(\+Application $\ast$appli)}]{\setlength{\rightskip}{0pt plus 5cm}app\+::\+Ecran\+::\+Ecran (
+\begin{DoxyParamCaption}
+\item[{{\bf Application} $\ast$}]{appli}
+\end{DoxyParamCaption}
+)}\label{classapp_1_1_ecran_a06a27f001c26fb8d6f38e04764fd343e}
+
+
+Constructeur. 
+
+\index{app\+::\+Ecran@{app\+::\+Ecran}!````~Ecran@{$\sim$\+Ecran}}
+\index{````~Ecran@{$\sim$\+Ecran}!app\+::\+Ecran@{app\+::\+Ecran}}
+\subsubsection[{$\sim$\+Ecran()}]{\setlength{\rightskip}{0pt plus 5cm}app\+::\+Ecran\+::$\sim$\+Ecran (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classapp_1_1_ecran_ae428d4167b732b687fefc88379d62d9a}
+
+
+Destructeur virtuel. 
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{app\+::\+Ecran@{app\+::\+Ecran}!actualiser@{actualiser}}
+\index{actualiser@{actualiser}!app\+::\+Ecran@{app\+::\+Ecran}}
+\subsubsection[{actualiser(float delta\+T)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void app\+::\+Ecran\+::actualiser (
+\begin{DoxyParamCaption}
+\item[{float}]{delta\+T}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classapp_1_1_ecran_a00b3dd3d538d9dcdeab2f0c3ec3c74c6}
+
+
+Actualiser les éléments. 
+
+Actualiser les différents éléments du ou des écrans actifs.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em delta\+T} & Un {\itshape float} qui indique le delta du temps écoulé depuis la dernière actualisation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Implémenté dans {\bf app\+::\+Ecran\+Demo} \doxyref{}{p.}{classapp_1_1_ecran_demo_abcc11ea64008509c851eda8433ed6a6a}.
+
+\index{app\+::\+Ecran@{app\+::\+Ecran}!dessiner@{dessiner}}
+\index{dessiner@{dessiner}!app\+::\+Ecran@{app\+::\+Ecran}}
+\subsubsection[{dessiner()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void app\+::\+Ecran\+::dessiner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classapp_1_1_ecran_ab279679638e35645bbae78e3f8a3938a}
+
+
+Rendre les éléments. 
+
+Dessiner les différents éléments du ou des écrans actifs. \begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Implémenté dans {\bf app\+::\+Ecran\+Demo} \doxyref{}{p.}{classapp_1_1_ecran_demo_a8d3884c4d641036feae4b562a381b84a}.
+
+\index{app\+::\+Ecran@{app\+::\+Ecran}!traiter\+\_\+evenements@{traiter\+\_\+evenements}}
+\index{traiter\+\_\+evenements@{traiter\+\_\+evenements}!app\+::\+Ecran@{app\+::\+Ecran}}
+\subsubsection[{traiter\+\_\+evenements(const sf\+::\+Event \&event)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void app\+::\+Ecran\+::traiter\+\_\+evenements (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classapp_1_1_ecran_a15b6695f6950903f11a378759aaa9a23}
+
+
+Gère les entrées claviers, souris, fenetre ... 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em event} & evenement S\+F\+M\+L a dispatcher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+rien 
+\end{DoxyReturn}
+
+
+Implémenté dans {\bf app\+::\+Ecran\+Demo} \doxyref{}{p.}{classapp_1_1_ecran_demo_a8487f9c53ed72e5bb99b3819fe5efc29}.
+
+
+
+\subsection{Documentation des champs}
+\index{app\+::\+Ecran@{app\+::\+Ecran}!m\+\_\+appli@{m\+\_\+appli}}
+\index{m\+\_\+appli@{m\+\_\+appli}!app\+::\+Ecran@{app\+::\+Ecran}}
+\subsubsection[{m\+\_\+appli}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Application}$\ast$ app\+::\+Ecran\+::m\+\_\+appli\hspace{0.3cm}{\ttfamily [protected]}}\label{classapp_1_1_ecran_a4711fc3fedd9458041b1f15b2f05f1a1}
+
+
+La classe Apllication parent. 
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+main/include/{\bf Ecran.\+h}\item 
+main/src/{\bf Ecran.\+cpp}\end{DoxyCompactItemize}

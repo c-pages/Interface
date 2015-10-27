@@ -1,0 +1,4 @@
+<map id="gui::Gadget::getLocalBounds" name="gui::Gadget::getLocalBounds">
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#afd13e9fa8612d7f616c45f779018b5a4" title="Aligne le gadget sur un autre. " alt="" coords="244,13,379,39"/>
+<area shape="rect" id="node3" href="$classgui_1_1_bouton_cocher.html#a03a7011fd1269a5502fd3b6e58652c4e" title="Actualise le model du Gadget. " alt="" coords="427,5,564,47"/>
+</map>

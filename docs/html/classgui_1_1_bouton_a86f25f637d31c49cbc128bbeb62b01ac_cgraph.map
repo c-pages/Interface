@@ -1,0 +1,6 @@
+<map id="gui::Bouton::traiter_evenements" name="gui::Bouton::traiter_evenements">
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="189,29,331,56"/>
+<area shape="rect" id="node4" href="$classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="183,80,337,107"/>
+<area shape="rect" id="node5" href="$classgui_1_1_action.html#a7c0cd2dd198d840342cbd6b0ac193a02" title="La gestion des évènements utilisateurs. " alt="" coords="197,131,323,173"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#a698682665f65f54e0798887955f32f2e" title="Acceder à la boundingBox global. " alt="" coords="385,29,581,56"/>
+</map>

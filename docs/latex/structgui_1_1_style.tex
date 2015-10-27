@@ -1,0 +1,174 @@
+\section{Référence de la classe gui\+:\+:Style}
+\label{structgui_1_1_style}\index{gui\+::\+Style@{gui\+::\+Style}}
+
+
+Structure de donnée. Un \doxyref{Style}{p.}{structgui_1_1_style} contient les infos visuelles d\textquotesingle{}un élément.  
+
+
+
+
+{\ttfamily \#include $<$Style.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Style} ()
+\begin{DoxyCompactList}\small\item\em Constructeurs. \end{DoxyCompactList}\item 
+{\bf Style} (const {\bf Style} \&source)
+\begin{DoxyCompactList}\small\item\em Constructeurs de copie. \end{DoxyCompactList}\item 
+bool {\bf a\+Texture} ()
+\end{DoxyCompactItemize}
+\subsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Font {\bf txt\+\_\+police}
+\begin{DoxyCompactList}\small\item\em Police du texte. \end{DoxyCompactList}\item 
+sf\+::\+Text\+::\+Style {\bf txt\+\_\+style}
+\begin{DoxyCompactList}\small\item\em \doxyref{Style}{p.}{structgui_1_1_style} S\+F\+M\+L du texte (Regular, Italic, ... ). \end{DoxyCompactList}\item 
+float {\bf txt\+\_\+taille}
+\begin{DoxyCompactList}\small\item\em Taille du texte. \end{DoxyCompactList}\item 
+sf\+::\+Color {\bf txt\+\_\+couleur}
+\begin{DoxyCompactList}\small\item\em Couleur du texte. \end{DoxyCompactList}\item 
+float {\bf lgn\+\_\+epaisseur}
+\begin{DoxyCompactList}\small\item\em Epaisseur des lignes. \end{DoxyCompactList}\item 
+sf\+::\+Color {\bf lgn\+\_\+couleur}
+\begin{DoxyCompactList}\small\item\em Couleur des lignes. \end{DoxyCompactList}\item 
+sf\+::\+Color {\bf fnd\+\_\+couleur}
+\begin{DoxyCompactList}\small\item\em Couleur du fond. \end{DoxyCompactList}\item 
+sf\+::\+Texture {\bf fnd\+\_\+texture}
+\begin{DoxyCompactList}\small\item\em Texture du fond au repos. \end{DoxyCompactList}\item 
+{\bf Alignements} {\bf align}
+\begin{DoxyCompactList}\small\item\em Alignement. \end{DoxyCompactList}\item 
+{\bf Ajustements} {\bf ajust}
+\begin{DoxyCompactList}\small\item\em Ajustement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Structure de donnée. Un \doxyref{Style}{p.}{structgui_1_1_style} contient les infos visuelles d\textquotesingle{}un élément. 
+
+Un \doxyref{Style}{p.}{structgui_1_1_style} contient les couleurs, tailles(lignes), polices, etc. qui seront appliqués à un \doxyref{Gadget}{p.}{classgui_1_1_gadget}.
+
+Definie un style de rendu, commel\textquotesingle{}épaisseur des lignes, la couleur ou la texture du fond, la police utilisé ...
+
+\begin{DoxySeeAlso}{Voir également}
+\doxyref{gui\+::\+Skin}{p.}{structgui_1_1_skin}, \doxyref{gui\+::\+Gadget}{p.}{classgui_1_1_gadget} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{gui\+::\+Style@{gui\+::\+Style}!Style@{Style}}
+\index{Style@{Style}!gui\+::\+Style@{gui\+::\+Style}}
+\subsubsection[{Style()}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Style\+::\+Style (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{structgui_1_1_style_a32091c5deba2534f758d187bd75bb185}
+
+
+Constructeurs. 
+
+\index{gui\+::\+Style@{gui\+::\+Style}!Style@{Style}}
+\index{Style@{Style}!gui\+::\+Style@{gui\+::\+Style}}
+\subsubsection[{Style(const Style \&source)}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Style\+::\+Style (
+\begin{DoxyParamCaption}
+\item[{const {\bf Style} \&}]{source}
+\end{DoxyParamCaption}
+)}\label{structgui_1_1_style_ab0a9262fd3a370268d802f12d1c33549}
+
+
+Constructeurs de copie. 
+
+Constructeur en copie d\textquotesingle{}un autre style. 
+\begin{DoxyParams}{Paramètres}
+{\em source} & le style à copier \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des fonctions membres}
+\index{gui\+::\+Style@{gui\+::\+Style}!a\+Texture@{a\+Texture}}
+\index{a\+Texture@{a\+Texture}!gui\+::\+Style@{gui\+::\+Style}}
+\subsubsection[{a\+Texture()}]{\setlength{\rightskip}{0pt plus 5cm}bool gui\+::\+Style\+::a\+Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{structgui_1_1_style_adcdc178d43025afefd349a787712edd0}
+
+
+\subsection{Documentation des champs}
+\index{gui\+::\+Style@{gui\+::\+Style}!ajust@{ajust}}
+\index{ajust@{ajust}!gui\+::\+Style@{gui\+::\+Style}}
+\subsubsection[{ajust}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ajustements} gui\+::\+Style\+::ajust}\label{structgui_1_1_style_a09d07cc0c17b2ca6be20986773c849a8}
+
+
+Ajustement. 
+
+\index{gui\+::\+Style@{gui\+::\+Style}!align@{align}}
+\index{align@{align}!gui\+::\+Style@{gui\+::\+Style}}
+\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alignements} gui\+::\+Style\+::align}\label{structgui_1_1_style_a17012be0dc67b2f11e700844526084fb}
+
+
+Alignement. 
+
+\index{gui\+::\+Style@{gui\+::\+Style}!fnd\+\_\+couleur@{fnd\+\_\+couleur}}
+\index{fnd\+\_\+couleur@{fnd\+\_\+couleur}!gui\+::\+Style@{gui\+::\+Style}}
+\subsubsection[{fnd\+\_\+couleur}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Color gui\+::\+Style\+::fnd\+\_\+couleur}\label{structgui_1_1_style_aacaab99becb216f9cce28050665f975a}
+
+
+Couleur du fond. 
+
+\index{gui\+::\+Style@{gui\+::\+Style}!fnd\+\_\+texture@{fnd\+\_\+texture}}
+\index{fnd\+\_\+texture@{fnd\+\_\+texture}!gui\+::\+Style@{gui\+::\+Style}}
+\subsubsection[{fnd\+\_\+texture}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Texture gui\+::\+Style\+::fnd\+\_\+texture}\label{structgui_1_1_style_aac2f66d75a46d11f91e6410686840724}
+
+
+Texture du fond au repos. 
+
+\index{gui\+::\+Style@{gui\+::\+Style}!lgn\+\_\+couleur@{lgn\+\_\+couleur}}
+\index{lgn\+\_\+couleur@{lgn\+\_\+couleur}!gui\+::\+Style@{gui\+::\+Style}}
+\subsubsection[{lgn\+\_\+couleur}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Color gui\+::\+Style\+::lgn\+\_\+couleur}\label{structgui_1_1_style_a8bae0259319ae89069fa84385add3e5b}
+
+
+Couleur des lignes. 
+
+\index{gui\+::\+Style@{gui\+::\+Style}!lgn\+\_\+epaisseur@{lgn\+\_\+epaisseur}}
+\index{lgn\+\_\+epaisseur@{lgn\+\_\+epaisseur}!gui\+::\+Style@{gui\+::\+Style}}
+\subsubsection[{lgn\+\_\+epaisseur}]{\setlength{\rightskip}{0pt plus 5cm}float gui\+::\+Style\+::lgn\+\_\+epaisseur}\label{structgui_1_1_style_a31209e1698e55ba663e297de2336061a}
+
+
+Epaisseur des lignes. 
+
+\index{gui\+::\+Style@{gui\+::\+Style}!txt\+\_\+couleur@{txt\+\_\+couleur}}
+\index{txt\+\_\+couleur@{txt\+\_\+couleur}!gui\+::\+Style@{gui\+::\+Style}}
+\subsubsection[{txt\+\_\+couleur}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Color gui\+::\+Style\+::txt\+\_\+couleur}\label{structgui_1_1_style_a7b61c08f55632e406191a5a5c096e127}
+
+
+Couleur du texte. 
+
+\index{gui\+::\+Style@{gui\+::\+Style}!txt\+\_\+police@{txt\+\_\+police}}
+\index{txt\+\_\+police@{txt\+\_\+police}!gui\+::\+Style@{gui\+::\+Style}}
+\subsubsection[{txt\+\_\+police}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Font gui\+::\+Style\+::txt\+\_\+police}\label{structgui_1_1_style_aecfbd833554718575e69c7d0ac7e3ae5}
+
+
+Police du texte. 
+
+\index{gui\+::\+Style@{gui\+::\+Style}!txt\+\_\+style@{txt\+\_\+style}}
+\index{txt\+\_\+style@{txt\+\_\+style}!gui\+::\+Style@{gui\+::\+Style}}
+\subsubsection[{txt\+\_\+style}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text\+::\+Style gui\+::\+Style\+::txt\+\_\+style}\label{structgui_1_1_style_acac8fe171daca01763fe85e1db677dd2}
+
+
+\doxyref{Style}{p.}{structgui_1_1_style} S\+F\+M\+L du texte (Regular, Italic, ... ). 
+
+\index{gui\+::\+Style@{gui\+::\+Style}!txt\+\_\+taille@{txt\+\_\+taille}}
+\index{txt\+\_\+taille@{txt\+\_\+taille}!gui\+::\+Style@{gui\+::\+Style}}
+\subsubsection[{txt\+\_\+taille}]{\setlength{\rightskip}{0pt plus 5cm}float gui\+::\+Style\+::txt\+\_\+taille}\label{structgui_1_1_style_a8c36ababe07aff3e780bdd153ca82660}
+
+
+Taille du texte. 
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Interface/include/{\bf Style.\+h}\item 
+Interface/src/{\bf Style.\+cpp}\end{DoxyCompactItemize}

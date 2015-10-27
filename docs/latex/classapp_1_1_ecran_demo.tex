@@ -1,0 +1,303 @@
+\section{Référence de la classe app\+:\+:Ecran\+Demo}
+\label{classapp_1_1_ecran_demo}\index{app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}}
+
+
+\doxyref{Ecran}{p.}{classapp_1_1_ecran} de démonstration.  
+
+
+
+
+{\ttfamily \#include $<$Ecran\+Demo.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de app\+:\+:Ecran\+Demo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classapp_1_1_ecran_demo__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de app\+:\+:Ecran\+Demo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapp_1_1_ecran_demo__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Ecran\+Demo} ({\bf Application} $\ast$appli)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf traiter\+\_\+evenements} (const sf\+::\+Event \&event)
+\begin{DoxyCompactList}\small\item\em La gestion des évènements utilisateurs. \end{DoxyCompactList}\item 
+virtual void {\bf actualiser} (float delta\+T)
+\begin{DoxyCompactList}\small\item\em Actualiser les éléments. \end{DoxyCompactList}\item 
+virtual void {\bf dessiner} ()
+\begin{DoxyCompactList}\small\item\em Rendre les éléments. \end{DoxyCompactList}\item 
+void {\bf test} ()
+\begin{DoxyCompactList}\small\item\em Fonction a supprimer. \end{DoxyCompactList}\item 
+virtual void {\bf init\+Scene} ()
+\begin{DoxyCompactList}\small\item\em Initialisation de la scene ... le monde du jeu ou tout autre bazard... \end{DoxyCompactList}\item 
+virtual void {\bf init\+G\+U\+I} ()
+\begin{DoxyCompactList}\small\item\em Initialisation de l\textquotesingle{}interface graphique. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Rectangle\+Shape {\bf m\+\_\+fond}
+\begin{DoxyCompactList}\small\item\em Le shape S\+F\+M\+L du fond de l\textquotesingle{}écran. \end{DoxyCompactList}\item 
+{\bf gui\+::\+Groupe} {\bf m\+\_\+gui}
+\begin{DoxyCompactList}\small\item\em Le groupe de G\+U\+I du menu principal. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf gui\+::\+Label} $>$ {\bf m\+\_\+lbl\+Test}
+\begin{DoxyCompactList}\small\item\em Le label membre de cet ecran pour premettre aux boutons d\textquotesingle{}y accéder. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf gui\+::\+Fenetre} $>$ {\bf fenetre\+A}
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+\doxyref{Ecran}{p.}{classapp_1_1_ecran} de démonstration. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}!Ecran\+Demo@{Ecran\+Demo}}
+\index{Ecran\+Demo@{Ecran\+Demo}!app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}}
+\subsubsection[{Ecran\+Demo(\+Application $\ast$appli)}]{\setlength{\rightskip}{0pt plus 5cm}app\+::\+Ecran\+Demo\+::\+Ecran\+Demo (
+\begin{DoxyParamCaption}
+\item[{{\bf Application} $\ast$}]{appli}
+\end{DoxyParamCaption}
+)}\label{classapp_1_1_ecran_demo_aaf234861fb458c3375c6f038acfe172f}
+
+
+Constructeur. 
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapp_1_1_ecran_demo_aaf234861fb458c3375c6f038acfe172f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}!actualiser@{actualiser}}
+\index{actualiser@{actualiser}!app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}}
+\subsubsection[{actualiser(float delta\+T)}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Ecran\+Demo\+::actualiser (
+\begin{DoxyParamCaption}
+\item[{float}]{delta\+T}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\label{classapp_1_1_ecran_demo_abcc11ea64008509c851eda8433ed6a6a}
+
+
+Actualiser les éléments. 
+
+Actualiser les différents éléments du ou des écrans actifs. 
+\begin{DoxyParams}{Paramètres}
+{\em delta\+T} & Un {\itshape float} qui indique le delta du temps écoulé depuis la dernière actualisation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Implémente {\bf app\+::\+Ecran} \doxyref{}{p.}{classapp_1_1_ecran_a00b3dd3d538d9dcdeab2f0c3ec3c74c6}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapp_1_1_ecran_demo_abcc11ea64008509c851eda8433ed6a6a_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}!dessiner@{dessiner}}
+\index{dessiner@{dessiner}!app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}}
+\subsubsection[{dessiner()}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Ecran\+Demo\+::dessiner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\label{classapp_1_1_ecran_demo_a8d3884c4d641036feae4b562a381b84a}
+
+
+Rendre les éléments. 
+
+Dessiner les différents éléments du ou des écrans actifs. \begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Implémente {\bf app\+::\+Ecran} \doxyref{}{p.}{classapp_1_1_ecran_ab279679638e35645bbae78e3f8a3938a}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapp_1_1_ecran_demo_a8d3884c4d641036feae4b562a381b84a_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}!init\+G\+U\+I@{init\+G\+U\+I}}
+\index{init\+G\+U\+I@{init\+G\+U\+I}!app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}}
+\subsubsection[{init\+G\+U\+I()}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Ecran\+Demo\+::init\+G\+U\+I (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\label{classapp_1_1_ecran_demo_a8e26aa83dad5dea758fc8e445c9399c1}
+
+
+Initialisation de l\textquotesingle{}interface graphique. 
+
+Creation des fenêtres, boutons, menus... ... \begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapp_1_1_ecran_demo_a8e26aa83dad5dea758fc8e445c9399c1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapp_1_1_ecran_demo_a8e26aa83dad5dea758fc8e445c9399c1_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}!init\+Scene@{init\+Scene}}
+\index{init\+Scene@{init\+Scene}!app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}}
+\subsubsection[{init\+Scene()}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Ecran\+Demo\+::init\+Scene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\label{classapp_1_1_ecran_demo_aa61d4d976b54eb8fa13ccbef328da064}
+
+
+Initialisation de la scene ... le monde du jeu ou tout autre bazard... 
+
+Creation de la scene principale du jeu ... \begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapp_1_1_ecran_demo_aa61d4d976b54eb8fa13ccbef328da064_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapp_1_1_ecran_demo_aa61d4d976b54eb8fa13ccbef328da064_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}!test@{test}}
+\index{test@{test}!app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}}
+\subsubsection[{test()}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Ecran\+Demo\+::test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classapp_1_1_ecran_demo_a87deb4261fb1d021eda0e9c88654f786}
+
+
+Fonction a supprimer. 
+
+juste là pour tester des machins bidules. \begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+\index{app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}!traiter\+\_\+evenements@{traiter\+\_\+evenements}}
+\index{traiter\+\_\+evenements@{traiter\+\_\+evenements}!app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}}
+\subsubsection[{traiter\+\_\+evenements(const sf\+::\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void app\+::\+Ecran\+Demo\+::traiter\+\_\+evenements (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\label{classapp_1_1_ecran_demo_a8487f9c53ed72e5bb99b3819fe5efc29}
+
+
+La gestion des évènements utilisateurs. 
+
+Gère les entrées claviers, souris, fenetre ... \begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Implémente {\bf app\+::\+Ecran} \doxyref{}{p.}{classapp_1_1_ecran_a15b6695f6950903f11a378759aaa9a23}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classapp_1_1_ecran_demo_a8487f9c53ed72e5bb99b3819fe5efc29_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Documentation des champs}
+\index{app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}!fenetre\+A@{fenetre\+A}}
+\index{fenetre\+A@{fenetre\+A}!app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}}
+\subsubsection[{fenetre\+A}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf gui\+::\+Fenetre}$>$ app\+::\+Ecran\+Demo\+::fenetre\+A\hspace{0.3cm}{\ttfamily [private]}}\label{classapp_1_1_ecran_demo_ad55cc06f11ed9b072e7bf5c6f3e94b64}
+\index{app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}!m\+\_\+fond@{m\+\_\+fond}}
+\index{m\+\_\+fond@{m\+\_\+fond}!app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}}
+\subsubsection[{m\+\_\+fond}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Rectangle\+Shape app\+::\+Ecran\+Demo\+::m\+\_\+fond\hspace{0.3cm}{\ttfamily [private]}}\label{classapp_1_1_ecran_demo_a5a253769dce7378efc2de34b479e3517}
+
+
+Le shape S\+F\+M\+L du fond de l\textquotesingle{}écran. 
+
+\index{app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}!m\+\_\+gui@{m\+\_\+gui}}
+\index{m\+\_\+gui@{m\+\_\+gui}!app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}}
+\subsubsection[{m\+\_\+gui}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gui\+::\+Groupe} app\+::\+Ecran\+Demo\+::m\+\_\+gui\hspace{0.3cm}{\ttfamily [private]}}\label{classapp_1_1_ecran_demo_a4dc8dc175d929eddf5902549cdfd38bd}
+
+
+Le groupe de G\+U\+I du menu principal. 
+
+\index{app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}!m\+\_\+lbl\+Test@{m\+\_\+lbl\+Test}}
+\index{m\+\_\+lbl\+Test@{m\+\_\+lbl\+Test}!app\+::\+Ecran\+Demo@{app\+::\+Ecran\+Demo}}
+\subsubsection[{m\+\_\+lbl\+Test}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf gui\+::\+Label}$>$ app\+::\+Ecran\+Demo\+::m\+\_\+lbl\+Test\hspace{0.3cm}{\ttfamily [private]}}\label{classapp_1_1_ecran_demo_a5b1b56f21f6391c6b31d169efd0fcee5}
+
+
+Le label membre de cet ecran pour premettre aux boutons d\textquotesingle{}y accéder. 
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+main/include/ecrans/{\bf Ecran\+Demo.\+h}\item 
+main/src/ecrans/{\bf Ecran\+Demo.\+cpp}\end{DoxyCompactItemize}

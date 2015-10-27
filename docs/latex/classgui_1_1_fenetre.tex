@@ -1,0 +1,1363 @@
+\section{Référence de la classe gui\+:\+:Fenetre}
+\label{classgui_1_1_fenetre}\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+
+
+\doxyref{Gadget}{p.}{classgui_1_1_gadget} permettant de rassembler des Gadgets au sein d\textquotesingle{}une \doxyref{Fenetre}{p.}{classgui_1_1_fenetre}.  
+
+
+
+
+{\ttfamily \#include $<$Fenetre.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de gui\+:\+:Fenetre\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classgui_1_1_fenetre__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de gui\+:\+:Fenetre\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classgui_1_1_fenetre__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Fenetre} (sf\+::\+Render\+Window $\ast$fenetre)
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+{\bf Fenetre} (sf\+::\+Render\+Window $\ast$fenetre, std\+::shared\+\_\+ptr$<$ {\bf Skin} $>$ skin)
+\begin{DoxyCompactList}\small\item\em Constructeur avec \doxyref{Skin}{p.}{structgui_1_1_skin}. \end{DoxyCompactList}\item 
+{\bf Fenetre} (sf\+::\+Render\+Window $\ast$fenetre, sf\+::\+Vector2f taille=\{100, 100\}, bool depl=true, bool ferm=true, bool redim=true)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+virtual {\bf $\sim$\+Fenetre} ()
+\item 
+virtual void {\bf set\+Size} (sf\+::\+Vector2f taille)
+\begin{DoxyCompactList}\small\item\em Definir la taille du contenu. \end{DoxyCompactList}\item 
+virtual sf\+::\+Vector2f {\bf get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Acceder à la taille de la fenetre. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect {\bf get\+Local\+Bounds} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de la bounding\+Box en local. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect {\bf get\+Global\+Bounds} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de la bounding\+Box en global. \end{DoxyCompactList}\item 
+virtual void {\bf ajouter} ({\bf ptr} enfant)
+\begin{DoxyCompactList}\small\item\em ajouter un enfant \end{DoxyCompactList}\item 
+void {\bf set\+Titre} (std\+::string titre)
+\begin{DoxyCompactList}\small\item\em Definir le titre. \end{DoxyCompactList}\item 
+void {\bf set\+Bordure} (float bordure)
+\begin{DoxyCompactList}\small\item\em Definir l\textquotesingle{}epaisseur de la bordure. \end{DoxyCompactList}\item 
+float {\bf get\+Bordure} ()
+\begin{DoxyCompactList}\small\item\em renvois la bordure \end{DoxyCompactList}\item 
+virtual void {\bf traiter\+\_\+evenements} (const sf\+::\+Event \&event)
+\begin{DoxyCompactList}\small\item\em La gestion des évènements utilisateurs. \end{DoxyCompactList}\item 
+virtual void {\bf actualiser} (float delta\+T)
+\begin{DoxyCompactList}\small\item\em Actualiser les éléments. \end{DoxyCompactList}\item 
+virtual void {\bf draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const 
+\begin{DoxyCompactList}\small\item\em Rendre les éléments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf ajouter\+U\+I} ({\bf ptr} enfant)
+\begin{DoxyCompactList}\small\item\em Pour lier les élément de l\textquotesingle{}interface de la fenetre à la fenêtre. \end{DoxyCompactList}\item 
+void {\bf init} ()
+\begin{DoxyCompactList}\small\item\em Initialisation lors de la création. \end{DoxyCompactList}\item 
+void {\bf init\+Skin\+Bouton} ()
+\begin{DoxyCompactList}\small\item\em Initialiser le \doxyref{Skin}{p.}{structgui_1_1_skin} des bouton de l\textquotesingle{}interface. \end{DoxyCompactList}\item 
+void {\bf init\+U\+I} ()
+\begin{DoxyCompactList}\small\item\em Initialiser les gadgets ( boutons, titre...). \end{DoxyCompactList}\item 
+void {\bf init\+U\+I\+\_\+drag} ()
+\begin{DoxyCompactList}\small\item\em Initialiser l\textquotesingle{}interface pour prendre en compte le drag. \end{DoxyCompactList}\item 
+void {\bf init\+U\+I\+\_\+fermer} ()
+\begin{DoxyCompactList}\small\item\em Initialiser l\textquotesingle{}interface pour le bouton fermer. \end{DoxyCompactList}\item 
+void {\bf init\+U\+I\+\_\+redim} ()
+\begin{DoxyCompactList}\small\item\em Initialiser l\textquotesingle{}interface pour les bouton de redimensionnements. \end{DoxyCompactList}\item 
+void {\bf init\+U\+I\+\_\+titre} ()
+\begin{DoxyCompactList}\small\item\em Initialiser l\textquotesingle{}interface pour le titre. \end{DoxyCompactList}\item 
+virtual void {\bf update\+Style} ()
+\begin{DoxyCompactList}\small\item\em mais à jour les styles des éléments de la fenêtre. \end{DoxyCompactList}\item 
+void {\bf maj\+Geom} ()
+\begin{DoxyCompactList}\small\item\em Mettre à jour les gémotries de la fenêtre. \end{DoxyCompactList}\item 
+void {\bf Manipuler\+Fenetre} ()
+\begin{DoxyCompactList}\small\item\em les manipulation de drag et de redimensionnement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ {\bf m\+\_\+fenetre\+S\+F\+M\+L}
+\begin{DoxyCompactList}\small\item\em pointeur vers la fenetre S\+F\+M\+L (pour la position absolue de la souris , pour les manips de la fenetre). \end{DoxyCompactList}\item 
+float {\bf m\+\_\+bordure}
+\begin{DoxyCompactList}\small\item\em Le taille de la bordure du cadre. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f {\bf m\+\_\+taille}
+\begin{DoxyCompactList}\small\item\em Le taille de la fenetre. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Skin} $>$ {\bf m\+\_\+skin\+Btn}
+\begin{DoxyCompactList}\small\item\em Le skin pour les boutons de la fenetre (drag, fermer, redim. ...) \end{DoxyCompactList}\item 
+bool {\bf m\+\_\+deplacable}
+\begin{DoxyCompactList}\small\item\em option\+: La fenetre est deplaçable (true) ou pas (false). \end{DoxyCompactList}\item 
+bool {\bf m\+\_\+redimensionnable}
+\begin{DoxyCompactList}\small\item\em option\+: La fenetre est redimensionnable (true) ou pas (false). \end{DoxyCompactList}\item 
+bool {\bf m\+\_\+fermable}
+\begin{DoxyCompactList}\small\item\em option\+: La fenetre est fermable (true) ou pas (false). \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Label} $>$ {\bf m\+\_\+lbl\+Titre}
+\begin{DoxyCompactList}\small\item\em Le \doxyref{Label}{p.}{classgui_1_1_label} titre. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Label} $>$ {\bf m\+\_\+lbl\+Fermer}
+\begin{DoxyCompactList}\small\item\em Le X pour le bouton fermer. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Bouton} $>$ {\bf m\+\_\+btn\+Fermer}
+\begin{DoxyCompactList}\small\item\em Le \doxyref{Bouton}{p.}{classgui_1_1_bouton} pour fermer la fenetre. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Bouton} $>$ {\bf m\+\_\+btn\+Drag}
+\begin{DoxyCompactList}\small\item\em Le \doxyref{Bouton}{p.}{classgui_1_1_bouton} pour drager la fenetre. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Bouton} $>$ {\bf m\+\_\+btn\+Redim\+Bas\+Droite}
+\begin{DoxyCompactList}\small\item\em \doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Bouton} $>$ {\bf m\+\_\+btn\+Redim\+Bas\+Gauche}
+\begin{DoxyCompactList}\small\item\em \doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Bouton} $>$ {\bf m\+\_\+btn\+Redim\+Haut\+Droite}
+\begin{DoxyCompactList}\small\item\em \doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Bouton} $>$ {\bf m\+\_\+btn\+Redim\+Haut\+Gauche}
+\begin{DoxyCompactList}\small\item\em \doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Bouton} $>$ {\bf m\+\_\+btn\+Redim\+Gauche}
+\begin{DoxyCompactList}\small\item\em \doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Bouton} $>$ {\bf m\+\_\+btn\+Redim\+Droite}
+\begin{DoxyCompactList}\small\item\em \doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Bouton} $>$ {\bf m\+\_\+btn\+Redim\+Bas}
+\begin{DoxyCompactList}\small\item\em \doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Bouton} $>$ {\bf m\+\_\+btn\+Redim\+Haut}
+\begin{DoxyCompactList}\small\item\em \doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Image} $>$ {\bf m\+\_\+\+Cadre\+Contenu}
+\begin{DoxyCompactList}\small\item\em \doxyref{Groupe}{p.}{classgui_1_1_groupe} des éléments du contenu de la \doxyref{Fenetre}{p.}{classgui_1_1_fenetre}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Groupe} $>$ {\bf m\+\_\+grp\+Contenu}
+\begin{DoxyCompactList}\small\item\em \doxyref{Groupe}{p.}{classgui_1_1_groupe} des éléments du contenu de la \doxyref{Fenetre}{p.}{classgui_1_1_fenetre}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ {\bf Image} $>$ {\bf m\+\_\+fond}
+\begin{DoxyCompactList}\small\item\em Le rectangle du fond. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ {\bf m\+\_\+contenu}
+\begin{DoxyCompactList}\small\item\em Le sprite qui affiche le contenu de la fenetre. \end{DoxyCompactList}\item 
+bool {\bf m\+\_\+dragging}
+\begin{DoxyCompactList}\small\item\em En train de dragger ? \end{DoxyCompactList}\item 
+bool {\bf m\+\_\+redim\+Droite}
+\begin{DoxyCompactList}\small\item\em En train de redim ?. \end{DoxyCompactList}\item 
+bool {\bf m\+\_\+redim\+Gauche}
+\begin{DoxyCompactList}\small\item\em En train de redim ?. \end{DoxyCompactList}\item 
+bool {\bf m\+\_\+redim\+Bas}
+\begin{DoxyCompactList}\small\item\em En train de redim ?. \end{DoxyCompactList}\item 
+bool {\bf m\+\_\+redim\+Haut}
+\begin{DoxyCompactList}\small\item\em En train de redim ?. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f {\bf m\+\_\+pos\+Fenetre\+Orig}
+\begin{DoxyCompactList}\small\item\em position de la fenetre à l\textquotesingle{}origine du drag. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f {\bf m\+\_\+pos\+Mouse\+Orig}
+\begin{DoxyCompactList}\small\item\em position de la souris a l\textquotesingle{}origine du drag. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f {\bf m\+\_\+taille\+Fenetre\+Orig}
+\begin{DoxyCompactList}\small\item\em taille de la fenetre à l\textquotesingle{}origine. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Drag\+Debut}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Drag\+Fin}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Drag\+Entre}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Drag\+Sort}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Fermer}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Fermer\+Entre}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Fermer\+Sort}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Bas\+Droite\+Debut}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Bas\+Droite\+Fin}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Bas\+Gauche\+Debut}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Bas\+Gauche\+Fin}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Haut\+Droite\+Debut}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Haut\+Droite\+Fin}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Haut\+Gauche\+Debut}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Haut\+Gauche\+Fin}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Droite\+Debut}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Droite\+Fin}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Gauche\+Debut}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Gauche\+Fin}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Bas\+Debut}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Bas\+Fin}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Haut\+Debut}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\item 
+{\bf Func\+Type} {\bf m\+\_\+fct\+Redim\+Haut\+Fin}
+\begin{DoxyCompactList}\small\item\em fonction pour manipuler la fenetre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+\doxyref{Gadget}{p.}{classgui_1_1_gadget} permettant de rassembler des Gadgets au sein d\textquotesingle{}une \doxyref{Fenetre}{p.}{classgui_1_1_fenetre}. 
+
+Les differents axes d\textquotesingle{}une fenêtre\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// ////////////////////////////////////////////////////////////////////////////////////}
+\textcolor{comment}{//                                                                                   //}
+\textcolor{comment}{//                HORIZ\_...                                                          //}
+\textcolor{comment}{//                                                                                   //}
+\textcolor{comment}{//  VERTI\_...     0    1                 3     2    Total                            //}
+\textcolor{comment}{//                |    |                 |     |    |                                //}
+\textcolor{comment}{//      0 ---     |----|-----------------------|----|  ---                           //}
+\textcolor{comment}{//                |Red.|      Redimension      |Red.|      m\_bordure                 //}
+\textcolor{comment}{//      1 ---     |----|-----------------|-----|----|  ---                           //}
+\textcolor{comment}{//                |    |                 |     |    |      m\_lblTitre->getSize().y   //}
+\textcolor{comment}{//                |    |  Titre/drag     |Ferm.|    |  ---                           //}
+\textcolor{comment}{//                |    |                 |     |    |      m\_bordure                 //}
+\textcolor{comment}{//      2 ---     |   0.0----------------|-----|    |  ---                           //}
+\textcolor{comment}{//                |Red.|                       |Red.|                                //}
+\textcolor{comment}{//                |    |                       |    |                                //}
+\textcolor{comment}{//                |    |      Contenu          |    |      taille.y                  //}
+\textcolor{comment}{//                |    |      ( taille )       |    |                                //}
+\textcolor{comment}{//                |    |                       |    |                                //}
+\textcolor{comment}{//      3 ---     |----|-----------------------|----|  ---                           //}
+\textcolor{comment}{//                |Red.|      Redimemsion      |Red.|      m\_bordure                 //}
+\textcolor{comment}{//  Total ---     |----|-----------------------|----|  ---                           //}
+\textcolor{comment}{//                                                                                   //}
+\textcolor{comment}{//                |    |                       |    |                                //}
+\textcolor{comment}{//               m\_bordure      taille.x      m\_bordure                              //}
+\textcolor{comment}{//                                                                                   //}
+\textcolor{comment}{///////////////////////////////////////////////////////////////////////////////////////}
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{Voir également}
+\doxyref{gui\+::\+Gadget}{p.}{classgui_1_1_gadget} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!Fenetre@{Fenetre}}
+\index{Fenetre@{Fenetre}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{Fenetre(sf\+::\+Render\+Window $\ast$fenetre)}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Fenetre\+::\+Fenetre (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window $\ast$}]{fenetre}
+\end{DoxyParamCaption}
+)}\label{classgui_1_1_fenetre_ac759650534a793c417766f61c86edea7}
+
+
+Constructeur par défaut. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em fenetre} & la fenêtre S\+F\+M\+L \\
+\hline
+\end{DoxyParams}
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!Fenetre@{Fenetre}}
+\index{Fenetre@{Fenetre}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{Fenetre(sf\+::\+Render\+Window $\ast$fenetre, std\+::shared\+\_\+ptr$<$ Skin $>$ skin)}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Fenetre\+::\+Fenetre (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window $\ast$}]{fenetre, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Skin} $>$}]{skin}
+\end{DoxyParamCaption}
+)}\label{classgui_1_1_fenetre_aa0e08d6b66990edffcddebe65fa2d4d9}
+
+
+Constructeur avec \doxyref{Skin}{p.}{structgui_1_1_skin}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em fenetre} & la fenêtre S\+F\+M\+L \\
+\hline
+{\em skin} & Le skin a appliquer à la fenêtre \\
+\hline
+\end{DoxyParams}
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!Fenetre@{Fenetre}}
+\index{Fenetre@{Fenetre}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{Fenetre(sf\+::\+Render\+Window $\ast$fenetre, sf\+::\+Vector2f taille=\lcurly{}100, 100\rcurly{}, bool depl=true, bool ferm=true, bool redim=true)}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Fenetre\+::\+Fenetre (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window $\ast$}]{fenetre, }
+\item[{sf\+::\+Vector2f}]{taille = {\ttfamily \{~100~,~100~\}}, }
+\item[{bool}]{depl = {\ttfamily true}, }
+\item[{bool}]{ferm = {\ttfamily true}, }
+\item[{bool}]{redim = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{classgui_1_1_fenetre_a76363e8f7827b09afd93cbeef13986fc}
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em fenetre} & la fenêtre de rendu S\+F\+M\+L. \\
+\hline
+{\em taille} & du gadget. \\
+\hline
+{\em depl} & option\+: fenêtre draggale. \\
+\hline
+{\em ferm} & option\+: fenêtre avec bouton pour la fermer. \\
+\hline
+{\em redim} & option\+: fenêtre redimensionnable\\
+\hline
+\end{DoxyParams}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a76363e8f7827b09afd93cbeef13986fc_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!````~Fenetre@{$\sim$\+Fenetre}}
+\index{````~Fenetre@{$\sim$\+Fenetre}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{$\sim$\+Fenetre()}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Fenetre\+::$\sim$\+Fenetre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_fenetre_aa5c58bd870a76c880ac9ea0423d0c9d2}
+
+
+\subsection{Documentation des fonctions membres}
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!actualiser@{actualiser}}
+\index{actualiser@{actualiser}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{actualiser(float delta\+T)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::actualiser (
+\begin{DoxyParamCaption}
+\item[{float}]{delta\+T}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_fenetre_a73a3c50ce1248fbe0f251a3a3a1e8cb9}
+
+
+Actualiser les éléments. 
+
+Actualiser les différents éléments du ou des écrans actifs. 
+\begin{DoxyParams}{Paramètres}
+{\em delta\+T} & Un {\itshape float} qui indique le delta du temps écoulé depuis la dernière actualisation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a06c66be095e4d531ef307a3db36e2b4f}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a73a3c50ce1248fbe0f251a3a3a1e8cb9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!ajouter@{ajouter}}
+\index{ajouter@{ajouter}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{ajouter(ptr enfant)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::ajouter (
+\begin{DoxyParamCaption}
+\item[{{\bf ptr}}]{enfant}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_fenetre_a77869f5bdb4c4a6c1d40a5cff3b9250b}
+
+
+ajouter un enfant 
+
+Pour une fenetre on rajoute l\textquotesingle{}enfant dans le groups de contenu.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em enfant} & \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a9b4e990211299d37bf271db9d43dd32c}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a77869f5bdb4c4a6c1d40a5cff3b9250b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!ajouter\+U\+I@{ajouter\+U\+I}}
+\index{ajouter\+U\+I@{ajouter\+U\+I}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{ajouter\+U\+I(ptr enfant)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::ajouter\+U\+I (
+\begin{DoxyParamCaption}
+\item[{{\bf ptr}}]{enfant}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a8036216c6c1895f10b913581e1b6f493}
+
+
+Pour lier les élément de l\textquotesingle{}interface de la fenetre à la fenêtre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em enfant} & un élément de l\textquotesingle{}interface de la fenêtre. \\
+\hline
+\end{DoxyParams}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a8036216c6c1895f10b913581e1b6f493_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a8036216c6c1895f10b913581e1b6f493_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!draw@{draw}}
+\index{draw@{draw}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{draw(sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const }]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Target \&}]{target, }
+\item[{sf\+::\+Render\+States}]{states}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_fenetre_a267c664d6d1632fbef4134019303b8d6}
+
+
+Rendre les éléments. 
+
+Dessiner les différents éléments du ou des écrans actifs. \begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a7ccb80ac58d4b1320bc76ad8ae031866}.
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!get\+Bordure@{get\+Bordure}}
+\index{get\+Bordure@{get\+Bordure}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{get\+Bordure()}]{\setlength{\rightskip}{0pt plus 5cm}float gui\+::\+Fenetre\+::get\+Bordure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classgui_1_1_fenetre_aad9a49186fcd094f418ac90fb45c3bb6}
+
+
+renvois la bordure 
+
+\begin{DoxyReturn}{Renvoie}
+la bordure 
+\end{DoxyReturn}
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!get\+Global\+Bounds@{get\+Global\+Bounds}}
+\index{get\+Global\+Bounds@{get\+Global\+Bounds}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{get\+Global\+Bounds()}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect gui\+::\+Fenetre\+::get\+Global\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_fenetre_a41e839460298a6f94327dca022ad8fb8}
+
+
+Accesseur de la bounding\+Box en global. 
+
+\begin{DoxyReturn}{Renvoie}
+La bounding\+Box 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a698682665f65f54e0798887955f32f2e}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a41e839460298a6f94327dca022ad8fb8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a41e839460298a6f94327dca022ad8fb8_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!get\+Local\+Bounds@{get\+Local\+Bounds}}
+\index{get\+Local\+Bounds@{get\+Local\+Bounds}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{get\+Local\+Bounds()}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect gui\+::\+Fenetre\+::get\+Local\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_fenetre_a18e9f2f566b150967a4cc141059ecd81}
+
+
+Accesseur de la bounding\+Box en local. 
+
+\begin{DoxyReturn}{Renvoie}
+La bounding\+Box 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a4552567e63384c6a30519303f4052f11}.
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{get\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f gui\+::\+Fenetre\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_fenetre_a4a9b783095e1ebf716f16042efa33da9}
+
+
+Acceder à la taille de la fenetre. 
+
+\begin{DoxyReturn}{Renvoie}
+la taille reel de la fenetre avec boutons.. 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a8d17e7736249da941358b9e09e70ea2c}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a4a9b783095e1ebf716f16042efa33da9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!init@{init}}
+\index{init@{init}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{init()}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a104f8f9143a7280d7d56ca2d2a539123}
+
+
+Initialisation lors de la création. 
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a104f8f9143a7280d7d56ca2d2a539123_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classgui_1_1_fenetre_a104f8f9143a7280d7d56ca2d2a539123_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!init\+Skin\+Bouton@{init\+Skin\+Bouton}}
+\index{init\+Skin\+Bouton@{init\+Skin\+Bouton}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{init\+Skin\+Bouton()}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::init\+Skin\+Bouton (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a05f4a03ba7bff8bf975a9bca6cf43d43}
+
+
+Initialiser le \doxyref{Skin}{p.}{structgui_1_1_skin} des bouton de l\textquotesingle{}interface. 
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a05f4a03ba7bff8bf975a9bca6cf43d43_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!init\+U\+I@{init\+U\+I}}
+\index{init\+U\+I@{init\+U\+I}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{init\+U\+I()}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::init\+U\+I (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a61f7df8ef475ee9f9019e8c17843f758}
+
+
+Initialiser les gadgets ( boutons, titre...). 
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a61f7df8ef475ee9f9019e8c17843f758_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a61f7df8ef475ee9f9019e8c17843f758_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!init\+U\+I\+\_\+drag@{init\+U\+I\+\_\+drag}}
+\index{init\+U\+I\+\_\+drag@{init\+U\+I\+\_\+drag}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{init\+U\+I\+\_\+drag()}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::init\+U\+I\+\_\+drag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a72881398e744a405b56046d60917d1de}
+
+
+Initialiser l\textquotesingle{}interface pour prendre en compte le drag. 
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a72881398e744a405b56046d60917d1de_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a72881398e744a405b56046d60917d1de_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!init\+U\+I\+\_\+fermer@{init\+U\+I\+\_\+fermer}}
+\index{init\+U\+I\+\_\+fermer@{init\+U\+I\+\_\+fermer}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{init\+U\+I\+\_\+fermer()}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::init\+U\+I\+\_\+fermer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_afcc8d0c333333142239abf21d1e8bfc6}
+
+
+Initialiser l\textquotesingle{}interface pour le bouton fermer. 
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_afcc8d0c333333142239abf21d1e8bfc6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_afcc8d0c333333142239abf21d1e8bfc6_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!init\+U\+I\+\_\+redim@{init\+U\+I\+\_\+redim}}
+\index{init\+U\+I\+\_\+redim@{init\+U\+I\+\_\+redim}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{init\+U\+I\+\_\+redim()}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::init\+U\+I\+\_\+redim (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_aefa0438688ee292fef0a641df62ff13a}
+
+
+Initialiser l\textquotesingle{}interface pour les bouton de redimensionnements. 
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_aefa0438688ee292fef0a641df62ff13a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_aefa0438688ee292fef0a641df62ff13a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!init\+U\+I\+\_\+titre@{init\+U\+I\+\_\+titre}}
+\index{init\+U\+I\+\_\+titre@{init\+U\+I\+\_\+titre}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{init\+U\+I\+\_\+titre()}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::init\+U\+I\+\_\+titre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_ab067f6b1633c4f9d55bde57ac78832f8}
+
+
+Initialiser l\textquotesingle{}interface pour le titre. 
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_ab067f6b1633c4f9d55bde57ac78832f8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_ab067f6b1633c4f9d55bde57ac78832f8_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!maj\+Geom@{maj\+Geom}}
+\index{maj\+Geom@{maj\+Geom}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{maj\+Geom()}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::maj\+Geom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\label{classgui_1_1_fenetre_a9216c737157ff020fde49bd272d9521d}
+
+
+Mettre à jour les gémotries de la fenêtre. 
+
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a8a72d0816ec1928958ff5dd3ccd983f5}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a9216c737157ff020fde49bd272d9521d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a9216c737157ff020fde49bd272d9521d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!Manipuler\+Fenetre@{Manipuler\+Fenetre}}
+\index{Manipuler\+Fenetre@{Manipuler\+Fenetre}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{Manipuler\+Fenetre()}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::\+Manipuler\+Fenetre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a714cf4ba2a7e1489204b68beaa594e27}
+
+
+les manipulation de drag et de redimensionnement. 
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a714cf4ba2a7e1489204b68beaa594e27_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a714cf4ba2a7e1489204b68beaa594e27_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!set\+Bordure@{set\+Bordure}}
+\index{set\+Bordure@{set\+Bordure}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{set\+Bordure(float bordure)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::set\+Bordure (
+\begin{DoxyParamCaption}
+\item[{float}]{bordure}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classgui_1_1_fenetre_a5c9d501e681cd47ad4b7031d18352b9b}
+
+
+Definir l\textquotesingle{}epaisseur de la bordure. 
+
+la bordure contient les boutons de recadrage
+
+
+\begin{DoxyParams}{Paramètres}
+{\em bordure} & \\
+\hline
+\end{DoxyParams}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a5c9d501e681cd47ad4b7031d18352b9b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{set\+Size(sf\+::\+Vector2f taille)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void gui\+::\+Fenetre\+::set\+Size (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2f}]{taille}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classgui_1_1_fenetre_a0ef3d718be52458dc0c9137f669819fc}
+
+
+Definir la taille du contenu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em taille,c\textquotesingle{}est} & la taille du cadre du contenu, sans les boutons de la fenetres. \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a2d021f2ce19a4335d79bcaedf4ab4bb2}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a0ef3d718be52458dc0c9137f669819fc_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!set\+Titre@{set\+Titre}}
+\index{set\+Titre@{set\+Titre}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{set\+Titre(std\+::string titre)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::set\+Titre (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{titre}
+\end{DoxyParamCaption}
+)}\label{classgui_1_1_fenetre_a24b2816833602308807148bb523c518c}
+
+
+Definir le titre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em titre} & le nouveau titre. \\
+\hline
+\end{DoxyParams}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_a24b2816833602308807148bb523c518c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!traiter\+\_\+evenements@{traiter\+\_\+evenements}}
+\index{traiter\+\_\+evenements@{traiter\+\_\+evenements}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{traiter\+\_\+evenements(const sf\+::\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::traiter\+\_\+evenements (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_fenetre_a555be24b33faedf52e92695f4f1785b3}
+
+
+La gestion des évènements utilisateurs. 
+
+Gère les entrées claviers, souris, fenetre ... \begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a510ae68144997724188d2bb902c3103d}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{classgui_1_1_fenetre_a555be24b33faedf52e92695f4f1785b3_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!update\+Style@{update\+Style}}
+\index{update\+Style@{update\+Style}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{update\+Style()}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Fenetre\+::update\+Style (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\label{classgui_1_1_fenetre_ad5955dbe8116150699472cb999e2b695}
+
+
+mais à jour les styles des éléments de la fenêtre. 
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_fenetre_ad5955dbe8116150699472cb999e2b695_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Documentation des champs}
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+bordure@{m\+\_\+bordure}}
+\index{m\+\_\+bordure@{m\+\_\+bordure}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+bordure}]{\setlength{\rightskip}{0pt plus 5cm}float gui\+::\+Fenetre\+::m\+\_\+bordure\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_afc711287fdbd88ff8b081beac7e3d234}
+
+
+Le taille de la bordure du cadre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+btn\+Drag@{m\+\_\+btn\+Drag}}
+\index{m\+\_\+btn\+Drag@{m\+\_\+btn\+Drag}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+btn\+Drag}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Bouton}$>$ gui\+::\+Fenetre\+::m\+\_\+btn\+Drag\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a6945a31ffdf0c490d80dd7182edece99}
+
+
+Le \doxyref{Bouton}{p.}{classgui_1_1_bouton} pour drager la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+btn\+Fermer@{m\+\_\+btn\+Fermer}}
+\index{m\+\_\+btn\+Fermer@{m\+\_\+btn\+Fermer}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+btn\+Fermer}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Bouton}$>$ gui\+::\+Fenetre\+::m\+\_\+btn\+Fermer\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_aa00c89dc75dbbe97672445f981ecf5d2}
+
+
+Le \doxyref{Bouton}{p.}{classgui_1_1_bouton} pour fermer la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+btn\+Redim\+Bas@{m\+\_\+btn\+Redim\+Bas}}
+\index{m\+\_\+btn\+Redim\+Bas@{m\+\_\+btn\+Redim\+Bas}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+btn\+Redim\+Bas}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Bouton}$>$ gui\+::\+Fenetre\+::m\+\_\+btn\+Redim\+Bas\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_ae0d81cd231c2fec4e1fd59eea16c9269}
+
+
+\doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+btn\+Redim\+Bas\+Droite@{m\+\_\+btn\+Redim\+Bas\+Droite}}
+\index{m\+\_\+btn\+Redim\+Bas\+Droite@{m\+\_\+btn\+Redim\+Bas\+Droite}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+btn\+Redim\+Bas\+Droite}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Bouton}$>$ gui\+::\+Fenetre\+::m\+\_\+btn\+Redim\+Bas\+Droite\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_aab1b7df9823d963e4bb6c5248e2c388c}
+
+
+\doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+btn\+Redim\+Bas\+Gauche@{m\+\_\+btn\+Redim\+Bas\+Gauche}}
+\index{m\+\_\+btn\+Redim\+Bas\+Gauche@{m\+\_\+btn\+Redim\+Bas\+Gauche}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+btn\+Redim\+Bas\+Gauche}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Bouton}$>$ gui\+::\+Fenetre\+::m\+\_\+btn\+Redim\+Bas\+Gauche\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a92859016175a3274be4e7fd9477d53be}
+
+
+\doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+btn\+Redim\+Droite@{m\+\_\+btn\+Redim\+Droite}}
+\index{m\+\_\+btn\+Redim\+Droite@{m\+\_\+btn\+Redim\+Droite}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+btn\+Redim\+Droite}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Bouton}$>$ gui\+::\+Fenetre\+::m\+\_\+btn\+Redim\+Droite\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a5c1455859af374961ab3c441aff5c175}
+
+
+\doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+btn\+Redim\+Gauche@{m\+\_\+btn\+Redim\+Gauche}}
+\index{m\+\_\+btn\+Redim\+Gauche@{m\+\_\+btn\+Redim\+Gauche}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+btn\+Redim\+Gauche}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Bouton}$>$ gui\+::\+Fenetre\+::m\+\_\+btn\+Redim\+Gauche\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_ac887e6862f51fed51695633646f16331}
+
+
+\doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+btn\+Redim\+Haut@{m\+\_\+btn\+Redim\+Haut}}
+\index{m\+\_\+btn\+Redim\+Haut@{m\+\_\+btn\+Redim\+Haut}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+btn\+Redim\+Haut}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Bouton}$>$ gui\+::\+Fenetre\+::m\+\_\+btn\+Redim\+Haut\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a4b65af2c240cb7ba2d796c8f2e593f3c}
+
+
+\doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+btn\+Redim\+Haut\+Droite@{m\+\_\+btn\+Redim\+Haut\+Droite}}
+\index{m\+\_\+btn\+Redim\+Haut\+Droite@{m\+\_\+btn\+Redim\+Haut\+Droite}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+btn\+Redim\+Haut\+Droite}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Bouton}$>$ gui\+::\+Fenetre\+::m\+\_\+btn\+Redim\+Haut\+Droite\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_ae78c7d630a652843f5275ad091353332}
+
+
+\doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+btn\+Redim\+Haut\+Gauche@{m\+\_\+btn\+Redim\+Haut\+Gauche}}
+\index{m\+\_\+btn\+Redim\+Haut\+Gauche@{m\+\_\+btn\+Redim\+Haut\+Gauche}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+btn\+Redim\+Haut\+Gauche}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Bouton}$>$ gui\+::\+Fenetre\+::m\+\_\+btn\+Redim\+Haut\+Gauche\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_ab433686df231f542546b6ab1dc641684}
+
+
+\doxyref{Bouton}{p.}{classgui_1_1_bouton} pour redimensionner la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+\+Cadre\+Contenu@{m\+\_\+\+Cadre\+Contenu}}
+\index{m\+\_\+\+Cadre\+Contenu@{m\+\_\+\+Cadre\+Contenu}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+\+Cadre\+Contenu}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Image}$>$ gui\+::\+Fenetre\+::m\+\_\+\+Cadre\+Contenu\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_aa5d09efa893a861596e9b5eda7d24c91}
+
+
+\doxyref{Groupe}{p.}{classgui_1_1_groupe} des éléments du contenu de la \doxyref{Fenetre}{p.}{classgui_1_1_fenetre}. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+contenu@{m\+\_\+contenu}}
+\index{m\+\_\+contenu@{m\+\_\+contenu}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+contenu}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$sf\+::\+Sprite$>$ gui\+::\+Fenetre\+::m\+\_\+contenu\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_ac223dc9b2455674ef4f1f6c9dadc60c7}
+
+
+Le sprite qui affiche le contenu de la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+deplacable@{m\+\_\+deplacable}}
+\index{m\+\_\+deplacable@{m\+\_\+deplacable}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+deplacable}]{\setlength{\rightskip}{0pt plus 5cm}bool gui\+::\+Fenetre\+::m\+\_\+deplacable\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a92939cc32411f96dee10c5684504a60a}
+
+
+option\+: La fenetre est deplaçable (true) ou pas (false). 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+dragging@{m\+\_\+dragging}}
+\index{m\+\_\+dragging@{m\+\_\+dragging}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+dragging}]{\setlength{\rightskip}{0pt plus 5cm}bool gui\+::\+Fenetre\+::m\+\_\+dragging\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a53d035205648a9df8a1008d30eebafa0}
+
+
+En train de dragger ? 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Drag\+Debut@{m\+\_\+fct\+Drag\+Debut}}
+\index{m\+\_\+fct\+Drag\+Debut@{m\+\_\+fct\+Drag\+Debut}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Drag\+Debut}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Drag\+Debut\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_ae93c474294f33e3785877e9f1931f59b}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Drag\+Entre@{m\+\_\+fct\+Drag\+Entre}}
+\index{m\+\_\+fct\+Drag\+Entre@{m\+\_\+fct\+Drag\+Entre}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Drag\+Entre}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Drag\+Entre\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a7531c09ae44462dc1fb3a93b5008b874}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Drag\+Fin@{m\+\_\+fct\+Drag\+Fin}}
+\index{m\+\_\+fct\+Drag\+Fin@{m\+\_\+fct\+Drag\+Fin}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Drag\+Fin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Drag\+Fin\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_af19b29d2ae7267b8aa74baaec22249ae}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Drag\+Sort@{m\+\_\+fct\+Drag\+Sort}}
+\index{m\+\_\+fct\+Drag\+Sort@{m\+\_\+fct\+Drag\+Sort}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Drag\+Sort}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Drag\+Sort\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a4c5fe80c334e488ab7cffe19c5003a9d}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Fermer@{m\+\_\+fct\+Fermer}}
+\index{m\+\_\+fct\+Fermer@{m\+\_\+fct\+Fermer}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Fermer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Fermer\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a22af71c4f81e5c4a8f59077fe093bd09}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Fermer\+Entre@{m\+\_\+fct\+Fermer\+Entre}}
+\index{m\+\_\+fct\+Fermer\+Entre@{m\+\_\+fct\+Fermer\+Entre}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Fermer\+Entre}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Fermer\+Entre\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a1b7e9d5c3e8469e5eb2a0b99823f4fac}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Fermer\+Sort@{m\+\_\+fct\+Fermer\+Sort}}
+\index{m\+\_\+fct\+Fermer\+Sort@{m\+\_\+fct\+Fermer\+Sort}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Fermer\+Sort}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Fermer\+Sort\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a6057866bf76ffeb3f033a869e8a3bdd1}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Bas\+Debut@{m\+\_\+fct\+Redim\+Bas\+Debut}}
+\index{m\+\_\+fct\+Redim\+Bas\+Debut@{m\+\_\+fct\+Redim\+Bas\+Debut}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Bas\+Debut}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Bas\+Debut\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a32cce27a3d458aebc32a91cc907a32b8}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Bas\+Droite\+Debut@{m\+\_\+fct\+Redim\+Bas\+Droite\+Debut}}
+\index{m\+\_\+fct\+Redim\+Bas\+Droite\+Debut@{m\+\_\+fct\+Redim\+Bas\+Droite\+Debut}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Bas\+Droite\+Debut}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Bas\+Droite\+Debut\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a59de367a963994de90e721db11daab4a}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Bas\+Droite\+Fin@{m\+\_\+fct\+Redim\+Bas\+Droite\+Fin}}
+\index{m\+\_\+fct\+Redim\+Bas\+Droite\+Fin@{m\+\_\+fct\+Redim\+Bas\+Droite\+Fin}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Bas\+Droite\+Fin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Bas\+Droite\+Fin\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a5020271cfb05c942eeadbeac971cd89a}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Bas\+Fin@{m\+\_\+fct\+Redim\+Bas\+Fin}}
+\index{m\+\_\+fct\+Redim\+Bas\+Fin@{m\+\_\+fct\+Redim\+Bas\+Fin}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Bas\+Fin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Bas\+Fin\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a62e49c750a81f0977b6d85fcefcebf8e}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Bas\+Gauche\+Debut@{m\+\_\+fct\+Redim\+Bas\+Gauche\+Debut}}
+\index{m\+\_\+fct\+Redim\+Bas\+Gauche\+Debut@{m\+\_\+fct\+Redim\+Bas\+Gauche\+Debut}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Bas\+Gauche\+Debut}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Bas\+Gauche\+Debut\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a6fe2345b640e7ceae5f1fe320509b59a}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Bas\+Gauche\+Fin@{m\+\_\+fct\+Redim\+Bas\+Gauche\+Fin}}
+\index{m\+\_\+fct\+Redim\+Bas\+Gauche\+Fin@{m\+\_\+fct\+Redim\+Bas\+Gauche\+Fin}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Bas\+Gauche\+Fin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Bas\+Gauche\+Fin\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a4daae48b1f96b5231aa0dc4fe0728320}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Droite\+Debut@{m\+\_\+fct\+Redim\+Droite\+Debut}}
+\index{m\+\_\+fct\+Redim\+Droite\+Debut@{m\+\_\+fct\+Redim\+Droite\+Debut}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Droite\+Debut}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Droite\+Debut\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_afab0f9d0cdaea04d0b1537f7873a0c1f}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Droite\+Fin@{m\+\_\+fct\+Redim\+Droite\+Fin}}
+\index{m\+\_\+fct\+Redim\+Droite\+Fin@{m\+\_\+fct\+Redim\+Droite\+Fin}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Droite\+Fin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Droite\+Fin\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a7969ee8cdc0908fb74e14d2ee4eaa6d2}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Gauche\+Debut@{m\+\_\+fct\+Redim\+Gauche\+Debut}}
+\index{m\+\_\+fct\+Redim\+Gauche\+Debut@{m\+\_\+fct\+Redim\+Gauche\+Debut}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Gauche\+Debut}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Gauche\+Debut\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_ae748144dc41aca3be35112bbbf8e6acd}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Gauche\+Fin@{m\+\_\+fct\+Redim\+Gauche\+Fin}}
+\index{m\+\_\+fct\+Redim\+Gauche\+Fin@{m\+\_\+fct\+Redim\+Gauche\+Fin}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Gauche\+Fin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Gauche\+Fin\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a942aaa4fd159a576df3dc15d95d3e594}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Haut\+Debut@{m\+\_\+fct\+Redim\+Haut\+Debut}}
+\index{m\+\_\+fct\+Redim\+Haut\+Debut@{m\+\_\+fct\+Redim\+Haut\+Debut}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Haut\+Debut}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Haut\+Debut\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a1dcff74586fbae2f6ce9f393154d76cc}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Haut\+Droite\+Debut@{m\+\_\+fct\+Redim\+Haut\+Droite\+Debut}}
+\index{m\+\_\+fct\+Redim\+Haut\+Droite\+Debut@{m\+\_\+fct\+Redim\+Haut\+Droite\+Debut}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Haut\+Droite\+Debut}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Haut\+Droite\+Debut\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a48e8585a9bd985ca0dae9e4a2b7bdc38}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Haut\+Droite\+Fin@{m\+\_\+fct\+Redim\+Haut\+Droite\+Fin}}
+\index{m\+\_\+fct\+Redim\+Haut\+Droite\+Fin@{m\+\_\+fct\+Redim\+Haut\+Droite\+Fin}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Haut\+Droite\+Fin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Haut\+Droite\+Fin\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_af1c3b3ec4eb1bf490bf9d0d70a191524}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Haut\+Fin@{m\+\_\+fct\+Redim\+Haut\+Fin}}
+\index{m\+\_\+fct\+Redim\+Haut\+Fin@{m\+\_\+fct\+Redim\+Haut\+Fin}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Haut\+Fin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Haut\+Fin\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a9e0c33f5ebe3574e5f647b1f86d626b6}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Haut\+Gauche\+Debut@{m\+\_\+fct\+Redim\+Haut\+Gauche\+Debut}}
+\index{m\+\_\+fct\+Redim\+Haut\+Gauche\+Debut@{m\+\_\+fct\+Redim\+Haut\+Gauche\+Debut}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Haut\+Gauche\+Debut}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Haut\+Gauche\+Debut\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a2fd7f7c8879c0a083c5f59cdcb0ea4ae}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fct\+Redim\+Haut\+Gauche\+Fin@{m\+\_\+fct\+Redim\+Haut\+Gauche\+Fin}}
+\index{m\+\_\+fct\+Redim\+Haut\+Gauche\+Fin@{m\+\_\+fct\+Redim\+Haut\+Gauche\+Fin}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fct\+Redim\+Haut\+Gauche\+Fin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Func\+Type} gui\+::\+Fenetre\+::m\+\_\+fct\+Redim\+Haut\+Gauche\+Fin\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a6ba45d6714ac397e2e6094a22fef5431}
+
+
+fonction pour manipuler la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fenetre\+S\+F\+M\+L@{m\+\_\+fenetre\+S\+F\+M\+L}}
+\index{m\+\_\+fenetre\+S\+F\+M\+L@{m\+\_\+fenetre\+S\+F\+M\+L}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fenetre\+S\+F\+M\+L}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Render\+Window$\ast$ gui\+::\+Fenetre\+::m\+\_\+fenetre\+S\+F\+M\+L\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a1c5160c3f4dbb756839d8e1dc3e06967}
+
+
+pointeur vers la fenetre S\+F\+M\+L (pour la position absolue de la souris , pour les manips de la fenetre). 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fermable@{m\+\_\+fermable}}
+\index{m\+\_\+fermable@{m\+\_\+fermable}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fermable}]{\setlength{\rightskip}{0pt plus 5cm}bool gui\+::\+Fenetre\+::m\+\_\+fermable\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a9482403f6c741acaeac5f282f184f8d9}
+
+
+option\+: La fenetre est fermable (true) ou pas (false). 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+fond@{m\+\_\+fond}}
+\index{m\+\_\+fond@{m\+\_\+fond}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+fond}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Image}$>$ gui\+::\+Fenetre\+::m\+\_\+fond\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a341241015a5a3d8c1b19ef01d66b2cbf}
+
+
+Le rectangle du fond. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+grp\+Contenu@{m\+\_\+grp\+Contenu}}
+\index{m\+\_\+grp\+Contenu@{m\+\_\+grp\+Contenu}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+grp\+Contenu}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Groupe}$>$ gui\+::\+Fenetre\+::m\+\_\+grp\+Contenu\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a5335316a8fe959c70569b086e9095f42}
+
+
+\doxyref{Groupe}{p.}{classgui_1_1_groupe} des éléments du contenu de la \doxyref{Fenetre}{p.}{classgui_1_1_fenetre}. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+lbl\+Fermer@{m\+\_\+lbl\+Fermer}}
+\index{m\+\_\+lbl\+Fermer@{m\+\_\+lbl\+Fermer}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+lbl\+Fermer}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Label}$>$ gui\+::\+Fenetre\+::m\+\_\+lbl\+Fermer\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a8750b88d8f314b33bcf7053fad466029}
+
+
+Le X pour le bouton fermer. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+lbl\+Titre@{m\+\_\+lbl\+Titre}}
+\index{m\+\_\+lbl\+Titre@{m\+\_\+lbl\+Titre}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+lbl\+Titre}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Label}$>$ gui\+::\+Fenetre\+::m\+\_\+lbl\+Titre\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a44b65149b429008aa453a2ae3321090e}
+
+
+Le \doxyref{Label}{p.}{classgui_1_1_label} titre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+pos\+Fenetre\+Orig@{m\+\_\+pos\+Fenetre\+Orig}}
+\index{m\+\_\+pos\+Fenetre\+Orig@{m\+\_\+pos\+Fenetre\+Orig}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+pos\+Fenetre\+Orig}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f gui\+::\+Fenetre\+::m\+\_\+pos\+Fenetre\+Orig\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_ab4dc33cec59ca6fd341c824a1b1a0691}
+
+
+position de la fenetre à l\textquotesingle{}origine du drag. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+pos\+Mouse\+Orig@{m\+\_\+pos\+Mouse\+Orig}}
+\index{m\+\_\+pos\+Mouse\+Orig@{m\+\_\+pos\+Mouse\+Orig}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+pos\+Mouse\+Orig}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f gui\+::\+Fenetre\+::m\+\_\+pos\+Mouse\+Orig\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_afe30240786c45208083cdfc1b808e43b}
+
+
+position de la souris a l\textquotesingle{}origine du drag. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+redim\+Bas@{m\+\_\+redim\+Bas}}
+\index{m\+\_\+redim\+Bas@{m\+\_\+redim\+Bas}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+redim\+Bas}]{\setlength{\rightskip}{0pt plus 5cm}bool gui\+::\+Fenetre\+::m\+\_\+redim\+Bas\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a10ed79d49e8b8aa1ace30ee09b3958b3}
+
+
+En train de redim ?. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+redim\+Droite@{m\+\_\+redim\+Droite}}
+\index{m\+\_\+redim\+Droite@{m\+\_\+redim\+Droite}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+redim\+Droite}]{\setlength{\rightskip}{0pt plus 5cm}bool gui\+::\+Fenetre\+::m\+\_\+redim\+Droite\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a5aca0080753fd01bb88f681178f80541}
+
+
+En train de redim ?. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+redimensionnable@{m\+\_\+redimensionnable}}
+\index{m\+\_\+redimensionnable@{m\+\_\+redimensionnable}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+redimensionnable}]{\setlength{\rightskip}{0pt plus 5cm}bool gui\+::\+Fenetre\+::m\+\_\+redimensionnable\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a6cf8acaf3295be3785c8e3175c88b1be}
+
+
+option\+: La fenetre est redimensionnable (true) ou pas (false). 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+redim\+Gauche@{m\+\_\+redim\+Gauche}}
+\index{m\+\_\+redim\+Gauche@{m\+\_\+redim\+Gauche}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+redim\+Gauche}]{\setlength{\rightskip}{0pt plus 5cm}bool gui\+::\+Fenetre\+::m\+\_\+redim\+Gauche\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_aa43ac5d16bb38730f67e8eb882a0e27b}
+
+
+En train de redim ?. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+redim\+Haut@{m\+\_\+redim\+Haut}}
+\index{m\+\_\+redim\+Haut@{m\+\_\+redim\+Haut}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+redim\+Haut}]{\setlength{\rightskip}{0pt plus 5cm}bool gui\+::\+Fenetre\+::m\+\_\+redim\+Haut\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a50f9a4f035f36023b8085e30eb6e6aea}
+
+
+En train de redim ?. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+skin\+Btn@{m\+\_\+skin\+Btn}}
+\index{m\+\_\+skin\+Btn@{m\+\_\+skin\+Btn}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+skin\+Btn}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Skin}$>$ gui\+::\+Fenetre\+::m\+\_\+skin\+Btn\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a660579cda5fed7adbf179bfd865148d0}
+
+
+Le skin pour les boutons de la fenetre (drag, fermer, redim. ...) 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+taille@{m\+\_\+taille}}
+\index{m\+\_\+taille@{m\+\_\+taille}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+taille}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f gui\+::\+Fenetre\+::m\+\_\+taille\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a5ea5ede0de7e49dae525b0733363a6ec}
+
+
+Le taille de la fenetre. 
+
+\index{gui\+::\+Fenetre@{gui\+::\+Fenetre}!m\+\_\+taille\+Fenetre\+Orig@{m\+\_\+taille\+Fenetre\+Orig}}
+\index{m\+\_\+taille\+Fenetre\+Orig@{m\+\_\+taille\+Fenetre\+Orig}!gui\+::\+Fenetre@{gui\+::\+Fenetre}}
+\subsubsection[{m\+\_\+taille\+Fenetre\+Orig}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f gui\+::\+Fenetre\+::m\+\_\+taille\+Fenetre\+Orig\hspace{0.3cm}{\ttfamily [private]}}\label{classgui_1_1_fenetre_a2c6bb826a75ff37c32832dc1c8dca166}
+
+
+taille de la fenetre à l\textquotesingle{}origine. 
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Interface/include/gadgets/{\bf Fenetre.\+h}\item 
+Interface/src/gadgets/{\bf Fenetre.\+cpp}\end{DoxyCompactItemize}

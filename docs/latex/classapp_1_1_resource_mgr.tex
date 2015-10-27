@@ -1,0 +1,149 @@
+\section{Référence du modèle de la classe app\+:\+:Resource\+Mgr$<$ R\+E\+S\+O\+U\+R\+C\+E, I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T $>$}
+\label{classapp_1_1_resource_mgr}\index{app\+::\+Resource\+Mgr$<$ R\+E\+S\+O\+U\+R\+C\+E, I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T $>$@{app\+::\+Resource\+Mgr$<$ R\+E\+S\+O\+U\+R\+C\+E, I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T $>$}}
+
+
+Manager de ressource (polices, images).  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Mgr.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Resource\+Mgr} (const {\bf Resource\+Mgr} \&)=delete
+\begin{DoxyCompactList}\small\item\em constructeur \end{DoxyCompactList}\item 
+{\bf Resource\+Mgr} ()=default
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+{\bf Resource\+Mgr} \& {\bf operator=} (const {\bf Resource\+Mgr} \&)=delete
+\begin{DoxyCompactList}\small\item\em Surcharge de =. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void {\bf load} (const I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T \&id, Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Charger une image ou une police depuis un fichier et l\textquotesingle{}associe à un identifiant. \end{DoxyCompactList}\item 
+R\+E\+S\+O\+U\+R\+C\+E \& {\bf get} (const I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T \&id) const 
+\begin{DoxyCompactList}\small\item\em demande une image ou une police à partir de son identifiant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T, std\+::unique\+\_\+ptr$<$ R\+E\+S\+O\+U\+R\+C\+E $>$ $>$ {\bf m\+Plan}
+\begin{DoxyCompactList}\small\item\em les resources enregistrés avec leur identifiant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\subsubsection*{template$<$typename R\+E\+S\+O\+U\+R\+C\+E, typename I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T = int$>$class app\+::\+Resource\+Mgr$<$ R\+E\+S\+O\+U\+R\+C\+E, I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T $>$}
+
+Manager de ressource (polices, images). 
+
+Classe template des polices, images
+
+Gère les ressource façon R\+A\+I\+I
+
+\begin{DoxySeeAlso}{Voir également}
+\doxyref{app\+::\+Ecran}{p.}{classapp_1_1_ecran}, \doxyref{app\+::\+Gestion\+\_\+ecrans}{p.}{classapp_1_1_gestion__ecrans} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{app\+::\+Resource\+Mgr@{app\+::\+Resource\+Mgr}!Resource\+Mgr@{Resource\+Mgr}}
+\index{Resource\+Mgr@{Resource\+Mgr}!app\+::\+Resource\+Mgr@{app\+::\+Resource\+Mgr}}
+\subsubsection[{Resource\+Mgr(const Resource\+Mgr \&)=delete}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R\+E\+S\+O\+U\+R\+C\+E, typename I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T = int$>$ {\bf app\+::\+Resource\+Mgr}$<$ R\+E\+S\+O\+U\+R\+C\+E, I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T $>$\+::{\bf Resource\+Mgr} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Resource\+Mgr}$<$ R\+E\+S\+O\+U\+R\+C\+E, I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classapp_1_1_resource_mgr_a4f95e4f251a11a0cf368ed8b074fd297}
+
+
+constructeur 
+
+\char`\"{}= delete\char`\"{} c\textquotesingle{}est une manière de dire non copyable si j\textquotesingle{}ai bien compris, cf le bouquin S\+F\+M\+L ... \index{app\+::\+Resource\+Mgr@{app\+::\+Resource\+Mgr}!Resource\+Mgr@{Resource\+Mgr}}
+\index{Resource\+Mgr@{Resource\+Mgr}!app\+::\+Resource\+Mgr@{app\+::\+Resource\+Mgr}}
+\subsubsection[{Resource\+Mgr()=default}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R\+E\+S\+O\+U\+R\+C\+E, typename I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T = int$>$ {\bf app\+::\+Resource\+Mgr}$<$ R\+E\+S\+O\+U\+R\+C\+E, I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T $>$\+::{\bf Resource\+Mgr} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\label{classapp_1_1_resource_mgr_a9bb6d183effa248577c9e6df24f948ef}
+
+
+Constructeur. 
+
+\char`\"{}= default\char`\"{} cf le bouquin S\+F\+M\+L ... 
+
+\subsection{Documentation des fonctions membres}
+\index{app\+::\+Resource\+Mgr@{app\+::\+Resource\+Mgr}!get@{get}}
+\index{get@{get}!app\+::\+Resource\+Mgr@{app\+::\+Resource\+Mgr}}
+\subsubsection[{get(const I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T \&id) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R\+E\+S\+O\+U\+R\+C\+E , typename I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T$>$ R\+E\+S\+O\+U\+R\+C\+E \& {\bf app\+::\+Resource\+Mgr}$<$ R\+E\+S\+O\+U\+R\+C\+E, I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T $>$\+::get (
+\begin{DoxyParamCaption}
+\item[{const I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T \&}]{id}
+\end{DoxyParamCaption}
+) const}\label{classapp_1_1_resource_mgr_a6d50e13d521942530229e80f660ff004}
+
+
+demande une image ou une police à partir de son identifiant. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & l\textquotesingle{}identenfiant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la ressource demandé. 
+\end{DoxyReturn}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapp_1_1_resource_mgr_a6d50e13d521942530229e80f660ff004_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{app\+::\+Resource\+Mgr@{app\+::\+Resource\+Mgr}!load@{load}}
+\index{load@{load}!app\+::\+Resource\+Mgr@{app\+::\+Resource\+Mgr}}
+\subsubsection[{load(const I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T \&id, Args \&\&...\+args)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R\+E\+S\+O\+U\+R\+C\+E , typename I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T$>$ template$<$typename... Args$>$ void {\bf app\+::\+Resource\+Mgr}$<$ R\+E\+S\+O\+U\+R\+C\+E, I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T $>$\+::load (
+\begin{DoxyParamCaption}
+\item[{const I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T \&}]{id, }
+\item[{Args \&\&...}]{args}
+\end{DoxyParamCaption}
+)}\label{classapp_1_1_resource_mgr_a43174877ac3bce3b43b68f94e0eb2815}
+
+
+Charger une image ou une police depuis un fichier et l\textquotesingle{}associe à un identifiant. 
+
+Manager de ressource.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & l\textquotesingle{}identenfiant \\
+\hline
+{\em args} & le fichier\\
+\hline
+\end{DoxyParams}
+Class template des polices, images \index{app\+::\+Resource\+Mgr@{app\+::\+Resource\+Mgr}!operator=@{operator=}}
+\index{operator=@{operator=}!app\+::\+Resource\+Mgr@{app\+::\+Resource\+Mgr}}
+\subsubsection[{operator=(const Resource\+Mgr \&)=delete}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R\+E\+S\+O\+U\+R\+C\+E, typename I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T = int$>$ {\bf Resource\+Mgr}\& {\bf app\+::\+Resource\+Mgr}$<$ R\+E\+S\+O\+U\+R\+C\+E, I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Resource\+Mgr}$<$ R\+E\+S\+O\+U\+R\+C\+E, I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classapp_1_1_resource_mgr_a8c06cc4165068e7aae8ba2aa505d4c1a}
+
+
+Surcharge de =. 
+
+\char`\"{}= delete\char`\"{} cf le bouquin S\+F\+M\+L, mais je crois que c\textquotesingle{}est pour dire ope= c\textquotesingle{}est copy...bref pas super claire encore 
+
+\subsection{Documentation des champs}
+\index{app\+::\+Resource\+Mgr@{app\+::\+Resource\+Mgr}!m\+Plan@{m\+Plan}}
+\index{m\+Plan@{m\+Plan}!app\+::\+Resource\+Mgr@{app\+::\+Resource\+Mgr}}
+\subsubsection[{m\+Plan}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R\+E\+S\+O\+U\+R\+C\+E, typename I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T = int$>$ std\+::unordered\+\_\+map$<$I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T,std\+::unique\+\_\+ptr$<$R\+E\+S\+O\+U\+R\+C\+E$>$ $>$ {\bf app\+::\+Resource\+Mgr}$<$ R\+E\+S\+O\+U\+R\+C\+E, I\+D\+E\+N\+T\+I\+F\+I\+A\+N\+T $>$\+::m\+Plan\hspace{0.3cm}{\ttfamily [private]}}\label{classapp_1_1_resource_mgr_aaf3f11ff8309da00bbc6cce38bc156fa}
+
+
+les resources enregistrés avec leur identifiant. 
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+main/include/{\bf Resource\+Mgr.\+h}\item 
+main/include/{\bf Resource\+Mgr.\+inl}\end{DoxyCompactItemize}

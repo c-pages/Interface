@@ -1,0 +1,445 @@
+\section{Référence de la classe gui\+:\+:Label}
+\label{classgui_1_1_label}\index{gui\+::\+Label@{gui\+::\+Label}}
+
+
+\doxyref{Gadget}{p.}{classgui_1_1_gadget} Un simple \doxyref{Label}{p.}{classgui_1_1_label} permettant d\textquotesingle{}afficher un texte.  
+
+
+
+
+{\ttfamily \#include $<$Label.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de gui\+:\+:Label\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classgui_1_1_label__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de gui\+:\+:Label\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classgui_1_1_label__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Label} (std\+::string texte=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructeur defaut, avec ou sans texte. \end{DoxyCompactList}\item 
+{\bf Label} (std\+::string texte, std\+::shared\+\_\+ptr$<$ {\bf Style} $>$ style)
+\begin{DoxyCompactList}\small\item\em Constructeur, avec texte et style. \end{DoxyCompactList}\item 
+virtual {\bf $\sim$\+Label} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f {\bf get\+Size} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de la taille du texte. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect {\bf get\+Local\+Bounds} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de la bounding\+Box en local. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect {\bf get\+Global\+Bounds} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de la bounding\+Box en global. \end{DoxyCompactList}\item 
+void {\bf set\+Texte} (std\+::string texte)
+\begin{DoxyCompactList}\small\item\em Definir le texte du \doxyref{Label}{p.}{classgui_1_1_label}. \end{DoxyCompactList}\item 
+std\+::string {\bf get\+Texte} ()
+\begin{DoxyCompactList}\small\item\em Accesseur du texte du \doxyref{Label}{p.}{classgui_1_1_label}. \end{DoxyCompactList}\item 
+void {\bf set\+Texte\+Taille} (float taille)
+\begin{DoxyCompactList}\small\item\em Definir la taille texte du \doxyref{Label}{p.}{classgui_1_1_label}. \end{DoxyCompactList}\item 
+void {\bf set\+Color} (sf\+::\+Color col)
+\begin{DoxyCompactList}\small\item\em Definir la couleur du texte du \doxyref{Label}{p.}{classgui_1_1_label}. \end{DoxyCompactList}\item 
+virtual void {\bf maj\+Geom} ()
+\begin{DoxyCompactList}\small\item\em Actualise le style du label. \end{DoxyCompactList}\item 
+void {\bf traiter\+\_\+evenements} (const sf\+::\+Event \&event)
+\begin{DoxyCompactList}\small\item\em La gestion des évènements utilisateurs. \end{DoxyCompactList}\item 
+void {\bf actualiser} (float delta\+T)
+\begin{DoxyCompactList}\small\item\em Actualiser les éléments. \end{DoxyCompactList}\item 
+virtual void {\bf draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const 
+\begin{DoxyCompactList}\small\item\em Rendre les différents éléments du ou des écrans actifs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Text $\ast$ {\bf m\+\_\+texte}
+\begin{DoxyCompactList}\small\item\em Le text S\+F\+M\+L. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+\doxyref{Gadget}{p.}{classgui_1_1_gadget} Un simple \doxyref{Label}{p.}{classgui_1_1_label} permettant d\textquotesingle{}afficher un texte. 
+
+exemple \+: 
+\begin{DoxyCode}
+\textcolor{comment}{// gui::Gadget::ptr est le type pour un shared pointer vers un gadget.}
+gui::Gadget::ptr    lblTest ( \textcolor{keyword}{new} gui::Label ( \textcolor{stringliteral}{"Ceci est un gui::Label"} , skinCourant->lblCourant ) );
+m\_gui.ajouter ( lblTest );
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{Voir également}
+\doxyref{gui\+::\+Gadget}{p.}{classgui_1_1_gadget} 
+\end{DoxySeeAlso}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{gui\+::\+Label@{gui\+::\+Label}!Label@{Label}}
+\index{Label@{Label}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{Label(std\+::string texte="""")}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Label\+::\+Label (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{texte = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{classgui_1_1_label_a7d2d63e5b786ec093a4c7ea20db40208}
+
+
+Constructeur defaut, avec ou sans texte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em texte} & Le texte à afficher. \\
+\hline
+\end{DoxyParams}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classgui_1_1_label_a7d2d63e5b786ec093a4c7ea20db40208_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Label@{gui\+::\+Label}!Label@{Label}}
+\index{Label@{Label}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{Label(std\+::string texte, std\+::shared\+\_\+ptr$<$ Style $>$ style)}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Label\+::\+Label (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{texte, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Style} $>$}]{style}
+\end{DoxyParamCaption}
+)}\label{classgui_1_1_label_ae0526095857c9e97d8927194ddd14889}
+
+
+Constructeur, avec texte et style. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em texte} & Le texte à afficher. \\
+\hline
+{\em style} & Le style à appliquer (\doxyref{Style}{p.}{structgui_1_1_style}). \\
+\hline
+\end{DoxyParams}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classgui_1_1_label_ae0526095857c9e97d8927194ddd14889_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Label@{gui\+::\+Label}!````~Label@{$\sim$\+Label}}
+\index{````~Label@{$\sim$\+Label}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{$\sim$\+Label()}]{\setlength{\rightskip}{0pt plus 5cm}gui\+::\+Label\+::$\sim$\+Label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_label_a35fe2fbca1f6c34beb66bfd9b3b9b609}
+
+
+Destructeur. 
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{gui\+::\+Label@{gui\+::\+Label}!actualiser@{actualiser}}
+\index{actualiser@{actualiser}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{actualiser(float delta\+T)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Label\+::actualiser (
+\begin{DoxyParamCaption}
+\item[{float}]{delta\+T}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_label_af940ee918cf3e72ce74383d609c08721}
+
+
+Actualiser les éléments. 
+
+Actualiser les différents éléments du ou des écrans actifs.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em delta\+T} & Un {\itshape float} qui indique le delta du temps écoulé depuis la dernière actualisation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a06c66be095e4d531ef307a3db36e2b4f}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_label_af940ee918cf3e72ce74383d609c08721_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Label@{gui\+::\+Label}!draw@{draw}}
+\index{draw@{draw}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{draw(sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const }]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Label\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Target \&}]{target, }
+\item[{sf\+::\+Render\+States}]{states}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_label_a7e162f32f95d6e2b568bc9393945a732}
+
+
+Rendre les différents éléments du ou des écrans actifs. 
+
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a7ccb80ac58d4b1320bc76ad8ae031866}.
+
+\index{gui\+::\+Label@{gui\+::\+Label}!get\+Global\+Bounds@{get\+Global\+Bounds}}
+\index{get\+Global\+Bounds@{get\+Global\+Bounds}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{get\+Global\+Bounds()}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect gui\+::\+Label\+::get\+Global\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_label_a3d1724b9ebd2f1ff450ccfe725c0ac04}
+
+
+Accesseur de la bounding\+Box en global. 
+
+\begin{DoxyReturn}{Renvoie}
+La bounding\+Box 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a698682665f65f54e0798887955f32f2e}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgui_1_1_label_a3d1724b9ebd2f1ff450ccfe725c0ac04_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Label@{gui\+::\+Label}!get\+Local\+Bounds@{get\+Local\+Bounds}}
+\index{get\+Local\+Bounds@{get\+Local\+Bounds}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{get\+Local\+Bounds()}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect gui\+::\+Label\+::get\+Local\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_label_a17b939dc928de9a6f826514f655348d2}
+
+
+Accesseur de la bounding\+Box en local. 
+
+\begin{DoxyReturn}{Renvoie}
+La bounding\+Box 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a4552567e63384c6a30519303f4052f11}.
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classgui_1_1_label_a17b939dc928de9a6f826514f655348d2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Label@{gui\+::\+Label}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{get\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f gui\+::\+Label\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_label_a762c8ea73d28b6312d5f323670e002c4}
+
+
+Accesseur de la taille du texte. 
+
+\begin{DoxyReturn}{Renvoie}
+la taille 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a8d17e7736249da941358b9e09e70ea2c}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classgui_1_1_label_a762c8ea73d28b6312d5f323670e002c4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Label@{gui\+::\+Label}!get\+Texte@{get\+Texte}}
+\index{get\+Texte@{get\+Texte}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{get\+Texte()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string gui\+::\+Label\+::get\+Texte (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classgui_1_1_label_ad4e390f20f5dbb296b8c876f465ea9a4}
+
+
+Accesseur du texte du \doxyref{Label}{p.}{classgui_1_1_label}. 
+
+\begin{DoxyReturn}{Renvoie}
+le texte du \doxyref{Label}{p.}{classgui_1_1_label}. 
+\end{DoxyReturn}
+\index{gui\+::\+Label@{gui\+::\+Label}!maj\+Geom@{maj\+Geom}}
+\index{maj\+Geom@{maj\+Geom}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{maj\+Geom()}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Label\+::maj\+Geom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_label_ae310f44ef08900d558af5c5bc94c448d}
+
+
+Actualise le style du label. 
+
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a8a72d0816ec1928958ff5dd3ccd983f5}.
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classgui_1_1_label_ae310f44ef08900d558af5c5bc94c448d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gui\+::\+Label@{gui\+::\+Label}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{set\+Color(sf\+::\+Color col)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Label\+::set\+Color (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Color}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classgui_1_1_label_aa8846149890d23c198f1c366bff16008}
+
+
+Definir la couleur du texte du \doxyref{Label}{p.}{classgui_1_1_label}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em col} & la couleur du texte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+\index{gui\+::\+Label@{gui\+::\+Label}!set\+Texte@{set\+Texte}}
+\index{set\+Texte@{set\+Texte}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{set\+Texte(std\+::string texte)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Label\+::set\+Texte (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{texte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classgui_1_1_label_a5c0c354060b3e9e5f6fd813e68ec2cf6}
+
+
+Definir le texte du \doxyref{Label}{p.}{classgui_1_1_label}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em texte} & Le nouveau texte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+\index{gui\+::\+Label@{gui\+::\+Label}!set\+Texte\+Taille@{set\+Texte\+Taille}}
+\index{set\+Texte\+Taille@{set\+Texte\+Taille}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{set\+Texte\+Taille(float taille)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Label\+::set\+Texte\+Taille (
+\begin{DoxyParamCaption}
+\item[{float}]{taille}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classgui_1_1_label_ac186d541addb868de0d08dff76488732}
+
+
+Definir la taille texte du \doxyref{Label}{p.}{classgui_1_1_label}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em taille} & Le taille des charactere du label. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+\index{gui\+::\+Label@{gui\+::\+Label}!traiter\+\_\+evenements@{traiter\+\_\+evenements}}
+\index{traiter\+\_\+evenements@{traiter\+\_\+evenements}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{traiter\+\_\+evenements(const sf\+::\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void gui\+::\+Label\+::traiter\+\_\+evenements (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classgui_1_1_label_a5314909bf67f37a3e9b719166500b6bf}
+
+
+La gestion des évènements utilisateurs. 
+
+Gère les entrées claviers, souris, fenetre ...
+
+
+\begin{DoxyParams}{Paramètres}
+{\em event} & evenement S\+F\+M\+L \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de {\bf gui\+::\+Gadget} \doxyref{}{p.}{classgui_1_1_gadget_a510ae68144997724188d2bb902c3103d}.
+
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classgui_1_1_label_a5314909bf67f37a3e9b719166500b6bf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Documentation des champs}
+\index{gui\+::\+Label@{gui\+::\+Label}!m\+\_\+texte@{m\+\_\+texte}}
+\index{m\+\_\+texte@{m\+\_\+texte}!gui\+::\+Label@{gui\+::\+Label}}
+\subsubsection[{m\+\_\+texte}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text$\ast$ gui\+::\+Label\+::m\+\_\+texte\hspace{0.3cm}{\ttfamily [protected]}}\label{classgui_1_1_label_a331d0837da428ac27b860277f198df82}
+
+
+Le text S\+F\+M\+L. 
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Interface/include/gadgets/{\bf Label.\+h}\item 
+Interface/src/gadgets/{\bf Label.\+cpp}\end{DoxyCompactItemize}

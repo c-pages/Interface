@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Application de base:  Fichier source de Interface/include/gadgets/BoutonCocher.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Application de base
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">La structure de base d&#39;une application SFML avec debut de GUI</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b7263c2df3abed61e1897d5e9e534860.html">Interface</a></li><li class="navelem"><a class="el" href="dir_b26ada46c7d42db83f11c4750604aea0.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab5a57497ef2c36b4a22954635ab49a.html">gadgets</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">BoutonCocher.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_bouton_cocher_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef BOUTONCOCHER_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define BOUTONCOCHER_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Headers</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span><span class="preprocessor">#include &lt;<a class="code" href="_bouton_8h.html">gadgets\Bouton.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegui.html">gui</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span>Image;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton_cocher.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgui_1_1_bouton_cocher.html">BoutonCocher</a> : <span class="keyword">public</span> <a class="code" href="classgui_1_1_bouton.html">Bouton</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classgui_1_1_bouton_cocher.html#a7b5e763ff726740b19ec6758e6431b92">BoutonCocher</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classgui_1_1_bouton_cocher.html#a7b5e763ff726740b19ec6758e6431b92">BoutonCocher</a> ( std::shared_ptr&lt;Skin&gt;    skin</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                  , <span class="keywordtype">bool</span>                    actif  = <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classgui_1_1_bouton_cocher.html#a47881be4183b985ba8957ed7f3219d7e">~BoutonCocher</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton_cocher.html#ad8f3c398a2fb5c4f86b43dd9d9521c39">   50</a></span>&#160;    <a class="code" href="classgui_1_1_bouton_cocher.html#ad8f3c398a2fb5c4f86b43dd9d9521c39">setActif</a> ( <span class="keywordtype">bool</span> actif ) { <a class="code" href="classgui_1_1_bouton_cocher.html#a96e4be65c04e461c51a6450a8caff484">m_actif</a> = actif; };</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton_cocher.html#a1bfe8ca9d1f45890f594ff392227fa28">   59</a></span>&#160;    <a class="code" href="classgui_1_1_bouton_cocher.html#a1bfe8ca9d1f45890f594ff392227fa28">isActif</a> ( ) { <span class="keywordflow">return</span> <a class="code" href="classgui_1_1_bouton_cocher.html#a96e4be65c04e461c51a6450a8caff484">m_actif</a>; };</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classgui_1_1_bouton_cocher.html#a03a7011fd1269a5502fd3b6e58652c4e">majGeom</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="classgui_1_1_bouton_cocher.html#aea6c305290640a14a3659713b9acb5bf">draw</a>( sf::RenderTarget&amp; target, sf::RenderStates states ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="classgui_1_1_bouton_cocher.html#a92470d7fc9202d991e8499331660ba8c">init</a> ();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// Les membres</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton_cocher.html#a96e4be65c04e461c51a6450a8caff484">   93</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">bool</span>        <a class="code" href="classgui_1_1_bouton_cocher.html#a96e4be65c04e461c51a6450a8caff484">m_actif</a>;        </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton_cocher.html#a5a832444f9d527c678bcdcde9fb44d1a">   94</a></span>&#160;    <a class="code" href="classgui_1_1_image.html">Image</a>*      <a class="code" href="classgui_1_1_bouton_cocher.html#a5a832444f9d527c678bcdcde9fb44d1a">m_imgCoche</a>;     </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton_cocher.html#a944c1babbb13bb9dc5515c79fabc8780">   95</a></span>&#160;    <a class="code" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>    <a class="code" href="classgui_1_1_bouton_cocher.html#a944c1babbb13bb9dc5515c79fabc8780">m_fctToggle</a>;    </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif // BOUTONCOCHER_H</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="ttc" id="classgui_1_1_bouton_cocher_html_ad8f3c398a2fb5c4f86b43dd9d9521c39"><div class="ttname"><a href="classgui_1_1_bouton_cocher.html#ad8f3c398a2fb5c4f86b43dd9d9521c39">gui::BoutonCocher::setActif</a></div><div class="ttdeci">void setActif(bool actif)</div><div class="ttdoc">Définir l&#39;état du bouton. </div><div class="ttdef"><b>Definition:</b> BoutonCocher.h:50</div></div>
+<div class="ttc" id="namespacegui_html"><div class="ttname"><a href="namespacegui.html">gui</a></div><div class="ttdef"><b>Definition:</b> Action.h:15</div></div>
+<div class="ttc" id="classgui_1_1_bouton_cocher_html_a944c1babbb13bb9dc5515c79fabc8780"><div class="ttname"><a href="classgui_1_1_bouton_cocher.html#a944c1babbb13bb9dc5515c79fabc8780">gui::BoutonCocher::m_fctToggle</a></div><div class="ttdeci">FuncType m_fctToggle</div><div class="ttdoc">la fonction qui change l&#39;état du bouton a chaque clique. </div><div class="ttdef"><b>Definition:</b> BoutonCocher.h:95</div></div>
+<div class="ttc" id="classgui_1_1_bouton_cocher_html"><div class="ttname"><a href="classgui_1_1_bouton_cocher.html">gui::BoutonCocher</a></div><div class="ttdoc">Gadget, bouton rectangulaire à cocher,. </div><div class="ttdef"><b>Definition:</b> BoutonCocher.h:17</div></div>
+<div class="ttc" id="classgui_1_1_bouton_cocher_html_a92470d7fc9202d991e8499331660ba8c"><div class="ttname"><a href="classgui_1_1_bouton_cocher.html#a92470d7fc9202d991e8499331660ba8c">gui::BoutonCocher::init</a></div><div class="ttdeci">virtual void init()</div><div class="ttdoc">initialisation du gadget. </div><div class="ttdef"><b>Definition:</b> BoutonCocher.cpp:56</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html"><div class="ttname"><a href="classgui_1_1_bouton.html">gui::Bouton</a></div><div class="ttdoc">Gadget, simple bouton rectangulaire. </div><div class="ttdef"><b>Definition:</b> Bouton.h:24</div></div>
+<div class="ttc" id="classgui_1_1_bouton_cocher_html_a5a832444f9d527c678bcdcde9fb44d1a"><div class="ttname"><a href="classgui_1_1_bouton_cocher.html#a5a832444f9d527c678bcdcde9fb44d1a">gui::BoutonCocher::m_imgCoche</a></div><div class="ttdeci">Image * m_imgCoche</div><div class="ttdoc">le gadget Image qui est visible si le bouton est coché. </div><div class="ttdef"><b>Definition:</b> BoutonCocher.h:94</div></div>
+<div class="ttc" id="classgui_1_1_bouton_cocher_html_a03a7011fd1269a5502fd3b6e58652c4e"><div class="ttname"><a href="classgui_1_1_bouton_cocher.html#a03a7011fd1269a5502fd3b6e58652c4e">gui::BoutonCocher::majGeom</a></div><div class="ttdeci">virtual void majGeom()</div><div class="ttdoc">Actualise le model du Gadget. </div><div class="ttdef"><b>Definition:</b> BoutonCocher.cpp:46</div></div>
+<div class="ttc" id="_bouton_8h_html"><div class="ttname"><a href="_bouton_8h.html">Bouton.h</a></div></div>
+<div class="ttc" id="classgui_1_1_bouton_cocher_html_a1bfe8ca9d1f45890f594ff392227fa28"><div class="ttname"><a href="classgui_1_1_bouton_cocher.html#a1bfe8ca9d1f45890f594ff392227fa28">gui::BoutonCocher::isActif</a></div><div class="ttdeci">bool isActif()</div><div class="ttdoc">demande l&#39;état du bouton </div><div class="ttdef"><b>Definition:</b> BoutonCocher.h:59</div></div>
+<div class="ttc" id="classgui_1_1_image_html"><div class="ttname"><a href="classgui_1_1_image.html">gui::Image</a></div><div class="ttdoc">Gadget Un simple gadget permettant d&#39;afficher une image ou une couleur uni. </div><div class="ttdef"><b>Definition:</b> Image.h:15</div></div>
+<div class="ttc" id="classgui_1_1_action_html_a4223568d083f940e94c80829f63ae817"><div class="ttname"><a href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">gui::Action::FuncType</a></div><div class="ttdeci">std::function&lt; void()&gt; FuncType</div><div class="ttdoc">la fonction lambda associé aux declenchements des evenements. </div><div class="ttdef"><b>Definition:</b> Action.h:54</div></div>
+<div class="ttc" id="classgui_1_1_bouton_cocher_html_a7b5e763ff726740b19ec6758e6431b92"><div class="ttname"><a href="classgui_1_1_bouton_cocher.html#a7b5e763ff726740b19ec6758e6431b92">gui::BoutonCocher::BoutonCocher</a></div><div class="ttdeci">BoutonCocher()</div><div class="ttdoc">Constructeur. </div><div class="ttdef"><b>Definition:</b> BoutonCocher.cpp:12</div></div>
+<div class="ttc" id="classgui_1_1_bouton_cocher_html_a47881be4183b985ba8957ed7f3219d7e"><div class="ttname"><a href="classgui_1_1_bouton_cocher.html#a47881be4183b985ba8957ed7f3219d7e">gui::BoutonCocher::~BoutonCocher</a></div><div class="ttdeci">virtual ~BoutonCocher()</div><div class="ttdoc">Destructeur. </div><div class="ttdef"><b>Definition:</b> BoutonCocher.cpp:38</div></div>
+<div class="ttc" id="classgui_1_1_bouton_cocher_html_a96e4be65c04e461c51a6450a8caff484"><div class="ttname"><a href="classgui_1_1_bouton_cocher.html#a96e4be65c04e461c51a6450a8caff484">gui::BoutonCocher::m_actif</a></div><div class="ttdeci">bool m_actif</div><div class="ttdoc">l&#39;état du bouton (true: coché ou false:décoché). </div><div class="ttdef"><b>Definition:</b> BoutonCocher.h:93</div></div>
+<div class="ttc" id="classgui_1_1_bouton_cocher_html_aea6c305290640a14a3659713b9acb5bf"><div class="ttname"><a href="classgui_1_1_bouton_cocher.html#aea6c305290640a14a3659713b9acb5bf">gui::BoutonCocher::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target, sf::RenderStates states) const </div><div class="ttdoc">Rendre les différents éléments du ou des écrans actifs. </div><div class="ttdef"><b>Definition:</b> BoutonCocher.cpp:74</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>
