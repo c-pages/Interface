@@ -1,7 +1,6 @@
 <map id="Interface/include/gadgets/Label.h" name="Interface/include/gadgets/Label.h">
-<area shape="rect" id="node4" href="$_gadget_8h.html" title="Gadget.h" alt="" coords="250,95,325,121"/>
-<area shape="rect" id="node8" href="$_action_8h.html" title="Action.h" alt="" coords="513,169,584,196"/>
-<area shape="rect" id="node13" href="$_skin_8h.html" title="Skin.h" alt="" coords="191,169,250,196"/>
-<area shape="rect" id="node15" href="$_gadget_8inl.html" title="Gadget.inl" alt="" coords="5,169,87,196"/>
-<area shape="rect" id="node14" href="$_style_8h.html" title="Style.h" alt="" coords="155,244,217,271"/>
+<area shape="rect" id="node4" href="$_gadget_8h.html" title="Gadget.h" alt="" coords="277,95,352,121"/>
+<area shape="rect" id="node8" href="$_action_8h.html" title="Action.h" alt="" coords="353,169,423,196"/>
+<area shape="rect" id="node13" href="$_skin_8h.html" title="Skin.h" alt="" coords="137,169,196,196"/>
+<area shape="rect" id="node14" href="$_style_8h.html" title="Style.h" alt="" coords="45,244,107,271"/>
 </map>

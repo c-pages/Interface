@@ -7,7 +7,6 @@
 #include <gadgets/Label.h>
 #include <gadgets/Bouton.h>
 #include <gadgets/Image.h>
-#include <UI.h>
 #include <cmath>
 
 namespace gui {
@@ -232,7 +231,7 @@ Fenetre::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
 
     // dessiner les éléments de l'UI de la fenetre
     //dessinerUI ( target , states );
-    target.draw      ( *UI::m_UI , states );
+    target.draw      ( *m_UI , states );
 
 //    for ( ptr ui : m_UI )
 //        target.draw      ( *ui , states );

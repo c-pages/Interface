@@ -13,7 +13,6 @@
 // classes virtuelles
 #include <Gadget.h>                     // --->    classe virtuelle élémentaire d'un gadget
 #include <action.h>                     // --->    classe virtuelle pour gerer les événements d'un gadget
-#include <UI.h>                         // --->    classe virtuelle pour gerer des éléments d'interface dans un gadget (ex: un bouton dans un gadget Fenetre)
 
 // affichage simple
 #include <gadgets/Image.h>              // --->    affiche image ou couleur

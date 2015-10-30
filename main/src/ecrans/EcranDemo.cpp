@@ -73,6 +73,7 @@ EcranDemo::initScene  ( )
 void
 EcranDemo::initGUI  ( )
 {
+
     // le skin qu'on va utiliser dans cette interface
     auto skinCourant =  Config::m_skins[ Config::Skins::Skin1 ] ;
 
@@ -84,12 +85,6 @@ EcranDemo::initGUI  ( )
     contenant->setSize        ( { 250 , 250 } ) ; //m_appli->getFenetre().getSize().y }  ); // ( { 150 , m_appli->getFenetre().getSize().y}) ;
 
 
-/*
-    std::shared_ptr<gui::Label>  label ( new gui::Label ( "LABEL LABEL LABEL LABEL\n LABEL LABEL LABEL LABEL\n  LABEL LABEL LABEL LABEL\n   LABEL LABEL LABEL LABEL\n    LABEL LABEL LABEL LABEL\n     LABEL LABEL LABEL LABEL\n      LABEL LABEL LABEL LABEL\n" ) );
-    contenant->ajouter      ( label );
-    label->setTexteTaille   ( 10 );
-    label->setPosition      ( 0 , 0 );
-*/
     std::shared_ptr<gui::Label>  label2 ( new gui::Label ( "LABEL 1 LABEL 2 LABEL 3 LABEL 4 LABEL 5 LABEL 6 LABEL 7 LABEL 8 LABEL 9 LABEL 10 " ) );
     contenant->ajouter      ( label2 );
     label2->setTexteTaille   ( 10 );
@@ -101,7 +96,13 @@ EcranDemo::initGUI  ( )
     label3->setTexteTaille   ( 150 );
     label3->setPosition      ( 50 , 150 );
 
+    std::shared_ptr<gui::Bouton>  bouton ( new gui::Bouton  (   ) );
+    contenant->ajouter    ( bouton );
+    bouton->setPosition ( { 150 , 50 });
+    bouton->setSize ( { 350 , 350 });
+/*
 
+*/
 
 /*
     // creation de la fenetre
@@ -155,12 +156,6 @@ EcranDemo::initGUI  ( )
     fenetre->ajouter    ( boutonSlide );
     std::cout << "ecran ---- 1 ----\n";
     boutonSlide->setPosition ( { 50 , 50 } );
-
-
-    std::shared_ptr<gui::Bouton>  bouton ( new gui::Bouton  (  skinCourant ) );
-    fenetre->ajouter    ( bouton );
-    bouton->setPosition ( { 150 , 50 });
-    bouton->setSize ( { 350 , 50 });
 */
 
 

@@ -4,7 +4,6 @@
 /////////////////////////////////////////////////
 // Headers
 /////////////////////////////////////////////////
-#include <UI.h>
 #include <Gadget.h>
 #include <gadgets/Bouton.h>
 #include <gadgets/Groupe.h>
@@ -32,7 +31,7 @@ enum Orientation{
 /// \todo cf. le todo du gui::Bouton
 ///
 /////////////////////////////////////////////////
-class BoutonSlide : public Gadget, public UI
+class BoutonSlide : public Gadget //, public UI
 {
 public:
 
@@ -144,6 +143,16 @@ public:
 
     void
     initSkin ();
+
+
+    /////////////////////////////////////////////////
+    /// \brief Dessiner le bouton
+    ///
+    /////////////////////////////////////////////////
+    bool
+    isDragging() const { return m_drag; } ;
+
+
 
     /////////////////////////////////////////////////
     /// \brief La gestion des évènements utilisateurs.

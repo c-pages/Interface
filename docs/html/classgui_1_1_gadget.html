@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a href="#pro-attribs">Attributs protégés</a> &#124;
 <a href="#friends">Amis</a>  </div>
   <div class="headertitle">
-<div class="title">Référence de la classe gui::Gadget<div class="ingroups"><a class="el" href="group__interface.html">Module pour interface graphique</a></div></div>  </div>
+<div class="title">Référence de la classe gui::Gadget<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__interface.html">Module pour interface graphique</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -111,14 +111,17 @@ Graphe d'héritage de gui::Gadget:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_gadget__inherit__graph.png" border="0" usemap="#gui_1_1_gadget_inherit__map" alt="Inheritance graph"/></div>
 <map name="gui_1_1_gadget_inherit__map" id="gui_1_1_gadget_inherit__map">
-<area shape="rect" id="node5" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. " alt="" coords="101,155,189,181"/>
-<area shape="rect" id="node8" href="classgui_1_1_fenetre.html" title="Gadget permettant de rassembler des Gadgets au sein d&#39;une Fenetre. " alt="" coords="213,155,303,181"/>
-<area shape="rect" id="node9" href="classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets. " alt="" coords="328,155,417,181"/>
-<area shape="rect" id="node10" href="classgui_1_1_image.html" title="Gadget Un simple gadget permettant d&#39;afficher une image ou une couleur uni. " alt="" coords="442,155,525,181"/>
-<area shape="rect" id="node11" href="classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. " alt="" coords="549,155,628,181"/>
-<area shape="rect" id="node2" href="classgui_1_1_action.html" title="Classe virtuelle permetant de lier des évenements à des fonctions. " alt="" coords="217,5,301,32"/>
-<area shape="rect" id="node6" href="classgui_1_1_bouton_cocher.html" title="Gadget, bouton rectangulaire à cocher,. " alt="" coords="5,229,135,256"/>
-<area shape="rect" id="node7" href="classgui_1_1_bouton_texte.html" title="Gadget, bouton rectangulaire (gui::Bouton) combiné à un Label (gui::texte). " alt="" coords="159,229,279,256"/>
+<area shape="rect" id="node5" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. " alt="" coords="327,31,415,57"/>
+<area shape="rect" id="node8" href="classgui_1_1_bouton_slide.html" title="Gadget, pour le defilement du contenu dans les fenetres. " alt="" coords="312,81,429,108"/>
+<area shape="rect" id="node9" href="classgui_1_1_contenant.html" title="Gadget Permet d&#39;afficher un ensemble de gadget dans une fenetre de contenu. " alt="" coords="317,132,424,159"/>
+<area shape="rect" id="node10" href="classgui_1_1_fenetre.html" title="Gadget permettant de rassembler des Gadgets au sein d&#39;une Fenetre. " alt="" coords="325,183,416,209"/>
+<area shape="rect" id="node12" href="classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets. " alt="" coords="326,233,415,260"/>
+<area shape="rect" id="node13" href="classgui_1_1_image.html" title="Gadget Un simple gadget permettant d&#39;afficher une image ou une couleur uni. " alt="" coords="329,284,412,311"/>
+<area shape="rect" id="node14" href="classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. " alt="" coords="331,335,410,361"/>
+<area shape="rect" id="node2" href="classgui_1_1_action.html" title="Classe virtuelle permetant de lier des évenements à des fonctions. " alt="" coords="24,132,108,159"/>
+<area shape="rect" id="node6" href="classgui_1_1_bouton_encoche.html" title="Gadget, bouton rectangulaire à cocher,. " alt="" coords="485,5,624,32"/>
+<area shape="rect" id="node7" href="classgui_1_1_bouton_texte.html" title="Gadget, bouton rectangulaire (gui::Bouton) combiné à un Label (gui::texte). " alt="" coords="495,56,615,83"/>
+<area shape="rect" id="node11" href="classgui_1_1_fenetre__encastree.html" title="gui::Fenetre_encastree" alt="" coords="477,183,632,209"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <div class="dynheader">
@@ -163,18 +166,18 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a2d021f2ce19a4335d79bcaedf4ab4bb2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a2d021f2ce19a4335d79bcaedf4ab4bb2">setSize</a> (sf::Vector2f taille)</td></tr>
 <tr class="memdesc:a2d021f2ce19a4335d79bcaedf4ab4bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à la taille du gadget.  <a href="#a2d021f2ce19a4335d79bcaedf4ab4bb2">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2d021f2ce19a4335d79bcaedf4ab4bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d17e7736249da941358b9e09e70ea2c"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a8d17e7736249da941358b9e09e70ea2c">getSize</a> ()</td></tr>
-<tr class="memdesc:a8d17e7736249da941358b9e09e70ea2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à la taille du gadget.  <a href="#a8d17e7736249da941358b9e09e70ea2c">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a8d17e7736249da941358b9e09e70ea2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a400166ff460a6747a6e6b4cb77d161fe"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a400166ff460a6747a6e6b4cb77d161fe">getPosAbs</a> ()</td></tr>
-<tr class="memdesc:a400166ff460a6747a6e6b4cb77d161fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à la position absolue (en remontant les ancetres).  <a href="#a400166ff460a6747a6e6b4cb77d161fe">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a400166ff460a6747a6e6b4cb77d161fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4552567e63384c6a30519303f4052f11"><td class="memItemLeft" align="right" valign="top">virtual sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a4552567e63384c6a30519303f4052f11">getLocalBounds</a> ()</td></tr>
-<tr class="memdesc:a4552567e63384c6a30519303f4052f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à la boundingBox local.  <a href="#a4552567e63384c6a30519303f4052f11">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a4552567e63384c6a30519303f4052f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a698682665f65f54e0798887955f32f2e"><td class="memItemLeft" align="right" valign="top">virtual sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a698682665f65f54e0798887955f32f2e">getGlobalBounds</a> ()</td></tr>
-<tr class="memdesc:a698682665f65f54e0798887955f32f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à la boundingBox global.  <a href="#a698682665f65f54e0798887955f32f2e">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a698682665f65f54e0798887955f32f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3bf6c3eafa429927505416d71a87ee4"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#af3bf6c3eafa429927505416d71a87ee4">getSize</a> () const </td></tr>
+<tr class="memdesc:af3bf6c3eafa429927505416d71a87ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à la taille du gadget.  <a href="#af3bf6c3eafa429927505416d71a87ee4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af3bf6c3eafa429927505416d71a87ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b82417fb662b2e9dcb34ad4766a539"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539">getPosAbs</a> () const </td></tr>
+<tr class="memdesc:ae8b82417fb662b2e9dcb34ad4766a539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à la position absolue (en remontant les ancetres).  <a href="#ae8b82417fb662b2e9dcb34ad4766a539">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae8b82417fb662b2e9dcb34ad4766a539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3479c624ae533156f318dc2b996eded3"><td class="memItemLeft" align="right" valign="top">virtual sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a3479c624ae533156f318dc2b996eded3">getLocalBounds</a> () const  =0</td></tr>
+<tr class="memdesc:a3479c624ae533156f318dc2b996eded3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à la boundingBox local.  <a href="#a3479c624ae533156f318dc2b996eded3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3479c624ae533156f318dc2b996eded3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a393fef359f85de77d5067ebb39039201"><td class="memItemLeft" align="right" valign="top">virtual sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a393fef359f85de77d5067ebb39039201">getGlobalBounds</a> () const  =0</td></tr>
+<tr class="memdesc:a393fef359f85de77d5067ebb39039201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acceder à la boundingBox global.  <a href="#a393fef359f85de77d5067ebb39039201">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a393fef359f85de77d5067ebb39039201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b4e990211299d37bf271db9d43dd32c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a9b4e990211299d37bf271db9d43dd32c">ajouter</a> (<a class="el" href="classgui_1_1_gadget.html#a7d8208eca8d1fc7355572bdf3faaecde">ptr</a> enfant)</td></tr>
 <tr class="memdesc:a9b4e990211299d37bf271db9d43dd32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajouter un enfant.  <a href="#a9b4e990211299d37bf271db9d43dd32c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a9b4e990211299d37bf271db9d43dd32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,9 +190,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a46f7f9242f66fffbd12824afc51b4691"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a46f7f9242f66fffbd12824afc51b4691">setStyle</a> (std::shared_ptr&lt; <a class="el" href="structgui_1_1_style.html">Style</a> &gt; style)</td></tr>
 <tr class="memdesc:a46f7f9242f66fffbd12824afc51b4691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définie le style du <a class="el" href="classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. ">Label</a>.  <a href="#a46f7f9242f66fffbd12824afc51b4691">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a46f7f9242f66fffbd12824afc51b4691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd13e9fa8612d7f616c45f779018b5a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#afd13e9fa8612d7f616c45f779018b5a4">aligner</a> (<a class="el" href="classgui_1_1_gadget.html">Gadget</a> &amp;cible, <a class="el" href="namespacegui.html#a6e45c5df5008b4bd5935d9a172382432">Alignements</a> align=Alignements::Ctre_Mili)</td></tr>
-<tr class="memdesc:afd13e9fa8612d7f616c45f779018b5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligne le gadget sur un autre.  <a href="#afd13e9fa8612d7f616c45f779018b5a4">Plus de détails...</a><br /></td></tr>
-<tr class="separator:afd13e9fa8612d7f616c45f779018b5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241281346bbaf82f81f26bf0743175aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a241281346bbaf82f81f26bf0743175aa">aligner</a> (<a class="el" href="classgui_1_1_gadget.html">Gadget</a> &amp;cible, <a class="el" href="namespacegui.html#a6e45c5df5008b4bd5935d9a172382432">Alignements</a> align=Alignements::Ctre_Mili, float ecart=0)</td></tr>
+<tr class="memdesc:a241281346bbaf82f81f26bf0743175aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligne le gadget sur un autre.  <a href="#a241281346bbaf82f81f26bf0743175aa">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a241281346bbaf82f81f26bf0743175aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72d54e3e05dbfd28e156ec72d1424410"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a72d54e3e05dbfd28e156ec72d1424410">setEnable</a> (bool val)</td></tr>
 <tr class="memdesc:a72d54e3e05dbfd28e156ec72d1424410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definir l'état du <a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a>.  <a href="#a72d54e3e05dbfd28e156ec72d1424410">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a72d54e3e05dbfd28e156ec72d1424410"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -282,6 +285,8 @@ Attributs protégés</h2></td></tr>
 Amis</h2></td></tr>
 <tr class="memitem:af5c60b20048ba2de87cbc917bd75e2da"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#af5c60b20048ba2de87cbc917bd75e2da">Fenetre</a></td></tr>
 <tr class="separator:af5c60b20048ba2de87cbc917bd75e2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e4aa786fd85401ae45a925e843ffc9"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#aa9e4aa786fd85401ae45a925e843ffc9">Contenant</a></td></tr>
+<tr class="separator:aa9e4aa786fd85401ae45a925e843ffc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Membres hérités additionnels</h2></td></tr>
@@ -396,7 +401,7 @@ Membres hérités additionnels</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destructeur. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">A faire:</a></b></dt><dd>s'assurer que les gadgets se deletent quand on les retire de la scene... </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">A faire:</a></b></dt><dd>s'assurer que les gadgets se deletent quand on les retire de la scene... </dd></dl>
 
 </div>
 </div>
@@ -432,7 +437,7 @@ Membres hérités additionnels</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
 
-<p>Réimplémentée dans <a class="el" href="classgui_1_1_fenetre.html#a73a3c50ce1248fbe0f251a3a3a1e8cb9">gui::Fenetre</a>, <a class="el" href="classgui_1_1_bouton.html#a85874dc8b231bc9db24117aff6176d43">gui::Bouton</a>, <a class="el" href="classgui_1_1_label.html#af940ee918cf3e72ce74383d609c08721">gui::Label</a>, et <a class="el" href="classgui_1_1_groupe.html#aa07de056f6d0aa21b7f8290b1ee01d58">gui::Groupe</a>.</p>
+<p>Réimplémentée dans <a class="el" href="classgui_1_1_bouton.html#a85874dc8b231bc9db24117aff6176d43">gui::Bouton</a>, <a class="el" href="classgui_1_1_fenetre.html#a73a3c50ce1248fbe0f251a3a3a1e8cb9">gui::Fenetre</a>, <a class="el" href="classgui_1_1_bouton_slide.html#a48bb296c9a18f0e28df42d87b4f69a00">gui::BoutonSlide</a>, <a class="el" href="classgui_1_1_fenetre.html#aff8a016a2de9f72ef5562bf0977a23db">gui::Fenetre</a>, <a class="el" href="classgui_1_1_label.html#af940ee918cf3e72ce74383d609c08721">gui::Label</a>, et <a class="el" href="classgui_1_1_contenant.html#a16df426a021d5a8fbb0f4149e53fda90">gui::Contenant</a>.</p>
 
 <p><div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
@@ -449,8 +454,9 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_gadget_a06c66be095e4d531ef307a3db36e2b4f_icgraph.png" border="0" usemap="#classgui_1_1_gadget_a06c66be095e4d531ef307a3db36e2b4f_icgraph" alt=""/></div>
 <map name="classgui_1_1_gadget_a06c66be095e4d531ef307a3db36e2b4f_icgraph" id="classgui_1_1_gadget_a06c66be095e4d531ef307a3db36e2b4f_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_fenetre.html#a73a3c50ce1248fbe0f251a3a3a1e8cb9" title="Actualiser les éléments. " alt="" coords="207,5,361,32"/>
-<area shape="rect" id="node3" href="classgui_1_1_label.html#af940ee918cf3e72ce74383d609c08721" title="Actualiser les éléments. " alt="" coords="213,56,355,83"/>
+<area shape="rect" id="node2" href="classgui_1_1_bouton_slide.html#a48bb296c9a18f0e28df42d87b4f69a00" title="Actualiser les éléments. " alt="" coords="207,5,388,32"/>
+<area shape="rect" id="node3" href="classgui_1_1_fenetre.html#a73a3c50ce1248fbe0f251a3a3a1e8cb9" title="Actualiser les éléments. " alt="" coords="220,56,375,83"/>
+<area shape="rect" id="node4" href="classgui_1_1_label.html#af940ee918cf3e72ce74383d609c08721" title="Actualiser les éléments. " alt="" coords="226,107,369,133"/>
 </map>
 </div>
 </p>
@@ -489,22 +495,22 @@ Voici le graphe des appelants de cette fonction :</div>
 <dl class="section return"><dt>Renvoie</dt><dd>La Rien </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">A faire:</a></b></dt><dd>verifier que l'enfant est pas deja dans la liste ( cause erreur possible )</dd></dl>
 
-<p>Réimplémentée dans <a class="el" href="classgui_1_1_fenetre.html#a77869f5bdb4c4a6c1d40a5cff3b9250b">gui::Fenetre</a>.</p>
+<p>Réimplémentée dans <a class="el" href="classgui_1_1_fenetre.html#a77869f5bdb4c4a6c1d40a5cff3b9250b">gui::Fenetre</a>, et <a class="el" href="classgui_1_1_contenant.html#aa48820e461cc123973255ce7ee202f92">gui::Contenant</a>.</p>
 
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_gadget_a9b4e990211299d37bf271db9d43dd32c_icgraph.png" border="0" usemap="#classgui_1_1_gadget_a9b4e990211299d37bf271db9d43dd32c_icgraph" alt=""/></div>
 <map name="classgui_1_1_gadget_a9b4e990211299d37bf271db9d43dd32c_icgraph" id="classgui_1_1_gadget_a9b4e990211299d37bf271db9d43dd32c_icgraph">
-<area shape="rect" id="node2" href="classapp_1_1_ecran_demo.html#a8e26aa83dad5dea758fc8e445c9399c1" title="Initialisation de l&#39;interface graphique. " alt="" coords="189,5,356,32"/>
-<area shape="rect" id="node3" href="classapp_1_1_ecran_demo.html#aaf234861fb458c3375c6f038acfe172f" title="Constructeur. " alt="" coords="404,5,599,32"/>
+<area shape="rect" id="node2" href="classgui_1_1_bouton_slide.html#ade6e4cc4975666c3093005429f75f2cc" title="gui::BoutonSlide::creerUI" alt="" coords="189,13,356,39"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton_slide.html#adc42505be100a2952f2aa23dc007b651" title="Constructeur. " alt="" coords="404,5,571,47"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="afd13e9fa8612d7f616c45f779018b5a4"></a>
+<a class="anchor" id="a241281346bbaf82f81f26bf0743175aa"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -518,7 +524,13 @@ Voici le graphe des appelants de cette fonction :</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespacegui.html#a6e45c5df5008b4bd5935d9a172382432">Alignements</a>&#160;</td>
-          <td class="paramname"><em>align</em> = <code>Alignements::Ctre_Mili</code>&#160;</td>
+          <td class="paramname"><em>align</em> = <code>Alignements::Ctre_Mili</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ecart</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -532,19 +544,19 @@ Voici le graphe des appelants de cette fonction :</div>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">cible</td><td>le gadget sur lequel s'aligner. </td></tr>
-    <tr><td class="paramname">align</td><td>l'alignement sur la cible ( haut_gauche ...</td></tr>
+    <tr><td class="paramname">align</td><td>l'alignement sur la cible ( haut_gauche ... </td></tr>
+    <tr><td class="paramname">ecart</td><td>distance a conserver.</td></tr>
   </table>
   </dd>
 </dl>
 <p>return Rien </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">A faire:</a></b></dt><dd>rendre ecart accessible </dd></dl>
 
 <p><div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="classgui_1_1_gadget_afd13e9fa8612d7f616c45f779018b5a4_cgraph.png" border="0" usemap="#classgui_1_1_gadget_afd13e9fa8612d7f616c45f779018b5a4_cgraph" alt=""/></div>
-<map name="classgui_1_1_gadget_afd13e9fa8612d7f616c45f779018b5a4_cgraph" id="classgui_1_1_gadget_afd13e9fa8612d7f616c45f779018b5a4_cgraph">
-<area shape="rect" id="node2" href="classgui_1_1_gadget.html#a4552567e63384c6a30519303f4052f11" title="Acceder à la boundingBox local. " alt="" coords="188,5,379,32"/>
+<div class="center"><img src="classgui_1_1_gadget_a241281346bbaf82f81f26bf0743175aa_cgraph.png" border="0" usemap="#classgui_1_1_gadget_a241281346bbaf82f81f26bf0743175aa_cgraph" alt=""/></div>
+<map name="classgui_1_1_gadget_a241281346bbaf82f81f26bf0743175aa_cgraph" id="classgui_1_1_gadget_a241281346bbaf82f81f26bf0743175aa_cgraph">
+<area shape="rect" id="node2" href="classgui_1_1_gadget.html#a3479c624ae533156f318dc2b996eded3" title="Acceder à la boundingBox local. " alt="" coords="188,5,379,32"/>
 </map>
 </div>
 </p>
@@ -552,9 +564,9 @@ Voici le graphe d'appel pour cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="classgui_1_1_gadget_afd13e9fa8612d7f616c45f779018b5a4_icgraph.png" border="0" usemap="#classgui_1_1_gadget_afd13e9fa8612d7f616c45f779018b5a4_icgraph" alt=""/></div>
-<map name="classgui_1_1_gadget_afd13e9fa8612d7f616c45f779018b5a4_icgraph" id="classgui_1_1_gadget_afd13e9fa8612d7f616c45f779018b5a4_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_bouton_cocher.html#a03a7011fd1269a5502fd3b6e58652c4e" title="Actualise le model du Gadget. " alt="" coords="188,5,325,47"/>
+<div class="center"><img src="classgui_1_1_gadget_a241281346bbaf82f81f26bf0743175aa_icgraph.png" border="0" usemap="#classgui_1_1_gadget_a241281346bbaf82f81f26bf0743175aa_icgraph" alt=""/></div>
+<map name="classgui_1_1_gadget_a241281346bbaf82f81f26bf0743175aa_icgraph" id="classgui_1_1_gadget_a241281346bbaf82f81f26bf0743175aa_icgraph">
+<area shape="rect" id="node2" href="classgui_1_1_bouton_encoche.html#a02629fc362c653d12d545bc1557097cf" title="Actualise le model du Gadget. " alt="" coords="188,5,327,47"/>
 </map>
 </div>
 </p>
@@ -591,10 +603,9 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="center"><img src="classgui_1_1_gadget_ab2bd5264b770b78ecc59d2f1b7486aa6_icgraph.png" border="0" usemap="#classgui_1_1_gadget_ab2bd5264b770b78ecc59d2f1b7486aa6_icgraph" alt=""/></div>
 <map name="classgui_1_1_gadget_ab2bd5264b770b78ecc59d2f1b7486aa6_icgraph" id="classgui_1_1_gadget_ab2bd5264b770b78ecc59d2f1b7486aa6_icgraph">
 <area shape="rect" id="node2" href="classgui_1_1_gadget.html#a06c66be095e4d531ef307a3db36e2b4f" title="Actualiser les éléments. " alt="" coords="216,56,369,83"/>
-<area shape="rect" id="node5" href="classgui_1_1_groupe.html#aa07de056f6d0aa21b7f8290b1ee01d58" title="Actualiser les éléments. " alt="" coords="216,107,369,133"/>
-<area shape="rect" id="node3" href="classgui_1_1_fenetre.html#a73a3c50ce1248fbe0f251a3a3a1e8cb9" title="Actualiser les éléments. " alt="" coords="431,5,586,32"/>
-<area shape="rect" id="node4" href="classgui_1_1_label.html#af940ee918cf3e72ce74383d609c08721" title="Actualiser les éléments. " alt="" coords="437,56,580,83"/>
-<area shape="rect" id="node6" href="classapp_1_1_ecran_demo.html#abcc11ea64008509c851eda8433ed6a6a" title="Actualiser les éléments. " alt="" coords="417,107,600,133"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton_slide.html#a48bb296c9a18f0e28df42d87b4f69a00" title="Actualiser les éléments. " alt="" coords="417,5,599,32"/>
+<area shape="rect" id="node4" href="classgui_1_1_fenetre.html#a73a3c50ce1248fbe0f251a3a3a1e8cb9" title="Actualiser les éléments. " alt="" coords="431,56,585,83"/>
+<area shape="rect" id="node5" href="classgui_1_1_label.html#af940ee918cf3e72ce74383d609c08721" title="Actualiser les éléments. " alt="" coords="437,107,579,133"/>
 </map>
 </div>
 </p>
@@ -642,14 +653,13 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>true si le point (x,y) est contenu par le gadget. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">A faire:</a></b></dt><dd>ici c'est l'bordel, entre local, global et les transformations, une rotation sur un bouton et la zone de clique ne suivait pas. </dd></dl>
 
 <p><div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_gadget_aca524b5beca6fd7eb6269e32e56285a3_cgraph.png" border="0" usemap="#classgui_1_1_gadget_aca524b5beca6fd7eb6269e32e56285a3_cgraph" alt=""/></div>
 <map name="classgui_1_1_gadget_aca524b5beca6fd7eb6269e32e56285a3_cgraph" id="classgui_1_1_gadget_aca524b5beca6fd7eb6269e32e56285a3_cgraph">
-<area shape="rect" id="node2" href="classgui_1_1_gadget.html#a698682665f65f54e0798887955f32f2e" title="Acceder à la boundingBox global. " alt="" coords="196,29,392,56"/>
+<area shape="rect" id="node2" href="classgui_1_1_gadget.html#a393fef359f85de77d5067ebb39039201" title="Acceder à la boundingBox global. " alt="" coords="196,29,392,56"/>
 </map>
 </div>
 </p>
@@ -659,7 +669,13 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_gadget_aca524b5beca6fd7eb6269e32e56285a3_icgraph.png" border="0" usemap="#classgui_1_1_gadget_aca524b5beca6fd7eb6269e32e56285a3_icgraph" alt=""/></div>
 <map name="classgui_1_1_gadget_aca524b5beca6fd7eb6269e32e56285a3_icgraph" id="classgui_1_1_gadget_aca524b5beca6fd7eb6269e32e56285a3_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="196,22,325,63"/>
+<area shape="rect" id="node2" href="classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="441,8,596,34"/>
+<area shape="rect" id="node4" href="classgui_1_1_bouton.html#a516b56a17aecfebb808ab94bfab93325" title="La gestion du survol. " alt="" coords="203,37,387,64"/>
+<area shape="rect" id="node6" href="classgui_1_1_bouton.html#af78a304e8e9973e54d008f13e2b91168" title="La gestion du survol. " alt="" coords="203,88,386,114"/>
+<area shape="rect" id="node7" href="classgui_1_1_bouton.html#ad21bb5a674b5e5472535090adc3a4274" title="La gestion du survol. " alt="" coords="197,138,393,165"/>
+<area shape="rect" id="node8" href="classgui_1_1_bouton.html#a97acf4dc98b7a574a80c45539fafb47d" title="La gestion du survol. " alt="" coords="196,190,393,231"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="644,40,773,82"/>
+<area shape="rect" id="node5" href="classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714" title="gui::Bouton::gerer\l_declenchements" alt="" coords="456,80,581,122"/>
 </map>
 </div>
 </p>
@@ -701,11 +717,11 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Rendre les éléments. </p>
 <p>Dessiner les différents éléments du ou des écrans actifs. </p><dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
 
-<p>Réimplémentée dans <a class="el" href="classgui_1_1_fenetre.html#a267c664d6d1632fbef4134019303b8d6">gui::Fenetre</a>, <a class="el" href="classgui_1_1_bouton.html#a8d736a0c912d7bb23551ccc0aaa0e20d">gui::Bouton</a>, <a class="el" href="classgui_1_1_label.html#a7e162f32f95d6e2b568bc9393945a732">gui::Label</a>, <a class="el" href="classgui_1_1_image.html#a16e3719ba89a9a9ebe6b5ab222203ec4">gui::Image</a>, <a class="el" href="classgui_1_1_bouton_texte.html#ac07e5e027d4d9d3544e8964d5d370714">gui::BoutonTexte</a>, et <a class="el" href="classgui_1_1_bouton_cocher.html#aea6c305290640a14a3659713b9acb5bf">gui::BoutonCocher</a>.</p>
+<p>Réimplémentée dans <a class="el" href="classgui_1_1_fenetre.html#a267c664d6d1632fbef4134019303b8d6">gui::Fenetre</a>, <a class="el" href="classgui_1_1_bouton.html#a8d736a0c912d7bb23551ccc0aaa0e20d">gui::Bouton</a>, <a class="el" href="classgui_1_1_bouton_slide.html#a4ab6933254e1588d1b775359f6ae081e">gui::BoutonSlide</a>, <a class="el" href="classgui_1_1_fenetre.html#a189d9d59ab16e81c271414c79eabd8e2">gui::Fenetre</a>, <a class="el" href="classgui_1_1_label.html#a7e162f32f95d6e2b568bc9393945a732">gui::Label</a>, <a class="el" href="classgui_1_1_image.html#a16e3719ba89a9a9ebe6b5ab222203ec4">gui::Image</a>, <a class="el" href="classgui_1_1_contenant.html#a4728b85df32276caae0a51d3c7c47973">gui::Contenant</a>, <a class="el" href="classgui_1_1_bouton_texte.html#ac07e5e027d4d9d3544e8964d5d370714">gui::BoutonTexte</a>, <a class="el" href="classgui_1_1_bouton_encoche.html#a7b16e473d79aa0d1b1c4c554e8e71669">gui::BoutonEncoche</a>, et <a class="el" href="classgui_1_1_groupe.html#afb485d34e0a657b856b6ed9d4e930b75">gui::Groupe</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a698682665f65f54e0798887955f32f2e"></a>
+<a class="anchor" id="a393fef359f85de77d5067ebb39039201"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -716,12 +732,12 @@ Voici le graphe des appelants de cette fonction :</div>
           <td class="memname">virtual sf::FloatRect gui::Gadget::getGlobalBounds </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -729,22 +745,28 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Acceder à la boundingBox global. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>La boundingBox </dd></dl>
 
-<p>Réimplémentée dans <a class="el" href="classgui_1_1_bouton.html#a610e908477ecc3eef1576380ef5eda53">gui::Bouton</a>, <a class="el" href="classgui_1_1_fenetre.html#a41e839460298a6f94327dca022ad8fb8">gui::Fenetre</a>, <a class="el" href="classgui_1_1_image.html#a7a26b662467410938d9cfa01e4dcf50e">gui::Image</a>, <a class="el" href="classgui_1_1_label.html#a3d1724b9ebd2f1ff450ccfe725c0ac04">gui::Label</a>, et <a class="el" href="classgui_1_1_groupe.html#aaa70e4ae758c941a1be7965814e11cff">gui::Groupe</a>.</p>
+<p>Implémenté dans <a class="el" href="classgui_1_1_bouton_slide.html#a2715c919006b143bad7b2bd54544d574">gui::BoutonSlide</a>, <a class="el" href="classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e">gui::Bouton</a>, <a class="el" href="classgui_1_1_image.html#ae047970d6f90ea9ad81675491166147b">gui::Image</a>, <a class="el" href="classgui_1_1_label.html#a5cdb2304ef0b04956246301dbde2695f">gui::Label</a>, <a class="el" href="classgui_1_1_contenant.html#a6e3ab5e79636f350c1ab5d04efaae38e">gui::Contenant</a>, et <a class="el" href="classgui_1_1_groupe.html#a0864f0a85cefb3a2268bb69f7046f5b9">gui::Groupe</a>.</p>
 
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="classgui_1_1_gadget_a698682665f65f54e0798887955f32f2e_icgraph.png" border="0" usemap="#classgui_1_1_gadget_a698682665f65f54e0798887955f32f2e_icgraph" alt=""/></div>
-<map name="classgui_1_1_gadget_a698682665f65f54e0798887955f32f2e_icgraph" id="classgui_1_1_gadget_a698682665f65f54e0798887955f32f2e_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="249,29,392,56"/>
-<area shape="rect" id="node3" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="440,22,569,63"/>
+<div class="center"><img src="classgui_1_1_gadget_a393fef359f85de77d5067ebb39039201_icgraph.png" border="0" usemap="#classgui_1_1_gadget_a393fef359f85de77d5067ebb39039201_icgraph" alt=""/></div>
+<map name="classgui_1_1_gadget_a393fef359f85de77d5067ebb39039201_icgraph" id="classgui_1_1_gadget_a393fef359f85de77d5067ebb39039201_icgraph">
+<area shape="rect" id="node2" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="249,88,392,114"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="685,8,840,34"/>
+<area shape="rect" id="node5" href="classgui_1_1_bouton.html#a516b56a17aecfebb808ab94bfab93325" title="La gestion du survol. " alt="" coords="447,37,631,64"/>
+<area shape="rect" id="node7" href="classgui_1_1_bouton.html#af78a304e8e9973e54d008f13e2b91168" title="La gestion du survol. " alt="" coords="447,88,630,114"/>
+<area shape="rect" id="node8" href="classgui_1_1_bouton.html#ad21bb5a674b5e5472535090adc3a4274" title="La gestion du survol. " alt="" coords="441,138,637,165"/>
+<area shape="rect" id="node9" href="classgui_1_1_bouton.html#a97acf4dc98b7a574a80c45539fafb47d" title="La gestion du survol. " alt="" coords="440,190,637,231"/>
+<area shape="rect" id="node4" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="888,40,1017,82"/>
+<area shape="rect" id="node6" href="classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714" title="gui::Bouton::gerer\l_declenchements" alt="" coords="700,80,825,122"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a4552567e63384c6a30519303f4052f11"></a>
+<a class="anchor" id="a3479c624ae533156f318dc2b996eded3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -755,12 +777,12 @@ Voici le graphe des appelants de cette fonction :</div>
           <td class="memname">virtual sf::FloatRect gui::Gadget::getLocalBounds </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -768,22 +790,22 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Acceder à la boundingBox local. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>La boundingBox </dd></dl>
 
-<p>Réimplémentée dans <a class="el" href="classgui_1_1_bouton.html#a0f623480e174e03e1e23233dc991acea">gui::Bouton</a>, <a class="el" href="classgui_1_1_fenetre.html#a18e9f2f566b150967a4cc141059ecd81">gui::Fenetre</a>, <a class="el" href="classgui_1_1_image.html#a4098449cf18dfce62842b9a08b440e54">gui::Image</a>, <a class="el" href="classgui_1_1_label.html#a17b939dc928de9a6f826514f655348d2">gui::Label</a>, et <a class="el" href="classgui_1_1_groupe.html#a79907182be4a24d8a2248febc8f7c31a">gui::Groupe</a>.</p>
+<p>Implémenté dans <a class="el" href="classgui_1_1_bouton_slide.html#ae00bef6b47bd5a5a72f64176f9090650">gui::BoutonSlide</a>, <a class="el" href="classgui_1_1_bouton.html#a39fcee6d8d115e75c29a785860be8975">gui::Bouton</a>, <a class="el" href="classgui_1_1_image.html#a724e064620b575d25b234efc1e678942">gui::Image</a>, <a class="el" href="classgui_1_1_label.html#a1ca878608ba8b4219b6d4f8db804ea02">gui::Label</a>, <a class="el" href="classgui_1_1_contenant.html#ae483e43924ff6539aced8ad5abd1cf73">gui::Contenant</a>, et <a class="el" href="classgui_1_1_groupe.html#a08b4747002ba471a6b2a7ae29b83646d">gui::Groupe</a>.</p>
 
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="classgui_1_1_gadget_a4552567e63384c6a30519303f4052f11_icgraph.png" border="0" usemap="#classgui_1_1_gadget_a4552567e63384c6a30519303f4052f11_icgraph" alt=""/></div>
-<map name="classgui_1_1_gadget_a4552567e63384c6a30519303f4052f11_icgraph" id="classgui_1_1_gadget_a4552567e63384c6a30519303f4052f11_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_gadget.html#afd13e9fa8612d7f616c45f779018b5a4" title="Aligne le gadget sur un autre. " alt="" coords="244,13,379,39"/>
-<area shape="rect" id="node3" href="classgui_1_1_bouton_cocher.html#a03a7011fd1269a5502fd3b6e58652c4e" title="Actualise le model du Gadget. " alt="" coords="427,5,564,47"/>
+<div class="center"><img src="classgui_1_1_gadget_a3479c624ae533156f318dc2b996eded3_icgraph.png" border="0" usemap="#classgui_1_1_gadget_a3479c624ae533156f318dc2b996eded3_icgraph" alt=""/></div>
+<map name="classgui_1_1_gadget_a3479c624ae533156f318dc2b996eded3_icgraph" id="classgui_1_1_gadget_a3479c624ae533156f318dc2b996eded3_icgraph">
+<area shape="rect" id="node2" href="classgui_1_1_gadget.html#a241281346bbaf82f81f26bf0743175aa" title="Aligne le gadget sur un autre. " alt="" coords="244,13,379,39"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton_encoche.html#a02629fc362c653d12d545bc1557097cf" title="Actualise le model du Gadget. " alt="" coords="427,5,565,47"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a400166ff460a6747a6e6b4cb77d161fe"></a>
+<a class="anchor" id="ae8b82417fb662b2e9dcb34ad4766a539"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -794,7 +816,7 @@ Voici le graphe des appelants de cette fonction :</div>
           <td class="memname">sf::Vector2f gui::Gadget::getPosAbs </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -810,26 +832,31 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="classgui_1_1_gadget_a400166ff460a6747a6e6b4cb77d161fe_cgraph.png" border="0" usemap="#classgui_1_1_gadget_a400166ff460a6747a6e6b4cb77d161fe_cgraph" alt=""/></div>
+<div class="center"><img src="classgui_1_1_gadget_ae8b82417fb662b2e9dcb34ad4766a539_cgraph.png" border="0" usemap="#classgui_1_1_gadget_ae8b82417fb662b2e9dcb34ad4766a539_cgraph" alt=""/></div>
+<map name="classgui_1_1_gadget_ae8b82417fb662b2e9dcb34ad4766a539_cgraph" id="classgui_1_1_gadget_ae8b82417fb662b2e9dcb34ad4766a539_cgraph">
+</map>
 </div>
 </p>
 
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="classgui_1_1_gadget_a400166ff460a6747a6e6b4cb77d161fe_icgraph.png" border="0" usemap="#classgui_1_1_gadget_a400166ff460a6747a6e6b4cb77d161fe_icgraph" alt=""/></div>
-<map name="classgui_1_1_gadget_a400166ff460a6747a6e6b4cb77d161fe_icgraph" id="classgui_1_1_gadget_a400166ff460a6747a6e6b4cb77d161fe_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_bouton.html#a610e908477ecc3eef1576380ef5eda53" title="Accesseur de la boundingBox en global. " alt="" coords="217,5,411,32"/>
-<area shape="rect" id="node3" href="classgui_1_1_fenetre.html#a41e839460298a6f94327dca022ad8fb8" title="Accesseur de la boundingBox en global. " alt="" coords="215,56,413,83"/>
-<area shape="rect" id="node5" href="classgui_1_1_label.html#a3d1724b9ebd2f1ff450ccfe725c0ac04" title="Accesseur de la boundingBox en global. " alt="" coords="221,107,407,133"/>
-<area shape="rect" id="node4" href="classgui_1_1_fenetre.html#a4a9b783095e1ebf716f16042efa33da9" title="Acceder à la taille de la fenetre. " alt="" coords="461,56,604,83"/>
+<div class="center"><img src="classgui_1_1_gadget_ae8b82417fb662b2e9dcb34ad4766a539_icgraph.png" border="0" usemap="#classgui_1_1_gadget_ae8b82417fb662b2e9dcb34ad4766a539_icgraph" alt=""/></div>
+<map name="classgui_1_1_gadget_ae8b82417fb662b2e9dcb34ad4766a539_icgraph" id="classgui_1_1_gadget_ae8b82417fb662b2e9dcb34ad4766a539_icgraph">
+<area shape="rect" id="node2" href="classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e" title="Accesseur de la boundingBox en global. " alt="" coords="217,5,411,32"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton_slide.html#a2715c919006b143bad7b2bd54544d574" title="Acceder à la boundingBox global. " alt="" coords="224,57,404,98"/>
+<area shape="rect" id="node4" href="classgui_1_1_contenant.html#a6e3ab5e79636f350c1ab5d04efaae38e" title="Accesseur de la boundingBox globale. " alt="" coords="229,122,399,163"/>
+<area shape="rect" id="node5" href="classgui_1_1_fenetre.html#a41e839460298a6f94327dca022ad8fb8" title="Accesseur de la boundingBox en global. " alt="" coords="215,188,413,215"/>
+<area shape="rect" id="node7" href="classgui_1_1_groupe.html#a0864f0a85cefb3a2268bb69f7046f5b9" title="Accesseur de la boundingBox globale. " alt="" coords="216,239,412,265"/>
+<area shape="rect" id="node8" href="classgui_1_1_label.html#a5cdb2304ef0b04956246301dbde2695f" title="Accesseur de la boundingBox en global. " alt="" coords="221,289,407,316"/>
+<area shape="rect" id="node6" href="classgui_1_1_fenetre.html#a4a9b783095e1ebf716f16042efa33da9" title="Acceder à la taille de la fenetre. " alt="" coords="461,188,604,215"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a8d17e7736249da941358b9e09e70ea2c"></a>
+<a class="anchor" id="af3bf6c3eafa429927505416d71a87ee4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -840,7 +867,7 @@ Voici le graphe des appelants de cette fonction :</div>
           <td class="memname">virtual sf::Vector2f gui::Gadget::getSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -853,7 +880,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Acceder à la taille du gadget. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>La taille </dd></dl>
 
-<p>Réimplémentée dans <a class="el" href="classgui_1_1_bouton.html#a971c98e0575c6b620454e399b91deb24">gui::Bouton</a>, <a class="el" href="classgui_1_1_fenetre.html#a4a9b783095e1ebf716f16042efa33da9">gui::Fenetre</a>, <a class="el" href="classgui_1_1_image.html#aeb7b0d42011cd3bb62452775db37f56c">gui::Image</a>, <a class="el" href="classgui_1_1_label.html#a762c8ea73d28b6312d5f323670e002c4">gui::Label</a>, et <a class="el" href="classgui_1_1_groupe.html#ad26b41a6a0c6f831244bb1917314d285">gui::Groupe</a>.</p>
+<p>Réimplémentée dans <a class="el" href="classgui_1_1_bouton.html#aa42416fb8136770b52737af34bcf0134">gui::Bouton</a>, <a class="el" href="classgui_1_1_contenant.html#a2cad8148708d6af3f8b5c311c21d2da0">gui::Contenant</a>, <a class="el" href="classgui_1_1_label.html#a53d1325a8b2a1241c413184f16883f0b">gui::Label</a>, <a class="el" href="classgui_1_1_image.html#ad9612f9f7fac87237e204db2652ec83a">gui::Image</a>, et <a class="el" href="classgui_1_1_groupe.html#abe6ed92c02e4be00f631a0223acf12f9">gui::Groupe</a>.</p>
 
 </div>
 </div>
@@ -907,7 +934,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Actualise le model du <a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a>. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
 
-<p>Réimplémentée dans <a class="el" href="classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d">gui::Fenetre</a>, <a class="el" href="classgui_1_1_bouton.html#a1ff3d7a1586eaab5873cc6e49be2332c">gui::Bouton</a>, <a class="el" href="classgui_1_1_image.html#a2a8ce35cc6f459c337b9a00313d68d4a">gui::Image</a>, <a class="el" href="classgui_1_1_label.html#ae310f44ef08900d558af5c5bc94c448d">gui::Label</a>, <a class="el" href="classgui_1_1_bouton_texte.html#a6c66a5e34585fdb6054c2f56160db0a7">gui::BoutonTexte</a>, et <a class="el" href="classgui_1_1_bouton_cocher.html#a03a7011fd1269a5502fd3b6e58652c4e">gui::BoutonCocher</a>.</p>
+<p>Réimplémentée dans <a class="el" href="classgui_1_1_bouton.html#a1ff3d7a1586eaab5873cc6e49be2332c">gui::Bouton</a>, <a class="el" href="classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d">gui::Fenetre</a>, <a class="el" href="classgui_1_1_image.html#a2a8ce35cc6f459c337b9a00313d68d4a">gui::Image</a>, <a class="el" href="classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d">gui::Fenetre</a>, <a class="el" href="classgui_1_1_label.html#ae310f44ef08900d558af5c5bc94c448d">gui::Label</a>, <a class="el" href="classgui_1_1_bouton_slide.html#aecaff7d22861a6685c75a3fda3adffa5">gui::BoutonSlide</a>, <a class="el" href="classgui_1_1_bouton_texte.html#a6c66a5e34585fdb6054c2f56160db0a7">gui::BoutonTexte</a>, <a class="el" href="classgui_1_1_fenetre__encastree.html#aa19c6113dc6a6b2a15f1c0de60db468a">gui::Fenetre_encastree</a>, et <a class="el" href="classgui_1_1_bouton_encoche.html#a02629fc362c653d12d545bc1557097cf">gui::BoutonEncoche</a>.</p>
 
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
@@ -1041,7 +1068,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Acceder à la taille du gadget. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>La taille </dd></dl>
 
-<p>Réimplémentée dans <a class="el" href="classgui_1_1_bouton_texte.html#a1725dffd7f645561ee4db8786d83a85e">gui::BoutonTexte</a>, <a class="el" href="classgui_1_1_bouton.html#a7652dfbbb1180cfecc0db6b68db38776">gui::Bouton</a>, <a class="el" href="classgui_1_1_fenetre.html#a0ef3d718be52458dc0c9137f669819fc">gui::Fenetre</a>, et <a class="el" href="classgui_1_1_image.html#afb286d244ff0bf591d290de7d17215f9">gui::Image</a>.</p>
+<p>Réimplémentée dans <a class="el" href="classgui_1_1_contenant.html#a62c25b32ac00ae9293608e435182dc5a">gui::Contenant</a>, <a class="el" href="classgui_1_1_bouton_texte.html#a1725dffd7f645561ee4db8786d83a85e">gui::BoutonTexte</a>, <a class="el" href="classgui_1_1_bouton.html#a7652dfbbb1180cfecc0db6b68db38776">gui::Bouton</a>, <a class="el" href="classgui_1_1_image.html#afb286d244ff0bf591d290de7d17215f9">gui::Image</a>, <a class="el" href="classgui_1_1_fenetre.html#a0ef3d718be52458dc0c9137f669819fc">gui::Fenetre</a>, <a class="el" href="classgui_1_1_bouton_slide.html#ace4488a00d8993238e2ead1c6ddb6694">gui::BoutonSlide</a>, <a class="el" href="classgui_1_1_fenetre.html#a0ef3d718be52458dc0c9137f669819fc">gui::Fenetre</a>, et <a class="el" href="classgui_1_1_groupe.html#ae814af8e2bc6650b6a9e06a91e515d40">gui::Groupe</a>.</p>
 
 </div>
 </div>
@@ -1198,16 +1225,17 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>La gestion des évènements utilisateurs. </p>
 <p>Gère les entrées claviers, souris, fenetre ... </p><dl class="section return"><dt>Renvoie</dt><dd>Rien </dd></dl>
 
-<p>Réimplémentée dans <a class="el" href="classgui_1_1_fenetre.html#a555be24b33faedf52e92695f4f1785b3">gui::Fenetre</a>, <a class="el" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac">gui::Bouton</a>, et <a class="el" href="classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf">gui::Label</a>.</p>
+<p>Réimplémentée dans <a class="el" href="classgui_1_1_fenetre.html#a555be24b33faedf52e92695f4f1785b3">gui::Fenetre</a>, <a class="el" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac">gui::Bouton</a>, <a class="el" href="classgui_1_1_bouton_slide.html#af552a1f65efbdbb9cf763a99f1637e62">gui::BoutonSlide</a>, <a class="el" href="classgui_1_1_fenetre.html#a0a87da1aa865b7ee85c1f0b7621ada82">gui::Fenetre</a>, <a class="el" href="classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf">gui::Label</a>, et <a class="el" href="classgui_1_1_contenant.html#aaf92cf1d1d7266d25b0c15cd5202ae4b">gui::Contenant</a>.</p>
 
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_gadget_a510ae68144997724188d2bb902c3103d_icgraph.png" border="0" usemap="#classgui_1_1_gadget_a510ae68144997724188d2bb902c3103d_icgraph" alt=""/></div>
 <map name="classgui_1_1_gadget_a510ae68144997724188d2bb902c3103d_icgraph" id="classgui_1_1_gadget_a510ae68144997724188d2bb902c3103d_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_fenetre.html#a555be24b33faedf52e92695f4f1785b3" title="La gestion des évènements utilisateurs. " alt="" coords="198,5,330,47"/>
-<area shape="rect" id="node3" href="classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf" title="La gestion des évènements utilisateurs. " alt="" coords="205,71,323,112"/>
-<area shape="rect" id="node4" href="classapp_1_1_ecran_demo.html#a8487f9c53ed72e5bb99b3819fe5efc29" title="La gestion des évènements utilisateurs. " alt="" coords="184,136,344,177"/>
+<area shape="rect" id="node2" href="classgui_1_1_bouton_slide.html#af552a1f65efbdbb9cf763a99f1637e62" title="La gestion des évènements utilisateurs. " alt="" coords="184,5,343,47"/>
+<area shape="rect" id="node3" href="classgui_1_1_contenant.html#aaf92cf1d1d7266d25b0c15cd5202ae4b" title="La gestion des évènements utilisateurs. " alt="" coords="190,71,337,112"/>
+<area shape="rect" id="node4" href="classgui_1_1_fenetre.html#a555be24b33faedf52e92695f4f1785b3" title="La gestion des évènements utilisateurs. " alt="" coords="197,136,329,177"/>
+<area shape="rect" id="node5" href="classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf" title="La gestion des évènements utilisateurs. " alt="" coords="204,201,323,243"/>
 </map>
 </div>
 </p>
@@ -1215,6 +1243,27 @@ Voici le graphe des appelants de cette fonction :</div>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions amies et associées</h2>
+<a class="anchor" id="aa9e4aa786fd85401ae45a925e843ffc9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classgui_1_1_contenant.html">Contenant</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">A faire:</a></b></dt><dd>corriger le code pour supuprimer ce friend </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="af5c60b20048ba2de87cbc917bd75e2da"></a>
 <div class="memitem">
 <div class="memproto">

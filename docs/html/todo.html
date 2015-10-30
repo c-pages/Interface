@@ -88,23 +88,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <dd>passer de pointer* à point shared_ptr ou unique_ptr ?  </dd>
 <dt><a class="anchor" id="_todo000001"></a>Global(e) <a class="el" href="classapp_1_1_config.html#aca7399e3ebaf8448a94a809c471cd4e7">app::Config::m_styles</a>  </dt>
 <dd>passer de pointer* à point shared_ptr ou unique_ptr ?  </dd>
-<dt><a class="anchor" id="_todo000006"></a>Classe <a class="el" href="classgui_1_1_bouton.html">gui::Bouton</a>  </dt>
-<dd>à résoudre :<ul>
-<li>le relache hors du bouton s'active meme quand on a pas cliquer dessus avant.</li>
-<li>pareil pour le double clique. </li>
-</ul>
-</dd>
+<dt><a class="anchor" id="_todo000007"></a>Classe <a class="el" href="classgui_1_1_bouton.html">gui::Bouton</a>  </dt>
+<dd>résoudre quand il y a superposition de boutons, seulement celui du dessus doit reagir </dd>
+<dt><a class="anchor" id="_todo000008"></a>Classe <a class="el" href="classgui_1_1_bouton_slide.html">gui::BoutonSlide</a>  </dt>
+<dd>cf. le todo du <a class="el" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. ">gui::Bouton</a> </dd>
 <dt><a class="anchor" id="_todo000003"></a>Global(e) <a class="el" href="classgui_1_1_gadget.html#a9b4e990211299d37bf271db9d43dd32c">gui::Gadget::ajouter</a>  (ptr enfant)</dt>
 <dd>verifier que l'enfant est pas deja dans la liste ( cause erreur possible ) </dd>
-<dt><a class="anchor" id="_todo000008"></a>Global(e) <a class="el" href="classgui_1_1_gadget.html#afd13e9fa8612d7f616c45f779018b5a4">gui::Gadget::aligner</a>  (<a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a> &amp;cible, Alignements align=Alignements::Ctre_Mili)</dt>
-<dd>rendre ecart accessible  </dd>
-<dt><a class="anchor" id="_todo000009"></a>Global(e) <a class="el" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3">gui::Gadget::contient</a>  (float x, float y)</dt>
-<dd>ici c'est l'bordel, entre local, global et les transformations, une rotation sur un bouton et la zone de clique ne suivait pas.  </dd>
+<dt><a class="anchor" id="_todo000006"></a>Global(e) <a class="el" href="classgui_1_1_gadget.html#aa9e4aa786fd85401ae45a925e843ffc9">gui::Gadget::Contenant</a>  </dt>
+<dd>corriger le code pour supuprimer ce friend  </dd>
 <dt><a class="anchor" id="_todo000005"></a>Global(e) <a class="el" href="classgui_1_1_gadget.html#af5c60b20048ba2de87cbc917bd75e2da">gui::Gadget::Fenetre</a>  </dt>
 <dd>corriger le code pour supuprimer ce friend  </dd>
 <dt><a class="anchor" id="_todo000004"></a>Global(e) <a class="el" href="classgui_1_1_gadget.html#a02a9b2e04c82e9539312301c449e2baa">gui::Gadget::setParent</a>  (<a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a> *parent)</dt>
 <dd>verifier que l'enfant est pas deja dans la liste ( cause erreur possible ) </dd>
-<dt><a class="anchor" id="_todo000007"></a>Global(e) <a class="el" href="classgui_1_1_gadget.html#ae21de661895bacace5aa0b96cb6b21df">gui::Gadget::~Gadget</a>  ()</dt>
+<dt><a class="anchor" id="_todo000009"></a>Global(e) <a class="el" href="classgui_1_1_gadget.html#ae21de661895bacace5aa0b96cb6b21df">gui::Gadget::~Gadget</a>  ()</dt>
 <dd>s'assurer que les gadgets se deletent quand on les retire de la scene... </dd>
 </dl>
 </div></div><!-- contents -->

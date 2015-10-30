@@ -13,11 +13,11 @@ BoutonSlide::BoutonSlide    (   sf::RenderWindow *    fenetre
                             ,   Orientation             orient
                             ,   std::shared_ptr<Skin>   skin
                             ,   float                   longueur )
-: m_orientation ( orient )
-, m_fenetreSFML  ( fenetre )
-, m_longueurMax  ( longueur )
-, m_drag ( false )
-, m_largeur(5)
+: m_orientation     ( orient )
+, m_fenetreSFML     ( fenetre )
+, m_longueurMax     ( longueur )
+, m_drag            ( false )
+, m_largeur         ( 5 )
 {
     creerUI();
     majGeom();
@@ -33,7 +33,7 @@ BoutonSlide::~BoutonSlide()
 /////////////////////////////////////////////////
 sf::FloatRect
 BoutonSlide::getLocalBounds ( ) const {
-    sf::FloatRect result( m_UI->getLocalBounds() );
+    sf::FloatRect result( m_btnFond->getLocalBounds() );
 
     result.left     =  getPosition().x;
     result.top      =  getPosition().y;
@@ -45,7 +45,7 @@ BoutonSlide::getLocalBounds ( ) const {
 /////////////////////////////////////////////////
 sf::FloatRect
 BoutonSlide::getGlobalBounds ( ) const {
-    sf::FloatRect result( m_UI->getLocalBounds() );
+    sf::FloatRect result( m_btnFond->getLocalBounds() );
 
     result.left     +=  getPosAbs().x;
     result.top      +=  getPosAbs().y;
@@ -56,7 +56,7 @@ BoutonSlide::getGlobalBounds ( ) const {
 void
 BoutonSlide::creerUI()
 {
-    m_UI->setParent ( this );
+   // m_UI->setParent ( this );
 
 
     // les fonctions de drag
@@ -95,8 +95,9 @@ BoutonSlide::creerUI()
     m_btnSlide->lier ( Evenements::onBtnG_RelacheDehors , m_fctDrag_Fin );
 
 
-    m_UI->ajouter ( m_btnFond );
-    m_UI->ajouter ( m_btnSlide );
+    ajouter ( m_btnFond );
+    m_btnSlide->lier ( Evenements::onBtnD_Press         , [this](){std::cout << "POPOPOPO\n";} );
+    ajouter ( m_btnSlide );
     //dtor
 }
 
@@ -169,8 +170,9 @@ void
 BoutonSlide::traiter_evenements ( const sf::Event& event )
 {
    //UI::traiter_evenements( event );
-    m_UI->traiter_evenements( event );
+    Gadget::traiter_evenements( event );
 }
+
 
 /////////////////////////////////////////////////
 void
@@ -210,7 +212,7 @@ BoutonSlide::actualiser ( float deltaT )
 
 
     //UI::actualiser( deltaT );
-    m_UI->actualiser( deltaT );
+    Gadget::actualiser( deltaT );
 }
 
 /////////////////////////////////////////////////
@@ -221,7 +223,8 @@ BoutonSlide::draw( sf::RenderTarget& target, sf::RenderStates states ) const
 
     states.transform *= getTransform();
 
-    target.draw     ( *m_UI , states );
+    target.draw     ( *m_btnFond , states );
+    target.draw     ( *m_btnSlide , states );
 
 }
 

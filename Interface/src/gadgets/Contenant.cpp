@@ -15,17 +15,24 @@ Contenant::Contenant( sf::RenderWindow  *     fenetre )
 , m_fenetreSFML     ( fenetre )
 , m_bSliderVerti    ( false )
 , m_bSliderHori     ( false )
-, m_fond            ( new Image () )
-, m_grpContenu      ( new Groupe () )
+, m_grpContenu      (  )
+, m_UI              (  )
 , m_spriteContenant ( new sf::Sprite ())
 , m_posContenu      ( 0 , 0 )
 , m_slideVerti      ( std::make_shared<BoutonSlide> ( fenetre, Orientation::Verticale , m_skin) )
 , m_slideHori       ( std::make_shared<BoutonSlide> ( fenetre, Orientation::Horizontale, m_skin ) )
 {
-    m_UI->setParent (this );
-    //ctor
-    m_UI->ajouter ( m_slideVerti );
-    m_UI->ajouter ( m_slideHori );
+    // contenant et contenu
+    m_grpContenu    = std::shared_ptr<Groupe>       ( new Groupe   ( ) );
+    m_grpContenant  = std::shared_ptr<Groupe>       ( new Groupe   ( ) );
+    m_grpContenant->ajouter (m_grpContenu);
+    m_grpContenant->setParent( this );
+
+    // UI
+    m_UI            = std::shared_ptr<Groupe>       ( new Groupe   ( ) );
+    m_UI->ajouter   ( m_slideVerti );
+    m_UI->ajouter   ( m_slideHori );
+    m_UI->setParent ( this );
 
 }
 
@@ -36,18 +43,13 @@ Contenant::~Contenant()
 }
 
 
-
-
 /////////////////////////////////////////////////
 sf::FloatRect
 Contenant::getLocalBounds ( )const {
-    sf::FloatRect result( m_fond->getLocalBounds() );
-
-    result.left     =  getPosition().x;
-    result.top      =  getPosition().y;
-    result.width    =  m_taille.x;
-    result.height   =  m_taille.y;
-
+    sf::FloatRect result ( getPosition().x
+                         , getPosition().y
+                         , m_taille.x
+                         , m_taille. y);
     return { result };
 }
 
@@ -55,15 +57,15 @@ Contenant::getLocalBounds ( )const {
 /////////////////////////////////////////////////
 sf::FloatRect
 Contenant::getGlobalBounds ( )const {
-    sf::FloatRect result( m_fond->getLocalBounds() );
 
-    result.left     +=  getPosAbs().x;
-    result.top      +=  getPosAbs().y;
-    result.width    =  m_taille.x;
-    result.height   =  m_taille.y;
+    sf::FloatRect result ( getPosAbs().x
+                         , getPosAbs().y
+                         , m_taille.x
+                         , m_taille. y);
 
     return { result };
 }
+
 
 /////////////////////////////////////////////////
 sf::FloatRect
@@ -71,18 +73,17 @@ Contenant::getContenuBounds ( ) const {
 
     sf::FloatRect result ( 0,0,0,0 );
 
-    for ( ptr enfant : m_enfants ) {
+    for ( ptr enfant : m_grpContenu->m_enfants ) {
         sf::FloatRect rect  ( enfant->getLocalBounds() ) ;
         if ( result.width < rect.left + rect.width )  result.width  = rect.left + rect.width;
         if ( result.height < rect.top + rect.height ) result.height = rect.top + rect.height;
     }
 
-    result.width += 10;
-    result.height += 10;
+    result.width += 10; // pour laisser un espace
+    result.height += 10; // pour laisser un espace
 
     return { result };
 }
-
 
 
 /////////////////////////////////////////////////
@@ -90,6 +91,7 @@ void
 Contenant::traiter_evenements ( const sf::Event& event ) {
 
     m_UI->traiter_evenements( event );
+    m_grpContenu->traiter_evenements( event );
 
     Action::traiter_evenements( event );
     Gadget::traiter_evenements( event );
@@ -97,74 +99,70 @@ Contenant::traiter_evenements ( const sf::Event& event ) {
 }
 
 
-
 /////////////////////////////////////////////////
 void
 Contenant::actualiser ( float deltaT )    {
 
-    m_UI->actualiser( deltaT );
-    m_UI->setSize (m_taille);
+    //  actualiser UI et contenu
+    m_UI->actualiser        ( deltaT );
+    m_grpContenu->actualiser( deltaT );
+
+    //si on drag pas on a pas besoin d'actualiser donc  return
+    if ( m_slideHori->isDragging() or m_slideVerti->isDragging() )
+        m_besoinActua = true;
+    if ( not m_besoinActua ) return;
 
 
-    // on regarde si on a besoin d'un slider horizontal
-    if ( getContenuBounds().width > m_taille.x )
-        m_bSliderHori = true;
-    else
-        m_bSliderHori = false;
+    // on regarde si on a besoin des sliders
+    m_bSliderHori = ( getContenuBounds().width > m_taille.x );
+    m_bSliderVerti = ( getContenuBounds().height > m_taille.y );
 
-    // on regarde si on a besoin d'un slider vertical
-    if ( getContenuBounds().height > m_taille.y )
-        m_bSliderVerti = true;
-    else
-        m_bSliderVerti = false;
-
-//std::cout << "->getContenuBounds().width : " << getContenuBounds().width  <<"\n";
-//std::cout << "->m_taille().x : " << m_taille.x  <<"\n";
-
-    // on positionne les sliders
+    // on s'occupe des dimensions et positions des sliders et du contenu
     if ( m_bSliderHori and m_bSliderVerti ) {
+        m_grpContenant->setSize ( {m_taille.x - m_slideVerti->getSize().x  , m_taille.y - m_slideHori->getSize().y}  );
+
         m_slideHori->setLongueurMax         ( m_taille.x - m_slideVerti->getSize().x );
         m_slideVerti->setLongueurMax        ( m_taille.y - m_slideHori->getSize().y );
         m_slideHori->setLongueurCourante    ( m_slideHori->getLongueurMax() / getContenuBounds().width * m_taille.x );
         m_slideVerti->setLongueurCourante   ( m_slideVerti->getLongueurMax() / getContenuBounds().height * m_taille.y );
     }
     else if ( m_bSliderHori ){
+        m_grpContenant->setSize ( {m_taille.x  , m_taille.y - m_slideHori->getSize().y}  );
+
         m_slideHori->setLongueurMax         ( m_taille.x );
         m_slideHori->setLongueurCourante    ( m_taille.x / getContenuBounds().width * m_taille.x );
     }
     else if ( m_bSliderVerti ) {
+        m_grpContenant->setSize ( {m_taille.x - m_slideVerti->getSize().x  , m_taille.y}  );
         m_slideVerti->setLongueurMax        ( m_taille.y );
         m_slideVerti->setLongueurCourante   ( m_taille.y / getContenuBounds().height * m_taille.y );
     }
+
+    // On positionne les sliders
     m_slideHori->setPosition                ( 0 , m_taille.y - m_slideHori->getSize().y  );
     m_slideVerti->setPosition               ( m_taille.x - m_slideVerti->getSize().x , 0 );
 
+    // On positionne le groupe du contenu
+    m_posContenu.x = m_slideHori->getSlidePos().x  / m_slideHori->getLongueurMax()  * getContenuBounds().width;
+    m_posContenu.y = m_slideVerti->getSlidePos().y / m_slideVerti->getLongueurMax() * getContenuBounds().height;
 
-m_posContenu.x = m_slideHori->getSlidePos().x  / m_slideHori->getLongueurMax()  * getContenuBounds().width;
-m_posContenu.y = m_slideVerti->getSlidePos().y / m_slideVerti->getLongueurMax() * getContenuBounds().height;
+    m_grpContenu->setPosition ( -m_posContenu.x , -m_posContenu.y );
 
-//    m_posContenu = {  , m_slideVerti->getSlidePos().y  };
+    // on dimenssione l'UI
+    m_UI->setSize           ( m_taille );
 
-
-
-/*
-    std::cout << "-----------"
-    << "\n  left " << getContenuBounds().left
-    << "    top " << getContenuBounds().top
-    << "    width " << getContenuBounds().width
-    << "    height " << getContenuBounds().height << "" ;
-
-    std::cout << "\n   pos.x " << getPosition().x
-    << "    pos.y " << getPosition().y
-    << "    taille x " << m_taille.x
-    << "    taille y " << m_taille.y << "\n" ;
-*/
-    // > Actualiser niveau Gadget
-    Gadget::actualiser          ( deltaT );
-
-    // > Actualiser le contenu de la fenetre
-    //m_UI->actualiser    ( deltaT );
+    // reinitialisation  du besoin d'actualiser
+    m_besoinActua = false;
 }
+
+
+/////////////////////////////////////////////////
+void
+Contenant::ajouter( ptr enfant )   {
+    m_grpContenu->ajouter ( enfant );
+}
+
+
 
 
 /////////////////////////////////////////////////
@@ -174,51 +172,39 @@ Contenant::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    
     // appliquer les transformations de la fenêtre au states
     states.transform *= getTransform();
 
-    target.draw      ( *m_fond , states );
 
-
-    // la texture dans laquelle on va dessiner les éléments contenus
-
-
+   // les dimemsions pour l'affichage du contenu
     sf::Vector2i    tailleTexture, tailleAffiche;
-
     tailleTexture.x = getContenuBounds().left   + getContenuBounds().width + 1;
     tailleTexture.y = getContenuBounds().top    + getContenuBounds().height + 1;
     tailleAffiche.x = m_taille.x;
     tailleAffiche.y = m_taille.y;
-
-    if ( m_bSliderHori )    {
-        tailleTexture.y -= m_slideHori->getSize().y;
+    if ( m_bSliderHori )
         tailleAffiche.y -= m_slideHori->getSize().y;
-    }
-    if ( m_bSliderVerti )   {
-        tailleTexture.x -= m_slideVerti->getSize().x;
+    if ( m_bSliderVerti )
         tailleAffiche.x -= m_slideVerti->getSize().x;
-    }
 
 
-
+    // la texture dans laquelle on va dessiner les éléments contenus
     sf::RenderTexture       texture;
     if ( texture.create   ( tailleTexture.x  , tailleTexture.y   ) ) {
 
-        // dessiner les enfants dans la texture
+        // dessiner le contenu dans la texture
         texture.clear     ( m_skin->invisible->fnd_couleur );
-        for ( ptr enfant : m_enfants )
-            texture.draw      ( *enfant );
+        texture.draw      ( *m_grpContenu );
         texture.display   ( );
 
         // Appliquer la texture au sprite qui va l'afficher.
         m_spriteContenant->setTexture    ( texture.getTexture() );
-        m_spriteContenant->setTextureRect( sf::IntRect( m_posContenu.x , m_posContenu.y , tailleAffiche.x , tailleAffiche.y ) );
+        m_spriteContenant->setTextureRect( sf::IntRect( 0 , 0 , tailleAffiche.x , tailleAffiche.y ) );
     }
 
     //dessiner le sprite du contenu.
     target.draw      ( *m_spriteContenant , states );
 
-    //target.draw      ( *m_UI , states );
+    //dessiner les boutons drag
     if ( m_bSliderHori )
         target.draw      ( *m_slideHori , states );
-
     if ( m_bSliderVerti )
         target.draw      ( *m_slideVerti , states );
 

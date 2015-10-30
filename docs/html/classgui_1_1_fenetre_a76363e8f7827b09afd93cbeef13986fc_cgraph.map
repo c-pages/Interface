@@ -1,14 +1,13 @@
 <map id="gui::Fenetre::Fenetre" name="gui::Fenetre::Fenetre">
-<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a104f8f9143a7280d7d56ca2d2a539123" title="Initialisation lors de la création. " alt="" coords="196,136,312,163"/>
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a104f8f9143a7280d7d56ca2d2a539123" title="Initialisation lors de la création. " alt="" coords="196,120,312,147"/>
 <area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a05f4a03ba7bff8bf975a9bca6cf43d43" title="Initialiser le Skin des bouton de l&#39;interface. " alt="" coords="360,5,543,32"/>
-<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="387,216,515,243"/>
+<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="387,183,515,209"/>
 <area shape="rect" id="node7" href="$classgui_1_1_fenetre.html#ad5955dbe8116150699472cb999e2b695" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="1204,81,1372,108"/>
-<area shape="rect" id="node13" href="$classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="799,453,953,480"/>
-<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#a8036216c6c1895f10b913581e1b6f493" title="Pour lier les élément de l&#39;interface de la fenetre à la fenêtre. " alt="" coords="801,245,951,272"/>
+<area shape="rect" id="node12" href="$classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="799,387,953,413"/>
+<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#a8036216c6c1895f10b913581e1b6f493" title="Pour lier les élément de l&#39;interface de la fenetre à la fenêtre. " alt="" coords="801,208,951,235"/>
 <area shape="rect" id="node6" href="$classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="1001,107,1156,133"/>
-<area shape="rect" id="node8" href="$classgui_1_1_fenetre.html#ab067f6b1633c4f9d55bde57ac78832f8" title="Initialiser l&#39;interface pour le titre. " alt="" coords="607,209,735,250"/>
-<area shape="rect" id="node9" href="$classgui_1_1_fenetre.html#a72881398e744a405b56046d60917d1de" title="Initialiser l&#39;interface pour prendre en compte le drag. " alt="" coords="591,275,751,301"/>
-<area shape="rect" id="node10" href="$classgui_1_1_fenetre.html#aefa0438688ee292fef0a641df62ff13a" title="Initialiser l&#39;interface pour les bouton de redimensionnements. " alt="" coords="607,326,735,367"/>
-<area shape="rect" id="node11" href="$classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="607,391,735,433"/>
-<area shape="rect" id="node12" href="$classgui_1_1_gadget.html#adf55e6760cf3d4ef586ce87c07cfae7c" title="Demander la suppression de ce gadget. " alt="" coords="799,399,953,425"/>
+<area shape="rect" id="node8" href="$classgui_1_1_fenetre.html#a72881398e744a405b56046d60917d1de" title="Initialiser l&#39;interface pour prendre en compte le drag. " alt="" coords="591,208,751,235"/>
+<area shape="rect" id="node9" href="$classgui_1_1_fenetre.html#aefa0438688ee292fef0a641df62ff13a" title="Initialiser l&#39;interface pour les bouton de redimensionnements. " alt="" coords="607,259,735,301"/>
+<area shape="rect" id="node10" href="$classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="607,325,735,366"/>
+<area shape="rect" id="node11" href="$classgui_1_1_gadget.html#adf55e6760cf3d4ef586ce87c07cfae7c" title="Demander la suppression de ce gadget. " alt="" coords="799,332,953,359"/>
 </map>

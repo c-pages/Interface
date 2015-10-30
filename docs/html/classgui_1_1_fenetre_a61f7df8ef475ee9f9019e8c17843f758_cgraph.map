@@ -1,11 +1,10 @@
 <map id="gui::Fenetre::initUI" name="gui::Fenetre::initUI">
-<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a8036216c6c1895f10b913581e1b6f493" title="Pour lier les élément de l&#39;interface de la fenetre à la fenêtre. " alt="" coords="391,109,542,136"/>
-<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="592,25,747,52"/>
-<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#ab067f6b1633c4f9d55bde57ac78832f8" title="Initialiser l&#39;interface pour le titre. " alt="" coords="197,73,325,114"/>
-<area shape="rect" id="node6" href="$classgui_1_1_fenetre.html#a72881398e744a405b56046d60917d1de" title="Initialiser l&#39;interface pour prendre en compte le drag. " alt="" coords="181,139,341,165"/>
-<area shape="rect" id="node7" href="$classgui_1_1_fenetre.html#aefa0438688ee292fef0a641df62ff13a" title="Initialiser l&#39;interface pour les bouton de redimensionnements. " alt="" coords="197,190,325,231"/>
-<area shape="rect" id="node8" href="$classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="197,255,325,297"/>
-<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#ad5955dbe8116150699472cb999e2b695" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="795,25,963,52"/>
-<area shape="rect" id="node9" href="$classgui_1_1_gadget.html#adf55e6760cf3d4ef586ce87c07cfae7c" title="Demander la suppression de ce gadget. " alt="" coords="389,237,544,264"/>
-<area shape="rect" id="node10" href="$classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="389,288,544,315"/>
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a8036216c6c1895f10b913581e1b6f493" title="Pour lier les élément de l&#39;interface de la fenetre à la fenêtre. " alt="" coords="391,60,542,86"/>
+<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="592,9,747,36"/>
+<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#a72881398e744a405b56046d60917d1de" title="Initialiser l&#39;interface pour prendre en compte le drag. " alt="" coords="181,60,341,86"/>
+<area shape="rect" id="node6" href="$classgui_1_1_fenetre.html#aefa0438688ee292fef0a641df62ff13a" title="Initialiser l&#39;interface pour les bouton de redimensionnements. " alt="" coords="197,111,325,152"/>
+<area shape="rect" id="node7" href="$classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="197,176,325,218"/>
+<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#ad5955dbe8116150699472cb999e2b695" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="795,9,963,36"/>
+<area shape="rect" id="node8" href="$classgui_1_1_gadget.html#adf55e6760cf3d4ef586ce87c07cfae7c" title="Demander la suppression de ce gadget. " alt="" coords="389,158,544,185"/>
+<area shape="rect" id="node9" href="$classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="389,209,544,236"/>
 </map>

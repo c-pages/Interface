@@ -128,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 : <a class="el" href="classgui_1_1_bouton.html#aed2b58479b336c984960936f3ce33caa">gui::Bouton</a>
 </li>
 <li>m_actif
-: <a class="el" href="classgui_1_1_bouton_cocher.html#a96e4be65c04e461c51a6450a8caff484">gui::BoutonCocher</a>
+: <a class="el" href="classgui_1_1_bouton_encoche.html#aef495ba5b9a0a78a43d74102622b2e31">gui::BoutonEncoche</a>
 </li>
 <li>m_appli
 : <a class="el" href="classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">app::Ecran</a>
@@ -143,11 +143,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 : <a class="el" href="classgui_1_1_bouton.html#a66fd43d3a26b7c86f43990d94217d5a1">gui::Bouton</a>
 , <a class="el" href="classgui_1_1_fenetre.html#afc711287fdbd88ff8b081beac7e3d234">gui::Fenetre</a>
 </li>
+<li>m_Boutonfond
+: <a class="el" href="classgui_1_1_fenetre__encastree.html#acde391ff79fb97fa5289d1eef1b0c838">gui::Fenetre_encastree</a>
+</li>
+<li>m_BoutonSlide
+: <a class="el" href="classgui_1_1_fenetre__encastree.html#a8748460f617f2fa0cadf598586fabb71">gui::Fenetre_encastree</a>
+</li>
+<li>m_bSliderHori
+: <a class="el" href="classgui_1_1_contenant.html#a55cfdfeca7fa224b3a2abd58cd2593c5">gui::Contenant</a>
+</li>
+<li>m_bSliderVerti
+: <a class="el" href="classgui_1_1_contenant.html#a132260cc8e23a86225a5d6fe1d334845">gui::Contenant</a>
+</li>
 <li>m_btnDrag
 : <a class="el" href="classgui_1_1_fenetre.html#a6945a31ffdf0c490d80dd7182edece99">gui::Fenetre</a>
 </li>
 <li>m_btnFermer
 : <a class="el" href="classgui_1_1_fenetre.html#aa00c89dc75dbbe97672445f981ecf5d2">gui::Fenetre</a>
+</li>
+<li>m_btnFond
+: <a class="el" href="classgui_1_1_bouton_slide.html#ae725c51e4fac76d5f8da0231dabd295c">gui::BoutonSlide</a>
 </li>
 <li>m_btnRedimBas
 : <a class="el" href="classgui_1_1_fenetre.html#ae0d81cd231c2fec4e1fd59eea16c9269">gui::Fenetre</a>
@@ -173,8 +188,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>m_btnRedimHautGauche
 : <a class="el" href="classgui_1_1_fenetre.html#ab433686df231f542546b6ab1dc641684">gui::Fenetre</a>
 </li>
+<li>m_btnSlide
+: <a class="el" href="classgui_1_1_bouton_slide.html#a2de0a707962e932134437b63181e9e92">gui::BoutonSlide</a>
+</li>
 <li>m_CadreContenu
-: <a class="el" href="classgui_1_1_fenetre.html#aa5d09efa893a861596e9b5eda7d24c91">gui::Fenetre</a>
+: <a class="el" href="classgui_1_1_fenetre.html#a63c8258095427a05ff2af52b015cde85">gui::Fenetre</a>
 </li>
 <li>m_clock_dblClique
 : <a class="el" href="classgui_1_1_bouton.html#aa16f60426d96ef6d73a7e436d5a31027">gui::Bouton</a>
@@ -184,6 +202,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </li>
 <li>m_deplacable
 : <a class="el" href="classgui_1_1_fenetre.html#a92939cc32411f96dee10c5684504a60a">gui::Fenetre</a>
+</li>
+<li>m_drag
+: <a class="el" href="classgui_1_1_bouton_slide.html#a11b8b271c57c97aa8cda4a8126668c00">gui::BoutonSlide</a>
 </li>
 <li>m_dragging
 : <a class="el" href="classgui_1_1_fenetre.html#a53d035205648a9df8a1008d30eebafa0">gui::Fenetre</a>
@@ -205,6 +226,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </li>
 <li>m_etatBack
 : <a class="el" href="classgui_1_1_bouton.html#a8f8714ab82973e57eb3ee4f85c4a324b">gui::Bouton</a>
+</li>
+<li>m_fctDrag_Debut
+: <a class="el" href="classgui_1_1_bouton_slide.html#aa826f00c7a65da90429bb09af7462e1a">gui::BoutonSlide</a>
+</li>
+<li>m_fctDrag_Fin
+: <a class="el" href="classgui_1_1_bouton_slide.html#abda6b245c8712585f67501b264c48776">gui::BoutonSlide</a>
 </li>
 <li>m_fctDragDebut
 : <a class="el" href="classgui_1_1_fenetre.html#ae93c474294f33e3785877e9f1931f59b">gui::Fenetre</a>
@@ -276,13 +303,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 : <a class="el" href="classgui_1_1_fenetre.html#a6ba45d6714ac397e2e6094a22fef5431">gui::Fenetre</a>
 </li>
 <li>m_fctToggle
-: <a class="el" href="classgui_1_1_bouton_cocher.html#a944c1babbb13bb9dc5515c79fabc8780">gui::BoutonCocher</a>
+: <a class="el" href="classgui_1_1_bouton_encoche.html#a8d9121b7e192992ecd148f80f8f36110">gui::BoutonEncoche</a>
 </li>
 <li>m_fenetre
 : <a class="el" href="classapp_1_1_application.html#a2b45d94b25a7b29cb7409b7701c3c2d5">app::Application</a>
 </li>
 <li>m_fenetreSFML
-: <a class="el" href="classgui_1_1_fenetre.html#a1c5160c3f4dbb756839d8e1dc3e06967">gui::Fenetre</a>
+: <a class="el" href="classgui_1_1_bouton_slide.html#a0db4679e784309f288bab1c141d2c305">gui::BoutonSlide</a>
+, <a class="el" href="classgui_1_1_contenant.html#a39284872962dd197af777db8caa691cf">gui::Contenant</a>
+, <a class="el" href="classgui_1_1_fenetre.html#afb2b3de2bd12e55f67cbde9c96b5b10b">gui::Fenetre</a>
 </li>
 <li>m_fermable
 : <a class="el" href="classgui_1_1_fenetre.html#a9482403f6c741acaeac5f282f184f8d9">gui::Fenetre</a>
@@ -290,25 +319,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>m_fond
 : <a class="el" href="classapp_1_1_ecran_demo.html#a5a253769dce7378efc2de34b479e3517">app::EcranDemo</a>
 , <a class="el" href="classgui_1_1_bouton.html#a8a9c0b300e1af08d60200f29fc503031">gui::Bouton</a>
-, <a class="el" href="classgui_1_1_fenetre.html#a341241015a5a3d8c1b19ef01d66b2cbf">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre.html#a8470ce0f429b80bebea4d87783e36dd0">gui::Fenetre</a>
+</li>
+<li>m_grpContenant
+: <a class="el" href="classgui_1_1_contenant.html#ab83227ef8ee46456b554fd303701987a">gui::Contenant</a>
 </li>
 <li>m_grpContenu
-: <a class="el" href="classgui_1_1_fenetre.html#a5335316a8fe959c70569b086e9095f42">gui::Fenetre</a>
+: <a class="el" href="classgui_1_1_contenant.html#a65b91d4c51448bf72281b72bb99da7b6">gui::Contenant</a>
+, <a class="el" href="classgui_1_1_fenetre.html#af51637aed080b91d28eba42e7e83e427">gui::Fenetre</a>
 </li>
 <li>m_gui
-: <a class="el" href="classapp_1_1_ecran_demo.html#a4dc8dc175d929eddf5902549cdfd38bd">app::EcranDemo</a>
+: <a class="el" href="classapp_1_1_ecran_demo.html#ae041ae9bce13ba73f9cd190e77e500c6">app::EcranDemo</a>
 </li>
 <li>m_image
 : <a class="el" href="classgui_1_1_image.html#ae4bbb31ffe1c5ec686659fac57971091">gui::Image</a>
 </li>
 <li>m_imgCoche
-: <a class="el" href="classgui_1_1_bouton_cocher.html#a5a832444f9d527c678bcdcde9fb44d1a">gui::BoutonCocher</a>
+: <a class="el" href="classgui_1_1_bouton_encoche.html#af4239af011bafb9513555ef9127f05ae">gui::BoutonEncoche</a>
+</li>
+<li>m_largeur
+: <a class="el" href="classgui_1_1_bouton_slide.html#a342843dedee40ff62e6eef4e99870196">gui::BoutonSlide</a>
 </li>
 <li>m_lblFermer
 : <a class="el" href="classgui_1_1_fenetre.html#a8750b88d8f314b33bcf7053fad466029">gui::Fenetre</a>
-</li>
-<li>m_lblTest
-: <a class="el" href="classapp_1_1_ecran_demo.html#a5b1b56f21f6391c6b31d169efd0fcee5">app::EcranDemo</a>
 </li>
 <li>m_lblTexte
 : <a class="el" href="classgui_1_1_bouton_texte.html#adedb7fc1377556a249211d9724f702f9">gui::BoutonTexte</a>
@@ -316,8 +349,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>m_lblTitre
 : <a class="el" href="classgui_1_1_fenetre.html#a44b65149b429008aa453a2ae3321090e">gui::Fenetre</a>
 </li>
+<li>m_longueurCourant
+: <a class="el" href="classgui_1_1_bouton_slide.html#ad73b9e9cfc5f3fb787538fcef3ad08a3">gui::BoutonSlide</a>
+</li>
+<li>m_longueurMax
+: <a class="el" href="classgui_1_1_bouton_slide.html#a96f265788ed9c08ff4a86df7c1de9057">gui::BoutonSlide</a>
+</li>
 <li>m_nom
 : <a class="el" href="classgui_1_1_gadget.html#a5d53771bd5bf7599ede34e63029c7b7f">gui::Gadget</a>
+</li>
+<li>m_orientation
+: <a class="el" href="classgui_1_1_bouton_slide.html#af390f1053a5c5b9129669c9a3b28ab58">gui::BoutonSlide</a>
 </li>
 <li>m_parent
 : <a class="el" href="classgui_1_1_gadget.html#aed32b8bde0e9e8f5384adb7adf05a46a">gui::Gadget</a>
@@ -328,11 +370,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>m_polices
 : <a class="el" href="classapp_1_1_config.html#affadef60c92912efa871fff516f844de">app::Config</a>
 </li>
+<li>m_posBtnOrig
+: <a class="el" href="classgui_1_1_bouton_slide.html#a19f772ec1640ffe645f6b8a667917ec0">gui::BoutonSlide</a>
+</li>
+<li>m_posContenu
+: <a class="el" href="classgui_1_1_contenant.html#acc1c204fdf935145da7e7947ea9d1030">gui::Contenant</a>
+</li>
 <li>m_posFenetreOrig
 : <a class="el" href="classgui_1_1_fenetre.html#ab4dc33cec59ca6fd341c824a1b1a0691">gui::Fenetre</a>
 </li>
 <li>m_posMouseOrig
-: <a class="el" href="classgui_1_1_fenetre.html#afe30240786c45208083cdfc1b808e43b">gui::Fenetre</a>
+: <a class="el" href="classgui_1_1_bouton_slide.html#af9cc896821f448fc56aa4df0f08bdc47">gui::BoutonSlide</a>
+, <a class="el" href="classgui_1_1_fenetre.html#afe30240786c45208083cdfc1b808e43b">gui::Fenetre</a>
 </li>
 <li>m_rectangle
 : <a class="el" href="classgui_1_1_image.html#a19c107406f623eee148a4e0bb4b74d11">gui::Image</a>
@@ -358,8 +407,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>m_skinBtn
 : <a class="el" href="classgui_1_1_fenetre.html#a660579cda5fed7adbf179bfd865148d0">gui::Fenetre</a>
 </li>
+<li>m_skinBtnFond
+: <a class="el" href="classgui_1_1_bouton_slide.html#a8f64ea2ac0ee948504d9c1bf824dbcde">gui::BoutonSlide</a>
+</li>
 <li>m_skins
 : <a class="el" href="classapp_1_1_config.html#a0f5031fe192ad475a316f76af23dad5b">app::Config</a>
+</li>
+<li>m_slideHori
+: <a class="el" href="classgui_1_1_contenant.html#ad69712047e393ed475d35ba61530857e">gui::Contenant</a>
+</li>
+<li>m_slideVerti
+: <a class="el" href="classgui_1_1_contenant.html#a8b99f6b22ddd40a07f93c9ba2e3ffe4e">gui::Contenant</a>
+</li>
+<li>m_spriteContenant
+: <a class="el" href="classgui_1_1_contenant.html#a213e5b40d0ad42e26f2599745698db3f">gui::Contenant</a>
+, <a class="el" href="classgui_1_1_fenetre.html#a242797b5b7027b3036d81ae8c5bf456c">gui::Fenetre</a>
 </li>
 <li>m_style
 : <a class="el" href="classgui_1_1_gadget.html#a6d7bd13de67c1577d6fa5073cb35edc9">gui::Gadget</a>
@@ -368,7 +430,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 : <a class="el" href="classapp_1_1_config.html#aca7399e3ebaf8448a94a809c471cd4e7">app::Config</a>
 </li>
 <li>m_taille
-: <a class="el" href="classgui_1_1_fenetre.html#a5ea5ede0de7e49dae525b0733363a6ec">gui::Fenetre</a>
+: <a class="el" href="classgui_1_1_contenant.html#adf1c5572895f85b575a1de008b09e827">gui::Contenant</a>
+, <a class="el" href="classgui_1_1_fenetre.html#a5ea5ede0de7e49dae525b0733363a6ec">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_groupe.html#a915341f03d7eed6e73f85c1e18730f25">gui::Groupe</a>
+</li>
+<li>m_tailleContenu
+: <a class="el" href="classgui_1_1_fenetre.html#a92496c6014b5c77c1eaee33406bd44e7">gui::Fenetre</a>
 </li>
 <li>m_tailleFenetreOrig
 : <a class="el" href="classgui_1_1_fenetre.html#a2c6bb826a75ff37c32832dc1c8dca166">gui::Fenetre</a>
@@ -382,11 +449,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>m_textures
 : <a class="el" href="classapp_1_1_config.html#a673cf82df5a28f6087aa1992a5667ce2">app::Config</a>
 </li>
+<li>m_UI
+: <a class="el" href="classgui_1_1_contenant.html#adbc4445ff3fffff570f55a8a64a9edb0">gui::Contenant</a>
+, <a class="el" href="classgui_1_1_fenetre.html#aed49dc67be22e7780ad8a172ae6ab831">gui::Fenetre</a>
+</li>
 <li>majGeom()
 : <a class="el" href="classgui_1_1_bouton.html#a1ff3d7a1586eaab5873cc6e49be2332c">gui::Bouton</a>
-, <a class="el" href="classgui_1_1_bouton_cocher.html#a03a7011fd1269a5502fd3b6e58652c4e">gui::BoutonCocher</a>
+, <a class="el" href="classgui_1_1_bouton_encoche.html#a02629fc362c653d12d545bc1557097cf">gui::BoutonEncoche</a>
+, <a class="el" href="classgui_1_1_bouton_slide.html#aecaff7d22861a6685c75a3fda3adffa5">gui::BoutonSlide</a>
 , <a class="el" href="classgui_1_1_bouton_texte.html#a6c66a5e34585fdb6054c2f56160db0a7">gui::BoutonTexte</a>
 , <a class="el" href="classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre__encastree.html#aa19c6113dc6a6b2a15f1c0de60db468a">gui::Fenetre_encastree</a>
 , <a class="el" href="classgui_1_1_gadget.html#a8a72d0816ec1928958ff5dd3ccd983f5">gui::Gadget</a>
 , <a class="el" href="classgui_1_1_image.html#a2a8ce35cc6f459c337b9a00313d68d4a">gui::Image</a>
 , <a class="el" href="classgui_1_1_label.html#ae310f44ef08900d558af5c5bc94c448d">gui::Label</a>
@@ -397,6 +470,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>mPlan
 : <a class="el" href="classapp_1_1_resource_mgr.html#aaf3f11ff8309da00bbc6cce38bc156fa">app::ResourceMgr&lt; RESOURCE, IDENTIFIANT &gt;</a>
 , <a class="el" href="classapp_1_1_resource_mgr_3_01sf_1_1_music_00_01_i_d_e_n_t_i_f_i_a_n_t_01_4.html#ae8c4bbb3a6a64b4d88d5224770d0cd92">app::ResourceMgr&lt; sf::Music, IDENTIFIANT &gt;</a>
+</li>
+<li>ms_btnPress
+: <a class="el" href="classgui_1_1_bouton.html#aa2fe8c85f0c0b614f70be658c22498d9">gui::Bouton</a>
+</li>
+<li>ms_btnSurvol
+: <a class="el" href="classgui_1_1_bouton.html#a0817c522c874f325e967a641e3f980ba">gui::Bouton</a>
 </li>
 </ul>
 </div><!-- contents -->

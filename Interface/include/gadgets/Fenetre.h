@@ -5,7 +5,6 @@
 // Headers
 /////////////////////////////////////////////////
 #include <Gadget.h>
-#include <UI.h>
 
 namespace gui {
 
@@ -18,7 +17,7 @@ class Image;
 /// \brief Gadget  permettant de rassembler des Gadgets au sein d'une Fenetre.
 ///
 /////////////////////////////////////////////////
-class Fenetre : public Gadget, public UI
+class Fenetre : public Gadget
 {
 
 public:
@@ -195,6 +194,7 @@ private:
     sf::Vector2f                    m_taille;               ///<  Le taille de la fenetre.
     sf::Vector2f                    m_tailleContenu;        ///<  Le taille du contenu.
 
+    std::shared_ptr<Groupe>         m_UI;
     // les gadgets de la fenêtre
     std::shared_ptr<Groupe>         m_grpContenu;           ///<  Groupe des éléments du contenu de la Fenetre. ne s'affiche pas directment, est dessiné dans m_spriteContenant
     std::shared_ptr<Image>          m_CadreContenu;         ///<  Groupe des éléments du contenu de la Fenetre.

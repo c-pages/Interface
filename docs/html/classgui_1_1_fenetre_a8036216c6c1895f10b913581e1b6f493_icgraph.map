@@ -1,9 +1,8 @@
 <map id="gui::Fenetre::ajouterUI" name="gui::Fenetre::ajouterUI">
-<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="412,102,540,128"/>
-<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#ab067f6b1633c4f9d55bde57ac78832f8" title="Initialiser l&#39;interface pour le titre. " alt="" coords="220,36,348,77"/>
-<area shape="rect" id="node6" href="$classgui_1_1_fenetre.html#a72881398e744a405b56046d60917d1de" title="Initialiser l&#39;interface pour prendre en compte le drag. " alt="" coords="204,102,364,128"/>
-<area shape="rect" id="node7" href="$classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="220,153,348,194"/>
-<area shape="rect" id="node8" href="$classgui_1_1_fenetre.html#aefa0438688ee292fef0a641df62ff13a" title="Initialiser l&#39;interface pour les bouton de redimensionnements. " alt="" coords="220,218,348,260"/>
-<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a104f8f9143a7280d7d56ca2d2a539123" title="Initialisation lors de la création. " alt="" coords="588,102,704,128"/>
-<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="752,102,895,128"/>
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="412,58,540,85"/>
+<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#a72881398e744a405b56046d60917d1de" title="Initialiser l&#39;interface pour prendre en compte le drag. " alt="" coords="204,29,364,56"/>
+<area shape="rect" id="node6" href="$classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="220,80,348,122"/>
+<area shape="rect" id="node7" href="$classgui_1_1_fenetre.html#aefa0438688ee292fef0a641df62ff13a" title="Initialiser l&#39;interface pour les bouton de redimensionnements. " alt="" coords="220,146,348,187"/>
+<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a104f8f9143a7280d7d56ca2d2a539123" title="Initialisation lors de la création. " alt="" coords="588,58,704,85"/>
+<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="752,58,895,85"/>
 </map>

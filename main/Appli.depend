@@ -431,12 +431,11 @@
 1445711805 r:\06 - c++\107 - interface\main\include\resourcemgr.inl
 	"ResourceMgr.h"
 
-1446212988 r:\06 - c++\107 - interface\interface\gui.h
+1446244783 r:\06 - c++\107 - interface\interface\gui.h
 	<Skin.h>
 	<Style.h>
 	<Gadget.h>
 	<action.h>
-	<UI.h>
 	<gadgets/Image.h>
 	<gadgets/Label.h>
 	<gadgets/Bouton.h>
@@ -463,7 +462,7 @@
 	<list>
 	<map>
 
-1446217202 r:\06 - c++\107 - interface\interface\include\gadget.h
+1446242069 r:\06 - c++\107 - interface\interface\include\gadget.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<vector>
@@ -483,7 +482,7 @@
 	<string>
 	<Gadget.h>
 
-1446221999 r:\06 - c++\107 - interface\interface\include\gadgets\groupe.h
+1446230998 r:\06 - c++\107 - interface\interface\include\gadgets\groupe.h
 	<Gadget.h>
 
 1446217324 r:\06 - c++\107 - interface\interface\include\gadgets\bouton.h
@@ -498,9 +497,8 @@
 1445729686 r:\06 - c++\107 - interface\interface\include\gadgets\boutoncocher.h
 	<gadgets\Bouton.h>
 
-1446210787 r:\06 - c++\107 - interface\interface\include\gadgets\fenetre.h
+1446244824 r:\06 - c++\107 - interface\interface\include\gadgets\fenetre.h
 	<Gadget.h>
-	<UI.h>
 
 1446219187 r:\06 - c++\107 - interface\main\include\ecrans\ecrandemo.h
 	<SFML/Graphics.hpp>
@@ -515,7 +513,7 @@
 1445606138 source:r:\06 - c++\107 - interface\main\src\ecran.cpp
 	"Ecran.h"
 
-1446225698 source:r:\06 - c++\107 - interface\main\src\ecrans\ecrandemo.cpp
+1446246212 source:r:\06 - c++\107 - interface\main\src\ecrans\ecrandemo.cpp
 	"ecrans/EcranDemo.h"
 	<iostream>
 	<Config.h>
@@ -530,8 +528,7 @@
 1446136659 r:\06 - c++\107 - interface\interface\include\gadgets\fenetre_encastree.h
 	<gadgets/Fenetre.h>
 
-1446225351 r:\06 - c++\107 - interface\interface\include\gadgets\boutonslide.h
-	<UI.h>
+1446247170 r:\06 - c++\107 - interface\interface\include\gadgets\boutonslide.h
 	<Gadget.h>
 	<gadgets/Bouton.h>
 	<gadgets/Groupe.h>
@@ -541,14 +538,14 @@
 	<Gadget.h>
 	<gadgets/Groupe.h>
 
-1446208087 r:\06 - c++\107 - interface\interface\include\ui.h
+1446243427 r:\06 - c++\107 - interface\interface\include\ui.h
 	<memory>
 	<Gadget.h>
 	<gadgets/Groupe.h>
 
-1446222872 r:\06 - c++\107 - interface\interface\include\gadgets\contenant.h
+1446248158 r:\06 - c++\107 - interface\interface\include\gadgets\contenant.h
 	<Gadget.h>
-	<UI.h>
 	<gadgets/Image.h>
 	<gadgets/BoutonSlide.h>
+	"gadgets/Groupe.h"
 

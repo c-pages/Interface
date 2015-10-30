@@ -2,31 +2,33 @@
 #define CONTENANT_H
 
 
-
-
-
-
-
-
-
 /////////////////////////////////////////////////
 // Headers
 /////////////////////////////////////////////////
 #include <Gadget.h>
-#include <UI.h>
 #include <gadgets/Image.h>
 #include <gadgets/BoutonSlide.h>
+#include "gadgets/Groupe.h"
 
 namespace gui {
-class Groupe;
+
 /////////////////////////////////////////////////
-/// \brief Gadget  Un élément invisible permettant de rassembler des Gadgets.
+/// \brief Gadget  Permet d'afficher un ensemble de gadget dans une fenetre de contenu.
+///
+/// Si le contenu est plus grand que le contenant, alors il y a des boutonSlider pour deplacer le contenu.
 ///
 /////////////////////////////////////////////////
-class Contenant : public Gadget, public UI
+class Contenant : public Gadget  //, public UI
 {
 
 public:
+
+    /////////////////////////////////////////////////
+    /// \brief Constructeur par défaut
+    ///
+    /// \param fenetre, la fenetre SFML dans laquelle on affiche ce cgadget
+    ///
+    /////////////////////////////////////////////////
     Contenant( sf::RenderWindow  *     fenetre );
     virtual ~Contenant();
 
@@ -73,15 +75,25 @@ public:
 
 
     /////////////////////////////////////////////////
-    /// \brief Accesseur de la taille
+    /// \brief Definir la taille
     ///
-    /// \return la taille à l'aide la sa bounding box, donc c'est la taille de l'ensemmble des enfants.
+    /// \param taille la taille
     ///
     /////////////////////////////////////////////////
     void
     setSize ( sf::Vector2f taille ) { m_taille = taille ; };
 
 
+    /////////////////////////////////////////////////
+    /// \brief ajouter un enfant
+    ///
+    ///  on rajoute l'enfant dans le groups de contenu et non dans son m_enfants.
+    ///
+    /// \param enfant
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    ajouter( ptr enfant );
 
 public:
 
@@ -125,12 +137,16 @@ private:
     sf::Vector2f                    m_taille;           ///<  Le taille de la fenetre.
     sf::Vector2f                    m_posContenu;       ///< la position du contenu ( quand on le slide )
 
-    // les gadgets de la fenêtre
+    // Contenant
+    std::shared_ptr<Groupe>         m_grpContenant;     ///<
     std::shared_ptr<Groupe>         m_grpContenu;       ///<  Groupe des éléments du contenu de la Fenetre. ne s'affiche pas directment, est dessiné dans m_spriteContenant
-    std::shared_ptr<Image>          m_fond;             ///<  Groupe des éléments du contenu de la Fenetre.
     std::shared_ptr<sf::Sprite>     m_spriteContenant;  ///<  Le sprite qui affiche le contenu de la fenetre.
+
+    // UI
+    std::shared_ptr<Groupe>         m_UI;               ///<  les éléments d'interface du gadget
     std::shared_ptr<BoutonSlide>    m_slideVerti;       ///< le bouton du slide vertical
     std::shared_ptr<BoutonSlide>    m_slideHori;        ///< le bouton du slide horizontal
+
 
 
 };

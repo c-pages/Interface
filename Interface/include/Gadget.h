@@ -293,6 +293,7 @@ public:
 
 protected:
     friend class Fenetre; ///< \todo corriger le code pour supuprimer ce friend
+    friend class Contenant; ///< \todo corriger le code pour supuprimer ce friend
 
     std::string             m_nom;          ///< le nom du gadget, (pour l'instant on s'en sert pas mais peut etre un jour...).
     Gadget*                 m_parent;       ///< le gadget m_parent.

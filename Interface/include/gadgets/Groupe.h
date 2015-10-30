@@ -15,6 +15,7 @@ class Groupe : public Gadget
 {
 public:
 
+    Groupe();
     /////////////////////////////////////////////////
     /// \brief Accesseur de la boundingBox locale
     ///
@@ -46,6 +47,16 @@ public:
     setSize ( sf::Vector2f taille );
 
 
+
+    /////////////////////////////////////////////////
+    /// \brief Rendre les éléments.
+    ///
+    /// Dessiner les différents éléments du ou des écrans actifs.
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    draw( sf::RenderTarget& target, sf::RenderStates states ) const;
 
 
     sf::Vector2f            m_taille;

@@ -61,7 +61,7 @@ Gadget::~Gadget(){
 sf::Vector2f
 Gadget::getPosAbs (  )  const      {
     sf::Vector2f  result = getPosition ();
-    if ( m_parent != 0 )
+    if ( m_parent != nullptr )
         result += this->m_parent->getPosAbs();
     return result;
 }
@@ -70,7 +70,7 @@ Gadget::getPosAbs (  )  const      {
 /////////////////////////////////////////////////
 void
 Gadget::ajouter ( ptr enfant ) {
-//    std::cout << "      --- Gadget --- ajouter ---\n";
+
     m_enfants.push_back(  enfant );
     enfant->m_parent = this;
 }

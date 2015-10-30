@@ -1,4 +1,3 @@
 <map id="app::EcranDemo::initGUI" name="app::EcranDemo::initGUI">
 <area shape="rect" id="node2" href="$classapp_1_1_application.html#acbc0a186b9ec7abfaf35eaad5d55b45a" title="renvois la fenetre sfml de l&#39;application " alt="" coords="220,5,405,32"/>
-<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#a9b4e990211299d37bf271db9d43dd32c" title="Ajouter un enfant. " alt="" coords="245,56,381,83"/>
 </map>
