@@ -16,6 +16,7 @@
 					<Add option="-std=c++11" />
 					<Add option="-g" />
 					<Add directory="include" />
+					<Add directory="include/gadgets" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-audio-s-d" />
@@ -34,6 +35,7 @@
 					<Add option="-O2" />
 					<Add option="-std=c++11" />
 					<Add directory="include" />
+					<Add directory="include/gadgets" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -61,10 +63,14 @@
 		<Unit filename="include/Gadget.h" />
 		<Unit filename="include/Skin.h" />
 		<Unit filename="include/Style.h" />
+		<Unit filename="include/UI.h" />
 		<Unit filename="include/gadgets/Bouton.h" />
 		<Unit filename="include/gadgets/BoutonEncoche.h" />
+		<Unit filename="include/gadgets/BoutonSlide.h" />
 		<Unit filename="include/gadgets/BoutonTexte.h" />
+		<Unit filename="include/gadgets/Contenant.h" />
 		<Unit filename="include/gadgets/Fenetre.h" />
+		<Unit filename="include/gadgets/Fenetre_encastree.h" />
 		<Unit filename="include/gadgets/Groupe.h" />
 		<Unit filename="include/gadgets/Image.h" />
 		<Unit filename="include/gadgets/Label.h" />
@@ -72,13 +78,20 @@
 		<Unit filename="src/Gadget.cpp" />
 		<Unit filename="src/Skin.cpp" />
 		<Unit filename="src/Style.cpp" />
+		<Unit filename="src/UI.cpp" />
 		<Unit filename="src/gadgets/Bouton.cpp" />
 		<Unit filename="src/gadgets/BoutonEncoche.cpp" />
+		<Unit filename="src/gadgets/BoutonSlide.cpp" />
 		<Unit filename="src/gadgets/BoutonTexte.cpp" />
+		<Unit filename="src/gadgets/Contenant.cpp" />
 		<Unit filename="src/gadgets/Fenetre.cpp" />
+		<Unit filename="src/gadgets/Fenetre_encastree.cpp" />
 		<Unit filename="src/gadgets/Groupe.cpp" />
 		<Unit filename="src/gadgets/Image.cpp" />
 		<Unit filename="src/gadgets/Label.cpp" />
+		<Unit filename="test.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

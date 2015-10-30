@@ -5,17 +5,31 @@
 /////////////////////////////////////////////////
 // Hearders
 /////////////////////////////////////////////////
+
+// styles
 #include <Skin.h>
 #include <Style.h>
-#include <action.h>
-#include <Gadget.h>
-#include <gadgets/Image.h>          // --->    affiche image ou couleur
-#include <gadgets/Label.h>          // --->    affiche txt
-#include <gadgets/Groupe.h>         // --->    groupe de gadgets   grp
-#include <gadgets/Bouton.h>         // --->    declenche des fcts
-#include <gadgets/BoutonTexte.h>    // --->    declenche des fcts
-#include <gadgets/BoutonEncoche.h>   // --->    0 ou 1
-#include <gadgets/Fenetre.h>        // --->    fenetre               grp  + btn:(drag, redim, fermer)
+
+// classes virtuelles
+#include <Gadget.h>                     // --->    classe virtuelle élémentaire d'un gadget
+#include <action.h>                     // --->    classe virtuelle pour gerer les événements d'un gadget
+#include <UI.h>                         // --->    classe virtuelle pour gerer des éléments d'interface dans un gadget (ex: un bouton dans un gadget Fenetre)
+
+// affichage simple
+#include <gadgets/Image.h>              // --->    affiche image ou couleur
+#include <gadgets/Label.h>              // --->    affiche txt
+
+//boutons
+#include <gadgets/Bouton.h>             // --->    declenche des fcts
+#include <gadgets/BoutonTexte.h>        // --->    declenche des fcts
+#include <gadgets/BoutonEncoche.h>      // --->    0 ou 1
+#include <gadgets/BoutonSlide.h>        // --->    pour defilement de contenu dans le fenetres
+
+//fenetre et groupes
+#include <gadgets/Contenant.h>          // --->    groupe de gadgets   grp
+#include <gadgets/Groupe.h>             // --->    groupe de gadgets   grp
+#include <gadgets/Fenetre.h>            // --->    fenetre               grp  + btn:(drag, redim, fermer)
+#include <gadgets/Fenetre_encastree.h>  // --->    fenetre encastrée sur un bord de la fenetre SFML
 
 
 

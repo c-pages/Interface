@@ -86,13 +86,11 @@ private:
     /////////////////////////////////////////////////
     // Les membres
     /////////////////////////////////////////////////
-//    sf::View            m_vue;      ///< La vue SFML de l'écran jeu.
-//    sf::View            m_vueIG;    ///< La vue SFML de l'interface graphique.
+
     sf::RectangleShape      m_fond;     ///< Le shape SFML du fond de l'écran.
 
     std::shared_ptr<gui::Groupe>     m_gui;      ///< Le groupe de GUI du menu principal.
-    std::shared_ptr<gui::Label>      m_lblTest ; ///< Le label membre de cet ecran pour premettre aux boutons d'y accéder.
- //   std::shared_ptr<gui::Fenetre>    fenetreA ;
+
 
 
     //std::shared_ptr<Gadget>

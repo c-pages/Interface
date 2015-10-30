@@ -16,9 +16,7 @@ class Image;
 /////////////////////////////////////////////////
 /// \brief Gadget, simple bouton rectangulaire
 ///
-/// \todo à résoudre :
-///     -   le relache hors du bouton s'active meme quand on a pas cliquer dessus avant.
-///     -   pareil pour le double clique.
+/// \todo résoudre quand il y a superposition de boutons, seulement celui du dessus doit reagir
 ///
 /////////////////////////////////////////////////
 class Bouton : public Gadget
@@ -79,7 +77,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual sf::Vector2f
-    getSize ( ) ;
+    getSize ( ) const ;
 
     /////////////////////////////////////////////////
     /// \brief Accesseur de la boundingBox en local
@@ -88,7 +86,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual sf::FloatRect
-    getLocalBounds ( );
+    getLocalBounds ( ) const;
 
     /////////////////////////////////////////////////
     /// \brief Accesseur de la boundingBox en global
@@ -97,7 +95,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual sf::FloatRect
-    getGlobalBounds ( );
+    getGlobalBounds ( ) const;
 
     /////////////////////////////////////////////////
     /// \brief Definir Couleur du fond.
@@ -156,21 +154,10 @@ public:
     ///
     /////////////////////////////////////////////////
     float
-    getBordure  ( ) { return m_bordure; };
+    getBordure  ( ) const { return m_bordure; } ;
 
 
 
-    /////////////////////////////////////////////////
-    /// \brief La gestion des évènements utilisateurs.
-    ///
-    ///  Gère les entrées claviers, souris, fenetre ...
-    ///
-    /// \param event evenement SFML se transmettant depuis l'application
-    /// \return Rien
-    ///
-    /////////////////////////////////////////////////
-    virtual void
-    traiter_evenements ( const sf::Event& event );
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -220,16 +207,27 @@ public:
 
 
 
-void
-gerer_declenchements( const sf::Event& event );
+    void
+    gerer_declenchements( const sf::Event& event );
 
-void
-gerer_etat( const sf::Event& event );
+    void
+    gerer_etat( const sf::Event& event );
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+    /////////////////////////////////////////////////
+    /// \brief La gestion des évènements utilisateurs.
+    ///
+    ///  Gère les entrées claviers, souris, fenetre ...
+    ///
+    /// \param event evenement SFML se transmettant depuis l'application
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    traiter_evenements ( const sf::Event& event );
 
 
     /////////////////////////////////////////////////
@@ -245,7 +243,7 @@ gerer_etat( const sf::Event& event );
     actualiser ( float deltaT ) override;
 
     /////////////////////////////////////////////////
-    /// \brief Rendre les différents éléments du ou des écrans actifs.
+    /// \brief Dessiner le bouton
     ///
     /////////////////////////////////////////////////
     virtual void
@@ -296,5 +294,20 @@ protected:
 /// \see gui::Gadget
 ///
 ////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

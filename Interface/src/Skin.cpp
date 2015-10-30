@@ -20,6 +20,7 @@ Skin::Skin()
 , cadre         ( std::make_shared <Style> () )
 , invisible     ( std::make_shared <Style> () )
 {
+    std::cout << "INIT SKIN\n";
     /////////////////////////////////////////////////
     // Creation du Skin par defaut
     /////////////////////////////////////////////////
@@ -118,7 +119,7 @@ Skin::Skin()
     cadre->txt_taille      = 2;
     cadre->txt_couleur     = sf::Color ( 200,200,200);
     cadre->lgn_epaisseur   = 1;
-    cadre->lgn_couleur     = sf::Color ( 255,255,255 , 20 );
+    cadre->lgn_couleur     = sf::Color ( 255,255,255 , 100 );
     cadre->fnd_couleur     = sf::Color ( 255,255,255 , 0 );
     cadre->fnd_texture     = sf::Texture ();
     cadre->align           = Alignements::Libre;
@@ -131,7 +132,7 @@ Skin::Skin()
     lblCourant->txt_couleur     = sf::Color ( 200,200,200 , 0);
     lblCourant->lgn_epaisseur   = 0;
     lblCourant->lgn_couleur     = sf::Color ( 255,255,255 , 0 );
-    lblCourant->fnd_couleur     = sf::Color ( 255,255,255 , 0 );
+    lblCourant->fnd_couleur     = sf::Color ( 0,0,255 , 255 );
     lblCourant->fnd_texture     = sf::Texture ();
     lblCourant->align           = Alignements::Libre;
     lblCourant->ajust           = Ajustements::Sans;

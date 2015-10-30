@@ -72,7 +72,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual sf::Vector2f
-    getSize ( ){  return {0,0}; };
+    getSize ( ) const {  return {0,0}; } ;
 
     /////////////////////////////////////////////////
     /// \brief Acceder à la position absolue (en remontant les ancetres).
@@ -81,7 +81,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual sf::Vector2f
-    getPosAbs ();
+    getPosAbs () const ;
 
     /////////////////////////////////////////////////
     /// \brief Acceder à la boundingBox local
@@ -90,7 +90,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual sf::FloatRect
-    getLocalBounds(){ return sf::FloatRect (); };
+    getLocalBounds() const = 0;
 
     /////////////////////////////////////////////////
     /// \brief Acceder à la boundingBox global
@@ -99,7 +99,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual sf::FloatRect
-    getGlobalBounds(){ return sf::FloatRect (); };
+    getGlobalBounds() const =0;
 
     /////////////////////////////////////////////////
     /// \brief Ajouter un enfant.
@@ -152,14 +152,30 @@ public:
     /////////////////////////////////////////////////
     /// \brief Aligne le gadget sur un autre
     ///
-    /// \param cible   le gadget sur lequel s'aligner.
-    /// \param align   l'alignement sur la cible ( haut_gauche ...
+    /// \param  cible   le gadget sur lequel s'aligner.
+    /// \param  align   l'alignement sur la cible ( haut_gauche ...
+    /// \param  ecart   distance a conserver.
     ///
     /// return Rien
     ///
     /////////////////////////////////////////////////
     void
     aligner (  Gadget& cible , Alignements    align  = Alignements::Ctre_Mili , float ecart = 0 );
+
+
+//    /////////////////////////////////////////////////
+//    /// \brief Aligne le gadget dans une fenêtre SFML.
+//    ///
+//    /// \param  cible   Fenetre SFML sur laquelle s'aligner.
+//    /// \param  align   l'alignement sur la cible ( haut_gauche ...
+//    /// \param  ecart   distance a conserver.
+//    ///
+//    /// return Rien
+//    ///
+//    /////////////////////////////////////////////////
+//    void
+//    aligner (  sf::RenderWindow*   cible , Alignements    align  = Alignements::Ctre_Mili , float ecart = 0 );
+
 
     /////////////////////////////////////////////////
     /// \brief Definir l'état du Gadget.
@@ -247,6 +263,7 @@ public:
     /////////////////////////////////////////////////
     virtual void traiter_evenements ( const sf::Event& event );
 
+
     /////////////////////////////////////////////////
     /// \brief Actualiser les éléments.
     ///
@@ -256,6 +273,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual void actualiser ( float deltaT ) ;
+
 
     /////////////////////////////////////////////////
     /// \brief Rendre les éléments.
@@ -288,11 +306,6 @@ protected:
 };// fin de class Gadget
 };// fin du namespace gui
 
-
-/////////////////////////////////////////////////
-// Include des templates *.inl
-/////////////////////////////////////////////////
-#include <Gadget.inl>
 
 
 #endif // GADGET_H

@@ -5,6 +5,7 @@
 // Headers
 /////////////////////////////////////////////////
 #include <Gadget.h>
+#include <UI.h>
 
 namespace gui {
 
@@ -17,39 +18,43 @@ class Image;
 /// \brief Gadget  permettant de rassembler des Gadgets au sein d'une Fenetre.
 ///
 /////////////////////////////////////////////////
-class Fenetre : public Gadget
+class Fenetre : public Gadget, public UI
 {
 
 public:
 
-    /////////////////////////////////////////////////
-    /// \brief Constructeur avec Skin
-    ///
-    /// \param fenetre la fenêtre SFML
-    /// \param skin     Le skin a appliquer à la fenêtre
-    ///
-    /////////////////////////////////////////////////
-    Fenetre(    sf::RenderWindow  * fenetre
-            ,   std::shared_ptr<Skin>  skin  );
-
-
-    /////////////////////////////////////////////////
-    /// \brief Constructeur
-    ///
-    /// \param fenetre la fenêtre de rendu SFML.
-    /// \param taille du gadget.
-    /// \param depl option: fenêtre draggale.
-    /// \param ferm option: fenêtre avec bouton pour la fermer.
-    /// \param redim option: fenêtre redimensionnable
-    ///.
-    /////////////////////////////////////////////////
-    Fenetre(    sf::RenderWindow  * fenetre
-            ,   sf::Vector2f        taille  = { 100 , 100 }
-            ,   bool                depl    = true
-            ,   bool                ferm    = true
-            ,   bool                redim   = true );
+    Fenetre(    sf::RenderWindow  *     fenetre
+            ,   std::shared_ptr<Skin>   skin = new Skin()
+            ,   sf::Vector2f        taille  = { 100 , 100 } );
 
     virtual ~Fenetre();
+
+    /////////////////////////////////////////////////
+    /// \brief Definir la position de la fenetre
+    ///
+    /// \param pos position, c'est la du coin haut gauche de la fenetre, => prend en compte le decallage de m_bordure.
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    setPosition ( sf::Vector2f pos ) {
+        Gadget::setPosition ( pos.x + m_bordure , pos.y + m_bordure  );
+    };
+
+
+    /////////////////////////////////////////////////
+    /// \brief Definir la position de la fenetre
+    ///
+    /// \param pos position, c'est la du coin haut gauche de la fenetre, => prend en compte le decallage de m_bordure.
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    setPosition ( float x  ,  float y ) {
+        Gadget::setPosition ( x + m_bordure , y + m_bordure  );
+    };
+
+
+
+
 
     /////////////////////////////////////////////////
     /// \brief Definir la taille du contenu
@@ -89,7 +94,7 @@ public:
     /////////////////////////////////////////////////
     sf::FloatRect
     getGlobalBounds ( );
-
+/*
     /////////////////////////////////////////////////
     /// \brief ajouter un enfant
     ///
@@ -99,26 +104,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual void
-    ajouter( ptr enfant );
-
-    /////////////////////////////////////////////////
-    /// \brief Definir le titre.
-    ///
-    /// \param titre le nouveau titre.
-    ///
-    /////////////////////////////////////////////////
-    void
-    setTexte ( std::string titre);
-
-    /////////////////////////////////////////////////
-    /// \brief appeler le titre.
-    ///
-    /// \return le titre.
-    ///
-    /////////////////////////////////////////////////
-    std::string
-    getTexte (  );
-
+    ajouter( ptr enfant );*/
 
     /////////////////////////////////////////////////
     /// \brief Definir l'epaisseur de la bordure
@@ -142,63 +128,15 @@ public:
 
 private:
 
-    /////////////////////////////////////////////////
-    /// \brief Pour lier les élément de l'interface de la fenetre à la fenêtre
-    ///
-    /// \param enfant un élément de l'interface de la fenêtre.
-    ///
-    /////////////////////////////////////////////////
-    void
-    ajouterUI( ptr enfant );
 
-    /////////////////////////////////////////////////
-    /// \brief Initialisation lors de la création
-    ///
-    /////////////////////////////////////////////////
-    void
-    init();
-
-    /////////////////////////////////////////////////
-    /// \brief Initialiser le Skin des bouton de l'interface.
-    ///
-    /////////////////////////////////////////////////
-    void
-    initSkinBouton();
 
     /////////////////////////////////////////////////
     /// \brief Initialiser les gadgets ( boutons, titre...).
     ///
     /////////////////////////////////////////////////
-    void
-    initUI();
+    virtual void
+    creerUI();
 
-    /////////////////////////////////////////////////
-    /// \brief Initialiser l'interface pour prendre en compte le drag.
-    ///
-    /////////////////////////////////////////////////
-    void
-    initUI_drag();
-
-    /////////////////////////////////////////////////
-    /// \brief Initialiser l'interface pour le bouton fermer.
-    ///
-    /////////////////////////////////////////////////
-    void
-    initUI_fermer();
-
-    /////////////////////////////////////////////////
-    /// \brief Initialiser l'interface pour les bouton de redimensionnements.
-    ///
-    /////////////////////////////////////////////////
-    void
-    initUI_redim();
-
-    /////////////////////////////////////////////////
-    /// \brief Initialiser l'interface pour le titre.
-    ///
-    /////////////////////////////////////////////////
-    void
-    initUI_titre();
 
     /////////////////////////////////////////////////
     /// \brief mais à jour les styles des éléments de la fenêtre.
@@ -214,12 +152,6 @@ private:
     void
     majGeom (  )  ;
 
-    /////////////////////////////////////////////////
-    /// \brief les manipulation de drag et de redimensionnement.
-    ///
-    /////////////////////////////////////////////////
-    void
-    ManipulerFenetre ( );
 
 public:
 
@@ -258,89 +190,18 @@ private:
     // Les membres
     /////////////////////////////////////////////////
 
-    sf::RenderWindow *      m_fenetreSFML;  ///<  pointeur vers la fenetre SFML (pour la position absolue de la souris , pour les manips de la fenetre).
-    float                   m_bordure;      ///<  Le taille de la bordure du cadre.
-    sf::Vector2f            m_taille;       ///<  Le taille de la fenetre.
-    std::shared_ptr<Skin>   m_skinBtn;      ///<  Le skin pour les boutons de la fenetre (drag, fermer, redim. ...)
+    sf::RenderWindow *              m_fenetreSFML;          ///<  pointeur vers la fenetre SFML (pour la position absolue de la souris , pour les manips de la fenetre).
+    float                           m_bordure;              ///<  Le taille de la bordure du cadre.
+    sf::Vector2f                    m_taille;               ///<  Le taille de la fenetre.
+    sf::Vector2f                    m_tailleContenu;        ///<  Le taille du contenu.
 
-    /////////// les options de la fenetre ///////////
-    bool    m_deplacable;                 ///<  option: La fenetre est deplaçable (true) ou pas (false).
-    bool    m_redimensionnable;           ///<  option: La fenetre est redimensionnable (true) ou pas (false).
-    bool    m_fermable;                   ///<  option: La fenetre est fermable (true) ou pas (false).
-
-
-    /////////// les Boutons de l'ui  ///////////
-    std::shared_ptr<Label>          m_lblTitre;             ///<  Le Label titre.
-    std::shared_ptr<Label>          m_lblFermer;            ///<  Le X pour le bouton fermer.
-    std::shared_ptr<Bouton>         m_btnFermer;            ///<  Le Bouton pour fermer la fenetre.
-    std::shared_ptr<Bouton>         m_btnDrag;              ///<  Le Bouton pour drager la fenetre.
-    std::shared_ptr<Bouton>         m_btnRedimBasDroite;    ///<  Bouton pour redimensionner la fenetre.
-    std::shared_ptr<Bouton>         m_btnRedimBasGauche;    ///<  Bouton pour redimensionner la fenetre.
-
-    std::shared_ptr<Bouton>         m_btnRedimHautDroite;    ///<  Bouton pour redimensionner la fenetre.
-    std::shared_ptr<Bouton>         m_btnRedimHautGauche;    ///<  Bouton pour redimensionner la fenetre.
-
-    std::shared_ptr<Bouton>         m_btnRedimGauche;       ///<  Bouton pour redimensionner la fenetre.
-    std::shared_ptr<Bouton>         m_btnRedimDroite;       ///<  Bouton pour redimensionner la fenetre.
-    std::shared_ptr<Bouton>         m_btnRedimBas;          ///<  Bouton pour redimensionner la fenetre.
-
-    std::shared_ptr<Bouton>         m_btnRedimHaut;          ///<  Bouton pour redimensionner la fenetre.
-
-    std::shared_ptr<Groupe>         m_grpContenu;           ///<  Groupe des éléments du contenu de la Fenetre.
+    // les gadgets de la fenêtre
+    std::shared_ptr<Groupe>         m_grpContenu;           ///<  Groupe des éléments du contenu de la Fenetre. ne s'affiche pas directment, est dessiné dans m_spriteContenant
     std::shared_ptr<Image>          m_CadreContenu;         ///<  Groupe des éléments du contenu de la Fenetre.
-
-    /////////// le contenant de la fenetre  ///////////
-    std::shared_ptr<sf::Sprite>     m_contenu;              ///<  Le sprite qui affiche le contenu de la fenetre.
-
-    /////////// le fond  ///////////
+    std::shared_ptr<sf::Sprite>     m_spriteContenant;        ///<  Le sprite qui affiche le contenu de la fenetre.
     std::shared_ptr<Image>          m_fond;                 ///<  Le rectangle du fond.
 
-
-
-    /////////// Pour drager et redimensionner la fenetre ///////////
-    bool            m_dragging;           ///<  En train de dragger ?
-    bool            m_redimDroite;        ///<  En train de redim ?.
-    bool            m_redimGauche;        ///<  En train de redim ?.
-    bool            m_redimBas;           ///<  En train de redim ?.
-    bool            m_redimHaut;          ///<  En train de redim ?.
-    sf::Vector2f    m_posFenetreOrig;     ///<  position de la fenetre à l'origine du drag.
-    sf::Vector2f    m_posMouseOrig;       ///<  position de la souris a l'origine du drag.
-    sf::Vector2f    m_tailleFenetreOrig;  ///<  taille de la fenetre à l'origine.
-
-    /////////// les fonctions de manipulation de la fenetre ///////////
-
-    // les fonctions pour le drag
-    FuncType    m_fctDragDebut;           ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctDragFin;             ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctDragEntre;           ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctDragSort;            ///<  fonction pour manipuler la fenetre.
-
-    // les fonctions fermer
-    FuncType    m_fctFermer;              ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctFermerEntre;         ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctFermerSort;          ///<  fonction pour manipuler la fenetre.
-
-    // les fonctions redimension coins
-    FuncType    m_fctRedimBasDroiteDebut; ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimBasDroiteFin;   ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimBasGaucheDebut; ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimBasGaucheFin;   ///<  fonction pour manipuler la fenetre.
-
-    FuncType    m_fctRedimHautDroiteDebut; ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimHautDroiteFin;   ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimHautGaucheDebut; ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimHautGaucheFin;   ///<  fonction pour manipuler la fenetre.
-
-    // les fonctions redimension arretes
-    FuncType    m_fctRedimDroiteDebut;    ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimDroiteFin;      ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimGaucheDebut;    ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimGaucheFin;      ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimBasDebut;       ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimBasFin;         ///<  fonction pour manipuler la fenetre.
-
-    FuncType    m_fctRedimHautDebut;      ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimHautFin;        ///<  fonction pour manipuler la fenetre.
+//    std::shared_ptr<BoutonSlide>    m_boutonSlide;
 
 };
 
@@ -357,32 +218,30 @@ private:
 /// \code
 ///
 ///
-///    // ////////////////////////////////////////////////////////////////////////////////////
-///    //                                                                                   //
-///    //                HORIZ_...                                                          //
-///    //                                                                                   //
-///    //  VERTI_...     0    1                 3     2    Total                            //
-///    //                |    |                 |     |    |                                //
-///    //      0 ---     |----|-----------------------|----|  ---                           //
-///    //                |Red.|      Redimension      |Red.|      m_bordure                 //
-///    //      1 ---     |----|-----------------|-----|----|  ---                           //
-///    //                |    |                 |     |    |      m_lblTitre->getSize().y   //
-///    //                |    |  Titre/drag     |Ferm.|    |  ---                           //
-///    //                |    |                 |     |    |      m_bordure                 //
-///    //      2 ---     |   0.0----------------|-----|    |  ---                           //
-///    //                |Red.|                       |Red.|                                //
-///    //                |    |                       |    |                                //
-///    //                |    |      Contenu          |    |      taille.y                  //
-///    //                |    |      ( taille )       |    |                                //
-///    //                |    |                       |    |                                //
-///    //      3 ---     |----|-----------------------|----|  ---                           //
-///    //                |Red.|      Redimemsion      |Red.|      m_bordure                 //
-///    //  Total ---     |----|-----------------------|----|  ---                           //
-///    //                                                                                   //
-///    //                |    |                       |    |                                //
-///    //               m_bordure      taille.x      m_bordure                              //
-///    //                                                                                   //
-///    ///////////////////////////////////////////////////////////////////////////////////////
+///    // ///// Position des reperes dans la fenetre ///////////////////////////////////
+///    //                                                                             //
+///    //                HORIZ_...                                                    //
+///    //                                                                             //
+///    //  VERTI_...     0    1                       2    3                          //
+///    //                |    |                       |    |                          //
+///    //      0 ---     |----|-----------------------|----|  ---                     //
+///    //                |    |                       |    |      m_bordure           //
+///    //      1 ---     |----|-----------------------|----|  ---                     //
+///    //                |    |0,0                    |    |                          //
+///    //                |    |                       |    |                          //
+///    //                |    |                       |    |                          //
+///    //                |    |        Contenu        |    |      taille.y            //
+///    //                |    |                       |    |                          //
+///    //                |    |                       |    |                          //
+///    //                |    |                       |    |                          //
+///    //      2 ---     |----|-----------------------|----|  ---                     //
+///    //                |    |                       |    |      m_bordure           //
+///    //      3 ---     |----|-----------------------|----|  ---                     //
+///    //                                                                             //
+///    //                |    |                       |    |                          //
+///    //               m_bordure      taille.x      m_bordure                        //
+///    //                                                                             //
+///    /////////////////////////////////////////////////////////////////////////////////
 ///
 ///
 /// \endcode

@@ -59,7 +59,7 @@ Gadget::~Gadget(){
 
 /////////////////////////////////////////////////
 sf::Vector2f
-Gadget::getPosAbs (  )        {
+Gadget::getPosAbs (  )  const      {
     sf::Vector2f  result = getPosition ();
     if ( m_parent != 0 )
         result += this->m_parent->getPosAbs();
@@ -92,6 +92,7 @@ Gadget::setStyle( std::shared_ptr<Style>     style ) {
 //    m_style->print();
     majGeom( );
 };
+
 
 /////////////////////////////////////////////////
 void
@@ -140,6 +141,57 @@ Gadget::aligner (  Gadget& cible , Alignements    align , float ecart  ){
     }
 }
 
+
+/*
+///////////////////////////////////////////////////
+//void
+//Gadget::aligner (  sf::RenderWindow*   cible , Alignements    align  = Alignements::Ctre_Mili , float ecart = 0 );
+//
+//    // distance a garder par rapport aux bords de la cible
+//
+//    // le bounding box de la cible
+//    sf::FloatRect   rect_cible      = cible.getLocalBounds() ;
+//
+//    // les axes d'alignements sur la cible
+//    float    cbl_gauche  = rect_cible.left;
+//    float    cbl_milieu  = rect_cible.left + rect_cible.width/2 ;
+//    float    cbl_droite  = rect_cible.left + rect_cible.width;
+//
+//    float    cbl_haut    = rect_cible.top;
+//    float    cbl_centre  = rect_cible.top + rect_cible.height/2;
+//    float    cbl_bas     = rect_cible.top + rect_cible.height;
+//
+//    // la boudning box du gadget
+//    sf::FloatRect   rect_this       = getLocalBounds() ;
+//
+//
+//    // les axes de la nouvelle position pour l'alignements du gadget sur la cible
+//    int gauche    =  std::round ( - rect_this.left  + cbl_gauche + ecart ) ;
+//    int milieu    =  std::round ( - (rect_this.left + rect_this.width/2 )    + cbl_milieu  ) ;
+//    int droite    =  std::round ( - (rect_this.left + rect_this.width   )    + cbl_droite  - ecart ) ;
+//
+//    int haut      =  std::round ( - rect_this.top  + cbl_haut + ecart ) ;
+//    int centre    =  std::round ( - (rect_this.top + rect_this.height/2 )    + cbl_centre ) ;
+//    int bas       =  std::round ( - (rect_this.top + rect_this.height   )    + cbl_bas  - ecart ) ;
+//
+//    // et donc on combine en fonction de l'alignement choisi
+//    switch ( align ) {
+//        case Alignements::Haut_Gche:{   setPosition( gauche , haut );   }break;
+//        case Alignements::Haut_Mili:{   setPosition( milieu , haut );   }break;
+//        case Alignements::Haut_Drte:{   setPosition( droite , haut );   }break;
+//        case Alignements::Ctre_Gche:{   setPosition( gauche , centre ); }break;
+//        case Alignements::Ctre_Mili:{   setPosition( milieu , centre ); }break;
+//        case Alignements::Ctre_Drte:{   setPosition( droite , centre ); }break;
+//        case Alignements::Bas_Gche:{    setPosition( gauche , bas );    }break;
+//        case Alignements::Bas_Mili:{    setPosition( milieu , bas );    }break;
+//        case Alignements::Bas_Drte:{    setPosition( droite , bas );    }break;
+//        case Alignements::Libre:{}break;
+//        default:{}break;
+//    }
+//}
+*/
+
+
 /////////////////////////////////////////////////
 bool
 Gadget::contient ( float x, float y )
@@ -147,7 +199,7 @@ Gadget::contient ( float x, float y )
     sf::FloatRect rect  = getGlobalBounds();
 
     // S'il est contenu alors on verif le parent pour savoir par exemple si
-    // le gadget est en vue dans la fenetre parent.
+    // le gadget est visible dans la fenetre parent.
     if ( rect.contains( sf::Vector2f ( x , y ) ) ){
         if ( m_parent != 0 )
             return   m_parent->contient ( x, y );

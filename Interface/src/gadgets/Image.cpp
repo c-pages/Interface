@@ -93,7 +93,7 @@ Image::loadImage      ( std::string fichier  ) {
 
 /////////////////////////////////////////////////
 sf::Vector2f
-Image::getSize(  )    {
+Image::getSize(  )  const  {
     return m_rectangle->getSize();
     //return sf::Vector2f ( getLocalBounds().width , getLocalBounds().height  ) ;
 }
@@ -108,14 +108,14 @@ Image::setSize( sf::Vector2f taille )    {
 
 /////////////////////////////////////////////////
 sf::FloatRect
-Image::getLocalBounds( ) {
+Image::getLocalBounds( )const {
     return m_rectangle->getLocalBounds();
 }
 
 
 /////////////////////////////////////////////////
 sf::FloatRect
-Image::getGlobalBounds( ) {
+Image::getGlobalBounds( )const {
     return m_rectangle->getGlobalBounds();
 }
 

@@ -6,12 +6,12 @@
 			<Cursor1 position="2450" topLine="68" />
 		</Cursor>
 	</File>
-	<File name="src\Config.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Config.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="8162" topLine="174" />
+			<Cursor1 position="6984" topLine="174" />
 		</Cursor>
 	</File>
-	<File name="src\Ecran.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Ecran.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="257" topLine="0" />
 		</Cursor>
@@ -23,12 +23,15 @@
 	</File>
 	<File name="src\ecrans\EcranDemo.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4291" topLine="99" />
+			<Cursor1 position="5328" topLine="61" />
 		</Cursor>
+		<Folding>
+			<Collapse line="94" />
+		</Folding>
 	</File>
-	<File name="include\Application.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Application.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2724" topLine="60" />
+			<Cursor1 position="3120" topLine="60" />
 		</Cursor>
 	</File>
 	<File name="include\Config.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -58,7 +61,7 @@
 	</File>
 	<File name="include\ecrans\EcranDemo.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3174" topLine="52" />
+			<Cursor1 position="2719" topLine="49" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">

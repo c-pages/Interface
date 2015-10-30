@@ -12,8 +12,8 @@ namespace app {
 
 /////////////////////////////////////////////////
 EcranDemo::EcranDemo( Application*  appli )
-: Ecran     ( appli )
-, m_gui     ( new gui::Groupe() )
+: Ecran             ( appli )
+, m_gui             ( new gui::Groupe() )
 {
    // m_gui = std::shared_ptr<gui::Groupe>  ( new gui::Groupe()  );
     // Initialisation de l'interface graphique.
@@ -76,14 +76,57 @@ EcranDemo::initGUI  ( )
     // le skin qu'on va utiliser dans cette interface
     auto skinCourant =  Config::m_skins[ Config::Skins::Skin1 ] ;
 
+    // creation de la fenetre
+    //fenetreA = std::shared_ptr<gui::Fenetre> (  new gui::Fenetre ( &m_appli->getFenetre() , skinCourant ) );
+    std::shared_ptr<gui::Contenant>  contenant ( new gui::Contenant ( &m_appli->getFenetre()  ));
+    m_gui->ajouter          ( contenant );
+    contenant->setPosition    ( 120 , 120 );
+    contenant->setSize        ( { 250 , 250 } ) ; //m_appli->getFenetre().getSize().y }  ); // ( { 150 , m_appli->getFenetre().getSize().y}) ;
+
+
 /*
+    std::shared_ptr<gui::Label>  label ( new gui::Label ( "LABEL LABEL LABEL LABEL\n LABEL LABEL LABEL LABEL\n  LABEL LABEL LABEL LABEL\n   LABEL LABEL LABEL LABEL\n    LABEL LABEL LABEL LABEL\n     LABEL LABEL LABEL LABEL\n      LABEL LABEL LABEL LABEL\n" ) );
+    contenant->ajouter      ( label );
+    label->setTexteTaille   ( 10 );
+    label->setPosition      ( 0 , 0 );
+*/
+    std::shared_ptr<gui::Label>  label2 ( new gui::Label ( "LABEL 1 LABEL 2 LABEL 3 LABEL 4 LABEL 5 LABEL 6 LABEL 7 LABEL 8 LABEL 9 LABEL 10 " ) );
+    contenant->ajouter      ( label2 );
+    label2->setTexteTaille   ( 10 );
+    label2->setPosition      ( 20 , 150 );
+
+
+    std::shared_ptr<gui::Label>  label3 ( new gui::Label ( "A" ) );
+    contenant->ajouter      ( label3 );
+    label3->setTexteTaille   ( 150 );
+    label3->setPosition      ( 50 , 150 );
+
+
+
+/*
+    // creation de la fenetre
+    //fenetreA = std::shared_ptr<gui::Fenetre> (  new gui::Fenetre ( &m_appli->getFenetre() , skinCourant ) );
+    std::shared_ptr<gui::Fenetre>  fenetre ( new gui::Fenetre ( &m_appli->getFenetre() , skinCourant ));
+    m_gui->ajouter          ( fenetre );
+    fenetre->setPosition    ( 20 , 20 );
+    fenetre->setSize        ( { 250 , 250 } ) ; //m_appli->getFenetre().getSize().y }  ); // ( { 150 , m_appli->getFenetre().getSize().y}) ;
+*/
+//
+//    // creation de la fenetre
+//    //fenetreA = std::shared_ptr<gui::Fenetre> (  new gui::Fenetre ( &m_appli->getFenetre() , skinCourant ) );
+//    std::shared_ptr<gui::Fenetre_encastree>  fenetre_encastree ( new gui::Fenetre_encastree ( &m_appli->getFenetre() , skinCourant  , gui::Encastrements::Droite ));
+//    m_gui->ajouter              ( fenetre_encastree );
+//    fenetre_encastree->setPosition    ( 0 ,0 );
+//    fenetre_encastree->setSize       ( { 250 , m_appli->getFenetre().getSize().y }  ); // ( { 150 , m_appli->getFenetre().getSize().y}) ;
+
+/*
+
     // creation  Bouton pr fenetre, c'est un shared_ptr de l'ecranDemo
-    std::shared_ptr<gui::BoutonTexte>  boutonA ( new gui::BoutonTexte (skinCourant ,  "       gui::BoutonTexte      " ) );
-    m_gui->ajouter ( boutonA );
-    boutonA->setPosition    ( 15, 75 );
-    boutonA->setSize        ( {30, 30} );
-    boutonA->setBordure     ( 3 )  ;
-    boutonA->ajusterAuTexte ( );
+    std::shared_ptr<gui::BoutonTexte>  boutonA ( new gui::BoutonTexte (skinCourant ,  "gui::BoutonTexte" ) );
+    fenetre_encastree->ajouter    ( boutonA );
+  //  boutonA->setPosition    ( 0, 0 );
+  //  boutonA->setBordure     ( 3 )  ;
+   // boutonA->ajusterAuTexte ( );
 
     boutonA->lier           ( gui::Evenements::onBtnG_DblClique         , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnG_DblClique\n";   });
     boutonA->lier           ( gui::Evenements::onBtnG_Press             , [this]() {  std::cout << "gui::BoutonTexte ->  onBtnG_Press\n";   });
@@ -103,14 +146,35 @@ EcranDemo::initGUI  ( )
     boutonA->lier           ( gui::Evenements::onBtn_Entre              , [this]() {  std::cout << "gui::BoutonTexte ->  onBtn_Entre\n";   });
     boutonA->lier           ( gui::Evenements::onBtn_Sort               , [this]() {  std::cout << "gui::BoutonTexte ->  onBtn_Sort\n";   });
 
+*/
+/*
+    // creation  Bouton Slide
+    std::shared_ptr<gui::BoutonSlide>  boutonSlide ( new gui::BoutonSlide  ( gui::Orientation::Verticale
+                                                                           , skinCourant
+                                                                           , 500 ) );
+    fenetre->ajouter    ( boutonSlide );
+    std::cout << "ecran ---- 1 ----\n";
+    boutonSlide->setPosition ( { 50 , 50 } );
 
-    std::shared_ptr<gui::Fenetre>  fenetreA ( new gui::Fenetre ( &m_appli->getFenetre() ));
-    m_gui->ajouter           ( fenetreA );
 
-
+    std::shared_ptr<gui::Bouton>  bouton ( new gui::Bouton  (  skinCourant ) );
+    fenetre->ajouter    ( bouton );
+    bouton->setPosition ( { 150 , 50 });
+    bouton->setSize ( { 350 , 50 });
 */
 
 
+   // boutonSlide->lier           ( gui::Evenements::onBtnG_DblClique         , [this]() {  std::cout << "-->  onBtnG_DblClique\n";   });
+
+
+
+
+
+    std::cout << "ecran : fin init()\n";
+
+
+
+/*
    // gui::Fenetre::
 
     // creation de la fenetre
@@ -235,7 +299,7 @@ EcranDemo::initGUI  ( )
     fenetreA->ajouter    ( m_lblD );
     m_lblD->aligner ( *boutonD );
     m_lblD->setPosition( 30 , int (m_lblD->getPosition().y) );
-
+*/
 
 }   // fin init GUI
 

@@ -62,7 +62,7 @@ Bouton::setSize   ( sf::Vector2f   taille )   {
 
 /////////////////////////////////////////////////
 sf::Vector2f
-Bouton::getSize ( ) {
+Bouton::getSize ( )const {
     return m_fond->getSize();
     //return { m_fond->getLocalBounds().width , m_fond->getLocalBounds().height };
 }
@@ -93,7 +93,7 @@ Bouton::setOutlineThickness  ( float epaisseur )   {
 
 /////////////////////////////////////////////////
 sf::FloatRect
-Bouton::getLocalBounds ( ) {
+Bouton::getLocalBounds ( ) const{
     sf::FloatRect result( m_fond->getLocalBounds() );
 
     result.left     =  getPosition().x;
@@ -116,7 +116,7 @@ Bouton::getLocalBounds ( ) {
 
 /////////////////////////////////////////////////
 sf::FloatRect
-Bouton::getGlobalBounds ( ) {
+Bouton::getGlobalBounds ( ) const{
     sf::FloatRect result( m_fond->getLocalBounds() );
 
     result.left     +=  getPosAbs().x;

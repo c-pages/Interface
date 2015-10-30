@@ -43,6 +43,11 @@ enum Ajustements {
     ,   Vert_Hori       /** Verticalement et Horizontalement*/
 };
 
+
+
+
+
+
 /////////////////////////////////////////////////
 /// \brief Structure de donnée. Un Style contient les infos visuelles d'un élément.
 ///

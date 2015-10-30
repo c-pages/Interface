@@ -54,7 +54,7 @@ public:
     ///
     /////////////////////////////////////////////////
     sf::Vector2f
-    getSize( );
+    getSize( ) const;
 
     /////////////////////////////////////////////////
     /// \brief    Definir la taille du bouton.
@@ -73,7 +73,7 @@ public:
     ///
     /////////////////////////////////////////////////
     sf::FloatRect
-    getLocalBounds ( );
+    getLocalBounds ( ) const;
 
     /////////////////////////////////////////////////
     /// \brief    Accesseur de la boundingBox en global
@@ -82,7 +82,7 @@ public:
     ///
     /////////////////////////////////////////////////
     sf::FloatRect
-    getGlobalBounds ( );
+    getGlobalBounds ( ) const;
 
     /////////////////////////////////////////////////
     /// \brief    Definir Couleur du fond.

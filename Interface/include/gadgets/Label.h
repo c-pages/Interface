@@ -55,7 +55,7 @@ public:
     ///
     /////////////////////////////////////////////////
     sf::Vector2f
-    getSize ( );
+    getSize ( ) const;
 
     /////////////////////////////////////////////////
     /// \brief Accesseur de la boundingBox en local
@@ -64,7 +64,7 @@ public:
     ///
     /////////////////////////////////////////////////
     sf::FloatRect
-    getLocalBounds ( );
+    getLocalBounds ( ) const;
 
     /////////////////////////////////////////////////
     /// \brief Accesseur de la boundingBox en global
@@ -73,7 +73,7 @@ public:
     ///
     /////////////////////////////////////////////////
     sf::FloatRect
-    getGlobalBounds ( );
+    getGlobalBounds ( ) const;
 
     /////////////////////////////////////////////////
     /// \brief Definir le texte du Label.
@@ -92,7 +92,7 @@ public:
     ///
     /////////////////////////////////////////////////
     std::string
-    getTexte ( ) {  return m_texte->getString();   } ;
+    getTexte ( ) const {  return m_texte->getString();   } ;
 
     /////////////////////////////////////////////////
     /// \brief Definir la taille texte du Label.

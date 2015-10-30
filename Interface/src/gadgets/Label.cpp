@@ -38,15 +38,23 @@ Label::~Label()
 
 /////////////////////////////////////////////////
 sf::FloatRect
-Label::getLocalBounds ( ) {
+Label::getLocalBounds ( )const {
     //m_texte->getLocalBounds()
-    return m_texte->getLocalBounds();
+    sf::FloatRect  result = m_texte->getLocalBounds();
+
+    result.left     =  getPosition().x;
+    result.top      =  getPosition().y;
+
+    result.width    +=  m_texte->getLocalBounds().left;
+    result.top      +=  m_texte->getLocalBounds().top;
+//std::cout << "--------------> Y : " << getPosition().y << "\n";
+    return result;
 }
 
 
 /////////////////////////////////////////////////
 sf::FloatRect
-Label::getGlobalBounds ( ) {
+Label::getGlobalBounds ( ) const{
     sf::FloatRect  result = m_texte->getGlobalBounds();
 
     result.left     +=  getPosAbs().x;
@@ -57,7 +65,7 @@ Label::getGlobalBounds ( ) {
 
 /////////////////////////////////////////////////
 sf::Vector2f
-Label::getSize( )    {
+Label::getSize( )  const  {
     return sf::Vector2f  (   getLocalBounds().width , getLocalBounds().height );
 };
 
