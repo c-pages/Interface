@@ -28,6 +28,7 @@ Contenant::Contenant( sf::RenderWindow  *     fenetre )
     m_grpContenant->ajouter (m_grpContenu);
     m_grpContenant->setParent( this );
 
+
     // UI
     m_UI            = std::shared_ptr<Groupe>       ( new Groupe   ( ) );
     m_UI->ajouter   ( m_slideVerti );
@@ -57,12 +58,10 @@ Contenant::getLocalBounds ( )const {
 /////////////////////////////////////////////////
 sf::FloatRect
 Contenant::getGlobalBounds ( )const {
-
     sf::FloatRect result ( getPosAbs().x
                          , getPosAbs().y
                          , m_taille.x
                          , m_taille. y);
-
     return { result };
 }
 
@@ -72,15 +71,26 @@ sf::FloatRect
 Contenant::getContenuBounds ( ) const {
 
     sf::FloatRect result ( 0,0,0,0 );
+//sult.height += 10; // pour laisser un espace
+
+    float minX = 5000;
+    float maxX = -5000;
+    float minY = 5000;
+    float maxY = -5000;
 
     for ( ptr enfant : m_grpContenu->m_enfants ) {
         sf::FloatRect rect  ( enfant->getLocalBounds() ) ;
-        if ( result.width < rect.left + rect.width )  result.width  = rect.left + rect.width;
-        if ( result.height < rect.top + rect.height ) result.height = rect.top + rect.height;
-    }
+        if (rect.left< minX) minX = rect.left;
+        if (rect.left + rect.width > maxX ) maxX = rect.left + rect.width ;
+        if (rect.top < minY) minY = rect.top;
+        if (rect.top + rect.height > maxY ) maxY = rect.top + rect.height ;
 
-    result.width += 10; // pour laisser un espace
-    result.height += 10; // pour laisser un espace
+    }
+    result = { minX, minY, maxX-minX , maxY-minY  };
+
+    // pour laisser un espace sur les cotés
+    result.width    += 10;
+    result.height   += 10;
 
     return { result };
 }
@@ -103,19 +113,21 @@ Contenant::traiter_evenements ( const sf::Event& event ) {
 void
 Contenant::actualiser ( float deltaT )    {
 
-    //  actualiser UI et contenu
+    // Actualiser UI et contenu
     m_UI->actualiser        ( deltaT );
     m_grpContenu->actualiser( deltaT );
 
-    //si on drag pas on a pas besoin d'actualiser donc  return
+    // Si on drag pas on a pas besoin d'actualiser , on return
     if ( m_slideHori->isDragging() or m_slideVerti->isDragging() )
         m_besoinActua = true;
     if ( not m_besoinActua ) return;
 
 
-    // on regarde si on a besoin des sliders
-    m_bSliderHori = ( getContenuBounds().width > m_taille.x );
-    m_bSliderVerti = ( getContenuBounds().height > m_taille.y );
+    // on verifie si on a besoin des sliders
+    m_bSliderHori   = ( getContenuBounds().width    >   m_taille.x );
+    m_bSliderVerti  = ( getContenuBounds().height   >   m_taille.y );
+
+
 
     // on s'occupe des dimensions et positions des sliders et du contenu
     if ( m_bSliderHori and m_bSliderVerti ) {
@@ -134,9 +146,12 @@ Contenant::actualiser ( float deltaT )    {
     }
     else if ( m_bSliderVerti ) {
         m_grpContenant->setSize ( {m_taille.x - m_slideVerti->getSize().x  , m_taille.y}  );
+
         m_slideVerti->setLongueurMax        ( m_taille.y );
         m_slideVerti->setLongueurCourante   ( m_taille.y / getContenuBounds().height * m_taille.y );
     }
+
+
 
     // On positionne les sliders
     m_slideHori->setPosition                ( 0 , m_taille.y - m_slideHori->getSize().y  );
@@ -160,6 +175,7 @@ Contenant::actualiser ( float deltaT )    {
 void
 Contenant::ajouter( ptr enfant )   {
     m_grpContenu->ajouter ( enfant );
+    m_tailleContenu = getContenuBounds();
 }
 
 
@@ -179,10 +195,9 @@ Contenant::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    
     tailleTexture.y = getContenuBounds().top    + getContenuBounds().height + 1;
     tailleAffiche.x = m_taille.x;
     tailleAffiche.y = m_taille.y;
-    if ( m_bSliderHori )
-        tailleAffiche.y -= m_slideHori->getSize().y;
-    if ( m_bSliderVerti )
-        tailleAffiche.x -= m_slideVerti->getSize().x;
+
+    if ( m_bSliderHori )    tailleAffiche.y -= m_slideHori->getSize().y;
+    if ( m_bSliderVerti )   tailleAffiche.x -= m_slideVerti->getSize().x;
 
 
     // la texture dans laquelle on va dessiner les éléments contenus

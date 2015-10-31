@@ -7,11 +7,18 @@ Fenetre_encastree::Fenetre_encastree    ( sf::RenderWindow  *       fenetre
 : Fenetre ( fenetre , skin )
 {
     // ctor
+
+
+
+
 }
 
 Fenetre_encastree::~Fenetre_encastree()
 {
     //dtor
 }
+
+
+
 
 } // fin namespace

@@ -279,10 +279,9 @@ Fonctions membres protégées</h2></td></tr>
 <tr class="memitem:a1ff3d7a1586eaab5873cc6e49be2332c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_bouton.html#a1ff3d7a1586eaab5873cc6e49be2332c">majGeom</a> ()</td></tr>
 <tr class="memdesc:a1ff3d7a1586eaab5873cc6e49be2332c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualise le style du label.  <a href="#a1ff3d7a1586eaab5873cc6e49be2332c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1ff3d7a1586eaab5873cc6e49be2332c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classgui_1_1_gadget"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classgui_1_1_gadget')"><img src="closed.png" alt="-"/>&#160;Fonctions membres protégées hérités de <a class="el" href="classgui_1_1_gadget.html">gui::Gadget</a></td></tr>
-<tr class="memitem:aca524b5beca6fd7eb6269e32e56285a3 inherit pro_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3">contient</a> (float x, float y)</td></tr>
-<tr class="memdesc:aca524b5beca6fd7eb6269e32e56285a3 inherit pro_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvois si le point (x,y) est contenu dans le gadget.  <a href="#aca524b5beca6fd7eb6269e32e56285a3">Plus de détails...</a><br /></td></tr>
-<tr class="separator:aca524b5beca6fd7eb6269e32e56285a3 inherit pro_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9a614caaf1bc56b431b15191cb47d4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a">contient</a> (float x, float y)</td></tr>
+<tr class="memdesc:ac9a614caaf1bc56b431b15191cb47d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvois si le point (x,y) est contenu dans le gadget.  <a href="#ac9a614caaf1bc56b431b15191cb47d4a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac9a614caaf1bc56b431b15191cb47d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classgui_1_1_action"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classgui_1_1_action')"><img src="closed.png" alt="-"/>&#160;Fonctions membres protégées hérités de <a class="el" href="classgui_1_1_action.html">gui::Action</a></td></tr>
 <tr class="memitem:aa7481b3efcebd774ad68bf1a4308041a inherit pro_methods_classgui_1_1_action"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a">declencher</a> (<a class="el" href="namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e">Evenements</a> evt)</td></tr>
 <tr class="memdesc:aa7481b3efcebd774ad68bf1a4308041a inherit pro_methods_classgui_1_1_action"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déclencher la fonction associé à l'évenement.  <a href="#aa7481b3efcebd774ad68bf1a4308041a">Plus de détails...</a><br /></td></tr>
@@ -548,6 +547,76 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
+<a class="anchor" id="ac9a614caaf1bc56b431b15191cb47d4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gui::Bouton::contient </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Renvois si le point (x,y) est contenu dans le gadget. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si le point (x,y) est contenu par le gadget. </dd></dl>
+
+<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3">gui::Gadget</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_bouton_ac9a614caaf1bc56b431b15191cb47d4a_cgraph.png" border="0" usemap="#classgui_1_1_bouton_ac9a614caaf1bc56b431b15191cb47d4a_cgraph" alt=""/></div>
+<map name="classgui_1_1_bouton_ac9a614caaf1bc56b431b15191cb47d4a_cgraph" id="classgui_1_1_bouton_ac9a614caaf1bc56b431b15191cb47d4a_cgraph">
+<area shape="rect" id="node2" href="classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e" title="Accesseur de la boundingBox en global. " alt="" coords="196,29,391,56"/>
+<area shape="rect" id="node4" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="222,104,365,131"/>
+<area shape="rect" id="node3" href="classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue (en remontant les ancetres). " alt="" coords="456,29,617,56"/>
+<area shape="rect" id="node5" href="classgui_1_1_gadget.html#a393fef359f85de77d5067ebb39039201" title="Acceder à la boundingBox global. " alt="" coords="439,104,635,131"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_bouton_ac9a614caaf1bc56b431b15191cb47d4a_icgraph.png" border="0" usemap="#classgui_1_1_bouton_ac9a614caaf1bc56b431b15191cb47d4a_icgraph" alt=""/></div>
+<map name="classgui_1_1_bouton_ac9a614caaf1bc56b431b15191cb47d4a_icgraph" id="classgui_1_1_bouton_ac9a614caaf1bc56b431b15191cb47d4a_icgraph">
+<area shape="rect" id="node2" href="classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="196,13,351,39"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="399,5,528,47"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a8d736a0c912d7bb23551ccc0aaa0e20d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -649,8 +718,11 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_bouton_acedddb0167843e9a2d039ad8113d9ae8_cgraph.png" border="0" usemap="#classgui_1_1_bouton_acedddb0167843e9a2d039ad8113d9ae8_cgraph" alt=""/></div>
 <map name="classgui_1_1_bouton_acedddb0167843e9a2d039ad8113d9ae8_cgraph" id="classgui_1_1_bouton_acedddb0167843e9a2d039ad8113d9ae8_cgraph">
-<area shape="rect" id="node2" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="208,29,351,56"/>
-<area shape="rect" id="node3" href="classgui_1_1_gadget.html#a393fef359f85de77d5067ebb39039201" title="Acceder à la boundingBox global. " alt="" coords="399,29,595,56"/>
+<area shape="rect" id="node2" href="classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="208,67,351,93"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e" title="Accesseur de la boundingBox en global. " alt="" coords="399,29,593,56"/>
+<area shape="rect" id="node5" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="425,104,567,131"/>
+<area shape="rect" id="node4" href="classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue (en remontant les ancetres). " alt="" coords="659,29,820,56"/>
+<area shape="rect" id="node6" href="classgui_1_1_gadget.html#a393fef359f85de77d5067ebb39039201" title="Acceder à la boundingBox global. " alt="" coords="641,104,837,131"/>
 </map>
 </div>
 </p>
@@ -725,6 +797,18 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="center"><img src="classgui_1_1_bouton_a17b4a2f5c37aa2de304411d3273b584e_cgraph.png" border="0" usemap="#classgui_1_1_bouton_a17b4a2f5c37aa2de304411d3273b584e_cgraph" alt=""/></div>
 <map name="classgui_1_1_bouton_a17b4a2f5c37aa2de304411d3273b584e_cgraph" id="classgui_1_1_bouton_a17b4a2f5c37aa2de304411d3273b584e_cgraph">
 <area shape="rect" id="node2" href="classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue (en remontant les ancetres). " alt="" coords="248,29,409,56"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_bouton_a17b4a2f5c37aa2de304411d3273b584e_icgraph.png" border="0" usemap="#classgui_1_1_bouton_a17b4a2f5c37aa2de304411d3273b584e_icgraph" alt=""/></div>
+<map name="classgui_1_1_bouton_a17b4a2f5c37aa2de304411d3273b584e_icgraph" id="classgui_1_1_bouton_a17b4a2f5c37aa2de304411d3273b584e_icgraph">
+<area shape="rect" id="node2" href="classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="248,13,391,39"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="439,13,593,39"/>
+<area shape="rect" id="node4" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="641,5,771,47"/>
 </map>
 </div>
 </p>
@@ -1434,14 +1518,17 @@ Voici le graphe d'appel pour cette fonction :</div>
 <map name="classgui_1_1_bouton_a86f25f637d31c49cbc128bbeb62b01ac_cgraph" id="classgui_1_1_bouton_a86f25f637d31c49cbc128bbeb62b01ac_cgraph">
 <area shape="rect" id="node2" href="classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714" title="gui::Bouton::gerer\l_declenchements" alt="" coords="197,99,323,141"/>
 <area shape="rect" id="node10" href="classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="183,195,337,221"/>
-<area shape="rect" id="node11" href="classgui_1_1_action.html#a7c0cd2dd198d840342cbd6b0ac193a02" title="La gestion des évènements utilisateurs. " alt="" coords="197,246,323,287"/>
+<area shape="rect" id="node14" href="classgui_1_1_action.html#a7c0cd2dd198d840342cbd6b0ac193a02" title="La gestion des évènements utilisateurs. " alt="" coords="197,246,323,287"/>
 <area shape="rect" id="node3" href="classgui_1_1_bouton.html#a516b56a17aecfebb808ab94bfab93325" title="La gestion du survol. " alt="" coords="392,5,576,32"/>
 <area shape="rect" id="node7" href="classgui_1_1_bouton.html#af78a304e8e9973e54d008f13e2b91168" title="La gestion du survol. " alt="" coords="393,56,575,83"/>
 <area shape="rect" id="node8" href="classgui_1_1_bouton.html#ad21bb5a674b5e5472535090adc3a4274" title="La gestion du survol. " alt="" coords="386,107,582,133"/>
 <area shape="rect" id="node9" href="classgui_1_1_bouton.html#a97acf4dc98b7a574a80c45539fafb47d" title="La gestion du survol. " alt="" coords="385,158,583,199"/>
-<area shape="rect" id="node4" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="637,131,779,157"/>
-<area shape="rect" id="node6" href="classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="631,56,785,83"/>
-<area shape="rect" id="node5" href="classgui_1_1_gadget.html#a393fef359f85de77d5067ebb39039201" title="Acceder à la boundingBox global. " alt="" coords="833,131,1029,157"/>
+<area shape="rect" id="node4" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="657,131,799,157"/>
+<area shape="rect" id="node6" href="classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="651,56,805,83"/>
+<area shape="rect" id="node5" href="classgui_1_1_gadget.html#a393fef359f85de77d5067ebb39039201" title="Acceder à la boundingBox global. " alt="" coords="873,131,1069,157"/>
+<area shape="rect" id="node11" href="classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="413,224,555,251"/>
+<area shape="rect" id="node12" href="classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e" title="Accesseur de la boundingBox en global. " alt="" coords="631,224,825,251"/>
+<area shape="rect" id="node13" href="classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue (en remontant les ancetres). " alt="" coords="891,224,1052,251"/>
 </map>
 </div>
 </p>

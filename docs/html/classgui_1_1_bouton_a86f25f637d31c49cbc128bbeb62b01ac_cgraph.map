@@ -1,12 +1,15 @@
 <map id="gui::Bouton::traiter_evenements" name="gui::Bouton::traiter_evenements">
 <area shape="rect" id="node2" href="$classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714" title="gui::Bouton::gerer\l_declenchements" alt="" coords="197,99,323,141"/>
 <area shape="rect" id="node10" href="$classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="183,195,337,221"/>
-<area shape="rect" id="node11" href="$classgui_1_1_action.html#a7c0cd2dd198d840342cbd6b0ac193a02" title="La gestion des évènements utilisateurs. " alt="" coords="197,246,323,287"/>
+<area shape="rect" id="node14" href="$classgui_1_1_action.html#a7c0cd2dd198d840342cbd6b0ac193a02" title="La gestion des évènements utilisateurs. " alt="" coords="197,246,323,287"/>
 <area shape="rect" id="node3" href="$classgui_1_1_bouton.html#a516b56a17aecfebb808ab94bfab93325" title="La gestion du survol. " alt="" coords="392,5,576,32"/>
 <area shape="rect" id="node7" href="$classgui_1_1_bouton.html#af78a304e8e9973e54d008f13e2b91168" title="La gestion du survol. " alt="" coords="393,56,575,83"/>
 <area shape="rect" id="node8" href="$classgui_1_1_bouton.html#ad21bb5a674b5e5472535090adc3a4274" title="La gestion du survol. " alt="" coords="386,107,582,133"/>
 <area shape="rect" id="node9" href="$classgui_1_1_bouton.html#a97acf4dc98b7a574a80c45539fafb47d" title="La gestion du survol. " alt="" coords="385,158,583,199"/>
-<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="637,131,779,157"/>
-<area shape="rect" id="node6" href="$classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="631,56,785,83"/>
-<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#a393fef359f85de77d5067ebb39039201" title="Acceder à la boundingBox global. " alt="" coords="833,131,1029,157"/>
+<area shape="rect" id="node4" href="$classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="657,131,799,157"/>
+<area shape="rect" id="node6" href="$classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="651,56,805,83"/>
+<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#a393fef359f85de77d5067ebb39039201" title="Acceder à la boundingBox global. " alt="" coords="873,131,1069,157"/>
+<area shape="rect" id="node11" href="$classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="413,224,555,251"/>
+<area shape="rect" id="node12" href="$classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e" title="Accesseur de la boundingBox en global. " alt="" coords="631,224,825,251"/>
+<area shape="rect" id="node13" href="$classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539" title="Acceder à la position absolue (en remontant les ancetres). " alt="" coords="891,224,1052,251"/>
 </map>

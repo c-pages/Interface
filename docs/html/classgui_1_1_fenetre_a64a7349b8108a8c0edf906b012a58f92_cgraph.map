@@ -1,0 +1,6 @@
+<map id="gui::Fenetre::Fenetre" name="gui::Fenetre::Fenetre">
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a37372701177040788a49d371417dcb9d" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="203,5,343,32"/>
+<area shape="rect" id="node5" href="$classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="196,56,351,83"/>
+<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#ad5955dbe8116150699472cb999e2b695" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="601,5,769,32"/>
+<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="399,31,553,57"/>
+</map>

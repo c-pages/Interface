@@ -198,7 +198,7 @@ private:
     // les gadgets de la fenêtre
     std::shared_ptr<Groupe>         m_grpContenu;           ///<  Groupe des éléments du contenu de la Fenetre. ne s'affiche pas directment, est dessiné dans m_spriteContenant
     std::shared_ptr<Image>          m_CadreContenu;         ///<  Groupe des éléments du contenu de la Fenetre.
-    std::shared_ptr<sf::Sprite>     m_spriteContenant;        ///<  Le sprite qui affiche le contenu de la fenetre.
+    std::shared_ptr<sf::Sprite>     m_spriteContenant;      ///<  Le sprite qui affiche le contenu de la fenetre.
     std::shared_ptr<Image>          m_fond;                 ///<  Le rectangle du fond.
 
 //    std::shared_ptr<BoutonSlide>    m_boutonSlide;

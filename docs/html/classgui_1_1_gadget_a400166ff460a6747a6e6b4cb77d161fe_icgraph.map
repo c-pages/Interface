@@ -1,6 +1,0 @@
-<map id="gui::Gadget::getPosAbs" name="gui::Gadget::getPosAbs">
-<area shape="rect" id="node2" href="$classgui_1_1_bouton.html#a610e908477ecc3eef1576380ef5eda53" title="Accesseur de la boundingBox en global. " alt="" coords="217,5,411,32"/>
-<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a41e839460298a6f94327dca022ad8fb8" title="Accesseur de la boundingBox en global. " alt="" coords="215,56,413,83"/>
-<area shape="rect" id="node5" href="$classgui_1_1_label.html#a3d1724b9ebd2f1ff450ccfe725c0ac04" title="Accesseur de la boundingBox en global. " alt="" coords="221,107,407,133"/>
-<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a4a9b783095e1ebf716f16042efa33da9" title="Acceder à la taille de la fenetre. " alt="" coords="461,56,604,83"/>
-</map>

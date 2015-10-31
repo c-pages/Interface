@@ -81,14 +81,14 @@ EcranDemo::initGUI  ( )
     //fenetreA = std::shared_ptr<gui::Fenetre> (  new gui::Fenetre ( &m_appli->getFenetre() , skinCourant ) );
     std::shared_ptr<gui::Contenant>  contenant ( new gui::Contenant ( &m_appli->getFenetre()  ));
     m_gui->ajouter          ( contenant );
-    contenant->setPosition    ( 120 , 120 );
-    contenant->setSize        ( { 250 , 250 } ) ; //m_appli->getFenetre().getSize().y }  ); // ( { 150 , m_appli->getFenetre().getSize().y}) ;
+    contenant->setPosition    ( 120 , 50 );
+    contenant->setSize        ( { 150 , 300 } ) ; //m_appli->getFenetre().getSize().y }  ); // ( { 150 , m_appli->getFenetre().getSize().y}) ;
 
 
     std::shared_ptr<gui::Label>  label2 ( new gui::Label ( "LABEL 1 LABEL 2 LABEL 3 LABEL 4 LABEL 5 LABEL 6 LABEL 7 LABEL 8 LABEL 9 LABEL 10 " ) );
     contenant->ajouter      ( label2 );
     label2->setTexteTaille   ( 10 );
-    label2->setPosition      ( 20 , 150 );
+    label2->setPosition      ( 20 , 450 );
 
 
     std::shared_ptr<gui::Label>  label3 ( new gui::Label ( "A" ) );
@@ -98,8 +98,8 @@ EcranDemo::initGUI  ( )
 
     std::shared_ptr<gui::Bouton>  bouton ( new gui::Bouton  (   ) );
     contenant->ajouter    ( bouton );
-    bouton->setPosition ( { 150 , 50 });
-    bouton->setSize ( { 350 , 350 });
+    bouton->setPosition ( { 0 , 0 });
+    bouton->setSize ( { 50 , 450 });
 /*
 
 */

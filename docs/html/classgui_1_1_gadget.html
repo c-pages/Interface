@@ -208,6 +208,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a093269333aa3725e27ca92a4a48e4dfb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a093269333aa3725e27ca92a4a48e4dfb">rotate</a> (float x)</td></tr>
 <tr class="memdesc:a093269333aa3725e27ca92a4a48e4dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">overload annulant la fonction rotate  <a href="#a093269333aa3725e27ca92a4a48e4dfb">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a093269333aa3725e27ca92a4a48e4dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca524b5beca6fd7eb6269e32e56285a3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3">contient</a> (float x, float y)</td></tr>
+<tr class="memdesc:aca524b5beca6fd7eb6269e32e56285a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvois si le point (x,y) est contenu dans le gadget.  <a href="#aca524b5beca6fd7eb6269e32e56285a3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aca524b5beca6fd7eb6269e32e56285a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a510ae68144997724188d2bb902c3103d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a510ae68144997724188d2bb902c3103d">traiter_evenements</a> (const sf::Event &amp;event)</td></tr>
 <tr class="memdesc:a510ae68144997724188d2bb902c3103d"><td class="mdescLeft">&#160;</td><td class="mdescRight">La gestion des évènements utilisateurs.  <a href="#a510ae68144997724188d2bb902c3103d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a510ae68144997724188d2bb902c3103d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,9 +236,6 @@ Fonctions membres publiques</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Fonctions membres protégées</h2></td></tr>
-<tr class="memitem:aca524b5beca6fd7eb6269e32e56285a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3">contient</a> (float x, float y)</td></tr>
-<tr class="memdesc:aca524b5beca6fd7eb6269e32e56285a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvois si le point (x,y) est contenu dans le gadget.  <a href="#aca524b5beca6fd7eb6269e32e56285a3">Plus de détails...</a><br /></td></tr>
-<tr class="separator:aca524b5beca6fd7eb6269e32e56285a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a72d0816ec1928958ff5dd3ccd983f5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a8a72d0816ec1928958ff5dd3ccd983f5">majGeom</a> ()</td></tr>
 <tr class="memdesc:a8a72d0816ec1928958ff5dd3ccd983f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualise le model du <a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a>.  <a href="#a8a72d0816ec1928958ff5dd3ccd983f5">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8a72d0816ec1928958ff5dd3ccd983f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -639,7 +639,7 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -653,6 +653,8 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>true si le point (x,y) est contenu par le gadget. </dd></dl>
+
+<p>Réimplémentée dans <a class="el" href="classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a">gui::Bouton</a>.</p>
 
 <p><div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
@@ -669,13 +671,14 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_gadget_aca524b5beca6fd7eb6269e32e56285a3_icgraph.png" border="0" usemap="#classgui_1_1_gadget_aca524b5beca6fd7eb6269e32e56285a3_icgraph" alt=""/></div>
 <map name="classgui_1_1_gadget_aca524b5beca6fd7eb6269e32e56285a3_icgraph" id="classgui_1_1_gadget_aca524b5beca6fd7eb6269e32e56285a3_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="441,8,596,34"/>
-<area shape="rect" id="node4" href="classgui_1_1_bouton.html#a516b56a17aecfebb808ab94bfab93325" title="La gestion du survol. " alt="" coords="203,37,387,64"/>
-<area shape="rect" id="node6" href="classgui_1_1_bouton.html#af78a304e8e9973e54d008f13e2b91168" title="La gestion du survol. " alt="" coords="203,88,386,114"/>
-<area shape="rect" id="node7" href="classgui_1_1_bouton.html#ad21bb5a674b5e5472535090adc3a4274" title="La gestion du survol. " alt="" coords="197,138,393,165"/>
-<area shape="rect" id="node8" href="classgui_1_1_bouton.html#a97acf4dc98b7a574a80c45539fafb47d" title="La gestion du survol. " alt="" coords="196,190,393,231"/>
-<area shape="rect" id="node3" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="644,40,773,82"/>
-<area shape="rect" id="node5" href="classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714" title="gui::Bouton::gerer\l_declenchements" alt="" coords="456,80,581,122"/>
+<area shape="rect" id="node2" href="classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="223,5,366,32"/>
+<area shape="rect" id="node5" href="classgui_1_1_bouton.html#a516b56a17aecfebb808ab94bfab93325" title="La gestion du survol. " alt="" coords="203,56,387,83"/>
+<area shape="rect" id="node7" href="classgui_1_1_bouton.html#af78a304e8e9973e54d008f13e2b91168" title="La gestion du survol. " alt="" coords="203,107,386,133"/>
+<area shape="rect" id="node8" href="classgui_1_1_bouton.html#ad21bb5a674b5e5472535090adc3a4274" title="La gestion du survol. " alt="" coords="197,157,393,184"/>
+<area shape="rect" id="node9" href="classgui_1_1_bouton.html#a97acf4dc98b7a574a80c45539fafb47d" title="La gestion du survol. " alt="" coords="196,209,393,250"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="441,27,596,53"/>
+<area shape="rect" id="node4" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="644,59,773,101"/>
+<area shape="rect" id="node6" href="classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714" title="gui::Bouton::gerer\l_declenchements" alt="" coords="456,99,581,141"/>
 </map>
 </div>
 </p>
@@ -752,14 +755,15 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_gadget_a393fef359f85de77d5067ebb39039201_icgraph.png" border="0" usemap="#classgui_1_1_gadget_a393fef359f85de77d5067ebb39039201_icgraph" alt=""/></div>
 <map name="classgui_1_1_gadget_a393fef359f85de77d5067ebb39039201_icgraph" id="classgui_1_1_gadget_a393fef359f85de77d5067ebb39039201_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="249,88,392,114"/>
-<area shape="rect" id="node3" href="classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="685,8,840,34"/>
-<area shape="rect" id="node5" href="classgui_1_1_bouton.html#a516b56a17aecfebb808ab94bfab93325" title="La gestion du survol. " alt="" coords="447,37,631,64"/>
-<area shape="rect" id="node7" href="classgui_1_1_bouton.html#af78a304e8e9973e54d008f13e2b91168" title="La gestion du survol. " alt="" coords="447,88,630,114"/>
-<area shape="rect" id="node8" href="classgui_1_1_bouton.html#ad21bb5a674b5e5472535090adc3a4274" title="La gestion du survol. " alt="" coords="441,138,637,165"/>
-<area shape="rect" id="node9" href="classgui_1_1_bouton.html#a97acf4dc98b7a574a80c45539fafb47d" title="La gestion du survol. " alt="" coords="440,190,637,231"/>
-<area shape="rect" id="node4" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="888,40,1017,82"/>
-<area shape="rect" id="node6" href="classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714" title="gui::Bouton::gerer\l_declenchements" alt="" coords="700,80,825,122"/>
+<area shape="rect" id="node2" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="249,107,392,133"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="467,5,610,32"/>
+<area shape="rect" id="node6" href="classgui_1_1_bouton.html#a516b56a17aecfebb808ab94bfab93325" title="La gestion du survol. " alt="" coords="447,56,631,83"/>
+<area shape="rect" id="node8" href="classgui_1_1_bouton.html#af78a304e8e9973e54d008f13e2b91168" title="La gestion du survol. " alt="" coords="447,107,630,133"/>
+<area shape="rect" id="node9" href="classgui_1_1_bouton.html#ad21bb5a674b5e5472535090adc3a4274" title="La gestion du survol. " alt="" coords="441,157,637,184"/>
+<area shape="rect" id="node10" href="classgui_1_1_bouton.html#a97acf4dc98b7a574a80c45539fafb47d" title="La gestion du survol. " alt="" coords="440,209,637,250"/>
+<area shape="rect" id="node4" href="classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="685,27,840,53"/>
+<area shape="rect" id="node5" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="888,59,1017,101"/>
+<area shape="rect" id="node7" href="classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714" title="gui::Bouton::gerer\l_declenchements" alt="" coords="700,99,825,141"/>
 </map>
 </div>
 </p>
@@ -843,13 +847,16 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_gadget_ae8b82417fb662b2e9dcb34ad4766a539_icgraph.png" border="0" usemap="#classgui_1_1_gadget_ae8b82417fb662b2e9dcb34ad4766a539_icgraph" alt=""/></div>
 <map name="classgui_1_1_gadget_ae8b82417fb662b2e9dcb34ad4766a539_icgraph" id="classgui_1_1_gadget_ae8b82417fb662b2e9dcb34ad4766a539_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e" title="Accesseur de la boundingBox en global. " alt="" coords="217,5,411,32"/>
-<area shape="rect" id="node3" href="classgui_1_1_bouton_slide.html#a2715c919006b143bad7b2bd54544d574" title="Acceder à la boundingBox global. " alt="" coords="224,57,404,98"/>
-<area shape="rect" id="node4" href="classgui_1_1_contenant.html#a6e3ab5e79636f350c1ab5d04efaae38e" title="Accesseur de la boundingBox globale. " alt="" coords="229,122,399,163"/>
-<area shape="rect" id="node5" href="classgui_1_1_fenetre.html#a41e839460298a6f94327dca022ad8fb8" title="Accesseur de la boundingBox en global. " alt="" coords="215,188,413,215"/>
-<area shape="rect" id="node7" href="classgui_1_1_groupe.html#a0864f0a85cefb3a2268bb69f7046f5b9" title="Accesseur de la boundingBox globale. " alt="" coords="216,239,412,265"/>
-<area shape="rect" id="node8" href="classgui_1_1_label.html#a5cdb2304ef0b04956246301dbde2695f" title="Accesseur de la boundingBox en global. " alt="" coords="221,289,407,316"/>
-<area shape="rect" id="node6" href="classgui_1_1_fenetre.html#a4a9b783095e1ebf716f16042efa33da9" title="Acceder à la taille de la fenetre. " alt="" coords="461,188,604,215"/>
+<area shape="rect" id="node2" href="classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e" title="Accesseur de la boundingBox en global. " alt="" coords="217,13,411,39"/>
+<area shape="rect" id="node6" href="classgui_1_1_bouton_slide.html#a2715c919006b143bad7b2bd54544d574" title="Acceder à la boundingBox global. " alt="" coords="224,64,404,105"/>
+<area shape="rect" id="node7" href="classgui_1_1_contenant.html#a6e3ab5e79636f350c1ab5d04efaae38e" title="Accesseur de la boundingBox globale. " alt="" coords="229,129,399,171"/>
+<area shape="rect" id="node8" href="classgui_1_1_fenetre.html#a41e839460298a6f94327dca022ad8fb8" title="Accesseur de la boundingBox en global. " alt="" coords="215,195,413,222"/>
+<area shape="rect" id="node10" href="classgui_1_1_groupe.html#a0864f0a85cefb3a2268bb69f7046f5b9" title="Accesseur de la boundingBox globale. " alt="" coords="216,246,412,273"/>
+<area shape="rect" id="node11" href="classgui_1_1_label.html#a5cdb2304ef0b04956246301dbde2695f" title="Accesseur de la boundingBox en global. " alt="" coords="221,297,407,323"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="461,13,604,39"/>
+<area shape="rect" id="node4" href="classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="652,13,807,39"/>
+<area shape="rect" id="node5" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="855,5,984,47"/>
+<area shape="rect" id="node9" href="classgui_1_1_fenetre.html#a4a9b783095e1ebf716f16042efa33da9" title="Acceder à la taille de la fenetre. " alt="" coords="461,195,604,222"/>
 </map>
 </div>
 </p>
@@ -1260,7 +1267,7 @@ Voici le graphe des appelants de cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">A faire:</a></b></dt><dd>corriger le code pour supuprimer ce friend </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">A faire:</a></b></dt><dd>corriger le code pour supuprimer ce friend (est là pour acceder aux enfants....) </dd></dl>
 
 </div>
 </div>
@@ -1281,7 +1288,7 @@ Voici le graphe des appelants de cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">A faire:</a></b></dt><dd>corriger le code pour supuprimer ce friend </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">A faire:</a></b></dt><dd>corriger le code pour supuprimer ce friend (est là pour acceder aux enfants....) </dd></dl>
 
 </div>
 </div>

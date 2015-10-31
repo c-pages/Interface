@@ -135,6 +135,7 @@ private:
     bool                            m_bSliderVerti;     ///< true si on a besoin d'un slider vertical
     bool                            m_bSliderHori;      ///< true si on a besoin d'un slider horizontal
     sf::Vector2f                    m_taille;           ///<  Le taille de la fenetre.
+    sf::FloatRect                   m_tailleContenu;    ///<  Le BB du contenu
     sf::Vector2f                    m_posContenu;       ///< la position du contenu ( quand on le slide )
 
     // Contenant

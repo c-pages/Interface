@@ -12,6 +12,5 @@ var searchData=
   ['_7efenetre_5fencastree',['~Fenetre_encastree',['../classgui_1_1_fenetre__encastree.html#aeac5a8a4bfb63a41d3c6965ef3f71ab0',1,'gui::Fenetre_encastree']]],
   ['_7egadget',['~Gadget',['../classgui_1_1_gadget.html#ae21de661895bacace5aa0b96cb6b21df',1,'gui::Gadget']]],
   ['_7eimage',['~Image',['../classgui_1_1_image.html#adfd1dce1008fa4843508bb0dec114c81',1,'gui::Image']]],
-  ['_7elabel',['~Label',['../classgui_1_1_label.html#a35fe2fbca1f6c34beb66bfd9b3b9b609',1,'gui::Label']]],
-  ['_7etest',['~test',['../classtest.html#ad117cf4e90c87c17bb9b030d23810ec8',1,'test']]]
+  ['_7elabel',['~Label',['../classgui_1_1_label.html#a35fe2fbca1f6c34beb66bfd9b3b9b609',1,'gui::Label']]]
 ];

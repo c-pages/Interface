@@ -46,8 +46,6 @@ public:
     void
     setSize ( sf::Vector2f taille );
 
-
-
     /////////////////////////////////////////////////
     /// \brief Rendre les éléments.
     ///
@@ -59,7 +57,16 @@ public:
     draw( sf::RenderTarget& target, sf::RenderStates states ) const;
 
 
+
+
+    /////////////////////////////////////////////////
+    // Les membres
+    /////////////////////////////////////////////////
     sf::Vector2f            m_taille;
+
+
+
+
 };
 };
 #endif // GROUPE_H

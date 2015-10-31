@@ -17,10 +17,15 @@ Gadget::Gadget  ()
 , m_enable      ( true )
 , m_aSupprimer  ( false )
 , m_besoinActua ( true )
+//, m_DEBUG_SHAPE ( sf::RectangleShape () )
 //, m_texte   ( new sf::Text () )
 {
 
-
+//    ////////////DEBUG/////////////
+//    m_DEBUG_SHAPE.setFillColor (sf::Color (255,225,225,0));
+//    m_DEBUG_SHAPE.setOutlineColor (sf::Color (255,225,225,255));
+//    m_DEBUG_SHAPE.setOutlineThickness ( 2 );
+//    ////////////DEBUG/////////////
 }
 
 
@@ -198,12 +203,18 @@ Gadget::contient ( float x, float y )
 {
     sf::FloatRect rect  = getGlobalBounds();
 
+//    ////////////DEBUG/////////////
+//   // m_DEBUG_SHAPE.setPosition   ( rect.left  , rect.top      );
+//    m_DEBUG_SHAPE.setSize       ( {rect.width , rect.height}   );
+//    ////////////DEBUG/////////////
+
+
+
     // S'il est contenu alors on verif le parent pour savoir par exemple si
     // le gadget est visible dans la fenetre parent.
     if ( rect.contains( sf::Vector2f ( x , y ) ) ){
-        if ( m_parent != 0 )
-            return   m_parent->contient ( x, y );
-        else return true;
+        if ( m_parent != 0 )    return  m_parent->contient ( x, y );
+        else                    return  true;
     } else return false;
 
 };
@@ -239,6 +250,13 @@ Gadget::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const
 {
     // le transform du gadget combiné au transform parents (states).
     states.transform *= getTransform();
+
+
+//    ////////////DEBUG/////////////
+//    target.draw      ( m_DEBUG_SHAPE  );
+//    ////////////DEBUG/////////////
+
+
 
     // dessiner les gadgets enfants
     for ( const ptr& enfant : m_enfants )

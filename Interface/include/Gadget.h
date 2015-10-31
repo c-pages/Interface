@@ -229,7 +229,6 @@ public:
     virtual void
     rotate(float x )  { std::cout <<"ATTENTION: rotate() n'est pas pris en compte pour tout les gui::gadgets!\n"; } ;
 
-protected:
 
     /////////////////////////////////////////////////
     /// \brief Renvois si le point (x,y) est contenu dans le gadget
@@ -239,9 +238,10 @@ protected:
     /// \return true si le point (x,y) est contenu par le gadget.
     ///
     /////////////////////////////////////////////////
-    bool
+    virtual  bool
     contient ( float x, float y );
 
+protected:
     /////////////////////////////////////////////////
     /// \brief Actualise le model du Gadget
     ///
@@ -292,8 +292,8 @@ public:
     /////////////////////////////////////////////////
 
 protected:
-    friend class Fenetre; ///< \todo corriger le code pour supuprimer ce friend
-    friend class Contenant; ///< \todo corriger le code pour supuprimer ce friend
+    friend class Fenetre;       ///< \todo corriger le code pour supuprimer ce friend (est là pour acceder aux enfants....)
+    friend class Contenant;     ///< \todo corriger le code pour supuprimer ce friend (est là pour acceder aux enfants....)
 
     std::string             m_nom;          ///< le nom du gadget, (pour l'instant on s'en sert pas mais peut etre un jour...).
     Gadget*                 m_parent;       ///< le gadget m_parent.
@@ -303,6 +303,14 @@ protected:
     bool                    m_enable;       ///< si le gadget est actif ou pas.
     bool                    m_aSupprimer;   ///< On le passe à true quand on veut supprimer ce gadget (il sera supprimé par son parent au debut de l'actualisation).
     bool                    m_besoinActua;  ///< Si on a changer un truc qui necessite d'actualiser la geometrie, couleur... du gadget (comme un resize ou pendant le survol d'un bouton par exemple).
+
+
+//    ////////////DEBUG/////////////
+//    sf::RectangleShape      m_DEBUG_SHAPE;
+//    ////////////DEBUG/////////////
+
+
+
 
 };// fin de class Gadget
 };// fin du namespace gui

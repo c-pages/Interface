@@ -14,45 +14,39 @@ Groupe::Groupe ( )
     std::cout << " CREER GROUPE\n";
 }
 
-///////////////////////////////////////////////////
-//sf::FloatRect
-//Groupe::getLocalBounds ( ) const {
-//
-//    sf::FloatRect result;
-//
-//    for ( ptr enfant : m_enfants ) {
-//
-//        sf::FloatRect rect  ( enfant->getLocalBounds() ) ;
-//
-//        if ( result.left > rect.left )   result.left = rect.left  ;
-//        if ( result.top  > rect.top  )   result.top = rect.top   ;
-//        if ( result.width  < rect.left + rect.width )   result.width = rect.left + rect.width  ;
-//        if ( result.height < rect.top + rect.height  )   result.height = rect.top + rect.height ;
-//    }
-//    return { result };
-//}
 
 
 /////////////////////////////////////////////////
 sf::FloatRect
 Groupe::getGlobalBounds ( )  const{
+    sf::FloatRect result ( 0,0,0,0 );
 
-    sf::FloatRect result;
-
+    // si on a pas définie une taille pour ce groupe alors son global BB c'est celui des enfants
     if ( m_taille == sf::Vector2f (0,0) ){
+
+        // et on cherche les minimums et maximums parmis les enfants
+        float minX = 5000;
+        float maxX = -5000;
+        float minY = 5000;
+        float maxY = -5000;
+
         for ( ptr enfant : m_enfants ) {
-            sf::FloatRect rect  ( enfant->getGlobalBounds() ) ;
-            if ( result.left > rect.left )                  result.left     = rect.left ;
-            if ( result.top  > rect.top  )                  result.top      = rect.top   ;
-            if ( result.width  < rect.left + rect.width )   result.width    = rect.left + rect.width ;
-            if ( result.height < rect.top + rect.height )   result.height   = rect.top + rect.height ;
+            sf::FloatRect rect  ( enfant->getLocalBounds() ) ;
+            if (rect.left< minX) minX = rect.left;
+            if (rect.left + rect.width > maxX ) maxX = rect.left + rect.width ;
+            if (rect.top < minY) minY = rect.top;
+            if (rect.top + rect.height > maxY ) maxY = rect.top + rect.height ;
         }
+        result = { minX, minY, maxX-minX , maxY-minY  };
+
+    // sinon on revois la taille déinife m_taille
     } else {
         result = sf::FloatRect  ( getPosAbs().x, getPosAbs().y, m_taille.x , m_taille.y );
     }
-    return { result };
-}
 
+    return { result };
+
+}
 
 
 
@@ -60,33 +54,20 @@ Groupe::getGlobalBounds ( )  const{
 sf::FloatRect
 Groupe::getLocalBounds ( )const {
 
-    sf::FloatRect result(0,0,0,0 );
+ sf::FloatRect result ( 0,0,0,0 );
 
-    result.left     =  getPosition().x;
-    result.top      =  getPosition().y;
-    result.width    =  m_taille.x;
-    result.height   =  m_taille.y;
+    for ( ptr enfant : m_enfants ) {
+        sf::FloatRect rect  ( enfant->getLocalBounds() ) ;
+        if ( result.width < rect.left + rect.width )  result.width  = rect.left + rect.width;
+        if ( result.height < rect.top + rect.height ) result.height = rect.top + rect.height;
+    }
+
+    result.width += 10; // pour laisser un espace
+    result.height += 10; // pour laisser un espace
 
     return { result };
-}
 
-//
-///////////////////////////////////////////////////
-//sf::FloatRect
-//Groupe::getGlobalBounds ( )const {
-//    sf::FloatRect result( 0,0,0,0 );
-//
-//    if ( m_taille ==  sf::Vector2f (0,0) ){
-//
-//        result.left     +=  getPosAbs().x;// + m_posContenu.x;
-//        result.top      +=  getPosAbs().y;// + m_posContenu.y;
-//
-//        result.width    =  m_taille.x;
-//        result.height   =  m_taille.y;
-//
-//    } else result = sf::FloatRect  ( 0 , 0 , m_taille.x , m_taille.y );
-//    return { result };
-//}
+}
 
 
 
@@ -94,18 +75,13 @@ Groupe::getLocalBounds ( )const {
 sf::Vector2f
 Groupe::getSize ( )const{
     return { getLocalBounds ( ).width , getLocalBounds ( ).height};
-    /*
-    return   {   getLocalBounds().width
-             ,   getLocalBounds().height };*/
 };
 
 /////////////////////////////////////////////////
 void
 Groupe::setSize ( sf::Vector2f taille ) {
 
-   // std::cout << "--> Groupe::setSize  ( ) : "<< this << "  " <<taille.x << "   " << taille.y<<" \n";
     this->m_taille = taille;
-  // std::cout << "--> getSize -> " << this << "  >--  : " <<m_taille.x << "   " << m_taille.y<<" \n";
 };
 
 
@@ -113,7 +89,6 @@ Groupe::setSize ( sf::Vector2f taille ) {
 void
 Groupe::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const
 {
-//    std::cout << "-->-->-- Groupe::draw  ( )  \n";
     // le transform du gadget combiné au transform parents (states).
     states.transform *= getTransform();
 
