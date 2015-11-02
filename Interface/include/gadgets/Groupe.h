@@ -57,6 +57,32 @@ public:
     draw( sf::RenderTarget& target, sf::RenderStates states ) const;
 
 
+////////////// DEBUG /////////////////////////////////////
+//bool
+//contient ( float x, float y )
+//{
+//    sf::FloatRect rect  = getGlobalBounds();
+//
+////    ////////////DEBUG/////////////
+////   // m_DEBUG_SHAPE.setPosition   ( rect.left  , rect.top      );
+////    m_DEBUG_SHAPE.setSize       ( {rect.width , rect.height}   );
+////    ////////////DEBUG/////////////
+//
+//std::cout << "Groupe -> " << rect.left << " " << rect.top << " " << rect.width << " "<< rect.height << " ------> ";
+//
+//    // S'il est contenu alors on verif le parent pour savoir par exemple si
+//    // le gadget est visible dans la fenetre parent.
+//    if ( rect.contains( sf::Vector2f ( x , y ) ) ){
+//            std::cout << "TRUE\n";
+//        if ( m_parent != 0 )    return  m_parent->contient ( x, y );
+//        else                    return  true;
+//    } else {
+//            std::cout << "FALSE\n";
+//        return false;
+//    }
+//
+//};
+////////////// DEBUG /////////////////////////////////////
 
 
     /////////////////////////////////////////////////

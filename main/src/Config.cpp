@@ -85,9 +85,9 @@ void Config::initSkins()
     police = m_polices.get( Polices::police_2 );
 
     sf::Color couleurLignesExt      = sf::Color ( 75,75,95 , 255);
-    sf::Color couleurLignesCadre    = sf::Color ( 60,60,70 , 255);
+//    sf::Color couleurLignesCadre    = sf::Color ( 60,60,70 , 255);
     sf::Color couleurFond           = sf::Color ( 45,45,65 , 255 );
-    sf::Color couleurTexte          = sf::Color ( 175,175,190);
+    sf::Color couleurTexte          = sf::Color ( 175,175,190 );
 
     float taille_Btn_Text  = 12;
     float epaisseurLignes  = 1;
@@ -120,10 +120,10 @@ void Config::initSkins()
     skin1->btnRepos->txt_police        = police;
     skin1->btnRepos->txt_style         = sf::Text::Style::Regular ;
     skin1->btnRepos->txt_taille        = taille_Btn_Text;
-    skin1->btnRepos->txt_couleur       =             couleurTexte;
+    skin1->btnRepos->txt_couleur       = couleurTexte;
     skin1->btnRepos->lgn_epaisseur     = 0;
     skin1->btnRepos->lgn_couleur       = sf::Color ( 255,255,255 , 50 );
-    skin1->btnRepos->fnd_couleur       = sf::Color ( 80,80,100 , 255 );
+    skin1->btnRepos->fnd_couleur       = sf::Color ( 80,80,80 , 255 );
     skin1->btnRepos->fnd_texture       = sf::Texture ();
     skin1->btnRepos->align             = gui::Alignements::Libre;
     skin1->btnRepos->ajust             = gui::Ajustements::Sans;
@@ -135,7 +135,7 @@ void Config::initSkins()
     skin1->btnSurvol->txt_couleur      =             couleurTexte;
     skin1->btnSurvol->lgn_epaisseur    = 0;
     skin1->btnSurvol->lgn_couleur      = sf::Color ( 255,255,255 , 150 );
-    skin1->btnSurvol->fnd_couleur      = sf::Color ( 100,100,120 , 255 );
+    skin1->btnSurvol->fnd_couleur      = sf::Color ( 100,100,100 , 255 );
     skin1->btnSurvol->fnd_texture      = sf::Texture ();
     skin1->btnSurvol->align            = gui::Alignements::Libre;
     skin1->btnSurvol->ajust            = gui::Ajustements::Sans;
@@ -147,7 +147,7 @@ void Config::initSkins()
     skin1->btnPress->txt_couleur       =             couleurTexte;
     skin1->btnPress->lgn_epaisseur     = 0;
     skin1->btnPress->lgn_couleur       = sf::Color ( 255,255,255 , 200 );
-    skin1->btnPress->fnd_couleur       = sf::Color ( 150,150,180 , 255 );
+    skin1->btnPress->fnd_couleur       = sf::Color ( 180,180,180 , 255 );
     skin1->btnPress->fnd_texture       = sf::Texture ();
     skin1->btnPress->align             = gui::Alignements::Libre;
     skin1->btnPress->ajust             = gui::Ajustements::Sans;
@@ -191,8 +191,8 @@ void Config::initSkins()
     //// invisible ///////////////////////////////////
     skin1->invisible->txt_police      = police;
     skin1->invisible->txt_style       = sf::Text::Style::Regular;
-    skin1->invisible->txt_taille      = 2;
-    skin1->invisible->txt_couleur     = sf::Color ( 255,255,255 , 00);
+    skin1->invisible->txt_taille      = 12;
+    skin1->invisible->txt_couleur     = sf::Color ( 255,255,255 , 200);
     skin1->invisible->lgn_epaisseur   = 1;
     skin1->invisible->lgn_couleur     = sf::Color ( 255,255,255 , 00 );
     skin1->invisible->fnd_couleur     = sf::Color ( 255,255,255 , 0 );

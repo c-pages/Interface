@@ -278,44 +278,36 @@ protected:
     static  Gadget*     ms_btnPress;     ///< le bouton qu'on est en train de presser, pour quand le relache on sache sur lequel on était...
 
 
-
-
-
-
-
-
-
-
-//////////////// DEBUG ////////////////////////////////////////
-    bool
-    contient ( float x, float y )
-    {
-        sf::FloatRect rect  = getGlobalBounds();
-    //    ////////////DEBUG/////////////
-    //   // m_DEBUG_SHAPE.setPosition   ( rect.left  , rect.top      );
-    //    m_DEBUG_SHAPE.setSize       ( {rect.width , rect.height}   );
-    //    ////////////DEBUG/////////////
-
-std::cout <<"Bouton-------------\n";
-
-    // S'il est contenu alors on verif le parent pour savoir par exemple si
-    // le gadget est visible dans la fenetre parent.
- //   std::cout <<"Groupe contient : ";
-    if ( rect.contains( sf::Vector2f ( x , y ) ) ){
- //       std::cout <<" TRUE\n";
-        if ( m_parent != 0 )    return  m_parent->contient ( x, y );
-        else                    return  true;
-    } else{
- //       std::cout <<" FALSE\n";
-        return false;
-    }
-    };
-//////////////// DEBUG ////////////////////////////////////////
-
-
-
-
-
+//
+//
+////////////// DEBUG /////////////////////////////////////
+//bool
+//contient ( float x, float y )
+//{
+//    sf::FloatRect rect  = getGlobalBounds();
+//
+////    ////////////DEBUG/////////////
+////   // m_DEBUG_SHAPE.setPosition   ( rect.left  , rect.top      );
+////    m_DEBUG_SHAPE.setSize       ( {rect.width , rect.height}   );
+////    ////////////DEBUG/////////////
+//
+//std::cout << "--- bouton -----------------------------------\n";
+//
+//    // S'il est contenu alors on verif le parent pour savoir par exemple si
+//    // le gadget est visible dans la fenetre parent.
+//    if ( rect.contains( sf::Vector2f ( x , y ) ) ){
+//         //   std::cout << "TRUE\n";
+//        if ( m_parent != 0 )    return  m_parent->contient ( x, y );
+//        else                    return  true;
+//    } else {
+//         //   std::cout << "FALSE\n";
+//        return false;
+//    }
+//
+//};
+////////////// DEBUG /////////////////////////////////////
+//
+//
 
 
 

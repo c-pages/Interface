@@ -16,11 +16,13 @@ Contenant::Contenant( sf::RenderWindow  *     fenetre )
 , m_bSliderVerti    ( false )
 , m_bSliderHori     ( false )
 , m_grpContenu      (  )
-, m_UI              (  )
+, m_grpUI              (  )
 , m_spriteContenant ( new sf::Sprite ())
 , m_posContenu      ( 0 , 0 )
 , m_slideVerti      ( std::make_shared<BoutonSlide> ( fenetre, Orientation::Verticale , m_skin) )
 , m_slideHori       ( std::make_shared<BoutonSlide> ( fenetre, Orientation::Horizontale, m_skin ) )
+, m_tailleTexture   ({ 1 , 1})
+, m_tailleAffiche   ({ 1 , 1})
 {
     // contenant et contenu
     m_grpContenu    = std::shared_ptr<Groupe>       ( new Groupe   ( ) );
@@ -28,12 +30,13 @@ Contenant::Contenant( sf::RenderWindow  *     fenetre )
     m_grpContenant->ajouter (m_grpContenu);
     m_grpContenant->setParent( this );
 
-
     // UI
-    m_UI            = std::shared_ptr<Groupe>       ( new Groupe   ( ) );
-    m_UI->ajouter   ( m_slideVerti );
-    m_UI->ajouter   ( m_slideHori );
-    m_UI->setParent ( this );
+    m_grpUI            = std::shared_ptr<Groupe>       ( new Groupe   ( ) );
+    m_grpUI->ajouter   ( m_slideVerti );
+    m_grpUI->ajouter   ( m_slideHori );
+    m_grpUI->setParent ( this );
+
+  //  actualiser ( 1 );
 
 }
 
@@ -73,25 +76,24 @@ Contenant::getContenuBounds ( ) const {
     sf::FloatRect result ( 0,0,0,0 );
 //sult.height += 10; // pour laisser un espace
 
-    float minX = 5000;
+    //float minX = 5000;
     float maxX = -5000;
-    float minY = 5000;
+   // float minY = 5000;
     float maxY = -5000;
 
     for ( ptr enfant : m_grpContenu->m_enfants ) {
         sf::FloatRect rect  ( enfant->getLocalBounds() ) ;
-        if (rect.left< minX) minX = rect.left;
+        //if (rect.left< minX) minX = rect.left;
         if (rect.left + rect.width > maxX ) maxX = rect.left + rect.width ;
-        if (rect.top < minY) minY = rect.top;
+        //if (rect.top < minY) minY = rect.top;
         if (rect.top + rect.height > maxY ) maxY = rect.top + rect.height ;
 
     }
-    result = { minX, minY, maxX-minX , maxY-minY  };
+    result = { 0, 0, maxX , maxY  };
 
     // pour laisser un espace sur les cotés
     result.width    += 10;
-    result.height   += 10;
-
+    result.height   += 20;
     return { result };
 }
 
@@ -100,7 +102,7 @@ Contenant::getContenuBounds ( ) const {
 void
 Contenant::traiter_evenements ( const sf::Event& event ) {
 
-    m_UI->traiter_evenements( event );
+    m_grpUI->traiter_evenements( event );
     m_grpContenu->traiter_evenements( event );
 
     Action::traiter_evenements( event );
@@ -113,19 +115,38 @@ Contenant::traiter_evenements ( const sf::Event& event ) {
 void
 Contenant::actualiser ( float deltaT )    {
 
-    // Actualiser UI et contenu
-    m_UI->actualiser        ( deltaT );
-    m_grpContenu->actualiser( deltaT );
 
-    // Si on drag pas on a pas besoin d'actualiser , on return
+    // Actualiser UI et contenu
+    m_grpUI->actualiser      ( deltaT );
+    m_grpContenu->actualiser ( deltaT );
+
+    // Si on drag, on a besoin d'actualiser
     if ( m_slideHori->isDragging() or m_slideVerti->isDragging() )
         m_besoinActua = true;
+
+    // si pas besoin d'acttua on retourne
     if ( not m_besoinActua ) return;
 
+
+
+
+
+    // les tailles des textures et du sprite pour rendu
+    m_tailleTexture.x = getContenuBounds().left   + getContenuBounds().width  + 2;
+    m_tailleTexture.y = getContenuBounds().top    + getContenuBounds().height + 2;
+    m_tailleAffiche.x = m_taille.x;
+    m_tailleAffiche.y = m_taille.y;
+
+    if ( m_bSliderHori )    m_tailleAffiche.y -= m_slideHori->getSize().y;
+    if ( m_bSliderVerti )   m_tailleAffiche.x -= m_slideVerti->getSize().x;
 
     // on verifie si on a besoin des sliders
     m_bSliderHori   = ( getContenuBounds().width    >   m_taille.x );
     m_bSliderVerti  = ( getContenuBounds().height   >   m_taille.y );
+
+
+
+
 
 
 
@@ -164,7 +185,7 @@ Contenant::actualiser ( float deltaT )    {
     m_grpContenu->setPosition ( -m_posContenu.x , -m_posContenu.y );
 
     // on dimenssione l'UI
-    m_UI->setSize           ( m_taille );
+    m_grpUI->setSize           ( m_taille );
 
     // reinitialisation  du besoin d'actualiser
     m_besoinActua = false;
@@ -175,7 +196,6 @@ Contenant::actualiser ( float deltaT )    {
 void
 Contenant::ajouter( ptr enfant )   {
     m_grpContenu->ajouter ( enfant );
-    m_tailleContenu = getContenuBounds();
 }
 
 
@@ -190,19 +210,13 @@ Contenant::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    
 
 
    // les dimemsions pour l'affichage du contenu
-    sf::Vector2i    tailleTexture, tailleAffiche;
-    tailleTexture.x = getContenuBounds().left   + getContenuBounds().width + 1;
-    tailleTexture.y = getContenuBounds().top    + getContenuBounds().height + 1;
-    tailleAffiche.x = m_taille.x;
-    tailleAffiche.y = m_taille.y;
+//    sf::Vector2i   /* m_tailleTexture,*/ m_tailleAffiche;
 
-    if ( m_bSliderHori )    tailleAffiche.y -= m_slideHori->getSize().y;
-    if ( m_bSliderVerti )   tailleAffiche.x -= m_slideVerti->getSize().x;
 
 
     // la texture dans laquelle on va dessiner les éléments contenus
     sf::RenderTexture       texture;
-    if ( texture.create   ( tailleTexture.x  , tailleTexture.y   ) ) {
+    if ( texture.create   ( m_tailleTexture.x  , m_tailleTexture.y   ) ) {
 
         // dessiner le contenu dans la texture
         texture.clear     ( m_skin->invisible->fnd_couleur );
@@ -211,7 +225,7 @@ Contenant::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    
 
         // Appliquer la texture au sprite qui va l'afficher.
         m_spriteContenant->setTexture    ( texture.getTexture() );
-        m_spriteContenant->setTextureRect( sf::IntRect( 0 , 0 , tailleAffiche.x , tailleAffiche.y ) );
+        m_spriteContenant->setTextureRect( sf::IntRect( 0 , 0 , m_tailleAffiche.x , m_tailleAffiche.y ) );
     }
 
     //dessiner le sprite du contenu.
@@ -224,6 +238,7 @@ Contenant::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    
         target.draw      ( *m_slideVerti , states );
 
 
+   // target.draw      ( *m_debug , states );
 }
 
 

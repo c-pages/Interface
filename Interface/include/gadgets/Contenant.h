@@ -81,7 +81,7 @@ public:
     ///
     /////////////////////////////////////////////////
     void
-    setSize ( sf::Vector2f taille ) { m_taille = taille ; };
+    setSize ( sf::Vector2f taille ) { m_taille = taille ;};
 
 
     /////////////////////////////////////////////////
@@ -126,30 +126,63 @@ public:
     virtual void
     draw( sf::RenderTarget& target, sf::RenderStates states ) const;
 
+
+////////////// DEBUG /////////////////////////////////////
+//bool
+//contient ( float x, float y )
+//{
+//    sf::FloatRect rect  = getGlobalBounds();
+//
+////    ////////////DEBUG/////////////
+////   // m_DEBUG_SHAPE.setPosition   ( rect.left  , rect.top      );
+////    m_DEBUG_SHAPE.setSize       ( {rect.width , rect.height}   );
+////    ////////////DEBUG/////////////
+//
+//std::cout << "Contenant -> " << rect.left << " " << rect.top << " " << rect.width << " "<< rect.height << " ------> ";
+//
+//    // S'il est contenu alors on verif le parent pour savoir par exemple si
+//    // le gadget est visible dans la fenetre parent.
+//    if ( rect.contains( sf::Vector2f ( x , y ) ) ){
+//            std::cout << "TRUE\n";
+//        if ( m_parent != 0 )    return  m_parent->contient ( x, y );
+//        else                    return  true;
+//    } else {
+//            std::cout << "FALSE\n";
+//        return false;
+//    }
+//
+//};
+//
+//
+//////////// DEBUG /////////////////////////////////////
+
 private:
 
     /////////////////////////////////////////////////
     // Les membres
     /////////////////////////////////////////////////
-    sf::RenderWindow    *           m_fenetreSFML;
+    sf::RenderWindow    *           m_fenetreSFML;      ///< la fenetre SFML.
     bool                            m_bSliderVerti;     ///< true si on a besoin d'un slider vertical
     bool                            m_bSliderHori;      ///< true si on a besoin d'un slider horizontal
-    sf::Vector2f                    m_taille;           ///<  Le taille de la fenetre.
-    sf::FloatRect                   m_tailleContenu;    ///<  Le BB du contenu
+    sf::Vector2f                    m_taille;           ///< Le taille de la fenetre.
     sf::Vector2f                    m_posContenu;       ///< la position du contenu ( quand on le slide )
 
     // Contenant
-    std::shared_ptr<Groupe>         m_grpContenant;     ///<
+    std::shared_ptr<Groupe>         m_grpContenant;     ///< groupe dans lequel se trouve le grp contenu, il sert principalement à limiter la zone de clique
     std::shared_ptr<Groupe>         m_grpContenu;       ///<  Groupe des éléments du contenu de la Fenetre. ne s'affiche pas directment, est dessiné dans m_spriteContenant
     std::shared_ptr<sf::Sprite>     m_spriteContenant;  ///<  Le sprite qui affiche le contenu de la fenetre.
+    sf::Vector2i                    m_tailleTexture;
+    sf::Vector2i                    m_tailleAffiche;
 
     // UI
-    std::shared_ptr<Groupe>         m_UI;               ///<  les éléments d'interface du gadget
-    std::shared_ptr<BoutonSlide>    m_slideVerti;       ///< le bouton du slide vertical
-    std::shared_ptr<BoutonSlide>    m_slideHori;        ///< le bouton du slide horizontal
+    std::shared_ptr<Groupe>         m_grpUI;            ///<  les éléments d'interface du gadget
+    std::shared_ptr<BoutonSlide>    m_slideVerti;       ///<  le bouton du slide vertical
+    std::shared_ptr<BoutonSlide>    m_slideHori;        ///<  le bouton du slide horizontal
 
 
-
+    ///////////////////////////DEBUG///////////////////////////////
+    //std::shared_ptr<sf::RectangleShape>              m_debug;
+    ///////////////////////////DEBUG///////////////////////////////
 };
 };
 

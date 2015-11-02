@@ -21,9 +21,10 @@ sf::FloatRect
 Groupe::getGlobalBounds ( )  const{
     sf::FloatRect result ( 0,0,0,0 );
 
+ //   std::cout << "      getPosAbs : " << getPosAbs().x << "  " << getPosAbs().y << "    |  parent : " << m_parent << " \n";
+
     // si on a pas définie une taille pour ce groupe alors son global BB c'est celui des enfants
     if ( m_taille == sf::Vector2f (0,0) ){
-
         // et on cherche les minimums et maximums parmis les enfants
         float minX = 5000;
         float maxX = -5000;
@@ -37,10 +38,12 @@ Groupe::getGlobalBounds ( )  const{
             if (rect.top < minY) minY = rect.top;
             if (rect.top + rect.height > maxY ) maxY = rect.top + rect.height ;
         }
-        result = { minX, minY, maxX-minX , maxY-minY  };
+        result = { minX + getPosAbs().x , minY + getPosAbs().x , maxX-minX , maxY-minY  };
+//        std::cout << ">>> A\n";
 
     // sinon on revois la taille déinife m_taille
     } else {
+ //       std::cout << ">>> B\n";
         result = sf::FloatRect  ( getPosAbs().x, getPosAbs().y, m_taille.x , m_taille.y );
     }
 

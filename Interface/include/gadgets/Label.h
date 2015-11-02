@@ -57,6 +57,7 @@ public:
     sf::Vector2f
     getSize ( ) const;
 
+
     /////////////////////////////////////////////////
     /// \brief Accesseur de la boundingBox en local
     ///
@@ -102,7 +103,7 @@ public:
     ///
     /////////////////////////////////////////////////
     void
-    setTexteTaille ( float taille ) {  m_texte->setCharacterSize(taille);  };
+    setTexteTaille ( float taille ) {  m_style->txt_taille = taille; majGeom();  };
 
     /////////////////////////////////////////////////
     /// \brief Definir la couleur du texte du Label.
@@ -161,6 +162,12 @@ public:
 protected:
     //sf::Text
     sf::Text *              m_texte;        ///< Le text SFML.
+
+
+
+    ////////////////// DEBUG //////////////////
+    //sf::RectangleShape *              m_fond;        ///< Le text SFML.
+    ////////////////// DEBUG //////////////////
 
 };
 }; // fin gui

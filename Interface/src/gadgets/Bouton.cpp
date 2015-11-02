@@ -94,13 +94,19 @@ Bouton::setOutlineThickness  ( float epaisseur )   {
 /////////////////////////////////////////////////
 sf::FloatRect
 Bouton::getLocalBounds ( ) const{
-    sf::FloatRect result( m_fond->getLocalBounds() );
+    sf::FloatRect result ( getPosition().x
+                         , getPosition().y
+                         , getSize().x
+                         , getSize().y      );
 
+//   std::cout << "\nresult.left : " ;
+//   std::cout << "\n";
+/*
     result.left     =  getPosition().x;
     result.top      =  getPosition().y;
     result.width    =  getSize().x;
-    result.height   =  getSize().y;
-
+    result.height   =  getSize().y;*/
+/*
     for ( ptr enfant : m_enfants ) {
 
         sf::FloatRect rect  ( enfant->getLocalBounds() ) ;
@@ -109,7 +115,7 @@ Bouton::getLocalBounds ( ) const{
         if ( result.top > rect.top  )   result.top = rect.top   ;
         if ( result.width < rect.left + rect.width - result.left )   result.width = rect.left + rect.width - result.left ;
         if ( result.height < rect.top + rect.height - result.top )   result.height = rect.top + rect.height - result.top ;
-    }
+    }*/
     return { result };
 }
 

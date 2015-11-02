@@ -28,7 +28,7 @@
 #include <gadgets/Contenant.h>          // --->    groupe de gadgets   grp
 #include <gadgets/Groupe.h>             // --->    groupe de gadgets   grp
 #include <gadgets/Fenetre.h>            // --->    fenetre               grp  + btn:(drag, redim, fermer)
-#include <gadgets/Fenetre_encastree.h>  // --->    fenetre encastrée sur un bord de la fenetre SFML
+//#include <gadgets/Fenetre_encastree.h>  // --->    fenetre encastrée sur un bord de la fenetre SFML
 
 
 
@@ -54,6 +54,8 @@
 
 ////////////////////////////////////////////////////////////
 /// \defgroup interface Module pour interface graphique
+///
+/// \todo s'assuer que les classes qui conteiennent des pointeurs aient une fonction creation en copie et un operateur=
 ///
 /// Elements d'interface graphique: Boutons, fenêtres, ...
 ///

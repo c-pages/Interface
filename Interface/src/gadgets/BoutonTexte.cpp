@@ -10,7 +10,7 @@
 namespace gui {
 
 /////////////////////////////////////////////////
-BoutonTexte::BoutonTexte(std::string    texte)
+BoutonTexte::BoutonTexte ( std::string    texte )
 : m_lblTexte  ( new Label ( texte ) )
 {
     init ();
@@ -47,7 +47,7 @@ BoutonTexte::~BoutonTexte() {
 void
 BoutonTexte::setSize   ( sf::Vector2f   taille )   {
     m_fond->setSize( taille );
-    m_lblTexte->aligner ( *m_fond , m_style->align );
+ //   m_lblTexte->aligner ( *m_fond , m_style->align );
 }
 
 
@@ -56,7 +56,7 @@ void
 BoutonTexte::ajusterAuTexte   (){
     sf::FloatRect  rectTxt  ( m_lblTexte->getLocalBounds() );
     m_fond->setSize( { rectTxt.width + 2* m_bordure, rectTxt.height + 2* m_bordure } );
-    m_lblTexte->aligner(*m_fond );
+   // m_lblTexte->aligner(*m_fond , m_style->align );
 };
 
 
@@ -73,11 +73,11 @@ void
 BoutonTexte::majGeom( )    {
 
     // mise a jour du style du bouton
-    Bouton::majGeom( ) ;
+    Bouton::majGeom ( );
 
     // mise a jour du style du texte
     m_lblTexte->setStyle    ( m_style );
-    m_lblTexte->aligner     ( *m_fond , m_style->align );
+    //  m_lblTexte->aligner     ( *m_fond , m_style->align );
 
 }
 

@@ -119,7 +119,14 @@ Gadget::aligner (  Gadget& cible , Alignements    align , float ecart  ){
 
     // la boudning box du gadget
     sf::FloatRect   rect_this       = getLocalBounds() ;
-
+//   std::cout << "\n-------------- ALIGNER ---------------- ";
+//   std::cout << "\ncbl_gauche : " << cbl_gauche;
+//   std::cout << "\ncbl_milieu : " << cbl_milieu;
+//   std::cout << "\ncbl_droite : " << cbl_droite;
+//   std::cout << "\ncbl_haut : " << cbl_haut;
+//   std::cout << "\ncbl_centre : " << cbl_centre;
+//   std::cout << "\ncbl_bas : " << cbl_bas;
+//   std::cout << "\n";
 
     // les axes de la nouvelle position pour l'alignements du gadget sur la cible
     int gauche    =  std::round ( - rect_this.left  + cbl_gauche + ecart ) ;
@@ -129,7 +136,14 @@ Gadget::aligner (  Gadget& cible , Alignements    align , float ecart  ){
     int haut      =  std::round ( - rect_this.top  + cbl_haut + ecart ) ;
     int centre    =  std::round ( - (rect_this.top + rect_this.height/2 )    + cbl_centre ) ;
     int bas       =  std::round ( - (rect_this.top + rect_this.height   )    + cbl_bas  - ecart ) ;
-
+/*
+   std::cout << "\ngauche : " << gauche;
+   std::cout << "\nmilieu : " << milieu;
+   std::cout << "\ndroite : " << droite;
+   std::cout << "\nhaut : " << haut;
+   std::cout << "\ncentre : " << centre;
+   std::cout << "\nbas : " << bas;
+   std::cout << "\n";*/
     // et donc on combine en fonction de l'alignement choisi
     switch ( align ) {
         case Alignements::Haut_Gche:{   setPosition( gauche , haut );   }break;

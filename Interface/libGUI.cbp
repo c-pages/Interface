@@ -69,10 +69,10 @@
 		<Unit filename="include/gadgets/BoutonTexte.h" />
 		<Unit filename="include/gadgets/Contenant.h" />
 		<Unit filename="include/gadgets/Fenetre.h" />
-		<Unit filename="include/gadgets/Fenetre_encastree.h" />
 		<Unit filename="include/gadgets/Groupe.h" />
 		<Unit filename="include/gadgets/Image.h" />
 		<Unit filename="include/gadgets/Label.h" />
+		<Unit filename="include/gadgets/Texte.h" />
 		<Unit filename="src/Action.cpp" />
 		<Unit filename="src/Gadget.cpp" />
 		<Unit filename="src/Skin.cpp" />
@@ -83,13 +83,10 @@
 		<Unit filename="src/gadgets/BoutonTexte.cpp" />
 		<Unit filename="src/gadgets/Contenant.cpp" />
 		<Unit filename="src/gadgets/Fenetre.cpp" />
-		<Unit filename="src/gadgets/Fenetre_encastree.cpp" />
 		<Unit filename="src/gadgets/Groupe.cpp" />
 		<Unit filename="src/gadgets/Image.cpp" />
 		<Unit filename="src/gadgets/Label.cpp" />
-		<Unit filename="test.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="src/gadgets/Texte.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -138,6 +138,7 @@ public:
     virtual void
     setSkin( std::shared_ptr<Skin>    skin );
 
+
     /////////////////////////////////////////////////
     /// \brief Définie le style du Label.
     ///
@@ -148,6 +149,7 @@ public:
     /////////////////////////////////////////////////
     virtual void
     setStyle( std::shared_ptr<Style>     style );
+
 
     /////////////////////////////////////////////////
     /// \brief Aligne le gadget sur un autre
@@ -188,6 +190,7 @@ public:
     void
     setEnable ( bool val ) { m_enable = val; };
 
+
     /////////////////////////////////////////////////
     /// \brief Accesseur état du Gadget.
     ///
@@ -197,6 +200,7 @@ public:
     bool
     isEnable (  ) { return m_enable ; };
 
+
     /////////////////////////////////////////////////
     /// \brief demande si le gadget est en attente de suppression
     ///
@@ -205,6 +209,17 @@ public:
     /////////////////////////////////////////////////
     bool
     aSupprimer(){  return m_aSupprimer ; };
+
+
+    /////////////////////////////////////////////////
+    /// \brief demande si le gadget est en attente de suppression
+    ///
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    void
+    demanderActualisation(){  m_besoinActua = true ; };
+
 
     /////////////////////////////////////////////////
     /// \brief Demander la suppression de ce gadget
@@ -216,6 +231,7 @@ public:
     /////////////////////////////////////////////////
     void
     supprimer(){  m_aSupprimer = true; };
+
 
     /////////////////////////////////////////////////
     /// \brief overload annulant la fonction rotate

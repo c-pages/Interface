@@ -17,7 +17,7 @@ BoutonSlide::BoutonSlide    (   sf::RenderWindow *    fenetre
 , m_fenetreSFML     ( fenetre )
 , m_longueurMax     ( longueur )
 , m_drag            ( false )
-, m_largeur         ( 5 )
+, m_largeur         ( 7 )
 {
     creerUI();
     majGeom();
@@ -56,7 +56,7 @@ BoutonSlide::getGlobalBounds ( ) const {
 void
 BoutonSlide::creerUI()
 {
-   // m_UI->setParent ( this );
+   // m_grpUI->setParent ( this );
 
 
     // les fonctions de drag
@@ -147,6 +147,8 @@ BoutonSlide::initSkin (){
 void
 BoutonSlide::majGeom()
 {
+    if ( not m_besoinActua ) return;
+
 
     switch ( m_orientation ){
         case Orientation::Verticale: {
@@ -160,6 +162,24 @@ BoutonSlide::majGeom()
 
         } break;
     }
+    sf::Vector2f    pos = m_btnSlide->getPosition();
+
+    if ( m_orientation == Orientation::Horizontale)
+        m_btnSlide->setSize ( { m_longueurCourant , m_largeur } );
+    if ( m_orientation == Orientation::Verticale)
+        m_btnSlide->setSize ( { m_largeur , m_longueurCourant});
+
+
+
+
+    // extremités
+    if (pos.x<0) pos.x=0;
+    if (pos.y<0) pos.y=0;
+    if (pos.x>m_longueurMax - m_btnSlide->getSize().x ) pos.x=m_longueurMax - m_btnSlide->getSize().x ;
+    if (pos.y>m_longueurMax - m_btnSlide->getSize().y ) pos.y=m_longueurMax - m_btnSlide->getSize().y ;
+
+    m_btnSlide->setPosition     (  pos  );
+
 }
 
 
@@ -179,13 +199,7 @@ void
 BoutonSlide::actualiser ( float deltaT )
 {
 
-    // m_longueurCourant
-    //m_longueurCourant =
 
-    if ( m_orientation == Orientation::Horizontale)
-        m_btnSlide->setSize ( { m_longueurCourant , m_largeur } );
-    if ( m_orientation == Orientation::Verticale)
-        m_btnSlide->setSize ( { m_largeur , m_longueurCourant});
 
     // > Actualiser le Drag
     if ( m_drag ) {
@@ -198,14 +212,8 @@ BoutonSlide::actualiser ( float deltaT )
         if ( m_orientation == Orientation::Verticale)
             pos =      {  0,  m_posBtnOrig.y +  mousePos.y - m_posMouseOrig.y };
 
-        // extremités
-        if (pos.x<0) pos.x=0;
-        if (pos.y<0) pos.y=0;
-        if (pos.x>m_longueurMax - m_btnSlide->getSize().x ) pos.x=m_longueurMax - m_btnSlide->getSize().x ;
-        if (pos.y>m_longueurMax - m_btnSlide->getSize().y ) pos.y=m_longueurMax - m_btnSlide->getSize().y ;
-
         m_btnSlide->setPosition     (  pos  );
-
+        m_besoinActua = true;
     }
 
 

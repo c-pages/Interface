@@ -118,6 +118,7 @@ public:
     virtual sf::FloatRect
     getLocalBounds()const ;
 
+
     /////////////////////////////////////////////////
     /// \brief Acceder à la boundingBox global
     ///
@@ -137,9 +138,11 @@ public:
     sf::Vector2f
     getSlidePos()const {return m_btnSlide->getPosition();};
 
+
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     virtual void
     creerUI();
+
 
     void
     initSkin ();
