@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -71,6 +79,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="functions.html"><span>Champs&#160;de&#160;donnée</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classgui_1_1_contenant.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -85,11 +108,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacegui.html">gui</a></li><li class="navelem"><a class="el" href="classgui_1_1_contenant.html">Contenant</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
@@ -111,7 +129,7 @@ Graphe d'héritage de gui::Contenant:</div>
 <area shape="rect" id="node2" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. " alt="" coords="116,80,205,107"/>
 <area shape="rect" id="node3" href="classgui_1_1_action.html" title="Classe virtuelle permetant de lier des évenements à des fonctions. " alt="" coords="5,5,89,32"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
 <div class="dynheader">
 Graphe de collaboration de gui::Contenant:</div>
 <div class="dyncontent">
@@ -120,7 +138,7 @@ Graphe de collaboration de gui::Contenant:</div>
 <area shape="rect" id="node2" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. " alt="" coords="116,81,205,108"/>
 <area shape="rect" id="node3" href="classgui_1_1_action.html" title="Classe virtuelle permetant de lier des évenements à des fonctions. " alt="" coords="5,5,89,32"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
@@ -193,6 +211,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ab2bd5264b770b78ecc59d2f1b7486aa6 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#ab2bd5264b770b78ecc59d2f1b7486aa6">aSupprimer</a> ()</td></tr>
 <tr class="memdesc:ab2bd5264b770b78ecc59d2f1b7486aa6 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">demande si le gadget est en attente de suppression  <a href="#ab2bd5264b770b78ecc59d2f1b7486aa6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ab2bd5264b770b78ecc59d2f1b7486aa6 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d0b7310b6a61f2e9feee6b52275462 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#af2d0b7310b6a61f2e9feee6b52275462">demanderActualisation</a> ()</td></tr>
+<tr class="memdesc:af2d0b7310b6a61f2e9feee6b52275462 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">demande si le gadget est en attente de suppression  <a href="#af2d0b7310b6a61f2e9feee6b52275462">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af2d0b7310b6a61f2e9feee6b52275462 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf55e6760cf3d4ef586ce87c07cfae7c inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#adf55e6760cf3d4ef586ce87c07cfae7c">supprimer</a> ()</td></tr>
 <tr class="memdesc:adf55e6760cf3d4ef586ce87c07cfae7c inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demander la suppression de ce gadget.  <a href="#adf55e6760cf3d4ef586ce87c07cfae7c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:adf55e6760cf3d4ef586ce87c07cfae7c inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,6 +240,7 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
 <tr class="memitem:a39284872962dd197af777db8caa691cf"><td class="memItemLeft" align="right" valign="top">sf::RenderWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html#a39284872962dd197af777db8caa691cf">m_fenetreSFML</a></td></tr>
+<tr class="memdesc:a39284872962dd197af777db8caa691cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">la fenetre SFML.  <a href="#a39284872962dd197af777db8caa691cf">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a39284872962dd197af777db8caa691cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a132260cc8e23a86225a5d6fe1d334845"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html#a132260cc8e23a86225a5d6fe1d334845">m_bSliderVerti</a></td></tr>
 <tr class="memdesc:a132260cc8e23a86225a5d6fe1d334845"><td class="mdescLeft">&#160;</td><td class="mdescRight">true si on a besoin d'un slider vertical  <a href="#a132260cc8e23a86225a5d6fe1d334845">Plus de détails...</a><br /></td></tr>
@@ -229,13 +251,11 @@ Attributs privés</h2></td></tr>
 <tr class="memitem:adf1c5572895f85b575a1de008b09e827"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html#adf1c5572895f85b575a1de008b09e827">m_taille</a></td></tr>
 <tr class="memdesc:adf1c5572895f85b575a1de008b09e827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le taille de la fenetre.  <a href="#adf1c5572895f85b575a1de008b09e827">Plus de détails...</a><br /></td></tr>
 <tr class="separator:adf1c5572895f85b575a1de008b09e827"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa9395789201ffdfb5835f2327745d06"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html#afa9395789201ffdfb5835f2327745d06">m_tailleContenu</a></td></tr>
-<tr class="memdesc:afa9395789201ffdfb5835f2327745d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le BB du contenu.  <a href="#afa9395789201ffdfb5835f2327745d06">Plus de détails...</a><br /></td></tr>
-<tr class="separator:afa9395789201ffdfb5835f2327745d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc1c204fdf935145da7e7947ea9d1030"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html#acc1c204fdf935145da7e7947ea9d1030">m_posContenu</a></td></tr>
 <tr class="memdesc:acc1c204fdf935145da7e7947ea9d1030"><td class="mdescLeft">&#160;</td><td class="mdescRight">la position du contenu ( quand on le slide )  <a href="#acc1c204fdf935145da7e7947ea9d1030">Plus de détails...</a><br /></td></tr>
 <tr class="separator:acc1c204fdf935145da7e7947ea9d1030"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab83227ef8ee46456b554fd303701987a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_groupe.html">Groupe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html#ab83227ef8ee46456b554fd303701987a">m_grpContenant</a></td></tr>
+<tr class="memdesc:ab83227ef8ee46456b554fd303701987a"><td class="mdescLeft">&#160;</td><td class="mdescRight">groupe dans lequel se trouve le grp contenu, il sert principalement à limiter la zone de clique  <a href="#ab83227ef8ee46456b554fd303701987a">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ab83227ef8ee46456b554fd303701987a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65b91d4c51448bf72281b72bb99da7b6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_groupe.html">Groupe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html#a65b91d4c51448bf72281b72bb99da7b6">m_grpContenu</a></td></tr>
 <tr class="memdesc:a65b91d4c51448bf72281b72bb99da7b6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets. ">Groupe</a> des éléments du contenu de la <a class="el" href="classgui_1_1_fenetre.html" title="Gadget permettant de rassembler des Gadgets au sein d&#39;une Fenetre. ">Fenetre</a>. ne s'affiche pas directment, est dessiné dans m_spriteContenant.  <a href="#a65b91d4c51448bf72281b72bb99da7b6">Plus de détails...</a><br /></td></tr>
@@ -243,9 +263,13 @@ Attributs privés</h2></td></tr>
 <tr class="memitem:a213e5b40d0ad42e26f2599745698db3f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; sf::Sprite &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html#a213e5b40d0ad42e26f2599745698db3f">m_spriteContenant</a></td></tr>
 <tr class="memdesc:a213e5b40d0ad42e26f2599745698db3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le sprite qui affiche le contenu de la fenetre.  <a href="#a213e5b40d0ad42e26f2599745698db3f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a213e5b40d0ad42e26f2599745698db3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbc4445ff3fffff570f55a8a64a9edb0"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_groupe.html">Groupe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html#adbc4445ff3fffff570f55a8a64a9edb0">m_UI</a></td></tr>
-<tr class="memdesc:adbc4445ff3fffff570f55a8a64a9edb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">les éléments d'interface du gadget  <a href="#adbc4445ff3fffff570f55a8a64a9edb0">Plus de détails...</a><br /></td></tr>
-<tr class="separator:adbc4445ff3fffff570f55a8a64a9edb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69232f6a10f135c0b926a8fc563c98a"><td class="memItemLeft" align="right" valign="top">sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html#ad69232f6a10f135c0b926a8fc563c98a">m_tailleTexture</a></td></tr>
+<tr class="separator:ad69232f6a10f135c0b926a8fc563c98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fda961c1fcc8e1dc12d6d8246c3d713"><td class="memItemLeft" align="right" valign="top">sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html#a5fda961c1fcc8e1dc12d6d8246c3d713">m_tailleAffiche</a></td></tr>
+<tr class="separator:a5fda961c1fcc8e1dc12d6d8246c3d713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18f7dd51573156c4db6b57645cf91823"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_groupe.html">Groupe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html#a18f7dd51573156c4db6b57645cf91823">m_grpUI</a></td></tr>
+<tr class="memdesc:a18f7dd51573156c4db6b57645cf91823"><td class="mdescLeft">&#160;</td><td class="mdescRight">les éléments d'interface du gadget  <a href="#a18f7dd51573156c4db6b57645cf91823">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a18f7dd51573156c4db6b57645cf91823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b99f6b22ddd40a07f93c9ba2e3ffe4e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_bouton_slide.html">BoutonSlide</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html#a8b99f6b22ddd40a07f93c9ba2e3ffe4e">m_slideVerti</a></td></tr>
 <tr class="memdesc:a8b99f6b22ddd40a07f93c9ba2e3ffe4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">le bouton du slide vertical  <a href="#a8b99f6b22ddd40a07f93c9ba2e3ffe4e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8b99f6b22ddd40a07f93c9ba2e3ffe4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -301,8 +325,11 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="memdesc:a6d7bd13de67c1577d6fa5073cb35edc9 inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">le style du gadget.  <a href="#a6d7bd13de67c1577d6fa5073cb35edc9">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6d7bd13de67c1577d6fa5073cb35edc9 inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a809f2e60f57a303c874624b2671022ef inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a809f2e60f57a303c874624b2671022ef">m_enable</a></td></tr>
-<tr class="memdesc:a809f2e60f57a303c874624b2671022ef inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">si le gadget est actif ou pas.  <a href="#a809f2e60f57a303c874624b2671022ef">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a809f2e60f57a303c874624b2671022ef inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">si le gadget est actif ou pas. ( visible mais pas utilisable. )  <a href="#a809f2e60f57a303c874624b2671022ef">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a809f2e60f57a303c874624b2671022ef inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10fc45e0ac3da5339be2e1efb9fed289 inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a10fc45e0ac3da5339be2e1efb9fed289">m_visible</a></td></tr>
+<tr class="memdesc:a10fc45e0ac3da5339be2e1efb9fed289 inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">si le gadget est visible ou pas.  <a href="#a10fc45e0ac3da5339be2e1efb9fed289">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a10fc45e0ac3da5339be2e1efb9fed289 inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a90fbf5cca8da8ab438bd54f22d7412 inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a5a90fbf5cca8da8ab438bd54f22d7412">m_aSupprimer</a></td></tr>
 <tr class="memdesc:a5a90fbf5cca8da8ab438bd54f22d7412 inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">On le passe à true quand on veut supprimer ce gadget (il sera supprimé par son parent au debut de l'actualisation).  <a href="#a5a90fbf5cca8da8ab438bd54f22d7412">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5a90fbf5cca8da8ab438bd54f22d7412 inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -449,16 +476,6 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#a9b4e990211299d37bf271db9d43dd32c">gui::Gadget</a>.</p>
 
-<p><div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="classgui_1_1_contenant_aa48820e461cc123973255ce7ee202f92_cgraph.png" border="0" usemap="#classgui_1_1_contenant_aa48820e461cc123973255ce7ee202f92_cgraph" alt=""/></div>
-<map name="classgui_1_1_contenant_aa48820e461cc123973255ce7ee202f92_cgraph" id="classgui_1_1_contenant_aa48820e461cc123973255ce7ee202f92_cgraph">
-<area shape="rect" id="node2" href="classgui_1_1_contenant.html#a4eb7dd3d7f12052c4c6e481e0308e318" title="Accesseur de la boundingBox des contenus. " alt="" coords="207,5,387,47"/>
-</map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a4728b85df32276caae0a51d3c7c47973"></a>
@@ -498,16 +515,6 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#a7ccb80ac58d4b1320bc76ad8ae031866">gui::Gadget</a>.</p>
 
-<p><div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="classgui_1_1_contenant_a4728b85df32276caae0a51d3c7c47973_cgraph.png" border="0" usemap="#classgui_1_1_contenant_a4728b85df32276caae0a51d3c7c47973_cgraph" alt=""/></div>
-<map name="classgui_1_1_contenant_a4728b85df32276caae0a51d3c7c47973_cgraph" id="classgui_1_1_contenant_a4728b85df32276caae0a51d3c7c47973_cgraph">
-<area shape="rect" id="node2" href="classgui_1_1_contenant.html#a4eb7dd3d7f12052c4c6e481e0308e318" title="Accesseur de la boundingBox des contenus. " alt="" coords="195,5,375,47"/>
-</map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a4eb7dd3d7f12052c4c6e481e0308e318"></a>
@@ -531,9 +538,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_contenant_a4eb7dd3d7f12052c4c6e481e0308e318_icgraph.png" border="0" usemap="#classgui_1_1_contenant_a4eb7dd3d7f12052c4c6e481e0308e318_icgraph" alt=""/></div>
 <map name="classgui_1_1_contenant_a4eb7dd3d7f12052c4c6e481e0308e318_icgraph" id="classgui_1_1_contenant_a4eb7dd3d7f12052c4c6e481e0308e318_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_contenant.html#a16df426a021d5a8fbb0f4149e53fda90" title="Actualiser les éléments. " alt="" coords="233,5,404,32"/>
-<area shape="rect" id="node3" href="classgui_1_1_contenant.html#aa48820e461cc123973255ce7ee202f92" title="ajouter un enfant " alt="" coords="242,56,395,83"/>
-<area shape="rect" id="node4" href="classgui_1_1_contenant.html#a4728b85df32276caae0a51d3c7c47973" title="Rendre les éléments. " alt="" coords="248,107,389,133"/>
+<area shape="rect" id="node2" href="classgui_1_1_contenant.html#a16df426a021d5a8fbb0f4149e53fda90" title="Actualiser les éléments. " alt="" coords="233,13,404,39"/>
 </map>
 </div>
 </p>
@@ -771,6 +776,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>la fenetre SFML. </p>
+
 </div>
 </div>
 <a class="anchor" id="ab83227ef8ee46456b554fd303701987a"></a>
@@ -790,6 +797,8 @@ Voici le graphe d'appel pour cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>groupe dans lequel se trouve le grp contenu, il sert principalement à limiter la zone de clique </p>
 
 </div>
 </div>
@@ -812,6 +821,28 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div><div class="memdoc">
 
 <p><a class="el" href="classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets. ">Groupe</a> des éléments du contenu de la <a class="el" href="classgui_1_1_fenetre.html" title="Gadget permettant de rassembler des Gadgets au sein d&#39;une Fenetre. ">Fenetre</a>. ne s'affiche pas directment, est dessiné dans m_spriteContenant. </p>
+
+</div>
+</div>
+<a class="anchor" id="a18f7dd51573156c4db6b57645cf91823"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classgui_1_1_groupe.html">Groupe</a>&gt; gui::Contenant::m_grpUI</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>les éléments d'interface du gadget </p>
 
 </div>
 </div>
@@ -925,7 +956,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
-<a class="anchor" id="afa9395789201ffdfb5835f2327745d06"></a>
+<a class="anchor" id="a5fda961c1fcc8e1dc12d6d8246c3d713"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -933,7 +964,7 @@ Voici le graphe d'appel pour cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">sf::FloatRect gui::Contenant::m_tailleContenu</td>
+          <td class="memname">sf::Vector2i gui::Contenant::m_tailleAffiche</td>
         </tr>
       </table>
   </td>
@@ -943,11 +974,9 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>Le BB du contenu. </p>
-
 </div>
 </div>
-<a class="anchor" id="adbc4445ff3fffff570f55a8a64a9edb0"></a>
+<a class="anchor" id="ad69232f6a10f135c0b926a8fc563c98a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -955,7 +984,7 @@ Voici le graphe d'appel pour cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classgui_1_1_groupe.html">Groupe</a>&gt; gui::Contenant::m_UI</td>
+          <td class="memname">sf::Vector2i gui::Contenant::m_tailleTexture</td>
         </tr>
       </table>
   </td>
@@ -964,8 +993,6 @@ Voici le graphe d'appel pour cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>les éléments d'interface du gadget </p>
 
 </div>
 </div>
@@ -974,11 +1001,15 @@ Voici le graphe d'appel pour cette fonction :</div>
 <li>Interface/src/gadgets/<a class="el" href="_contenant_8cpp.html">Contenant.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacegui.html">gui</a></li><li class="navelem"><a class="el" href="classgui_1_1_contenant.html">Contenant</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
 </body>
 </html>

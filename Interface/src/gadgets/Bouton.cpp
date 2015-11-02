@@ -482,22 +482,22 @@ Bouton::actualiser ( float deltaT )
     // on definie le style en fonction de l'état du bouton
     switch ( m_etat ) {
 
-        case EtatBouton::desactive : {
+        case EtatBouton::desactive  : {
             m_style = m_skin->desactive;
             majGeom( );
         } break;
 
-        case EtatBouton::repos     : {
+        case EtatBouton::repos      : {
             m_style = m_skin->btnRepos;
             majGeom( );
         } break;
 
-        case EtatBouton::survol    : {
+        case EtatBouton::survol     : {
             m_style = m_skin->btnSurvol;
             majGeom( );
         } break;
 
-        case EtatBouton::press    : {
+        case EtatBouton::press      : {
             m_style = m_skin->btnPress;
             majGeom( );
         } break;
@@ -511,6 +511,9 @@ Bouton::actualiser ( float deltaT )
 /////////////////////////////////////////////////
 void
 Bouton::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
+
+    if ( not m_visible ) return;
+
 
     states.transform *= getTransform();
     target.draw         ( *m_fond , states );

@@ -15,6 +15,7 @@ Gadget::Gadget  ()
 , m_skin        ( std::make_shared <Skin> () )
 , m_style       ( std::make_shared <Style> () )
 , m_enable      ( true )
+, m_visible     ( true )
 , m_aSupprimer  ( false )
 , m_besoinActua ( true )
 //, m_DEBUG_SHAPE ( sf::RectangleShape () )
@@ -36,6 +37,7 @@ Gadget::Gadget  ( std::shared_ptr<Style>    style )
 , m_skin        ( std::make_shared <Skin>() )
 , m_style       ( style )
 , m_enable      ( true )
+, m_visible     ( true )
 , m_aSupprimer  ( false )
 , m_besoinActua ( true )
 {
@@ -49,6 +51,7 @@ Gadget::Gadget  ( std::shared_ptr <Skin>    skin )
 , m_skin        ( skin )
 , m_style       ( m_skin->fenetre )
 , m_enable      ( true )
+, m_visible     ( true )
 , m_aSupprimer  ( false )
 , m_besoinActua( true )
 {
@@ -274,7 +277,9 @@ Gadget::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const
 
     // dessiner les gadgets enfants
     for ( const ptr& enfant : m_enfants )
-        target.draw      ( *enfant , states );
+        if ( enfant->m_visible )
+            target.draw      ( *enfant , states );
+
 }
 
 } // fin du namespace gui

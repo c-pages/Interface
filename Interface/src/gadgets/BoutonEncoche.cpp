@@ -72,6 +72,10 @@ BoutonEncoche::init( )    {
 /////////////////////////////////////////////////
 void
 BoutonEncoche::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
+
+    if ( not m_visible ) return;
+
+
     states.transform *= getTransform();
 
     // on dessine le bouton

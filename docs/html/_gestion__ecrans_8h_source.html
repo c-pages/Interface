@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -69,6 +77,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_gestion__ecrans_8h_source.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +106,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li><li class="navelem"><a class="el" href="dir_bad007344d42f4b5340fab5412b591e5.html">include</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Gestion_ecrans.h</div>  </div>
@@ -152,11 +170,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="ttc" id="classapp_1_1_gestion__ecrans_html_addd582c82b53c7c142d23dbee83c5bbd"><div class="ttname"><a href="classapp_1_1_gestion__ecrans.html#addd582c82b53c7c142d23dbee83c5bbd">app::Gestion_ecrans::changer</a></div><div class="ttdeci">void changer(Ecran *ecran)</div><div class="ttdoc">Changer d&#39;écran. </div><div class="ttdef"><b>Definition:</b> Gestion_ecrans.cpp:41</div></div>
 <div class="ttc" id="classapp_1_1_gestion__ecrans_html_a7424aab98a8b01f5b5e201ee77bbb7bb"><div class="ttname"><a href="classapp_1_1_gestion__ecrans.html#a7424aab98a8b01f5b5e201ee77bbb7bb">app::Gestion_ecrans::estVide</a></div><div class="ttdeci">bool estVide()</div><div class="ttdoc">Demande si il y a encore des ecrans dans la pile. </div><div class="ttdef"><b>Definition:</b> Gestion_ecrans.cpp:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li><li class="navelem"><a class="el" href="dir_bad007344d42f4b5340fab5412b591e5.html">include</a></li><li class="navelem"><a class="el" href="_gestion__ecrans_8h.html">Gestion_ecrans.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
 </body>
 </html>

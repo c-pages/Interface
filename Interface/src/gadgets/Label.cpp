@@ -109,7 +109,7 @@ Label::getLocalBounds ( )const {
     result.top      +=  getPosition().y;/*
     result.width    -=  m_texte->getLocalBounds().left;
     result.top      -=  m_texte->getLocalBounds().top;*/
-    /*
+
     std::string txt = m_texte->getString() ;
 std::cout << "--------------> m_texte : " << txt << "\n";
 
@@ -118,7 +118,7 @@ std::cout << "--------------> m_texte : " << txt << "\n";
    std::cout << "\nresult.width : " << result.width;
    std::cout << "\nresult.height : " << result.height;
    std::cout << "\n";
-*/
+
     return result;
 
 
@@ -195,13 +195,17 @@ Label::actualiser ( float deltaT )    {
 /////////////////////////////////////////////////
 void
 Label::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
-    states.transform *= getTransform();
 //    target.draw      ( *m_fond , states );
 
-    target.draw      ( *m_texte , states );
+    if ( not m_visible ) return;
+
+
+    states.transform *= getTransform();
+
+    target.draw ( *m_texte , states );
 
     for ( ptr enfant : m_enfants )
-        target.draw      ( *enfant , states );
+            target.draw      ( *enfant , states );
 }
 
 } // fin namespace gui

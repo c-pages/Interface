@@ -1,6 +1,7 @@
 <map id="gui::Gadget::supprimer" name="gui::Gadget::supprimer">
-<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="208,5,336,47"/>
-<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="384,13,512,39"/>
-<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a104f8f9143a7280d7d56ca2d2a539123" title="Initialisation lors de la création. " alt="" coords="560,13,676,39"/>
-<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="724,13,867,39"/>
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="219,5,347,47"/>
+<area shape="rect" id="node5" href="$classgui_1_1_fenetre_encastree.html#aaa900b28f22ddaf34dbc346439a9eb76" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="208,71,359,112"/>
+<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="418,13,546,39"/>
+<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="605,13,748,39"/>
+<area shape="rect" id="node6" href="$classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="407,71,557,112"/>
 </map>

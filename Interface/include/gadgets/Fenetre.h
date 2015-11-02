@@ -339,9 +339,6 @@ private:
     FuncType    m_fctRedimHautDebut;      ///<  fonction pour manipuler la fenetre.
     FuncType    m_fctRedimHautFin;        ///<  fonction pour manipuler la fenetre.
 
-std::shared_ptr<sf::RectangleShape>  m_debug;
-
-
 
 //
 ////////////// DEBUG /////////////////////////////////////

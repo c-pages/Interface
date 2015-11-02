@@ -18,6 +18,10 @@
 #include <gadgets/Image.h>              // --->    affiche image ou couleur
 #include <gadgets/Label.h>              // --->    affiche txt
 
+//
+#include <gadgets/ChampTexte.h>         // --->    Champ de saisie de texte. ( a developper )
+
+
 //boutons
 #include <gadgets/Bouton.h>             // --->    declenche des fcts
 #include <gadgets/BoutonTexte.h>        // --->    declenche des fcts

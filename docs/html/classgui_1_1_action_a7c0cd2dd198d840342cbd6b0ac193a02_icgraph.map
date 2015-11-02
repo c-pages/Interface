@@ -1,6 +1,7 @@
 <map id="gui::Action::traiter_evenements" name="gui::Action::traiter_evenements">
-<area shape="rect" id="node2" href="$classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="187,5,317,47"/>
-<area shape="rect" id="node3" href="$classgui_1_1_contenant.html#aaf92cf1d1d7266d25b0c15cd5202ae4b" title="La gestion des évènements utilisateurs. " alt="" coords="179,71,325,112"/>
-<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a555be24b33faedf52e92695f4f1785b3" title="La gestion des évènements utilisateurs. " alt="" coords="186,136,318,177"/>
-<area shape="rect" id="node5" href="$classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf" title="La gestion des évènements utilisateurs. " alt="" coords="193,201,311,243"/>
+<area shape="rect" id="node2" href="$classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="189,5,319,47"/>
+<area shape="rect" id="node3" href="$classgui_1_1_contenant.html#aaf92cf1d1d7266d25b0c15cd5202ae4b" title="La gestion des évènements utilisateurs. " alt="" coords="181,71,327,112"/>
+<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a555be24b33faedf52e92695f4f1785b3" title="La gestion des évènements utilisateurs. " alt="" coords="188,136,320,177"/>
+<area shape="rect" id="node5" href="$classgui_1_1_fenetre_encastree.html#af6b98196b14c8bca61001b37cd4dee38" title="La gestion des évènements utilisateurs. " alt="" coords="179,201,329,243"/>
+<area shape="rect" id="node6" href="$classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf" title="La gestion des évènements utilisateurs. " alt="" coords="195,267,313,308"/>
 </map>

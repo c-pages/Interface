@@ -227,6 +227,9 @@ BoutonSlide::actualiser ( float deltaT )
 void
 BoutonSlide::draw( sf::RenderTarget& target, sf::RenderStates states ) const
 {
+    if ( not m_visible ) return;
+
+
    // Bouton::draw    ( target, states );
 
     states.transform *= getTransform();

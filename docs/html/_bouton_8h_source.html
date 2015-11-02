@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -69,6 +77,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_bouton_8h_source.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +106,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_b7263c2df3abed61e1897d5e9e534860.html">Interface</a></li><li class="navelem"><a class="el" href="dir_b26ada46c7d42db83f11c4750604aea0.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab5a57497ef2c36b4a22954635ab49a.html">gadgets</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Bouton.h</div>  </div>
@@ -204,63 +222,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">// Les membres</span></div>
 <div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#a92ed42af744e499c3d94b0911589761f">  266</a></span>&#160;<span class="comment"></span>    <a class="code" href="classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5f">EtatBouton</a>              <a class="code" href="classgui_1_1_bouton.html#a92ed42af744e499c3d94b0911589761f">m_etat</a>;             </div>
 <div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#a8f8714ab82973e57eb3ee4f85c4a324b">  267</a></span>&#160;    <a class="code" href="classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5f">EtatBouton</a>              <a class="code" href="classgui_1_1_bouton.html#a8f8714ab82973e57eb3ee4f85c4a324b">m_etatBack</a>;         </div>
-<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#a8a9c0b300e1af08d60200f29fc503031">  268</a></span>&#160;    std::shared_ptr&lt;Image&gt;  <a class="code" href="classgui_1_1_bouton.html#a8a9c0b300e1af08d60200f29fc503031">m_fond</a>;             </div>
-<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#aa16f60426d96ef6d73a7e436d5a31027">  269</a></span>&#160;    sf::Clock               <a class="code" href="classgui_1_1_bouton.html#aa16f60426d96ef6d73a7e436d5a31027">m_clock_dblClique</a>;  </div>
-<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#aed2b58479b336c984960936f3ce33caa">  270</a></span>&#160;    <span class="keywordtype">bool</span>                    <a class="code" href="classgui_1_1_bouton.html#aed2b58479b336c984960936f3ce33caa">m_1erClick</a>;         </div>
-<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#a66fd43d3a26b7c86f43990d94217d5a1">  271</a></span>&#160;    <span class="keywordtype">float</span>                   <a class="code" href="classgui_1_1_bouton.html#a66fd43d3a26b7c86f43990d94217d5a1">m_bordure</a>;          </div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="comment">// Les membres static</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#a0817c522c874f325e967a641e3f980ba">  277</a></span>&#160;    <span class="keyword">static</span>  <a class="code" href="classgui_1_1_gadget.html">Gadget</a>*     <a class="code" href="classgui_1_1_bouton.html#a0817c522c874f325e967a641e3f980ba">ms_btnSurvol</a>;    </div>
-<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#aa2fe8c85f0c0b614f70be658c22498d9">  278</a></span>&#160;    <span class="keyword">static</span>  <a class="code" href="classgui_1_1_gadget.html">Gadget</a>*     <a class="code" href="classgui_1_1_bouton.html#aa2fe8c85f0c0b614f70be658c22498d9">ms_btnPress</a>;     </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#a1f80d29917470dc4812879ab78f64eb9">  268</a></span>&#160;    std::shared_ptr&lt;Image&gt;  <a class="code" href="classgui_1_1_bouton.html#a1f80d29917470dc4812879ab78f64eb9">m_icone</a>;            </div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#a8a9c0b300e1af08d60200f29fc503031">  269</a></span>&#160;    std::shared_ptr&lt;Image&gt;  <a class="code" href="classgui_1_1_bouton.html#a8a9c0b300e1af08d60200f29fc503031">m_fond</a>;             </div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#aa16f60426d96ef6d73a7e436d5a31027">  270</a></span>&#160;    sf::Clock               <a class="code" href="classgui_1_1_bouton.html#aa16f60426d96ef6d73a7e436d5a31027">m_clock_dblClique</a>;  </div>
+<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#aed2b58479b336c984960936f3ce33caa">  271</a></span>&#160;    <span class="keywordtype">bool</span>                    <a class="code" href="classgui_1_1_bouton.html#aed2b58479b336c984960936f3ce33caa">m_1erClick</a>;         </div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#a66fd43d3a26b7c86f43990d94217d5a1">  272</a></span>&#160;    <span class="keywordtype">float</span>                   <a class="code" href="classgui_1_1_bouton.html#a66fd43d3a26b7c86f43990d94217d5a1">m_bordure</a>;          </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">// Les membres static</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#a0817c522c874f325e967a641e3f980ba">  278</a></span>&#160;    <span class="keyword">static</span>  <a class="code" href="classgui_1_1_gadget.html">Gadget</a>*     <a class="code" href="classgui_1_1_bouton.html#a0817c522c874f325e967a641e3f980ba">ms_btnSurvol</a>;    </div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#aa2fe8c85f0c0b614f70be658c22498d9">  279</a></span>&#160;    <span class="keyword">static</span>  <a class="code" href="classgui_1_1_gadget.html">Gadget</a>*     <a class="code" href="classgui_1_1_bouton.html#aa2fe8c85f0c0b614f70be658c22498d9">ms_btnPress</a>;     </div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a">  291</a></span>&#160;    <a class="code" href="classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a">contient</a> ( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y )</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    {</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        sf::FloatRect rect  = <a class="code" href="classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e">getGlobalBounds</a>();</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="comment">//    ////////////DEBUG/////////////</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="comment">//   // m_DEBUG_SHAPE.setPosition   ( rect.left  , rect.top      );</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="comment">//    m_DEBUG_SHAPE.setSize       ( {rect.width , rect.height}   );</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="comment">//    ////////////DEBUG/////////////</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;std::cout &lt;&lt;<span class="stringliteral">&quot;Bouton-------------\n&quot;</span>;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">// S&#39;il est contenu alors on verif le parent pour savoir par exemple si</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="comment">// le gadget est visible dans la fenetre parent.</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; <span class="comment">//   std::cout &lt;&lt;&quot;Groupe contient : &quot;;</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">if</span> ( rect.contains( sf::Vector2f ( x , y ) ) ){</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; <span class="comment">//       std::cout &lt;&lt;&quot; TRUE\n&quot;;</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">if</span> ( <a class="code" href="classgui_1_1_gadget.html#aed32b8bde0e9e8f5384adb7adf05a46a">m_parent</a> != 0 )    <span class="keywordflow">return</span>  <a class="code" href="classgui_1_1_gadget.html#aed32b8bde0e9e8f5384adb7adf05a46a">m_parent</a>-&gt;<a class="code" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3">contient</a> ( x, y );</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">else</span>                    <span class="keywordflow">return</span>  <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    } <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; <span class="comment">//       std::cout &lt;&lt;&quot; FALSE\n&quot;;</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    };</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment"></span><span class="comment">//bool</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment">//contient ( float x, float y )</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment">//{</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">//    sf::FloatRect rect  = getGlobalBounds();</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">//std::cout &lt;&lt; &quot;--- bouton -----------------------------------\n&quot;;</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">//    // S&#39;il est contenu alors on verif le parent pour savoir par exemple si</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">//    // le gadget est visible dans la fenetre parent.</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment">//    if ( rect.contains( sf::Vector2f ( x , y ) ) ){</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment">//         //   std::cout &lt;&lt; &quot;TRUE\n&quot;;</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment">//        if ( m_parent != 0 )    return  m_parent-&gt;contient ( x, y );</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment">//        else                    return  true;</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment">//    } else {</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment">//         //   std::cout &lt;&lt; &quot;FALSE\n&quot;;</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">//        return false;</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment">//    }</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment">//};</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;};</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;};</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor">#endif // BOUTON_H</span></div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;};</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;};</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="preprocessor">#endif // BOUTON_H</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
@@ -271,61 +285,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
 <div class="ttc" id="classgui_1_1_bouton_html_a8c4622de7a2b734cb88c44d6b1caca5f"><div class="ttname"><a href="classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5f">gui::Bouton::EtatBouton</a></div><div class="ttdeci">EtatBouton</div><div class="ttdoc">Les Différents états du gadget. </div><div class="ttdef"><b>Definition:</b> Bouton.h:31</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_ae56f585c1463d258f7209ade57426421"><div class="ttname"><a href="classgui_1_1_bouton.html#ae56f585c1463d258f7209ade57426421">gui::Bouton::setOutlineThickness</a></div><div class="ttdeci">virtual void setOutlineThickness(float epaisseur)</div><div class="ttdoc">Definir l&#39;épaisseur du cadre. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:88</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_a82ae2f53840fa81e95bad972a301bddb"><div class="ttname"><a href="classgui_1_1_bouton.html#a82ae2f53840fa81e95bad972a301bddb">gui::Bouton::setOutlineColor</a></div><div class="ttdeci">virtual void setOutlineColor(sf::Color color)</div><div class="ttdoc">Definir Couleur du cadre. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:81</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_a85874dc8b231bc9db24117aff6176d43"><div class="ttname"><a href="classgui_1_1_bouton.html#a85874dc8b231bc9db24117aff6176d43">gui::Bouton::actualiser</a></div><div class="ttdeci">virtual void actualiser(float deltaT) override</div><div class="ttdoc">Actualiser les éléments. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:471</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_a516b56a17aecfebb808ab94bfab93325"><div class="ttname"><a href="classgui_1_1_bouton.html#a516b56a17aecfebb808ab94bfab93325">gui::Bouton::test_declSurvol</a></div><div class="ttdeci">virtual void test_declSurvol(const sf::Event &amp;event)</div><div class="ttdoc">La gestion du survol. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:344</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a85874dc8b231bc9db24117aff6176d43"><div class="ttname"><a href="classgui_1_1_bouton.html#a85874dc8b231bc9db24117aff6176d43">gui::Bouton::actualiser</a></div><div class="ttdeci">virtual void actualiser(float deltaT) override</div><div class="ttdoc">Actualiser les éléments. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:477</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a516b56a17aecfebb808ab94bfab93325"><div class="ttname"><a href="classgui_1_1_bouton.html#a516b56a17aecfebb808ab94bfab93325">gui::Bouton::test_declSurvol</a></div><div class="ttdeci">virtual void test_declSurvol(const sf::Event &amp;event)</div><div class="ttdoc">La gestion du survol. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:350</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_aaf8a549d6be9e1639f6651a999fc7896"><div class="ttname"><a href="classgui_1_1_bouton.html#aaf8a549d6be9e1639f6651a999fc7896">gui::Bouton::getBordure</a></div><div class="ttdeci">float getBordure() const </div><div class="ttdoc">Acceder à la bordure du bouton. </div><div class="ttdef"><b>Definition:</b> Bouton.h:157</div></div>
 <div class="ttc" id="namespacegui_html"><div class="ttname"><a href="namespacegui.html">gui</a></div><div class="ttdef"><b>Definition:</b> Action.h:15</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_a39fcee6d8d115e75c29a785860be8975"><div class="ttname"><a href="classgui_1_1_bouton.html#a39fcee6d8d115e75c29a785860be8975">gui::Bouton::getLocalBounds</a></div><div class="ttdeci">virtual sf::FloatRect getLocalBounds() const </div><div class="ttdoc">Accesseur de la boundingBox en local. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:96</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_a84b817726afad13e2c93b458df712beb"><div class="ttname"><a href="classgui_1_1_bouton.html#a84b817726afad13e2c93b458df712beb">gui::Bouton::setFillColor</a></div><div class="ttdeci">virtual void setFillColor(sf::Color color)</div><div class="ttdoc">Definir Couleur du fond. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:73</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_af78a304e8e9973e54d008f13e2b91168"><div class="ttname"><a href="classgui_1_1_bouton.html#af78a304e8e9973e54d008f13e2b91168">gui::Bouton::test_declPress</a></div><div class="ttdeci">virtual void test_declPress(const sf::Event &amp;event)</div><div class="ttdoc">La gestion du survol. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:367</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_aa2fe8c85f0c0b614f70be658c22498d9"><div class="ttname"><a href="classgui_1_1_bouton.html#aa2fe8c85f0c0b614f70be658c22498d9">gui::Bouton::ms_btnPress</a></div><div class="ttdeci">static Gadget * ms_btnPress</div><div class="ttdoc">le bouton qu&#39;on est en train de presser, pour quand le relache on sache sur lequel on était...</div><div class="ttdef"><b>Definition:</b> Bouton.h:278</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_ac9a614caaf1bc56b431b15191cb47d4a"><div class="ttname"><a href="classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a">gui::Bouton::contient</a></div><div class="ttdeci">bool contient(float x, float y)</div><div class="ttdoc">Renvois si le point (x,y) est contenu dans le gadget. </div><div class="ttdef"><b>Definition:</b> Bouton.h:291</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_a1ff3d7a1586eaab5873cc6e49be2332c"><div class="ttname"><a href="classgui_1_1_bouton.html#a1ff3d7a1586eaab5873cc6e49be2332c">gui::Bouton::majGeom</a></div><div class="ttdeci">virtual void majGeom()</div><div class="ttdoc">Actualise le style du label. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:139</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_a0817c522c874f325e967a641e3f980ba"><div class="ttname"><a href="classgui_1_1_bouton.html#a0817c522c874f325e967a641e3f980ba">gui::Bouton::ms_btnSurvol</a></div><div class="ttdeci">static Gadget * ms_btnSurvol</div><div class="ttdoc">le bouton qu&#39;on est en train de survoler, pour eviter d&#39;en avoir plusieurs en meme temps quand ils so...</div><div class="ttdef"><b>Definition:</b> Bouton.h:277</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_af78a304e8e9973e54d008f13e2b91168"><div class="ttname"><a href="classgui_1_1_bouton.html#af78a304e8e9973e54d008f13e2b91168">gui::Bouton::test_declPress</a></div><div class="ttdeci">virtual void test_declPress(const sf::Event &amp;event)</div><div class="ttdoc">La gestion du survol. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:373</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_aa2fe8c85f0c0b614f70be658c22498d9"><div class="ttname"><a href="classgui_1_1_bouton.html#aa2fe8c85f0c0b614f70be658c22498d9">gui::Bouton::ms_btnPress</a></div><div class="ttdeci">static Gadget * ms_btnPress</div><div class="ttdoc">le bouton qu&#39;on est en train de presser, pour quand le relache on sache sur lequel on était...</div><div class="ttdef"><b>Definition:</b> Bouton.h:279</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a1ff3d7a1586eaab5873cc6e49be2332c"><div class="ttname"><a href="classgui_1_1_bouton.html#a1ff3d7a1586eaab5873cc6e49be2332c">gui::Bouton::majGeom</a></div><div class="ttdeci">virtual void majGeom()</div><div class="ttdoc">Actualise le style du label. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:145</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a0817c522c874f325e967a641e3f980ba"><div class="ttname"><a href="classgui_1_1_bouton.html#a0817c522c874f325e967a641e3f980ba">gui::Bouton::ms_btnSurvol</a></div><div class="ttdeci">static Gadget * ms_btnSurvol</div><div class="ttdoc">le bouton qu&#39;on est en train de survoler, pour eviter d&#39;en avoir plusieurs en meme temps quand ils so...</div><div class="ttdef"><b>Definition:</b> Bouton.h:278</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_a8c4622de7a2b734cb88c44d6b1caca5fa960ca598786d4fe54aaeeaa55af90b5a"><div class="ttname"><a href="classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5fa960ca598786d4fe54aaeeaa55af90b5a">gui::Bouton::press</a></div><div class="ttdoc">quand un bouton est cliqué. </div><div class="ttdef"><b>Definition:</b> Bouton.h:35</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_a86f25f637d31c49cbc128bbeb62b01ac"><div class="ttname"><a href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac">gui::Bouton::traiter_evenements</a></div><div class="ttdeci">virtual void traiter_evenements(const sf::Event &amp;event)</div><div class="ttdoc">La gestion des évènements utilisateurs. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:154</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a86f25f637d31c49cbc128bbeb62b01ac"><div class="ttname"><a href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac">gui::Bouton::traiter_evenements</a></div><div class="ttdeci">virtual void traiter_evenements(const sf::Event &amp;event)</div><div class="ttdoc">La gestion des évènements utilisateurs. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:160</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_a64b944ce671d491c2c14087b5727ee0b"><div class="ttname"><a href="classgui_1_1_bouton.html#a64b944ce671d491c2c14087b5727ee0b">gui::Bouton::setBordure</a></div><div class="ttdeci">void setBordure(float val)</div><div class="ttdoc">Definir la bordure du texte. </div><div class="ttdef"><b>Definition:</b> Bouton.h:148</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_a66fd43d3a26b7c86f43990d94217d5a1"><div class="ttname"><a href="classgui_1_1_bouton.html#a66fd43d3a26b7c86f43990d94217d5a1">gui::Bouton::m_bordure</a></div><div class="ttdeci">float m_bordure</div><div class="ttdoc">l&#39;espace de bordure (pour gui::boutonTexte, gui::BoutonCoher ..). </div><div class="ttdef"><b>Definition:</b> Bouton.h:271</div></div>
-<div class="ttc" id="classgui_1_1_gadget_html_aca524b5beca6fd7eb6269e32e56285a3"><div class="ttname"><a href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3">gui::Gadget::contient</a></div><div class="ttdeci">virtual bool contient(float x, float y)</div><div class="ttdoc">Renvois si le point (x,y) est contenu dans le gadget. </div><div class="ttdef"><b>Definition:</b> Gadget.cpp:202</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a1f80d29917470dc4812879ab78f64eb9"><div class="ttname"><a href="classgui_1_1_bouton.html#a1f80d29917470dc4812879ab78f64eb9">gui::Bouton::m_icone</a></div><div class="ttdeci">std::shared_ptr&lt; Image &gt; m_icone</div><div class="ttdoc">Le rectangle de l&#39;icone du bouton. </div><div class="ttdef"><b>Definition:</b> Bouton.h:268</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a66fd43d3a26b7c86f43990d94217d5a1"><div class="ttname"><a href="classgui_1_1_bouton.html#a66fd43d3a26b7c86f43990d94217d5a1">gui::Bouton::m_bordure</a></div><div class="ttdeci">float m_bordure</div><div class="ttdoc">l&#39;espace de bordure (pour gui::boutonTexte, gui::BoutonCoher ..). </div><div class="ttdef"><b>Definition:</b> Bouton.h:272</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html"><div class="ttname"><a href="classgui_1_1_bouton.html">gui::Bouton</a></div><div class="ttdoc">Gadget, simple bouton rectangulaire. </div><div class="ttdef"><b>Definition:</b> Bouton.h:22</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_a17b4a2f5c37aa2de304411d3273b584e"><div class="ttname"><a href="classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e">gui::Bouton::getGlobalBounds</a></div><div class="ttdeci">virtual sf::FloatRect getGlobalBounds() const </div><div class="ttdoc">Accesseur de la boundingBox en global. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:119</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a17b4a2f5c37aa2de304411d3273b584e"><div class="ttname"><a href="classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e">gui::Bouton::getGlobalBounds</a></div><div class="ttdeci">virtual sf::FloatRect getGlobalBounds() const </div><div class="ttdoc">Accesseur de la boundingBox en global. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:125</div></div>
 <div class="ttc" id="classgui_1_1_gadget_html"><div class="ttname"><a href="classgui_1_1_gadget.html">gui::Gadget</a></div><div class="ttdoc">Classe virtuelle, la base commune aux gadgets formant l&#39;interface. </div><div class="ttdef"><b>Definition:</b> Gadget.h:22</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_a8f8714ab82973e57eb3ee4f85c4a324b"><div class="ttname"><a href="classgui_1_1_bouton.html#a8f8714ab82973e57eb3ee4f85c4a324b">gui::Bouton::m_etatBack</a></div><div class="ttdeci">EtatBouton m_etatBack</div><div class="ttdoc">L&#39;état du bouton la frame d&#39;avant, pour verifier si changement d&#39;état. </div><div class="ttdef"><b>Definition:</b> Bouton.h:267</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_aa42416fb8136770b52737af34bcf0134"><div class="ttname"><a href="classgui_1_1_bouton.html#aa42416fb8136770b52737af34bcf0134">gui::Bouton::getSize</a></div><div class="ttdeci">virtual sf::Vector2f getSize() const </div><div class="ttdoc">Accesseur de la taille. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:65</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_a7652dfbbb1180cfecc0db6b68db38776"><div class="ttname"><a href="classgui_1_1_bouton.html#a7652dfbbb1180cfecc0db6b68db38776">gui::Bouton::setSize</a></div><div class="ttdeci">virtual void setSize(sf::Vector2f taille)</div><div class="ttdoc">Definir la taille du bouton. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:57</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_a8d736a0c912d7bb23551ccc0aaa0e20d"><div class="ttname"><a href="classgui_1_1_bouton.html#a8d736a0c912d7bb23551ccc0aaa0e20d">gui::Bouton::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target, sf::RenderStates states) const </div><div class="ttdoc">Dessiner le bouton. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:507</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a8d736a0c912d7bb23551ccc0aaa0e20d"><div class="ttname"><a href="classgui_1_1_bouton.html#a8d736a0c912d7bb23551ccc0aaa0e20d">gui::Bouton::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target, sf::RenderStates states) const </div><div class="ttdoc">Dessiner le bouton. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:513</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_aba971350f784988e1a03328264e551bb"><div class="ttname"><a href="classgui_1_1_bouton.html#aba971350f784988e1a03328264e551bb">gui::Bouton::setSkin</a></div><div class="ttdeci">virtual void setSkin(std::shared_ptr&lt; Skin &gt; skin)</div><div class="ttdoc">Définie le skin du Label. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:50</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_aa16f60426d96ef6d73a7e436d5a31027"><div class="ttname"><a href="classgui_1_1_bouton.html#aa16f60426d96ef6d73a7e436d5a31027">gui::Bouton::m_clock_dblClique</a></div><div class="ttdeci">sf::Clock m_clock_dblClique</div><div class="ttdoc">Compteur temps pour double clique. </div><div class="ttdef"><b>Definition:</b> Bouton.h:269</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_aa16f60426d96ef6d73a7e436d5a31027"><div class="ttname"><a href="classgui_1_1_bouton.html#aa16f60426d96ef6d73a7e436d5a31027">gui::Bouton::m_clock_dblClique</a></div><div class="ttdeci">sf::Clock m_clock_dblClique</div><div class="ttdoc">Compteur temps pour double clique. </div><div class="ttdef"><b>Definition:</b> Bouton.h:270</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_a8c4622de7a2b734cb88c44d6b1caca5fa0826242afa707857663ceb43c0484b4a"><div class="ttname"><a href="classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5fa0826242afa707857663ceb43c0484b4a">gui::Bouton::desactive</a></div><div class="ttdoc">visible mais inactif. </div><div class="ttdef"><b>Definition:</b> Bouton.h:32</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_acedddb0167843e9a2d039ad8113d9ae8"><div class="ttname"><a href="classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8">gui::Bouton::gerer_etat</a></div><div class="ttdeci">void gerer_etat(const sf::Event &amp;event)</div><div class="ttdef"><b>Definition:</b> Bouton.cpp:225</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_a97acf4dc98b7a574a80c45539fafb47d"><div class="ttname"><a href="classgui_1_1_bouton.html#a97acf4dc98b7a574a80c45539fafb47d">gui::Bouton::test_declRouletteSouris</a></div><div class="ttdeci">virtual void test_declRouletteSouris(const sf::Event &amp;event)</div><div class="ttdoc">La gestion du survol. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:458</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_acedddb0167843e9a2d039ad8113d9ae8"><div class="ttname"><a href="classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8">gui::Bouton::gerer_etat</a></div><div class="ttdeci">void gerer_etat(const sf::Event &amp;event)</div><div class="ttdef"><b>Definition:</b> Bouton.cpp:231</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a97acf4dc98b7a574a80c45539fafb47d"><div class="ttname"><a href="classgui_1_1_bouton.html#a97acf4dc98b7a574a80c45539fafb47d">gui::Bouton::test_declRouletteSouris</a></div><div class="ttdeci">virtual void test_declRouletteSouris(const sf::Event &amp;event)</div><div class="ttdoc">La gestion du survol. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:464</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_a8c4622de7a2b734cb88c44d6b1caca5fad0e5b1d339c41223ef5856f7663dd1c0"><div class="ttname"><a href="classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5fad0e5b1d339c41223ef5856f7663dd1c0">gui::Bouton::repos</a></div><div class="ttdoc">en attente d&#39;interaction. </div><div class="ttdef"><b>Definition:</b> Bouton.h:33</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_a92ed42af744e499c3d94b0911589761f"><div class="ttname"><a href="classgui_1_1_bouton.html#a92ed42af744e499c3d94b0911589761f">gui::Bouton::m_etat</a></div><div class="ttdeci">EtatBouton m_etat</div><div class="ttdoc">L&#39;état du bouton. </div><div class="ttdef"><b>Definition:</b> Bouton.h:266</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_a8c4622de7a2b734cb88c44d6b1caca5fa2b1991bff29414d4d3637d3641beba13"><div class="ttname"><a href="classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5fa2b1991bff29414d4d3637d3641beba13">gui::Bouton::survol</a></div><div class="ttdoc">quand la souris le survol. </div><div class="ttdef"><b>Definition:</b> Bouton.h:34</div></div>
-<div class="ttc" id="classgui_1_1_gadget_html_aed32b8bde0e9e8f5384adb7adf05a46a"><div class="ttname"><a href="classgui_1_1_gadget.html#aed32b8bde0e9e8f5384adb7adf05a46a">gui::Gadget::m_parent</a></div><div class="ttdeci">Gadget * m_parent</div><div class="ttdoc">le gadget m_parent. </div><div class="ttdef"><b>Definition:</b> Gadget.h:299</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_aed2b58479b336c984960936f3ce33caa"><div class="ttname"><a href="classgui_1_1_bouton.html#aed2b58479b336c984960936f3ce33caa">gui::Bouton::m_1erClick</a></div><div class="ttdeci">bool m_1erClick</div><div class="ttdoc">bool double clique, true lors du 1er clique, false a la fin du temps ou apres second clique...</div><div class="ttdef"><b>Definition:</b> Bouton.h:270</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_aed2b58479b336c984960936f3ce33caa"><div class="ttname"><a href="classgui_1_1_bouton.html#aed2b58479b336c984960936f3ce33caa">gui::Bouton::m_1erClick</a></div><div class="ttdeci">bool m_1erClick</div><div class="ttdoc">bool double clique, true lors du 1er clique, false a la fin du temps ou apres second clique...</div><div class="ttdef"><b>Definition:</b> Bouton.h:271</div></div>
 <div class="ttc" id="_gadget_8h_html"><div class="ttname"><a href="_gadget_8h.html">Gadget.h</a></div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_a7854d8a204c968aea377da67435bb50b"><div class="ttname"><a href="classgui_1_1_bouton.html#a7854d8a204c968aea377da67435bb50b">gui::Bouton::~Bouton</a></div><div class="ttdeci">virtual ~Bouton()</div><div class="ttdoc">Destructeur. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:44</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_a8a9c0b300e1af08d60200f29fc503031"><div class="ttname"><a href="classgui_1_1_bouton.html#a8a9c0b300e1af08d60200f29fc503031">gui::Bouton::m_fond</a></div><div class="ttdeci">std::shared_ptr&lt; Image &gt; m_fond</div><div class="ttdoc">Le rectangle du fond du bouton. </div><div class="ttdef"><b>Definition:</b> Bouton.h:268</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_a2bddc860b09865f9b96aac1f0e354714"><div class="ttname"><a href="classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714">gui::Bouton::gerer_declenchements</a></div><div class="ttdeci">void gerer_declenchements(const sf::Event &amp;event)</div><div class="ttdef"><b>Definition:</b> Bouton.cpp:285</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a8a9c0b300e1af08d60200f29fc503031"><div class="ttname"><a href="classgui_1_1_bouton.html#a8a9c0b300e1af08d60200f29fc503031">gui::Bouton::m_fond</a></div><div class="ttdeci">std::shared_ptr&lt; Image &gt; m_fond</div><div class="ttdoc">Le rectangle du fond du bouton. </div><div class="ttdef"><b>Definition:</b> Bouton.h:269</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_a2bddc860b09865f9b96aac1f0e354714"><div class="ttname"><a href="classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714">gui::Bouton::gerer_declenchements</a></div><div class="ttdeci">void gerer_declenchements(const sf::Event &amp;event)</div><div class="ttdef"><b>Definition:</b> Bouton.cpp:291</div></div>
 <div class="ttc" id="classgui_1_1_bouton_html_a98cf47d074d64c2915a24f3e9b76dfc7"><div class="ttname"><a href="classgui_1_1_bouton.html#a98cf47d074d64c2915a24f3e9b76dfc7">gui::Bouton::Bouton</a></div><div class="ttdeci">Bouton()</div><div class="ttdoc">Constructeur par défaut. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:20</div></div>
-<div class="ttc" id="classgui_1_1_bouton_html_ad21bb5a674b5e5472535090adc3a4274"><div class="ttname"><a href="classgui_1_1_bouton.html#ad21bb5a674b5e5472535090adc3a4274">gui::Bouton::test_declRelache</a></div><div class="ttdeci">virtual void test_declRelache(const sf::Event &amp;event)</div><div class="ttdoc">La gestion du survol. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:396</div></div>
+<div class="ttc" id="classgui_1_1_bouton_html_ad21bb5a674b5e5472535090adc3a4274"><div class="ttname"><a href="classgui_1_1_bouton.html#ad21bb5a674b5e5472535090adc3a4274">gui::Bouton::test_declRelache</a></div><div class="ttdeci">virtual void test_declRelache(const sf::Event &amp;event)</div><div class="ttdoc">La gestion du survol. </div><div class="ttdef"><b>Definition:</b> Bouton.cpp:402</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b7263c2df3abed61e1897d5e9e534860.html">Interface</a></li><li class="navelem"><a class="el" href="dir_b26ada46c7d42db83f11c4750604aea0.html">include</a></li><li class="navelem"><a class="el" href="dir_9ab5a57497ef2c36b4a22954635ab49a.html">gadgets</a></li><li class="navelem"><a class="el" href="_bouton_8h.html">Bouton.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
 </body>
 </html>

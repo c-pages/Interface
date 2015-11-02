@@ -64,29 +64,39 @@
 		<Unit filename="include/Skin.h" />
 		<Unit filename="include/Style.h" />
 		<Unit filename="include/gadgets/Bouton.h" />
+		<Unit filename="include/gadgets/BoutonCurseur.h" />
 		<Unit filename="include/gadgets/BoutonEncoche.h" />
+		<Unit filename="include/gadgets/BoutonFleche.h" />
+		<Unit filename="include/gadgets/BoutonRadio.h" />
 		<Unit filename="include/gadgets/BoutonSlide.h" />
 		<Unit filename="include/gadgets/BoutonTexte.h" />
+		<Unit filename="include/gadgets/ChampTexte.h" />
 		<Unit filename="include/gadgets/Contenant.h" />
 		<Unit filename="include/gadgets/Fenetre.h" />
+		<Unit filename="include/gadgets/FenetreEncastree.h" />
+		<Unit filename="include/gadgets/FenetreOnglets.h" />
 		<Unit filename="include/gadgets/Groupe.h" />
 		<Unit filename="include/gadgets/Image.h" />
 		<Unit filename="include/gadgets/Label.h" />
-		<Unit filename="include/gadgets/Texte.h" />
 		<Unit filename="src/Action.cpp" />
 		<Unit filename="src/Gadget.cpp" />
 		<Unit filename="src/Skin.cpp" />
 		<Unit filename="src/Style.cpp" />
 		<Unit filename="src/gadgets/Bouton.cpp" />
+		<Unit filename="src/gadgets/BoutonCurseur.cpp" />
 		<Unit filename="src/gadgets/BoutonEncoche.cpp" />
+		<Unit filename="src/gadgets/BoutonFleche.cpp" />
+		<Unit filename="src/gadgets/BoutonRadio.cpp" />
 		<Unit filename="src/gadgets/BoutonSlide.cpp" />
 		<Unit filename="src/gadgets/BoutonTexte.cpp" />
+		<Unit filename="src/gadgets/ChampTexte.cpp" />
 		<Unit filename="src/gadgets/Contenant.cpp" />
 		<Unit filename="src/gadgets/Fenetre.cpp" />
+		<Unit filename="src/gadgets/FenetreEncastree.cpp" />
+		<Unit filename="src/gadgets/FenetreOnglets.cpp" />
 		<Unit filename="src/gadgets/Groupe.cpp" />
 		<Unit filename="src/gadgets/Image.cpp" />
 		<Unit filename="src/gadgets/Label.cpp" />
-		<Unit filename="src/gadgets/Texte.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

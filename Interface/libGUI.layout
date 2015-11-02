@@ -6,7 +6,12 @@
 			<Cursor1 position="3619" topLine="111" />
 		</Cursor>
 	</File>
-	<File name="include\gadgets\BoutonTexte.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\gadgets\BoutonFleche.h" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\gadgets\BoutonTexte.h" open="1" top="1" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1547" topLine="27" />
 		</Cursor>
@@ -26,7 +31,7 @@
 			<Cursor1 position="2444" topLine="77" />
 		</Cursor>
 	</File>
-	<File name="GUI.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="GUI.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="914" topLine="10" />
 		</Cursor>
@@ -51,17 +56,17 @@
 			<Cursor1 position="2395" topLine="84" />
 		</Cursor>
 	</File>
-	<File name="include\gadgets\Image.h" open="0" top="0" tabpos="27" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\gadgets\Image.h" open="1" top="0" tabpos="27" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1766" topLine="114" />
 		</Cursor>
 	</File>
-	<File name="src\gadgets\BoutonEncoche.cpp" open="0" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\gadgets\BoutonEncoche.cpp" open="1" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1640" topLine="23" />
 		</Cursor>
 	</File>
-	<File name="include\gadgets\Groupe.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\gadgets\Groupe.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2728" topLine="43" />
 		</Cursor>
@@ -69,6 +74,11 @@
 	<File name="src\gadgets\BoutonSlide.cpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="6365" topLine="170" />
+		</Cursor>
+	</File>
+	<File name="include\gadgets\FenetreOnglets.h" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\Skin.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -81,6 +91,11 @@
 			<Cursor1 position="563" topLine="49" />
 		</Cursor>
 	</File>
+	<File name="src\gadgets\FenetreOnglets.cpp" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="src\Action.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="736" topLine="0" />
@@ -89,6 +104,11 @@
 	<File name="src\gadgets\Contenant.cpp" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="450" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\gadgets\BoutonRadio.cpp" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\Style.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -111,7 +131,7 @@
 			<Collapse line="422" />
 		</Folding>
 	</File>
-	<File name="include\gadgets\Texte.h" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\gadgets\ChampTexte.cpp" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
@@ -121,12 +141,12 @@
 			<Cursor1 position="4780" topLine="123" />
 		</Cursor>
 	</File>
-	<File name="src\gadgets\Groupe.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\gadgets\Groupe.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1475" topLine="10" />
 		</Cursor>
 	</File>
-	<File name="src\gadgets\Texte.cpp" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\gadgets\ChampTexte.h" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
@@ -136,9 +156,14 @@
 			<Cursor1 position="1962" topLine="53" />
 		</Cursor>
 	</File>
-	<File name="src\gadgets\Image.cpp" open="0" top="0" tabpos="28" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\gadgets\Image.cpp" open="1" top="0" tabpos="28" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2879" topLine="70" />
+		</Cursor>
+	</File>
+	<File name="include\gadgets\BoutonRadio.h" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\gadgets\Fenetre.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -151,9 +176,24 @@
 			<Cursor1 position="1220" topLine="28" />
 		</Cursor>
 	</File>
-	<File name="include\gadgets\BoutonEncoche.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\gadgets\BoutonCurseur.h" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\gadgets\FenetreEncastree.h" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\gadgets\BoutonEncoche.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1788" topLine="27" />
+		</Cursor>
+	</File>
+	<File name="src\gadgets\FenetreEncastree.cpp" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

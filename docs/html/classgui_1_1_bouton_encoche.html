@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -71,6 +79,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="functions.html"><span>Champs&#160;de&#160;donnée</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classgui_1_1_bouton_encoche.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -85,11 +108,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacegui.html">gui</a></li><li class="navelem"><a class="el" href="classgui_1_1_bouton_encoche.html">BoutonEncoche</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
@@ -113,7 +131,7 @@ Graphe d'héritage de gui::BoutonEncoche:</div>
 <area shape="rect" id="node3" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. " alt="" coords="116,80,205,107"/>
 <area shape="rect" id="node4" href="classgui_1_1_action.html" title="Classe virtuelle permetant de lier des évenements à des fonctions. " alt="" coords="5,5,89,32"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
 <div class="dynheader">
 Graphe de collaboration de gui::BoutonEncoche:</div>
 <div class="dyncontent">
@@ -124,7 +142,7 @@ Graphe de collaboration de gui::BoutonEncoche:</div>
 <area shape="rect" id="node7" href="classgui_1_1_image.html" title="Gadget Un simple gadget permettant d&#39;afficher une image ou une couleur uni. " alt="" coords="221,185,303,212"/>
 <area shape="rect" id="node4" href="classgui_1_1_action.html" title="Classe virtuelle permetant de lier des évenements à des fonctions. " alt="" coords="5,5,89,32"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
@@ -248,12 +266,18 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ab2bd5264b770b78ecc59d2f1b7486aa6 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#ab2bd5264b770b78ecc59d2f1b7486aa6">aSupprimer</a> ()</td></tr>
 <tr class="memdesc:ab2bd5264b770b78ecc59d2f1b7486aa6 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">demande si le gadget est en attente de suppression  <a href="#ab2bd5264b770b78ecc59d2f1b7486aa6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ab2bd5264b770b78ecc59d2f1b7486aa6 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d0b7310b6a61f2e9feee6b52275462 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#af2d0b7310b6a61f2e9feee6b52275462">demanderActualisation</a> ()</td></tr>
+<tr class="memdesc:af2d0b7310b6a61f2e9feee6b52275462 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">demande si le gadget est en attente de suppression  <a href="#af2d0b7310b6a61f2e9feee6b52275462">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af2d0b7310b6a61f2e9feee6b52275462 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf55e6760cf3d4ef586ce87c07cfae7c inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#adf55e6760cf3d4ef586ce87c07cfae7c">supprimer</a> ()</td></tr>
 <tr class="memdesc:adf55e6760cf3d4ef586ce87c07cfae7c inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demander la suppression de ce gadget.  <a href="#adf55e6760cf3d4ef586ce87c07cfae7c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:adf55e6760cf3d4ef586ce87c07cfae7c inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a093269333aa3725e27ca92a4a48e4dfb inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a093269333aa3725e27ca92a4a48e4dfb">rotate</a> (float x)</td></tr>
 <tr class="memdesc:a093269333aa3725e27ca92a4a48e4dfb inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">overload annulant la fonction rotate  <a href="#a093269333aa3725e27ca92a4a48e4dfb">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a093269333aa3725e27ca92a4a48e4dfb inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca524b5beca6fd7eb6269e32e56285a3 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3">contient</a> (float x, float y)</td></tr>
+<tr class="memdesc:aca524b5beca6fd7eb6269e32e56285a3 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvois si le point (x,y) est contenu dans le gadget.  <a href="#aca524b5beca6fd7eb6269e32e56285a3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aca524b5beca6fd7eb6269e32e56285a3 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classgui_1_1_action"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classgui_1_1_action')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="classgui_1_1_action.html">gui::Action</a></td></tr>
 <tr class="memitem:a70035bc714f01d2f47c58b4dc159fb32 inherit pub_methods_classgui_1_1_action"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_action.html#a70035bc714f01d2f47c58b4dc159fb32">lier</a> (<a class="el" href="namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e">Evenements</a> evt, const <a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> &amp;fonction)</td></tr>
 <tr class="memdesc:a70035bc714f01d2f47c58b4dc159fb32 inherit pub_methods_classgui_1_1_action"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute un ecouteur d'evenement associé à une fonction lambda(FuncType) à executer lors du déclenchement de l'evenement.  <a href="#a70035bc714f01d2f47c58b4dc159fb32">Plus de détails...</a><br /></td></tr>
@@ -314,10 +338,6 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="memitem:a7338e98b0107777d8168bb12a021167b inherit pub_static_attribs_classgui_1_1_action"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_action.html#a7338e98b0107777d8168bb12a021167b">defaultFunc</a> = []( )-&gt;void{}</td></tr>
 <tr class="memdesc:a7338e98b0107777d8168bb12a021167b inherit pub_static_attribs_classgui_1_1_action"><td class="mdescLeft">&#160;</td><td class="mdescRight">type par defaut de la fonction lambda.  <a href="#a7338e98b0107777d8168bb12a021167b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a7338e98b0107777d8168bb12a021167b inherit pub_static_attribs_classgui_1_1_action"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classgui_1_1_bouton"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classgui_1_1_bouton')"><img src="closed.png" alt="-"/>&#160;Fonctions membres protégées hérités de <a class="el" href="classgui_1_1_bouton.html">gui::Bouton</a></td></tr>
-<tr class="memitem:ac9a614caaf1bc56b431b15191cb47d4a inherit pro_methods_classgui_1_1_bouton"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a">contient</a> (float x, float y)</td></tr>
-<tr class="memdesc:ac9a614caaf1bc56b431b15191cb47d4a inherit pro_methods_classgui_1_1_bouton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvois si le point (x,y) est contenu dans le gadget.  <a href="#ac9a614caaf1bc56b431b15191cb47d4a">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ac9a614caaf1bc56b431b15191cb47d4a inherit pro_methods_classgui_1_1_bouton"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classgui_1_1_action"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classgui_1_1_action')"><img src="closed.png" alt="-"/>&#160;Fonctions membres protégées hérités de <a class="el" href="classgui_1_1_action.html">gui::Action</a></td></tr>
 <tr class="memitem:aa7481b3efcebd774ad68bf1a4308041a inherit pro_methods_classgui_1_1_action"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a">declencher</a> (<a class="el" href="namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e">Evenements</a> evt)</td></tr>
 <tr class="memdesc:aa7481b3efcebd774ad68bf1a4308041a inherit pro_methods_classgui_1_1_action"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déclencher la fonction associé à l'évenement.  <a href="#aa7481b3efcebd774ad68bf1a4308041a">Plus de détails...</a><br /></td></tr>
@@ -332,6 +352,9 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="memitem:a8f8714ab82973e57eb3ee4f85c4a324b inherit pro_attribs_classgui_1_1_bouton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5f">EtatBouton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_bouton.html#a8f8714ab82973e57eb3ee4f85c4a324b">m_etatBack</a></td></tr>
 <tr class="memdesc:a8f8714ab82973e57eb3ee4f85c4a324b inherit pro_attribs_classgui_1_1_bouton"><td class="mdescLeft">&#160;</td><td class="mdescRight">L'état du bouton la frame d'avant, pour verifier si changement d'état.  <a href="#a8f8714ab82973e57eb3ee4f85c4a324b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8f8714ab82973e57eb3ee4f85c4a324b inherit pro_attribs_classgui_1_1_bouton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f80d29917470dc4812879ab78f64eb9 inherit pro_attribs_classgui_1_1_bouton"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_bouton.html#a1f80d29917470dc4812879ab78f64eb9">m_icone</a></td></tr>
+<tr class="memdesc:a1f80d29917470dc4812879ab78f64eb9 inherit pro_attribs_classgui_1_1_bouton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le rectangle de l'icone du bouton.  <a href="#a1f80d29917470dc4812879ab78f64eb9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1f80d29917470dc4812879ab78f64eb9 inherit pro_attribs_classgui_1_1_bouton"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a9c0b300e1af08d60200f29fc503031 inherit pro_attribs_classgui_1_1_bouton"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_bouton.html#a8a9c0b300e1af08d60200f29fc503031">m_fond</a></td></tr>
 <tr class="memdesc:a8a9c0b300e1af08d60200f29fc503031 inherit pro_attribs_classgui_1_1_bouton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le rectangle du fond du bouton.  <a href="#a8a9c0b300e1af08d60200f29fc503031">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8a9c0b300e1af08d60200f29fc503031 inherit pro_attribs_classgui_1_1_bouton"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -361,8 +384,11 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="memdesc:a6d7bd13de67c1577d6fa5073cb35edc9 inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">le style du gadget.  <a href="#a6d7bd13de67c1577d6fa5073cb35edc9">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6d7bd13de67c1577d6fa5073cb35edc9 inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a809f2e60f57a303c874624b2671022ef inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a809f2e60f57a303c874624b2671022ef">m_enable</a></td></tr>
-<tr class="memdesc:a809f2e60f57a303c874624b2671022ef inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">si le gadget est actif ou pas.  <a href="#a809f2e60f57a303c874624b2671022ef">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a809f2e60f57a303c874624b2671022ef inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">si le gadget est actif ou pas. ( visible mais pas utilisable. )  <a href="#a809f2e60f57a303c874624b2671022ef">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a809f2e60f57a303c874624b2671022ef inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10fc45e0ac3da5339be2e1efb9fed289 inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a10fc45e0ac3da5339be2e1efb9fed289">m_visible</a></td></tr>
+<tr class="memdesc:a10fc45e0ac3da5339be2e1efb9fed289 inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">si le gadget est visible ou pas.  <a href="#a10fc45e0ac3da5339be2e1efb9fed289">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a10fc45e0ac3da5339be2e1efb9fed289 inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a90fbf5cca8da8ab438bd54f22d7412 inherit pro_attribs_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a5a90fbf5cca8da8ab438bd54f22d7412">m_aSupprimer</a></td></tr>
 <tr class="memdesc:a5a90fbf5cca8da8ab438bd54f22d7412 inherit pro_attribs_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">On le passe à true quand on veut supprimer ce gadget (il sera supprimé par son parent au debut de l'actualisation).  <a href="#a5a90fbf5cca8da8ab438bd54f22d7412">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5a90fbf5cca8da8ab438bd54f22d7412 inherit pro_attribs_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -386,6 +412,7 @@ Membres hérités additionnels</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a>, bouton rectangulaire à cocher,. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">A faire:</a></b></dt><dd>à developper.</dd></dl>
 <dl class="section see"><dt>Voir également</dt><dd><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">gui::Gadget</a> </dd></dl>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="af091f97a68863b3975199b39f0797335"></a>
@@ -750,11 +777,15 @@ Voici le graphe d'appel pour cette fonction :</div>
 <li>Interface/src/gadgets/<a class="el" href="_bouton_encoche_8cpp.html">BoutonEncoche.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacegui.html">gui</a></li><li class="navelem"><a class="el" href="classgui_1_1_bouton_encoche.html">BoutonEncoche</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
 </body>
 </html>

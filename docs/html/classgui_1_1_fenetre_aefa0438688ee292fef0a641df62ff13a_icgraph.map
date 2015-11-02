@@ -1,5 +1,4 @@
 <map id="gui::Fenetre::initUI_redim" name="gui::Fenetre::initUI_redim">
 <area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="181,13,309,39"/>
-<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a104f8f9143a7280d7d56ca2d2a539123" title="Initialisation lors de la création. " alt="" coords="357,13,473,39"/>
-<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="521,13,664,39"/>
+<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="357,13,500,39"/>
 </map>

@@ -67,7 +67,6 @@ Fenetre::Fenetre(   sf::RenderWindow  *     fenetre
 , m_redimGauche     ( false )
 , m_redimBas        ( false )
 , m_redimHaut       ( false )
-, m_debug ( new sf::RectangleShape())
 {
     initUI();
 }
@@ -93,7 +92,6 @@ Fenetre::Fenetre(   sf::RenderWindow *  fenetre
 , m_redimGauche     ( false )
 , m_redimBas        ( false )
 , m_redimHaut       ( false )
-, m_debug ( new sf::RectangleShape())
 {
     initUI();
 }
@@ -108,7 +106,6 @@ Fenetre::~Fenetre()
 void
 Fenetre::initUI()
 {
-m_debug = std::shared_ptr<sf::RectangleShape>  ( new sf::RectangleShape());
 
     // le fond
     m_fond = std::shared_ptr<Image>   ( new Image    ( ) );
@@ -722,17 +719,7 @@ Fenetre::traiter_evenements ( const sf::Event& event ) {
 /////////////////////////////////////////////////
 void
 Fenetre::actualiser ( float deltaT )    {
-/*
-m_debug->setPosition (m_contenant->getContenuBounds().left , m_contenant->getContenuBounds().top);
-m_debug->setPosition ({m_contenant->getContenuBounds().width , m_contenant->getContenuBounds().height});
-m_debug->setFillColor(sf::Color(255,255,255,0));
 
-m_debug->setOutlineColor(sf::Color(255,255,255));
-m_debug->setOutlineThickness( 1 );
-
-
-
-*/
 
 /*
 std::cout << "---------------------------------------------------------\n";
@@ -763,6 +750,9 @@ std::cout << "m_contenant->getContenuBounds().height : " << m_contenant->getCont
 void
 Fenetre::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
 
+    if ( not m_visible ) return;
+
+
     // appliquer les transformations de la fenêtre au states
     states.transform *= getTransform();
 
@@ -772,7 +762,6 @@ Fenetre::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
 
     target.draw      ( *m_grpUI , states );
 
-    target.draw      ( *m_debug , states );
 
 
 //    // dessiner les éléments de l'UI de la fenetre

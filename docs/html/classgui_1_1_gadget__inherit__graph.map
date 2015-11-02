@@ -1,13 +1,13 @@
 <map id="gui::Gadget" name="gui::Gadget">
-<area shape="rect" id="node5" href="$classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. " alt="" coords="327,31,415,57"/>
-<area shape="rect" id="node8" href="$classgui_1_1_bouton_slide.html" title="Gadget, pour le defilement du contenu dans les fenetres. " alt="" coords="312,81,429,108"/>
-<area shape="rect" id="node9" href="$classgui_1_1_contenant.html" title="Gadget Permet d&#39;afficher un ensemble de gadget dans une fenetre de contenu. " alt="" coords="317,132,424,159"/>
-<area shape="rect" id="node10" href="$classgui_1_1_fenetre.html" title="Gadget permettant de rassembler des Gadgets au sein d&#39;une Fenetre. " alt="" coords="325,183,416,209"/>
-<area shape="rect" id="node12" href="$classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets. " alt="" coords="326,233,415,260"/>
-<area shape="rect" id="node13" href="$classgui_1_1_image.html" title="Gadget Un simple gadget permettant d&#39;afficher une image ou une couleur uni. " alt="" coords="329,284,412,311"/>
-<area shape="rect" id="node14" href="$classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. " alt="" coords="331,335,410,361"/>
-<area shape="rect" id="node2" href="$classgui_1_1_action.html" title="Classe virtuelle permetant de lier des évenements à des fonctions. " alt="" coords="24,132,108,159"/>
-<area shape="rect" id="node6" href="$classgui_1_1_bouton_encoche.html" title="Gadget, bouton rectangulaire à cocher,. " alt="" coords="485,5,624,32"/>
-<area shape="rect" id="node7" href="$classgui_1_1_bouton_texte.html" title="Gadget, bouton rectangulaire (gui::Bouton) combiné à un Label (gui::texte). " alt="" coords="495,56,615,83"/>
-<area shape="rect" id="node11" href="$classgui_1_1_fenetre__encastree.html" title="gui::Fenetre_encastree" alt="" coords="477,183,632,209"/>
+<area shape="rect" id="node5" href="$classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. " alt="" coords="343,31,431,57"/>
+<area shape="rect" id="node8" href="$classgui_1_1_bouton_slide.html" title="Gadget, pour le defilement du contenu dans les fenetres. " alt="" coords="329,81,446,108"/>
+<area shape="rect" id="node9" href="$classgui_1_1_contenant.html" title="Gadget Permet d&#39;afficher un ensemble de gadget dans une fenetre de contenu. " alt="" coords="334,132,441,159"/>
+<area shape="rect" id="node10" href="$classgui_1_1_fenetre.html" title="Gadget permettant de rassembler des Gadgets au sein d&#39;une Fenetre. " alt="" coords="342,183,433,209"/>
+<area shape="rect" id="node11" href="$classgui_1_1_fenetre_encastree.html" title="une fenetre encastrée dans un des quatre coté de la fenêtre SFML. " alt="" coords="312,233,463,260"/>
+<area shape="rect" id="node12" href="$classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets. " alt="" coords="343,284,432,311"/>
+<area shape="rect" id="node13" href="$classgui_1_1_image.html" title="Gadget Un simple gadget permettant d&#39;afficher une image ou une couleur uni. " alt="" coords="346,335,429,361"/>
+<area shape="rect" id="node14" href="$classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. " alt="" coords="348,385,427,412"/>
+<area shape="rect" id="node2" href="$classgui_1_1_action.html" title="Classe virtuelle permetant de lier des évenements à des fonctions. " alt="" coords="24,157,108,184"/>
+<area shape="rect" id="node6" href="$classgui_1_1_bouton_encoche.html" title="Gadget, bouton rectangulaire à cocher,. " alt="" coords="511,5,649,32"/>
+<area shape="rect" id="node7" href="$classgui_1_1_bouton_texte.html" title="Gadget, bouton rectangulaire (gui::Bouton) combiné à un Label (gui::texte). " alt="" coords="520,56,640,83"/>
 </map>

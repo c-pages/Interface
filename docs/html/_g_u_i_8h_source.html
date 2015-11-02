@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -69,6 +77,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_g_u_i_8h_source.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +106,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_b7263c2df3abed61e1897d5e9e534860.html">Interface</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">GUI.h</div>  </div>
@@ -111,33 +129,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_image_8h.html">gadgets/Image.h</a>&gt;</span>              <span class="comment">// ---&gt;    affiche image ou couleur</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_label_8h.html">gadgets/Label.h</a>&gt;</span>              <span class="comment">// ---&gt;    affiche txt</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//boutons</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bouton_8h.html">gadgets/Bouton.h</a>&gt;</span>             <span class="comment">// ---&gt;    declenche des fcts</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bouton_texte_8h.html">gadgets/BoutonTexte.h</a>&gt;</span>        <span class="comment">// ---&gt;    declenche des fcts</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bouton_encoche_8h.html">gadgets/BoutonEncoche.h</a>&gt;</span>      <span class="comment">// ---&gt;    0 ou 1</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bouton_slide_8h.html">gadgets/BoutonSlide.h</a>&gt;</span>        <span class="comment">// ---&gt;    pour defilement de contenu dans le fenetres</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//fenetre et groupes</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_contenant_8h.html">gadgets/Contenant.h</a>&gt;</span>          <span class="comment">// ---&gt;    groupe de gadgets   grp</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_groupe_8h.html">gadgets/Groupe.h</a>&gt;</span>             <span class="comment">// ---&gt;    groupe de gadgets   grp</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_fenetre_8h.html">gadgets/Fenetre.h</a>&gt;</span>            <span class="comment">// ---&gt;    fenetre               grp  + btn:(drag, redim, fermer)</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_fenetre__encastree_8h.html">gadgets/Fenetre_encastree.h</a>&gt;</span>  <span class="comment">// ---&gt;    fenetre encastrée sur un bord de la fenetre SFML</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// NOTES //////////////////////////////////////////////////////////////////////////////</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//*============  groups     =========*/</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//#include &lt;gadgets/Groupe.h&gt;      // ---&gt;    group invisible       grp</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_champ_texte_8h.html">gadgets/ChampTexte.h</a>&gt;</span>         <span class="comment">// ---&gt;    Champ de saisie de texte. ( a developper )</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//boutons</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bouton_8h.html">gadgets/Bouton.h</a>&gt;</span>             <span class="comment">// ---&gt;    declenche des fcts</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bouton_texte_8h.html">gadgets/BoutonTexte.h</a>&gt;</span>        <span class="comment">// ---&gt;    declenche des fcts</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bouton_encoche_8h.html">gadgets/BoutonEncoche.h</a>&gt;</span>      <span class="comment">// ---&gt;    0 ou 1</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bouton_slide_8h.html">gadgets/BoutonSlide.h</a>&gt;</span>        <span class="comment">// ---&gt;    pour defilement de contenu dans le fenetres</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//fenetre et groupes</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_contenant_8h.html">gadgets/Contenant.h</a>&gt;</span>          <span class="comment">// ---&gt;    groupe de gadgets   grp</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_groupe_8h.html">gadgets/Groupe.h</a>&gt;</span>             <span class="comment">// ---&gt;    groupe de gadgets   grp</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_fenetre_8h.html">gadgets/Fenetre.h</a>&gt;</span>            <span class="comment">// ---&gt;    fenetre               grp  + btn:(drag, redim, fermer)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//#include &lt;gadgets/Fenetre_encastree.h&gt;  // ---&gt;    fenetre encastrée sur un bord de la fenetre SFML</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// NOTES //////////////////////////////////////////////////////////////////////////////</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//*============  fenetres     =========*/</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif // GUI_H</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//*============  groups     =========*/</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//#include &lt;gadgets/Groupe.h&gt;      // ---&gt;    group invisible       grp</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//*============  fenetres     =========*/</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif // GUI_H</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="ttc" id="_bouton_slide_8h_html"><div class="ttname"><a href="_bouton_slide_8h.html">BoutonSlide.h</a></div></div>
 <div class="ttc" id="_skin_8h_html"><div class="ttname"><a href="_skin_8h.html">Skin.h</a></div></div>
 <div class="ttc" id="_style_8h_html"><div class="ttname"><a href="_style_8h.html">Style.h</a></div></div>
@@ -145,19 +167,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="ttc" id="_bouton_texte_8h_html"><div class="ttname"><a href="_bouton_texte_8h.html">BoutonTexte.h</a></div></div>
 <div class="ttc" id="_groupe_8h_html"><div class="ttname"><a href="_groupe_8h.html">Groupe.h</a></div></div>
 <div class="ttc" id="_action_8h_html"><div class="ttname"><a href="_action_8h.html">Action.h</a></div></div>
+<div class="ttc" id="_champ_texte_8h_html"><div class="ttname"><a href="_champ_texte_8h.html">ChampTexte.h</a></div></div>
 <div class="ttc" id="_contenant_8h_html"><div class="ttname"><a href="_contenant_8h.html">Contenant.h</a></div></div>
 <div class="ttc" id="_bouton_8h_html"><div class="ttname"><a href="_bouton_8h.html">Bouton.h</a></div></div>
 <div class="ttc" id="_image_8h_html"><div class="ttname"><a href="_image_8h.html">Image.h</a></div></div>
 <div class="ttc" id="_fenetre_8h_html"><div class="ttname"><a href="_fenetre_8h.html">Fenetre.h</a></div></div>
-<div class="ttc" id="_fenetre__encastree_8h_html"><div class="ttname"><a href="_fenetre__encastree_8h.html">Fenetre_encastree.h</a></div></div>
 <div class="ttc" id="_label_8h_html"><div class="ttname"><a href="_label_8h.html">Label.h</a></div></div>
 <div class="ttc" id="_gadget_8h_html"><div class="ttname"><a href="_gadget_8h.html">Gadget.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b7263c2df3abed61e1897d5e9e534860.html">Interface</a></li><li class="navelem"><a class="el" href="_g_u_i_8h.html">GUI.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
 </body>
 </html>

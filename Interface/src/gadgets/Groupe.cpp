@@ -92,12 +92,16 @@ Groupe::setSize ( sf::Vector2f taille ) {
 void
 Groupe::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const
 {
+    if ( not m_visible ) return;
+
+
     // le transform du gadget combiné au transform parents (states).
     states.transform *= getTransform();
 
     // dessiner les gadgets enfants
     for ( const ptr& enfant : m_enfants )
-        target.draw      ( *enfant , states );
+        if (enfant->m_visible )
+            target.draw      ( *enfant , states );
 }
 } // fin namespace gui
 

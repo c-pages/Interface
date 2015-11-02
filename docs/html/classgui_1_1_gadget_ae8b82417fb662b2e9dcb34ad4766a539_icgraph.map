@@ -1,12 +1,11 @@
 <map id="gui::Gadget::getPosAbs" name="gui::Gadget::getPosAbs">
-<area shape="rect" id="node2" href="$classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e" title="Accesseur de la boundingBox en global. " alt="" coords="217,13,411,39"/>
-<area shape="rect" id="node6" href="$classgui_1_1_bouton_slide.html#a2715c919006b143bad7b2bd54544d574" title="Acceder à la boundingBox global. " alt="" coords="224,64,404,105"/>
-<area shape="rect" id="node7" href="$classgui_1_1_contenant.html#a6e3ab5e79636f350c1ab5d04efaae38e" title="Accesseur de la boundingBox globale. " alt="" coords="229,129,399,171"/>
-<area shape="rect" id="node8" href="$classgui_1_1_fenetre.html#a41e839460298a6f94327dca022ad8fb8" title="Accesseur de la boundingBox en global. " alt="" coords="215,195,413,222"/>
-<area shape="rect" id="node10" href="$classgui_1_1_groupe.html#a0864f0a85cefb3a2268bb69f7046f5b9" title="Accesseur de la boundingBox globale. " alt="" coords="216,246,412,273"/>
-<area shape="rect" id="node11" href="$classgui_1_1_label.html#a5cdb2304ef0b04956246301dbde2695f" title="Accesseur de la boundingBox en global. " alt="" coords="221,297,407,323"/>
-<area shape="rect" id="node3" href="$classgui_1_1_bouton.html#ac9a614caaf1bc56b431b15191cb47d4a" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="461,13,604,39"/>
-<area shape="rect" id="node4" href="$classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="652,13,807,39"/>
-<area shape="rect" id="node5" href="$classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="855,5,984,47"/>
-<area shape="rect" id="node9" href="$classgui_1_1_fenetre.html#a4a9b783095e1ebf716f16042efa33da9" title="Acceder à la taille de la fenetre. " alt="" coords="461,195,604,222"/>
+<area shape="rect" id="node2" href="$classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e" title="Accesseur de la boundingBox en global. " alt="" coords="217,5,411,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_bouton_slide.html#a2715c919006b143bad7b2bd54544d574" title="Acceder à la boundingBox global. " alt="" coords="224,57,404,98"/>
+<area shape="rect" id="node4" href="$classgui_1_1_contenant.html#a6e3ab5e79636f350c1ab5d04efaae38e" title="Accesseur de la boundingBox globale. " alt="" coords="229,122,399,163"/>
+<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#a6737878bb01ee3438b4f0167a9fc6d76" title="Accesseur de la boundingBox en global. " alt="" coords="215,188,413,215"/>
+<area shape="rect" id="node7" href="$classgui_1_1_fenetre_encastree.html#aa0ef9f9010f20f9d96c950826f89fde6" title="Accesseur de la boundingBox en global. " alt="" coords="239,239,389,281"/>
+<area shape="rect" id="node9" href="$classgui_1_1_groupe.html#a0864f0a85cefb3a2268bb69f7046f5b9" title="Accesseur de la boundingBox globale. " alt="" coords="216,305,412,332"/>
+<area shape="rect" id="node10" href="$classgui_1_1_label.html#a5cdb2304ef0b04956246301dbde2695f" title="Accesseur de la boundingBox en global. " alt="" coords="221,356,407,383"/>
+<area shape="rect" id="node6" href="$classgui_1_1_fenetre.html#a4a9b783095e1ebf716f16042efa33da9" title="Acceder à la taille de la fenetre. " alt="" coords="465,188,608,215"/>
+<area shape="rect" id="node8" href="$classgui_1_1_fenetre_encastree.html#a8566b4f7e4f06bd72d0a0b8699758d6d" title="Acceder à la taille de la fenetre. " alt="" coords="461,239,612,281"/>
 </map>

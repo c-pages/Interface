@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -104,6 +112,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_func_g.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -138,6 +160,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>getBordure()
 : <a class="el" href="classgui_1_1_bouton.html#aaf8a549d6be9e1639f6651a999fc7896">gui::Bouton</a>
 , <a class="el" href="classgui_1_1_fenetre.html#aad9a49186fcd094f418ac90fb45c3bb6">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre_encastree.html#ab46e765fa89cdb3f79d042317dc5c0ac">gui::FenetreEncastree</a>
 </li>
 <li>getContenuBounds()
 : <a class="el" href="classgui_1_1_contenant.html#a4eb7dd3d7f12052c4c6e481e0308e318">gui::Contenant</a>
@@ -152,7 +175,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 : <a class="el" href="classgui_1_1_bouton.html#a17b4a2f5c37aa2de304411d3273b584e">gui::Bouton</a>
 , <a class="el" href="classgui_1_1_bouton_slide.html#a2715c919006b143bad7b2bd54544d574">gui::BoutonSlide</a>
 , <a class="el" href="classgui_1_1_contenant.html#a6e3ab5e79636f350c1ab5d04efaae38e">gui::Contenant</a>
-, <a class="el" href="classgui_1_1_fenetre.html#a41e839460298a6f94327dca022ad8fb8">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre.html#a6737878bb01ee3438b4f0167a9fc6d76">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre_encastree.html#aa0ef9f9010f20f9d96c950826f89fde6">gui::FenetreEncastree</a>
 , <a class="el" href="classgui_1_1_gadget.html#a393fef359f85de77d5067ebb39039201">gui::Gadget</a>
 , <a class="el" href="classgui_1_1_groupe.html#a0864f0a85cefb3a2268bb69f7046f5b9">gui::Groupe</a>
 , <a class="el" href="classgui_1_1_image.html#ae047970d6f90ea9ad81675491166147b">gui::Image</a>
@@ -162,7 +186,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 : <a class="el" href="classgui_1_1_bouton.html#a39fcee6d8d115e75c29a785860be8975">gui::Bouton</a>
 , <a class="el" href="classgui_1_1_bouton_slide.html#ae00bef6b47bd5a5a72f64176f9090650">gui::BoutonSlide</a>
 , <a class="el" href="classgui_1_1_contenant.html#ae483e43924ff6539aced8ad5abd1cf73">gui::Contenant</a>
-, <a class="el" href="classgui_1_1_fenetre.html#a18e9f2f566b150967a4cc141059ecd81">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre.html#a24c757c57ffaec7174bfd044346538b1">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre_encastree.html#a12fa2cc967555312ef57f25796c4bc0f">gui::FenetreEncastree</a>
 , <a class="el" href="classgui_1_1_gadget.html#a3479c624ae533156f318dc2b996eded3">gui::Gadget</a>
 , <a class="el" href="classgui_1_1_groupe.html#a08b4747002ba471a6b2a7ae29b83646d">gui::Groupe</a>
 , <a class="el" href="classgui_1_1_image.html#a724e064620b575d25b234efc1e678942">gui::Image</a>
@@ -179,6 +204,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 , <a class="el" href="classgui_1_1_bouton_slide.html#a1fa34aa9d3e12f408573086f27f41bba">gui::BoutonSlide</a>
 , <a class="el" href="classgui_1_1_contenant.html#a2cad8148708d6af3f8b5c311c21d2da0">gui::Contenant</a>
 , <a class="el" href="classgui_1_1_fenetre.html#a4a9b783095e1ebf716f16042efa33da9">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre_encastree.html#a8566b4f7e4f06bd72d0a0b8699758d6d">gui::FenetreEncastree</a>
 , <a class="el" href="classgui_1_1_gadget.html#af3bf6c3eafa429927505416d71a87ee4">gui::Gadget</a>
 , <a class="el" href="classgui_1_1_groupe.html#abe6ed92c02e4be00f631a0223acf12f9">gui::Groupe</a>
 , <a class="el" href="classgui_1_1_image.html#ad9612f9f7fac87237e204db2652ec83a">gui::Image</a>
@@ -189,19 +215,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </li>
 <li>getTexte()
 : <a class="el" href="classgui_1_1_bouton_texte.html#ac4b5e2d15656cbc05f0a2d07bd77762d">gui::BoutonTexte</a>
-, <a class="el" href="classgui_1_1_fenetre.html#abd83d79ce97d85da5edeb5f4766efe79">gui::Fenetre</a>
 , <a class="el" href="classgui_1_1_label.html#afc87320a14f65877923bfacb79f49def">gui::Label</a>
+</li>
+<li>getTitre()
+: <a class="el" href="classgui_1_1_fenetre.html#a24226f80b36a5e49b63d24ee1105f41c">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre_encastree.html#a9683049e8cc083e2e0aeebecdbac0ed0">gui::FenetreEncastree</a>
 </li>
 <li>Groupe()
 : <a class="el" href="classgui_1_1_groupe.html#a736fd77452318eeaffbf3f882544287e">gui::Groupe</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
 </body>
 </html>

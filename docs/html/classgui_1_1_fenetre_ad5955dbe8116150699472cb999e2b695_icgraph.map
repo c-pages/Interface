@@ -1,18 +1,12 @@
 <map id="gui::Fenetre::updateStyle" name="gui::Fenetre::updateStyle">
-<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a104f8f9143a7280d7d56ca2d2a539123" title="Initialisation lors de la création. " alt="" coords="1055,93,1171,120"/>
-<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="221,220,376,247"/>
-<area shape="rect" id="node16" href="$classgui_1_1_fenetre.html#a37372701177040788a49d371417dcb9d" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="453,397,593,424"/>
-<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="1219,93,1361,120"/>
-<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#a0ef3d718be52458dc0c9137f669819fc" title="Definir la taille du contenu. " alt="" coords="452,43,595,69"/>
-<area shape="rect" id="node6" href="$classgui_1_1_fenetre.html#a5c9d501e681cd47ad4b7031d18352b9b" title="Definir l&#39;epaisseur de la bordure. " alt="" coords="442,93,605,120"/>
-<area shape="rect" id="node7" href="$classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="879,220,1007,247"/>
-<area shape="rect" id="node8" href="$classgui_1_1_fenetre.html#a8992718e77503be5cfd37defe04f1dba" title="Definir le titre. " alt="" coords="449,195,598,221"/>
-<area shape="rect" id="node9" href="$classgui_1_1_fenetre.html#a8036216c6c1895f10b913581e1b6f493" title="Pour lier les élément de l&#39;interface de la fenetre à la fenêtre. " alt="" coords="448,245,599,272"/>
-<area shape="rect" id="node13" href="$classgui_1_1_fenetre.html#a77869f5bdb4c4a6c1d40a5cff3b9250b" title="ajouter un enfant " alt="" coords="454,296,593,323"/>
-<area shape="rect" id="node14" href="$classgui_1_1_fenetre.html#a714cf4ba2a7e1489204b68beaa594e27" title="les manipulation de drag et de redimensionnement. " alt="" coords="424,347,623,373"/>
-<area shape="rect" id="node10" href="$classgui_1_1_fenetre.html#a72881398e744a405b56046d60917d1de" title="Initialiser l&#39;interface pour prendre en compte le drag. " alt="" coords="671,245,831,272"/>
-<area shape="rect" id="node11" href="$classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="687,297,815,338"/>
-<area shape="rect" id="node12" href="$classgui_1_1_fenetre.html#aefa0438688ee292fef0a641df62ff13a" title="Initialiser l&#39;interface pour les bouton de redimensionnements. " alt="" coords="687,362,815,403"/>
-<area shape="rect" id="node15" href="$classgui_1_1_fenetre.html#a73a3c50ce1248fbe0f251a3a3a1e8cb9" title="Actualiser les éléments. " alt="" coords="673,428,828,455"/>
-<area shape="rect" id="node17" href="$classgui_1_1_fenetre.html#a64a7349b8108a8c0edf906b012a58f92" title="gui::Fenetre::Fenetre" alt="" coords="679,479,822,505"/>
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="459,5,587,32"/>
+<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a83852aa2079a8347a15caead6506f70a" title="Definir le skin. " alt="" coords="227,56,370,83"/>
+<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="221,107,376,133"/>
+<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="677,5,819,32"/>
+<area shape="rect" id="node6" href="$classgui_1_1_fenetre.html#a0ef3d718be52458dc0c9137f669819fc" title="Definir la taille du contenu. " alt="" coords="452,56,595,83"/>
+<area shape="rect" id="node7" href="$classgui_1_1_fenetre.html#a5c9d501e681cd47ad4b7031d18352b9b" title="Definir l&#39;epaisseur de la bordure. " alt="" coords="442,107,605,133"/>
+<area shape="rect" id="node8" href="$classgui_1_1_fenetre.html#a24b2816833602308807148bb523c518c" title="Definir le titre. " alt="" coords="452,157,595,184"/>
+<area shape="rect" id="node9" href="$classgui_1_1_fenetre.html#a77869f5bdb4c4a6c1d40a5cff3b9250b" title="ajouter un enfant " alt="" coords="454,208,593,235"/>
+<area shape="rect" id="node10" href="$classgui_1_1_fenetre.html#a714cf4ba2a7e1489204b68beaa594e27" title="les manipulation de drag et de redimensionnement. " alt="" coords="424,259,623,285"/>
+<area shape="rect" id="node11" href="$classgui_1_1_fenetre.html#a73a3c50ce1248fbe0f251a3a3a1e8cb9" title="Actualiser les éléments. " alt="" coords="671,259,825,285"/>
 </map>

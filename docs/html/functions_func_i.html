@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -104,6 +112,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_func_i.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -129,7 +151,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 : <a class="el" href="classapp_1_1_config.html#a48395c7e382fb68f5283676847b4fb58">app::Config</a>
 , <a class="el" href="classgui_1_1_bouton_encoche.html#ab945956a49c0a10e49388a89b59e9c66">gui::BoutonEncoche</a>
 , <a class="el" href="classgui_1_1_bouton_texte.html#a2ee4ed04c1e2a20836e38a250d56311e">gui::BoutonTexte</a>
-, <a class="el" href="classgui_1_1_fenetre.html#a104f8f9143a7280d7d56ca2d2a539123">gui::Fenetre</a>
 </li>
 <li>Init()
 : <a class="el" href="classgui_1_1_image.html#a3c40ccc3daf57a5151678e20cb97c6e1">gui::Image</a>
@@ -148,6 +169,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </li>
 <li>initSkinBouton()
 : <a class="el" href="classgui_1_1_fenetre.html#a05f4a03ba7bff8bf975a9bca6cf43d43">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre_encastree.html#a6517c34433909940eaf033d3025a6f00">gui::FenetreEncastree</a>
 </li>
 <li>initSkins()
 : <a class="el" href="classapp_1_1_config.html#a87cba3dc8625eccfe14efae71555312c">app::Config</a>
@@ -160,19 +182,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </li>
 <li>initUI()
 : <a class="el" href="classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758">gui::Fenetre</a>
-, <a class="el" href="classgui_1_1_fenetre__encastree.html#a1cc1d6bb3763034266e807a6168093ff">gui::Fenetre_encastree</a>
+, <a class="el" href="classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31">gui::FenetreEncastree</a>
 </li>
 <li>initUI_drag()
 : <a class="el" href="classgui_1_1_fenetre.html#a72881398e744a405b56046d60917d1de">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre_encastree.html#a79114afc27d0e3a31a2d0ca09889d2d9">gui::FenetreEncastree</a>
 </li>
 <li>initUI_fermer()
 : <a class="el" href="classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre_encastree.html#aaa900b28f22ddaf34dbc346439a9eb76">gui::FenetreEncastree</a>
 </li>
 <li>initUI_redim()
 : <a class="el" href="classgui_1_1_fenetre.html#aefa0438688ee292fef0a641df62ff13a">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre_encastree.html#a595c4da7de253a053dbe5a5cbf8eaa8c">gui::FenetreEncastree</a>
 </li>
 <li>initUI_titre()
 : <a class="el" href="classgui_1_1_fenetre.html#ab067f6b1633c4f9d55bde57ac78832f8">gui::Fenetre</a>
+, <a class="el" href="classgui_1_1_fenetre_encastree.html#a77bf368b83fc9db4093e0c8bac103421">gui::FenetreEncastree</a>
 </li>
 <li>isActif()
 : <a class="el" href="classgui_1_1_bouton_encoche.html#a8dbd47117e62a7028363295652d442e1">gui::BoutonEncoche</a>
@@ -185,11 +211,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
 </body>
 </html>

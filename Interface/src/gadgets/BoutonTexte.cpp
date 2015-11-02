@@ -86,6 +86,9 @@ BoutonTexte::majGeom( )    {
 void
 BoutonTexte::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
 
+    if ( not m_visible ) return;
+
+
     states.transform *= getTransform();
 
     target.draw ( *m_fond , states );

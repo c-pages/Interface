@@ -316,7 +316,8 @@ protected:
     std::vector< ptr >      m_enfants;      ///< Les enfants du bouton.
     std::shared_ptr<Skin>   m_skin;         ///< le skin du gadget.
     std::shared_ptr<Style>  m_style;        ///< le style du gadget.
-    bool                    m_enable;       ///< si le gadget est actif ou pas.
+    bool                    m_enable;       ///< si le gadget est actif ou pas. ( visible mais pas utilisable. )
+    bool                    m_visible;      ///< si le gadget est visible ou pas.
     bool                    m_aSupprimer;   ///< On le passe à true quand on veut supprimer ce gadget (il sera supprimé par son parent au debut de l'actualisation).
     bool                    m_besoinActua;  ///< Si on a changer un truc qui necessite d'actualiser la geometrie, couleur... du gadget (comme un resize ou pendant le survol d'un bouton par exemple).
 

@@ -77,6 +77,19 @@ EcranDemo::initGUI  ( )
 
     // le skin qu'on va utiliser dans cette interface
     auto skinCourant =  Config::m_skins[ Config::Skins::Skin1 ] ;
+
+
+
+    std::shared_ptr<gui::Label>  label ( new gui::Label ( "LABEL 1 LABEL 2 LABEL 3 LABEL 4" ) );
+    label->setTexteTaille   ( 20 );
+    label->setPosition      ( 20 , 50 );
+
+    label->getLocalBounds();
+    m_gui->ajouter          ( label );
+
+    label->getLocalBounds();
+
+
 /*
 
     // creation de la fenetre

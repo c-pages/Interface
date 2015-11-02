@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -69,6 +77,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="namespacemembers.html"><span>Membres&#160;de&#160;l'espace&#160;de&#160;nommage</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('namespacegui.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,7 +106,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Structures de données</a> &#124;
@@ -101,8 +123,17 @@ Structures de données</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_bouton.html">Bouton</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a>, simple bouton rectangulaire.  <a href="classgui_1_1_bouton.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_bouton_curseur.html">BoutonCurseur</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a>, permet de controler une valeur numérique avec un cursueur sur un regle graduée.  <a href="classgui_1_1_bouton_curseur.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_bouton_encoche.html">BoutonEncoche</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a>, bouton rectangulaire à cocher,.  <a href="classgui_1_1_bouton_encoche.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_bouton_fleche.html">BoutonFleche</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a>, permet de controler une valeur numerique avec deux flèche à coté d'un label indiquant la valeur.  <a href="classgui_1_1_bouton_fleche.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_bouton_radio.html">BoutonRadio</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a>, permet de selectionner une ou plusieurs options parmis au moins deux choix.  <a href="classgui_1_1_bouton_radio.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_bouton_slide.html">BoutonSlide</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a>, pour le defilement du contenu dans les fenetres.  <a href="classgui_1_1_bouton_slide.html#details">Plus de détails...</a><br /></td></tr>
@@ -110,13 +141,20 @@ Structures de données</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_bouton_texte.html">BoutonTexte</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a>, bouton rectangulaire (<a class="el" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. ">gui::Bouton</a>) combiné à un <a class="el" href="classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. ">Label</a> (gui::texte).  <a href="classgui_1_1_bouton_texte.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html">ChampTexte</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a> , champ de saisie de texte.  <a href="classgui_1_1_champ_texte.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_contenant.html">Contenant</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a> Permet d'afficher un ensemble de gadget dans une fenetre de contenu.  <a href="classgui_1_1_contenant.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre.html">Fenetre</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a> permettant de rassembler des Gadgets au sein d'une <a class="el" href="classgui_1_1_fenetre.html" title="Gadget permettant de rassembler des Gadgets au sein d&#39;une Fenetre. ">Fenetre</a>.  <a href="classgui_1_1_fenetre.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre__encastree.html">Fenetre_encastree</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html">FenetreEncastree</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">une fenetre encastrée dans un des quatre coté de la fenêtre SFML.  <a href="classgui_1_1_fenetre_encastree.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_onglets.html">FenetreOnglets</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a>, fenêtre composée de plusieurs pages accessible par des onglets.  <a href="classgui_1_1_fenetre_onglets.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html">Gadget</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe virtuelle, la base commune aux gadgets formant l'interface.  <a href="classgui_1_1_gadget.html#details">Plus de détails...</a><br /></td></tr>
@@ -291,7 +329,8 @@ Structures de données</h2></td></tr>
 </div><div class="memdoc">
 
 <p>les types d'ajustements des éléments entre eux. </p>
-<p>Ajuster la taille d'un gadget par rapport à la taille d'un autre. Le bouton par rapport au texte d'un <a class="el" href="classgui_1_1_bouton_texte.html" title="Gadget, bouton rectangulaire (gui::Bouton) combiné à un Label (gui::texte). ">BoutonTexte</a> par exemple. </p>
+<p>Ajuster la taille d'un gadget par rapport à la taille d'un autre. Le bouton par rapport au texte d'un <a class="el" href="classgui_1_1_bouton_texte.html" title="Gadget, bouton rectangulaire (gui::Bouton) combiné à un Label (gui::texte). ">BoutonTexte</a> par exemple.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">A faire:</a></b></dt><dd>à developper.</dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a class="anchor" id="acf7d1f798b6c52f973e41fc5e7c3e82aa94ba90f050b84fa08b41e2558fb31089"></a>Gauche&#160;</td><td class="fielddoc">
 </td></tr>
@@ -395,11 +434,15 @@ Structures de données</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacegui.html">gui</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
 </body>
 </html>

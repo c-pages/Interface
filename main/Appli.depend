@@ -431,13 +431,14 @@
 1445711805 r:\06 - c++\107 - interface\main\include\resourcemgr.inl
 	"ResourceMgr.h"
 
-1446304281 r:\06 - c++\107 - interface\interface\gui.h
+1446501556 r:\06 - c++\107 - interface\interface\gui.h
 	<Skin.h>
 	<Style.h>
 	<Gadget.h>
 	<action.h>
 	<gadgets/Image.h>
 	<gadgets/Label.h>
+	<gadgets/ChampTexte.h>
 	<gadgets/Bouton.h>
 	<gadgets/BoutonTexte.h>
 	<gadgets/BoutonEncoche.h>
@@ -503,7 +504,7 @@
 	<gadgets/BoutonSlide.h>
 	"gadgets/Groupe.h"
 
-1446483256 r:\06 - c++\107 - interface\interface\include\gadgets\fenetre.h
+1446501856 r:\06 - c++\107 - interface\interface\include\gadgets\fenetre.h
 	<Gadget.h>
 
 1446475288 r:\06 - c++\107 - interface\main\include\ecrans\ecrandemo.h
@@ -519,7 +520,7 @@
 1445606138 source:r:\06 - c++\107 - interface\main\src\ecran.cpp
 	"Ecran.h"
 
-1446483846 source:r:\06 - c++\107 - interface\main\src\ecrans\ecrandemo.cpp
+1446500391 source:r:\06 - c++\107 - interface\main\src\ecrans\ecrandemo.cpp
 	"ecrans/EcranDemo.h"
 	<iostream>
 	<Config.h>
@@ -527,4 +528,6 @@
 
 1445606138 source:r:\06 - c++\107 - interface\main\src\gestion_ecrans.cpp
 	"Gestion_ecrans.h"
+
+1446501256 r:\06 - c++\107 - interface\interface\include\gadgets\champtexte.h
 

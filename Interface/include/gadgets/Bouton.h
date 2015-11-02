@@ -265,6 +265,7 @@ protected:
     /////////////////////////////////////////////////
     EtatBouton              m_etat;             ///< L'état du bouton.
     EtatBouton              m_etatBack;         ///< L'état du bouton la frame d'avant, pour verifier si changement d'état.
+    std::shared_ptr<Image>  m_icone;            ///< Le rectangle de l'icone du bouton. \todo getsion icone dans gui::Bouton, une image fixe avec en transparence m_fond qui change d'état
     std::shared_ptr<Image>  m_fond;             ///< Le rectangle du fond du bouton.
     sf::Clock               m_clock_dblClique;  ///< Compteur temps pour double clique.
     bool                    m_1erClick;         ///< bool double clique, true lors du 1er clique, false a la fin du temps ou apres second clique.

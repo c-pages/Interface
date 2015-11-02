@@ -205,13 +205,11 @@ Contenant::ajouter( ptr enfant )   {
 void
 Contenant::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
 
+    if ( not m_visible ) return;
+
+
     // appliquer les transformations de la fenêtre au states
     states.transform *= getTransform();
-
-
-   // les dimemsions pour l'affichage du contenu
-//    sf::Vector2i   /* m_tailleTexture,*/ m_tailleAffiche;
-
 
 
     // la texture dans laquelle on va dessiner les éléments contenus
@@ -238,7 +236,6 @@ Contenant::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    
         target.draw      ( *m_slideVerti , states );
 
 
-   // target.draw      ( *m_debug , states );
 }
 
 

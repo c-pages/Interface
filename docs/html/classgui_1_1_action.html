@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -71,6 +79,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="functions.html"><span>Champs&#160;de&#160;donnée</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classgui_1_1_action.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -85,11 +108,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacegui.html">gui</a></li><li class="navelem"><a class="el" href="classgui_1_1_action.html">Action</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Types publics</a> &#124;
@@ -111,19 +129,19 @@ Graphe d'héritage de gui::Action:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_action__inherit__graph.png" border="0" usemap="#gui_1_1_action_inherit__map" alt="Inheritance graph"/></div>
 <map name="gui_1_1_action_inherit__map" id="gui_1_1_action_inherit__map">
-<area shape="rect" id="node2" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. " alt="" coords="137,183,227,209"/>
-<area shape="rect" id="node3" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. " alt="" coords="289,31,377,57"/>
-<area shape="rect" id="node6" href="classgui_1_1_bouton_slide.html" title="Gadget, pour le defilement du contenu dans les fenetres. " alt="" coords="275,81,392,108"/>
-<area shape="rect" id="node7" href="classgui_1_1_contenant.html" title="Gadget Permet d&#39;afficher un ensemble de gadget dans une fenetre de contenu. " alt="" coords="280,132,387,159"/>
-<area shape="rect" id="node8" href="classgui_1_1_fenetre.html" title="Gadget permettant de rassembler des Gadgets au sein d&#39;une Fenetre. " alt="" coords="288,183,379,209"/>
-<area shape="rect" id="node10" href="classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets. " alt="" coords="289,233,378,260"/>
-<area shape="rect" id="node11" href="classgui_1_1_image.html" title="Gadget Un simple gadget permettant d&#39;afficher une image ou une couleur uni. " alt="" coords="292,284,375,311"/>
-<area shape="rect" id="node12" href="classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. " alt="" coords="294,335,373,361"/>
-<area shape="rect" id="node4" href="classgui_1_1_bouton_encoche.html" title="Gadget, bouton rectangulaire à cocher,. " alt="" coords="448,5,587,32"/>
-<area shape="rect" id="node5" href="classgui_1_1_bouton_texte.html" title="Gadget, bouton rectangulaire (gui::Bouton) combiné à un Label (gui::texte). " alt="" coords="457,56,577,83"/>
-<area shape="rect" id="node9" href="classgui_1_1_fenetre__encastree.html" title="gui::Fenetre_encastree" alt="" coords="440,183,595,209"/>
+<area shape="rect" id="node2" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. " alt="" coords="137,208,227,235"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. " alt="" coords="306,31,394,57"/>
+<area shape="rect" id="node6" href="classgui_1_1_bouton_slide.html" title="Gadget, pour le defilement du contenu dans les fenetres. " alt="" coords="291,81,409,108"/>
+<area shape="rect" id="node7" href="classgui_1_1_contenant.html" title="Gadget Permet d&#39;afficher un ensemble de gadget dans une fenetre de contenu. " alt="" coords="297,132,403,159"/>
+<area shape="rect" id="node8" href="classgui_1_1_fenetre.html" title="Gadget permettant de rassembler des Gadgets au sein d&#39;une Fenetre. " alt="" coords="305,183,395,209"/>
+<area shape="rect" id="node9" href="classgui_1_1_fenetre_encastree.html" title="une fenetre encastrée dans un des quatre coté de la fenêtre SFML. " alt="" coords="275,233,425,260"/>
+<area shape="rect" id="node10" href="classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets. " alt="" coords="305,284,395,311"/>
+<area shape="rect" id="node11" href="classgui_1_1_image.html" title="Gadget Un simple gadget permettant d&#39;afficher une image ou une couleur uni. " alt="" coords="309,335,391,361"/>
+<area shape="rect" id="node12" href="classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. " alt="" coords="311,385,389,412"/>
+<area shape="rect" id="node4" href="classgui_1_1_bouton_encoche.html" title="Gadget, bouton rectangulaire à cocher,. " alt="" coords="473,5,612,32"/>
+<area shape="rect" id="node5" href="classgui_1_1_bouton_texte.html" title="Gadget, bouton rectangulaire (gui::Bouton) combiné à un Label (gui::texte). " alt="" coords="483,56,603,83"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Types publics</h2></td></tr>
@@ -265,14 +283,14 @@ Voici le graphe des appelants de cette fonction :</div>
 <area shape="rect" id="node6" href="classgui_1_1_bouton.html#ad21bb5a674b5e5472535090adc3a4274" title="La gestion du survol. " alt="" coords="209,107,405,133"/>
 <area shape="rect" id="node7" href="classgui_1_1_bouton.html#a97acf4dc98b7a574a80c45539fafb47d" title="La gestion du survol. " alt="" coords="208,158,405,199"/>
 <area shape="rect" id="node8" href="classgui_1_1_bouton_encoche.html#ab945956a49c0a10e49388a89b59e9c66" title="initialisation du gadget. " alt="" coords="237,223,376,265"/>
-<area shape="rect" id="node10" href="classgui_1_1_fenetre.html#a104f8f9143a7280d7d56ca2d2a539123" title="Initialisation lors de la création. " alt="" coords="647,316,763,343"/>
+<area shape="rect" id="node10" href="classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="465,319,593,345"/>
 <area shape="rect" id="node12" href="classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="243,341,371,382"/>
-<area shape="rect" id="node14" href="classgui_1_1_fenetre.html#a64a7349b8108a8c0edf906b012a58f92" title="gui::Fenetre::Fenetre" alt="" coords="235,407,378,433"/>
-<area shape="rect" id="node3" href="classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714" title="gui::Bouton::gerer\l_declenchements" alt="" coords="460,74,585,115"/>
-<area shape="rect" id="node4" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="640,74,769,115"/>
-<area shape="rect" id="node9" href="classgui_1_1_bouton_encoche.html#af091f97a68863b3975199b39f0797335" title="Constructeur. " alt="" coords="453,223,592,265"/>
-<area shape="rect" id="node11" href="classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="817,316,960,343"/>
-<area shape="rect" id="node13" href="classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="459,344,587,371"/>
+<area shape="rect" id="node13" href="classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="453,429,604,470"/>
+<area shape="rect" id="node14" href="classgui_1_1_fenetre_encastree.html#aaa900b28f22ddaf34dbc346439a9eb76" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="231,458,382,499"/>
+<area shape="rect" id="node3" href="classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714" title="gui::Bouton::gerer\l_declenchements" alt="" coords="466,74,591,115"/>
+<area shape="rect" id="node4" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="659,74,788,115"/>
+<area shape="rect" id="node9" href="classgui_1_1_bouton_encoche.html#af091f97a68863b3975199b39f0797335" title="Constructeur. " alt="" coords="459,223,598,265"/>
+<area shape="rect" id="node11" href="classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="652,319,795,345"/>
 </map>
 </div>
 </p>
@@ -480,10 +498,11 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_action_a7c0cd2dd198d840342cbd6b0ac193a02_icgraph.png" border="0" usemap="#classgui_1_1_action_a7c0cd2dd198d840342cbd6b0ac193a02_icgraph" alt=""/></div>
 <map name="classgui_1_1_action_a7c0cd2dd198d840342cbd6b0ac193a02_icgraph" id="classgui_1_1_action_a7c0cd2dd198d840342cbd6b0ac193a02_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="187,5,317,47"/>
-<area shape="rect" id="node3" href="classgui_1_1_contenant.html#aaf92cf1d1d7266d25b0c15cd5202ae4b" title="La gestion des évènements utilisateurs. " alt="" coords="179,71,325,112"/>
-<area shape="rect" id="node4" href="classgui_1_1_fenetre.html#a555be24b33faedf52e92695f4f1785b3" title="La gestion des évènements utilisateurs. " alt="" coords="186,136,318,177"/>
-<area shape="rect" id="node5" href="classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf" title="La gestion des évènements utilisateurs. " alt="" coords="193,201,311,243"/>
+<area shape="rect" id="node2" href="classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="189,5,319,47"/>
+<area shape="rect" id="node3" href="classgui_1_1_contenant.html#aaf92cf1d1d7266d25b0c15cd5202ae4b" title="La gestion des évènements utilisateurs. " alt="" coords="181,71,327,112"/>
+<area shape="rect" id="node4" href="classgui_1_1_fenetre.html#a555be24b33faedf52e92695f4f1785b3" title="La gestion des évènements utilisateurs. " alt="" coords="188,136,320,177"/>
+<area shape="rect" id="node5" href="classgui_1_1_fenetre_encastree.html#af6b98196b14c8bca61001b37cd4dee38" title="La gestion des évènements utilisateurs. " alt="" coords="179,201,329,243"/>
+<area shape="rect" id="node6" href="classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf" title="La gestion des évènements utilisateurs. " alt="" coords="195,267,313,308"/>
 </map>
 </div>
 </p>
@@ -562,11 +581,15 @@ Voici le graphe des appelants de cette fonction :</div>
 <li>Interface/src/<a class="el" href="_action_8cpp.html">Action.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.10
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacegui.html">gui</a></li><li class="navelem"><a class="el" href="classgui_1_1_action.html">Action</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
 </body>
 </html>
