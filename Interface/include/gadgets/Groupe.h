@@ -56,7 +56,7 @@ public:
     virtual void
     draw( sf::RenderTarget& target, sf::RenderStates states ) const;
 
-
+//
 ////////////// DEBUG /////////////////////////////////////
 //bool
 //contient ( float x, float y )

@@ -109,7 +109,7 @@ Label::getLocalBounds ( )const {
     result.top      +=  getPosition().y;/*
     result.width    -=  m_texte->getLocalBounds().left;
     result.top      -=  m_texte->getLocalBounds().top;*/
-
+/*
     std::string txt = m_texte->getString() ;
 std::cout << "--------------> m_texte : " << txt << "\n";
 
@@ -118,7 +118,7 @@ std::cout << "--------------> m_texte : " << txt << "\n";
    std::cout << "\nresult.width : " << result.width;
    std::cout << "\nresult.height : " << result.height;
    std::cout << "\n";
-
+*/
     return result;
 
 

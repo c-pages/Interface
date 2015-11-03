@@ -49,7 +49,7 @@ public:
     ///
     /////////////////////////////////////////////////
     void
-    setActif ( bool actif ) { m_actif = actif; };
+    setCoche ( bool actif ) { m_coche = actif; };
 
     /////////////////////////////////////////////////
     /// \brief demande l'état du bouton
@@ -58,7 +58,7 @@ public:
     ///
     /////////////////////////////////////////////////
     bool
-    isActif ( ) { return m_actif; };
+    estCoche ( ) { return m_coche; };
 
     /////////////////////////////////////////////////
     /// \brief Actualise le model du Gadget
@@ -92,7 +92,7 @@ private:
     /////////////////////////////////////////////////
     // Les membres
     /////////////////////////////////////////////////
-    bool        m_actif;        ///< l'état du bouton  (true: coché ou false:décoché).
+    bool        m_coche;        ///< l'état du bouton  (true: coché ou false:décoché).
     Image*      m_imgCoche;     ///< le gadget Image qui est visible si le bouton est coché.
     FuncType    m_fctToggle;    ///< la fonction qui change l'état du bouton a chaque clique.
 

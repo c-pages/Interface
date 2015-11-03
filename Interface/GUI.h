@@ -2,9 +2,15 @@
 #ifndef GUI_H
 #define GUI_H
 
+
+
+
+
+
 /////////////////////////////////////////////////
 // Hearders
 /////////////////////////////////////////////////
+#include <IconeManager.h>
 
 // styles
 #include <Skin.h>
@@ -28,11 +34,14 @@
 #include <gadgets/BoutonEncoche.h>      // --->    0 ou 1
 #include <gadgets/BoutonSlide.h>        // --->    pour defilement de contenu dans le fenetres
 
+
 //fenetre et groupes
 #include <gadgets/Contenant.h>          // --->    groupe de gadgets   grp
 #include <gadgets/Groupe.h>             // --->    groupe de gadgets   grp
 #include <gadgets/Fenetre.h>            // --->    fenetre               grp  + btn:(drag, redim, fermer)
 //#include <gadgets/Fenetre_encastree.h>  // --->    fenetre encastrée sur un bord de la fenetre SFML
+
+
 
 
 
@@ -51,6 +60,48 @@
 ////fenetreQuestion                   --->    fenetre oui ou non    grp  + btn:(drag, oui, non)
 ////fenetreOnglets                    --->    1 onglet / 1 fenetre  grps + btn:(drag, redim, fermer, onglets)
 ///////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+namespace gui
+{
+
+extern  IconeManager    icoMngr ;   ///< le manager de textures pour les icones de l'interface
+
+
+/////////////////////////////////////////////////
+/// \brief initialiser les icones de l'interface
+///
+/////////////////////////////////////////////////
+void
+init();
+
+
+
+} // fin namespace gui
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

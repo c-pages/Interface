@@ -38,15 +38,22 @@ Groupe::getGlobalBounds ( )  const{
             if (rect.top < minY) minY = rect.top;
             if (rect.top + rect.height > maxY ) maxY = rect.top + rect.height ;
         }
-        result = { minX + getPosAbs().x , minY + getPosAbs().x , maxX-minX , maxY-minY  };
-//        std::cout << ">>> A\n";
+        result = { minX + getPosAbs().x , minY + getPosAbs().y , maxX-minX , maxY-minY  };
+        //std::cout << ">>> A\n";
 
     // sinon on revois la taille déinife m_taille
     } else {
- //       std::cout << ">>> B\n";
+        //std::cout << ">>> B\n";
         result = sf::FloatRect  ( getPosAbs().x, getPosAbs().y, m_taille.x , m_taille.y );
     }
+/*
+std::cout << "--------------> " ;
 
+   std::cout << "\nresult.left : " << result.left;
+   std::cout << "\nresult.top : " << result.top;
+   std::cout << "\nresult.width : " << result.width;
+   std::cout << "\nresult.height : " << result.height;
+   std::cout << "\n";*/
     return { result };
 
 }
@@ -92,7 +99,7 @@ Groupe::setSize ( sf::Vector2f taille ) {
 void
 Groupe::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const
 {
-    if ( not m_visible ) return;
+    if ( not estVisible() ) return;
 
 
     // le transform du gadget combiné au transform parents (states).
@@ -100,8 +107,7 @@ Groupe::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const
 
     // dessiner les gadgets enfants
     for ( const ptr& enfant : m_enfants )
-        if (enfant->m_visible )
-            target.draw      ( *enfant , states );
+        target.draw      ( *enfant , states );
 }
 } // fin namespace gui
 

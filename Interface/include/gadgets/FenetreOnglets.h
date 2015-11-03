@@ -1,13 +1,13 @@
 #ifndef FENETREONGLETS_H
 #define FENETREONGLETS_H
 
-#include <Gadget.h>
 
 
 
 /////////////////////////////////////////////////
 // Headers
 /////////////////////////////////////////////////
+#include <Gadget.h>
 
 namespace gui
 {
@@ -18,7 +18,7 @@ namespace gui
 /// \todo à developper.
 ///
 /////////////////////////////////////////////////
-class FenetreOnglets
+class FenetreOnglets : public Gadget
 {
 public:
 

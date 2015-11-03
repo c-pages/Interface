@@ -47,7 +47,8 @@ BoutonTexte::~BoutonTexte() {
 void
 BoutonTexte::setSize   ( sf::Vector2f   taille )   {
     m_fond->setSize( taille );
- //   m_lblTexte->aligner ( *m_fond , m_style->align );
+    m_lblTexte->aligner ( *m_fond , m_style->align );
+
 }
 
 
@@ -56,7 +57,7 @@ void
 BoutonTexte::ajusterAuTexte   (){
     sf::FloatRect  rectTxt  ( m_lblTexte->getLocalBounds() );
     m_fond->setSize( { rectTxt.width + 2* m_bordure, rectTxt.height + 2* m_bordure } );
-   // m_lblTexte->aligner(*m_fond , m_style->align );
+    m_lblTexte->aligner(*m_fond , m_style->align );
 };
 
 
@@ -86,7 +87,8 @@ BoutonTexte::majGeom( )    {
 void
 BoutonTexte::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
 
-    if ( not m_visible ) return;
+
+    if ( not estVisible() ) return;
 
 
     states.transform *= getTransform();

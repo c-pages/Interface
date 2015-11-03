@@ -1,12 +1,12 @@
 #ifndef BOUTONCURSEUR_H
 #define BOUTONCURSEUR_H
 
-#include <Gadget.h>
-
 
 /////////////////////////////////////////////////
 // Headers
 /////////////////////////////////////////////////
+#include <Gadget.h>
+
 
 namespace gui
 {
@@ -18,7 +18,7 @@ namespace gui
 /// \todo à developper.
 ///
 /////////////////////////////////////////////////
-class BoutonCurseur
+class BoutonCurseur : public Gadget
 {
 public:
 

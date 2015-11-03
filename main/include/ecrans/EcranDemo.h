@@ -87,11 +87,11 @@ private:
     // Les membres
     /////////////////////////////////////////////////
 
-    sf::RectangleShape      m_fond;     ///< Le shape SFML du fond de l'écran.
+    sf::RectangleShape                  m_fond;     ///< Le shape SFML du fond de l'écran.
 
-    std::shared_ptr<gui::Groupe>     m_gui;      ///< Le groupe de GUI du menu principal.
-    std::shared_ptr<gui::Label >     labelTest;
-    std::shared_ptr<gui::Bouton >    bouton;
+    std::shared_ptr<gui::Groupe>        m_gui;      ///< Le groupe de GUI du menu principal.
+    std::shared_ptr<gui::Label >        labelTest;
+    std::shared_ptr<gui::Bouton >       bouton;
 
 
     //std::shared_ptr<Gadget>

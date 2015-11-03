@@ -147,7 +147,7 @@ BoutonSlide::initSkin (){
 void
 BoutonSlide::majGeom()
 {
-    if ( not m_besoinActua ) return;
+    if ( not m_aActualiser ) return;
 
 
     switch ( m_orientation ){
@@ -213,7 +213,7 @@ BoutonSlide::actualiser ( float deltaT )
             pos =      {  0,  m_posBtnOrig.y +  mousePos.y - m_posMouseOrig.y };
 
         m_btnSlide->setPosition     (  pos  );
-        m_besoinActua = true;
+        m_aActualiser = true;
     }
 
 
@@ -227,7 +227,8 @@ BoutonSlide::actualiser ( float deltaT )
 void
 BoutonSlide::draw( sf::RenderTarget& target, sf::RenderStates states ) const
 {
-    if ( not m_visible ) return;
+
+    if ( not estVisible() ) return;
 
 
    // Bouton::draw    ( target, states );

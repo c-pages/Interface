@@ -19,6 +19,17 @@ EcranDemo::EcranDemo( Application*  appli )
     // Initialisation de l'interface graphique.
     initGUI     ();
     initScene   ();
+
+    // les vues jeu et gui
+    sf::Vector2f pos = sf::Vector2f( m_appli->getFenetre().getSize() );
+    m_vueJeu.setSize(pos);
+    m_vueGUI.setSize(pos);
+    pos *= 0.5f;
+    m_vueJeu.setCenter(pos);
+    m_vueGUI.setCenter(pos);
+
+
+
 }
 
 
@@ -29,7 +40,31 @@ void EcranDemo::traiter_evenements  ( const sf::Event& event )
 
     // Evenements de l'interface
     m_gui->traiter_evenements    ( event );
+
+
+
+    if (event.type == sf::Event::Closed)
+        m_appli->getFenetre().close();
+
+
+    // Resize the window
+    if (event.type ==  sf::Event::Resized)
+    {
+        m_vueJeu.setSize    (event.size.width, event.size.height);
+        m_vueGUI.setSize    (event.size.width, event.size.height);
+
+    m_appli->getFenetre().setView(m_vueGUI);
+
+//          this->game->background.setPosition(this->game->window.mapPixelToCoords(sf::Vector2i(0, 0)));
+//          this->game->background.setScale(
+//          float(event.size.width) / float(this->game->background.getTexture()->getSize().x),
+//          float(event.size.height) / float(this->game->background.getTexture()->getSize().y));
+
+    }
+
+
 }
+
 
 
 /////////////////////////////////////////////////
@@ -42,14 +77,26 @@ void EcranDemo::actualiser  ( float deltaT )
 }
 
 
+
 /////////////////////////////////////////////////
 void EcranDemo::dessiner ()
 {
     // Dessiner la fenetre du jeu
-    m_appli->getFenetre().draw ( m_fond );
 
     // Dessiner l'interface
     m_appli->getFenetre().draw ( *m_gui);
+
+
+
+    m_appli->getFenetre().setView   ( m_vueJeu);
+    m_appli->getFenetre().draw      ( m_fond );
+
+    m_appli->getFenetre().setView   ( m_vueGUI );
+    m_appli->getFenetre().draw      ( *m_gui );
+
+
+
+
 }
 
 
@@ -67,28 +114,63 @@ EcranDemo::initScene  ( )
     m_fond.setSize      ( sf::Vector2f ( m_appli->getFenetre().getSize() ) );
     m_fond.setFillColor ( sf::Color (40,40,50));
     m_gui->setSize      ( sf::Vector2f ( m_appli->getFenetre().getSize() ) );
+
 }
 
 
 /////////////////////////////////////////////////
 void
-EcranDemo::initGUI  ( )
+EcranDemo::initGUI  ()
 {
+//  // initialisation des icones
+//  gui::initIcones();  ///< \todo voir si on peut pas le mettre dans un cpp du gui pour que ce soit toujours fait sans se faire chier
+    gui::init();
 
     // le skin qu'on va utiliser dans cette interface
     auto skinCourant =  Config::m_skins[ Config::Skins::Skin1 ] ;
 
 
-
+/*
     std::shared_ptr<gui::Label>  label ( new gui::Label ( "LABEL 1 LABEL 2 LABEL 3 LABEL 4" ) );
     label->setTexteTaille   ( 20 );
     label->setPosition      ( 20 , 50 );
-
-    label->getLocalBounds();
     m_gui->ajouter          ( label );
 
-    label->getLocalBounds();
 
+    std::shared_ptr<gui::Bouton>  bouton ( new gui::Bouton  (  ) );
+    bouton->setPosition ( { 50 , 150 });
+    bouton->setSize ( { 50 , 50 });
+    bouton->setIcone ( gui::icoMngr.acceder(  gui::Icone::Fermer  ) ) ;
+    m_gui->ajouter          ( bouton );
+*/
+
+/**/
+    std::shared_ptr<gui::ChampTexte>  champ ( new gui::ChampTexte  (  { 100 , 20 } , skinCourant ) );
+    champ->setPosition ( { 10 , 10 });
+ //   m_gui->ajouter          ( champ );
+
+ /*   std::shared_ptr<gui::BoutonTexte>  boutonT ( new gui::BoutonTexte  ( "TEXTE"  ) );
+    boutonT->setPosition ( { 50 , 50 });
+    boutonT->setSize ( { 50 , 50 });*/
+/**/
+    std::shared_ptr<gui::Bouton>  bouton ( new gui::Bouton  (   ) );
+    bouton->setPosition ( { 50 , 50 });
+    bouton->setSize ( { 50 , 50 });
+
+ //  m_gui->ajouter          ( bouton );
+
+
+
+
+    std::shared_ptr<gui::Fenetre>  fenetre ( new gui::Fenetre   ( &m_appli->getFenetre()
+                                                                , sf::Vector2f (200, 200) , true, false, false ) );
+    m_gui->ajouter          ( fenetre );
+    fenetre->setPosition    ( 250 , 250 );
+    fenetre->setSkin        ( skinCourant );
+    fenetre->setSize        ( { 150 , 200 } ) ; //m_appli->getFenetre().getSize().y }  ); // ( { 150 , m_appli->getFenetre().getSize().y}) ;
+
+    fenetre->ajouter          ( champ );
+    fenetre->ajouter          ( bouton );
 
 /*
 
@@ -121,9 +203,6 @@ EcranDemo::initGUI  ( )
     label3->setStyle      ( skinCourant->lblCourant );
     label3->setTexteTaille      ( 50 );
 
-    std::shared_ptr<gui::BoutonTexte>  boutonT ( new gui::BoutonTexte  ( "TEXTE"  ) );
-    boutonT->setPosition ( { 50 , 50 });
-    boutonT->setSize ( { 50 , 50 });
 */
 //    fenetre->ajouter    ( bouton );
 /*

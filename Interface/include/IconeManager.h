@@ -1,0 +1,96 @@
+#ifndef ICONEMANAGER_H
+#define ICONEMANAGER_H
+
+
+
+
+/////////////////////////////////////////////////
+// Headers
+/////////////////////////////////////////////////
+#include <string>
+#include <SFML/Graphics.hpp>
+
+
+namespace gui
+{
+
+
+// les icones ....
+enum Icone {
+    Fermer
+};
+
+
+
+/////////////////////////////////////////////////
+/// \brief premet de gerer en RAII les textures pour les icones de l'ui.
+///
+/////////////////////////////////////////////////
+class IconeManager
+{
+public:
+
+    /////////////////////////////////////////////////
+    /// \brief Constructeur par défaut
+    ///
+    /////////////////////////////////////////////////
+    IconeManager();
+
+    /////////////////////////////////////////////////
+    /// \brief Destructeur
+    ///
+    /////////////////////////////////////////////////
+    ~IconeManager();
+
+
+    /////////////////////////////////////////////////
+    /// \brief charger une nouvelle texture dans le manager
+    ///
+    /// \param  nom         le nom indexé de la texture
+    /// \param  fichier     l'adresse du fichier de la texture
+    ///
+    /////////////////////////////////////////////////
+    void
+    charger( Icone nom , const std::string &fichier);
+
+
+
+    /////////////////////////////////////////////////
+    /// \brief acceder à une texture
+    ///
+    /// \param texture le nom indexé de la texture auquel on veut acceder
+    ///
+    /////////////////////////////////////////////////
+    const sf::Texture*
+    acceder( Icone texture);
+
+protected:
+
+private:
+
+    /////////////////////////////////////////////////
+    // Les Membres
+    /////////////////////////////////////////////////
+    std::map<Icone, sf::Texture *>  m_textures;   ///<  liste des textures pour les icones de l'ui.
+
+};
+
+////////////////////////////////////////////////////////////
+/// \class gui::IconeManager
+/// \ingroup  interface
+///
+/// exemple :
+/// \code
+/// \endcode
+/// \see
+///
+////////////////////////////////////////////////////////////
+
+
+
+}; // fin namespace gui
+
+
+
+
+#endif // ICONEMANAGER_H

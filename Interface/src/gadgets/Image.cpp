@@ -72,8 +72,8 @@ Image::setOutlineThickness  ( float epaisseur )   {
 
 /////////////////////////////////////////////////
 void
-Image::setTexture      ( sf::Texture * newTexture ) {
-    m_rectangle->setTexture    ( newTexture );
+Image::setTexture      (  const sf::Texture*   texture  ) {
+    m_rectangle->setTexture    ( texture );
 }
 
 

@@ -117,12 +117,12 @@ public:
     /////////////////////////////////////////////////
     /// \brief    Definir la texture de l'image.
     ///
-    /// \param    newTexture     La nouvelle texture à appliquer.
+    /// \param    texture     La nouvelle texture à appliquer.
     /// \return   Rien
     ///
     /////////////////////////////////////////////////
     void
-    setTexture      ( sf::Texture * newTexture );
+    setTexture      ( const sf::Texture*   texture );
 
     /////////////////////////////////////////////////
     /// \brief    Charger une image.

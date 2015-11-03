@@ -1,12 +1,12 @@
 #ifndef BOUTONRADIO_H
 #define BOUTONRADIO_H
 
-#include <Gadget.h>
 
 
 /////////////////////////////////////////////////
 // Headers
 /////////////////////////////////////////////////
+#include <Gadget.h>
 
 namespace gui
 {
@@ -20,7 +20,7 @@ namespace gui
 /// \todo à developper.
 ///
 /////////////////////////////////////////////////
-class BoutonRadio
+class BoutonRadio : public Gadget
 {
 public:
 

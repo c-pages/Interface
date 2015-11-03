@@ -5,31 +5,107 @@
 /////////////////////////////////////////////////
 // Headers
 /////////////////////////////////////////////////
+#include <Gadget.h>
+#include <Skin.h>
+
 
 namespace gui
 {
 
+class BoutonEncoche;
+class Label;
+class Groupe;
+
 /////////////////////////////////////////////////
 /// \brief Gadget , champ de saisie de texte
 ///
-/// \todo à developper.
+/// \todo ... en developpement ...
 ///
 /////////////////////////////////////////////////
-class ChampTexte
+class ChampTexte : public Gadget
 {
 public:
 
     /////////////////////////////////////////////////
     /// \brief Constructeur par défaut
     ///
+    /// \param texte    le texte à afficher de base dans le champ. (optionnel)
+    /// \param taille   la taille du gadget. (optionnel)
+    ///
     /////////////////////////////////////////////////
-    ChampTexte();
+    ChampTexte  ( sf::Vector2f              taille = { 100, 20 }
+                , std::shared_ptr<Skin>     skin   = new Skin () );
 
     /////////////////////////////////////////////////
     /// \brief Destructeur
     ///
     /////////////////////////////////////////////////
     ~ChampTexte();
+
+
+    /////////////////////////////////////////////////
+    /// \brief initialiser les elements de l'UI de ce gadget.
+    ///
+    /////////////////////////////////////////////////
+    void
+    initUI();
+
+    /////////////////////////////////////////////////
+    /// \brief Accesseur de la boundingBox en local
+    ///
+    /// \return La boundingBox
+    ///
+    /////////////////////////////////////////////////
+    virtual sf::FloatRect
+    getLocalBounds ( ) const;
+
+    /////////////////////////////////////////////////
+    /// \brief Accesseur de la boundingBox en global
+    ///
+    /// \return  La boundingBox
+    ///
+    /////////////////////////////////////////////////
+    virtual sf::FloatRect
+    getGlobalBounds ( ) const;
+
+
+
+
+
+
+
+
+    /////////////////////////////////////////////////
+    /// \brief La gestion des évènements utilisateurs.
+    ///
+    ///  Gère les entrées claviers, souris, fenetre ...
+    ///
+    /// \param event evenement SFML se transmettant depuis l'application
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    traiter_evenements ( const sf::Event& event );
+
+
+    /////////////////////////////////////////////////
+    /// \brief Actualiser les éléments.
+    ///
+    /// Actualiser les différents éléments du ou des écrans actifs.
+    ///
+    /// \param deltaT          Un \e float qui indique le delta du temps écoulé depuis la dernière actualisation.
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    actualiser ( float deltaT ) override;
+
+    /////////////////////////////////////////////////
+    /// \brief Dessiner le bouton
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    draw( sf::RenderTarget& target, sf::RenderStates states ) const;
 
 protected:
 
@@ -38,7 +114,11 @@ private:
     /////////////////////////////////////////////////
     // Les Membres
     /////////////////////////////////////////////////
+    std::shared_ptr<Groupe>         m_grpUI;        ///<  Le groupe contenant l'interface de la fenetyre (boutons, titre)
+    std::shared_ptr<Label>          m_lbl;          ///< pointeur vers le label.
+    std::shared_ptr<BoutonEncoche>  m_btn;          ///< pointeur vers le label.
 
+    sf::RectangleShape              m_curseur;      ///< le curseur texte
 
 };
 

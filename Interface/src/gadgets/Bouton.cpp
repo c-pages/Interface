@@ -21,21 +21,27 @@ Bouton::Bouton  ( )
 : Gadget    ( )
 , m_etat    ( EtatBouton::repos )
 , m_fond    ( new Image () )
+, m_icone   ( new Image () )
+, m_bIcone  ( false )
 , m_bordure ( 0 )
 {
-//    std::cout << "  --- Bouton --- Bouton ---\n";
+    //    std::cout << "  --- Bouton --- Bouton ---\n";
     actualiser(1);
 }
 
 
 /////////////////////////////////////////////////
-Bouton::Bouton  ( std::shared_ptr<Skin>    skin )
+Bouton::Bouton  ( std::shared_ptr<Skin>    skin , sf::Vector2f taille )
 : Gadget    ( skin )
 , m_etat    ( EtatBouton::repos )
 , m_fond    ( new Image () )
+, m_icone   ( new Image () )
+, m_bIcone  ( false )
 , m_bordure ( 0 )
 {
-  //  std::cout << "  --- Bouton --- Bouton ---\n";
+    setSize (taille);
+
+    //  std::cout << "  --- Bouton --- Bouton ---\n";
     actualiser(1);
 }
 
@@ -45,6 +51,20 @@ Bouton::~Bouton()
 { }
 
 
+///////////////////////////////////////////////////
+void
+Bouton::setIcone   ( const sf::Texture*   texture ){
+    m_bIcone = true;
+    sf::Vector2f tailleTexture;
+
+    m_icone->setTexture ( texture );
+    m_icone->setSize    ( sf::Vector2f ( texture->getSize() ) );
+    m_icone->aligner    ( *m_fond );
+
+    m_aActualiser = true;
+}
+
+
 /////////////////////////////////////////////////
 void
 Bouton::setSkin( std::shared_ptr<Skin>     skin ) {
@@ -52,11 +72,15 @@ Bouton::setSkin( std::shared_ptr<Skin>     skin ) {
     majGeom( );
 };
 
+
 /////////////////////////////////////////////////
 void
 Bouton::setSize   ( sf::Vector2f   taille )   {
+    //m_icone->setSize( taille );
+
     m_fond->setSize( taille );
-    m_besoinActua = true;
+    m_icone->aligner    ( *m_fond );
+    m_aActualiser = true;
 }
 
 
@@ -72,7 +96,7 @@ Bouton::getSize ( )const {
 void
 Bouton::setFillColor ( sf::Color color )   {
     m_fond->setFillColor   ( color ) ;
-    m_besoinActua = true;
+    m_aActualiser = true;
 }
 
 
@@ -80,14 +104,14 @@ Bouton::setFillColor ( sf::Color color )   {
 void
 Bouton::setOutlineColor  ( sf::Color color ) {
     m_fond->setOutlineColor    ( color ) ;
-    m_besoinActua = true;
+    m_aActualiser = true;
 }
 
 /////////////////////////////////////////////////
 void
 Bouton::setOutlineThickness  ( float epaisseur )   {
     m_fond->setOutlineThickness    ( epaisseur ) ;
-    m_besoinActua = true;
+    m_aActualiser = true;
 } ;
 
 
@@ -151,7 +175,7 @@ Bouton::majGeom( )    {
         setFillColor        ( sf::Color::White );
     }
     else setFillColor       ( m_style->fnd_couleur );
-    m_besoinActua = true;
+    m_aActualiser = true;
 }
 
 
@@ -159,17 +183,18 @@ Bouton::majGeom( )    {
 void
 Bouton::traiter_evenements ( const sf::Event& event )
 {
-    // si actif, et on s'occupe des declenchements
-    if ( m_enable )  gerer_declenchements ( event ) ;
+    // si actif et visible,
+    if ( estActif() and estVisible() )  {
+        // on s'occupe des declenchements
+        gerer_declenchements ( event ) ;
 
-    // on s'occupe de l'état du bouton
-    gerer_etat          ( event ) ;
-
+        // et on s'occupe de l'état du bouton
+        gerer_etat          ( event ) ;
 
     /*
 //
 //    // si le gadget est actif
-//    if (m_enable) {
+//    if (m_actif) {
 //
 //        // on regarde à quel type d'événement on a affaire
 //        switch ( event.type )  {
@@ -203,7 +228,7 @@ Bouton::traiter_evenements ( const sf::Event& event )
 //
 //        //  si l'état a changé alors on a besoin d'une actualisation ...
 //        if ( m_etat != m_etatBack )
-//                m_besoinActua = true;
+//                m_aActualiser = true;
 //
 //        // on garde en memoire l'état actuel pour verifer si changement la prochaine fois.
 //        m_etatBack = m_etat;
@@ -221,7 +246,12 @@ Bouton::traiter_evenements ( const sf::Event& event )
 //
 */
 
-    Action::traiter_evenements( event );
+        Action::traiter_evenements( event );
+
+    } else if  ( estVisible() ){
+        // et on s'occupe de l'état du bouton
+      //  gerer_etat          ( event ) ;
+    }
 
 }
 
@@ -232,7 +262,7 @@ Bouton::gerer_etat( const sf::Event& event )
 {
 
     // si le bouton est désactivé, on sort apres avoir actualiser l'état
-    if ( not m_enable ) {
+    if ( not m_actif ) {
         m_etat = EtatBouton::desactive;  // sinon état désactivé
         return;
     }
@@ -276,7 +306,7 @@ Bouton::gerer_etat( const sf::Event& event )
 
 
     //  si l'état a changé alors on a besoin d'une actualisation ...
-    if ( m_etat != m_etatBack )  m_besoinActua = true;
+    if ( m_etat != m_etatBack )  m_aActualiser = true;
     // on garde en memoire l'état actuel pour verifer si changement la prochaine fois.
     m_etatBack = m_etat;
 
@@ -477,7 +507,7 @@ void
 Bouton::actualiser ( float deltaT )
 {
     // si il n'y a pas eu de changement sur le dessin du gadget on passe.
-    if ( not m_besoinActua ) return;
+    if ( not m_aActualiser ) return;
 
     // on definie le style en fonction de l'état du bouton
     switch ( m_etat ) {
@@ -504,7 +534,7 @@ Bouton::actualiser ( float deltaT )
     }
 
     // on reinitialise le besoin d'actualiser.
-    m_besoinActua = false;
+    m_aActualiser = false;
 
 }
 
@@ -517,6 +547,9 @@ Bouton::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
 
     states.transform *= getTransform();
     target.draw         ( *m_fond , states );
+    // l'icone
+    if ( m_bIcone )
+        target.draw         ( *m_icone , states );
 
     for ( ptr enfant : m_enfants )
         target.draw      ( *enfant , states );

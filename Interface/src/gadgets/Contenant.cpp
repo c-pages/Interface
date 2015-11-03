@@ -73,6 +73,8 @@ Contenant::getGlobalBounds ( )const {
 sf::FloatRect
 Contenant::getContenuBounds ( ) const {
 
+    if ( m_grpContenu->m_enfants.size() == 0) return {0,0,1,1};
+
     sf::FloatRect result ( 0,0,0,0 );
 //sult.height += 10; // pour laisser un espace
 
@@ -122,10 +124,10 @@ Contenant::actualiser ( float deltaT )    {
 
     // Si on drag, on a besoin d'actualiser
     if ( m_slideHori->isDragging() or m_slideVerti->isDragging() )
-        m_besoinActua = true;
+        m_aActualiser = true;
 
     // si pas besoin d'acttua on retourne
-    if ( not m_besoinActua ) return;
+    if ( not m_aActualiser ) return;
 
 
 
@@ -146,7 +148,11 @@ Contenant::actualiser ( float deltaT )    {
 
 
 
-
+    // Visibilité des sliders
+    m_slideHori->setVisible ( m_bSliderHori );
+    m_slideVerti->setVisible( m_bSliderVerti );
+    m_slideHori->setActif   ( m_bSliderHori );
+    m_slideVerti->setActif  ( m_bSliderVerti );
 
 
 
@@ -188,7 +194,7 @@ Contenant::actualiser ( float deltaT )    {
     m_grpUI->setSize           ( m_taille );
 
     // reinitialisation  du besoin d'actualiser
-    m_besoinActua = false;
+    m_aActualiser = false;
 }
 
 
@@ -232,6 +238,7 @@ Contenant::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    
     //dessiner les boutons drag
     if ( m_bSliderHori )
         target.draw      ( *m_slideHori , states );
+
     if ( m_bSliderVerti )
         target.draw      ( *m_slideVerti , states );
 
@@ -240,7 +247,6 @@ Contenant::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    
 
 
 } // fin namespace
-
 
 
 

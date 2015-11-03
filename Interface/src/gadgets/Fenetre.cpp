@@ -94,6 +94,8 @@ Fenetre::Fenetre(   sf::RenderWindow *  fenetre
 , m_redimHaut       ( false )
 {
     initUI();
+
+
 }
 
 /////////////////////////////////////////////////
@@ -107,45 +109,65 @@ void
 Fenetre::initUI()
 {
 
+
     // le fond
     m_fond = std::shared_ptr<Image>   ( new Image    ( ) );
 
-    // création des gadgets pour l'interface de la fenêtre
-    m_lblTitre              = std::shared_ptr<Label>   ( new Label    ( "Fenêtre" , m_skin->fenetre ) );
-//    m_lblFermer             = std::shared_ptr<Label>   ( new Label    ( "X"       , m_skin->fenetre ) );
-    m_btnFermer             = std::shared_ptr<BoutonTexte>  ( new BoutonTexte ( m_skin , "X" ) );
-    m_btnDrag               = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
-    m_btnRedimBasDroite     = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
-    m_btnRedimBasGauche     = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
-    m_btnRedimHautDroite    = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
-    m_btnRedimHautGauche    = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
-    m_btnRedimGauche        = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
-    m_btnRedimDroite        = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
-    m_btnRedimBas           = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
-    m_btnRedimHaut          = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
 
-    // integration dans le groupe UI
+    // création des gadgets pour l'interface de la fenêtre
     m_grpUI                 = std::shared_ptr<Groupe>  ( new Groupe   (  ) );
     m_grpUI->setParent ( this );
- //   m_grpUI->ajouter ( m_lblFermer );
-//    ajouter ( m_grpUI );
 
-    m_grpUI->ajouter ( m_btnFermer );
-    m_grpUI->ajouter ( m_btnDrag );
-    m_grpUI->ajouter ( m_btnRedimBasDroite );
-    m_grpUI->ajouter ( m_btnRedimBasGauche );
-    m_grpUI->ajouter ( m_btnRedimHautDroite );
-    m_grpUI->ajouter ( m_btnRedimHautGauche );
-    m_grpUI->ajouter ( m_btnRedimGauche );
-    m_grpUI->ajouter ( m_btnRedimDroite );
-    m_grpUI->ajouter ( m_btnRedimBas );
-    m_grpUI->ajouter ( m_btnRedimHaut );
+    m_lblTitre              = std::shared_ptr<Label>   ( new Label    ( "Fenêtre" , m_skin->fenetre ) );
     m_grpUI->ajouter ( m_lblTitre );
+//    m_lblFermer             = std::shared_ptr<Label>   ( new Label    ( "X"       , m_skin->fenetre ) );
+
+    if ( m_fermable )  {
+        m_btnFermer             = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
+        m_btnFermer->setIcone ( icoMngr.acceder( Icone::Fermer ) );
+        m_grpUI->ajouter ( m_btnFermer );
+        initUI_fermer();
+    }
+
+
+    if ( m_deplacable )  {
+        m_btnDrag               = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
+        m_grpUI->ajouter ( m_btnDrag );
+        initUI_drag();
+    }
+
+    if ( m_redimensionnable )  {
+        m_btnRedimBasDroite     = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
+        m_btnRedimBasGauche     = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
+        m_btnRedimHautDroite    = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
+        m_btnRedimHautGauche    = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
+        m_btnRedimGauche        = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
+        m_btnRedimDroite        = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
+        m_btnRedimBas           = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
+        m_btnRedimHaut          = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
+
+        // integration dans le groupe UI
+
+     //   m_grpUI->ajouter ( m_lblFermer );
+    //    ajouter ( m_grpUI );
+
+        m_grpUI->ajouter ( m_btnRedimBasDroite );
+        m_grpUI->ajouter ( m_btnRedimBasGauche );
+        m_grpUI->ajouter ( m_btnRedimHautDroite );
+        m_grpUI->ajouter ( m_btnRedimHautGauche );
+        m_grpUI->ajouter ( m_btnRedimGauche );
+        m_grpUI->ajouter ( m_btnRedimDroite );
+        m_grpUI->ajouter ( m_btnRedimBas );
+        m_grpUI->ajouter ( m_btnRedimHaut );
+
+        initUI_redim();
+    }
 
 
     // le cadre autour du group contenant
     m_CadreContenu          = std::shared_ptr<Image>   ( new Image    ( ) );
 
+    std::cout << "--------------------------------------------------------------------\n";
     // groupe d'affichage, le contenu des élements de la fenêtre
     m_contenant  = std::shared_ptr<Contenant>  ( new Contenant   ( m_fenetreSFML ) );
     m_contenant->setParent (this);
@@ -153,11 +175,6 @@ Fenetre::initUI()
     // initialiser le skin pour les boutons de l'ui de la fenetre ( genre les boutons drag, redim ... )
     initSkinBouton ();
     updateStyle();
-
-    // initialiser les fonctions de drag, redim ...
-    initUI_drag();
-    initUI_redim();
-    initUI_fermer();
 
 
     // actualiser les geometries
@@ -167,10 +184,43 @@ Fenetre::initUI()
     // Declenchement de l'évenement d'ouverture de la fenetre;
     declencher ( Evenements::onFen_Ouvre );
 
+
+   // initBoutonsActifs();
+
+
 }
 
 
 
+/////////////////////////////////////////////////
+void
+Fenetre::initBoutonsActifs()
+{
+    /*
+    m_btnFermer->setVisible             ( m_fermable );
+    m_btnDrag->setVisible               ( m_deplacable );
+    m_btnRedimBasDroite->setVisible     ( m_redimensionnable );
+    m_btnRedimBasGauche->setVisible     ( m_redimensionnable );
+    m_btnRedimHautDroite->setVisible    ( m_redimensionnable );
+    m_btnRedimHautGauche->setVisible    ( m_redimensionnable );
+    m_btnRedimGauche->setVisible        ( m_redimensionnable );
+    m_btnRedimDroite->setVisible        ( m_redimensionnable );
+    m_btnRedimBas->setVisible           ( m_redimensionnable );
+    m_btnRedimHaut->setVisible          ( m_redimensionnable );
+
+
+    m_btnFermer->setActif               ( m_fermable );
+    m_btnDrag->setActif                 ( m_deplacable );
+    m_btnRedimBasDroite->setActif       ( m_redimensionnable );
+    m_btnRedimBasGauche->setActif       ( m_redimensionnable );
+    m_btnRedimHautDroite->setActif      ( m_redimensionnable );
+    m_btnRedimHautGauche->setActif      ( m_redimensionnable );
+    m_btnRedimGauche->setActif          ( m_redimensionnable );
+    m_btnRedimDroite->setActif          ( m_redimensionnable );
+    m_btnRedimBas->setActif             ( m_redimensionnable );
+    m_btnRedimHaut->setActif            ( m_redimensionnable );
+    */
+}
 
 /////////////////////////////////////////////////
 void
@@ -351,6 +401,8 @@ Fenetre::setSkin ( std::shared_ptr<Skin>    skin )
     initSkinBouton ();
     updateStyle();
 };
+
+
 /////////////////////////////////////////////////
 void
 Fenetre::initSkinBouton (){
@@ -399,20 +451,26 @@ Fenetre::initSkinBouton (){
 void
 Fenetre::updateStyle( ){
 
-    m_btnDrag->setSkin              ( m_skinBtn ) ;
-    m_btnFermer->setSkin            ( m_skinBtn ) ;
-    m_btnRedimBasDroite->setSkin    ( m_skinBtn ) ;
-    m_btnRedimBasGauche->setSkin    ( m_skinBtn ) ;
-    m_btnRedimHautDroite->setSkin   ( m_skinBtn ) ;
-    m_btnRedimHautGauche->setSkin   ( m_skinBtn ) ;
-    m_btnRedimDroite->setSkin       ( m_skinBtn ) ;
-    m_btnRedimGauche->setSkin       ( m_skinBtn ) ;
-    m_btnRedimBas->setSkin          ( m_skinBtn ) ;
-    m_btnRedimHaut->setSkin         ( m_skinBtn ) ;
+    if ( m_deplacable )
+        m_btnDrag->setSkin              ( m_skinBtn ) ;
+
+    if ( m_fermable )
+        m_btnFermer->setSkin            ( m_skinBtn ) ;
+
+    if ( m_redimensionnable )  {
+        m_btnRedimBasDroite->setSkin    ( m_skinBtn ) ;
+        m_btnRedimBasGauche->setSkin    ( m_skinBtn ) ;
+        m_btnRedimHautDroite->setSkin   ( m_skinBtn ) ;
+        m_btnRedimHautGauche->setSkin   ( m_skinBtn ) ;
+        m_btnRedimDroite->setSkin       ( m_skinBtn ) ;
+        m_btnRedimGauche->setSkin       ( m_skinBtn ) ;
+        m_btnRedimBas->setSkin          ( m_skinBtn ) ;
+        m_btnRedimHaut->setSkin         ( m_skinBtn ) ;
+    }
 
     //// Titre ///////////////////////////////////
     m_lblTitre->setStyle            ( m_skin->fenetre );
-  //  m_lblFermer->setStyle           ( m_skin->fenetre );
+
 
     //// fond ///////////////////////////////////
     m_fond->setStyle                ( m_skin->fenetre );
@@ -442,6 +500,15 @@ Fenetre::getGlobalBounds ( ) const {
 
     result.left     =  getPosAbs().x - m_bordure;
     result.top      =  getPosAbs().y - ( m_lblTitre->getSize().y +  ( 2 * m_bordure ));
+
+//
+//std::cout << "--------------> " ;
+//
+//   std::cout << "\nresult.left : " << result.left;
+//   std::cout << "\nresult.top : " << result.top;
+//   std::cout << "\nresult.width : " << result.width;
+//   std::cout << "\nresult.height : " << result.height;
+//   std::cout << "\n";
 
     return { result };
 }
@@ -489,7 +556,7 @@ Fenetre::ManipulerFenetre ( )    {
     if (m_redimensionnable)  {
 
         // les mimimums
-        float minY = 1;;
+        float minY = m_btnDrag->getSize().y + 4 * m_bordure;
         float minX = m_lblTitre->getSize().x + m_btnFermer->getSize().x + 2 * m_bordure;
 
         // la position de la souris
@@ -556,10 +623,11 @@ Fenetre::ManipulerFenetre ( )    {
     } // fin si redimensionnable
 
 
+
     /////////////////////////////////////////////////
     // S'il y a eu manipulation on met à jour la géométrie.
     if ( m_redimDroite   or  m_redimBas  or  m_redimGauche or  m_redimHaut) {
-        majGeom ();
+        demanderActualisation();
         m_contenant->demanderActualisation();
     }
 
@@ -736,13 +804,21 @@ std::cout << "m_contenant->getContenuBounds().height : " << m_contenant->getCont
     // > Drag et redimensionnements
     ManipulerFenetre ();
 
-    // > Actualiser niveau Gadget
-    Gadget::actualiser          ( deltaT );
 
     // > Actualiser le contenu de la fenetre
     m_contenant->actualiser    ( deltaT );
 
+    // mise a jour des boutons de l'interface
     m_grpUI->actualiser    ( deltaT );
+
+
+    if ( not m_aActualiser ) return;
+
+    // mise a jour des geometries
+    majGeom ();
+
+
+    m_aActualiser = false;
 }
 
 

@@ -14,10 +14,10 @@ Gadget::Gadget  ()
 , m_enfants     ( 0 )
 , m_skin        ( std::make_shared <Skin> () )
 , m_style       ( std::make_shared <Style> () )
-, m_enable      ( true )
+, m_actif      ( true )
 , m_visible     ( true )
 , m_aSupprimer  ( false )
-, m_besoinActua ( true )
+, m_aActualiser ( true )
 //, m_DEBUG_SHAPE ( sf::RectangleShape () )
 //, m_texte   ( new sf::Text () )
 {
@@ -36,10 +36,10 @@ Gadget::Gadget  ( std::shared_ptr<Style>    style )
 , m_enfants     ( 0 )
 , m_skin        ( std::make_shared <Skin>() )
 , m_style       ( style )
-, m_enable      ( true )
+, m_actif      ( true )
 , m_visible     ( true )
 , m_aSupprimer  ( false )
-, m_besoinActua ( true )
+, m_aActualiser ( true )
 {
 
 }
@@ -50,10 +50,10 @@ Gadget::Gadget  ( std::shared_ptr <Skin>    skin )
 , m_enfants     ( 0 )
 , m_skin        ( skin )
 , m_style       ( m_skin->fenetre )
-, m_enable      ( true )
+, m_actif      ( true )
 , m_visible     ( true )
 , m_aSupprimer  ( false )
-, m_besoinActua( true )
+, m_aActualiser( true )
 {
 
 }
@@ -246,9 +246,13 @@ Gadget::actualiser ( float deltaT )
         if ( m_enfants[i]->aSupprimer() )
             m_enfants.erase ( m_enfants.begin() + i );
 
+//        std::cout << "------------------------------\n";
     // Actualiser les enfants
-    for ( ptr enfant : m_enfants )
-        enfant->actualiser ( deltaT );
+    for ( ptr enfant : m_enfants ){
+//        std::cout << "-> enfant->estVisible() : " << enfant->estVisible() << "\n";
+        if ( enfant->estVisible() and enfant->estActif() )
+            enfant->actualiser ( deltaT );
+    }
 
 }
 
@@ -256,9 +260,11 @@ Gadget::actualiser ( float deltaT )
 void
 Gadget::traiter_evenements ( const sf::Event& event )
 {
+
     // les evenements des gadgets enfants
     for ( ptr enfant : m_enfants )
-        enfant->traiter_evenements ( event );
+        if ( enfant->estVisible() and enfant->estActif() )
+            enfant->traiter_evenements ( event );
 }
 
 /////////////////////////////////////////////////
@@ -277,7 +283,7 @@ Gadget::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const
 
     // dessiner les gadgets enfants
     for ( const ptr& enfant : m_enfants )
-        if ( enfant->m_visible )
+        if ( enfant->estVisible() )
             target.draw      ( *enfant , states );
 
 }

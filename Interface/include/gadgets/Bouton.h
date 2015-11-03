@@ -50,7 +50,8 @@ public:
     /// \param skin       Le skin à appliquer (Style).
     ///
     /////////////////////////////////////////////////
-    Bouton( std::shared_ptr<Skin>  skin );
+    Bouton ( std::shared_ptr<Skin>  skin
+           , sf::Vector2f           taille = { 10 , 10 });
 
 
     /////////////////////////////////////////////////
@@ -58,6 +59,17 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual ~Bouton();
+
+
+    /////////////////////////////////////////////////
+    /// \brief Definir une texture pour l'icone du bouton.
+    ///
+    /// \param texture     La nouvelle texture.
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    virtual     void
+    setIcone   ( const sf::Texture*   texture );
 
 
     /////////////////////////////////////////////////
@@ -265,6 +277,7 @@ protected:
     /////////////////////////////////////////////////
     EtatBouton              m_etat;             ///< L'état du bouton.
     EtatBouton              m_etatBack;         ///< L'état du bouton la frame d'avant, pour verifier si changement d'état.
+    bool                    m_bIcone;           ///< si on utilise une icone
     std::shared_ptr<Image>  m_icone;            ///< Le rectangle de l'icone du bouton. \todo getsion icone dans gui::Bouton, une image fixe avec en transparence m_fond qui change d'état
     std::shared_ptr<Image>  m_fond;             ///< Le rectangle du fond du bouton.
     sf::Clock               m_clock_dblClique;  ///< Compteur temps pour double clique.
@@ -292,23 +305,23 @@ protected:
 ////    m_DEBUG_SHAPE.setSize       ( {rect.width , rect.height}   );
 ////    ////////////DEBUG/////////////
 //
-//std::cout << "--- bouton -----------------------------------\n";
+//std::cout << "--- bouton ------------------- " << this << " ---> ";
 //
 //    // S'il est contenu alors on verif le parent pour savoir par exemple si
 //    // le gadget est visible dans la fenetre parent.
 //    if ( rect.contains( sf::Vector2f ( x , y ) ) ){
-//         //   std::cout << "TRUE\n";
+//            std::cout << "TRUE\n";
 //        if ( m_parent != 0 )    return  m_parent->contient ( x, y );
 //        else                    return  true;
 //    } else {
-//         //   std::cout << "FALSE\n";
+//            std::cout << "FALSE\n";
 //        return false;
 //    }
 //
 //};
 ////////////// DEBUG /////////////////////////////////////
 //
-//
+
 
 
 

@@ -87,8 +87,8 @@ void Application::traiter_evenements()
 
         m_ecrans.traiter_evenements ( event );
 
-        if (event.type == sf::Event::Closed)
-            m_fenetre.close();
+
+
     }
 }
 

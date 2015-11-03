@@ -163,12 +163,22 @@ private:
     void
     initSkinBouton();
 
+
     /////////////////////////////////////////////////
     /// \brief Initialiser les gadgets ( boutons, titre...).
     ///
     /////////////////////////////////////////////////
     void
     initUI();
+
+
+    /////////////////////////////////////////////////
+    /// \brief Initialiser les gadgets ( boutons, titre...).
+    ///
+    /////////////////////////////////////////////////
+    void
+    initBoutonsActifs();
+
 
     /////////////////////////////////////////////////
     /// \brief Initialiser l'interface pour prendre en compte le drag.
@@ -177,12 +187,14 @@ private:
     void
     initUI_drag();
 
+
     /////////////////////////////////////////////////
     /// \brief Initialiser l'interface pour le bouton fermer.
     ///
     /////////////////////////////////////////////////
     void
     initUI_fermer();
+
 
     /////////////////////////////////////////////////
     /// \brief Initialiser l'interface pour les bouton de redimensionnements.
@@ -191,12 +203,14 @@ private:
     void
     initUI_redim();
 
+
     /////////////////////////////////////////////////
     /// \brief Initialiser l'interface pour le titre.
     ///
     /////////////////////////////////////////////////
     void
     initUI_titre();
+
 
     /////////////////////////////////////////////////
     /// \brief mais à jour les styles des éléments de la fenêtre.
@@ -271,9 +285,9 @@ private:
 
     std::shared_ptr<Groupe>         m_grpUI;                ///<  Le groupe contenant l'interface de la fenetyre (boutons, titre)
     std::shared_ptr<Label>          m_lblTitre;             ///<  Le Label titre.
- //   std::shared_ptr<Label>          m_lblFermer;            ///<  Le X pour le bouton fermer.
+    //   std::shared_ptr<Label>          m_lblFermer;            ///<  Le X pour le bouton fermer.
 
-    std::shared_ptr<BoutonTexte>         m_btnFermer;            ///<  Le Bouton pour fermer la fenetre.
+    std::shared_ptr<Bouton>         m_btnFermer;            ///<  Le Bouton pour fermer la fenetre.
     std::shared_ptr<Bouton>         m_btnDrag;              ///<  Le Bouton pour drager la fenetre.
 
     std::shared_ptr<Bouton>         m_btnRedimBasDroite;    ///<  Bouton pour redimensionner la fenetre.

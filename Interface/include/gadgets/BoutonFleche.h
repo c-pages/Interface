@@ -1,24 +1,24 @@
 #ifndef BOUTONFLECHE_H
 #define BOUTONFLECHE_H
 
+/////////////////////////////////////////////////
+// Headers
+/////////////////////////////////////////////////
 #include <Gadget.h>
 
 
 
-/////////////////////////////////////////////////
-// Headers
-/////////////////////////////////////////////////
 namespace gui
 {
 
 
 /////////////////////////////////////////////////
-/// \brief Gadget, permet de controler une valeur numerique avec deux flèche à coté d'un label indiquant la valeur.
+/// \brief Gadget, permet de controler une valeur numerique avec deux flèche à coté d'un Champ de saisie de texte indiquant la valeur.
 ///
 /// \todo à developper.
 ///
 /////////////////////////////////////////////////
-class BoutonFleche
+class BoutonFleche : public Gadget
 {
 public:
 

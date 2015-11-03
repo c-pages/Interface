@@ -1,4 +1,11 @@
+
+/////////////////////////////////////////////////
+// Headers
+/////////////////////////////////////////////////
 #include "BoutonCurseur.h"
+
+namespace gui
+{
 
 BoutonCurseur::BoutonCurseur()
 {
@@ -9,3 +16,5 @@ BoutonCurseur::~BoutonCurseur()
 {
     //dtor
 }
+
+} // fin namespace gui

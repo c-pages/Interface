@@ -95,6 +95,18 @@ public:
     std::string
     getTexte ( ) const {  return m_texte->getString();   } ;
 
+
+    /////////////////////////////////////////////////
+    /// \brief Accesseur du texte du Label.
+    ///
+    /// \return le texte du Label.
+    ///
+    /////////////////////////////////////////////////
+    sf::Text *
+    getSFTexte ( ) const {  return m_texte;   } ;
+
+
+
     /////////////////////////////////////////////////
     /// \brief Definir la taille texte du Label.
     ///

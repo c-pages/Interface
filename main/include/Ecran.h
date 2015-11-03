@@ -65,7 +65,10 @@ protected:
     /////////////////////////////////////////////////
     // Les membres
     /////////////////////////////////////////////////
-    Application*    m_appli; ///< La classe Apllication parent.
+    Application*    m_appli;    ///< La classe Apllication parent.
+
+    sf::View        m_vueJeu;   ///<
+    sf::View        m_vueGUI;   ///<
 
 }; // fin Ecran
 }; // fin app
