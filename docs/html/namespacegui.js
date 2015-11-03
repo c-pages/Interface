@@ -1,6 +1,7 @@
 var namespacegui =
 [
     [ "Action", "classgui_1_1_action.html", "classgui_1_1_action" ],
+    [ "BarreProgression", "classgui_1_1_barre_progression.html", null ],
     [ "Bouton", "classgui_1_1_bouton.html", "classgui_1_1_bouton" ],
     [ "BoutonCurseur", "classgui_1_1_bouton_curseur.html", "classgui_1_1_bouton_curseur" ],
     [ "BoutonEncoche", "classgui_1_1_bouton_encoche.html", "classgui_1_1_bouton_encoche" ],
@@ -15,8 +16,10 @@ var namespacegui =
     [ "FenetreOnglets", "classgui_1_1_fenetre_onglets.html", "classgui_1_1_fenetre_onglets" ],
     [ "Gadget", "classgui_1_1_gadget.html", "classgui_1_1_gadget" ],
     [ "Groupe", "classgui_1_1_groupe.html", "classgui_1_1_groupe" ],
+    [ "IconeManager", "classgui_1_1_icone_manager.html", "classgui_1_1_icone_manager" ],
     [ "Image", "classgui_1_1_image.html", "classgui_1_1_image" ],
     [ "Label", "classgui_1_1_label.html", "classgui_1_1_label" ],
+    [ "Liste", "classgui_1_1_liste.html", null ],
     [ "Skin", "structgui_1_1_skin.html", "structgui_1_1_skin" ],
     [ "Style", "structgui_1_1_style.html", "structgui_1_1_style" ]
 ];

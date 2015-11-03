@@ -27,25 +27,27 @@ var group__interface =
       [ "contient", "classgui_1_1_gadget.html#aca524b5beca6fd7eb6269e32e56285a3", null ],
       [ "demanderActualisation", "classgui_1_1_gadget.html#af2d0b7310b6a61f2e9feee6b52275462", null ],
       [ "draw", "classgui_1_1_gadget.html#a7ccb80ac58d4b1320bc76ad8ae031866", null ],
+      [ "estActif", "classgui_1_1_gadget.html#a5442078caf792fe005dac499f8295e45", null ],
+      [ "estVisible", "classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd", null ],
       [ "getGlobalBounds", "classgui_1_1_gadget.html#a393fef359f85de77d5067ebb39039201", null ],
       [ "getLocalBounds", "classgui_1_1_gadget.html#a3479c624ae533156f318dc2b996eded3", null ],
       [ "getPosAbs", "classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539", null ],
       [ "getSize", "classgui_1_1_gadget.html#af3bf6c3eafa429927505416d71a87ee4", null ],
-      [ "isEnable", "classgui_1_1_gadget.html#a9ebbf548dbdeb9b9b7d34a21d93376c2", null ],
       [ "majGeom", "classgui_1_1_gadget.html#a8a72d0816ec1928958ff5dd3ccd983f5", null ],
       [ "rotate", "classgui_1_1_gadget.html#a093269333aa3725e27ca92a4a48e4dfb", null ],
-      [ "setEnable", "classgui_1_1_gadget.html#a72d54e3e05dbfd28e156ec72d1424410", null ],
+      [ "setActif", "classgui_1_1_gadget.html#a29dbce388329d020b761cec79131f931", null ],
       [ "setParent", "classgui_1_1_gadget.html#a02a9b2e04c82e9539312301c449e2baa", null ],
       [ "setSize", "classgui_1_1_gadget.html#a2d021f2ce19a4335d79bcaedf4ab4bb2", null ],
       [ "setSkin", "classgui_1_1_gadget.html#a93ede42252a94de3b756a9a5761df3a7", null ],
       [ "setStyle", "classgui_1_1_gadget.html#a46f7f9242f66fffbd12824afc51b4691", null ],
+      [ "setVisible", "classgui_1_1_gadget.html#a5a3af2e01d4c09e9935503a4a348ff8f", null ],
       [ "supprimer", "classgui_1_1_gadget.html#adf55e6760cf3d4ef586ce87c07cfae7c", null ],
       [ "traiter_evenements", "classgui_1_1_gadget.html#a510ae68144997724188d2bb902c3103d", null ],
       [ "Contenant", "classgui_1_1_gadget.html#aa9e4aa786fd85401ae45a925e843ffc9", null ],
       [ "Fenetre", "classgui_1_1_gadget.html#af5c60b20048ba2de87cbc917bd75e2da", null ],
+      [ "m_aActualiser", "classgui_1_1_gadget.html#ab472e731b7cebb3e7ba999cb7bee8b52", null ],
+      [ "m_actif", "classgui_1_1_gadget.html#a79deb80c3bae13e71c178b777ce3f4bb", null ],
       [ "m_aSupprimer", "classgui_1_1_gadget.html#a5a90fbf5cca8da8ab438bd54f22d7412", null ],
-      [ "m_besoinActua", "classgui_1_1_gadget.html#aaa3667377bb36656be2f6b3f233aa318", null ],
-      [ "m_enable", "classgui_1_1_gadget.html#a809f2e60f57a303c874624b2671022ef", null ],
       [ "m_enfants", "classgui_1_1_gadget.html#ab6be4fdbfe4645692c959ed1425bfa87", null ],
       [ "m_nom", "classgui_1_1_gadget.html#a5d53771bd5bf7599ede34e63029c7b7f", null ],
       [ "m_parent", "classgui_1_1_gadget.html#aed32b8bde0e9e8f5384adb7adf05a46a", null ],
@@ -53,6 +55,7 @@ var group__interface =
       [ "m_style", "classgui_1_1_gadget.html#a6d7bd13de67c1577d6fa5073cb35edc9", null ],
       [ "m_visible", "classgui_1_1_gadget.html#a10fc45e0ac3da5339be2e1efb9fed289", null ]
     ] ],
+    [ "BarreProgression", "classgui_1_1_barre_progression.html", null ],
     [ "Bouton", "classgui_1_1_bouton.html", [
       [ "EtatBouton", "classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5f", [
         [ "desactive", "classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5fa0826242afa707857663ceb43c0484b4a", null ],
@@ -61,7 +64,7 @@ var group__interface =
         [ "press", "classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5fa960ca598786d4fe54aaeeaa55af90b5a", null ]
       ] ],
       [ "Bouton", "classgui_1_1_bouton.html#a98cf47d074d64c2915a24f3e9b76dfc7", null ],
-      [ "Bouton", "classgui_1_1_bouton.html#acb71294b84e82f435f81f272db595a3b", null ],
+      [ "Bouton", "classgui_1_1_bouton.html#ad07ee36d6a38ca903e70d75b30c29dfe", null ],
       [ "~Bouton", "classgui_1_1_bouton.html#a7854d8a204c968aea377da67435bb50b", null ],
       [ "actualiser", "classgui_1_1_bouton.html#a85874dc8b231bc9db24117aff6176d43", null ],
       [ "draw", "classgui_1_1_bouton.html#a8d736a0c912d7bb23551ccc0aaa0e20d", null ],
@@ -74,6 +77,7 @@ var group__interface =
       [ "majGeom", "classgui_1_1_bouton.html#a1ff3d7a1586eaab5873cc6e49be2332c", null ],
       [ "setBordure", "classgui_1_1_bouton.html#a64b944ce671d491c2c14087b5727ee0b", null ],
       [ "setFillColor", "classgui_1_1_bouton.html#a84b817726afad13e2c93b458df712beb", null ],
+      [ "setIcone", "classgui_1_1_bouton.html#a6ac560f2ad79c27975aebdcf6ee429d3", null ],
       [ "setOutlineColor", "classgui_1_1_bouton.html#a82ae2f53840fa81e95bad972a301bddb", null ],
       [ "setOutlineThickness", "classgui_1_1_bouton.html#ae56f585c1463d258f7209ade57426421", null ],
       [ "setSize", "classgui_1_1_bouton.html#a7652dfbbb1180cfecc0db6b68db38776", null ],
@@ -84,6 +88,7 @@ var group__interface =
       [ "test_declSurvol", "classgui_1_1_bouton.html#a516b56a17aecfebb808ab94bfab93325", null ],
       [ "traiter_evenements", "classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac", null ],
       [ "m_1erClick", "classgui_1_1_bouton.html#aed2b58479b336c984960936f3ce33caa", null ],
+      [ "m_bIcone", "classgui_1_1_bouton.html#a677e0eb723e20c3768e0b559659eba08", null ],
       [ "m_bordure", "classgui_1_1_bouton.html#a66fd43d3a26b7c86f43990d94217d5a1", null ],
       [ "m_clock_dblClique", "classgui_1_1_bouton.html#aa16f60426d96ef6d73a7e436d5a31027", null ],
       [ "m_etat", "classgui_1_1_bouton.html#a92ed42af744e499c3d94b0911589761f", null ],
@@ -94,25 +99,25 @@ var group__interface =
       [ "ms_btnSurvol", "classgui_1_1_bouton.html#a0817c522c874f325e967a641e3f980ba", null ]
     ] ],
     [ "BoutonCurseur", "classgui_1_1_bouton_curseur.html", [
-      [ "BoutonCurseur", "classgui_1_1_bouton_curseur.html#a65ef27ba089ae55586a0d8e1e3208d28", null ],
-      [ "~BoutonCurseur", "classgui_1_1_bouton_curseur.html#a411aeab85f3c1ce309eb4a10cf5988f5", null ]
+      [ "BoutonCurseur", "classgui_1_1_bouton_curseur.html#ab162e22a32268f45f4e28246f2e3f726", null ],
+      [ "~BoutonCurseur", "classgui_1_1_bouton_curseur.html#afeee8704fb846eec660aa84d6e490afb", null ]
     ] ],
     [ "BoutonEncoche", "classgui_1_1_bouton_encoche.html", [
       [ "BoutonEncoche", "classgui_1_1_bouton_encoche.html#af091f97a68863b3975199b39f0797335", null ],
       [ "BoutonEncoche", "classgui_1_1_bouton_encoche.html#a6014e719ac05833528c2dafbcd3d12a8", null ],
       [ "~BoutonEncoche", "classgui_1_1_bouton_encoche.html#a95320fa12c80fa5851f16b328e848266", null ],
       [ "draw", "classgui_1_1_bouton_encoche.html#a7b16e473d79aa0d1b1c4c554e8e71669", null ],
+      [ "estCoche", "classgui_1_1_bouton_encoche.html#a48576f58138b6f58806f82efcf75dfa9", null ],
       [ "init", "classgui_1_1_bouton_encoche.html#ab945956a49c0a10e49388a89b59e9c66", null ],
-      [ "isActif", "classgui_1_1_bouton_encoche.html#a8dbd47117e62a7028363295652d442e1", null ],
       [ "majGeom", "classgui_1_1_bouton_encoche.html#a02629fc362c653d12d545bc1557097cf", null ],
-      [ "setActif", "classgui_1_1_bouton_encoche.html#ac3f0d5b215ed1bf74faaa2ea2336163f", null ],
-      [ "m_actif", "classgui_1_1_bouton_encoche.html#aef495ba5b9a0a78a43d74102622b2e31", null ],
+      [ "setCoche", "classgui_1_1_bouton_encoche.html#a01f26c919d100c0692c0c84b4406bbf7", null ],
+      [ "m_coche", "classgui_1_1_bouton_encoche.html#a00ab21ab2b4adfb55f35f8740db2a4d0", null ],
       [ "m_fctToggle", "classgui_1_1_bouton_encoche.html#a8d9121b7e192992ecd148f80f8f36110", null ],
       [ "m_imgCoche", "classgui_1_1_bouton_encoche.html#af4239af011bafb9513555ef9127f05ae", null ]
     ] ],
     [ "BoutonFleche", "classgui_1_1_bouton_fleche.html", [
-      [ "BoutonFleche", "classgui_1_1_bouton_fleche.html#a9343e65f7daf3ee82840555bb1b5721a", null ],
-      [ "~BoutonFleche", "classgui_1_1_bouton_fleche.html#ac2b22771c0c585513cef09ae88ad82ff", null ]
+      [ "BoutonFleche", "classgui_1_1_bouton_fleche.html#a898dfaf2535aab9b22c329447be6dcb2", null ],
+      [ "~BoutonFleche", "classgui_1_1_bouton_fleche.html#ad1507564f2dfa7c3c41fae2ea78427bc", null ]
     ] ],
     [ "BoutonRadio", "classgui_1_1_bouton_radio.html", [
       [ "BoutonRadio", "classgui_1_1_bouton_radio.html#a82408623da459b9d0c79f5b8122a68e4", null ],
@@ -133,8 +138,18 @@ var group__interface =
       [ "m_lblTexte", "classgui_1_1_bouton_texte.html#adedb7fc1377556a249211d9724f702f9", null ]
     ] ],
     [ "ChampTexte", "classgui_1_1_champ_texte.html", [
-      [ "ChampTexte", "classgui_1_1_champ_texte.html#a8285a4a0f72522d07b0c43a0e1fd80fd", null ],
-      [ "~ChampTexte", "classgui_1_1_champ_texte.html#ab962ca027c734c8090943e4f5a2df467", null ]
+      [ "ChampTexte", "classgui_1_1_champ_texte.html#a0d936fbccd736fe02b428b12428b2fdc", null ],
+      [ "~ChampTexte", "classgui_1_1_champ_texte.html#ab962ca027c734c8090943e4f5a2df467", null ],
+      [ "actualiser", "classgui_1_1_champ_texte.html#aa87889137c3fc9df880e045d475ae25f", null ],
+      [ "draw", "classgui_1_1_champ_texte.html#a35ebc21d226b5e9e6ba4a8b3c10495e9", null ],
+      [ "getGlobalBounds", "classgui_1_1_champ_texte.html#acd03dd4eb8a2149a42d62d398787cbc9", null ],
+      [ "getLocalBounds", "classgui_1_1_champ_texte.html#acd54f238be0cc746648d8f59ab2f9675", null ],
+      [ "initUI", "classgui_1_1_champ_texte.html#a2ea8299ea2529fcce06dc77e5d699bf5", null ],
+      [ "traiter_evenements", "classgui_1_1_champ_texte.html#a157fa9807bb57a159e1fbcc8da4935b2", null ],
+      [ "m_btn", "classgui_1_1_champ_texte.html#aed879396dc0e86a613061596db1bfec6", null ],
+      [ "m_curseur", "classgui_1_1_champ_texte.html#a4dc9e78e1d45fccc48be2f5cb993fb09", null ],
+      [ "m_grpUI", "classgui_1_1_champ_texte.html#a4445fbdb81bb7592def2c137ce1084a6", null ],
+      [ "m_lbl", "classgui_1_1_champ_texte.html#a9193a44d82aeee7c6cd9947f8ec79a73", null ]
     ] ],
     [ "Contenant", "classgui_1_1_contenant.html", [
       [ "Contenant", "classgui_1_1_contenant.html#a8d19d69ba02d621c504cfd4d336f3723", null ],
@@ -174,6 +189,7 @@ var group__interface =
       [ "getLocalBounds", "classgui_1_1_fenetre.html#a24c757c57ffaec7174bfd044346538b1", null ],
       [ "getSize", "classgui_1_1_fenetre.html#a4a9b783095e1ebf716f16042efa33da9", null ],
       [ "getTitre", "classgui_1_1_fenetre.html#a24226f80b36a5e49b63d24ee1105f41c", null ],
+      [ "initBoutonsActifs", "classgui_1_1_fenetre.html#a10f99ea1da068222aa1a356663a913f0", null ],
       [ "initSkinBouton", "classgui_1_1_fenetre.html#a05f4a03ba7bff8bf975a9bca6cf43d43", null ],
       [ "initUI", "classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758", null ],
       [ "initUI_drag", "classgui_1_1_fenetre.html#a72881398e744a405b56046d60917d1de", null ],
@@ -190,7 +206,7 @@ var group__interface =
       [ "updateStyle", "classgui_1_1_fenetre.html#ad5955dbe8116150699472cb999e2b695", null ],
       [ "m_bordure", "classgui_1_1_fenetre.html#afc711287fdbd88ff8b081beac7e3d234", null ],
       [ "m_btnDrag", "classgui_1_1_fenetre.html#a6945a31ffdf0c490d80dd7182edece99", null ],
-      [ "m_btnFermer", "classgui_1_1_fenetre.html#a325832af1f59568291a2eeb7ba568af0", null ],
+      [ "m_btnFermer", "classgui_1_1_fenetre.html#aa00c89dc75dbbe97672445f981ecf5d2", null ],
       [ "m_btnRedimBas", "classgui_1_1_fenetre.html#ae0d81cd231c2fec4e1fd59eea16c9269", null ],
       [ "m_btnRedimBasDroite", "classgui_1_1_fenetre.html#aab1b7df9823d963e4bb6c5248e2c388c", null ],
       [ "m_btnRedimBasGauche", "classgui_1_1_fenetre.html#a92859016175a3274be4e7fd9477d53be", null ],
@@ -327,7 +343,7 @@ var group__interface =
       [ "setOutlineColor", "classgui_1_1_image.html#a47e0a556fbe3ba63eab7644480daf801", null ],
       [ "setOutlineThickness", "classgui_1_1_image.html#aeb3014a3cf51b3bcff542d63a5737aad", null ],
       [ "setSize", "classgui_1_1_image.html#afb286d244ff0bf591d290de7d17215f9", null ],
-      [ "setTexture", "classgui_1_1_image.html#aa7533a45edd754eaf6dffe7a559d0eb5", null ],
+      [ "setTexture", "classgui_1_1_image.html#abab23a691cff44fe4e3473c9e9188a52", null ],
       [ "m_image", "classgui_1_1_image.html#ae4bbb31ffe1c5ec686659fac57971091", null ],
       [ "m_rectangle", "classgui_1_1_image.html#a19c107406f623eee148a4e0bb4b74d11", null ],
       [ "m_texture", "classgui_1_1_image.html#a061216c5b478d92833e08b1cabd6b1be", null ]
@@ -340,6 +356,7 @@ var group__interface =
       [ "draw", "classgui_1_1_label.html#a7e162f32f95d6e2b568bc9393945a732", null ],
       [ "getGlobalBounds", "classgui_1_1_label.html#a5cdb2304ef0b04956246301dbde2695f", null ],
       [ "getLocalBounds", "classgui_1_1_label.html#a1ca878608ba8b4219b6d4f8db804ea02", null ],
+      [ "getSFTexte", "classgui_1_1_label.html#a2066c2bb08d06423756f73a0f78d2d72", null ],
       [ "getSize", "classgui_1_1_label.html#a53d1325a8b2a1241c413184f16883f0b", null ],
       [ "getTexte", "classgui_1_1_label.html#afc87320a14f65877923bfacb79f49def", null ],
       [ "majGeom", "classgui_1_1_label.html#ae310f44ef08900d558af5c5bc94c448d", null ],
@@ -348,6 +365,14 @@ var group__interface =
       [ "setTexteTaille", "classgui_1_1_label.html#ac186d541addb868de0d08dff76488732", null ],
       [ "traiter_evenements", "classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf", null ],
       [ "m_texte", "classgui_1_1_label.html#a331d0837da428ac27b860277f198df82", null ]
+    ] ],
+    [ "Liste", "classgui_1_1_liste.html", null ],
+    [ "IconeManager", "classgui_1_1_icone_manager.html", [
+      [ "IconeManager", "classgui_1_1_icone_manager.html#a02dacf031609c21f80ed1f52c56e1524", null ],
+      [ "~IconeManager", "classgui_1_1_icone_manager.html#acf01cd767b05e0d180f4bb5a11c915cc", null ],
+      [ "acceder", "classgui_1_1_icone_manager.html#a54125a6e47de0ceb40188e3619d937de", null ],
+      [ "charger", "classgui_1_1_icone_manager.html#a88c038144fcbf72e2f2353513dc79df5", null ],
+      [ "m_textures", "classgui_1_1_icone_manager.html#aff59f7fbae26fcdf93dd6777b995758d", null ]
     ] ],
     [ "Skin", "structgui_1_1_skin.html", [
       [ "Skin", "structgui_1_1_skin.html#a216892ffb06a16a2aba1d0c8261496b3", null ],

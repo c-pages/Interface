@@ -1,4 +1,3 @@
 <map id="gui::Fenetre::ManipulerFenetre" name="gui::Fenetre::ManipulerFenetre">
-<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="252,5,407,32"/>
-<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#ad5955dbe8116150699472cb999e2b695" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="455,5,623,32"/>
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#af2d0b7310b6a61f2e9feee6b52275462" title="demande si le gadget est en attente de suppression " alt="" coords="252,5,481,32"/>
 </map>

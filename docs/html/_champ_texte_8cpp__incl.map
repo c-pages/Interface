@@ -1,3 +1,11 @@
 <map id="Interface/src/gadgets/ChampTexte.cpp" name="Interface/src/gadgets/ChampTexte.cpp">
-<area shape="rect" id="node2" href="$_champ_texte_8h.html" title="ChampTexte.h" alt="" coords="23,95,130,121"/>
+<area shape="rect" id="node2" href="$_champ_texte_8h.html" title="ChampTexte.h" alt="" coords="528,169,634,196"/>
+<area shape="rect" id="node15" href="$_label_8h.html" title="gadgets/Label.h" alt="" coords="333,169,448,196"/>
+<area shape="rect" id="node17" href="$_bouton_encoche_8h.html" title="gadgets/BoutonEncoche.h" alt="" coords="631,95,806,121"/>
+<area shape="rect" id="node19" href="$_groupe_8h.html" title="gadgets/Groupe.h" alt="" coords="428,95,553,121"/>
+<area shape="rect" id="node3" href="$_gadget_8h.html" title="Gadget.h" alt="" coords="462,244,537,271"/>
+<area shape="rect" id="node13" href="$_skin_8h.html" title="Skin.h" alt="" coords="568,319,626,345"/>
+<area shape="rect" id="node8" href="$_action_8h.html" title="Action.h" alt="" coords="239,319,310,345"/>
+<area shape="rect" id="node14" href="$_style_8h.html" title="Style.h" alt="" coords="566,393,628,420"/>
+<area shape="rect" id="node18" href="$_bouton_8h.html" title="gadgets\\Bouton.h" alt="" coords="659,169,783,196"/>
 </map>

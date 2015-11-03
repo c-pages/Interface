@@ -7,6 +7,7 @@ var classgui_1_1_label =
     [ "draw", "classgui_1_1_label.html#a7e162f32f95d6e2b568bc9393945a732", null ],
     [ "getGlobalBounds", "classgui_1_1_label.html#a5cdb2304ef0b04956246301dbde2695f", null ],
     [ "getLocalBounds", "classgui_1_1_label.html#a1ca878608ba8b4219b6d4f8db804ea02", null ],
+    [ "getSFTexte", "classgui_1_1_label.html#a2066c2bb08d06423756f73a0f78d2d72", null ],
     [ "getSize", "classgui_1_1_label.html#a53d1325a8b2a1241c413184f16883f0b", null ],
     [ "getTexte", "classgui_1_1_label.html#afc87320a14f65877923bfacb79f49def", null ],
     [ "majGeom", "classgui_1_1_label.html#ae310f44ef08900d558af5c5bc94c448d", null ],

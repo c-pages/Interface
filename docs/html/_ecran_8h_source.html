@@ -139,20 +139,25 @@ $(document).ready(function(){initNavTree('_ecran_8h_source.html','');});
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// Les membres</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">   68</a></span>&#160;<span class="comment"></span>    <a class="code" href="classapp_1_1_application.html">Application</a>*    <a class="code" href="classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">m_appli</a>; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">   68</a></span>&#160;<span class="comment"></span>    <a class="code" href="classapp_1_1_application.html">Application</a>*    <a class="code" href="classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">m_appli</a>;    </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}; <span class="comment">// fin Ecran</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}; <span class="comment">// fin app</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif // ECRAN_H</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classapp_1_1_ecran.html#aa619321cb264726990dc6a4362876db1">   70</a></span>&#160;    sf::View        <a class="code" href="classapp_1_1_ecran.html#aa619321cb264726990dc6a4362876db1">m_vueJeu</a>;   </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classapp_1_1_ecran.html#a5ec228de93b9a07954be2e25371cd9db">   71</a></span>&#160;    sf::View        <a class="code" href="classapp_1_1_ecran.html#a5ec228de93b9a07954be2e25371cd9db">m_vueGUI</a>;   </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}; <span class="comment">// fin Ecran</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}; <span class="comment">// fin app</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif // ECRAN_H</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
 <div class="ttc" id="classapp_1_1_ecran_html_a00b3dd3d538d9dcdeab2f0c3ec3c74c6"><div class="ttname"><a href="classapp_1_1_ecran.html#a00b3dd3d538d9dcdeab2f0c3ec3c74c6">app::Ecran::actualiser</a></div><div class="ttdeci">virtual void actualiser(float deltaT)=0</div><div class="ttdoc">Actualiser les éléments. </div></div>
 <div class="ttc" id="classapp_1_1_ecran_html"><div class="ttname"><a href="classapp_1_1_ecran.html">app::Ecran</a></div><div class="ttdoc">La classe virtuelle communues aux écrans. </div><div class="ttdef"><b>Definition:</b> Ecran.h:18</div></div>
 <div class="ttc" id="namespaceapp_html"><div class="ttname"><a href="namespaceapp.html">app</a></div><div class="ttdef"><b>Definition:</b> Application.h:23</div></div>
+<div class="ttc" id="classapp_1_1_ecran_html_aa619321cb264726990dc6a4362876db1"><div class="ttname"><a href="classapp_1_1_ecran.html#aa619321cb264726990dc6a4362876db1">app::Ecran::m_vueJeu</a></div><div class="ttdeci">sf::View m_vueJeu</div><div class="ttdef"><b>Definition:</b> Ecran.h:70</div></div>
 <div class="ttc" id="classapp_1_1_application_html"><div class="ttname"><a href="classapp_1_1_application.html">app::Application</a></div><div class="ttdoc">La classe de base du programme. </div><div class="ttdef"><b>Definition:</b> Application.h:31</div></div>
 <div class="ttc" id="classapp_1_1_ecran_html_a15b6695f6950903f11a378759aaa9a23"><div class="ttname"><a href="classapp_1_1_ecran.html#a15b6695f6950903f11a378759aaa9a23">app::Ecran::traiter_evenements</a></div><div class="ttdeci">virtual void traiter_evenements(const sf::Event &amp;event)=0</div><div class="ttdoc">Gère les entrées claviers, souris, fenetre ... </div></div>
 <div class="ttc" id="classapp_1_1_ecran_html_a06a27f001c26fb8d6f38e04764fd343e"><div class="ttname"><a href="classapp_1_1_ecran.html#a06a27f001c26fb8d6f38e04764fd343e">app::Ecran::Ecran</a></div><div class="ttdeci">Ecran(Application *appli)</div><div class="ttdoc">Constructeur. </div><div class="ttdef"><b>Definition:</b> Ecran.cpp:6</div></div>
+<div class="ttc" id="classapp_1_1_ecran_html_a5ec228de93b9a07954be2e25371cd9db"><div class="ttname"><a href="classapp_1_1_ecran.html#a5ec228de93b9a07954be2e25371cd9db">app::Ecran::m_vueGUI</a></div><div class="ttdeci">sf::View m_vueGUI</div><div class="ttdef"><b>Definition:</b> Ecran.h:71</div></div>
 <div class="ttc" id="classapp_1_1_ecran_html_ab279679638e35645bbae78e3f8a3938a"><div class="ttname"><a href="classapp_1_1_ecran.html#ab279679638e35645bbae78e3f8a3938a">app::Ecran::dessiner</a></div><div class="ttdeci">virtual void dessiner()=0</div><div class="ttdoc">Rendre les éléments. </div></div>
 <div class="ttc" id="classapp_1_1_ecran_html_a4711fc3fedd9458041b1f15b2f05f1a1"><div class="ttname"><a href="classapp_1_1_ecran.html#a4711fc3fedd9458041b1f15b2f05f1a1">app::Ecran::m_appli</a></div><div class="ttdeci">Application * m_appli</div><div class="ttdoc">La classe Apllication parent. </div><div class="ttdef"><b>Definition:</b> Ecran.h:68</div></div>
 <div class="ttc" id="classapp_1_1_ecran_html_ae428d4167b732b687fefc88379d62d9a"><div class="ttname"><a href="classapp_1_1_ecran.html#ae428d4167b732b687fefc88379d62d9a">app::Ecran::~Ecran</a></div><div class="ttdeci">virtual ~Ecran()</div><div class="ttdoc">Destructeur virtuel. </div><div class="ttdef"><b>Definition:</b> Ecran.cpp:13</div></div>

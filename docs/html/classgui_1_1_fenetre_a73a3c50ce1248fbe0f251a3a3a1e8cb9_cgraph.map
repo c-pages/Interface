@@ -1,7 +1,6 @@
 <map id="gui::Fenetre::actualiser" name="gui::Fenetre::actualiser">
 <area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a714cf4ba2a7e1489204b68beaa594e27" title="les manipulation de drag et de redimensionnement. " alt="" coords="208,5,407,32"/>
-<area shape="rect" id="node5" href="$classgui_1_1_gadget.html#a06c66be095e4d531ef307a3db36e2b4f" title="Actualiser les éléments. " alt="" coords="231,56,384,83"/>
-<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="459,5,613,32"/>
-<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#ad5955dbe8116150699472cb999e2b695" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="665,5,833,32"/>
-<area shape="rect" id="node6" href="$classgui_1_1_gadget.html#ab2bd5264b770b78ecc59d2f1b7486aa6" title="demande si le gadget est en attente de suppression " alt="" coords="455,56,617,83"/>
+<area shape="rect" id="node4" href="$classgui_1_1_fenetre.html#a9216c737157ff020fde49bd272d9521d" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="230,56,385,83"/>
+<area shape="rect" id="node3" href="$classgui_1_1_gadget.html#af2d0b7310b6a61f2e9feee6b52275462" title="demande si le gadget est en attente de suppression " alt="" coords="455,5,684,32"/>
+<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#ad5955dbe8116150699472cb999e2b695" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="485,56,653,83"/>
 </map>

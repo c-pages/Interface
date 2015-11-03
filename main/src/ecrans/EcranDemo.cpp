@@ -163,7 +163,7 @@ EcranDemo::initGUI  ()
 
 
     std::shared_ptr<gui::Fenetre>  fenetre ( new gui::Fenetre   ( &m_appli->getFenetre()
-                                                                , sf::Vector2f (200, 200) , true, false, false ) );
+                                                                , sf::Vector2f (200, 200) , true, true, true ) );
     m_gui->ajouter          ( fenetre );
     fenetre->setPosition    ( 250 , 250 );
     fenetre->setSkin        ( skinCourant );

@@ -154,67 +154,74 @@ $(document).ready(function(){initNavTree('_label_8h_source.html','');});
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    std::string</div>
 <div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classgui_1_1_label.html#afc87320a14f65877923bfacb79f49def">   96</a></span>&#160;    <a class="code" href="classgui_1_1_label.html#afc87320a14f65877923bfacb79f49def">getTexte</a> ( )<span class="keyword"> const </span>{  <span class="keywordflow">return</span> <a class="code" href="classgui_1_1_label.html#a331d0837da428ac27b860277f198df82">m_texte</a>-&gt;getString();   } ;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classgui_1_1_label.html#ac186d541addb868de0d08dff76488732">  106</a></span>&#160;    <a class="code" href="classgui_1_1_label.html#ac186d541addb868de0d08dff76488732">setTexteTaille</a> ( <span class="keywordtype">float</span> taille ) {  <a class="code" href="classgui_1_1_gadget.html#a6d7bd13de67c1577d6fa5073cb35edc9">m_style</a>-&gt;txt_taille = taille; <a class="code" href="classgui_1_1_label.html#ae310f44ef08900d558af5c5bc94c448d">majGeom</a>();  };</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    sf::Text *</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classgui_1_1_label.html#a2066c2bb08d06423756f73a0f78d2d72">  106</a></span>&#160;    <a class="code" href="classgui_1_1_label.html#a2066c2bb08d06423756f73a0f78d2d72">getSFTexte</a> ( )<span class="keyword"> const </span>{  <span class="keywordflow">return</span> <a class="code" href="classgui_1_1_label.html#a331d0837da428ac27b860277f198df82">m_texte</a>;   } ;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classgui_1_1_label.html#aa8846149890d23c198f1c366bff16008">  116</a></span>&#160;    <a class="code" href="classgui_1_1_label.html#aa8846149890d23c198f1c366bff16008">setColor</a> ( sf::Color col ) { <a class="code" href="classgui_1_1_label.html#a331d0837da428ac27b860277f198df82">m_texte</a>-&gt;setColor( col ); } ;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="classgui_1_1_label.html#ae310f44ef08900d558af5c5bc94c448d">majGeom</a>( );</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf">traiter_evenements</a> ( <span class="keyword">const</span> sf::Event&amp; event );</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classgui_1_1_label.html#ac186d541addb868de0d08dff76488732">  118</a></span>&#160;    <a class="code" href="classgui_1_1_label.html#ac186d541addb868de0d08dff76488732">setTexteTaille</a> ( <span class="keywordtype">float</span> taille ) {  <a class="code" href="classgui_1_1_gadget.html#a6d7bd13de67c1577d6fa5073cb35edc9">m_style</a>-&gt;txt_taille = taille; <a class="code" href="classgui_1_1_label.html#ae310f44ef08900d558af5c5bc94c448d">majGeom</a>();  };</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classgui_1_1_label.html#aa8846149890d23c198f1c366bff16008">  128</a></span>&#160;    <a class="code" href="classgui_1_1_label.html#aa8846149890d23c198f1c366bff16008">setColor</a> ( sf::Color col ) { <a class="code" href="classgui_1_1_label.html#a331d0837da428ac27b860277f198df82">m_texte</a>-&gt;setColor( col ); } ;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="classgui_1_1_label.html#ae310f44ef08900d558af5c5bc94c448d">majGeom</a>( );</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="classgui_1_1_label.html#af940ee918cf3e72ce74383d609c08721">actualiser</a> ( <span class="keywordtype">float</span> deltaT );</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf">traiter_evenements</a> ( <span class="keyword">const</span> sf::Event&amp; event );</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="classgui_1_1_label.html#a7e162f32f95d6e2b568bc9393945a732">draw</a>( sf::RenderTarget&amp; target, sf::RenderStates states ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">// Les membres</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">//sf::Text</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classgui_1_1_label.html#a331d0837da428ac27b860277f198df82">  164</a></span>&#160;    sf::Text *              <a class="code" href="classgui_1_1_label.html#a331d0837da428ac27b860277f198df82">m_texte</a>;        </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment">//sf::RectangleShape *              m_fond;        ///&lt; Le text SFML.</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;};</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}; <span class="comment">// fin gui</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#endif // LABEL_H</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="classgui_1_1_label.html#af940ee918cf3e72ce74383d609c08721">actualiser</a> ( <span class="keywordtype">float</span> deltaT );</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="classgui_1_1_label.html#a7e162f32f95d6e2b568bc9393945a732">draw</a>( sf::RenderTarget&amp; target, sf::RenderStates states ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">// Les membres</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">//sf::Text</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classgui_1_1_label.html#a331d0837da428ac27b860277f198df82">  176</a></span>&#160;    sf::Text *              <a class="code" href="classgui_1_1_label.html#a331d0837da428ac27b860277f198df82">m_texte</a>;        </div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="comment">//sf::RectangleShape *              m_fond;        ///&lt; Le text SFML.</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;};</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}; <span class="comment">// fin gui</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor">#endif // LABEL_H</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
-<div class="ttc" id="classgui_1_1_label_html_ac186d541addb868de0d08dff76488732"><div class="ttname"><a href="classgui_1_1_label.html#ac186d541addb868de0d08dff76488732">gui::Label::setTexteTaille</a></div><div class="ttdeci">void setTexteTaille(float taille)</div><div class="ttdoc">Definir la taille texte du Label. </div><div class="ttdef"><b>Definition:</b> Label.h:106</div></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="ttc" id="classgui_1_1_label_html_ac186d541addb868de0d08dff76488732"><div class="ttname"><a href="classgui_1_1_label.html#ac186d541addb868de0d08dff76488732">gui::Label::setTexteTaille</a></div><div class="ttdeci">void setTexteTaille(float taille)</div><div class="ttdoc">Definir la taille texte du Label. </div><div class="ttdef"><b>Definition:</b> Label.h:118</div></div>
 <div class="ttc" id="classgui_1_1_label_html_a5c0c354060b3e9e5f6fd813e68ec2cf6"><div class="ttname"><a href="classgui_1_1_label.html#a5c0c354060b3e9e5f6fd813e68ec2cf6">gui::Label::setTexte</a></div><div class="ttdeci">void setTexte(std::string texte)</div><div class="ttdoc">Definir le texte du Label. </div><div class="ttdef"><b>Definition:</b> Label.h:87</div></div>
-<div class="ttc" id="namespacegui_html"><div class="ttname"><a href="namespacegui.html">gui</a></div><div class="ttdef"><b>Definition:</b> Action.h:15</div></div>
+<div class="ttc" id="namespacegui_html"><div class="ttname"><a href="namespacegui.html">gui</a></div><div class="ttdef"><b>Definition:</b> GUI.cpp:8</div></div>
 <div class="ttc" id="classgui_1_1_label_html_a7e162f32f95d6e2b568bc9393945a732"><div class="ttname"><a href="classgui_1_1_label.html#a7e162f32f95d6e2b568bc9393945a732">gui::Label::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target, sf::RenderStates states) const </div><div class="ttdoc">Rendre les différents éléments du ou des écrans actifs. </div><div class="ttdef"><b>Definition:</b> Label.cpp:197</div></div>
 <div class="ttc" id="classgui_1_1_label_html_a53d1325a8b2a1241c413184f16883f0b"><div class="ttname"><a href="classgui_1_1_label.html#a53d1325a8b2a1241c413184f16883f0b">gui::Label::getSize</a></div><div class="ttdeci">sf::Vector2f getSize() const </div><div class="ttdoc">Accesseur de la taille du texte. </div><div class="ttdef"><b>Definition:</b> Label.cpp:152</div></div>
-<div class="ttc" id="classgui_1_1_label_html_a331d0837da428ac27b860277f198df82"><div class="ttname"><a href="classgui_1_1_label.html#a331d0837da428ac27b860277f198df82">gui::Label::m_texte</a></div><div class="ttdeci">sf::Text * m_texte</div><div class="ttdoc">Le text SFML. </div><div class="ttdef"><b>Definition:</b> Label.h:164</div></div>
+<div class="ttc" id="classgui_1_1_label_html_a331d0837da428ac27b860277f198df82"><div class="ttname"><a href="classgui_1_1_label.html#a331d0837da428ac27b860277f198df82">gui::Label::m_texte</a></div><div class="ttdeci">sf::Text * m_texte</div><div class="ttdoc">Le text SFML. </div><div class="ttdef"><b>Definition:</b> Label.h:176</div></div>
+<div class="ttc" id="classgui_1_1_label_html_a2066c2bb08d06423756f73a0f78d2d72"><div class="ttname"><a href="classgui_1_1_label.html#a2066c2bb08d06423756f73a0f78d2d72">gui::Label::getSFTexte</a></div><div class="ttdeci">sf::Text * getSFTexte() const </div><div class="ttdoc">Accesseur du texte du Label. </div><div class="ttdef"><b>Definition:</b> Label.h:106</div></div>
 <div class="ttc" id="classgui_1_1_label_html_a1ca878608ba8b4219b6d4f8db804ea02"><div class="ttname"><a href="classgui_1_1_label.html#a1ca878608ba8b4219b6d4f8db804ea02">gui::Label::getLocalBounds</a></div><div class="ttdeci">sf::FloatRect getLocalBounds() const </div><div class="ttdoc">Accesseur de la boundingBox en local. </div><div class="ttdef"><b>Definition:</b> Label.cpp:64</div></div>
 <div class="ttc" id="classgui_1_1_label_html_a5314909bf67f37a3e9b719166500b6bf"><div class="ttname"><a href="classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf">gui::Label::traiter_evenements</a></div><div class="ttdeci">void traiter_evenements(const sf::Event &amp;event)</div><div class="ttdoc">La gestion des évènements utilisateurs. </div><div class="ttdef"><b>Definition:</b> Label.cpp:182</div></div>
-<div class="ttc" id="classgui_1_1_label_html_aa8846149890d23c198f1c366bff16008"><div class="ttname"><a href="classgui_1_1_label.html#aa8846149890d23c198f1c366bff16008">gui::Label::setColor</a></div><div class="ttdeci">void setColor(sf::Color col)</div><div class="ttdoc">Definir la couleur du texte du Label. </div><div class="ttdef"><b>Definition:</b> Label.h:116</div></div>
+<div class="ttc" id="classgui_1_1_label_html_aa8846149890d23c198f1c366bff16008"><div class="ttname"><a href="classgui_1_1_label.html#aa8846149890d23c198f1c366bff16008">gui::Label::setColor</a></div><div class="ttdeci">void setColor(sf::Color col)</div><div class="ttdoc">Definir la couleur du texte du Label. </div><div class="ttdef"><b>Definition:</b> Label.h:128</div></div>
 <div class="ttc" id="classgui_1_1_label_html"><div class="ttname"><a href="classgui_1_1_label.html">gui::Label</a></div><div class="ttdoc">Gadget Un simple Label permettant d&#39;afficher un texte. </div><div class="ttdef"><b>Definition:</b> Label.h:23</div></div>
 <div class="ttc" id="classgui_1_1_label_html_ae310f44ef08900d558af5c5bc94c448d"><div class="ttname"><a href="classgui_1_1_label.html#ae310f44ef08900d558af5c5bc94c448d">gui::Label::majGeom</a></div><div class="ttdeci">virtual void majGeom()</div><div class="ttdoc">Actualise le style du label. </div><div class="ttdef"><b>Definition:</b> Label.cpp:159</div></div>
 <div class="ttc" id="classgui_1_1_gadget_html"><div class="ttname"><a href="classgui_1_1_gadget.html">gui::Gadget</a></div><div class="ttdoc">Classe virtuelle, la base commune aux gadgets formant l&#39;interface. </div><div class="ttdef"><b>Definition:</b> Gadget.h:22</div></div>
@@ -223,7 +230,7 @@ $(document).ready(function(){initNavTree('_label_8h_source.html','');});
 <div class="ttc" id="classgui_1_1_label_html_a5cdb2304ef0b04956246301dbde2695f"><div class="ttname"><a href="classgui_1_1_label.html#a5cdb2304ef0b04956246301dbde2695f">gui::Label::getGlobalBounds</a></div><div class="ttdeci">sf::FloatRect getGlobalBounds() const </div><div class="ttdoc">Accesseur de la boundingBox en global. </div><div class="ttdef"><b>Definition:</b> Label.cpp:137</div></div>
 <div class="ttc" id="_gadget_8h_html"><div class="ttname"><a href="_gadget_8h.html">Gadget.h</a></div></div>
 <div class="ttc" id="classgui_1_1_label_html_a35fe2fbca1f6c34beb66bfd9b3b9b609"><div class="ttname"><a href="classgui_1_1_label.html#a35fe2fbca1f6c34beb66bfd9b3b9b609">gui::Label::~Label</a></div><div class="ttdeci">virtual ~Label()</div><div class="ttdoc">Destructeur. </div><div class="ttdef"><b>Definition:</b> Label.cpp:42</div></div>
-<div class="ttc" id="classgui_1_1_gadget_html_a6d7bd13de67c1577d6fa5073cb35edc9"><div class="ttname"><a href="classgui_1_1_gadget.html#a6d7bd13de67c1577d6fa5073cb35edc9">gui::Gadget::m_style</a></div><div class="ttdeci">std::shared_ptr&lt; Style &gt; m_style</div><div class="ttdoc">le style du gadget. </div><div class="ttdef"><b>Definition:</b> Gadget.h:318</div></div>
+<div class="ttc" id="classgui_1_1_gadget_html_a6d7bd13de67c1577d6fa5073cb35edc9"><div class="ttname"><a href="classgui_1_1_gadget.html#a6d7bd13de67c1577d6fa5073cb35edc9">gui::Gadget::m_style</a></div><div class="ttdeci">std::shared_ptr&lt; Style &gt; m_style</div><div class="ttdoc">le style du gadget. </div><div class="ttdef"><b>Definition:</b> Gadget.h:339</div></div>
 <div class="ttc" id="classgui_1_1_label_html_afc87320a14f65877923bfacb79f49def"><div class="ttname"><a href="classgui_1_1_label.html#afc87320a14f65877923bfacb79f49def">gui::Label::getTexte</a></div><div class="ttdeci">std::string getTexte() const </div><div class="ttdoc">Accesseur du texte du Label. </div><div class="ttdef"><b>Definition:</b> Label.h:96</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
