@@ -118,13 +118,15 @@ void
 Contenant::actualiser ( float deltaT )    {
 
 
+    // Si on drag, on a besoin d'actualiser
+    if ( m_slideHori->isDragging() or m_slideVerti->isDragging()
+    or   m_slideHori->isDirectDragging() or m_slideVerti->isDirectDragging() )
+        m_aActualiser = true;
+
     // Actualiser UI et contenu
     m_grpUI->actualiser      ( deltaT );
     m_grpContenu->actualiser ( deltaT );
 
-    // Si on drag, on a besoin d'actualiser
-    if ( m_slideHori->isDragging() or m_slideVerti->isDragging() )
-        m_aActualiser = true;
 
     // si pas besoin d'acttua on retourne
     if ( not m_aActualiser ) return;
@@ -178,8 +180,6 @@ Contenant::actualiser ( float deltaT )    {
         m_slideVerti->setLongueurCourante   ( m_taille.y / getContenuBounds().height * m_taille.y );
     }
 
-
-
     // On positionne les sliders
     m_slideHori->setPosition                ( 0 , m_taille.y - m_slideHori->getSize().y  );
     m_slideVerti->setPosition               ( m_taille.x - m_slideVerti->getSize().x , 0 );
@@ -190,10 +190,10 @@ Contenant::actualiser ( float deltaT )    {
 
     m_grpContenu->setPosition ( -m_posContenu.x , -m_posContenu.y );
 
-    // on dimenssione l'UI
+    // on dimensionne l'UI
     m_grpUI->setSize           ( m_taille );
 
-    // reinitialisation  du besoin d'actualiser
+    // reinitialisation du besoin d'actualiser
     m_aActualiser = false;
 }
 

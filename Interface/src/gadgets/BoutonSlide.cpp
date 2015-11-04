@@ -17,6 +17,7 @@ BoutonSlide::BoutonSlide    (   sf::RenderWindow *    fenetre
 , m_fenetreSFML     ( fenetre )
 , m_longueurMax     ( longueur )
 , m_drag            ( false )
+, m_directDrag      ( false )
 , m_largeur         ( 7 )
 {
     creerUI();
@@ -56,43 +57,87 @@ BoutonSlide::getGlobalBounds ( ) const {
 void
 BoutonSlide::creerUI()
 {
-   // m_grpUI->setParent ( this );
+
 
 
     // les fonctions de drag
     m_fctDrag_Debut = [this](){
-        std::cout<<" debut drag\n";
         m_drag          = true;
         m_posBtnOrig    = m_btnSlide->getPosition();
         m_posMouseOrig  = sf::Vector2f   (sf::Mouse::getPosition( *m_fenetreSFML )) ;
-
     };
     m_fctDrag_Fin = [this](){
-        std::cout<<" fin drag\n";
-//        if ( m_drag )
-            m_drag  = false;
+        m_drag  = false;
     };
-    /*
-    m_fctDragEntre = [this](){
-        m_lblTitre->setColor( m_skin->fenetre->txt_couleur );
+    m_fctDrag_direct = [this](){
+
+
+        m_directDrag          = true;
+
+        m_posBtnOrig    = m_btnSlide->getPosition();
+        m_posMouseOrig  = sf::Vector2f   (sf::Mouse::getPosition( *m_fenetreSFML )) ;
+
+
+
+        sf::Vector2f  mouseRelativePos   = m_posMouseOrig - getPosAbs();
+
+        sf::Vector2f  slideRelativePos   = m_btnSlide->getPosition();
+
+
+        std::cout << "mouseRelativePos : " << mouseRelativePos.x << " " << mouseRelativePos.y << "\n";
+
+        std::cout << "slideRelativePos : " << slideRelativePos.x << " " << slideRelativePos.y << "\n";
+        //
+        //
+
+        int decalage = 20;
+        if ( m_orientation == Orientation::Horizontale)
+        {
+            if ( mouseRelativePos.x > slideRelativePos.x )
+                m_btnSlide->move ( decalage , 0 );
+            else
+                m_btnSlide->move ( -decalage , 0 );
+//            m_btnSlide->setPosition (     {   m_posBtnOrig.x +  mousePos.x - m_posMouseOrig.x , 0 } ) ;
+        }
+        if ( m_orientation == Orientation::Verticale)
+        {
+            if ( mouseRelativePos.y > slideRelativePos.y )
+                m_btnSlide->move ( 0 , decalage  );
+            else
+                m_btnSlide->move ( 0 , -decalage );
+        }
+//
+
+
+//
+//        if ( m_orientation == Orientation::Horizontale)
+//            m_btnSlide->setPosition (     {   m_posBtnOrig.x +  mousePos.x - m_posMouseOrig.x , 0 } ) ;
+//        if ( m_orientation == Orientation::Verticale)
+//            m_btnSlide->setPosition (     {  0,  m_posBtnOrig.y +  m_posMouseOrig.y } ) ;
+//
+
+
+//        //m_drag  = false;
+//        m_posMouseOrig  = sf::Vector2f   (sf::Mouse::getPosition( *m_fenetreSFML )) ;
+//        m_btnSlide->setPosition ( m_posMouseOrig ) ;
+        m_aActualiser = true;
+        majGeom();
+
+       // m_parent->demanderActualisation();
     };
-    m_fctDragSort = [this](){
-        m_lblTitre->setColor(  m_skin->fenetre->txt_couleur );
-    };*/
+
 
 
     initSkin();
 
-
     m_btnFond    = std::shared_ptr<Bouton> ( new Bouton ( m_skinBtnFond ) );
-
-
     m_btnSlide   = std::shared_ptr<Bouton> ( new Bouton (  ) );
 
-    m_btnSlide->setSize (  { m_largeur ,m_largeur } );
-    m_btnSlide->lier ( Evenements::onBtnG_Press         , m_fctDrag_Debut );
-    m_btnSlide->lier ( Evenements::onBtnG_Relache       , m_fctDrag_Fin );
-    m_btnSlide->lier ( Evenements::onBtnG_RelacheDehors , m_fctDrag_Fin );
+  //  m_btnSlide->setSize (  { m_largeur ,m_largeur } );
+    m_btnSlide->lier    ( Evenements::onBtnG_Press          , m_fctDrag_Debut );
+    m_btnSlide->lier    ( Evenements::onBtnG_Relache        , m_fctDrag_Fin );
+    m_btnSlide->lier    ( Evenements::onBtnG_RelacheDehors  , m_fctDrag_Fin );
+    m_btnFond->lier     ( Evenements::onBtnG_Relache        , m_fctDrag_direct );
 
 
     ajouter ( m_btnFond );
@@ -149,34 +194,26 @@ BoutonSlide::majGeom()
 {
     if ( not m_aActualiser ) return;
 
-
+    // dimensionnements
     switch ( m_orientation ){
         case Orientation::Verticale: {
             m_btnFond->setSize ( { m_largeur , m_longueurMax } );
-
+            m_btnSlide->setSize ( { m_largeur , m_longueurCourant});
         } break;
-
         case Orientation::Horizontale: {
-
             m_btnFond->setSize ( { m_longueurMax , m_largeur } );
-
+            m_btnSlide->setSize ( { m_longueurCourant , m_largeur } );
         } break;
     }
+
+    // position
     sf::Vector2f    pos = m_btnSlide->getPosition();
 
-    if ( m_orientation == Orientation::Horizontale)
-        m_btnSlide->setSize ( { m_longueurCourant , m_largeur } );
-    if ( m_orientation == Orientation::Verticale)
-        m_btnSlide->setSize ( { m_largeur , m_longueurCourant});
-
-
-
-
-    // extremités
-    if (pos.x<0) pos.x=0;
-    if (pos.y<0) pos.y=0;
-    if (pos.x>m_longueurMax - m_btnSlide->getSize().x ) pos.x=m_longueurMax - m_btnSlide->getSize().x ;
-    if (pos.y>m_longueurMax - m_btnSlide->getSize().y ) pos.y=m_longueurMax - m_btnSlide->getSize().y ;
+    // contraintes de position
+    if (pos.x<0) pos.x = 0;
+    if (pos.y<0) pos.y = 0;
+    if (pos.x>m_longueurMax - m_btnSlide->getSize().x ) pos.x = m_longueurMax - m_btnSlide->getSize().x ;
+    if (pos.y>m_longueurMax - m_btnSlide->getSize().y ) pos.y = m_longueurMax - m_btnSlide->getSize().y ;
 
     m_btnSlide->setPosition     (  pos  );
 
@@ -216,7 +253,7 @@ BoutonSlide::actualiser ( float deltaT )
         m_aActualiser = true;
     }
 
-
+    m_directDrag = false;
 
 
     //UI::actualiser( deltaT );

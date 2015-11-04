@@ -28,14 +28,12 @@ enum Orientation{
 /// composé de 2 boutons :
 ///     -   le bouton glissière, se drag sur un axe.
 ///     -   le bouton du fond, celui herité. Il forme le fond et nous permet d'accéder directement à un endroit de la glissère
-/// \todo cf. le todo du gui::Bouton
 ///
 /////////////////////////////////////////////////
 class BoutonSlide : public Gadget //, public UI
 {
 public:
 
-   // class Bouton;
 
     /////////////////////////////////////////////////
     /// \brief Constructeur
@@ -130,9 +128,9 @@ public:
 
 
     /////////////////////////////////////////////////
-    /// \brief Acceder à la boundingBox global
+    /// \brief Acceder à la position du slider
     ///
-    /// \return La boundingBox
+    /// \return La position
     ///
     /////////////////////////////////////////////////
     sf::Vector2f
@@ -149,12 +147,19 @@ public:
 
 
     /////////////////////////////////////////////////
-    /// \brief Dessiner le bouton
+    /// \brief savoir si on est en train de dragger le bouton
     ///
     /////////////////////////////////////////////////
     bool
     isDragging() const { return m_drag; } ;
 
+
+    /////////////////////////////////////////////////
+    /// \brief savoir si on est en train de dragger le bouton
+    ///
+    /////////////////////////////////////////////////
+    bool
+    isDirectDragging() const { return m_directDrag; } ;
 
 
     /////////////////////////////////////////////////
@@ -207,11 +212,14 @@ private:
 
     // les drags
     bool            m_drag ;                            ///<  true quand on drag.
+    bool            m_directDrag ;                      ///<  true quand on a dragé en utulisant le bouton du dessous (direct drag).
     sf::Vector2f    m_posBtnOrig;                       ///<  Position du bouton au debut du drag
     sf::Vector2f    m_posMouseOrig;                     ///<  Position de la souris au debut du drag
 
     FuncType        m_fctDrag_Debut;                    ///<  fonction pour le drag du contenu.
     FuncType        m_fctDrag_Fin;                      ///<  fonction pour le drag du contenu.
+    FuncType        m_fctDrag_direct;                   ///<  fonction pour le drag du contenu.
+
 
 };
 }; // fin namespace

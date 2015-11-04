@@ -75,22 +75,18 @@ void Config::initSkins()
     /////////////////////////////////////////////////
     // Skin1
     /////////////////////////////////////////////////
+
     // Enregistrement du skin dans la pile de skin.
     m_skins.insert ( { Config::Skins::Skin1 , std::make_shared<gui::Skin> () } ) ;
     auto skin1 = m_skins[ Config::Skins::Skin1 ];
 
     //// quleques variables pour simplifier l'ecriture
-    //  la police du style
-    sf::Font  police;
-    police = m_polices.get( Polices::police_2 );
-
-    sf::Color couleurLignesExt      = sf::Color ( 75,75,95 , 255);
-//    sf::Color couleurLignesCadre    = sf::Color ( 60,60,70 , 255);
-    sf::Color couleurFond           = sf::Color ( 45,45,65 , 255 );
-    sf::Color couleurTexte          = sf::Color ( 175,175,190 );
-
-    float taille_Btn_Text  = 12;
-    float epaisseurLignes  = 1;
+    sf::Font    police              = m_polices.get( Polices::police_2 );
+    sf::Color   couleurLignesExt    = sf::Color ( 75,75,95 , 255);
+    sf::Color   couleurFond         = sf::Color ( 45,45,65 , 255 );
+    sf::Color   couleurTexte        = sf::Color ( 175,175,190 );
+    float       taille_Btn_Text     = 12;
+    float       epaisseurLignes     = 1;
 
     //// DESACTIVE ///////////////////////////////////
     skin1->desactive->txt_police       = police;
