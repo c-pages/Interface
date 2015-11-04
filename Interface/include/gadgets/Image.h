@@ -50,6 +50,17 @@ public:
     /////////////////////////////////////////////////
     /// \brief    Definir la taille du bouton.
     ///
+    /// \param    taille     La nouvelle taille.
+    /// \return   Rien
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    setStyle( std::shared_ptr<Style> style );
+
+
+    /////////////////////////////////////////////////
+    /// \brief    Definir la taille du bouton.
+    ///
     /// \return   la taile du bouton
     ///
     /////////////////////////////////////////////////

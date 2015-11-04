@@ -62,6 +62,18 @@ Image::setOutlineColor  ( sf::Color color ) {
     m_rectangle->setOutlineColor    ( color );
 }
 
+/////////////////////////////////////////////////
+void
+Image::setStyle  ( std::shared_ptr<Style> style )   {
+
+    if ( m_style->aTexture() )
+        m_rectangle->setTexture         ( &m_style->fnd_texture );
+
+    m_rectangle->setFillColor           ( m_style->fnd_couleur );
+    m_rectangle->setOutlineColor        ( m_style->lgn_couleur );
+    m_rectangle->setOutlineThickness    ( m_style->lgn_epaisseur );
+}
+
 
 /////////////////////////////////////////////////
 void

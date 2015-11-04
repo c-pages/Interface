@@ -453,11 +453,11 @@
 	<memory>
 	<Style.h>
 
-1446132185 r:\06 - c++\107 - interface\interface\include\style.h
+1446678342 r:\06 - c++\107 - interface\interface\include\style.h
 	<SFML/Graphics.hpp>
 	<iostream>
 
-1446659119 r:\06 - c++\107 - interface\interface\include\gadget.h
+1446676414 r:\06 - c++\107 - interface\interface\include\gadget.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<vector>
@@ -472,7 +472,7 @@
 	<list>
 	<map>
 
-1446551733 r:\06 - c++\107 - interface\interface\include\gadgets\image.h
+1446678499 r:\06 - c++\107 - interface\interface\include\gadgets\image.h
 	<Gadget.h>
 
 1446570438 r:\06 - c++\107 - interface\interface\include\gadgets\label.h
@@ -531,7 +531,7 @@
 1445606138 source:r:\06 - c++\107 - interface\main\src\gestion_ecrans.cpp
 	"Gestion_ecrans.h"
 
-1446652492 r:\06 - c++\107 - interface\interface\include\gadgets\champtexte.h
+1446679242 r:\06 - c++\107 - interface\interface\include\gadgets\champtexte.h
 	<Gadget.h>
 	<Skin.h>
 

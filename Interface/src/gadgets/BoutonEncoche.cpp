@@ -46,6 +46,7 @@ void
 BoutonEncoche::majGeom()
 {
     Bouton::majGeom();
+    m_imgCoche->setStyle( m_style );
     m_imgCoche->setSize ( m_fond->getSize() - sf::Vector2f ( m_bordure *2 , m_bordure *2 ) );
     m_imgCoche->aligner ( *m_fond );
 }
@@ -73,9 +74,7 @@ BoutonEncoche::init( )    {
 void
 BoutonEncoche::draw  ( sf::RenderTarget& target, sf::RenderStates states ) const    {
 
-
     if ( not estVisible() ) return;
-
 
     states.transform *= getTransform();
 

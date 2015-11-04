@@ -79,9 +79,20 @@ public:
 
 
 
+    /////////////////////////////////////////////////
+    /// \brief Définie le skin du Label.
+    ///
+    /// \param skin   Le skin à appliquer (Configuration::Styles).
+    ///
+    /// return Rien
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    setSkin( std::shared_ptr<Skin>    skin );
 
 
-
+void
+initLocalSkin ();
 
 
     /////////////////////////////////////////////////
@@ -128,7 +139,11 @@ private:
     std::shared_ptr<BoutonEncoche>  m_btn;          ///< pointeur vers le label.
     std::string                     m_texteBack;    ///< version du texte avant la modification, pour pouvoir annuler la midif avec la touche Echappe.
 
+    std::shared_ptr<Skin>           m_skinBtn;      ///<  Le skin pour les boutons
     sf::RectangleShape              m_curseur;      ///< le curseur texte
+
+    sf::Clock                       m_timerClignot;  ///< une horloge pour faire clignoter le curseur
+    bool                            m_clignot;          ///< une horloge pour faire clignoter le curseur
 
 };
 

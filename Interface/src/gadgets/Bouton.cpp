@@ -269,12 +269,26 @@ Bouton::gerer_etat( const sf::Event& event )
 
 
 
+    // si ce n'est pas un evenement souris on return
+    if ( event.type != sf::Event::MouseButtonPressed
+    and  event.type != sf::Event::MouseButtonReleased
+    and  event.type != sf::Event::MouseMoved
+    and  event.type != sf::Event::MouseEntered
+    and  event.type != sf::Event::MouseLeft )
+        return;
+
+
+
+
+
+
+
+
     //   test du survol en fonction tu type d'evenement ...
     bool survol;
     if ( event.type == sf::Event::MouseMoved )
             survol = contient( event.mouseMove.x    , event.mouseMove.y );
     else    survol = contient( event.mouseButton.x  , event.mouseButton.y );
-
 
 
 

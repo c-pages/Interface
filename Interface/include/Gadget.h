@@ -233,13 +233,13 @@ public:
 
 
     /////////////////////////////////////////////////
-    /// \brief demande si le gadget est en attente de suppression
+    /// \brief demande au gadget et à ses ancetres une actualisation
     ///
     /// \return Rien
     ///
     /////////////////////////////////////////////////
     void
-    demanderActualisation(){  m_aActualiser = true ; };
+    demanderActualisation(){  m_aActualiser = true ; /*m_parent->demanderActualisation();*/ };
 
 
     /////////////////////////////////////////////////
