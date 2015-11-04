@@ -157,7 +157,7 @@ private:
     ///
     /////////////////////////////////////////////////
     void
-    initSkinBouton();
+    initLocalSkin();
 
     /////////////////////////////////////////////////
     /// \brief Initialiser les gadgets ( boutons, titre...).

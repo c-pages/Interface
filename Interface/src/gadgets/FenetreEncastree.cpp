@@ -70,7 +70,7 @@ FenetreEncastree::initUI()
     m_contenant->setParent (this);
 
     // initialiser le skin pour les boutons de l'ui de la fenetre ( genre les boutons drag, redim ... )
-    initSkinBouton ();
+    initLocalSkin ();
     updateStyle();
 
     // initialiser les fonctions de drag, redim ...
@@ -185,12 +185,12 @@ void
 FenetreEncastree::setSkin ( std::shared_ptr<Skin>    skin )
 {
     m_skin = skin ;
-    initSkinBouton ();
+    initLocalSkin ();
     updateStyle();
 };
 /////////////////////////////////////////////////
 void
-FenetreEncastree::initSkinBouton (){
+FenetreEncastree::initLocalSkin (){
 
     m_skinBtn =   std::make_shared<gui::Skin> () ;
 

@@ -10,7 +10,8 @@ namespace gui
 
 
 ///////////////////////////////////////////////////
-IconeManager    icoMngr;        ///< Gestionnaire des textures pour icones
+IconeManager    icoMngr;        ///< Gestionnaire des textures pour icones \todo verifer qu'on ne puisse pas en avoir plusieurs..
+
 
 
 

@@ -188,7 +188,8 @@ Label::traiter_evenements ( const sf::Event& event )    {
 ////////////////////////////////////////////////
 void
 Label::actualiser ( float deltaT )    {
-    Gadget::actualiser (deltaT);
+    if ( estVisible() )
+        Gadget::actualiser (deltaT);
 }
 
 

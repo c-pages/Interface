@@ -122,12 +122,22 @@ EcranDemo::initScene  ( )
 void
 EcranDemo::initGUI  ()
 {
-//  // initialisation des icones
-//  gui::initIcones();  ///< \todo voir si on peut pas le mettre dans un cpp du gui pour que ce soit toujours fait sans se faire chier
+   // initialisation des parametres du GUI, les icones, polices...
     gui::init();
+
+    // creation du log
+    auto log = gui::Log::Instance();
+    m_gui->ajouter          ( log );
+
+
+
+
 
     // le skin qu'on va utiliser dans cette interface
     auto skinCourant =  Config::m_skins[ Config::Skins::Skin1 ] ;
+
+    //gui::Log::ms_log = std::make_shared<gui::Log> (new gui::Log() ) ;
+
 
 
 /*
@@ -147,6 +157,16 @@ EcranDemo::initGUI  ()
 /**/
     std::shared_ptr<gui::ChampTexte>  champ ( new gui::ChampTexte  (  { 100 , 20 } , skinCourant ) );
     champ->setPosition ( { 10 , 10 });
+    champ->lier ( gui::Evenements::onCha_ChangeValeur , [this](){
+                 std::cout << "onCha_changeValeur\n";
+
+    } );
+    champ->lier ( gui::Evenements::onCha_ValideValeur , [this](){
+                 std::cout << "onCha_ValideValeur\n";
+
+                 } );
+
+
  //   m_gui->ajouter          ( champ );
 
  /*   std::shared_ptr<gui::BoutonTexte>  boutonT ( new gui::BoutonTexte  ( "TEXTE"  ) );
@@ -158,7 +178,11 @@ EcranDemo::initGUI  ()
     bouton->setSize ( { 50 , 50 });
 
  //  m_gui->ajouter          ( bouton );
+    bouton->lier ( gui::Evenements::onBtnG_Relache , [this](){
 
+                gui::Log::print ( "On a cliqué sur le bouton.");
+
+    } );
 
 
 

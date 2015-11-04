@@ -36,7 +36,7 @@ Gadget::Gadget  ( std::shared_ptr<Style>    style )
 , m_enfants     ( 0 )
 , m_skin        ( std::make_shared <Skin>() )
 , m_style       ( style )
-, m_actif      ( true )
+, m_actif       ( true )
 , m_visible     ( true )
 , m_aSupprimer  ( false )
 , m_aActualiser ( true )
@@ -261,10 +261,11 @@ void
 Gadget::traiter_evenements ( const sf::Event& event )
 {
 
+    if ( not estVisible() and not estActif() ) return;
+
     // les evenements des gadgets enfants
     for ( ptr enfant : m_enfants )
-        if ( enfant->estVisible() and enfant->estActif() )
-            enfant->traiter_evenements ( event );
+        enfant->traiter_evenements ( event );
 }
 
 /////////////////////////////////////////////////

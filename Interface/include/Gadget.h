@@ -90,7 +90,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual sf::FloatRect
-    getLocalBounds() const = 0;
+    getLocalBounds() const { return {0,0,0,0}; };
 
     /////////////////////////////////////////////////
     /// \brief Acceder à la boundingBox global
@@ -99,7 +99,7 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual sf::FloatRect
-    getGlobalBounds() const =0;
+    getGlobalBounds() const { return {0,0,0,0}; };
 
     /////////////////////////////////////////////////
     /// \brief Ajouter un enfant.

@@ -245,9 +245,9 @@ BoutonSlide::actualiser ( float deltaT )
 
 
         if ( m_orientation == Orientation::Horizontale)
-            pos =     {   m_posBtnOrig.x +  mousePos.x - m_posMouseOrig.x , 0 };
+            pos =   { m_posBtnOrig.x +  mousePos.x - m_posMouseOrig.x , 0 };
         if ( m_orientation == Orientation::Verticale)
-            pos =      {  0,  m_posBtnOrig.y +  mousePos.y - m_posMouseOrig.y };
+            pos =   { 0,  m_posBtnOrig.y +  mousePos.y - m_posMouseOrig.y };
 
         m_btnSlide->setPosition     (  pos  );
         m_aActualiser = true;

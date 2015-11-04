@@ -16,6 +16,10 @@ class BoutonEncoche;
 class Label;
 class Groupe;
 
+
+
+
+
 /////////////////////////////////////////////////
 /// \brief Gadget , champ de saisie de texte
 ///
@@ -25,6 +29,11 @@ class Groupe;
 class ChampTexte : public Gadget
 {
 public:
+
+    enum Types {
+
+
+    };
 
     /////////////////////////////////////////////////
     /// \brief Constructeur par défaut
@@ -117,6 +126,7 @@ private:
     std::shared_ptr<Groupe>         m_grpUI;        ///<  Le groupe contenant l'interface de la fenetyre (boutons, titre)
     std::shared_ptr<Label>          m_lbl;          ///< pointeur vers le label.
     std::shared_ptr<BoutonEncoche>  m_btn;          ///< pointeur vers le label.
+    std::string                     m_texteBack;    ///< version du texte avant la modification, pour pouvoir annuler la midif avec la touche Echappe.
 
     sf::RectangleShape              m_curseur;      ///< le curseur texte
 

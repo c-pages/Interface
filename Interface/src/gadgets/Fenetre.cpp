@@ -173,7 +173,7 @@ Fenetre::initUI()
     m_contenant->setParent (this);
 
     // initialiser le skin pour les boutons de l'ui de la fenetre ( genre les boutons drag, redim ... )
-    initSkinBouton ();
+    initLocalSkin ();
     updateStyle();
 
 
@@ -398,14 +398,14 @@ void
 Fenetre::setSkin ( std::shared_ptr<Skin>    skin )
 {
     m_skin = skin ;
-    initSkinBouton ();
+    initLocalSkin ();
     updateStyle();
 };
 
 
 /////////////////////////////////////////////////
 void
-Fenetre::initSkinBouton (){
+Fenetre::initLocalSkin (){
 
     m_skinBtn =   std::make_shared<gui::Skin> () ;
 
@@ -774,6 +774,8 @@ Fenetre::majGeom ()    {
 /////////////////////////////////////////////////
 void
 Fenetre::traiter_evenements ( const sf::Event& event ) {
+
+
     m_grpUI->traiter_evenements( event );
     m_contenant->traiter_evenements( event );
 

@@ -23,6 +23,7 @@
 // affichage simple
 #include <gadgets/Image.h>              // --->    affiche image ou couleur
 #include <gadgets/Label.h>              // --->    affiche txt
+#include <gadgets/Log.h>                // --->    affiche d'événements
 
 //
 #include <gadgets/ChampTexte.h>         // --->    Champ de saisie de texte. ( a developper )
@@ -72,6 +73,7 @@ namespace gui
 {
 
 extern  IconeManager    icoMngr ;   ///< le manager de textures pour les icones de l'interface
+
 
 
 /////////////////////////////////////////////////

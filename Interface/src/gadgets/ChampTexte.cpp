@@ -28,9 +28,9 @@ ChampTexte::ChampTexte  ( sf::Vector2f              taille
 
 
 
-m_curseur.setSize ( {1 , 20} );
-m_curseur.setOutlineColor(sf::Color::White );
-m_curseur.setOutlineThickness(1 );
+    m_curseur.setSize ( {1 , 20} );
+    m_curseur.setOutlineColor(sf::Color::White );
+    m_curseur.setOutlineThickness(1 );
 
 
     //ctor
@@ -50,6 +50,19 @@ ChampTexte::~ChampTexte()
 void
 ChampTexte::initUI()
 {
+    m_btn->lier ( Evenements::onBtn_changeEtat , [this]() {
+        switch ( m_btn->estCoche() )        {
+        case true : m_texteBack = m_lbl->getTexte();
+            break;
+
+        case false :
+            break;
+        }
+
+
+    });
+
+
 
 }
 
@@ -81,23 +94,31 @@ ChampTexte::traiter_evenements ( const sf::Event& event )
     // gestion des entrées textes
     if ( m_btn->estCoche()
     and  event.type == sf::Event::TextEntered
-    and  event.text.unicode < 128 ) {
+        /* and  event.text.unicode < 128*/ ) {
+        std::cout << "ASCII character typed: " << event.text.unicode << std::endl;
 
         // le texte actuel
         std::string txt = m_lbl->getTexte() ;
 
-        // retour arriere
+        // touche Retour arriere : effacer arriere
         if ( event.text.unicode == 8 )  {
             txt.erase ( txt.size()-1 , 1);
             m_lbl->setTexte( txt  );
-
+            declencher( onCha_ChangeValeur );
         }
-        // entrée et echappe
-        else if ( event.text.unicode == 13 or event.text.unicode == 27 )  {
+        // touche Entrée : Valider
+        else if ( event.text.unicode == 13 )  {
+            declencher( onCha_ValideValeur );
             m_btn->setCoche( false);
         }
+        // touche Echappe : Annuler
+        else if ( event.text.unicode == 27 )  {
+            m_lbl->setTexte( m_texteBack  );
+            m_btn->setCoche( false);
+        }
+        // les autres touches
         else {
-            std::cout << "ASCII character typed: " << event.text.unicode << std::endl;
+            declencher( onCha_ChangeValeur );
             m_lbl->setTexte( txt + static_cast<char>(event.text.unicode)  );
         }
     }

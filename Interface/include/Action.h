@@ -43,6 +43,11 @@ enum Evenements {
 
     , onFen_Ferme               ///<  Quand on ferme une fenetre.
     , onFen_Ouvre               ///<  Quand on ferme une fenetre.
+
+
+    , onCha_ChangeValeur        ///<  Quand on change la valeur d'un champ de saisie de texte.
+    , onCha_ValideValeur        ///<  Quand on valide la valeur d'un champ de saisie de texte.
+
 };
 
 
