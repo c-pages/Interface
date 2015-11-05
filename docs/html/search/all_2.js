@@ -1,8 +1,8 @@
 var searchData=
 [
   ['b',['b',['../jquery_8js.html#aa4026ad5544b958e54ce5e106fa1c805',1,'b():&#160;jquery.js'],['../jquery_8js.html#a2fa551895933fae935a0a6b87282241d',1,'b(function(){if(!b.support.reliableMarginRight){b.cssHooks.marginRight={get:function(bw, bv){var e;b.swap(bw,{display:&quot;inline-block&quot;}, function(){if(bv){e=Z(bw,&quot;margin-right&quot;,&quot;marginRight&quot;)}else{e=bw.style.marginRight}});return e}}}}):&#160;jquery.js']]],
-  ['barreprogression',['BarreProgression',['../class_barre_progression.html',1,'BarreProgression'],['../class_barre_progression.html#a3d28a013bf6f17936f579edc78f00fb0',1,'BarreProgression::BarreProgression()']]],
   ['barreprogression',['BarreProgression',['../classgui_1_1_barre_progression.html',1,'gui']]],
+  ['barreprogression',['BarreProgression',['../class_barre_progression.html',1,'BarreProgression'],['../class_barre_progression.html#a3d28a013bf6f17936f579edc78f00fb0',1,'BarreProgression::BarreProgression()']]],
   ['barreprogression_2ecpp',['BarreProgression.cpp',['../_barre_progression_8cpp.html',1,'']]],
   ['barreprogression_2eh',['BarreProgression.h',['../_barre_progression_8h.html',1,'']]],
   ['bas',['Bas',['../namespacegui.html#acf7d1f798b6c52f973e41fc5e7c3e82aa851585dda7b832282db552bb2d447eff',1,'gui']]],

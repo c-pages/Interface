@@ -8,6 +8,7 @@ var searchData=
   ['onbtnd_5frelachedehors',['onBtnD_RelacheDehors',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843ea88ab7a25bdf88fc38374964a0d2dc661',1,'gui']]],
   ['onbtng_5fdblclique',['onBtnG_DblClique',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843eac6a58adae86e0ab980b7e826ff298327',1,'gui']]],
   ['onbtng_5fpress',['onBtnG_Press',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843ea794ba95af6273ec5a29bdd49b6bdd0ed',1,'gui']]],
+  ['onbtng_5fpressdehors',['onBtnG_PressDehors',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843ea824f6fe8ddca25870ffda8be12e9533d',1,'gui']]],
   ['onbtng_5frelache',['onBtnG_Relache',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843eae44ec1390d83a3451ec947bc7b99dfae',1,'gui']]],
   ['onbtng_5frelachedehors',['onBtnG_RelacheDehors',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843ea13b691824260d0388f7171a232e930e7',1,'gui']]],
   ['onbtnm_5fpress',['onBtnM_Press',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843ea42d04da96bc611475e72ca4bb65b7cc9',1,'gui']]],
@@ -15,6 +16,8 @@ var searchData=
   ['onbtnm_5frelachedehors',['onBtnM_RelacheDehors',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843eadfd7c9c2c99b19990c8e98bd07718aa1',1,'gui']]],
   ['onbtnm_5frolldown',['onBtnM_RollDown',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843ea257dba5325834273005923df2877db19',1,'gui']]],
   ['onbtnm_5frollup',['onBtnM_RollUp',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843ea939ec84d0866f28a0c6db1071b5c759f',1,'gui']]],
+  ['oncha_5fchangevaleur',['onCha_ChangeValeur',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843eaad9a6a0508e148fbe6800313ffd32a14',1,'gui']]],
+  ['oncha_5fvalidevaleur',['onCha_ValideValeur',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843ead83a1e358728676b09a4f2db9f1dea93',1,'gui']]],
   ['onfen_5fferme',['onFen_Ferme',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843ea0b818d3afcaf8d8e1af6836debe3685e',1,'gui']]],
   ['onfen_5fouvre',['onFen_Ouvre',['../namespacegui.html#a679a250c68f3a4f70b52673ccf7c843ea704a9138cfe28e43ecf9fd646f77a540',1,'gui']]]
 ];

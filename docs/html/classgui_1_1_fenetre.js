@@ -12,7 +12,7 @@ var classgui_1_1_fenetre =
     [ "getSize", "classgui_1_1_fenetre.html#a4a9b783095e1ebf716f16042efa33da9", null ],
     [ "getTitre", "classgui_1_1_fenetre.html#a24226f80b36a5e49b63d24ee1105f41c", null ],
     [ "initBoutonsActifs", "classgui_1_1_fenetre.html#a10f99ea1da068222aa1a356663a913f0", null ],
-    [ "initSkinBouton", "classgui_1_1_fenetre.html#a05f4a03ba7bff8bf975a9bca6cf43d43", null ],
+    [ "initLocalSkin", "classgui_1_1_fenetre.html#a521f9258bc403d3e5b0ac50f9232f43c", null ],
     [ "initUI", "classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758", null ],
     [ "initUI_drag", "classgui_1_1_fenetre.html#a72881398e744a405b56046d60917d1de", null ],
     [ "initUI_fermer", "classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6", null ],

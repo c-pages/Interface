@@ -92,8 +92,8 @@ private:
 };
 
 ////////////////////////////////////////////////////////////
-/// \class Infos
-/// \ingroup
+/// \class gui::Infos
+/// \ingroup interface
 ///
 /// exemple :
 /// \code

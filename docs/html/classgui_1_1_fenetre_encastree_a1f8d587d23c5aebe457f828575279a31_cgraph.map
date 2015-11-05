@@ -1,5 +1,5 @@
 <map id="gui::FenetreEncastree::initUI" name="gui::FenetreEncastree::initUI">
-<area shape="rect" id="node2" href="$classgui_1_1_fenetre_encastree.html#a6517c34433909940eaf033d3025a6f00" title="Initialiser le Skin des bouton de l&#39;interface. " alt="" coords="204,5,355,47"/>
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre_encastree.html#a0be22b8ade05580a4374122255796c5d" title="Initialiser le Skin des bouton de l&#39;interface. " alt="" coords="204,5,355,47"/>
 <area shape="rect" id="node3" href="$classgui_1_1_fenetre_encastree.html#a4a86e93d7b596eed4cf174290acbae0d" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="405,159,555,200"/>
 <area shape="rect" id="node4" href="$classgui_1_1_fenetre_encastree.html#a79114afc27d0e3a31a2d0ca09889d2d9" title="Initialiser l&#39;interface pour prendre en compte le drag. " alt="" coords="204,123,355,164"/>
 <area shape="rect" id="node5" href="$classgui_1_1_fenetre_encastree.html#a595c4da7de253a053dbe5a5cbf8eaa8c" title="Initialiser l&#39;interface pour les bouton de redimensionnements. " alt="" coords="204,188,355,229"/>

@@ -15,6 +15,7 @@ var classgui_1_1_image =
     [ "setOutlineColor", "classgui_1_1_image.html#a47e0a556fbe3ba63eab7644480daf801", null ],
     [ "setOutlineThickness", "classgui_1_1_image.html#aeb3014a3cf51b3bcff542d63a5737aad", null ],
     [ "setSize", "classgui_1_1_image.html#afb286d244ff0bf591d290de7d17215f9", null ],
+    [ "setStyle", "classgui_1_1_image.html#a60f05cfa11ad820922a2a1b176ce9937", null ],
     [ "setTexture", "classgui_1_1_image.html#abab23a691cff44fe4e3473c9e9188a52", null ],
     [ "m_image", "classgui_1_1_image.html#ae4bbb31ffe1c5ec686659fac57971091", null ],
     [ "m_rectangle", "classgui_1_1_image.html#a19c107406f623eee148a4e0bb4b74d11", null ],

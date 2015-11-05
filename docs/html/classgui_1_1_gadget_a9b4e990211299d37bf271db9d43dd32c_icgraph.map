@@ -1,4 +1,5 @@
 <map id="gui::Gadget::ajouter" name="gui::Gadget::ajouter">
 <area shape="rect" id="node2" href="$classgui_1_1_bouton_slide.html#ade6e4cc4975666c3093005429f75f2cc" title="gui::BoutonSlide::creerUI" alt="" coords="189,13,356,39"/>
+<area shape="rect" id="node4" href="$classgui_1_1_log.html#a51f8e415c33bc2623407b345108bf056" title="Constructeur par défaut. " alt="" coords="224,63,321,90"/>
 <area shape="rect" id="node3" href="$classgui_1_1_bouton_slide.html#adc42505be100a2952f2aa23dc007b651" title="Constructeur. " alt="" coords="404,5,571,47"/>
 </map>

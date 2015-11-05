@@ -19,8 +19,10 @@ var dir_9ab5a57497ef2c36b4a22954635ab49a =
     ] ],
     [ "Groupe.h", "_groupe_8h.html", null ],
     [ "Image.h", "_image_8h.html", null ],
+    [ "Infos.h", "_infos_8h.html", null ],
     [ "Label.h", "_label_8h.html", null ],
     [ "Liste.h", "_liste_8h.html", [
       [ "Liste", "class_liste.html", "class_liste" ]
-    ] ]
+    ] ],
+    [ "Log.h", "_log_8h.html", null ]
 ];

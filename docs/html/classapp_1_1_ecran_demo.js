@@ -9,6 +9,7 @@ var classapp_1_1_ecran_demo =
     [ "traiter_evenements", "classapp_1_1_ecran_demo.html#a8487f9c53ed72e5bb99b3819fe5efc29", null ],
     [ "bouton", "classapp_1_1_ecran_demo.html#a5c18c00138fc13b072cbab8904ad8c6e", null ],
     [ "labelTest", "classapp_1_1_ecran_demo.html#a079ed858843e2d888ab75379431b11f2", null ],
+    [ "m_champ", "classapp_1_1_ecran_demo.html#a4044bd4eea5c4042616008effb408185", null ],
     [ "m_fond", "classapp_1_1_ecran_demo.html#a5a253769dce7378efc2de34b479e3517", null ],
     [ "m_gui", "classapp_1_1_ecran_demo.html#ae041ae9bce13ba73f9cd190e77e500c6", null ]
 ];

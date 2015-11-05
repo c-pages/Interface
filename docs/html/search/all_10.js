@@ -7,5 +7,6 @@ var searchData=
   ['police_5f2',['police_2',['../classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049abd01fcbe87968783a525da9dc5ef0f21',1,'app::Config']]],
   ['polices',['Polices',['../classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049',1,'app::Config']]],
   ['press',['press',['../classgui_1_1_bouton.html#a8c4622de7a2b734cb88c44d6b1caca5fa960ca598786d4fe54aaeeaa55af90b5a',1,'gui::Bouton']]],
+  ['print',['print',['../classgui_1_1_log.html#ac7c36035de8f9cdbacc26fdce7bab639',1,'gui::Log']]],
   ['ptr',['ptr',['../classgui_1_1_gadget.html#a7d8208eca8d1fc7355572bdf3faaecde',1,'gui::Gadget']]]
 ];

@@ -29,8 +29,8 @@ var group__interface =
       [ "draw", "classgui_1_1_gadget.html#a7ccb80ac58d4b1320bc76ad8ae031866", null ],
       [ "estActif", "classgui_1_1_gadget.html#a5442078caf792fe005dac499f8295e45", null ],
       [ "estVisible", "classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd", null ],
-      [ "getGlobalBounds", "classgui_1_1_gadget.html#a393fef359f85de77d5067ebb39039201", null ],
-      [ "getLocalBounds", "classgui_1_1_gadget.html#a3479c624ae533156f318dc2b996eded3", null ],
+      [ "getGlobalBounds", "classgui_1_1_gadget.html#a59a5758a13c8dba8443f039dce709bb4", null ],
+      [ "getLocalBounds", "classgui_1_1_gadget.html#a2a12490ebc5d7ff80780010930e37b12", null ],
       [ "getPosAbs", "classgui_1_1_gadget.html#ae8b82417fb662b2e9dcb34ad4766a539", null ],
       [ "getSize", "classgui_1_1_gadget.html#af3bf6c3eafa429927505416d71a87ee4", null ],
       [ "majGeom", "classgui_1_1_gadget.html#a8a72d0816ec1928958ff5dd3ccd983f5", null ],
@@ -138,18 +138,27 @@ var group__interface =
       [ "m_lblTexte", "classgui_1_1_bouton_texte.html#adedb7fc1377556a249211d9724f702f9", null ]
     ] ],
     [ "ChampTexte", "classgui_1_1_champ_texte.html", [
+      [ "Types", "classgui_1_1_champ_texte.html#a352991adaa9c5357122ff4fc99911683", null ],
       [ "ChampTexte", "classgui_1_1_champ_texte.html#a0d936fbccd736fe02b428b12428b2fdc", null ],
       [ "~ChampTexte", "classgui_1_1_champ_texte.html#ab962ca027c734c8090943e4f5a2df467", null ],
       [ "actualiser", "classgui_1_1_champ_texte.html#aa87889137c3fc9df880e045d475ae25f", null ],
       [ "draw", "classgui_1_1_champ_texte.html#a35ebc21d226b5e9e6ba4a8b3c10495e9", null ],
       [ "getGlobalBounds", "classgui_1_1_champ_texte.html#acd03dd4eb8a2149a42d62d398787cbc9", null ],
       [ "getLocalBounds", "classgui_1_1_champ_texte.html#acd54f238be0cc746648d8f59ab2f9675", null ],
+      [ "getTexte", "classgui_1_1_champ_texte.html#aeb4afad65d97f0e0e676738e80be8eee", null ],
+      [ "initLocalSkin", "classgui_1_1_champ_texte.html#a63c2c4f5372c2a6c45a1e1c67bdfb448", null ],
       [ "initUI", "classgui_1_1_champ_texte.html#a2ea8299ea2529fcce06dc77e5d699bf5", null ],
+      [ "setSkin", "classgui_1_1_champ_texte.html#a719cc90c7bdc760ea40c411f3166418f", null ],
+      [ "setTexte", "classgui_1_1_champ_texte.html#a113179a5f069bfe6aa83ca488fc5ab8a", null ],
       [ "traiter_evenements", "classgui_1_1_champ_texte.html#a157fa9807bb57a159e1fbcc8da4935b2", null ],
       [ "m_btn", "classgui_1_1_champ_texte.html#aed879396dc0e86a613061596db1bfec6", null ],
+      [ "m_clignot", "classgui_1_1_champ_texte.html#a5b5acce3175c9bc474a9d35e3db52e3d", null ],
       [ "m_curseur", "classgui_1_1_champ_texte.html#a4dc9e78e1d45fccc48be2f5cb993fb09", null ],
       [ "m_grpUI", "classgui_1_1_champ_texte.html#a4445fbdb81bb7592def2c137ce1084a6", null ],
-      [ "m_lbl", "classgui_1_1_champ_texte.html#a9193a44d82aeee7c6cd9947f8ec79a73", null ]
+      [ "m_lbl", "classgui_1_1_champ_texte.html#a9193a44d82aeee7c6cd9947f8ec79a73", null ],
+      [ "m_skinBtn", "classgui_1_1_champ_texte.html#aaa2c2d7018cb96b98902e277e2a472c9", null ],
+      [ "m_texteBack", "classgui_1_1_champ_texte.html#a61b1891627c9018f60e8225b9d42ed31", null ],
+      [ "m_timerClignot", "classgui_1_1_champ_texte.html#a41e2536526dee53e9bd15dbaf6c77be4", null ]
     ] ],
     [ "Contenant", "classgui_1_1_contenant.html", [
       [ "Contenant", "classgui_1_1_contenant.html#a8d19d69ba02d621c504cfd4d336f3723", null ],
@@ -190,7 +199,7 @@ var group__interface =
       [ "getSize", "classgui_1_1_fenetre.html#a4a9b783095e1ebf716f16042efa33da9", null ],
       [ "getTitre", "classgui_1_1_fenetre.html#a24226f80b36a5e49b63d24ee1105f41c", null ],
       [ "initBoutonsActifs", "classgui_1_1_fenetre.html#a10f99ea1da068222aa1a356663a913f0", null ],
-      [ "initSkinBouton", "classgui_1_1_fenetre.html#a05f4a03ba7bff8bf975a9bca6cf43d43", null ],
+      [ "initLocalSkin", "classgui_1_1_fenetre.html#a521f9258bc403d3e5b0ac50f9232f43c", null ],
       [ "initUI", "classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758", null ],
       [ "initUI_drag", "classgui_1_1_fenetre.html#a72881398e744a405b56046d60917d1de", null ],
       [ "initUI_fermer", "classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6", null ],
@@ -269,7 +278,7 @@ var group__interface =
       [ "getLocalBounds", "classgui_1_1_fenetre_encastree.html#a12fa2cc967555312ef57f25796c4bc0f", null ],
       [ "getSize", "classgui_1_1_fenetre_encastree.html#a8566b4f7e4f06bd72d0a0b8699758d6d", null ],
       [ "getTitre", "classgui_1_1_fenetre_encastree.html#a9683049e8cc083e2e0aeebecdbac0ed0", null ],
-      [ "initSkinBouton", "classgui_1_1_fenetre_encastree.html#a6517c34433909940eaf033d3025a6f00", null ],
+      [ "initLocalSkin", "classgui_1_1_fenetre_encastree.html#a0be22b8ade05580a4374122255796c5d", null ],
       [ "initUI", "classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31", null ],
       [ "initUI_drag", "classgui_1_1_fenetre_encastree.html#a79114afc27d0e3a31a2d0ca09889d2d9", null ],
       [ "initUI_fermer", "classgui_1_1_fenetre_encastree.html#aaa900b28f22ddaf34dbc346439a9eb76", null ],
@@ -343,10 +352,26 @@ var group__interface =
       [ "setOutlineColor", "classgui_1_1_image.html#a47e0a556fbe3ba63eab7644480daf801", null ],
       [ "setOutlineThickness", "classgui_1_1_image.html#aeb3014a3cf51b3bcff542d63a5737aad", null ],
       [ "setSize", "classgui_1_1_image.html#afb286d244ff0bf591d290de7d17215f9", null ],
+      [ "setStyle", "classgui_1_1_image.html#a60f05cfa11ad820922a2a1b176ce9937", null ],
       [ "setTexture", "classgui_1_1_image.html#abab23a691cff44fe4e3473c9e9188a52", null ],
       [ "m_image", "classgui_1_1_image.html#ae4bbb31ffe1c5ec686659fac57971091", null ],
       [ "m_rectangle", "classgui_1_1_image.html#a19c107406f623eee148a4e0bb4b74d11", null ],
       [ "m_texture", "classgui_1_1_image.html#a061216c5b478d92833e08b1cabd6b1be", null ]
+    ] ],
+    [ "Infos", "classgui_1_1_infos.html", [
+      [ "Infos", "classgui_1_1_infos.html#ae5b25aee320539a3a5386ed5855a86e6", null ],
+      [ "Infos", "classgui_1_1_infos.html#a84bdc17c788a2d5e329b46f0cbb5d6fe", null ],
+      [ "~Infos", "classgui_1_1_infos.html#af80c03863a24a5b83a721102be77e155", null ],
+      [ "actualiser", "classgui_1_1_infos.html#a33e619d3aedc9dcf174a81fd07fd50fb", null ],
+      [ "draw", "classgui_1_1_infos.html#a5949220953f528ad3fd66ba02ac292ea", null ],
+      [ "traiter_evenements", "classgui_1_1_infos.html#a00a5573907dae02cf06fa60091b2124e", null ],
+      [ "m_clock", "classgui_1_1_infos.html#a535be65d41184cd8a71aa7c034fe768e", null ],
+      [ "m_compteurFPS", "classgui_1_1_infos.html#a70658a60d24913066d822ebf3c092862", null ],
+      [ "m_FPS", "classgui_1_1_infos.html#ac264d2d594658ebcd0ebb86efdcb9d58", null ],
+      [ "m_lblMouseFps", "classgui_1_1_infos.html#a9085673ae526a2021621052573dc382b", null ],
+      [ "m_lblMouseX", "classgui_1_1_infos.html#a4a7afd92d0798362651e4493b938c749", null ],
+      [ "m_lblMouseY", "classgui_1_1_infos.html#a27b1859a6424ba1c4e1cda26f4305bc5", null ],
+      [ "m_mousePos", "classgui_1_1_infos.html#a4099c8f9f90bbce1bd9b8908938ff4b2", null ]
     ] ],
     [ "Label", "classgui_1_1_label.html", [
       [ "Label", "classgui_1_1_label.html#a7d2d63e5b786ec093a4c7ea20db40208", null ],
@@ -367,6 +392,18 @@ var group__interface =
       [ "m_texte", "classgui_1_1_label.html#a331d0837da428ac27b860277f198df82", null ]
     ] ],
     [ "Liste", "classgui_1_1_liste.html", null ],
+    [ "Log", "classgui_1_1_log.html", [
+      [ "Log", "classgui_1_1_log.html#a51f8e415c33bc2623407b345108bf056", null ],
+      [ "~Log", "classgui_1_1_log.html#a0616f1104e85b1c212ffe6484d0fc4b8", null ],
+      [ "getTexte", "classgui_1_1_log.html#ac98326dbdb8817da83eefe6ca70c9276", null ],
+      [ "Instance", "classgui_1_1_log.html#a04162d8113cdee042c25e5c1d6e5e122", null ],
+      [ "print", "classgui_1_1_log.html#ac7c36035de8f9cdbacc26fdce7bab639", null ],
+      [ "setSkin", "classgui_1_1_log.html#a5fbdcc07a46009dbf63d8942109c6de5", null ],
+      [ "setTexte", "classgui_1_1_log.html#aa2fe8d34e948991f17f685155818b74c", null ],
+      [ "m_lbl", "classgui_1_1_log.html#a0b5d4d26c7ec53ea2cc21aefe362fe6f", null ],
+      [ "m_prefixe", "classgui_1_1_log.html#a036889c7488edf01bd8ea288a072d0f0", null ],
+      [ "ms_log", "classgui_1_1_log.html#aa35f9c710a865411496c5f29b9732899", null ]
+    ] ],
     [ "IconeManager", "classgui_1_1_icone_manager.html", [
       [ "IconeManager", "classgui_1_1_icone_manager.html#a02dacf031609c21f80ed1f52c56e1524", null ],
       [ "~IconeManager", "classgui_1_1_icone_manager.html#acf01cd767b05e0d180f4bb5a11c915cc", null ],
@@ -385,6 +422,7 @@ var group__interface =
       [ "fenetre", "structgui_1_1_skin.html#af50b19d11f4b0942b1a37ee573523c78", null ],
       [ "invisible", "structgui_1_1_skin.html#af4ed9848a6eb07ad02fd9f2b55ecc7ba", null ],
       [ "lblCourant", "structgui_1_1_skin.html#a8de5deb80ea554c337da798869545ea8", null ],
+      [ "lblLog", "structgui_1_1_skin.html#afd37b53fbf7c8aef41ca6708573401af", null ],
       [ "lblTitre", "structgui_1_1_skin.html#abf49dd986593e33cd6afbdfb9157cdf2", null ]
     ] ],
     [ "Style", "structgui_1_1_style.html", [

@@ -1,3 +1,4 @@
 <map id="gui::ChampTexte::ChampTexte" name="gui::ChampTexte::ChampTexte">
-<area shape="rect" id="node2" href="$classgui_1_1_champ_texte.html#a2ea8299ea2529fcce06dc77e5d699bf5" title="initialiser les elements de l&#39;UI de ce gadget. " alt="" coords="255,5,412,32"/>
+<area shape="rect" id="node2" href="$classgui_1_1_champ_texte.html#a2ea8299ea2529fcce06dc77e5d699bf5" title="initialiser les elements de l&#39;UI de ce gadget. " alt="" coords="277,5,435,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_champ_texte.html#a63c2c4f5372c2a6c45a1e1c67bdfb448" title="gui::ChampTexte::initLocalSkin" alt="" coords="255,56,457,83"/>
 </map>

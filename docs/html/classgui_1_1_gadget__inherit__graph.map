@@ -11,8 +11,10 @@
 <area shape="rect" id="node16" href="$classgui_1_1_fenetre_onglets.html" title="Gadget, fenêtre composée de plusieurs pages accessible par des onglets. " alt="" coords="319,487,455,513"/>
 <area shape="rect" id="node17" href="$classgui_1_1_groupe.html" title="Gadget Un élément invisible permettant de rassembler des Gadgets. " alt="" coords="343,537,432,564"/>
 <area shape="rect" id="node18" href="$classgui_1_1_image.html" title="Gadget Un simple gadget permettant d&#39;afficher une image ou une couleur uni. " alt="" coords="346,588,429,615"/>
-<area shape="rect" id="node19" href="$classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. " alt="" coords="348,639,427,665"/>
-<area shape="rect" id="node2" href="$classgui_1_1_action.html" title="Classe virtuelle permetant de lier des évenements à des fonctions. " alt="" coords="24,284,108,311"/>
+<area shape="rect" id="node19" href="$classgui_1_1_infos.html" title="Gadget, simple label renvoyant des infos. " alt="" coords="350,639,425,665"/>
+<area shape="rect" id="node20" href="$classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. " alt="" coords="348,689,427,716"/>
+<area shape="rect" id="node21" href="$classgui_1_1_log.html" title="Gadget, affichage de l&#39;historique d&#39;événements. " alt="" coords="353,740,421,767"/>
+<area shape="rect" id="node2" href="$classgui_1_1_action.html" title="Classe virtuelle permetant de lier des évenements à des fonctions. " alt="" coords="24,335,108,361"/>
 <area shape="rect" id="node6" href="$classgui_1_1_bouton_encoche.html" title="Gadget, bouton rectangulaire à cocher,. " alt="" coords="511,5,649,32"/>
 <area shape="rect" id="node7" href="$classgui_1_1_bouton_texte.html" title="Gadget, bouton rectangulaire (gui::Bouton) combiné à un Label (gui::texte). " alt="" coords="520,56,640,83"/>
 </map>

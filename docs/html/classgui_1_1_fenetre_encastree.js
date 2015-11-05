@@ -10,7 +10,7 @@ var classgui_1_1_fenetre_encastree =
     [ "getLocalBounds", "classgui_1_1_fenetre_encastree.html#a12fa2cc967555312ef57f25796c4bc0f", null ],
     [ "getSize", "classgui_1_1_fenetre_encastree.html#a8566b4f7e4f06bd72d0a0b8699758d6d", null ],
     [ "getTitre", "classgui_1_1_fenetre_encastree.html#a9683049e8cc083e2e0aeebecdbac0ed0", null ],
-    [ "initSkinBouton", "classgui_1_1_fenetre_encastree.html#a6517c34433909940eaf033d3025a6f00", null ],
+    [ "initLocalSkin", "classgui_1_1_fenetre_encastree.html#a0be22b8ade05580a4374122255796c5d", null ],
     [ "initUI", "classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31", null ],
     [ "initUI_drag", "classgui_1_1_fenetre_encastree.html#a79114afc27d0e3a31a2d0ca09889d2d9", null ],
     [ "initUI_fermer", "classgui_1_1_fenetre_encastree.html#aaa900b28f22ddaf34dbc346439a9eb76", null ],

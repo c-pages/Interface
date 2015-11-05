@@ -14,7 +14,8 @@ var group__application =
     [ "Config", "classapp_1_1_config.html", [
       [ "Polices", "classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049", [
         [ "police_1", "classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049a759ba1bca9923fc3b3e61b9e0edd154a", null ],
-        [ "police_2", "classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049abd01fcbe87968783a525da9dc5ef0f21", null ]
+        [ "police_2", "classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049abd01fcbe87968783a525da9dc5ef0f21", null ],
+        [ "log", "classapp_1_1_config.html#ac576a323feff0b9aaa6aecd40e038049aa9e5b356892159d1526d850436f9186e", null ]
       ] ],
       [ "Skins", "classapp_1_1_config.html#a457412fb51e1853408f2201a69471e32", [
         [ "Skin1", "classapp_1_1_config.html#a457412fb51e1853408f2201a69471e32abb0a28eb4da75e2aadaf74b6d9aa2d4e", null ]

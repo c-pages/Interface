@@ -132,80 +132,85 @@ $(document).ready(function(){initNavTree('_image_8h_source.html','');});
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classgui_1_1_image.html#adfd1dce1008fa4843508bb0dec114c81">~Image</a>();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    sf::Vector2f</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classgui_1_1_image.html#ad9612f9f7fac87237e204db2652ec83a">getSize</a>( ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classgui_1_1_image.html#afb286d244ff0bf591d290de7d17215f9">setSize</a>( sf::Vector2f taille );</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    sf::FloatRect</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classgui_1_1_image.html#a724e064620b575d25b234efc1e678942">getLocalBounds</a> ( ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    sf::FloatRect</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classgui_1_1_image.html#ae047970d6f90ea9ad81675491166147b">getGlobalBounds</a> ( ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classgui_1_1_image.html#ac7a34a5ab8ded879a98dac4c093ed8fc">setFillColor</a> ( sf::Color color );</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="classgui_1_1_image.html#a47e0a556fbe3ba63eab7644480daf801">setOutlineColor</a>  ( sf::Color color );</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="classgui_1_1_image.html#aeb3014a3cf51b3bcff542d63a5737aad">setOutlineThickness</a>  ( <span class="keywordtype">float</span> epaisseur );</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="classgui_1_1_image.html#abab23a691cff44fe4e3473c9e9188a52">setTexture</a>      ( <span class="keyword">const</span> sf::Texture*   texture );</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="classgui_1_1_image.html#afe71b9241ff197571ea252cf14a2dfa3">loadImage</a>      ( std::string fichier  );</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classgui_1_1_image.html#a60f05cfa11ad820922a2a1b176ce9937">setStyle</a>( std::shared_ptr&lt;Style&gt; style );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    sf::Vector2f</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classgui_1_1_image.html#ad9612f9f7fac87237e204db2652ec83a">getSize</a>( ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="classgui_1_1_image.html#afb286d244ff0bf591d290de7d17215f9">setSize</a>( sf::Vector2f taille );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    sf::FloatRect</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="classgui_1_1_image.html#a724e064620b575d25b234efc1e678942">getLocalBounds</a> ( ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    sf::FloatRect</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="classgui_1_1_image.html#ae047970d6f90ea9ad81675491166147b">getGlobalBounds</a> ( ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="classgui_1_1_image.html#ac7a34a5ab8ded879a98dac4c093ed8fc">setFillColor</a> ( sf::Color color );</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="classgui_1_1_image.html#a47e0a556fbe3ba63eab7644480daf801">setOutlineColor</a>  ( sf::Color color );</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="classgui_1_1_image.html#aeb3014a3cf51b3bcff542d63a5737aad">setOutlineThickness</a>  ( <span class="keywordtype">float</span> epaisseur );</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="classgui_1_1_image.html#abab23a691cff44fe4e3473c9e9188a52">setTexture</a>      ( <span class="keyword">const</span> sf::Texture*   texture );</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="classgui_1_1_image.html#a16e3719ba89a9a9ebe6b5ab222203ec4">draw</a>( sf::RenderTarget&amp; target, sf::RenderStates states ) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="classgui_1_1_image.html#a3c40ccc3daf57a5151678e20cb97c6e1">Init</a> ();</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="classgui_1_1_image.html#a2a8ce35cc6f459c337b9a00313d68d4a">majGeom</a> ();</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="comment">// Les membres</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classgui_1_1_image.html#a19c107406f623eee148a4e0bb4b74d11">  167</a></span>&#160;    sf::RectangleShape *   <a class="code" href="classgui_1_1_image.html#a19c107406f623eee148a4e0bb4b74d11">m_rectangle</a>;  </div>
-<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="classgui_1_1_image.html#a061216c5b478d92833e08b1cabd6b1be">  168</a></span>&#160;    sf::Texture            <a class="code" href="classgui_1_1_image.html#a061216c5b478d92833e08b1cabd6b1be">m_texture</a>;    </div>
-<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classgui_1_1_image.html#ae4bbb31ffe1c5ec686659fac57971091">  169</a></span>&#160;    sf::Image              <a class="code" href="classgui_1_1_image.html#ae4bbb31ffe1c5ec686659fac57971091">m_image</a>;      </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;};</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;};</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="classgui_1_1_image.html#afe71b9241ff197571ea252cf14a2dfa3">loadImage</a>      ( std::string fichier  );</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="classgui_1_1_image.html#a16e3719ba89a9a9ebe6b5ab222203ec4">draw</a>( sf::RenderTarget&amp; target, sf::RenderStates states ) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="classgui_1_1_image.html#a3c40ccc3daf57a5151678e20cb97c6e1">Init</a> ();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="classgui_1_1_image.html#a2a8ce35cc6f459c337b9a00313d68d4a">majGeom</a> ();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#endif // IMAGE_H</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">// Les membres</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classgui_1_1_image.html#a19c107406f623eee148a4e0bb4b74d11">  178</a></span>&#160;    sf::RectangleShape *   <a class="code" href="classgui_1_1_image.html#a19c107406f623eee148a4e0bb4b74d11">m_rectangle</a>;  </div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classgui_1_1_image.html#a061216c5b478d92833e08b1cabd6b1be">  179</a></span>&#160;    sf::Texture            <a class="code" href="classgui_1_1_image.html#a061216c5b478d92833e08b1cabd6b1be">m_texture</a>;    </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classgui_1_1_image.html#ae4bbb31ffe1c5ec686659fac57971091">  180</a></span>&#160;    sf::Image              <a class="code" href="classgui_1_1_image.html#ae4bbb31ffe1c5ec686659fac57971091">m_image</a>;      </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;};</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;};</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
-<div class="ttc" id="classgui_1_1_image_html_abab23a691cff44fe4e3473c9e9188a52"><div class="ttname"><a href="classgui_1_1_image.html#abab23a691cff44fe4e3473c9e9188a52">gui::Image::setTexture</a></div><div class="ttdeci">void setTexture(const sf::Texture *texture)</div><div class="ttdoc">Definir la texture de l&#39;image. </div><div class="ttdef"><b>Definition:</b> Image.cpp:75</div></div>
-<div class="ttc" id="classgui_1_1_image_html_a16e3719ba89a9a9ebe6b5ab222203ec4"><div class="ttname"><a href="classgui_1_1_image.html#a16e3719ba89a9a9ebe6b5ab222203ec4">gui::Image::draw</a></div><div class="ttdeci">void draw(sf::RenderTarget &amp;target, sf::RenderStates states) const  override</div><div class="ttdoc">Rendre les différents éléments du ou des écrans actifs. </div><div class="ttdef"><b>Definition:</b> Image.cpp:141</div></div>
-<div class="ttc" id="classgui_1_1_image_html_aeb3014a3cf51b3bcff542d63a5737aad"><div class="ttname"><a href="classgui_1_1_image.html#aeb3014a3cf51b3bcff542d63a5737aad">gui::Image::setOutlineThickness</a></div><div class="ttdeci">virtual void setOutlineThickness(float epaisseur)</div><div class="ttdoc">Definir Couleur du cadre. </div><div class="ttdef"><b>Definition:</b> Image.cpp:68</div></div>
-<div class="ttc" id="classgui_1_1_image_html_ad9612f9f7fac87237e204db2652ec83a"><div class="ttname"><a href="classgui_1_1_image.html#ad9612f9f7fac87237e204db2652ec83a">gui::Image::getSize</a></div><div class="ttdeci">sf::Vector2f getSize() const </div><div class="ttdoc">Definir la taille du bouton. </div><div class="ttdef"><b>Definition:</b> Image.cpp:96</div></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">#endif // IMAGE_H</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="ttc" id="classgui_1_1_image_html_abab23a691cff44fe4e3473c9e9188a52"><div class="ttname"><a href="classgui_1_1_image.html#abab23a691cff44fe4e3473c9e9188a52">gui::Image::setTexture</a></div><div class="ttdeci">void setTexture(const sf::Texture *texture)</div><div class="ttdoc">Definir la texture de l&#39;image. </div><div class="ttdef"><b>Definition:</b> Image.cpp:87</div></div>
+<div class="ttc" id="classgui_1_1_image_html_a16e3719ba89a9a9ebe6b5ab222203ec4"><div class="ttname"><a href="classgui_1_1_image.html#a16e3719ba89a9a9ebe6b5ab222203ec4">gui::Image::draw</a></div><div class="ttdeci">void draw(sf::RenderTarget &amp;target, sf::RenderStates states) const  override</div><div class="ttdoc">Rendre les différents éléments du ou des écrans actifs. </div><div class="ttdef"><b>Definition:</b> Image.cpp:153</div></div>
+<div class="ttc" id="classgui_1_1_image_html_aeb3014a3cf51b3bcff542d63a5737aad"><div class="ttname"><a href="classgui_1_1_image.html#aeb3014a3cf51b3bcff542d63a5737aad">gui::Image::setOutlineThickness</a></div><div class="ttdeci">virtual void setOutlineThickness(float epaisseur)</div><div class="ttdoc">Definir Couleur du cadre. </div><div class="ttdef"><b>Definition:</b> Image.cpp:80</div></div>
+<div class="ttc" id="classgui_1_1_image_html_ad9612f9f7fac87237e204db2652ec83a"><div class="ttname"><a href="classgui_1_1_image.html#ad9612f9f7fac87237e204db2652ec83a">gui::Image::getSize</a></div><div class="ttdeci">sf::Vector2f getSize() const </div><div class="ttdoc">Definir la taille du bouton. </div><div class="ttdef"><b>Definition:</b> Image.cpp:108</div></div>
 <div class="ttc" id="classgui_1_1_image_html_a3c40ccc3daf57a5151678e20cb97c6e1"><div class="ttname"><a href="classgui_1_1_image.html#a3c40ccc3daf57a5151678e20cb97c6e1">gui::Image::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">Initialisation. </div><div class="ttdef"><b>Definition:</b> Image.cpp:47</div></div>
-<div class="ttc" id="classgui_1_1_image_html_a061216c5b478d92833e08b1cabd6b1be"><div class="ttname"><a href="classgui_1_1_image.html#a061216c5b478d92833e08b1cabd6b1be">gui::Image::m_texture</a></div><div class="ttdeci">sf::Texture m_texture</div><div class="ttdoc">la texture. </div><div class="ttdef"><b>Definition:</b> Image.h:168</div></div>
+<div class="ttc" id="classgui_1_1_image_html_a061216c5b478d92833e08b1cabd6b1be"><div class="ttname"><a href="classgui_1_1_image.html#a061216c5b478d92833e08b1cabd6b1be">gui::Image::m_texture</a></div><div class="ttdeci">sf::Texture m_texture</div><div class="ttdoc">la texture. </div><div class="ttdef"><b>Definition:</b> Image.h:179</div></div>
 <div class="ttc" id="classgui_1_1_image_html_aa4b21108e1237e921b3f506dd6ed1623"><div class="ttname"><a href="classgui_1_1_image.html#aa4b21108e1237e921b3f506dd6ed1623">gui::Image::Image</a></div><div class="ttdeci">Image()</div><div class="ttdoc">Constructeur. </div><div class="ttdef"><b>Definition:</b> Image.cpp:10</div></div>
-<div class="ttc" id="namespacegui_html"><div class="ttname"><a href="namespacegui.html">gui</a></div><div class="ttdef"><b>Definition:</b> GUI.cpp:8</div></div>
-<div class="ttc" id="classgui_1_1_image_html_ae047970d6f90ea9ad81675491166147b"><div class="ttname"><a href="classgui_1_1_image.html#ae047970d6f90ea9ad81675491166147b">gui::Image::getGlobalBounds</a></div><div class="ttdeci">sf::FloatRect getGlobalBounds() const </div><div class="ttdoc">Accesseur de la boundingBox en global. </div><div class="ttdef"><b>Definition:</b> Image.cpp:118</div></div>
-<div class="ttc" id="classgui_1_1_image_html_ae4bbb31ffe1c5ec686659fac57971091"><div class="ttname"><a href="classgui_1_1_image.html#ae4bbb31ffe1c5ec686659fac57971091">gui::Image::m_image</a></div><div class="ttdeci">sf::Image m_image</div><div class="ttdoc">l&#39;image. </div><div class="ttdef"><b>Definition:</b> Image.h:169</div></div>
-<div class="ttc" id="classgui_1_1_image_html_afe71b9241ff197571ea252cf14a2dfa3"><div class="ttname"><a href="classgui_1_1_image.html#afe71b9241ff197571ea252cf14a2dfa3">gui::Image::loadImage</a></div><div class="ttdeci">void loadImage(std::string fichier)</div><div class="ttdoc">Charger une image. </div><div class="ttdef"><b>Definition:</b> Image.cpp:82</div></div>
+<div class="ttc" id="namespacegui_html"><div class="ttname"><a href="namespacegui.html">gui</a></div><div class="ttdef"><b>Definition:</b> GUI.cpp:9</div></div>
+<div class="ttc" id="classgui_1_1_image_html_ae047970d6f90ea9ad81675491166147b"><div class="ttname"><a href="classgui_1_1_image.html#ae047970d6f90ea9ad81675491166147b">gui::Image::getGlobalBounds</a></div><div class="ttdeci">sf::FloatRect getGlobalBounds() const </div><div class="ttdoc">Accesseur de la boundingBox en global. </div><div class="ttdef"><b>Definition:</b> Image.cpp:130</div></div>
+<div class="ttc" id="classgui_1_1_image_html_ae4bbb31ffe1c5ec686659fac57971091"><div class="ttname"><a href="classgui_1_1_image.html#ae4bbb31ffe1c5ec686659fac57971091">gui::Image::m_image</a></div><div class="ttdeci">sf::Image m_image</div><div class="ttdoc">l&#39;image. </div><div class="ttdef"><b>Definition:</b> Image.h:180</div></div>
+<div class="ttc" id="classgui_1_1_image_html_afe71b9241ff197571ea252cf14a2dfa3"><div class="ttname"><a href="classgui_1_1_image.html#afe71b9241ff197571ea252cf14a2dfa3">gui::Image::loadImage</a></div><div class="ttdeci">void loadImage(std::string fichier)</div><div class="ttdoc">Charger une image. </div><div class="ttdef"><b>Definition:</b> Image.cpp:94</div></div>
 <div class="ttc" id="classgui_1_1_gadget_html"><div class="ttname"><a href="classgui_1_1_gadget.html">gui::Gadget</a></div><div class="ttdoc">Classe virtuelle, la base commune aux gadgets formant l&#39;interface. </div><div class="ttdef"><b>Definition:</b> Gadget.h:22</div></div>
 <div class="ttc" id="classgui_1_1_image_html"><div class="ttname"><a href="classgui_1_1_image.html">gui::Image</a></div><div class="ttdoc">Gadget Un simple gadget permettant d&#39;afficher une image ou une couleur uni. </div><div class="ttdef"><b>Definition:</b> Image.h:15</div></div>
-<div class="ttc" id="classgui_1_1_image_html_afb286d244ff0bf591d290de7d17215f9"><div class="ttname"><a href="classgui_1_1_image.html#afb286d244ff0bf591d290de7d17215f9">gui::Image::setSize</a></div><div class="ttdeci">void setSize(sf::Vector2f taille)</div><div class="ttdoc">Definir la taille du bouton. </div><div class="ttdef"><b>Definition:</b> Image.cpp:104</div></div>
+<div class="ttc" id="classgui_1_1_image_html_a60f05cfa11ad820922a2a1b176ce9937"><div class="ttname"><a href="classgui_1_1_image.html#a60f05cfa11ad820922a2a1b176ce9937">gui::Image::setStyle</a></div><div class="ttdeci">virtual void setStyle(std::shared_ptr&lt; Style &gt; style)</div><div class="ttdoc">Definir la taille du bouton. </div><div class="ttdef"><b>Definition:</b> Image.cpp:67</div></div>
+<div class="ttc" id="classgui_1_1_image_html_afb286d244ff0bf591d290de7d17215f9"><div class="ttname"><a href="classgui_1_1_image.html#afb286d244ff0bf591d290de7d17215f9">gui::Image::setSize</a></div><div class="ttdeci">void setSize(sf::Vector2f taille)</div><div class="ttdoc">Definir la taille du bouton. </div><div class="ttdef"><b>Definition:</b> Image.cpp:116</div></div>
 <div class="ttc" id="classgui_1_1_image_html_adfd1dce1008fa4843508bb0dec114c81"><div class="ttname"><a href="classgui_1_1_image.html#adfd1dce1008fa4843508bb0dec114c81">gui::Image::~Image</a></div><div class="ttdeci">virtual ~Image()</div><div class="ttdoc">Destructeur. </div><div class="ttdef"><b>Definition:</b> Image.cpp:37</div></div>
 <div class="ttc" id="_gadget_8h_html"><div class="ttname"><a href="_gadget_8h.html">Gadget.h</a></div></div>
 <div class="ttc" id="classgui_1_1_image_html_ac7a34a5ab8ded879a98dac4c093ed8fc"><div class="ttname"><a href="classgui_1_1_image.html#ac7a34a5ab8ded879a98dac4c093ed8fc">gui::Image::setFillColor</a></div><div class="ttdeci">virtual void setFillColor(sf::Color color)</div><div class="ttdoc">Definir Couleur du fond. </div><div class="ttdef"><b>Definition:</b> Image.cpp:54</div></div>
-<div class="ttc" id="classgui_1_1_image_html_a2a8ce35cc6f459c337b9a00313d68d4a"><div class="ttname"><a href="classgui_1_1_image.html#a2a8ce35cc6f459c337b9a00313d68d4a">gui::Image::majGeom</a></div><div class="ttdeci">void majGeom()</div><div class="ttdoc">Mise a jour des gemotries ( size, pos, couleur, textures..) </div><div class="ttdef"><b>Definition:</b> Image.cpp:125</div></div>
-<div class="ttc" id="classgui_1_1_image_html_a19c107406f623eee148a4e0bb4b74d11"><div class="ttname"><a href="classgui_1_1_image.html#a19c107406f623eee148a4e0bb4b74d11">gui::Image::m_rectangle</a></div><div class="ttdeci">sf::RectangleShape * m_rectangle</div><div class="ttdoc">le rectangle sur lequel on applique la texture. </div><div class="ttdef"><b>Definition:</b> Image.h:167</div></div>
+<div class="ttc" id="classgui_1_1_image_html_a2a8ce35cc6f459c337b9a00313d68d4a"><div class="ttname"><a href="classgui_1_1_image.html#a2a8ce35cc6f459c337b9a00313d68d4a">gui::Image::majGeom</a></div><div class="ttdeci">void majGeom()</div><div class="ttdoc">Mise a jour des gemotries ( size, pos, couleur, textures..) </div><div class="ttdef"><b>Definition:</b> Image.cpp:137</div></div>
+<div class="ttc" id="classgui_1_1_image_html_a19c107406f623eee148a4e0bb4b74d11"><div class="ttname"><a href="classgui_1_1_image.html#a19c107406f623eee148a4e0bb4b74d11">gui::Image::m_rectangle</a></div><div class="ttdeci">sf::RectangleShape * m_rectangle</div><div class="ttdoc">le rectangle sur lequel on applique la texture. </div><div class="ttdef"><b>Definition:</b> Image.h:178</div></div>
 <div class="ttc" id="classgui_1_1_image_html_a47e0a556fbe3ba63eab7644480daf801"><div class="ttname"><a href="classgui_1_1_image.html#a47e0a556fbe3ba63eab7644480daf801">gui::Image::setOutlineColor</a></div><div class="ttdeci">virtual void setOutlineColor(sf::Color color)</div><div class="ttdoc">Definir Couleur du cadre. </div><div class="ttdef"><b>Definition:</b> Image.cpp:61</div></div>
-<div class="ttc" id="classgui_1_1_image_html_a724e064620b575d25b234efc1e678942"><div class="ttname"><a href="classgui_1_1_image.html#a724e064620b575d25b234efc1e678942">gui::Image::getLocalBounds</a></div><div class="ttdeci">sf::FloatRect getLocalBounds() const </div><div class="ttdoc">Accesseur de la boundingBox en local. </div><div class="ttdef"><b>Definition:</b> Image.cpp:111</div></div>
+<div class="ttc" id="classgui_1_1_image_html_a724e064620b575d25b234efc1e678942"><div class="ttname"><a href="classgui_1_1_image.html#a724e064620b575d25b234efc1e678942">gui::Image::getLocalBounds</a></div><div class="ttdeci">sf::FloatRect getLocalBounds() const </div><div class="ttdoc">Accesseur de la boundingBox en local. </div><div class="ttdef"><b>Definition:</b> Image.cpp:123</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

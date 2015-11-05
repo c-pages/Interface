@@ -10,5 +10,6 @@ var structgui_1_1_skin =
     [ "fenetre", "structgui_1_1_skin.html#af50b19d11f4b0942b1a37ee573523c78", null ],
     [ "invisible", "structgui_1_1_skin.html#af4ed9848a6eb07ad02fd9f2b55ecc7ba", null ],
     [ "lblCourant", "structgui_1_1_skin.html#a8de5deb80ea554c337da798869545ea8", null ],
+    [ "lblLog", "structgui_1_1_skin.html#afd37b53fbf7c8aef41ca6708573401af", null ],
     [ "lblTitre", "structgui_1_1_skin.html#abf49dd986593e33cd6afbdfb9157cdf2", null ]
 ];

@@ -1,9 +1,10 @@
 <map id="gui::BoutonEncoche::majGeom" name="gui::BoutonEncoche::majGeom">
 <area shape="rect" id="node2" href="$classgui_1_1_bouton.html#a1ff3d7a1586eaab5873cc6e49be2332c" title="Actualise le style du label. " alt="" coords="192,56,344,83"/>
-<area shape="rect" id="node6" href="$classgui_1_1_image.html#afb286d244ff0bf591d290de7d17215f9" title="Definir la taille du bouton. " alt="" coords="201,107,335,133"/>
-<area shape="rect" id="node7" href="$classgui_1_1_gadget.html#a241281346bbaf82f81f26bf0743175aa" title="Aligne le gadget sur un autre. " alt="" coords="201,157,335,184"/>
+<area shape="rect" id="node6" href="$classgui_1_1_image.html#a60f05cfa11ad820922a2a1b176ce9937" title="Definir la taille du bouton. " alt="" coords="199,107,337,133"/>
+<area shape="rect" id="node7" href="$classgui_1_1_image.html#afb286d244ff0bf591d290de7d17215f9" title="Definir la taille du bouton. " alt="" coords="201,157,335,184"/>
+<area shape="rect" id="node8" href="$classgui_1_1_gadget.html#a241281346bbaf82f81f26bf0743175aa" title="Aligne le gadget sur un autre. " alt="" coords="201,208,335,235"/>
 <area shape="rect" id="node3" href="$classgui_1_1_bouton.html#a82ae2f53840fa81e95bad972a301bddb" title="Definir Couleur du cadre. " alt="" coords="407,5,592,32"/>
 <area shape="rect" id="node4" href="$classgui_1_1_bouton.html#ae56f585c1463d258f7209ade57426421" title="Definir l&#39;épaisseur du cadre. " alt="" coords="392,56,607,83"/>
 <area shape="rect" id="node5" href="$classgui_1_1_bouton.html#a84b817726afad13e2c93b458df712beb" title="Definir Couleur du fond. " alt="" coords="419,107,580,133"/>
-<area shape="rect" id="node8" href="$classgui_1_1_gadget.html#a3479c624ae533156f318dc2b996eded3" title="Acceder à la boundingBox local. " alt="" coords="404,157,595,184"/>
+<area shape="rect" id="node9" href="$classgui_1_1_gadget.html#a2a12490ebc5d7ff80780010930e37b12" title="Acceder à la boundingBox local. " alt="" coords="404,208,595,235"/>
 </map>

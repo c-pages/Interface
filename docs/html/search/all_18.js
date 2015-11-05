@@ -19,7 +19,9 @@ var searchData=
   ['_7egadget',['~Gadget',['../classgui_1_1_gadget.html#ae21de661895bacace5aa0b96cb6b21df',1,'gui::Gadget']]],
   ['_7eiconemanager',['~IconeManager',['../classgui_1_1_icone_manager.html#acf01cd767b05e0d180f4bb5a11c915cc',1,'gui::IconeManager']]],
   ['_7eimage',['~Image',['../classgui_1_1_image.html#adfd1dce1008fa4843508bb0dec114c81',1,'gui::Image']]],
+  ['_7einfos',['~Infos',['../classgui_1_1_infos.html#af80c03863a24a5b83a721102be77e155',1,'gui::Infos']]],
   ['_7elabel',['~Label',['../classgui_1_1_label.html#a35fe2fbca1f6c34beb66bfd9b3b9b609',1,'gui::Label']]],
   ['_7eliste',['~Liste',['../class_liste.html#ac9bb3dba05e5884a536e54af86552177',1,'Liste']]],
+  ['_7elog',['~Log',['../classgui_1_1_log.html#a0616f1104e85b1c212ffe6484d0fc4b8',1,'gui::Log']]],
   ['_7etexte',['~Texte',['../class_texte.html#a83a0e8a0e8bf7bd0efc290ed153d53db',1,'Texte']]]
 ];

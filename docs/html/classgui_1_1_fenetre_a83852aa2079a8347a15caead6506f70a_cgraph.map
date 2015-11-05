@@ -1,4 +1,4 @@
 <map id="gui::Fenetre::setSkin" name="gui::Fenetre::setSkin">
-<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a05f4a03ba7bff8bf975a9bca6cf43d43" title="Initialiser le Skin des bouton de l&#39;interface. " alt="" coords="196,5,379,32"/>
-<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#ad5955dbe8116150699472cb999e2b695" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="203,56,371,83"/>
+<area shape="rect" id="node2" href="$classgui_1_1_fenetre.html#a521f9258bc403d3e5b0ac50f9232f43c" title="Initialiser le Skin des bouton de l&#39;interface. " alt="" coords="196,5,369,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_fenetre.html#ad5955dbe8116150699472cb999e2b695" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="199,56,367,83"/>
 </map>

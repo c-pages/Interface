@@ -110,6 +110,7 @@ $(document).ready(function(){initNavTree('classgui_1_1_champ_texte.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Types publics</a> &#124;
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="#pri-attribs">Attributs privés</a>  </div>
   <div class="headertitle">
@@ -140,6 +141,25 @@ Graphe de collaboration de gui::ChampTexte:</div>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Types publics</h2></td></tr>
+<tr class="memitem:a352991adaa9c5357122ff4fc99911683"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#a352991adaa9c5357122ff4fc99911683">Types</a> <tr class="separator:a352991adaa9c5357122ff4fc99911683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="inherit_header pub_types_classgui_1_1_gadget"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classgui_1_1_gadget')"><img src="closed.png" alt="-"/>&#160;Types publics hérités de <a class="el" href="classgui_1_1_gadget.html">gui::Gadget</a></td></tr>
+<tr class="memitem:a7d8208eca8d1fc7355572bdf3faaecde inherit pub_types_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a7d8208eca8d1fc7355572bdf3faaecde">ptr</a></td></tr>
+<tr class="memdesc:a7d8208eca8d1fc7355572bdf3faaecde inherit pub_types_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">definition du type des pointeurs de gadget  <a href="#a7d8208eca8d1fc7355572bdf3faaecde">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7d8208eca8d1fc7355572bdf3faaecde inherit pub_types_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classgui_1_1_action"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classgui_1_1_action')"><img src="closed.png" alt="-"/>&#160;Types publics hérités de <a class="el" href="classgui_1_1_action.html">gui::Action</a></td></tr>
+<tr class="memitem:a4223568d083f940e94c80829f63ae817 inherit pub_types_classgui_1_1_action"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> = std::function&lt; void()&gt;</td></tr>
+<tr class="memdesc:a4223568d083f940e94c80829f63ae817 inherit pub_types_classgui_1_1_action"><td class="mdescLeft">&#160;</td><td class="mdescRight">la fonction lambda associé aux declenchements des evenements.  <a href="#a4223568d083f940e94c80829f63ae817">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4223568d083f940e94c80829f63ae817 inherit pub_types_classgui_1_1_action"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a85a606811b45e6232414b1d4e29bed inherit pub_types_classgui_1_1_action"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; sf::Keyboard::Key, <a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_action.html#a7a85a606811b45e6232414b1d4e29bed">evtClavier</a></td></tr>
+<tr class="memdesc:a7a85a606811b45e6232414b1d4e29bed inherit pub_types_classgui_1_1_action"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collecteur d'évenements clavier.  <a href="#a7a85a606811b45e6232414b1d4e29bed">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7a85a606811b45e6232414b1d4e29bed inherit pub_types_classgui_1_1_action"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a359295e3ccae6767582f4450b6c49ec4 inherit pub_types_classgui_1_1_action"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e">Evenements</a>, <a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_action.html#a359295e3ccae6767582f4450b6c49ec4">evtSouris</a></td></tr>
+<tr class="memdesc:a359295e3ccae6767582f4450b6c49ec4 inherit pub_types_classgui_1_1_action"><td class="mdescLeft">&#160;</td><td class="mdescRight">collecteur d'évenement déclenché par nos <a class="el" href="namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e" title="enumeration des differents dtype d&#39;évenements. ">gui::Evenements</a> (souris, fenetre ..)  <a href="#a359295e3ccae6767582f4450b6c49ec4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a359295e3ccae6767582f4450b6c49ec4 inherit pub_types_classgui_1_1_action"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a0d936fbccd736fe02b428b12428b2fdc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#a0d936fbccd736fe02b428b12428b2fdc">ChampTexte</a> (sf::Vector2f taille={100, 20}, std::shared_ptr&lt; <a class="el" href="structgui_1_1_skin.html">Skin</a> &gt; skin=new <a class="el" href="structgui_1_1_skin.html">Skin</a>())</td></tr>
@@ -157,6 +177,15 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:acd03dd4eb8a2149a42d62d398787cbc9"><td class="memItemLeft" align="right" valign="top">virtual sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#acd03dd4eb8a2149a42d62d398787cbc9">getGlobalBounds</a> () const </td></tr>
 <tr class="memdesc:acd03dd4eb8a2149a42d62d398787cbc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesseur de la boundingBox en global.  <a href="#acd03dd4eb8a2149a42d62d398787cbc9">Plus de détails...</a><br /></td></tr>
 <tr class="separator:acd03dd4eb8a2149a42d62d398787cbc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719cc90c7bdc760ea40c411f3166418f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#a719cc90c7bdc760ea40c411f3166418f">setSkin</a> (std::shared_ptr&lt; <a class="el" href="structgui_1_1_skin.html">Skin</a> &gt; skin)</td></tr>
+<tr class="memdesc:a719cc90c7bdc760ea40c411f3166418f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définie le skin du <a class="el" href="classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. ">Label</a>.  <a href="#a719cc90c7bdc760ea40c411f3166418f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a719cc90c7bdc760ea40c411f3166418f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb4afad65d97f0e0e676738e80be8eee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#aeb4afad65d97f0e0e676738e80be8eee">getTexte</a> ()</td></tr>
+<tr class="separator:aeb4afad65d97f0e0e676738e80be8eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a113179a5f069bfe6aa83ca488fc5ab8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#a113179a5f069bfe6aa83ca488fc5ab8a">setTexte</a> (std::string txt)</td></tr>
+<tr class="separator:a113179a5f069bfe6aa83ca488fc5ab8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63c2c4f5372c2a6c45a1e1c67bdfb448"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#a63c2c4f5372c2a6c45a1e1c67bdfb448">initLocalSkin</a> ()</td></tr>
+<tr class="separator:a63c2c4f5372c2a6c45a1e1c67bdfb448"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a157fa9807bb57a159e1fbcc8da4935b2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#a157fa9807bb57a159e1fbcc8da4935b2">traiter_evenements</a> (const sf::Event &amp;event)</td></tr>
 <tr class="memdesc:a157fa9807bb57a159e1fbcc8da4935b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">La gestion des évènements utilisateurs.  <a href="#a157fa9807bb57a159e1fbcc8da4935b2">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a157fa9807bb57a159e1fbcc8da4935b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,9 +223,6 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a02a9b2e04c82e9539312301c449e2baa inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a02a9b2e04c82e9539312301c449e2baa">setParent</a> (<a class="el" href="classgui_1_1_gadget.html">Gadget</a> *parent)</td></tr>
 <tr class="memdesc:a02a9b2e04c82e9539312301c449e2baa inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajouter un enfant.  <a href="#a02a9b2e04c82e9539312301c449e2baa">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a02a9b2e04c82e9539312301c449e2baa inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93ede42252a94de3b756a9a5761df3a7 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a93ede42252a94de3b756a9a5761df3a7">setSkin</a> (std::shared_ptr&lt; <a class="el" href="structgui_1_1_skin.html">Skin</a> &gt; skin)</td></tr>
-<tr class="memdesc:a93ede42252a94de3b756a9a5761df3a7 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définie le skin du <a class="el" href="classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. ">Label</a>.  <a href="#a93ede42252a94de3b756a9a5761df3a7">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a93ede42252a94de3b756a9a5761df3a7 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46f7f9242f66fffbd12824afc51b4691 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a46f7f9242f66fffbd12824afc51b4691">setStyle</a> (std::shared_ptr&lt; <a class="el" href="structgui_1_1_style.html">Style</a> &gt; style)</td></tr>
 <tr class="memdesc:a46f7f9242f66fffbd12824afc51b4691 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définie le style du <a class="el" href="classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. ">Label</a>.  <a href="#a46f7f9242f66fffbd12824afc51b4691">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a46f7f9242f66fffbd12824afc51b4691 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,7 +245,7 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memdesc:ab2bd5264b770b78ecc59d2f1b7486aa6 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">demande si le gadget est en attente de suppression  <a href="#ab2bd5264b770b78ecc59d2f1b7486aa6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ab2bd5264b770b78ecc59d2f1b7486aa6 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2d0b7310b6a61f2e9feee6b52275462 inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#af2d0b7310b6a61f2e9feee6b52275462">demanderActualisation</a> ()</td></tr>
-<tr class="memdesc:af2d0b7310b6a61f2e9feee6b52275462 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">demande si le gadget est en attente de suppression  <a href="#af2d0b7310b6a61f2e9feee6b52275462">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:af2d0b7310b6a61f2e9feee6b52275462 inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">demande au gadget et à ses ancetres une actualisation  <a href="#af2d0b7310b6a61f2e9feee6b52275462">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af2d0b7310b6a61f2e9feee6b52275462 inherit pub_methods_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf55e6760cf3d4ef586ce87c07cfae7c inherit pub_methods_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#adf55e6760cf3d4ef586ce87c07cfae7c">supprimer</a> ()</td></tr>
 <tr class="memdesc:adf55e6760cf3d4ef586ce87c07cfae7c inherit pub_methods_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demander la suppression de ce gadget.  <a href="#adf55e6760cf3d4ef586ce87c07cfae7c">Plus de détails...</a><br /></td></tr>
@@ -255,26 +281,24 @@ Attributs privés</h2></td></tr>
 <tr class="memitem:aed879396dc0e86a613061596db1bfec6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_bouton_encoche.html">BoutonEncoche</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#aed879396dc0e86a613061596db1bfec6">m_btn</a></td></tr>
 <tr class="memdesc:aed879396dc0e86a613061596db1bfec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointeur vers le label.  <a href="#aed879396dc0e86a613061596db1bfec6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aed879396dc0e86a613061596db1bfec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b1891627c9018f60e8225b9d42ed31"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#a61b1891627c9018f60e8225b9d42ed31">m_texteBack</a></td></tr>
+<tr class="memdesc:a61b1891627c9018f60e8225b9d42ed31"><td class="mdescLeft">&#160;</td><td class="mdescRight">version du texte avant la modification, pour pouvoir annuler la midif avec la touche Echappe.  <a href="#a61b1891627c9018f60e8225b9d42ed31">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a61b1891627c9018f60e8225b9d42ed31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa2c2d7018cb96b98902e277e2a472c9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structgui_1_1_skin.html">Skin</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#aaa2c2d7018cb96b98902e277e2a472c9">m_skinBtn</a></td></tr>
+<tr class="memdesc:aaa2c2d7018cb96b98902e277e2a472c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le skin pour les boutons.  <a href="#aaa2c2d7018cb96b98902e277e2a472c9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aaa2c2d7018cb96b98902e277e2a472c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dc9e78e1d45fccc48be2f5cb993fb09"><td class="memItemLeft" align="right" valign="top">sf::RectangleShape&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#a4dc9e78e1d45fccc48be2f5cb993fb09">m_curseur</a></td></tr>
 <tr class="memdesc:a4dc9e78e1d45fccc48be2f5cb993fb09"><td class="mdescLeft">&#160;</td><td class="mdescRight">le curseur texte  <a href="#a4dc9e78e1d45fccc48be2f5cb993fb09">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a4dc9e78e1d45fccc48be2f5cb993fb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e2536526dee53e9bd15dbaf6c77be4"><td class="memItemLeft" align="right" valign="top">sf::Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#a41e2536526dee53e9bd15dbaf6c77be4">m_timerClignot</a></td></tr>
+<tr class="memdesc:a41e2536526dee53e9bd15dbaf6c77be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">une horloge pour faire clignoter le curseur  <a href="#a41e2536526dee53e9bd15dbaf6c77be4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a41e2536526dee53e9bd15dbaf6c77be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b5acce3175c9bc474a9d35e3db52e3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_champ_texte.html#a5b5acce3175c9bc474a9d35e3db52e3d">m_clignot</a></td></tr>
+<tr class="memdesc:a5b5acce3175c9bc474a9d35e3db52e3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">une horloge pour faire clignoter le curseur  <a href="#a5b5acce3175c9bc474a9d35e3db52e3d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5b5acce3175c9bc474a9d35e3db52e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Membres hérités additionnels</h2></td></tr>
-<tr class="inherit_header pub_types_classgui_1_1_gadget"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classgui_1_1_gadget')"><img src="closed.png" alt="-"/>&#160;Types publics hérités de <a class="el" href="classgui_1_1_gadget.html">gui::Gadget</a></td></tr>
-<tr class="memitem:a7d8208eca8d1fc7355572bdf3faaecde inherit pub_types_classgui_1_1_gadget"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="classgui_1_1_gadget.html">Gadget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_gadget.html#a7d8208eca8d1fc7355572bdf3faaecde">ptr</a></td></tr>
-<tr class="memdesc:a7d8208eca8d1fc7355572bdf3faaecde inherit pub_types_classgui_1_1_gadget"><td class="mdescLeft">&#160;</td><td class="mdescRight">definition du type des pointeurs de gadget  <a href="#a7d8208eca8d1fc7355572bdf3faaecde">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a7d8208eca8d1fc7355572bdf3faaecde inherit pub_types_classgui_1_1_gadget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classgui_1_1_action"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classgui_1_1_action')"><img src="closed.png" alt="-"/>&#160;Types publics hérités de <a class="el" href="classgui_1_1_action.html">gui::Action</a></td></tr>
-<tr class="memitem:a4223568d083f940e94c80829f63ae817 inherit pub_types_classgui_1_1_action"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> = std::function&lt; void()&gt;</td></tr>
-<tr class="memdesc:a4223568d083f940e94c80829f63ae817 inherit pub_types_classgui_1_1_action"><td class="mdescLeft">&#160;</td><td class="mdescRight">la fonction lambda associé aux declenchements des evenements.  <a href="#a4223568d083f940e94c80829f63ae817">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a4223568d083f940e94c80829f63ae817 inherit pub_types_classgui_1_1_action"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a85a606811b45e6232414b1d4e29bed inherit pub_types_classgui_1_1_action"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; sf::Keyboard::Key, <a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_action.html#a7a85a606811b45e6232414b1d4e29bed">evtClavier</a></td></tr>
-<tr class="memdesc:a7a85a606811b45e6232414b1d4e29bed inherit pub_types_classgui_1_1_action"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collecteur d'évenements clavier.  <a href="#a7a85a606811b45e6232414b1d4e29bed">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a7a85a606811b45e6232414b1d4e29bed inherit pub_types_classgui_1_1_action"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a359295e3ccae6767582f4450b6c49ec4 inherit pub_types_classgui_1_1_action"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e">Evenements</a>, <a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_action.html#a359295e3ccae6767582f4450b6c49ec4">evtSouris</a></td></tr>
-<tr class="memdesc:a359295e3ccae6767582f4450b6c49ec4 inherit pub_types_classgui_1_1_action"><td class="mdescLeft">&#160;</td><td class="mdescRight">collecteur d'évenement déclenché par nos <a class="el" href="namespacegui.html#a679a250c68f3a4f70b52673ccf7c843e" title="enumeration des differents dtype d&#39;évenements. ">gui::Evenements</a> (souris, fenetre ..)  <a href="#a359295e3ccae6767582f4450b6c49ec4">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a359295e3ccae6767582f4450b6c49ec4 inherit pub_types_classgui_1_1_action"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classgui_1_1_action"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classgui_1_1_action')"><img src="closed.png" alt="-"/>&#160;Attributs publics statiques hérités de <a class="el" href="classgui_1_1_action.html">gui::Action</a></td></tr>
 <tr class="memitem:a7338e98b0107777d8168bb12a021167b inherit pub_static_attribs_classgui_1_1_action"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_action.html#a7338e98b0107777d8168bb12a021167b">defaultFunc</a> = []( )-&gt;void{}</td></tr>
 <tr class="memdesc:a7338e98b0107777d8168bb12a021167b inherit pub_static_attribs_classgui_1_1_action"><td class="mdescLeft">&#160;</td><td class="mdescRight">type par defaut de la fonction lambda.  <a href="#a7338e98b0107777d8168bb12a021167b">Plus de détails...</a><br /></td></tr>
@@ -330,7 +354,20 @@ Membres hérités additionnels</h2></td></tr>
 <div class="textblock"><p><a class="el" href="classgui_1_1_gadget.html" title="Classe virtuelle, la base commune aux gadgets formant l&#39;interface. ">Gadget</a> , champ de saisie de texte. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">A faire:</a></b></dt><dd>... en developpement ...</dd></dl>
 <p>exemple : </p><div class="fragment"></div><!-- fragment --> <dl class="section see"><dt>Voir également</dt><dd></dd></dl>
-</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+</div><h2 class="groupheader">Documentation des énumérations membres</h2>
+<a class="anchor" id="a352991adaa9c5357122ff4fc99911683"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classgui_1_1_champ_texte.html#a352991adaa9c5357122ff4fc99911683">gui::ChampTexte::Types</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="a0d936fbccd736fe02b428b12428b2fdc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -369,7 +406,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_champ_texte_a0d936fbccd736fe02b428b12428b2fdc_cgraph.png" border="0" usemap="#classgui_1_1_champ_texte_a0d936fbccd736fe02b428b12428b2fdc_cgraph" alt=""/></div>
 <map name="classgui_1_1_champ_texte_a0d936fbccd736fe02b428b12428b2fdc_cgraph" id="classgui_1_1_champ_texte_a0d936fbccd736fe02b428b12428b2fdc_cgraph">
-<area shape="rect" id="node2" href="classgui_1_1_champ_texte.html#a2ea8299ea2529fcce06dc77e5d699bf5" title="initialiser les elements de l&#39;UI de ce gadget. " alt="" coords="255,5,412,32"/>
+<area shape="rect" id="node2" href="classgui_1_1_champ_texte.html#a2ea8299ea2529fcce06dc77e5d699bf5" title="initialiser les elements de l&#39;UI de ce gadget. " alt="" coords="277,5,435,32"/>
+<area shape="rect" id="node3" href="classgui_1_1_champ_texte.html#a63c2c4f5372c2a6c45a1e1c67bdfb448" title="gui::ChampTexte::initLocalSkin" alt="" coords="255,56,457,83"/>
 </map>
 </div>
 </p>
@@ -492,7 +530,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <p>Accesseur de la boundingBox en global. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>La boundingBox </dd></dl>
 
-<p>Implémente <a class="el" href="classgui_1_1_gadget.html#a393fef359f85de77d5067ebb39039201">gui::Gadget</a>.</p>
+<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#a59a5758a13c8dba8443f039dce709bb4">gui::Gadget</a>.</p>
 
 </div>
 </div>
@@ -520,7 +558,53 @@ Voici le graphe d'appel pour cette fonction :</div>
 <p>Accesseur de la boundingBox en local. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>La boundingBox </dd></dl>
 
-<p>Implémente <a class="el" href="classgui_1_1_gadget.html#a3479c624ae533156f318dc2b996eded3">gui::Gadget</a>.</p>
+<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#a2a12490ebc5d7ff80780010930e37b12">gui::Gadget</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb4afad65d97f0e0e676738e80be8eee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string gui::ChampTexte::getTexte </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a63c2c4f5372c2a6c45a1e1c67bdfb448"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui::ChampTexte::initLocalSkin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_champ_texte_a63c2c4f5372c2a6c45a1e1c67bdfb448_icgraph.png" border="0" usemap="#classgui_1_1_champ_texte_a63c2c4f5372c2a6c45a1e1c67bdfb448_icgraph" alt=""/></div>
+<map name="classgui_1_1_champ_texte_a63c2c4f5372c2a6c45a1e1c67bdfb448_icgraph" id="classgui_1_1_champ_texte_a63c2c4f5372c2a6c45a1e1c67bdfb448_icgraph">
+<area shape="rect" id="node2" href="classgui_1_1_champ_texte.html#a0d936fbccd736fe02b428b12428b2fdc" title="Constructeur par défaut. " alt="" coords="256,5,457,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -548,6 +632,63 @@ Voici le graphe des appelants de cette fonction :</div>
 </map>
 </div>
 </p>
+
+</div>
+</div>
+<a class="anchor" id="a719cc90c7bdc760ea40c411f3166418f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui::ChampTexte::setSkin </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structgui_1_1_skin.html">Skin</a> &gt;&#160;</td>
+          <td class="paramname"><em>skin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définie le skin du <a class="el" href="classgui_1_1_label.html" title="Gadget Un simple Label permettant d&#39;afficher un texte. ">Label</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skin</td><td>Le skin à appliquer (Configuration::Styles).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>return Rien </p>
+
+<p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#a93ede42252a94de3b756a9a5761df3a7">gui::Gadget</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a113179a5f069bfe6aa83ca488fc5ab8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gui::ChampTexte::setTexte </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>txt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -585,6 +726,17 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p>Réimplémentée à partir de <a class="el" href="classgui_1_1_gadget.html#a510ae68144997724188d2bb902c3103d">gui::Gadget</a>.</p>
 
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_champ_texte_a157fa9807bb57a159e1fbcc8da4935b2_cgraph.png" border="0" usemap="#classgui_1_1_champ_texte_a157fa9807bb57a159e1fbcc8da4935b2_cgraph" alt=""/></div>
+<map name="classgui_1_1_champ_texte_a157fa9807bb57a159e1fbcc8da4935b2_cgraph" id="classgui_1_1_champ_texte_a157fa9807bb57a159e1fbcc8da4935b2_cgraph">
+<area shape="rect" id="node2" href="classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="252,5,407,32"/>
+<area shape="rect" id="node3" href="classgui_1_1_gadget.html#af2d0b7310b6a61f2e9feee6b52275462" title="demande au gadget et à ses ancetres une actualisation " alt="" coords="215,56,444,83"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <h2 class="groupheader">Documentation des champs</h2>
@@ -607,6 +759,28 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><div class="memdoc">
 
 <p>pointeur vers le label. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5b5acce3175c9bc474a9d35e3db52e3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gui::ChampTexte::m_clignot</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>une horloge pour faire clignoter le curseur </p>
 
 </div>
 </div>
@@ -673,6 +847,72 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><div class="memdoc">
 
 <p>pointeur vers le label. </p>
+
+</div>
+</div>
+<a class="anchor" id="aaa2c2d7018cb96b98902e277e2a472c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="structgui_1_1_skin.html">Skin</a>&gt; gui::ChampTexte::m_skinBtn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Le skin pour les boutons. </p>
+
+</div>
+</div>
+<a class="anchor" id="a61b1891627c9018f60e8225b9d42ed31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string gui::ChampTexte::m_texteBack</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>version du texte avant la modification, pour pouvoir annuler la midif avec la touche Echappe. </p>
+
+</div>
+</div>
+<a class="anchor" id="a41e2536526dee53e9bd15dbaf6c77be4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Clock gui::ChampTexte::m_timerClignot</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>une horloge pour faire clignoter le curseur </p>
 
 </div>
 </div>

@@ -18,8 +18,10 @@ var namespacegui =
     [ "Groupe", "classgui_1_1_groupe.html", "classgui_1_1_groupe" ],
     [ "IconeManager", "classgui_1_1_icone_manager.html", "classgui_1_1_icone_manager" ],
     [ "Image", "classgui_1_1_image.html", "classgui_1_1_image" ],
+    [ "Infos", "classgui_1_1_infos.html", "classgui_1_1_infos" ],
     [ "Label", "classgui_1_1_label.html", "classgui_1_1_label" ],
     [ "Liste", "classgui_1_1_liste.html", null ],
+    [ "Log", "classgui_1_1_log.html", "classgui_1_1_log" ],
     [ "Skin", "structgui_1_1_skin.html", "structgui_1_1_skin" ],
     [ "Style", "structgui_1_1_style.html", "structgui_1_1_style" ]
 ];

@@ -1,3 +1,10 @@
 <map id="gui::Gadget::estActif" name="gui::Gadget::estActif">
-<area shape="rect" id="node2" href="$classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="195,5,324,47"/>
+<area shape="rect" id="node2" href="$classgui_1_1_gadget.html#a510ae68144997724188d2bb902c3103d" title="La gestion des évènements utilisateurs. " alt="" coords="199,136,329,177"/>
+<area shape="rect" id="node8" href="$classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="199,201,329,243"/>
+<area shape="rect" id="node9" href="$classgui_1_1_infos.html#a33e619d3aedc9dcf174a81fd07fd50fb" title="Actualiser les éléments. " alt="" coords="195,267,333,294"/>
+<area shape="rect" id="node3" href="$classgui_1_1_bouton_slide.html#af552a1f65efbdbb9cf763a99f1637e62" title="La gestion des évènements utilisateurs. " alt="" coords="381,5,540,47"/>
+<area shape="rect" id="node4" href="$classgui_1_1_contenant.html#aaf92cf1d1d7266d25b0c15cd5202ae4b" title="La gestion des évènements utilisateurs. " alt="" coords="387,71,534,112"/>
+<area shape="rect" id="node5" href="$classgui_1_1_fenetre.html#a555be24b33faedf52e92695f4f1785b3" title="La gestion des évènements utilisateurs. " alt="" coords="395,136,527,177"/>
+<area shape="rect" id="node6" href="$classgui_1_1_fenetre_encastree.html#af6b98196b14c8bca61001b37cd4dee38" title="La gestion des évènements utilisateurs. " alt="" coords="385,201,536,243"/>
+<area shape="rect" id="node7" href="$classgui_1_1_label.html#a5314909bf67f37a3e9b719166500b6bf" title="La gestion des évènements utilisateurs. " alt="" coords="401,267,520,308"/>
 </map>

@@ -15,6 +15,8 @@ var dir_3d88379f6553b92be3ae4ff299dd8595 =
     [ "FenetreOnglets.cpp", "_fenetre_onglets_8cpp.html", null ],
     [ "Groupe.cpp", "_groupe_8cpp.html", null ],
     [ "Image.cpp", "_image_8cpp.html", null ],
+    [ "Infos.cpp", "_infos_8cpp.html", null ],
     [ "Label.cpp", "_label_8cpp.html", null ],
-    [ "Liste.cpp", "_liste_8cpp.html", null ]
+    [ "Liste.cpp", "_liste_8cpp.html", null ],
+    [ "Log.cpp", "_log_8cpp.html", null ]
 ];
