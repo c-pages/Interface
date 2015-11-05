@@ -17,6 +17,7 @@ Skin::Skin()
 , btnPress      ( std::make_shared <Style> () )
 , lblTitre      ( std::make_shared <Style> () )
 , lblCourant    ( std::make_shared <Style> () )
+, lblLog        ( std::make_shared <Style> () )
 , cadre         ( std::make_shared <Style> () )
 , invisible     ( std::make_shared <Style> () )
 {
@@ -27,7 +28,15 @@ Skin::Skin()
 
     //  la police par defaut du style
     sf::Font  police;
-    police.loadFromFile   ( "media/polices/arial.ttf" );
+    if (!police.loadFromFile   ( "media/polices/arial.ttf" ) )    /// \todo faire un assert plutot, ou bien gerer la police par defaut avec un policeMngr
+        std::cout << "Skin::Skin(): ERREUR CHARGEMENT POLICE DEFAUT 1\n";
+    sf::Font  policeLog;
+
+    if (!policeLog.loadFromFile   ( "media/polices/consola.ttf" ) )
+        std::cout << "Skin::Skin(): ERREUR CHARGEMENT POLICE DEFAUT 2\n";
+
+
+
     float taillePolice = 20;
 
     //// DESACTIVE ///////////////////////////////////
@@ -113,6 +122,18 @@ Skin::Skin()
     lblCourant->fnd_texture     = sf::Texture ();
     lblCourant->align           = Alignements::Ctre_Mili;
     lblCourant->ajust           = Ajustements::Sans;
+
+    //// LABEL LOG ///////////////////////////////////
+    lblLog->txt_police      = policeLog;
+    lblLog->txt_style       = sf::Text::Style::Regular;
+    lblLog->txt_taille      = taillePolice;
+    lblLog->txt_couleur     = sf::Color ( 200,200,200);
+    lblLog->lgn_epaisseur   = 1;
+    lblLog->lgn_couleur     = sf::Color ( 255,255,255 , 200 );
+    lblLog->fnd_couleur     = sf::Color ( 255,255,255 , 255 );
+    lblLog->fnd_texture     = sf::Texture ();
+    lblLog->align           = Alignements::Ctre_Mili;
+    lblLog->ajust           = Ajustements::Sans;
 
     //// cadre ///////////////////////////////////
     cadre->txt_police      = police;

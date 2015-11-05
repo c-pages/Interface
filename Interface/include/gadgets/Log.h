@@ -65,6 +65,31 @@ public:
 
 
 
+    /////////////////////////////////////////////////
+    /// \brief Définie le skin du Label.
+    ///
+    /// \param skin   Le skin à appliquer (Configuration::Styles).
+    ///
+    /// return Rien
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    setSkin( std::shared_ptr<Skin>    skin );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -74,19 +99,6 @@ public:
     /////////////////////////////////////////////////
     static std::shared_ptr<Log>
     Instance() ;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     /////////////////////////////////////////////////
@@ -99,6 +111,8 @@ public:
     /////////////////////////////////////////////////
     static void
     print ( std::string txt );
+
+
 
  protected:
 

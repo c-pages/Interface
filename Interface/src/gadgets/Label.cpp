@@ -22,7 +22,7 @@ Label::Label    ( std::string   texte )
 
 
 /////////////////////////////////////////////////
-Label::Label    ( std::string   texte
+Label::Label    ( std::string               texte
                 , std::shared_ptr<Style>    style )
 : Gadget    ( style )
 , m_texte   ( new sf::Text () )

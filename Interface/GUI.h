@@ -24,6 +24,7 @@
 #include <gadgets/Image.h>              // --->    affiche image ou couleur
 #include <gadgets/Label.h>              // --->    affiche txt
 #include <gadgets/Log.h>                // --->    affiche d'événements
+#include <gadgets/Infos.h>              // --->    affichage d'infos, comme position de souris ou FPS
 
 //
 #include <gadgets/ChampTexte.h>         // --->    Champ de saisie de texte. ( a developper )

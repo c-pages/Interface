@@ -18,6 +18,8 @@ class Contenant;
 /////////////////////////////////////////////////
 /// \brief Gadget  permettant de rassembler des Gadgets au sein d'une Fenetre.
 ///
+/// \todo verifier si on est obliger d'avoir la fenetre SFML pour choper les coords de la souris, (cf mouse event ds traitememntEvenemts)
+///
 /////////////////////////////////////////////////
 class Fenetre : public Gadget
 {

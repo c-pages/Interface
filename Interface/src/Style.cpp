@@ -22,7 +22,7 @@ Style::Style()
 , align         ( Alignements::Libre )
 , ajust         ( Ajustements::Sans )
 {
-    txt_police.loadFromFile ( "media/polices/arial.ttf" );
+    txt_police.loadFromFile ( "media/polices/consola.ttf" );
 }
 
 /////////////////////////////////////////////////

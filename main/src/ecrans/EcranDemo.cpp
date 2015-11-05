@@ -125,16 +125,20 @@ EcranDemo::initGUI  ()
    // initialisation des parametres du GUI, les icones, polices...
     gui::init();
 
+    // le skin qu'on va utiliser dans cette interface
+    auto skinCourant =  Config::m_skins[ Config::Skins::Skin1 ] ;
+
     // creation du log
     auto log = gui::Log::Instance();
     m_gui->ajouter          ( log );
+    log->setSkin ( skinCourant );
+
+    // creation du gadget Infos
+    auto infos  = std::shared_ptr<gui::Infos>   ( new gui::Infos  (  skinCourant ) );
+    m_gui->ajouter          ( infos );
+    infos->setPosition ( m_appli->getFenetre().getSize().x - 170 , 0);
 
 
-
-
-
-    // le skin qu'on va utiliser dans cette interface
-    auto skinCourant =  Config::m_skins[ Config::Skins::Skin1 ] ;
 
     //gui::Log::ms_log = std::make_shared<gui::Log> (new gui::Log() ) ;
 
@@ -155,16 +159,14 @@ EcranDemo::initGUI  ()
 */
 
 /**/
-    std::shared_ptr<gui::ChampTexte>  champ ( new gui::ChampTexte  (  { 100 , 20 } , skinCourant ) );
-    champ->setPosition ( { 10 , 10 });
-    champ->lier ( gui::Evenements::onCha_ChangeValeur , [this](){
+    m_champ = std::shared_ptr<gui::ChampTexte>   ( new gui::ChampTexte  (  { 100 , 20 } , skinCourant ) );
+    m_champ->setPosition ( { 10 , 10 });
+    m_champ->lier ( gui::Evenements::onCha_ChangeValeur , [this](){
                  std::cout << "onCha_changeValeur\n";
 
-    } );
-    champ->lier ( gui::Evenements::onCha_ValideValeur , [this](){
-                 std::cout << "onCha_ValideValeur\n";
+                gui::Log::print (  "Texte saisie : " + m_champ->getTexte() );
 
-                 } );
+    } );
 
 
  //   m_gui->ajouter          ( champ );
@@ -180,7 +182,7 @@ EcranDemo::initGUI  ()
  //  m_gui->ajouter          ( bouton );
     bouton->lier ( gui::Evenements::onBtnG_Relache , [this](){
 
-                gui::Log::print ( "On a cliqué sur le bouton.");
+                gui::Log::print (  "Texte saisie : " + m_champ->getTexte() );
 
     } );
 
@@ -193,7 +195,7 @@ EcranDemo::initGUI  ()
     fenetre->setSkin        ( skinCourant );
     fenetre->setSize        ( { 150 , 200 } ) ; //m_appli->getFenetre().getSize().y }  ); // ( { 150 , m_appli->getFenetre().getSize().y}) ;
 
-    fenetre->ajouter          ( champ );
+    fenetre->ajouter          ( m_champ );
     fenetre->ajouter          ( bouton );
 
 /*

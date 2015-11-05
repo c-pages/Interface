@@ -23,8 +23,9 @@ enum Evenements {
 
       onBtnG_DblClique          ///<  Double clique
     , onBtnG_Relache            ///<  Relache le bouton gauche de la souris.
-    , onBtnG_RelacheDehors      ///<  Relache le bouton gauche de la souris.
+    , onBtnG_RelacheDehors      ///<  Relache a coté du gadget avec le bouton gauche de la souris après avoir pressé dedans.
     , onBtnG_Press              ///<  Presse le bouton gauche de la souris.
+    , onBtnG_PressDehors        ///<  Presse a coté du gadget avec le bouton gauche de la souris.
 
     , onBtnD_Relache            ///<  Relache le bouton droit de la souris.
     , onBtnD_RelacheDehors      ///<  Relache le bouton droit de la souris.

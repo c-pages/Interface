@@ -93,7 +93,7 @@ private:
     std::shared_ptr<gui::Label >        labelTest;
     std::shared_ptr<gui::Bouton >       bouton;
 
-
+std::shared_ptr<gui::ChampTexte>  m_champ ;
     //std::shared_ptr<Gadget>
 
 }; // fin EcranDemo

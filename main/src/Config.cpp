@@ -57,8 +57,9 @@ void Config::init()
 /////////////////////////////////////////////////
 void Config::initPolices()
 {
-    Config::m_polices.load( Polices::police_1 , "media/polices/arial.ttf"  );
-    Config::m_polices.load( Polices::police_2 , "media/polices/bgothl.ttf"  );
+    Config::m_polices.load( Polices::police_1   , "media/polices/arial.ttf"  );
+    Config::m_polices.load( Polices::police_2   , "media/polices/bgothl.ttf"  );
+    Config::m_polices.load( Polices::log        , "media/polices/consola.ttf"  );
 }
 
 
@@ -163,14 +164,26 @@ void Config::initSkins()
     //// LABEL COURANT ///////////////////////////////////
     skin1->lblCourant->txt_police      = police;
     skin1->lblCourant->txt_style       = sf::Text::Style::Regular;
-    skin1->lblCourant->txt_taille      = taille_Btn_Text;
-    skin1->lblCourant->txt_couleur     =             couleurTexte;
+    skin1->lblCourant->txt_taille      = 13;
+    skin1->lblCourant->txt_couleur     = sf::Color (50,50,50);
     skin1->lblCourant->lgn_epaisseur   = 1;
     skin1->lblCourant->lgn_couleur     = sf::Color ( 255,255,255 , 200 );
     skin1->lblCourant->fnd_couleur     = sf::Color ( 150,150,255 , 255 );
     skin1->lblCourant->fnd_texture     = sf::Texture ();
     skin1->lblCourant->align           = gui::Alignements::Libre;
     skin1->lblCourant->ajust           = gui::Ajustements::Sans;
+
+    //// LABEL LOG ///////////////////////////////////
+    skin1->lblLog->txt_police      = police;
+    skin1->lblLog->txt_style       = sf::Text::Style::Regular;
+    skin1->lblLog->txt_taille      = 11;
+    skin1->lblLog->txt_couleur     = sf::Color (200,200,200);
+    skin1->lblLog->lgn_epaisseur   = 1;
+    skin1->lblLog->lgn_couleur     = sf::Color ( 255,255,255 , 200 );
+    skin1->lblLog->fnd_couleur     = sf::Color ( 150,150,255 , 255 );
+    skin1->lblLog->fnd_texture     = sf::Texture ();
+    skin1->lblLog->align           = gui::Alignements::Libre;
+    skin1->lblLog->ajust           = gui::Ajustements::Sans;
 
     //// cadre ///////////////////////////////////
     skin1->cadre->txt_police      = police;

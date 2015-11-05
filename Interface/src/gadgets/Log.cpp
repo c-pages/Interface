@@ -27,7 +27,7 @@ Log::Log()
 
  //   ms_log = std::make_shared<Log> ( std::move( *this ) ) ;
 
-    m_lbl =  std::shared_ptr<Label>   ( new Label    (  ) );
+    m_lbl =  std::shared_ptr<Label>   ( new Label    ( "\"Inser\" pour cacher/montrer.\n\n" ) );
     //m_lbl->setTexte
     ajouter( m_lbl );
     //ctor
@@ -59,6 +59,13 @@ Log::getTexte()  {
 };
 
 
+/////////////////////////////////////////////////
+void
+Log::setSkin( std::shared_ptr<Skin>    skin )
+{
+    m_lbl->setStyle (skin->lblLog);
+
+}
 
 
 /////////////////////////////////////////////////
@@ -73,40 +80,6 @@ Log::setTexte ( std::string txt )
 void
 Log::print( std::string txt )
 {
-//time_t t;
-//
-//
-//
-//struct tm tempsTM = { time(&t) };
-
-
-    //std::cout << "la date et l'heure courante sont : "
-    //<< ctime(&t))
-    //<< std::endl;
-
-
-
-//
-//
-//
-//    // current date/time based on current system
-//    time_t  maintenant = time(0);
-//
-//
-//
-//    tm *ltm = localtime(&maintenant);
-//
-//    // print various components of tm structure.
-//    //cout << "Year: "<< 1900 + ltm->tm_year << endl;
-//
-//
-//
-//    std::string txt_heure =   "";// + ltm->tm_hour ;// + ":" + ltm->tm_min;
-//
-
-
-
-
 
 
     // recuperer le texte déja là

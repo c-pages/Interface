@@ -26,7 +26,9 @@ public:
     ///
     /////////////////////////////////////////////////
     enum Polices                :  int  {   police_1
-                                        ,   police_2   };
+                                        ,   police_2
+                                        ,   log
+                                        };
 
     /////////////////////////////////////////////////
     /// \brief listes les styles (gui::Style) enregistrable dans la pile des Styles

@@ -148,6 +148,7 @@ public:
     void
     traiter_evenements ( const sf::Event& event );
 
+
     /////////////////////////////////////////////////
     /// \brief Actualiser les éléments.
     ///

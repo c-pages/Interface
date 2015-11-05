@@ -441,6 +441,12 @@ Bouton::test_declPress(  const sf::Event& event  ) {
 
 }
 
+
+
+
+
+
+
 /////////////////////////////////////////////////
 void
 Bouton::test_declRelache(  const sf::Event& event  ) {
@@ -494,7 +500,14 @@ Bouton::test_declRelache(  const sf::Event& event  ) {
 
         // plus de bouton pressé
         ms_btnPress = nullptr;
+
+    // sinon on a pas pressé sur ce bouton
     }
+     else {
+        if ( event.mouseButton.button == sf::Mouse::Button::Left)
+            declencher ( Evenements::onBtnG_PressDehors );
+
+     }
 
 
 

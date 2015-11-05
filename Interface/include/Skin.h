@@ -48,6 +48,7 @@ struct Skin
     std::shared_ptr <Style>  btnPress;         ///< le style des boutons au press.
     std::shared_ptr <Style>  lblTitre;         ///< le style des titres.
     std::shared_ptr <Style>  lblCourant;       ///< le style des champs de texte courant.
+    std::shared_ptr <Style>  lblLog;           ///< le style pour le Log et Infos
     std::shared_ptr <Style>  cadre;            ///< le style pour les cadre, cad lefill et transparent
     std::shared_ptr <Style>  invisible;        ///< le style pour des boutons invisibles par exemple
 

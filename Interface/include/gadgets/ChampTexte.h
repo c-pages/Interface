@@ -90,6 +90,29 @@ public:
     virtual void
     setSkin( std::shared_ptr<Skin>    skin );
 
+    /////////////////////////////////////////////////
+    /// \brief
+    ///
+    /// \param
+    /// \param
+    /// \return
+    ///
+    /////////////////////////////////////////////////
+    std::string
+    getTexte();
+
+    /////////////////////////////////////////////////
+    /// \brief
+    ///
+    /// \param
+    /// \param
+    /// \return
+    ///
+    /////////////////////////////////////////////////
+    void
+    setTexte ( std::string txt );
+
+
 
 void
 initLocalSkin ();

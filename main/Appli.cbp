@@ -15,6 +15,7 @@
 					<Add option="-std=c++11" />
 					<Add option="-g" />
 					<Add directory="include/gadgets" />
+					<Add directory="utilitaires/include" />
 				</Compiler>
 				<Linker>
 					<Add library="..\Interface\bin\Debug\libInterface.a" />
@@ -33,6 +34,7 @@
 					<Add option="-O2" />
 					<Add option="-std=c++11" />
 					<Add directory="include/gadgets" />
+					<Add directory="utilitaires/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -60,6 +62,8 @@
 			<Add directory="../Interface/src" />
 			<Add directory="src" />
 		</Linker>
+		<Unit filename="../utilitaires/include/Utilitaires.h" />
+		<Unit filename="../utilitaires/src/Utilitaires.cpp" />
 		<Unit filename="include/Application.h" />
 		<Unit filename="include/Config.h" />
 		<Unit filename="include/Ecran.h" />

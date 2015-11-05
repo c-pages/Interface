@@ -273,6 +273,15 @@ protected:
     majGeom ( );
 
     /////////////////////////////////////////////////
+    // Les membres static
+    /////////////////////////////////////////////////
+public:
+    static  Gadget*     ms_btnSurvol;    ///< le bouton qu'on est en train de survoler, pour eviter d'en avoir plusieurs en meme temps quand ils sont l'un sur l'autre.
+    static  Gadget*     ms_btnPress;     ///< le bouton qu'on est en train de presser, pour quand le relache on sache sur lequel on était...
+
+protected:
+
+    /////////////////////////////////////////////////
     // Les membres
     /////////////////////////////////////////////////
     EtatBouton              m_etat;             ///< L'état du bouton.
@@ -283,14 +292,6 @@ protected:
     sf::Clock               m_clock_dblClique;  ///< Compteur temps pour double clique.
     bool                    m_1erClick;         ///< bool double clique, true lors du 1er clique, false a la fin du temps ou apres second clique.
     float                   m_bordure;          ///< l'espace de bordure (pour gui::boutonTexte, gui::BoutonCoher ..).
-
-    /////////////////////////////////////////////////
-    // Les membres static
-    /////////////////////////////////////////////////
-
-    static  Gadget*     ms_btnSurvol;    ///< le bouton qu'on est en train de survoler, pour eviter d'en avoir plusieurs en meme temps quand ils sont l'un sur l'autre.
-    static  Gadget*     ms_btnPress;     ///< le bouton qu'on est en train de presser, pour quand le relache on sache sur lequel on était...
-
 
 //
 //

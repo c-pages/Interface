@@ -17,6 +17,7 @@
 					<Add option="-g" />
 					<Add directory="include" />
 					<Add directory="include/gadgets" />
+					<Add directory="include/Gadget" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-audio-s-d" />
@@ -36,6 +37,7 @@
 					<Add option="-std=c++11" />
 					<Add directory="include" />
 					<Add directory="include/gadgets" />
+					<Add directory="include/Gadget" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -53,11 +55,16 @@
 			<Add option="-DSFML_STATIC" />
 			<Add directory="L:/programes/SFML-2.1/include" />
 			<Add directory="../Interface/include" />
+			<Add directory="../utilitaires/include" />
 		</Compiler>
 		<Linker>
 			<Add directory="L:/programes/SFML-2.1/lib" />
 			<Add directory="../Interface/src/" />
+			<Add directory="../utilitaires/src" />
 		</Linker>
+		<Unit filename="../utilitaires/include/Utilitaires.h" />
+		<Unit filename="../utilitaires/include/Utilitaires.inl" />
+		<Unit filename="../utilitaires/src/Utilitaires.cpp" />
 		<Unit filename="GUI.cpp" />
 		<Unit filename="GUI.h" />
 		<Unit filename="include/Action.h" />
@@ -80,6 +87,7 @@
 		<Unit filename="include/gadgets/FenetreOnglets.h" />
 		<Unit filename="include/gadgets/Groupe.h" />
 		<Unit filename="include/gadgets/Image.h" />
+		<Unit filename="include/gadgets/Infos.h" />
 		<Unit filename="include/gadgets/Label.h" />
 		<Unit filename="include/gadgets/Liste.h" />
 		<Unit filename="include/gadgets/Log.h" />
@@ -104,6 +112,7 @@
 		<Unit filename="src/gadgets/FenetreOnglets.cpp" />
 		<Unit filename="src/gadgets/Groupe.cpp" />
 		<Unit filename="src/gadgets/Image.cpp" />
+		<Unit filename="src/gadgets/Infos.cpp" />
 		<Unit filename="src/gadgets/Label.cpp" />
 		<Unit filename="src/gadgets/Liste.cpp" />
 		<Unit filename="src/gadgets/Log.cpp" />

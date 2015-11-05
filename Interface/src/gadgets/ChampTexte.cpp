@@ -25,6 +25,8 @@ ChampTexte::ChampTexte  ( sf::Vector2f              taille
 
 //m_timerClignot.restart();
 
+    m_skin = skin;
+
     m_btn->setSize ( taille );
 
 
@@ -34,12 +36,12 @@ ChampTexte::ChampTexte  ( sf::Vector2f              taille
     initLocalSkin ();
 
     m_curseur.setSize               ( {0 , 20} );
-    m_curseur.setOutlineColor       ( m_skinBtn->btnRepos->txt_couleur );
+    m_curseur.setOutlineColor       ( m_skin->lblCourant->txt_couleur );
     m_curseur.setOutlineThickness   ( m_skinBtn->btnRepos->lgn_epaisseur );
 
 
-    m_lbl->setSkin  ( m_skinBtn );
-    m_lbl->setStyle ( m_skinBtn->btnRepos );
+//    m_lbl->setSkin  ( m_skinBtn );
+    m_lbl->setStyle ( m_skin->lblCourant );
     m_btn->setSkin  ( m_skinBtn );
 
     // integration dans le groupe UI
@@ -57,16 +59,53 @@ ChampTexte::~ChampTexte()
 }
 
 
+/////////////////////////////////////////////////
+std::string
+ChampTexte::getTexte()
+{
+    return m_lbl->getTexte();
+}
+
+
+/////////////////////////////////////////////////
+void
+ChampTexte::setTexte ( std::string txt )
+{
+    m_lbl->setTexte( txt );
+}
+
+
 
 /////////////////////////////////////////////////
 void
 ChampTexte::initUI()
 {
     m_btn->lier ( Evenements::onBtn_changeEtat , [this]() {
+
         // l'état du boutonEncoche : true: en stock une verion du texte du lbl pour si annulation .
-        if ( m_btn->estCoche() )
+        if ( m_btn->estCoche() ) {
+
+            // clock pour clignotements du curseur
+            m_timerClignot.restart();
+            m_clignot = true;
+
+            // sauvegarde du texte pour si annulation
             m_texteBack = m_lbl->getTexte();
+
+            // liaison de l'action pour quiter la saisie
+            m_btn->lier ( Evenements::onBtnG_PressDehors , [this]() {
+                m_btn->setCoche(false);
+                // l'état du boutonEncoche : true: en stock une verion du texte du lbl pour si annulation .
+                m_btn->delier ( Evenements::onBtnG_PressDehors   );
+            });
+//
+
+
+        }
+
     });
+
+
 
 }
 
@@ -93,6 +132,8 @@ void
 ChampTexte::traiter_evenements ( const sf::Event& event )
 {
     m_grpUI->traiter_evenements ( event );
+
+    //if ( Bouton::ms_btnPress != m_btn )  m_btn->setCoche(false);
 
 
     // gestion de la saisie de texte
