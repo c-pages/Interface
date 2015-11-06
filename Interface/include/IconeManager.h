@@ -17,7 +17,9 @@ namespace gui
 
 // les icones ....
 enum Icone {
-    Fermer
+    Fermer,
+    FlecheBas,
+    FlecheHaut
 };
 
 
@@ -64,6 +66,13 @@ public:
     const sf::Texture*
     acceder( Icone texture);
 
+//    /////////////////////////////////////////////////
+//    /// \brief initialisation des textures des icones
+//    ///
+//    /////////////////////////////////////////////////
+//    static void
+//    init( );
+
 protected:
 
 private:
@@ -71,7 +80,11 @@ private:
     /////////////////////////////////////////////////
     // Les Membres
     /////////////////////////////////////////////////
-    std::map<Icone, sf::Texture *>  m_textures;   ///<  liste des textures pour les icones de l'ui.
+    std::map<Icone, sf::Texture *>      m_textures;   ///<  liste des textures pour les icones de l'ui.
+
+//
+//public:
+//    static IconeManager     icoMngr;
 
 };
 

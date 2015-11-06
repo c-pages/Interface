@@ -15,34 +15,24 @@ namespace gui{
 /////////////////////////////////////////////////
 ChampTexte::ChampTexte  ( sf::Vector2f              taille
                         , std::shared_ptr<Skin>     skin   )
-: m_grpUI   ( new Groupe ( ) )
-, m_lbl     ( new Label ( "Champ" ) )
-, m_btn     ( new BoutonEncoche ( skin , false ) )
-, m_curseur ( sf::RectangleShape ())
-, m_clignot ( false )
-, m_timerClignot ()
+: m_type            ( sans )
+, m_grpUI           ( new Groupe ( ) )
+, m_lbl             ( new Label ( ) )
+, m_btn             ( new BoutonEncoche ( skin , false ) )
+, m_curseur         ( sf::RectangleShape ( ) )
+, m_timerClignot    ( )
+, m_clignot         ( false )
 {
 
-//m_timerClignot.restart();
+    m_btn->setSize      ( taille );
+    m_curseur.setSize   ( {0 , 20} );
 
-    m_skin = skin;
-
-    m_btn->setSize ( taille );
-
-
-
-
-    initUI();
     initLocalSkin ();
 
-    m_curseur.setSize               ( {0 , 20} );
-    m_curseur.setOutlineColor       ( m_skin->lblCourant->txt_couleur );
-    m_curseur.setOutlineThickness   ( m_skinBtn->btnRepos->lgn_epaisseur );
+    initUI();
 
-
-//    m_lbl->setSkin  ( m_skinBtn );
-    m_lbl->setStyle ( m_skin->lblCourant );
-    m_btn->setSkin  ( m_skinBtn );
+    // les skin
+    setSkin ( skin );
 
     // integration dans le groupe UI
     m_grpUI->setParent ( this );
@@ -121,84 +111,29 @@ ChampTexte::getLocalBounds ( ) const{
 sf::FloatRect
 ChampTexte::getGlobalBounds ( ) const
 {
-
     return  m_btn->getGlobalBounds ( );
 }
 
 
-
 /////////////////////////////////////////////////
 void
-ChampTexte::traiter_evenements ( const sf::Event& event )
+ChampTexte::setSize ( sf::Vector2f taille )
 {
-    m_grpUI->traiter_evenements ( event );
+    m_btn->setSize( taille );
+};
 
-    //if ( Bouton::ms_btnPress != m_btn )  m_btn->setCoche(false);
 
 
-    // gestion de la saisie de texte
-    if ( m_btn->estCoche()
-    and  event.type == sf::Event::TextEntered
-        /* and  event.text.unicode < 128*/ ) {
-
-        // le texte avant modif dans le label
-        std::string txt = m_lbl->getTexte() ;
-
-        // touche Retour arriere : effacer arriere  //////////////////////////////
-        if ( event.text.unicode == 8 )  {
-            // si le champ est vide on retourne.
-            if ( txt.size()==0 ) return;
-
-            // sinon on retire une lettre et on declenche l'action
-            txt.erase ( txt.size()-1 , 1);
-            m_lbl->setTexte( txt  );
-            declencher( onCha_ChangeValeur );
-        }
-        // touche Entrée : Valider  //////////////////////////////
-        else if ( event.text.unicode == 13 )  {
-            declencher( onCha_ValideValeur );
-            m_btn->setCoche( false);
-        }
-        // touche Echappe : Annuler  //////////////////////////////
-        else if ( event.text.unicode == 27 )  {
-            m_lbl->setTexte( m_texteBack  );
-            m_btn->setCoche( false);
-        }
-        // les autres touches  //////////////////////////////
-        else {
-
-            m_lbl->setTexte( txt + static_cast<char>(event.text.unicode)  );
-
-            // s'il ne reste plus de place pour ecrire on retourne
-            float largeurTexte = m_lbl->getSFTexte()->findCharacterPos 	(  m_lbl->getTexte().size() ).x;
-
-            std::cout << " -> largeurTexte : " << largeurTexte << "\n";
-
-            if ( largeurTexte > m_btn->getSize().x - 1 )
-                m_lbl->setTexte( txt );
-
-            // on déclenche et on ecrit.
-            declencher( onCha_ChangeValeur );
-        }
-
-        // clock pour clignotements du curseur
-        m_timerClignot.restart();
-        m_clignot = true;
-
-        // et on demande une mise a jour du gadget.
-        demanderActualisation();
-    }
-
-}
 ////////////////////////////////////////////////////
 void
 ChampTexte::setSkin( std::shared_ptr<Skin>    skin )
 {
-
+    m_skin = skin;
+    m_curseur.setOutlineColor       ( m_skin->lblCourant->txt_couleur );
+    m_curseur.setOutlineThickness   ( m_skinBtn->btnRepos->lgn_epaisseur );
+    m_lbl->setStyle ( m_skin->lblCourant );
+    m_btn->setSkin  ( m_skinBtn );
 }
-
-
-
 
 /////////////////////////////////////////////////
 void
@@ -247,10 +182,102 @@ ChampTexte::initLocalSkin (){
 
 
 
+
+/////////////////////////////////////////////////
+void
+ChampTexte::traiter_evenements ( const sf::Event& event )
+{
+    m_grpUI->traiter_evenements ( event );
+
+    //if ( Bouton::ms_btnPress != m_btn )  m_btn->setCoche(false);
+
+
+    // gestion de la saisie de texte
+    if ( m_btn->estCoche()
+    and  event.type == sf::Event::TextEntered
+        /* and  event.text.unicode < 128*/ ) {
+
+
+
+        // le texte avant modif dans le label
+        std::string txt = m_lbl->getTexte() ;
+
+        // touche Retour arriere : effacer arriere  //////////////////////////////
+        if ( event.text.unicode == 8 )  {
+            // si le champ est vide on retourne.
+            if ( txt.size()==0 ) return;
+
+            // sinon on retire une lettre et on declenche l'action
+            txt.erase ( txt.size()-1 , 1);
+            m_lbl->setTexte( txt  );
+            declencher( onCha_ChangeValeur );
+        }
+
+        // touche Entrée : Valider  //////////////////////////////
+        else if ( event.text.unicode == 13 )  {
+            declencher( onCha_ValideValeur );
+            m_btn->setCoche( false);
+        }
+
+        // touche Echappe : Annuler  //////////////////////////////
+        else if ( event.text.unicode == 27 )  {
+            m_lbl->setTexte( m_texteBack  );
+            m_btn->setCoche( false);
+        }
+
+        // les autres touches  //////////////////////////////
+        else {
+
+            std::cout << " (event.text.unicode)  : " << (event.text.unicode)  << "\n";
+
+            // on verifie les entrées autorisées en fonction du type
+            bool b_accept = false;
+            // type : Chiffres
+            if (m_type == TypeEntree::chiffres )
+            {
+                if ( event.text.unicode == 46 )
+                    b_accept = true;
+                else if(  event.text.unicode >= 48  and  event.text.unicode <= 57 )
+                    b_accept = true;
+            }  else  b_accept = true;
+
+
+            if (not b_accept ) return;
+
+
+
+
+
+            m_lbl->setTexte( txt + static_cast<char>(event.text.unicode)  );
+            // s'il ne reste plus de place pour ecrire on retourne
+            float largeurTexte = m_lbl->getSFTexte()->findCharacterPos 	(  m_lbl->getTexte().size() ).x;
+            if ( largeurTexte > m_btn->getSize().x - 1 )
+                m_lbl->setTexte( txt );
+
+
+
+            // on déclenche et on ecrit.
+            declencher( onCha_ChangeValeur );
+        }
+
+        // clock pour clignotements du curseur
+        m_timerClignot.restart();
+        m_clignot = true;
+
+        // et on demande une mise a jour du gadget.
+        demanderActualisation();
+    }
+
+}
+
+
+
+
 /////////////////////////////////////////////////
 void
 ChampTexte::actualiser ( float deltaT )
 {
+
     // clignotements
     if (m_btn->estCoche() )
         if ( m_timerClignot.getElapsedTime().asSeconds()>.5 ) {

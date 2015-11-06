@@ -34,6 +34,7 @@
 #include <gadgets/Bouton.h>             // --->    declenche des fcts
 #include <gadgets/BoutonTexte.h>        // --->    declenche des fcts
 #include <gadgets/BoutonEncoche.h>      // --->    0 ou 1
+#include <gadgets/BoutonFleche.h>      // --->    0 ou 1
 #include <gadgets/BoutonSlide.h>        // --->    pour defilement de contenu dans le fenetres
 
 
@@ -113,7 +114,8 @@ init();
 ////////////////////////////////////////////////////////////
 /// \defgroup interface Module pour interface graphique
 ///
-/// \todo s'assuer que les classes qui conteiennent des pointeurs aient une fonction creation en copie et un operateur=
+/// \todo faire un point sur les constructeurs par défaut pour unifier et simplifer la creations de gadgets
+/// \todo s'assuer que les classes (qui contiennent des pointeurs) aient une fonction creation en copie et un operateur=
 ///
 /// Elements d'interface graphique: Boutons, fenêtres, ...
 ///

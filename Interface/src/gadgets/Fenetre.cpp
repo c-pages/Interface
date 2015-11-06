@@ -83,9 +83,9 @@ Fenetre::Fenetre(   sf::RenderWindow *  fenetre
 , m_taille          ( taille )
 , m_skinBtn         ( new Skin() )
 
-, m_deplacable             ( depl )
-, m_redimensionnable       ( redim )
-, m_fermable               ( ferm )
+, m_deplacable      ( depl )
+, m_redimensionnable( redim )
+, m_fermable        ( ferm )
 
 , m_dragging        ( false )
 , m_redimDroite     ( false )

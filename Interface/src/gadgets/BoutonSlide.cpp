@@ -13,13 +13,16 @@ BoutonSlide::BoutonSlide    (   sf::RenderWindow *    fenetre
                             ,   Orientation             orient
                             ,   std::shared_ptr<Skin>   skin
                             ,   float                   longueur )
-: m_orientation     ( orient )
-, m_fenetreSFML     ( fenetre )
+: m_fenetreSFML     ( fenetre )
+, m_largeur         ( 7 )
 , m_longueurMax     ( longueur )
+, m_orientation     ( orient )
 , m_drag            ( false )
 , m_directDrag      ( false )
-, m_largeur         ( 7 )
 {
+
+
+
     creerUI();
     majGeom();
 }

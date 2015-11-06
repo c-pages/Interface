@@ -20,9 +20,9 @@ Gadget*     Bouton::ms_btnPress      = nullptr;
 Bouton::Bouton  ( )
 : Gadget    ( )
 , m_etat    ( EtatBouton::repos )
-, m_fond    ( new Image () )
-, m_icone   ( new Image () )
 , m_bIcone  ( false )
+, m_icone   ( new Image () )
+, m_fond    ( new Image () )
 , m_bordure ( 0 )
 {
     //    std::cout << "  --- Bouton --- Bouton ---\n";
@@ -34,9 +34,9 @@ Bouton::Bouton  ( )
 Bouton::Bouton  ( std::shared_ptr<Skin>    skin , sf::Vector2f taille )
 : Gadget    ( skin )
 , m_etat    ( EtatBouton::repos )
-, m_fond    ( new Image () )
-, m_icone   ( new Image () )
 , m_bIcone  ( false )
+, m_icone   ( new Image () )
+, m_fond    ( new Image () )
 , m_bordure ( 0 )
 {
     setSize (taille);

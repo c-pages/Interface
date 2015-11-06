@@ -293,8 +293,8 @@ protected:
     bool                    m_1erClick;         ///< bool double clique, true lors du 1er clique, false a la fin du temps ou apres second clique.
     float                   m_bordure;          ///< l'espace de bordure (pour gui::boutonTexte, gui::BoutonCoher ..).
 
-//
-//
+
+
 ////////////// DEBUG /////////////////////////////////////
 //bool
 //contient ( float x, float y )
@@ -321,7 +321,7 @@ protected:
 //
 //};
 ////////////// DEBUG /////////////////////////////////////
-//
+
 
 
 

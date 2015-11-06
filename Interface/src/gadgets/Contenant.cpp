@@ -15,14 +15,14 @@ Contenant::Contenant( sf::RenderWindow  *     fenetre )
 , m_fenetreSFML     ( fenetre )
 , m_bSliderVerti    ( false )
 , m_bSliderHori     ( false )
-, m_grpContenu      (  )
-, m_grpUI              (  )
-, m_spriteContenant ( new sf::Sprite ())
 , m_posContenu      ( 0 , 0 )
-, m_slideVerti      ( std::make_shared<BoutonSlide> ( fenetre, Orientation::Verticale , m_skin) )
-, m_slideHori       ( std::make_shared<BoutonSlide> ( fenetre, Orientation::Horizontale, m_skin ) )
+, m_grpContenu      (  )
+, m_spriteContenant ( new sf::Sprite ())
 , m_tailleTexture   ({ 1 , 1})
 , m_tailleAffiche   ({ 1 , 1})
+, m_grpUI           (  )
+, m_slideVerti      ( std::make_shared<BoutonSlide> ( fenetre, Orientation::Verticale , m_skin) )
+, m_slideHori       ( std::make_shared<BoutonSlide> ( fenetre, Orientation::Horizontale, m_skin ) )
 {
     // contenant et contenu
     m_grpContenu    = std::shared_ptr<Groupe>       ( new Groupe   ( ) );
@@ -96,6 +96,10 @@ Contenant::getContenuBounds ( ) const {
     // pour laisser un espace sur les cotés
     result.width    += 10;
     result.height   += 20;
+
+//    if ( result.width   > m_taille.x )    result.width  = m_taille.x  ;
+//    if ( result.height  > m_taille.y )    result.height = m_taille.y  ;
+
     return { result };
 }
 
@@ -136,13 +140,20 @@ Contenant::actualiser ( float deltaT )    {
 
 
     // les tailles des textures et du sprite pour rendu
-    m_tailleTexture.x = getContenuBounds().left   + getContenuBounds().width  + 2;
-    m_tailleTexture.y = getContenuBounds().top    + getContenuBounds().height + 2;
+    // la taille à afficher
     m_tailleAffiche.x = m_taille.x;
     m_tailleAffiche.y = m_taille.y;
 
     if ( m_bSliderHori )    m_tailleAffiche.y -= m_slideHori->getSize().y;
     if ( m_bSliderVerti )   m_tailleAffiche.x -= m_slideVerti->getSize().x;
+
+    // la taille de la texture a afficher
+    m_tailleTexture.x = getContenuBounds().left   + getContenuBounds().width  + 2;
+    m_tailleTexture.y = getContenuBounds().top    + getContenuBounds().height + 2;
+    if ( m_tailleAffiche.x > m_tailleTexture.x )    m_tailleTexture.x = m_tailleAffiche.x  ;
+    if ( m_tailleAffiche.y > m_tailleTexture.y )    m_tailleTexture.y = m_tailleAffiche.y  ;
+
+
 
     // on verifie si on a besoin des sliders
     m_bSliderHori   = ( getContenuBounds().width    >   m_taille.x );

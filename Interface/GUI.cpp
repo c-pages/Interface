@@ -20,7 +20,10 @@ IconeManager    icoMngr;        ///< Gestionnaire des textures pour icones \todo
 void
 init()
 {
-    icoMngr.charger( Icone::Fermer , "../Interface/media/img/ico_fermer.png" );
+    // init des icones
+    icoMngr.charger( Icone::Fermer      , "../Interface/media/img/ico_fermer.png" );
+    icoMngr.charger( Icone::FlecheBas   , "../Interface/media/img/ico_flecheBas.png" );
+    icoMngr.charger( Icone::FlecheHaut  , "../Interface/media/img/ico_flecheHaut.png" );
 }
 
 

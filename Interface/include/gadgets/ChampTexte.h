@@ -30,9 +30,9 @@ class ChampTexte : public Gadget
 {
 public:
 
-    enum Types {
-
-
+    enum TypeEntree {    ///<  les differents types de champ de saisie.
+        sans,       ///< champ de saisie sans limitation.
+        chiffres    ///< champ de saisie de chiffres uniquement.
     };
 
     /////////////////////////////////////////////////
@@ -43,7 +43,7 @@ public:
     ///
     /////////////////////////////////////////////////
     ChampTexte  ( sf::Vector2f              taille = { 100, 20 }
-                , std::shared_ptr<Skin>     skin   = new Skin () );
+                , std::shared_ptr<Skin>     skin   = std::shared_ptr<Skin> (new Skin ()) );
 
     /////////////////////////////////////////////////
     /// \brief Destructeur
@@ -58,6 +58,18 @@ public:
     /////////////////////////////////////////////////
     void
     initUI();
+
+
+    /////////////////////////////////////////////////
+    /// \brief Definir la taille
+    ///
+    /// \param taille
+    ///
+    /////////////////////////////////////////////////
+    virtual void
+    setSize ( sf::Vector2f taille );
+
+
 
     /////////////////////////////////////////////////
     /// \brief Accesseur de la boundingBox en local
@@ -113,9 +125,21 @@ public:
     setTexte ( std::string txt );
 
 
+    /////////////////////////////////////////////////
+    /// \brief
+    ///
+    /// \param
+    /// \param
+    /// \return
+    ///
+    /////////////////////////////////////////////////
+    void
+    setType ( TypeEntree type ) { m_type = type ; };
 
-void
-initLocalSkin ();
+
+
+    void
+    initLocalSkin ();
 
 
     /////////////////////////////////////////////////
@@ -157,16 +181,18 @@ private:
     /////////////////////////////////////////////////
     // Les Membres
     /////////////////////////////////////////////////
+    TypeEntree                      m_type;         ///< le type du champ de saisie.
+
     std::shared_ptr<Groupe>         m_grpUI;        ///<  Le groupe contenant l'interface de la fenetyre (boutons, titre)
     std::shared_ptr<Label>          m_lbl;          ///< pointeur vers le label.
-    std::shared_ptr<BoutonEncoche>  m_btn;          ///< pointeur vers le label.
+    std::shared_ptr<BoutonEncoche>  m_btn;          ///< pointeur vers le bouton.
     std::string                     m_texteBack;    ///< version du texte avant la modification, pour pouvoir annuler la midif avec la touche Echappe.
 
     std::shared_ptr<Skin>           m_skinBtn;      ///<  Le skin pour les boutons
     sf::RectangleShape              m_curseur;      ///< le curseur texte
 
-    sf::Clock                       m_timerClignot;  ///< une horloge pour faire clignoter le curseur
-    bool                            m_clignot;          ///< une horloge pour faire clignoter le curseur
+    sf::Clock                       m_timerClignot; ///< une horloge pour faire clignoter le curseur
+    bool                            m_clignot;      ///< une horloge pour faire clignoter le curseur
 
 };
 

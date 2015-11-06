@@ -6,6 +6,13 @@
 
 namespace gui
 {
+
+//
+//// initialiser      membre static
+//IconeManager     IconeManager::icoMngr = IconeManager ();
+//
+//std::map<Icone, sf::Texture *>  m_textures ;
+
 ///////////////////////////////////////////////////
 IconeManager::IconeManager()
 {
@@ -16,21 +23,33 @@ IconeManager::~IconeManager()
 {
     //dtor
 }
+
+
+
+//////////////////////////////////////////////////
+//void
+//IconeManager::init(  )
+//{
+//    // init des icones
+//    charger( Icone::Fermer , "../Interface/media/img/ico_fermer.png" );
+//    charger( Icone::Fleche , "../Interface/media/img/ico_fleche.png" );
+//}
+
+
+
+//////////////////////////////////////////////////
 void
 IconeManager::charger( Icone nom , const std::string& fichier )
 {
-    std::cout << "charger 1 \n";
     // charger la texture
     sf::Texture * tex= new sf::Texture();
-    std::cout << "charger 2 \n";
     tex->loadFromFile( fichier );
-    std::cout << "charger 3 \n";
 
     // on l'ajoute à la liste
     m_textures[ nom ] = tex;
-    std::cout << "charger 4 \n";
 }
 
+//////////////////////////////////////////////////
 const sf::Texture*
 IconeManager::acceder( Icone texture)
 {

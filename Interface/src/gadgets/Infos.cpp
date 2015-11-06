@@ -66,16 +66,24 @@ void
 Infos::traiter_evenements ( const sf::Event& event )
 {
 
-    if ( event.type == sf::Event::MouseMoved )
+    // si ce n'est pas un evenement souris on return pour pas interferer
+    if ( event.type != sf::Event::MouseButtonPressed
+    and  event.type != sf::Event::MouseButtonReleased
+    and  event.type != sf::Event::MouseMoved
+    and  event.type != sf::Event::MouseEntered
+    and  event.type != sf::Event::MouseLeft )
+        return;
 
     //  position de la souris
     if ( event.type == sf::Event::MouseMoved )
             m_mousePos = { event.mouseMove.x    , event.mouseMove.y   };
     else    m_mousePos = { event.mouseButton.x  , event.mouseButton.y };
 
-
-
+    // la souris hors de la fenetre
+    if (event.type == sf::Event::MouseLeft)
+        m_mousePos = { -1 , -1 };
 }
+
 
 /////////////////////////////////////////////////
 void
@@ -91,8 +99,8 @@ Infos::actualiser ( float deltaT )
         m_compteurFPS = 0;
     }
 
-    m_lblMouseX->setTexte   ( "x: " + toString(m_mousePos.x) );
-    m_lblMouseY->setTexte   ( "y: " + toString(m_mousePos.y) );
+    m_lblMouseX->setTexte   ( "x: "   + toString(m_mousePos.x) );
+    m_lblMouseY->setTexte   ( "y: "   + toString(m_mousePos.y) );
     m_lblMouseFps->setTexte ( "fps: " + toString(m_FPS) );
 
 }
