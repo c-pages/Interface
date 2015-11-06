@@ -25,9 +25,9 @@ class Contenant;
 /// \todo à developper.
 ///
 /////////////////////////////////////////////////
-enum Encastrements {
+enum Cote {
         Gauche      ///<
-    ,   Droite      ///<
+    ,   Droit       ///<
     ,   Haut        ///<
     ,   Bas         ///<
 };
@@ -42,9 +42,10 @@ class FenetreEncastree: public Gadget
 {
 
 public:
-    FenetreEncastree   ( sf::RenderWindow  *       fenetre
-                        , std::shared_ptr<Skin>     skin            = new Skin()
-                        , Encastrements             encastrement    = Encastrements::Gauche );
+
+    FenetreEncastree   ( sf::RenderWindow  *    fenetre
+                        , std::shared_ptr<Skin> skin    = new Skin()
+                        , Cote                  cote    = Cote::Gauche );
 
 
     virtual ~FenetreEncastree();
@@ -256,6 +257,7 @@ private:
     float                   m_bordure;      ///<  Le taille de la bordure du cadre.
     sf::Vector2f            m_taille;       ///<  Le taille de la fenetre.
     std::shared_ptr<Skin>   m_skinBtn;      ///<  Le skin pour les boutons de la fenetre (drag, fermer, redim. ...)
+    Cote                    m_cote;         ///<  Le coté de la fenêtre sur lequel vient s'accrocher la fenêtre.
 
     /////////// les options de la fenetre ///////////
     bool    m_redimensionnable;           ///<  option: La fenetre est redimensionnable (true) ou pas (false).
@@ -265,13 +267,8 @@ private:
 
     std::shared_ptr<Groupe>         m_grpUI;                ///<  Le groupe contenant l'interface de la fenetyre (boutons, titre)
     std::shared_ptr<Label>          m_lblTitre;             ///<  Le Label titre.
-
     std::shared_ptr<BoutonTexte>    m_btnFermer;            ///<  Le Bouton pour fermer la fenetre.
-
-    std::shared_ptr<Bouton>         m_btnRedimGauche;       ///<  Bouton pour redimensionner la fenetre.
-    std::shared_ptr<Bouton>         m_btnRedimDroite;       ///<  Bouton pour redimensionner la fenetre.
-    std::shared_ptr<Bouton>         m_btnRedimBas;          ///<  Bouton pour redimensionner la fenetre.
-    std::shared_ptr<Bouton>         m_btnRedimHaut;         ///<  Bouton pour redimensionner la fenetre.
+    std::shared_ptr<Bouton>         m_btnRedim;         ///<  Bouton pour redimensionner la fenetre.
 
     /////////// le contenant de la fenetre  ///////////
     std::shared_ptr<Image>          m_CadreContenu;         ///<  Dessine un cadre autour du contenant
@@ -283,13 +280,10 @@ private:
 
 
     /////////// Pour drager et redimensionner la fenetre ///////////
-    bool            m_redimDroite;        ///<  En train de redim ?.
-    bool            m_redimGauche;        ///<  En train de redim ?.
-    bool            m_redimBas;           ///<  En train de redim ?.
-    bool            m_redimHaut;          ///<  En train de redim ?.
-    sf::Vector2f    m_posFenetreOrig;     ///<  position de la fenetre à l'origine du drag.
-    sf::Vector2f    m_posMouseOrig;       ///<  position de la souris a l'origine du drag.
-    sf::Vector2f    m_tailleFenetreOrig;  ///<  taille de la fenetre à l'origine.
+    bool            m_redim;                ///<  En train de redim ?.
+    sf::Vector2f    m_posFenetreOrig;       ///<  position de la fenetre à l'origine du drag.
+    sf::Vector2f    m_posMouseOrig;         ///<  position de la souris a l'origine du drag.
+    sf::Vector2f    m_tailleFenetreOrig;    ///<  taille de la fenetre à l'origine.
 
     /////////// les fonctions de manipulation de la fenetre ///////////
 
@@ -300,15 +294,8 @@ private:
     FuncType    m_fctFermerSort;          ///<  fonction pour manipuler la fenetre.
 
     // les fonctions redimension arretes
-    FuncType    m_fctRedimDroiteDebut;    ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimDroiteFin;      ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimGaucheDebut;    ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimGaucheFin;      ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimBasDebut;       ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimBasFin;         ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimHautDebut;      ///<  fonction pour manipuler la fenetre.
-    FuncType    m_fctRedimHautFin;        ///<  fonction pour manipuler la fenetre.
-
+    FuncType    m_fctRedimDebut;    ///<  fonction pour manipuler la fenetre.
+    FuncType    m_fctRedimFin;      ///<  fonction pour manipuler la fenetre.
 
 
 

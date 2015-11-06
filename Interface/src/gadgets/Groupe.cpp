@@ -19,24 +19,24 @@ Groupe::Groupe ( )
 bool
 Groupe::contient ( float x, float y )
 {
-    /*
-    ////////////// DEBUG /////////////////////////////////////
-    //
-    //sf::FloatRect rect  = getGlobalBounds();
-    //std::cout << "Groupe -> " << rect.left << " " << rect.top << " " << rect.width << " "<< rect.height << " ------> ";
-    //
-    //    // S'il est contenu alors on verif le parent pour savoir par exemple si
-    //    // le gadget est visible dans la fenetre parent.
-    //    if ( rect.contains( sf::Vector2f ( x , y ) ) ){
-    //            std::cout << "TRUE\n";
-    ////        if ( m_parent != 0 )    return  m_parent->contient ( x, y );
-    ////        else
-    //            return  true;
-    //    } else {
-    //            std::cout << "FALSE\n";
-    ////        return false;
-    //    }
-    //////////// DEBUG /////////////////////////////////////*/
+/*
+    //////////// DEBUG /////////////////////////////////////
+
+    sf::FloatRect rect  = getGlobalBounds();
+    std::cout << "Groupe -> " << rect.left << " " << rect.top << " " << rect.width << " "<< rect.height << " ------> ";
+
+        // S'il est contenu alors on verif le parent pour savoir par exemple si
+        // le gadget est visible dans la fenetre parent.
+        if ( rect.contains( sf::Vector2f ( x , y ) ) ){
+                std::cout << "TRUE\n";
+    //        if ( m_parent != 0 )    return  m_parent->contient ( x, y );
+    //        else
+                return  true;
+        } else {
+                std::cout << "FALSE\n";
+    //        return false;
+        }
+    ////////// DEBUG /////////////////////////////////////*/
 
     // si pas de parent return true
     if ( m_parent == nullptr ) return true;

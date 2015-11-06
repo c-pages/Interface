@@ -34,7 +34,7 @@
 #include <gadgets/Bouton.h>             // --->    declenche des fcts
 #include <gadgets/BoutonTexte.h>        // --->    declenche des fcts
 #include <gadgets/BoutonEncoche.h>      // --->    0 ou 1
-#include <gadgets/BoutonFleche.h>      // --->    0 ou 1
+#include <gadgets/BoutonFleche.h>       // --->    0 ou 1
 #include <gadgets/BoutonSlide.h>        // --->    pour defilement de contenu dans le fenetres
 
 
@@ -42,7 +42,7 @@
 #include <gadgets/Contenant.h>          // --->    groupe de gadgets   grp
 #include <gadgets/Groupe.h>             // --->    groupe de gadgets   grp
 #include <gadgets/Fenetre.h>            // --->    fenetre               grp  + btn:(drag, redim, fermer)
-//#include <gadgets/Fenetre_encastree.h>  // --->    fenetre encastrée sur un bord de la fenetre SFML
+#include <gadgets/FenetreEncastree.h>   // --->    fenetre encastrée sur un bord de la fenetre SFML
 
 
 

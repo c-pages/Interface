@@ -43,6 +43,7 @@ void EcranDemo::traiter_evenements  ( const sf::Event& event )
 
 
 
+    // fermeture de la fenetre SFML
     if (event.type == sf::Event::Closed)
         m_appli->getFenetre().close();
 
@@ -53,15 +54,8 @@ void EcranDemo::traiter_evenements  ( const sf::Event& event )
         m_vueJeu.setSize    (event.size.width, event.size.height);
         m_vueGUI.setSize    (event.size.width, event.size.height);
 
-    m_appli->getFenetre().setView(m_vueGUI);
-
-//          this->game->background.setPosition(this->game->window.mapPixelToCoords(sf::Vector2i(0, 0)));
-//          this->game->background.setScale(
-//          float(event.size.width) / float(this->game->background.getTexture()->getSize().x),
-//          float(event.size.height) / float(this->game->background.getTexture()->getSize().y));
-
+        m_appli->getFenetre().setView(m_vueGUI);
     }
-
 
 }
 
@@ -130,17 +124,24 @@ EcranDemo::initGUI  ()
     auto skinCourant =  Config::m_skins[ Config::Skins::Skin1 ] ;
 
 
+    // touche echappe pour quitter
+    m_gui->lier ( sf::Keyboard::Escape , [this] () {
+        m_appli->getFenetre().close();
+    });
+
+/*
     // creation du log
     auto log = gui::Log::Instance();
     m_gui->ajouter          ( log );
     log->setSkin ( skinCourant );
-
+*/
 
     // creation du gadget Infos
-    auto infos  = std::shared_ptr<gui::Infos>   ( new gui::Infos  (  skinCourant ) );
+    auto infos  = std::shared_ptr<gui::Infos> ( new gui::Infos ( skinCourant ) );
     m_gui->ajouter  ( infos );
-    infos->setPosition ( m_appli->getFenetre().getSize().x - 170 , 0);
+    infos->setPosition ( m_appli->getFenetre().getSize().x - 170 , 0 );
 
+/*
 
     // le champ de saisie
     m_champ = std::shared_ptr<gui::ChampTexte>   ( new gui::ChampTexte  (  { 150 , 20 } , skinCourant ) );
@@ -169,10 +170,7 @@ EcranDemo::initGUI  ()
     boutonFleche->setPrecision (1);
 
 
-
-
-
-    // la fenetre
+    // la fenetre volante
     std::shared_ptr<gui::Fenetre>  fenetre ( new gui::Fenetre   ( &m_appli->getFenetre()
                                                                 , sf::Vector2f (270, 200) ) );
     m_gui->ajouter          ( fenetre );
@@ -187,6 +185,30 @@ EcranDemo::initGUI  ()
   //  fenetre->ajouter          ( bouton );
     fenetre->ajouter          ( boutonFleche );
    // m_gui->ajouter          ( boutonFleche );
+
+*/
+
+
+    // la fenetre encastrée
+    std::shared_ptr<gui::FenetreEncastree>  fenetreEncastree ( new gui::FenetreEncastree    ( &m_appli->getFenetre()
+                                                                                            , skinCourant
+                                                                                            , gui::Cote::Bas ) );
+
+
+    m_gui->ajouter              ( fenetreEncastree );
+//    fenetreEncastree->setSkin   ( skinCourant );
+//
+//
+    // bouton
+    std::shared_ptr<gui::Bouton>  bouton ( new gui::Bouton  (  skinCourant ) );
+    bouton->setPosition ( { 0 , 35 });
+    bouton->setSize ( { 20 , 20 });
+    bouton->lier ( gui::Evenements::onBtnG_Relache , [this](){
+       // gui::Log::print (  "Texte : " + m_champ->getTexte() );
+    } );
+    fenetreEncastree->ajouter   ( bouton );
+
+
 
 
 }   // fin init GUI

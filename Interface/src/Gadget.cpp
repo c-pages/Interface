@@ -263,6 +263,8 @@ Gadget::traiter_evenements ( const sf::Event& event )
 
     if ( not estVisible() and not estActif() ) return;
 
+    Action::traiter_evenements   (event);
+
     // les evenements des gadgets enfants
     for ( ptr enfant : m_enfants )
         enfant->traiter_evenements ( event );

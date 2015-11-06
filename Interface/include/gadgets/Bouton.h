@@ -307,6 +307,7 @@ protected:
 ////    ////////////DEBUG/////////////
 //
 //std::cout << "--- bouton ------------------- " << this << " ---> ";
+//std::cout << "  rect" << rect.left << ", "<< rect.top << ", "<< rect.width << ", "<< rect.height << " --> ";
 //
 //    // S'il est contenu alors on verif le parent pour savoir par exemple si
 //    // le gadget est visible dans la fenetre parent.

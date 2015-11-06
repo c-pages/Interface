@@ -11,14 +11,19 @@
 namespace gui {
 
 /////////////////////////////////////////////////
-FenetreEncastree::FenetreEncastree    ( sf::RenderWindow  *       fenetre
-                                        , std::shared_ptr<Skin>     skin
-                                        , Encastrements             encastrement   )
+FenetreEncastree::FenetreEncastree      ( sf::RenderWindow  *     fenetre
+                                        , std::shared_ptr<Skin> skin
+                                        , Cote                  cote   )
+: m_fenetreSFML     ( fenetre )
+, m_bordure         ( 7 )
+, m_cote            ( cote )
+, m_fermable        (false)
+, m_redimensionnable(true)
 {
     // ctor
+    initUI();
 
-
-
+    setSkin (skin);
 
 }
 
@@ -35,37 +40,73 @@ void
 FenetreEncastree::initUI()
 {
 
+    // integration dans le groupe UI
+    m_grpUI                 = std::shared_ptr<Groupe>  ( new Groupe   (  ) );
+    m_grpUI->setParent ( this );
+
+
+
+    switch ( m_cote )    {
+    case Gauche:
+        m_taille.x = 300;
+        m_taille.y = m_fenetreSFML->getSize().y;
+        setPosition( 0,0 );
+        break;
+
+    case Droit:
+        m_taille.x = 300;
+        m_taille.y = m_fenetreSFML->getSize().y;
+        setPosition( m_fenetreSFML->getSize().x - m_taille.x , 0 );
+        break;
+
+    case Haut:
+        m_taille.x = m_fenetreSFML->getSize().x;
+        m_taille.y = 100;
+        setPosition( 0 , 0 );
+        break;
+
+    case Bas:
+        m_taille.x = m_fenetreSFML->getSize().x;
+        m_taille.y = 100;
+        setPosition( 0 , m_fenetreSFML->getSize().y - m_taille.y);
+        break;
+
+    default:
+        break;
+    }
+
+
 
     // le fond
     m_fond = std::shared_ptr<Image>   ( new Image    ( ) );
 
     // création des gadgets pour l'interface de la fenêtre
     m_lblTitre              = std::shared_ptr<Label>   ( new Label    ( "Fenêtre" , m_skin->fenetre ) );
-//    m_lblFermer             = std::shared_ptr<Label>   ( new Label    ( "X"       , m_skin->fenetre ) );
-    m_btnFermer             = std::shared_ptr<BoutonTexte>  ( new BoutonTexte ( m_skin , "X" ) );
-    m_btnRedimGauche        = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
-    m_btnRedimDroite        = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
-    m_btnRedimBas           = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
-    m_btnRedimHaut          = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
 
-    // integration dans le groupe UI
-    m_grpUI                 = std::shared_ptr<Groupe>  ( new Groupe   (  ) );
-    m_grpUI->setParent ( this );
+        std::cout <<"parla--------------------- 1 <<<\n";
+    if (m_fermable){
+        m_btnFermer             = std::shared_ptr<BoutonTexte>  ( new BoutonTexte ( m_skin , "X" ) );
+        m_grpUI->ajouter ( m_btnFermer );
+        initUI_fermer();
+    }
+    if (m_redimensionnable){
+        m_btnRedim              = std::shared_ptr<Bouton>  ( new Bouton   ( m_skin ) );
+        m_grpUI->ajouter ( m_btnRedim );
+        initUI_redim();
+    }
+        std::cout <<"parla--------------------- 2 <<<\n";
  //   m_grpUI->ajouter ( m_lblFermer );
 //    ajouter ( m_grpUI );
 
-    m_grpUI->ajouter ( m_btnFermer );
-    m_grpUI->ajouter ( m_btnRedimGauche );
-    m_grpUI->ajouter ( m_btnRedimDroite );
-    m_grpUI->ajouter ( m_btnRedimBas );
-    m_grpUI->ajouter ( m_btnRedimHaut );
+        std::cout <<"parla--------------------- 3 <<<\n";
+
     m_grpUI->ajouter ( m_lblTitre );
 
 
     // le cadre autour du group contenant
     m_CadreContenu          = std::shared_ptr<Image>   ( new Image    ( ) );
 
-    // groupe d'affichage, le contenu des élements de la fenêtre
+    // groupe d'affichage, le contenant des élements de la fenêtre
     m_contenant  = std::shared_ptr<Contenant>  ( new Contenant   ( m_fenetreSFML ) );
     m_contenant->setParent (this);
 
@@ -74,9 +115,7 @@ FenetreEncastree::initUI()
     updateStyle();
 
     // initialiser les fonctions de drag, redim ...
-    initUI_drag();
-    initUI_redim();
-    initUI_fermer();
+
 
 
     // actualiser les geometries
@@ -121,62 +160,22 @@ FenetreEncastree::initUI_redim()
 {
 
     // fonctions
-    m_fctRedimDroiteDebut = [this](){
-        m_redimDroite            = true;
-        m_tailleFenetreOrig      = m_taille;
-        m_posMouseOrig          = sf::Vector2f   (sf::Mouse::getPosition( *m_fenetreSFML )) ;
+    m_fctRedimDebut = [this](){
+        m_redim                     = true;
+        m_posFenetreOrig            = getPosition();
+        m_tailleFenetreOrig         = m_taille;
+        m_posMouseOrig              = sf::Vector2f   (sf::Mouse::getPosition( *m_fenetreSFML )) ;
     };
-    m_fctRedimDroiteFin = [this](){
-        m_redimDroite            = false;
-    };
-    m_fctRedimGaucheDebut = [this](){
-        m_redimGauche         = true;
-        m_posFenetreOrig      = getPosition();
-        m_tailleFenetreOrig   = m_taille;
-        m_posMouseOrig        = sf::Vector2f   (sf::Mouse::getPosition( *m_fenetreSFML )) ;
-    };
-    m_fctRedimGaucheFin = [this](){
-        m_redimGauche            = false;
-    };
-
-    m_fctRedimHautDebut = [this](){
-        m_redimHaut           = true;
-        m_posFenetreOrig      = getPosition();
-        m_tailleFenetreOrig   = m_taille;
-        m_posMouseOrig        = sf::Vector2f   (sf::Mouse::getPosition( *m_fenetreSFML )) ;
-    };
-    m_fctRedimHautFin = [this](){
-        m_redimHaut           = false;
-    };
-
-    m_fctRedimBasDebut = [this](){
-        m_posFenetreOrig     = getPosition();
-        m_redimBas            = true;
-        m_tailleFenetreOrig   = m_taille;
-        m_posMouseOrig        = sf::Vector2f   (sf::Mouse::getPosition( *m_fenetreSFML )) ;
-    };
-    m_fctRedimBasFin = [this](){
-        m_redimBas            = false;
+    m_fctRedimFin = [this](){
+        m_redim                 = false;
     };
 
     // liaisons evenements
 
+    m_btnRedim->lier ( Evenements::onBtnG_Press               , m_fctRedimDebut );
+    m_btnRedim->lier ( Evenements::onBtnG_Relache             , m_fctRedimFin );
+    m_btnRedim->lier ( Evenements::onBtnG_RelacheDehors       , m_fctRedimFin );
 
-    m_btnRedimDroite->lier ( Evenements::onBtnG_Press               , m_fctRedimDroiteDebut );
-    m_btnRedimDroite->lier ( Evenements::onBtnG_Relache             , m_fctRedimDroiteFin );
-    m_btnRedimDroite->lier ( Evenements::onBtnG_RelacheDehors       , m_fctRedimDroiteFin );
-
-    m_btnRedimGauche->lier ( Evenements::onBtnG_Press               , m_fctRedimGaucheDebut );
-    m_btnRedimGauche->lier ( Evenements::onBtnG_Relache             , m_fctRedimGaucheFin );
-    m_btnRedimGauche->lier ( Evenements::onBtnG_RelacheDehors       , m_fctRedimGaucheFin );
-
-    m_btnRedimBas->lier ( Evenements::onBtnG_Press                  , m_fctRedimBasDebut );
-    m_btnRedimBas->lier ( Evenements::onBtnG_Relache                , m_fctRedimBasFin );
-    m_btnRedimBas->lier ( Evenements::onBtnG_RelacheDehors          , m_fctRedimBasFin );
-
-    m_btnRedimHaut->lier ( Evenements::onBtnG_Press                  , m_fctRedimHautDebut );
-    m_btnRedimHaut->lier ( Evenements::onBtnG_Relache                , m_fctRedimHautFin );
-    m_btnRedimHaut->lier ( Evenements::onBtnG_RelacheDehors          , m_fctRedimHautFin );
 }
 
 
@@ -235,12 +234,10 @@ FenetreEncastree::initLocalSkin (){
 /////////////////////////////////////////////////
 void
 FenetreEncastree::updateStyle( ){
-
-    m_btnFermer->setSkin            ( m_skinBtn ) ;
-    m_btnRedimDroite->setSkin       ( m_skinBtn ) ;
-    m_btnRedimGauche->setSkin       ( m_skinBtn ) ;
-    m_btnRedimBas->setSkin          ( m_skinBtn ) ;
-    m_btnRedimHaut->setSkin         ( m_skinBtn ) ;
+    if (m_fermable)
+        m_btnFermer->setSkin            ( m_skinBtn ) ;
+    if (m_redimensionnable)
+        m_btnRedim->setSkin             ( m_skinBtn ) ;
 
     //// Titre ///////////////////////////////////
     m_lblTitre->setStyle            ( m_skin->fenetre );
@@ -272,8 +269,8 @@ sf::FloatRect
 FenetreEncastree::getGlobalBounds ( ) const {
     sf::FloatRect result( m_fond->getGlobalBounds() );
 
-    result.left     =  getPosAbs().x - m_bordure;
-    result.top      =  getPosAbs().y - ( m_lblTitre->getSize().y +  ( 2 * m_bordure ));
+    result.left     =  getPosAbs().x ;
+    result.top      =  getPosAbs().y;
 
     return { result };
 }
@@ -314,16 +311,55 @@ FenetreEncastree::ManipulerFenetre ( )    {
 
 
     // > Actualiser le Redim
-    if (m_redimensionnable)  {
-
+    if ( m_redim )  {
+        std::cout << "m_redim 1\n" ;
         // les mimimums
         float minY = 1;;
-        float minX = m_lblTitre->getSize().x + m_btnFermer->getSize().x + 2 * m_bordure;
+        float minX = m_lblTitre->getSize().x  + 2 * m_bordure;
 
         // la position de la souris
         sf::Vector2f  mousePos      = sf::Vector2f   ( sf::Mouse::getPosition( *m_fenetreSFML ) ) ;
         sf::Vector2f  depl_Souris   = mousePos - m_posMouseOrig;
 
+
+        std::cout << "m_redim 2\n" ;
+
+        switch ( m_cote )
+        {
+        case Gauche:
+             // la nouvelle dimension sur X = l'ancienne dimension X + le deplacement de la souris sur X.
+            m_taille.x = m_tailleFenetreOrig.x + ( depl_Souris.x );
+            if ( m_taille.x < minX ) m_taille.x = minX ;
+            break;
+
+        case Droit:
+             // la nouvelle position sur X = l'ancienne position sur X   + le deplacement de la souris sur X .
+            setPosition ( m_posFenetreOrig.x +  depl_Souris.x
+                        , m_posFenetreOrig.y);
+            // la nouvelle dimension sur X = l'ancienne dimension  sur X - le deplacement de la souris sur X .
+            m_taille.x = m_tailleFenetreOrig.x - (  depl_Souris.x     );
+            break;
+
+        case Haut:
+             // la nouvelle dimension sur Y = l'ancienne dimension Y + le deplacement de la souris sur Y.
+            m_taille.y = m_tailleFenetreOrig.y + (  depl_Souris.y     );
+            if ( m_taille.y < minY ) m_taille.y = minY ;
+            break;
+
+        case Bas:
+            // la nouvelle position sur Y = l'ancienne position sur Y   + le deplacement de la souris sur Y .
+            setPosition ( m_posFenetreOrig.x
+                        , m_posFenetreOrig.y +  depl_Souris.y ) ;
+
+            // la nouvelle dimension sur Y = l'ancienne dimension  sur Y - le deplacement de la souris sur Y .
+            m_taille.y = m_tailleFenetreOrig.y - (  depl_Souris.y     );
+            break;
+
+
+        }
+
+
+/*
         /////////////////////////////////////////////////
         if ( m_redimDroite ) {
             // la nouvelle dimension sur X = l'ancienne dimension X + le deplacement de la souris sur X.
@@ -355,7 +391,7 @@ FenetreEncastree::ManipulerFenetre ( )    {
                         , m_posFenetreOrig.y);
             // la nouvelle dimension sur X = l'ancienne dimension  sur X - le deplacement de la souris sur X .
             m_taille.x = m_tailleFenetreOrig.x - (  depl_Souris.x     );
-        }
+        }*/
 
         /////////////////////////////////////////////////
         // corrections des tailles minimum
@@ -370,16 +406,16 @@ FenetreEncastree::ManipulerFenetre ( )    {
             m_taille.y = minY ;
         }
 
-    } // fin si redimensionnable
 
 
-    /////////////////////////////////////////////////
-    // S'il y a eu manipulation on met à jour la géométrie.
-    if ( m_redimDroite   or  m_redimBas  or  m_redimGauche or  m_redimHaut) {
+        /////////////////////////////////////////////////
+        // on met à jour la géométrie.
+
         majGeom ();
         m_contenant->demanderActualisation();
-    }
 
+
+    } // fin si redimensionnable
 }
 
 
@@ -395,27 +431,18 @@ FenetreEncastree::majGeom ()    {
     //                                                                                   //
     //                HORIZ_...                                                          //
     //                                                                                   //
-    //  VERTI_...     0    1                 3     2    4                                //
-    //                |    |                 |     |    |                                //
-    //      0 ---     |----|-----------------------|----|  ---           ------          //
-    //                |Red.|      Redimension      |Red.|  m_bordure        |            //
-    //      1 ---     |----|-----------------|-----|----|  ---              |            //
-    //                |    |  Titre/drag     |Ferm.|    |  hauteurTitre     |            //
-    //                |    |-----------------|-----|    |  ---              |            //
-    //                |    |                       |    |  m_bordure        |            //
-    //      2 ---     |   0.0----------------------|    |  ---              |   taille.y //
-    //                |Red.|                       |Red.|                   |            //
-    //                |    |                       |    |                   |            //
-    //                |    |      Contenu          |    |                   |            /
-    //                |    |      ( taille )       |    |                   |            //
-    //                |    |                       |    |                   |            //
-    //      3 ---     |----|-----------------------|----|  ---              |            //
-    //                |Red.|      Redimemsion      |Red.|  m_bordure        |            //
-    //      4 ---     |----|-----------------------|----|  ---          ------           //
-    //                                                                                   //
-    //                |    |                       |    |                                //
-    //               m_bordure                    m_bordure                              //
-    //                |---------------------------------|                                //
+    //  VERTI_...     0                            1      2                              //
+    //                |                            |      |                              //
+    //      0 ---     |----------------------------|------|  ---           ------        //
+    //                |                            |      |   m_taille.y      |          //
+    //                |                            |      |        =          |          //
+    //                |                            |      |     hauteur       |          //
+    //                |                            |      |      de la        |          //
+    //                |        Contenu             |Redim.|     fenêtre       |          //
+    //                |                            |      |      SFML         |          //
+    //                |                            |      |                   |          //
+    //                |                            |      |                   |          //
+    //                |-----------------------------------|  ---            -----        //
     //                            m_taille.x                                             //
     //                                                                                   //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -443,25 +470,20 @@ FenetreEncastree::majGeom ()    {
     float verti_total = m_taille.y ;
 
     float horiz_3  = horiz_2  - hauteurTitre;*/
-
-
-    float hauteurBandeauTitre = ( hauteurTitre +  (2 * m_bordure ) );
-   // float largeurBandeauTitre = ( hauteurTitre +  (2 * m_bordure ) );
+//
+//
+//    float hauteurBandeauTitre = ( hauteurTitre +  (2 * m_bordure ) );
+//   // float largeurBandeauTitre = ( hauteurTitre +  (2 * m_bordure ) );
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-    m_grpUI->setPosition ( - m_bordure , - hauteurBandeauTitre );
-    m_grpUI->setSize ( m_taille );
+//    m_grpUI->setPosition ( - m_bordure , - hauteurBandeauTitre );
+//    m_grpUI->setSize ( m_taille );
 
     //  le fond
-    m_fond->setPosition          ( - m_bordure  , - hauteurBandeauTitre );
+    m_fond->setPosition          ( 0 ,0 );
     m_fond->setSize              ( m_taille   );
-    m_CadreContenu->setPosition  ( 0 , 0 );
-    m_CadreContenu->setSize      ( { m_taille.x - 2*m_bordure , m_taille.y - hauteurBandeauTitre - m_bordure }    );
 
-    //  le Contenu
-    m_contenant->setPosition       ( 0 , 0 );
-    m_contenant->setSize           ( m_CadreContenu->getSize() );
 //    m_grpContenu->setPosition    ( horiz_1 , verti_2 );
 
 
@@ -472,29 +494,84 @@ FenetreEncastree::majGeom ()    {
     //  les boutons redimmensionnement
     if ( m_redimensionnable ) {
 
-
         // les arretes
-        m_btnRedimGauche->setSize           ( { m_bordure                   , m_taille.y - 2* m_bordure } );
-        m_btnRedimGauche->setPosition       ( { 0                           , m_bordure                 } );
-        m_btnRedimDroite->setSize           ( { m_bordure                   , m_taille.y - 2* m_bordure } );
-        m_btnRedimDroite->setPosition       ( { m_taille.x - m_bordure      ,  m_bordure                } );
-        m_btnRedimBas->setSize              ( { m_taille.x - 2*m_bordure    , m_bordure                 } );
-        m_btnRedimBas->setPosition          ( { m_bordure                   , m_taille.y - m_bordure    } );
-        m_btnRedimHaut->setSize             ( { m_taille.x -2*m_bordure     , m_bordure                 } );
-        m_btnRedimHaut->setPosition         ( { m_bordure                   , 0                         } );
+        switch ( m_cote ){
+        case Gauche: {
+                //  le Contenu
+                m_CadreContenu->setPosition  ( 0 , 0 );
+                m_CadreContenu->setSize      ( { m_taille.x - m_bordure , m_taille.y  }    );
 
+                m_contenant->setPosition       ( 0 , 0 );
+                m_contenant->setSize           ( m_CadreContenu->getSize() );
+
+                // le bouton redim
+                m_btnRedim->setPosition       ( {  m_taille.x - m_bordure     ,  0               } );
+                m_btnRedim->setSize           ( { m_bordure                   , m_taille.y  } );
+            }break;
+
+        case Droit: {
+                //  le Contenu
+                m_CadreContenu->setPosition  ( m_bordure , 0 );
+                m_CadreContenu->setSize      ( { m_taille.x - m_bordure , m_taille.y  }    );
+
+                m_contenant->setPosition       ( m_bordure , 0 );
+                m_contenant->setSize           ( m_CadreContenu->getSize() );
+
+                // le bouton redim
+                m_btnRedim->setPosition       ( {  0   ,  0               } );
+                m_btnRedim->setSize           ( { m_bordure                   , m_taille.y  } );
+            }break;
+
+        case Haut: {
+                //  le Contenu
+                m_CadreContenu->setPosition  ( 0 , 0 );
+                m_CadreContenu->setSize      ( { m_taille.x  , m_taille.y - m_bordure }    );
+
+                m_contenant->setPosition       ( 0 , 0 );
+                m_contenant->setSize           ( m_CadreContenu->getSize() );
+
+                // le bouton redim
+                m_btnRedim->setPosition       ( {  0   , m_taille.y  - m_bordure               } );
+                m_btnRedim->setSize           ( { m_taille.x  , m_bordure  } );
+            }break;
+
+        case Bas: {
+                //  le Contenu
+                m_CadreContenu->setPosition  ( 0 , - m_bordure );
+                m_CadreContenu->setSize      ( { m_taille.x  , m_taille.y - m_bordure }    );
+
+                m_contenant->setPosition       ( 0 , - m_bordure );
+                m_contenant->setSize           ( m_CadreContenu->getSize() );
+
+                // le bouton redim
+                m_btnRedim->setPosition       ( {  0   ,  0               } );
+                m_btnRedim->setSize           ( { m_taille.x  , m_bordure  } );
+            }break;
+        }
+
+
+    } // fin if redimensionnable
+    else
+    {
+        //  le Contenu
+        m_CadreContenu->setPosition  ( 0 , 0 );
+        m_CadreContenu->setSize      ( { m_taille.x , m_taille.y  }    );
+
+        m_contenant->setPosition       ( 0 , 0 );
+        m_contenant->setSize           ( m_CadreContenu->getSize() );
     }
 
+
     //  le titre
-   // m_lblTitre->aligner ( *m_btnDrag , Alignements::Ctre_Gche );
-        m_lblTitre->setPosition ( m_bordure , m_bordure );
+    // m_lblTitre->aligner ( *m_btnDrag , Alignements::Ctre_Gche );
+    m_lblTitre->setPosition ( m_bordure , m_bordure );
 
 
 
     //  le bouton fermer
     if ( m_fermable ) {
         m_btnFermer->setSize      ( { hauteurTitre + m_bordure ,  hauteurTitre + m_bordure } );
-        m_btnFermer->setPosition  ( { m_taille.x - hauteurTitre - 2*m_bordure , m_bordure } );
+        m_btnFermer->setPosition  ( { m_taille.x - hauteurTitre - m_bordure , 0 } );
 //        m_lblFermer->aligner      ( *m_btnFermer  , Alignements::Ctre_Mili );
    //     m_lblFermer->setPosition  ( { m_lblFermer->getPosition().x , m_lblTitre->getPosition().y } );
     }
@@ -546,12 +623,13 @@ std::cout << "m_contenant->getContenuBounds().height : " << m_contenant->getCont
     ManipulerFenetre ();
 
     // > Actualiser niveau Gadget
-    Gadget::actualiser          ( deltaT );
+    Gadget::actualiser         ( deltaT );
 
     // > Actualiser le contenu de la fenetre
     m_contenant->actualiser    ( deltaT );
 
-    m_grpUI->actualiser    ( deltaT );
+    m_grpUI->actualiser        ( deltaT );
+
 }
 
 
@@ -571,7 +649,8 @@ FenetreEncastree::draw  ( sf::RenderTarget& target, sf::RenderStates states ) co
 
     target.draw      ( *m_grpUI , states );
 
-
+ //   target.draw      ( *m_btnRedim , states );
+/*
 
 //    // dessiner les éléments de l'UI de la fenetre
 //    for ( ptr enfant : m_enfants )
@@ -593,7 +672,7 @@ FenetreEncastree::draw  ( sf::RenderTarget& target, sf::RenderStates states ) co
 
     //dessiner le sprite dans la fenêtre.
   //  target.draw      ( *m_contenu , states );
-
+*/
 }
 
 
