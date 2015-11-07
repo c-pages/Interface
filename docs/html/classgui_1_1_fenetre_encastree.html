@@ -143,8 +143,8 @@ Graphe de collaboration de gui::FenetreEncastree:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:ad911dd1f44a01ece225190aa1d65587f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#ad911dd1f44a01ece225190aa1d65587f">FenetreEncastree</a> (sf::RenderWindow *fenetre, std::shared_ptr&lt; <a class="el" href="structgui_1_1_skin.html">Skin</a> &gt; skin=new <a class="el" href="structgui_1_1_skin.html">Skin</a>(), <a class="el" href="namespacegui.html#acf7d1f798b6c52f973e41fc5e7c3e82a">Encastrements</a> encastrement=Encastrements::Gauche)</td></tr>
-<tr class="separator:ad911dd1f44a01ece225190aa1d65587f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34239916742c4c51d29e49ee18fccd30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a34239916742c4c51d29e49ee18fccd30">FenetreEncastree</a> (sf::RenderWindow *fenetre, std::shared_ptr&lt; <a class="el" href="structgui_1_1_skin.html">Skin</a> &gt; skin=new <a class="el" href="structgui_1_1_skin.html">Skin</a>(), <a class="el" href="namespacegui.html#ac8d6dc8c9965242635ea24ff05ca2974">Cote</a> cote=Cote::Gauche)</td></tr>
+<tr class="separator:a34239916742c4c51d29e49ee18fccd30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a786352b6813277563195b68bb84a058b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a786352b6813277563195b68bb84a058b">~FenetreEncastree</a> ()</td></tr>
 <tr class="separator:a786352b6813277563195b68bb84a058b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc446088899c4b050fa356417263b833"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#abc446088899c4b050fa356417263b833">setSize</a> (sf::Vector2f taille)</td></tr>
@@ -299,6 +299,9 @@ Attributs privés</h2></td></tr>
 <tr class="memitem:a6ae734fb8998e36fe5ade70f02922024"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structgui_1_1_skin.html">Skin</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a6ae734fb8998e36fe5ade70f02922024">m_skinBtn</a></td></tr>
 <tr class="memdesc:a6ae734fb8998e36fe5ade70f02922024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le skin pour les boutons de la fenetre (drag, fermer, redim. ...)  <a href="#a6ae734fb8998e36fe5ade70f02922024">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6ae734fb8998e36fe5ade70f02922024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7c23589d523747c16e76005d18e7747"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegui.html#ac8d6dc8c9965242635ea24ff05ca2974">Cote</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#ad7c23589d523747c16e76005d18e7747">m_cote</a></td></tr>
+<tr class="memdesc:ad7c23589d523747c16e76005d18e7747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le coté de la fenêtre sur lequel vient s'accrocher la fenêtre.  <a href="#ad7c23589d523747c16e76005d18e7747">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad7c23589d523747c16e76005d18e7747"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c2a165694dd879d683a8061685fe8ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a8c2a165694dd879d683a8061685fe8ab">m_redimensionnable</a></td></tr>
 <tr class="memdesc:a8c2a165694dd879d683a8061685fe8ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">option: La fenetre est redimensionnable (true) ou pas (false).  <a href="#a8c2a165694dd879d683a8061685fe8ab">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8c2a165694dd879d683a8061685fe8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -314,18 +317,9 @@ Attributs privés</h2></td></tr>
 <tr class="memitem:a3ecee58252240102b58079b9230e831b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_bouton_texte.html">BoutonTexte</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a3ecee58252240102b58079b9230e831b">m_btnFermer</a></td></tr>
 <tr class="memdesc:a3ecee58252240102b58079b9230e831b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le <a class="el" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. ">Bouton</a> pour fermer la fenetre.  <a href="#a3ecee58252240102b58079b9230e831b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3ecee58252240102b58079b9230e831b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaedd485acef6d31799926dceb477efad"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_bouton.html">Bouton</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#aaedd485acef6d31799926dceb477efad">m_btnRedimGauche</a></td></tr>
-<tr class="memdesc:aaedd485acef6d31799926dceb477efad"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. ">Bouton</a> pour redimensionner la fenetre.  <a href="#aaedd485acef6d31799926dceb477efad">Plus de détails...</a><br /></td></tr>
-<tr class="separator:aaedd485acef6d31799926dceb477efad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7a99cbed875fb4364b15dc42050faf6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_bouton.html">Bouton</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#ac7a99cbed875fb4364b15dc42050faf6">m_btnRedimDroite</a></td></tr>
-<tr class="memdesc:ac7a99cbed875fb4364b15dc42050faf6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. ">Bouton</a> pour redimensionner la fenetre.  <a href="#ac7a99cbed875fb4364b15dc42050faf6">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ac7a99cbed875fb4364b15dc42050faf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad093ca1ea86ac0eb8d3ec5b351d2eedf"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_bouton.html">Bouton</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#ad093ca1ea86ac0eb8d3ec5b351d2eedf">m_btnRedimBas</a></td></tr>
-<tr class="memdesc:ad093ca1ea86ac0eb8d3ec5b351d2eedf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. ">Bouton</a> pour redimensionner la fenetre.  <a href="#ad093ca1ea86ac0eb8d3ec5b351d2eedf">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ad093ca1ea86ac0eb8d3ec5b351d2eedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2651869745cfcabb607a83896254c678"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_bouton.html">Bouton</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a2651869745cfcabb607a83896254c678">m_btnRedimHaut</a></td></tr>
-<tr class="memdesc:a2651869745cfcabb607a83896254c678"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. ">Bouton</a> pour redimensionner la fenetre.  <a href="#a2651869745cfcabb607a83896254c678">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a2651869745cfcabb607a83896254c678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ecac17501195712b60d0de39d2ab99d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_bouton.html">Bouton</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a8ecac17501195712b60d0de39d2ab99d">m_btnRedim</a></td></tr>
+<tr class="memdesc:a8ecac17501195712b60d0de39d2ab99d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. ">Bouton</a> pour redimensionner la fenetre.  <a href="#a8ecac17501195712b60d0de39d2ab99d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8ecac17501195712b60d0de39d2ab99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35811d4391d7fd206bec78973a034d3c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a35811d4391d7fd206bec78973a034d3c">m_CadreContenu</a></td></tr>
 <tr class="memdesc:a35811d4391d7fd206bec78973a034d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dessine un cadre autour du contenant.  <a href="#a35811d4391d7fd206bec78973a034d3c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a35811d4391d7fd206bec78973a034d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -335,18 +329,9 @@ Attributs privés</h2></td></tr>
 <tr class="memitem:a676f5a4e0e57d111ce8a40c7159b90e8"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgui_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a676f5a4e0e57d111ce8a40c7159b90e8">m_fond</a></td></tr>
 <tr class="memdesc:a676f5a4e0e57d111ce8a40c7159b90e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le rectangle du fond.  <a href="#a676f5a4e0e57d111ce8a40c7159b90e8">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a676f5a4e0e57d111ce8a40c7159b90e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fff6afa36c2e7d62e8b6d6f420b39fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a5fff6afa36c2e7d62e8b6d6f420b39fa">m_redimDroite</a></td></tr>
-<tr class="memdesc:a5fff6afa36c2e7d62e8b6d6f420b39fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">En train de redim ?.  <a href="#a5fff6afa36c2e7d62e8b6d6f420b39fa">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a5fff6afa36c2e7d62e8b6d6f420b39fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f3b50f6eb7a1372467a7efb24d9dd8a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a2f3b50f6eb7a1372467a7efb24d9dd8a">m_redimGauche</a></td></tr>
-<tr class="memdesc:a2f3b50f6eb7a1372467a7efb24d9dd8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">En train de redim ?.  <a href="#a2f3b50f6eb7a1372467a7efb24d9dd8a">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a2f3b50f6eb7a1372467a7efb24d9dd8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73461d7c54833a7b63fa9f8c2cc29b38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a73461d7c54833a7b63fa9f8c2cc29b38">m_redimBas</a></td></tr>
-<tr class="memdesc:a73461d7c54833a7b63fa9f8c2cc29b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">En train de redim ?.  <a href="#a73461d7c54833a7b63fa9f8c2cc29b38">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a73461d7c54833a7b63fa9f8c2cc29b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac78849db8015cf055b8ef7b627deb286"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#ac78849db8015cf055b8ef7b627deb286">m_redimHaut</a></td></tr>
-<tr class="memdesc:ac78849db8015cf055b8ef7b627deb286"><td class="mdescLeft">&#160;</td><td class="mdescRight">En train de redim ?.  <a href="#ac78849db8015cf055b8ef7b627deb286">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ac78849db8015cf055b8ef7b627deb286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88830773a0ad93e8737c4ff0b4f4c48c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a88830773a0ad93e8737c4ff0b4f4c48c">m_redim</a></td></tr>
+<tr class="memdesc:a88830773a0ad93e8737c4ff0b4f4c48c"><td class="mdescLeft">&#160;</td><td class="mdescRight">En train de redim ?.  <a href="#a88830773a0ad93e8737c4ff0b4f4c48c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a88830773a0ad93e8737c4ff0b4f4c48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5f02af9c2a2878654e02538e3d431a1"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#aa5f02af9c2a2878654e02538e3d431a1">m_posFenetreOrig</a></td></tr>
 <tr class="memdesc:aa5f02af9c2a2878654e02538e3d431a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">position de la fenetre à l'origine du drag.  <a href="#aa5f02af9c2a2878654e02538e3d431a1">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa5f02af9c2a2878654e02538e3d431a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -365,30 +350,12 @@ Attributs privés</h2></td></tr>
 <tr class="memitem:a211623a490458b62aed14f4eb8294def"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a211623a490458b62aed14f4eb8294def">m_fctFermerSort</a></td></tr>
 <tr class="memdesc:a211623a490458b62aed14f4eb8294def"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction pour manipuler la fenetre.  <a href="#a211623a490458b62aed14f4eb8294def">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a211623a490458b62aed14f4eb8294def"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a8eb5e25434f14fbcf65d1dba4d6f2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a0a8eb5e25434f14fbcf65d1dba4d6f2b">m_fctRedimDroiteDebut</a></td></tr>
-<tr class="memdesc:a0a8eb5e25434f14fbcf65d1dba4d6f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction pour manipuler la fenetre.  <a href="#a0a8eb5e25434f14fbcf65d1dba4d6f2b">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a0a8eb5e25434f14fbcf65d1dba4d6f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76c779a4a856cbef9d01fe2b24829c86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a76c779a4a856cbef9d01fe2b24829c86">m_fctRedimDroiteFin</a></td></tr>
-<tr class="memdesc:a76c779a4a856cbef9d01fe2b24829c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction pour manipuler la fenetre.  <a href="#a76c779a4a856cbef9d01fe2b24829c86">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a76c779a4a856cbef9d01fe2b24829c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5a0efbb616c0f1099b254eeb5969f68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#af5a0efbb616c0f1099b254eeb5969f68">m_fctRedimGaucheDebut</a></td></tr>
-<tr class="memdesc:af5a0efbb616c0f1099b254eeb5969f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction pour manipuler la fenetre.  <a href="#af5a0efbb616c0f1099b254eeb5969f68">Plus de détails...</a><br /></td></tr>
-<tr class="separator:af5a0efbb616c0f1099b254eeb5969f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c27d3ea2eea540ccd2a525fdb1219bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a3c27d3ea2eea540ccd2a525fdb1219bc">m_fctRedimGaucheFin</a></td></tr>
-<tr class="memdesc:a3c27d3ea2eea540ccd2a525fdb1219bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction pour manipuler la fenetre.  <a href="#a3c27d3ea2eea540ccd2a525fdb1219bc">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a3c27d3ea2eea540ccd2a525fdb1219bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd10266add56d450c78111ddaee98ede"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#afd10266add56d450c78111ddaee98ede">m_fctRedimBasDebut</a></td></tr>
-<tr class="memdesc:afd10266add56d450c78111ddaee98ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction pour manipuler la fenetre.  <a href="#afd10266add56d450c78111ddaee98ede">Plus de détails...</a><br /></td></tr>
-<tr class="separator:afd10266add56d450c78111ddaee98ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31c6ca659d05324a5ee524d9ff943214"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#a31c6ca659d05324a5ee524d9ff943214">m_fctRedimBasFin</a></td></tr>
-<tr class="memdesc:a31c6ca659d05324a5ee524d9ff943214"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction pour manipuler la fenetre.  <a href="#a31c6ca659d05324a5ee524d9ff943214">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a31c6ca659d05324a5ee524d9ff943214"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6ff632f20796fa1b5b71483601b7d94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#ae6ff632f20796fa1b5b71483601b7d94">m_fctRedimHautDebut</a></td></tr>
-<tr class="memdesc:ae6ff632f20796fa1b5b71483601b7d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction pour manipuler la fenetre.  <a href="#ae6ff632f20796fa1b5b71483601b7d94">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ae6ff632f20796fa1b5b71483601b7d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae457cb87420545af778969dcff4caf30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#ae457cb87420545af778969dcff4caf30">m_fctRedimHautFin</a></td></tr>
-<tr class="memdesc:ae457cb87420545af778969dcff4caf30"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction pour manipuler la fenetre.  <a href="#ae457cb87420545af778969dcff4caf30">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ae457cb87420545af778969dcff4caf30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8617cbcdb4fe5a48e8ea90e4a64a721"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#ab8617cbcdb4fe5a48e8ea90e4a64a721">m_fctRedimDebut</a></td></tr>
+<tr class="memdesc:ab8617cbcdb4fe5a48e8ea90e4a64a721"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction pour manipuler la fenetre.  <a href="#ab8617cbcdb4fe5a48e8ea90e4a64a721">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab8617cbcdb4fe5a48e8ea90e4a64a721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ff124b5d2139eae433ea60af35ff81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_fenetre_encastree.html#ad7ff124b5d2139eae433ea60af35ff81">m_fctRedimFin</a></td></tr>
+<tr class="memdesc:ad7ff124b5d2139eae433ea60af35ff81"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction pour manipuler la fenetre.  <a href="#ad7ff124b5d2139eae433ea60af35ff81">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad7ff124b5d2139eae433ea60af35ff81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Membres hérités additionnels</h2></td></tr>
@@ -458,7 +425,7 @@ Membres hérités additionnels</h2></td></tr>
 <p>Avec une possibilité de redimensionner la fenetre sur le coté libre.</p>
 <p>exemple : </p><div class="fragment"></div><!-- fragment --> <dl class="section see"><dt>Voir également</dt><dd></dd></dl>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a class="anchor" id="ad911dd1f44a01ece225190aa1d65587f"></a>
+<a class="anchor" id="a34239916742c4c51d29e49ee18fccd30"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -477,8 +444,8 @@ Membres hérités additionnels</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacegui.html#acf7d1f798b6c52f973e41fc5e7c3e82a">Encastrements</a>&#160;</td>
-          <td class="paramname"><em>encastrement</em> = <code>Encastrements::Gauche</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacegui.html#ac8d6dc8c9965242635ea24ff05ca2974">Cote</a>&#160;</td>
+          <td class="paramname"><em>cote</em> = <code>Cote::Gauche</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -487,6 +454,24 @@ Membres hérités additionnels</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_fenetre_encastree_a34239916742c4c51d29e49ee18fccd30_cgraph.png" border="0" usemap="#classgui_1_1_fenetre_encastree_a34239916742c4c51d29e49ee18fccd30_cgraph" alt=""/></div>
+<map name="classgui_1_1_fenetre_encastree_a34239916742c4c51d29e49ee18fccd30_cgraph" id="classgui_1_1_fenetre_encastree_a34239916742c4c51d29e49ee18fccd30_cgraph">
+<area shape="rect" id="node2" href="classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="204,181,355,223"/>
+<area shape="rect" id="node10" href="classgui_1_1_fenetre_encastree.html#a8d15942e9ed1b02c11667c3d5c2ed7a4" title="Definir le skin. " alt="" coords="204,305,355,347"/>
+<area shape="rect" id="node3" href="classgui_1_1_fenetre_encastree.html#aaa900b28f22ddaf34dbc346439a9eb76" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="403,5,553,47"/>
+<area shape="rect" id="node5" href="classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="601,67,756,94"/>
+<area shape="rect" id="node6" href="classgui_1_1_fenetre_encastree.html#a595c4da7de253a053dbe5a5cbf8eaa8c" title="Initialiser l&#39;interface pour les bouton de redimensionnements. " alt="" coords="403,123,553,164"/>
+<area shape="rect" id="node7" href="classgui_1_1_fenetre_encastree.html#a0be22b8ade05580a4374122255796c5d" title="Initialiser le Skin des bouton de l&#39;interface. " alt="" coords="403,305,553,347"/>
+<area shape="rect" id="node8" href="classgui_1_1_fenetre_encastree.html#a4a86e93d7b596eed4cf174290acbae0d" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="603,240,754,281"/>
+<area shape="rect" id="node9" href="classgui_1_1_fenetre_encastree.html#a8b335aec20648b67a6d16ce38c5c22f8" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="403,240,553,281"/>
+<area shape="rect" id="node4" href="classgui_1_1_gadget.html#adf55e6760cf3d4ef586ce87c07cfae7c" title="Demander la suppression de ce gadget. " alt="" coords="601,13,756,39"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -834,7 +819,8 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="center"><img src="classgui_1_1_fenetre_encastree_a0be22b8ade05580a4374122255796c5d_icgraph.png" border="0" usemap="#classgui_1_1_fenetre_encastree_a0be22b8ade05580a4374122255796c5d_icgraph" alt=""/></div>
 <map name="classgui_1_1_fenetre_encastree_a0be22b8ade05580a4374122255796c5d_icgraph" id="classgui_1_1_fenetre_encastree_a0be22b8ade05580a4374122255796c5d_icgraph">
 <area shape="rect" id="node2" href="classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="204,5,355,47"/>
-<area shape="rect" id="node3" href="classgui_1_1_fenetre_encastree.html#a8d15942e9ed1b02c11667c3d5c2ed7a4" title="Definir le skin. " alt="" coords="204,71,355,112"/>
+<area shape="rect" id="node4" href="classgui_1_1_fenetre_encastree.html#a8d15942e9ed1b02c11667c3d5c2ed7a4" title="Definir le skin. " alt="" coords="204,71,355,112"/>
+<area shape="rect" id="node3" href="classgui_1_1_fenetre_encastree.html#a34239916742c4c51d29e49ee18fccd30" title="gui::FenetreEncastree\l::FenetreEncastree" alt="" coords="403,39,553,80"/>
 </map>
 </div>
 </p>
@@ -869,14 +855,23 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_fenetre_encastree_a1f8d587d23c5aebe457f828575279a31_cgraph.png" border="0" usemap="#classgui_1_1_fenetre_encastree_a1f8d587d23c5aebe457f828575279a31_cgraph" alt=""/></div>
 <map name="classgui_1_1_fenetre_encastree_a1f8d587d23c5aebe457f828575279a31_cgraph" id="classgui_1_1_fenetre_encastree_a1f8d587d23c5aebe457f828575279a31_cgraph">
-<area shape="rect" id="node2" href="classgui_1_1_fenetre_encastree.html#a0be22b8ade05580a4374122255796c5d" title="Initialiser le Skin des bouton de l&#39;interface. " alt="" coords="204,5,355,47"/>
-<area shape="rect" id="node3" href="classgui_1_1_fenetre_encastree.html#a4a86e93d7b596eed4cf174290acbae0d" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="405,159,555,200"/>
-<area shape="rect" id="node4" href="classgui_1_1_fenetre_encastree.html#a79114afc27d0e3a31a2d0ca09889d2d9" title="Initialiser l&#39;interface pour prendre en compte le drag. " alt="" coords="204,123,355,164"/>
-<area shape="rect" id="node5" href="classgui_1_1_fenetre_encastree.html#a595c4da7de253a053dbe5a5cbf8eaa8c" title="Initialiser l&#39;interface pour les bouton de redimensionnements. " alt="" coords="204,188,355,229"/>
-<area shape="rect" id="node6" href="classgui_1_1_fenetre_encastree.html#aaa900b28f22ddaf34dbc346439a9eb76" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="204,319,355,360"/>
-<area shape="rect" id="node8" href="classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="403,381,557,407"/>
-<area shape="rect" id="node9" href="classgui_1_1_fenetre_encastree.html#a8b335aec20648b67a6d16ce38c5c22f8" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="204,253,355,295"/>
-<area shape="rect" id="node7" href="classgui_1_1_gadget.html#adf55e6760cf3d4ef586ce87c07cfae7c" title="Demander la suppression de ce gadget. " alt="" coords="403,326,557,353"/>
+<area shape="rect" id="node2" href="classgui_1_1_fenetre_encastree.html#aaa900b28f22ddaf34dbc346439a9eb76" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="204,5,355,47"/>
+<area shape="rect" id="node4" href="classgui_1_1_action.html#aa7481b3efcebd774ad68bf1a4308041a" title="Déclencher la fonction associé à l&#39;évenement. " alt="" coords="403,67,557,94"/>
+<area shape="rect" id="node5" href="classgui_1_1_fenetre_encastree.html#a595c4da7de253a053dbe5a5cbf8eaa8c" title="Initialiser l&#39;interface pour les bouton de redimensionnements. " alt="" coords="204,123,355,164"/>
+<area shape="rect" id="node6" href="classgui_1_1_fenetre_encastree.html#a0be22b8ade05580a4374122255796c5d" title="Initialiser le Skin des bouton de l&#39;interface. " alt="" coords="204,188,355,229"/>
+<area shape="rect" id="node7" href="classgui_1_1_fenetre_encastree.html#a4a86e93d7b596eed4cf174290acbae0d" title="mais à jour les styles des éléments de la fenêtre. " alt="" coords="405,276,555,317"/>
+<area shape="rect" id="node8" href="classgui_1_1_fenetre_encastree.html#a8b335aec20648b67a6d16ce38c5c22f8" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="204,305,355,347"/>
+<area shape="rect" id="node3" href="classgui_1_1_gadget.html#adf55e6760cf3d4ef586ce87c07cfae7c" title="Demander la suppression de ce gadget. " alt="" coords="403,13,557,39"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_fenetre_encastree_a1f8d587d23c5aebe457f828575279a31_icgraph.png" border="0" usemap="#classgui_1_1_fenetre_encastree_a1f8d587d23c5aebe457f828575279a31_icgraph" alt=""/></div>
+<map name="classgui_1_1_fenetre_encastree_a1f8d587d23c5aebe457f828575279a31_icgraph" id="classgui_1_1_fenetre_encastree_a1f8d587d23c5aebe457f828575279a31_icgraph">
+<area shape="rect" id="node2" href="classgui_1_1_fenetre_encastree.html#a34239916742c4c51d29e49ee18fccd30" title="gui::FenetreEncastree\l::FenetreEncastree" alt="" coords="204,5,355,47"/>
 </map>
 </div>
 </p>
@@ -905,16 +900,6 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div><div class="memdoc">
 
 <p>Initialiser l'interface pour prendre en compte le drag. </p>
-
-<p><div class="dynheader">
-Voici le graphe des appelants de cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="classgui_1_1_fenetre_encastree_a79114afc27d0e3a31a2d0ca09889d2d9_icgraph.png" border="0" usemap="#classgui_1_1_fenetre_encastree_a79114afc27d0e3a31a2d0ca09889d2d9_icgraph" alt=""/></div>
-<map name="classgui_1_1_fenetre_encastree_a79114afc27d0e3a31a2d0ca09889d2d9_icgraph" id="classgui_1_1_fenetre_encastree_a79114afc27d0e3a31a2d0ca09889d2d9_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="204,5,355,47"/>
-</map>
-</div>
-</p>
 
 </div>
 </div>
@@ -958,6 +943,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="center"><img src="classgui_1_1_fenetre_encastree_aaa900b28f22ddaf34dbc346439a9eb76_icgraph.png" border="0" usemap="#classgui_1_1_fenetre_encastree_aaa900b28f22ddaf34dbc346439a9eb76_icgraph" alt=""/></div>
 <map name="classgui_1_1_fenetre_encastree_aaa900b28f22ddaf34dbc346439a9eb76_icgraph" id="classgui_1_1_fenetre_encastree_aaa900b28f22ddaf34dbc346439a9eb76_icgraph">
 <area shape="rect" id="node2" href="classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="204,5,355,47"/>
+<area shape="rect" id="node3" href="classgui_1_1_fenetre_encastree.html#a34239916742c4c51d29e49ee18fccd30" title="gui::FenetreEncastree\l::FenetreEncastree" alt="" coords="403,5,553,47"/>
 </map>
 </div>
 </p>
@@ -993,6 +979,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="center"><img src="classgui_1_1_fenetre_encastree_a595c4da7de253a053dbe5a5cbf8eaa8c_icgraph.png" border="0" usemap="#classgui_1_1_fenetre_encastree_a595c4da7de253a053dbe5a5cbf8eaa8c_icgraph" alt=""/></div>
 <map name="classgui_1_1_fenetre_encastree_a595c4da7de253a053dbe5a5cbf8eaa8c_icgraph" id="classgui_1_1_fenetre_encastree_a595c4da7de253a053dbe5a5cbf8eaa8c_icgraph">
 <area shape="rect" id="node2" href="classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="204,5,355,47"/>
+<area shape="rect" id="node3" href="classgui_1_1_fenetre_encastree.html#a34239916742c4c51d29e49ee18fccd30" title="gui::FenetreEncastree\l::FenetreEncastree" alt="" coords="403,5,553,47"/>
 </map>
 </div>
 </p>
@@ -1067,10 +1054,11 @@ Voici le graphe des appelants de cette fonction :</div>
 <area shape="rect" id="node2" href="classgui_1_1_fenetre_encastree.html#abc446088899c4b050fa356417263b833" title="Definir la taille du contenu. " alt="" coords="204,5,355,47"/>
 <area shape="rect" id="node3" href="classgui_1_1_fenetre_encastree.html#a32a4bbbcb40d7431ae4430111eea0c1c" title="Definir l&#39;epaisseur de la bordure. " alt="" coords="204,71,355,112"/>
 <area shape="rect" id="node4" href="classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="204,136,355,177"/>
-<area shape="rect" id="node5" href="classgui_1_1_fenetre_encastree.html#a333b5c576ba59e954a4f45e5bce1527a" title="Definir le titre. " alt="" coords="204,201,355,243"/>
-<area shape="rect" id="node6" href="classgui_1_1_fenetre_encastree.html#a4916b12a5969c92d4843fe9686304728" title="ajouter un enfant " alt="" coords="204,267,355,308"/>
-<area shape="rect" id="node7" href="classgui_1_1_fenetre_encastree.html#a155900dc25e6be7e140e7f3fd464d6ac" title="les manipulation de drag et de redimensionnement. " alt="" coords="204,332,355,373"/>
-<area shape="rect" id="node8" href="classgui_1_1_fenetre_encastree.html#ac3b1cd1b96e9582dd37ac69f9e3957fd" title="Actualiser les éléments. " alt="" coords="403,332,553,373"/>
+<area shape="rect" id="node6" href="classgui_1_1_fenetre_encastree.html#a333b5c576ba59e954a4f45e5bce1527a" title="Definir le titre. " alt="" coords="204,201,355,243"/>
+<area shape="rect" id="node7" href="classgui_1_1_fenetre_encastree.html#a4916b12a5969c92d4843fe9686304728" title="ajouter un enfant " alt="" coords="204,267,355,308"/>
+<area shape="rect" id="node8" href="classgui_1_1_fenetre_encastree.html#a155900dc25e6be7e140e7f3fd464d6ac" title="les manipulation de drag et de redimensionnement. " alt="" coords="204,332,355,373"/>
+<area shape="rect" id="node5" href="classgui_1_1_fenetre_encastree.html#a34239916742c4c51d29e49ee18fccd30" title="gui::FenetreEncastree\l::FenetreEncastree" alt="" coords="403,136,553,177"/>
+<area shape="rect" id="node9" href="classgui_1_1_fenetre_encastree.html#ac3b1cd1b96e9582dd37ac69f9e3957fd" title="Actualiser les éléments. " alt="" coords="403,332,553,373"/>
 </map>
 </div>
 </p>
@@ -1255,6 +1243,16 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div>
 </p>
 
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classgui_1_1_fenetre_encastree_a8d15942e9ed1b02c11667c3d5c2ed7a4_icgraph.png" border="0" usemap="#classgui_1_1_fenetre_encastree_a8d15942e9ed1b02c11667c3d5c2ed7a4_icgraph" alt=""/></div>
+<map name="classgui_1_1_fenetre_encastree_a8d15942e9ed1b02c11667c3d5c2ed7a4_icgraph" id="classgui_1_1_fenetre_encastree_a8d15942e9ed1b02c11667c3d5c2ed7a4_icgraph">
+<area shape="rect" id="node2" href="classgui_1_1_fenetre_encastree.html#a34239916742c4c51d29e49ee18fccd30" title="gui::FenetreEncastree\l::FenetreEncastree" alt="" coords="204,5,355,47"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a333b5c576ba59e954a4f45e5bce1527a"></a>
@@ -1324,10 +1322,10 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_fenetre_encastree_af6b98196b14c8bca61001b37cd4dee38_cgraph.png" border="0" usemap="#classgui_1_1_fenetre_encastree_af6b98196b14c8bca61001b37cd4dee38_cgraph" alt=""/></div>
 <map name="classgui_1_1_fenetre_encastree_af6b98196b14c8bca61001b37cd4dee38_cgraph" id="classgui_1_1_fenetre_encastree_af6b98196b14c8bca61001b37cd4dee38_cgraph">
-<area shape="rect" id="node2" href="classgui_1_1_action.html#a7c0cd2dd198d840342cbd6b0ac193a02" title="La gestion des évènements utilisateurs. " alt="" coords="207,5,332,47"/>
-<area shape="rect" id="node3" href="classgui_1_1_gadget.html#a510ae68144997724188d2bb902c3103d" title="La gestion des évènements utilisateurs. " alt="" coords="204,71,335,112"/>
-<area shape="rect" id="node4" href="classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="Accesseur état du Gadget. " alt="" coords="383,53,537,79"/>
-<area shape="rect" id="node5" href="classgui_1_1_gadget.html#a5442078caf792fe005dac499f8295e45" title="Accesseur état du Gadget. " alt="" coords="389,103,531,130"/>
+<area shape="rect" id="node2" href="classgui_1_1_action.html#a7c0cd2dd198d840342cbd6b0ac193a02" title="La gestion des évènements utilisateurs. " alt="" coords="397,5,523,47"/>
+<area shape="rect" id="node3" href="classgui_1_1_gadget.html#a510ae68144997724188d2bb902c3103d" title="La gestion des évènements utilisateurs. " alt="" coords="204,64,335,105"/>
+<area shape="rect" id="node4" href="classgui_1_1_gadget.html#af14fdc740572064ff3faf2a9dd8486fd" title="Accesseur état du Gadget. " alt="" coords="383,71,537,98"/>
+<area shape="rect" id="node5" href="classgui_1_1_gadget.html#a5442078caf792fe005dac499f8295e45" title="Accesseur état du Gadget. " alt="" coords="389,122,531,149"/>
 </map>
 </div>
 </p>
@@ -1362,15 +1360,16 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classgui_1_1_fenetre_encastree_a4a86e93d7b596eed4cf174290acbae0d_icgraph.png" border="0" usemap="#classgui_1_1_fenetre_encastree_a4a86e93d7b596eed4cf174290acbae0d_icgraph" alt=""/></div>
 <map name="classgui_1_1_fenetre_encastree_a4a86e93d7b596eed4cf174290acbae0d_icgraph" id="classgui_1_1_fenetre_encastree_a4a86e93d7b596eed4cf174290acbae0d_icgraph">
-<area shape="rect" id="node2" href="classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="403,5,553,47"/>
-<area shape="rect" id="node3" href="classgui_1_1_fenetre_encastree.html#a8d15942e9ed1b02c11667c3d5c2ed7a4" title="Definir le skin. " alt="" coords="204,68,355,109"/>
-<area shape="rect" id="node4" href="classgui_1_1_fenetre_encastree.html#a8b335aec20648b67a6d16ce38c5c22f8" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="204,136,355,177"/>
-<area shape="rect" id="node5" href="classgui_1_1_fenetre_encastree.html#abc446088899c4b050fa356417263b833" title="Definir la taille du contenu. " alt="" coords="403,71,553,112"/>
-<area shape="rect" id="node6" href="classgui_1_1_fenetre_encastree.html#a32a4bbbcb40d7431ae4430111eea0c1c" title="Definir l&#39;epaisseur de la bordure. " alt="" coords="403,136,553,177"/>
-<area shape="rect" id="node7" href="classgui_1_1_fenetre_encastree.html#a333b5c576ba59e954a4f45e5bce1527a" title="Definir le titre. " alt="" coords="403,201,553,243"/>
-<area shape="rect" id="node8" href="classgui_1_1_fenetre_encastree.html#a4916b12a5969c92d4843fe9686304728" title="ajouter un enfant " alt="" coords="403,267,553,308"/>
-<area shape="rect" id="node9" href="classgui_1_1_fenetre_encastree.html#a155900dc25e6be7e140e7f3fd464d6ac" title="les manipulation de drag et de redimensionnement. " alt="" coords="403,332,553,373"/>
-<area shape="rect" id="node10" href="classgui_1_1_fenetre_encastree.html#ac3b1cd1b96e9582dd37ac69f9e3957fd" title="Actualiser les éléments. " alt="" coords="601,332,752,373"/>
+<area shape="rect" id="node2" href="classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="403,64,553,105"/>
+<area shape="rect" id="node4" href="classgui_1_1_fenetre_encastree.html#a8d15942e9ed1b02c11667c3d5c2ed7a4" title="Definir le skin. " alt="" coords="204,5,355,47"/>
+<area shape="rect" id="node5" href="classgui_1_1_fenetre_encastree.html#a8b335aec20648b67a6d16ce38c5c22f8" title="Mettre à jour les gémotries de la fenêtre. " alt="" coords="204,195,355,236"/>
+<area shape="rect" id="node3" href="classgui_1_1_fenetre_encastree.html#a34239916742c4c51d29e49ee18fccd30" title="gui::FenetreEncastree\l::FenetreEncastree" alt="" coords="601,35,752,76"/>
+<area shape="rect" id="node6" href="classgui_1_1_fenetre_encastree.html#abc446088899c4b050fa356417263b833" title="Definir la taille du contenu. " alt="" coords="403,260,553,301"/>
+<area shape="rect" id="node7" href="classgui_1_1_fenetre_encastree.html#a32a4bbbcb40d7431ae4430111eea0c1c" title="Definir l&#39;epaisseur de la bordure. " alt="" coords="403,325,553,367"/>
+<area shape="rect" id="node8" href="classgui_1_1_fenetre_encastree.html#a333b5c576ba59e954a4f45e5bce1527a" title="Definir le titre. " alt="" coords="403,391,553,432"/>
+<area shape="rect" id="node9" href="classgui_1_1_fenetre_encastree.html#a4916b12a5969c92d4843fe9686304728" title="ajouter un enfant " alt="" coords="403,129,553,171"/>
+<area shape="rect" id="node10" href="classgui_1_1_fenetre_encastree.html#a155900dc25e6be7e140e7f3fd464d6ac" title="les manipulation de drag et de redimensionnement. " alt="" coords="403,195,553,236"/>
+<area shape="rect" id="node11" href="classgui_1_1_fenetre_encastree.html#ac3b1cd1b96e9582dd37ac69f9e3957fd" title="Actualiser les éléments. " alt="" coords="601,195,752,236"/>
 </map>
 </div>
 </p>
@@ -1422,7 +1421,7 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
-<a class="anchor" id="ad093ca1ea86ac0eb8d3ec5b351d2eedf"></a>
+<a class="anchor" id="a8ecac17501195712b60d0de39d2ab99d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1430,73 +1429,7 @@ Voici le graphe des appelants de cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classgui_1_1_bouton.html">Bouton</a>&gt; gui::FenetreEncastree::m_btnRedimBas</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. ">Bouton</a> pour redimensionner la fenetre. </p>
-
-</div>
-</div>
-<a class="anchor" id="ac7a99cbed875fb4364b15dc42050faf6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classgui_1_1_bouton.html">Bouton</a>&gt; gui::FenetreEncastree::m_btnRedimDroite</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. ">Bouton</a> pour redimensionner la fenetre. </p>
-
-</div>
-</div>
-<a class="anchor" id="aaedd485acef6d31799926dceb477efad"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classgui_1_1_bouton.html">Bouton</a>&gt; gui::FenetreEncastree::m_btnRedimGauche</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classgui_1_1_bouton.html" title="Gadget, simple bouton rectangulaire. ">Bouton</a> pour redimensionner la fenetre. </p>
-
-</div>
-</div>
-<a class="anchor" id="a2651869745cfcabb607a83896254c678"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classgui_1_1_bouton.html">Bouton</a>&gt; gui::FenetreEncastree::m_btnRedimHaut</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classgui_1_1_bouton.html">Bouton</a>&gt; gui::FenetreEncastree::m_btnRedim</td>
         </tr>
       </table>
   </td>
@@ -1551,6 +1484,28 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><div class="memdoc">
 
 <p>Le contenant qui affiche le contenu de la fenetre. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad7c23589d523747c16e76005d18e7747"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacegui.html#ac8d6dc8c9965242635ea24ff05ca2974">Cote</a> gui::FenetreEncastree::m_cote</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Le coté de la fenêtre sur lequel vient s'accrocher la fenêtre. </p>
 
 </div>
 </div>
@@ -1620,7 +1575,7 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
-<a class="anchor" id="afd10266add56d450c78111ddaee98ede"></a>
+<a class="anchor" id="ab8617cbcdb4fe5a48e8ea90e4a64a721"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1628,7 +1583,7 @@ Voici le graphe des appelants de cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> gui::FenetreEncastree::m_fctRedimBasDebut</td>
+          <td class="memname"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> gui::FenetreEncastree::m_fctRedimDebut</td>
         </tr>
       </table>
   </td>
@@ -1642,7 +1597,7 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
-<a class="anchor" id="a31c6ca659d05324a5ee524d9ff943214"></a>
+<a class="anchor" id="ad7ff124b5d2139eae433ea60af35ff81"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1650,139 +1605,7 @@ Voici le graphe des appelants de cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> gui::FenetreEncastree::m_fctRedimBasFin</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>fonction pour manipuler la fenetre. </p>
-
-</div>
-</div>
-<a class="anchor" id="a0a8eb5e25434f14fbcf65d1dba4d6f2b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> gui::FenetreEncastree::m_fctRedimDroiteDebut</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>fonction pour manipuler la fenetre. </p>
-
-</div>
-</div>
-<a class="anchor" id="a76c779a4a856cbef9d01fe2b24829c86"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> gui::FenetreEncastree::m_fctRedimDroiteFin</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>fonction pour manipuler la fenetre. </p>
-
-</div>
-</div>
-<a class="anchor" id="af5a0efbb616c0f1099b254eeb5969f68"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> gui::FenetreEncastree::m_fctRedimGaucheDebut</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>fonction pour manipuler la fenetre. </p>
-
-</div>
-</div>
-<a class="anchor" id="a3c27d3ea2eea540ccd2a525fdb1219bc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> gui::FenetreEncastree::m_fctRedimGaucheFin</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>fonction pour manipuler la fenetre. </p>
-
-</div>
-</div>
-<a class="anchor" id="ae6ff632f20796fa1b5b71483601b7d94"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> gui::FenetreEncastree::m_fctRedimHautDebut</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>fonction pour manipuler la fenetre. </p>
-
-</div>
-</div>
-<a class="anchor" id="ae457cb87420545af778969dcff4caf30"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> gui::FenetreEncastree::m_fctRedimHautFin</td>
+          <td class="memname"><a class="el" href="classgui_1_1_action.html#a4223568d083f940e94c80829f63ae817">FuncType</a> gui::FenetreEncastree::m_fctRedimFin</td>
         </tr>
       </table>
   </td>
@@ -1950,7 +1773,7 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
-<a class="anchor" id="a73461d7c54833a7b63fa9f8c2cc29b38"></a>
+<a class="anchor" id="a88830773a0ad93e8737c4ff0b4f4c48c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1958,29 +1781,7 @@ Voici le graphe des appelants de cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool gui::FenetreEncastree::m_redimBas</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>En train de redim ?. </p>
-
-</div>
-</div>
-<a class="anchor" id="a5fff6afa36c2e7d62e8b6d6f420b39fa"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool gui::FenetreEncastree::m_redimDroite</td>
+          <td class="memname">bool gui::FenetreEncastree::m_redim</td>
         </tr>
       </table>
   </td>
@@ -2013,50 +1814,6 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><div class="memdoc">
 
 <p>option: La fenetre est redimensionnable (true) ou pas (false). </p>
-
-</div>
-</div>
-<a class="anchor" id="a2f3b50f6eb7a1372467a7efb24d9dd8a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool gui::FenetreEncastree::m_redimGauche</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>En train de redim ?. </p>
-
-</div>
-</div>
-<a class="anchor" id="ac78849db8015cf055b8ef7b627deb286"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool gui::FenetreEncastree::m_redimHaut</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>En train de redim ?. </p>
 
 </div>
 </div>

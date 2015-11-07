@@ -1,7 +1,9 @@
 <map id="Interface/src/gadgets/BoutonFleche.cpp" name="Interface/src/gadgets/BoutonFleche.cpp">
-<area shape="rect" id="node2" href="$_bouton_fleche_8h.html" title="BoutonFleche.h" alt="" coords="365,95,478,121"/>
-<area shape="rect" id="node3" href="$_gadget_8h.html" title="Gadget.h" alt="" coords="384,169,459,196"/>
-<area shape="rect" id="node8" href="$_action_8h.html" title="Action.h" alt="" coords="207,244,278,271"/>
-<area shape="rect" id="node13" href="$_skin_8h.html" title="Skin.h" alt="" coords="433,244,492,271"/>
-<area shape="rect" id="node14" href="$_style_8h.html" title="Style.h" alt="" coords="426,319,489,345"/>
+<area shape="rect" id="node4" href="$_bouton_fleche_8h.html" title="gadgets/BoutonFleche.h" alt="" coords="207,95,370,121"/>
+<area shape="rect" id="node17" href="$_bouton_8h.html" title="gadgets/Bouton.h" alt="" coords="575,95,699,121"/>
+<area shape="rect" id="node18" href="$_champ_texte_8h.html" title="gadgets/ChampTexte.h" alt="" coords="395,95,551,121"/>
+<area shape="rect" id="node5" href="$_gadget_8h.html" title="Gadget.h" alt="" coords="362,169,437,196"/>
+<area shape="rect" id="node10" href="$_action_8h.html" title="Action.h" alt="" coords="289,244,360,271"/>
+<area shape="rect" id="node15" href="$_skin_8h.html" title="Skin.h" alt="" coords="445,244,503,271"/>
+<area shape="rect" id="node16" href="$_style_8h.html" title="Style.h" alt="" coords="533,319,596,345"/>
 </map>

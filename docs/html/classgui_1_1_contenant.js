@@ -4,6 +4,7 @@ var classgui_1_1_contenant =
     [ "~Contenant", "classgui_1_1_contenant.html#a04a02e4266c5299c287e68e26e38f788", null ],
     [ "actualiser", "classgui_1_1_contenant.html#a16df426a021d5a8fbb0f4149e53fda90", null ],
     [ "ajouter", "classgui_1_1_contenant.html#aa48820e461cc123973255ce7ee202f92", null ],
+    [ "contient", "classgui_1_1_contenant.html#a1780fbb691e77ecd96fe85949e63edb6", null ],
     [ "draw", "classgui_1_1_contenant.html#a4728b85df32276caae0a51d3c7c47973", null ],
     [ "getContenuBounds", "classgui_1_1_contenant.html#a4eb7dd3d7f12052c4c6e481e0308e318", null ],
     [ "getGlobalBounds", "classgui_1_1_contenant.html#a6e3ab5e79636f350c1ab5d04efaae38e", null ],

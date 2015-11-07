@@ -38,6 +38,7 @@ void EcranDemo::traiter_evenements  ( const sf::Event& event )
 {
     // Evenements du jeu ...
 
+
     // Evenements de l'interface
     m_gui->traiter_evenements    ( event );
 
@@ -51,6 +52,7 @@ void EcranDemo::traiter_evenements  ( const sf::Event& event )
     // Resize the window
     if (event.type ==  sf::Event::Resized)
     {
+
         m_vueJeu.setSize    (event.size.width, event.size.height);
         m_vueGUI.setSize    (event.size.width, event.size.height);
 

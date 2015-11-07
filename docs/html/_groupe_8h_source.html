@@ -138,56 +138,40 @@ $(document).ready(function(){initNavTree('_groupe_8h_source.html','');});
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classgui_1_1_groupe.html#afb485d34e0a657b856b6ed9d4e930b75">draw</a>( sf::RenderTarget&amp; target, sf::RenderStates states ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span><span class="comment">//bool</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">//contient ( float x, float y )</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">//{</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//    sf::FloatRect rect  = getGlobalBounds();</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span><span class="comment">//</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">//std::cout &lt;&lt; &quot;Groupe -&gt; &quot; &lt;&lt; rect.left &lt;&lt; &quot; &quot; &lt;&lt; rect.top &lt;&lt; &quot; &quot; &lt;&lt; rect.width &lt;&lt; &quot; &quot;&lt;&lt; rect.height &lt;&lt; &quot; ------&gt; &quot;;</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">//    // S&#39;il est contenu alors on verif le parent pour savoir par exemple si</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">//    // le gadget est visible dans la fenetre parent.</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//    if ( rect.contains( sf::Vector2f ( x , y ) ) ){</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">//            std::cout &lt;&lt; &quot;TRUE\n&quot;;</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">//        if ( m_parent != 0 )    return  m_parent-&gt;contient ( x, y );</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">//        else                    return  true;</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//    } else {</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">//            std::cout &lt;&lt; &quot;FALSE\n&quot;;</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">//        return false;</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">//    }</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//};</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// Les membres</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classgui_1_1_groupe.html#a915341f03d7eed6e73f85c1e18730f25">   91</a></span>&#160;<span class="comment"></span>    sf::Vector2f            <a class="code" href="classgui_1_1_groupe.html#a915341f03d7eed6e73f85c1e18730f25">m_taille</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classgui_1_1_groupe.html#ae5f9b2c8efbca789f858eb4dbf7be03a">contient</a> ( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// Les membres</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classgui_1_1_groupe.html#a915341f03d7eed6e73f85c1e18730f25">   67</a></span>&#160;<span class="comment"></span>    sf::Vector2f            <a class="code" href="classgui_1_1_groupe.html#a915341f03d7eed6e73f85c1e18730f25">m_taille</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif // GROUPE_H</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif // GROUPE_H</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="ttc" id="classgui_1_1_groupe_html_ae814af8e2bc6650b6a9e06a91e515d40"><div class="ttname"><a href="classgui_1_1_groupe.html#ae814af8e2bc6650b6a9e06a91e515d40">gui::Groupe::setSize</a></div><div class="ttdeci">void setSize(sf::Vector2f taille)</div><div class="ttdoc">Acceder à la taille du gadget. </div><div class="ttdef"><b>Definition:</b> Groupe.cpp:92</div></div>
-<div class="ttc" id="classgui_1_1_groupe_html_abe6ed92c02e4be00f631a0223acf12f9"><div class="ttname"><a href="classgui_1_1_groupe.html#abe6ed92c02e4be00f631a0223acf12f9">gui::Groupe::getSize</a></div><div class="ttdeci">sf::Vector2f getSize() const </div><div class="ttdoc">Accesseur de la taille. </div><div class="ttdef"><b>Definition:</b> Groupe.cpp:86</div></div>
+<div class="ttc" id="classgui_1_1_groupe_html_ae814af8e2bc6650b6a9e06a91e515d40"><div class="ttname"><a href="classgui_1_1_groupe.html#ae814af8e2bc6650b6a9e06a91e515d40">gui::Groupe::setSize</a></div><div class="ttdeci">void setSize(sf::Vector2f taille)</div><div class="ttdoc">Acceder à la taille du gadget. </div><div class="ttdef"><b>Definition:</b> Groupe.cpp:122</div></div>
+<div class="ttc" id="classgui_1_1_groupe_html_abe6ed92c02e4be00f631a0223acf12f9"><div class="ttname"><a href="classgui_1_1_groupe.html#abe6ed92c02e4be00f631a0223acf12f9">gui::Groupe::getSize</a></div><div class="ttdeci">sf::Vector2f getSize() const </div><div class="ttdoc">Accesseur de la taille. </div><div class="ttdef"><b>Definition:</b> Groupe.cpp:116</div></div>
 <div class="ttc" id="namespacegui_html"><div class="ttname"><a href="namespacegui.html">gui</a></div><div class="ttdef"><b>Definition:</b> GUI.cpp:9</div></div>
 <div class="ttc" id="classgui_1_1_gadget_html"><div class="ttname"><a href="classgui_1_1_gadget.html">gui::Gadget</a></div><div class="ttdoc">Classe virtuelle, la base commune aux gadgets formant l&#39;interface. </div><div class="ttdef"><b>Definition:</b> Gadget.h:22</div></div>
-<div class="ttc" id="classgui_1_1_groupe_html_a08b4747002ba471a6b2a7ae29b83646d"><div class="ttname"><a href="classgui_1_1_groupe.html#a08b4747002ba471a6b2a7ae29b83646d">gui::Groupe::getLocalBounds</a></div><div class="ttdeci">sf::FloatRect getLocalBounds() const </div><div class="ttdoc">Accesseur de la boundingBox locale. </div><div class="ttdef"><b>Definition:</b> Groupe.cpp:65</div></div>
+<div class="ttc" id="classgui_1_1_groupe_html_a08b4747002ba471a6b2a7ae29b83646d"><div class="ttname"><a href="classgui_1_1_groupe.html#a08b4747002ba471a6b2a7ae29b83646d">gui::Groupe::getLocalBounds</a></div><div class="ttdeci">sf::FloatRect getLocalBounds() const </div><div class="ttdoc">Accesseur de la boundingBox locale. </div><div class="ttdef"><b>Definition:</b> Groupe.cpp:95</div></div>
 <div class="ttc" id="classgui_1_1_groupe_html_a736fd77452318eeaffbf3f882544287e"><div class="ttname"><a href="classgui_1_1_groupe.html#a736fd77452318eeaffbf3f882544287e">gui::Groupe::Groupe</a></div><div class="ttdeci">Groupe()</div><div class="ttdef"><b>Definition:</b> Groupe.cpp:11</div></div>
-<div class="ttc" id="classgui_1_1_groupe_html_a915341f03d7eed6e73f85c1e18730f25"><div class="ttname"><a href="classgui_1_1_groupe.html#a915341f03d7eed6e73f85c1e18730f25">gui::Groupe::m_taille</a></div><div class="ttdeci">sf::Vector2f m_taille</div><div class="ttdef"><b>Definition:</b> Groupe.h:91</div></div>
-<div class="ttc" id="classgui_1_1_groupe_html_afb485d34e0a657b856b6ed9d4e930b75"><div class="ttname"><a href="classgui_1_1_groupe.html#afb485d34e0a657b856b6ed9d4e930b75">gui::Groupe::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target, sf::RenderStates states) const </div><div class="ttdoc">Rendre les éléments. </div><div class="ttdef"><b>Definition:</b> Groupe.cpp:100</div></div>
+<div class="ttc" id="classgui_1_1_groupe_html_ae5f9b2c8efbca789f858eb4dbf7be03a"><div class="ttname"><a href="classgui_1_1_groupe.html#ae5f9b2c8efbca789f858eb4dbf7be03a">gui::Groupe::contient</a></div><div class="ttdeci">virtual bool contient(float x, float y)</div><div class="ttdoc">Renvois si le point (x,y) est contenu dans le gadget. </div><div class="ttdef"><b>Definition:</b> Groupe.cpp:20</div></div>
+<div class="ttc" id="classgui_1_1_groupe_html_a915341f03d7eed6e73f85c1e18730f25"><div class="ttname"><a href="classgui_1_1_groupe.html#a915341f03d7eed6e73f85c1e18730f25">gui::Groupe::m_taille</a></div><div class="ttdeci">sf::Vector2f m_taille</div><div class="ttdef"><b>Definition:</b> Groupe.h:67</div></div>
+<div class="ttc" id="classgui_1_1_groupe_html_afb485d34e0a657b856b6ed9d4e930b75"><div class="ttname"><a href="classgui_1_1_groupe.html#afb485d34e0a657b856b6ed9d4e930b75">gui::Groupe::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target, sf::RenderStates states) const </div><div class="ttdoc">Rendre les éléments. </div><div class="ttdef"><b>Definition:</b> Groupe.cpp:130</div></div>
 <div class="ttc" id="_gadget_8h_html"><div class="ttname"><a href="_gadget_8h.html">Gadget.h</a></div></div>
-<div class="ttc" id="classgui_1_1_groupe_html_a0864f0a85cefb3a2268bb69f7046f5b9"><div class="ttname"><a href="classgui_1_1_groupe.html#a0864f0a85cefb3a2268bb69f7046f5b9">gui::Groupe::getGlobalBounds</a></div><div class="ttdeci">sf::FloatRect getGlobalBounds() const </div><div class="ttdoc">Accesseur de la boundingBox globale. </div><div class="ttdef"><b>Definition:</b> Groupe.cpp:21</div></div>
+<div class="ttc" id="classgui_1_1_groupe_html_a0864f0a85cefb3a2268bb69f7046f5b9"><div class="ttname"><a href="classgui_1_1_groupe.html#a0864f0a85cefb3a2268bb69f7046f5b9">gui::Groupe::getGlobalBounds</a></div><div class="ttdeci">sf::FloatRect getGlobalBounds() const </div><div class="ttdoc">Accesseur de la boundingBox globale. </div><div class="ttdef"><b>Definition:</b> Groupe.cpp:51</div></div>
 <div class="ttc" id="classgui_1_1_groupe_html"><div class="ttname"><a href="classgui_1_1_groupe.html">gui::Groupe</a></div><div class="ttdoc">Gadget Un élément invisible permettant de rassembler des Gadgets. </div><div class="ttdef"><b>Definition:</b> Groupe.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

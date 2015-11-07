@@ -165,20 +165,6 @@ public:
     aligner (  Gadget& cible , Alignements    align  = Alignements::Ctre_Mili , float ecart = 0 );
 
 
-//    /////////////////////////////////////////////////
-//    /// \brief Aligne le gadget dans une fenêtre SFML.
-//    ///
-//    /// \param  cible   Fenetre SFML sur laquelle s'aligner.
-//    /// \param  align   l'alignement sur la cible ( haut_gauche ...
-//    /// \param  ecart   distance a conserver.
-//    ///
-//    /// return Rien
-//    ///
-//    /////////////////////////////////////////////////
-//    void
-//    aligner (  sf::RenderWindow*   cible , Alignements    align  = Alignements::Ctre_Mili , float ecart = 0 );
-
-
     /////////////////////////////////////////////////
     /// \brief Definir l'état du Gadget.
     ///
@@ -337,7 +323,7 @@ protected:
     std::vector< ptr >      m_enfants;      ///< Les enfants du bouton.
     std::shared_ptr<Skin>   m_skin;         ///< le skin du gadget.
     std::shared_ptr<Style>  m_style;        ///< le style du gadget.
-    bool                    m_actif;       ///< si le gadget est actif ou pas. ( visible mais pas utilisable. )
+    bool                    m_actif;        ///< si le gadget est actif ou pas. ( visible mais pas utilisable. )
     bool                    m_visible;      ///< si le gadget est visible ou pas.
     bool                    m_aSupprimer;   ///< On le passe à true quand on veut supprimer ce gadget (il sera supprimé par son parent au debut de l'actualisation).
     bool                    m_aActualiser;  ///< Si on a changer un truc qui necessite d'actualiser la geometrie, couleur... du gadget (comme un resize ou pendant le survol d'un bouton par exemple).

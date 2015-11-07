@@ -1,9 +1,10 @@
 <map id="gui::Gadget::contient" name="gui::Gadget::contient">
-<area shape="rect" id="node2" href="$classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="441,8,596,34"/>
-<area shape="rect" id="node4" href="$classgui_1_1_bouton.html#a516b56a17aecfebb808ab94bfab93325" title="La gestion du survol. " alt="" coords="203,37,387,64"/>
-<area shape="rect" id="node6" href="$classgui_1_1_bouton.html#af78a304e8e9973e54d008f13e2b91168" title="La gestion du survol. " alt="" coords="203,88,386,114"/>
-<area shape="rect" id="node7" href="$classgui_1_1_bouton.html#ad21bb5a674b5e5472535090adc3a4274" title="La gestion du survol. " alt="" coords="197,138,393,165"/>
-<area shape="rect" id="node8" href="$classgui_1_1_bouton.html#a97acf4dc98b7a574a80c45539fafb47d" title="La gestion du survol. " alt="" coords="196,190,393,231"/>
-<area shape="rect" id="node3" href="$classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="644,40,773,82"/>
-<area shape="rect" id="node5" href="$classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714" title="gui::Bouton::gerer\l_declenchements" alt="" coords="456,80,581,122"/>
+<area shape="rect" id="node2" href="$classgui_1_1_contenant.html#a1780fbb691e77ecd96fe85949e63edb6" title="Renvois si le point (x,y) est contenu dans le gadget. " alt="" coords="215,5,375,32"/>
+<area shape="rect" id="node3" href="$classgui_1_1_bouton.html#acedddb0167843e9a2d039ad8113d9ae8" title="gui::Bouton::gerer_etat" alt="" coords="441,77,596,104"/>
+<area shape="rect" id="node5" href="$classgui_1_1_bouton.html#a516b56a17aecfebb808ab94bfab93325" title="La gestion du survol. " alt="" coords="203,107,387,133"/>
+<area shape="rect" id="node7" href="$classgui_1_1_bouton.html#af78a304e8e9973e54d008f13e2b91168" title="La gestion du survol. " alt="" coords="203,157,386,184"/>
+<area shape="rect" id="node8" href="$classgui_1_1_bouton.html#ad21bb5a674b5e5472535090adc3a4274" title="La gestion du survol. " alt="" coords="197,208,393,235"/>
+<area shape="rect" id="node9" href="$classgui_1_1_bouton.html#a97acf4dc98b7a574a80c45539fafb47d" title="La gestion du survol. " alt="" coords="196,259,393,301"/>
+<area shape="rect" id="node4" href="$classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="644,110,773,151"/>
+<area shape="rect" id="node6" href="$classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714" title="gui::Bouton::gerer\l_declenchements" alt="" coords="456,150,581,191"/>
 </map>

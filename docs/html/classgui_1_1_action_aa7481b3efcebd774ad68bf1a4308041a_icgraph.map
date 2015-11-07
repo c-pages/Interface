@@ -8,9 +8,10 @@
 <area shape="rect" id="node11" href="$classgui_1_1_fenetre.html#a61f7df8ef475ee9f9019e8c17843f758" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="465,384,593,411"/>
 <area shape="rect" id="node13" href="$classgui_1_1_fenetre.html#afcc8d0c333333142239abf21d1e8bfc6" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="243,406,371,447"/>
 <area shape="rect" id="node14" href="$classgui_1_1_fenetre_encastree.html#a1f8d587d23c5aebe457f828575279a31" title="Initialiser les gadgets ( boutons, titre...). " alt="" coords="453,494,604,535"/>
-<area shape="rect" id="node15" href="$classgui_1_1_fenetre_encastree.html#aaa900b28f22ddaf34dbc346439a9eb76" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="231,523,382,565"/>
+<area shape="rect" id="node16" href="$classgui_1_1_fenetre_encastree.html#aaa900b28f22ddaf34dbc346439a9eb76" title="Initialiser l&#39;interface pour le bouton fermer. " alt="" coords="231,523,382,565"/>
 <area shape="rect" id="node3" href="$classgui_1_1_bouton.html#a2bddc860b09865f9b96aac1f0e354714" title="gui::Bouton::gerer\l_declenchements" alt="" coords="466,74,591,115"/>
-<area shape="rect" id="node4" href="$classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="659,74,788,115"/>
+<area shape="rect" id="node4" href="$classgui_1_1_bouton.html#a86f25f637d31c49cbc128bbeb62b01ac" title="La gestion des évènements utilisateurs. " alt="" coords="663,74,792,115"/>
 <area shape="rect" id="node9" href="$classgui_1_1_bouton_encoche.html#af091f97a68863b3975199b39f0797335" title="Constructeur. " alt="" coords="459,223,598,265"/>
-<area shape="rect" id="node12" href="$classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="652,384,795,411"/>
+<area shape="rect" id="node12" href="$classgui_1_1_fenetre.html#a76363e8f7827b09afd93cbeef13986fc" title="Constructeur. " alt="" coords="656,384,799,411"/>
+<area shape="rect" id="node15" href="$classgui_1_1_fenetre_encastree.html#a34239916742c4c51d29e49ee18fccd30" title="gui::FenetreEncastree\l::FenetreEncastree" alt="" coords="652,494,803,535"/>
 </map>
