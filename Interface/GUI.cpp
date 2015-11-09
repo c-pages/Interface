@@ -21,9 +21,15 @@ void
 init()
 {
     // init des icones
-    icoMngr.charger( Icone::Fermer      , "../Interface/media/img/ico_fermer.png" );
-    icoMngr.charger( Icone::FlecheBas   , "../Interface/media/img/ico_flecheBas.png" );
-    icoMngr.charger( Icone::FlecheHaut  , "../Interface/media/img/ico_flecheHaut.png" );
+    icoMngr.charger( Icone::Fermer          , "../Interface/media/img/ico_fermer.png" );
+    icoMngr.charger( Icone::FlecheBas       , "../Interface/media/img/ico_flecheBas.png" );
+    icoMngr.charger( Icone::FlecheHaut       , "../Interface/media/img/ico_flecheHaut.png" );
+
+    // init des curseurs
+    icoMngr.charger( Curseur::redim_diag1   , "../Interface/media/img/curseur_fleches_diag1.png" );
+    icoMngr.charger( Curseur::redim_diag2   , "../Interface/media/img/curseur_fleches_diag2.png" );
+    icoMngr.charger( Curseur::redim_hori   , "../Interface/media/img/curseur_fleches_hori.png" );
+    icoMngr.charger( Curseur::redim_vert   , "../Interface/media/img/curseur_fleches_verti.png" );
 }
 
 

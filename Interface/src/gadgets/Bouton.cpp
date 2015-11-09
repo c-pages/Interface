@@ -51,9 +51,13 @@ Bouton::~Bouton()
 { }
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 ///////////////////////////////////////////////////
 void
 Bouton::setIcone   ( const sf::Texture*   texture ){
+
     m_bIcone = true;
     sf::Vector2f tailleTexture;
 
@@ -63,6 +67,33 @@ Bouton::setIcone   ( const sf::Texture*   texture ){
 
     m_aActualiser = true;
 }
+
+
+/////////////////////////////////////////////////
+void
+Bouton::setFillColor ( sf::Color color )   {
+    m_fond->setFillColor   ( color ) ;
+    m_aActualiser = true;
+}
+
+
+/////////////////////////////////////////////////
+void
+Bouton::setOutlineColor  ( sf::Color color ) {
+    m_fond->setOutlineColor    ( color ) ;
+    m_aActualiser = true;
+}
+
+/////////////////////////////////////////////////
+void
+Bouton::setOutlineThickness  ( float epaisseur )   {
+    m_fond->setOutlineThickness    ( epaisseur ) ;
+    m_aActualiser = true;
+} ;
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 /////////////////////////////////////////////////
@@ -90,29 +121,6 @@ Bouton::getSize ( )const {
     return m_fond->getSize();
     //return { m_fond->getLocalBounds().width , m_fond->getLocalBounds().height };
 }
-
-
-/////////////////////////////////////////////////
-void
-Bouton::setFillColor ( sf::Color color )   {
-    m_fond->setFillColor   ( color ) ;
-    m_aActualiser = true;
-}
-
-
-/////////////////////////////////////////////////
-void
-Bouton::setOutlineColor  ( sf::Color color ) {
-    m_fond->setOutlineColor    ( color ) ;
-    m_aActualiser = true;
-}
-
-/////////////////////////////////////////////////
-void
-Bouton::setOutlineThickness  ( float epaisseur )   {
-    m_fond->setOutlineThickness    ( epaisseur ) ;
-    m_aActualiser = true;
-} ;
 
 
 /////////////////////////////////////////////////
@@ -164,6 +172,12 @@ Bouton::getGlobalBounds ( ) const{
 }
 
 
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 /////////////////////////////////////////////////
 void
 Bouton::majGeom( )    {
@@ -178,82 +192,6 @@ Bouton::majGeom( )    {
     m_aActualiser = true;
 }
 
-
-/////////////////////////////////////////////////
-void
-Bouton::traiter_evenements ( const sf::Event& event )
-{
-    // si actif et visible,
-    if ( estActif() and estVisible() )  {
-        // on s'occupe des declenchements
-        gerer_declenchements ( event ) ;
-
-        // et on s'occupe de l'état du bouton
-        gerer_etat          ( event ) ;
-
-    /*
-//
-//    // si le gadget est actif
-//    if (m_actif) {
-//
-//        // on regarde à quel type d'événement on a affaire
-//        switch ( event.type )  {
-//
-//            /////////////////////////////////////////////////
-//            case sf::Event::MouseMoved : {
-//                test_Survol ( event );
-//            }break;
-//
-//            /////////////////////////////////////////////////
-//            case sf::Event::MouseButtonPressed : {
-//                test_Press( event );
-//            } break;
-//
-//            /////////////////////////////////////////////////
-//            case sf::Event::MouseButtonReleased : {
-//                test_Relache( event );
-//            } break;
-//
-//            ////////////////////////////////////////////////
-//            case sf::Event::MouseWheelMoved : {
-//                test_RouletteSouris( event );
-//            } break;
-//
-//            default :{ } break;
-//
-//        } // fin switch ( event.type )
-//
-//
-//
-//
-//        //  si l'état a changé alors on a besoin d'une actualisation ...
-//        if ( m_etat != m_etatBack )
-//                m_aActualiser = true;
-//
-//        // on garde en memoire l'état actuel pour verifer si changement la prochaine fois.
-//        m_etatBack = m_etat;
-//
-//
-//
-//
-//        // Gestion double clique, on regarde si on a deja cliqué sur le bouton
-//        // et si 300 millisecondes se sont écoulées, si true alors on reset le compteur de temps du double clique.
-//        if ( m_1erClick  &&     m_clock_dblClique.getElapsedTime().asMilliseconds () > 300 )
-//             m_1erClick = false;
-//
-//    } // fin if (_enable)
-//    else  m_etat = EtatBouton::desactive;  // sinon état désactivé
-//
-*/
-
-        Action::traiter_evenements( event );
-
-    } else if  ( estVisible() ){
-        // et on s'occupe de l'état du bouton
-      //  gerer_etat          ( event ) ;
-    }
-
-}
 
 
 /////////////////////////////////////////////////
@@ -276,11 +214,6 @@ Bouton::gerer_etat( const sf::Event& event )
     and  event.type != sf::Event::MouseEntered
     and  event.type != sf::Event::MouseLeft )
         return;
-
-
-
-
-
 
 
 
@@ -324,8 +257,6 @@ Bouton::gerer_etat( const sf::Event& event )
     // on garde en memoire l'état actuel pour verifer si changement la prochaine fois.
     m_etatBack = m_etat;
 
-//std::cout << "ms_btnPress : "<< ms_btnPress << "\n";
-  //  std::cout << "ETAT : "<< m_etat << "\n";
 }
 
 
@@ -442,11 +373,6 @@ Bouton::test_declPress(  const sf::Event& event  ) {
 }
 
 
-
-
-
-
-
 /////////////////////////////////////////////////
 void
 Bouton::test_declRelache(  const sf::Event& event  ) {
@@ -529,12 +455,45 @@ Bouton::test_declRouletteSouris(  const sf::Event& event  ) {
 
 
 
+
+
+
+
+/////////////////////////////////////////////////
+void
+Bouton::traiter_evenements ( const sf::Event& event )
+{
+    // si actif et visible,
+    if ( estActif() and estVisible() )  {
+
+        // on s'occupe des declenchements
+        gerer_declenchements ( event ) ;
+
+        // et on s'occupe de l'état du bouton
+        gerer_etat          ( event ) ;
+
+        // on s'occupe des evenements clavier de la classe action
+        Action::traiter_evenements( event );
+
+    }
+    // et on s'occupe de l'état du bouton
+    gerer_etat          ( event ) ;
+
+}
+
+
+
+
 /////////////////////////////////////////////////
 void
 Bouton::actualiser ( float deltaT )
 {
     // si il n'y a pas eu de changement sur le dessin du gadget on passe.
     if ( not m_aActualiser ) return;
+
+    // on reinitialise le besoin d'actualiser.
+    m_aActualiser = false;
+
 
     // on definie le style en fonction de l'état du bouton
     switch ( m_etat ) {
@@ -558,10 +517,9 @@ Bouton::actualiser ( float deltaT )
             m_style = m_skin->btnPress;
             majGeom( );
         } break;
+
     }
 
-    // on reinitialise le besoin d'actualiser.
-    m_aActualiser = false;
 
 }
 

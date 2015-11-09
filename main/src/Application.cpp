@@ -6,7 +6,7 @@
 #include "Application.h"
 #include "Config.h"
 #include "ecrans/EcranDemo.h"
-
+#include <SFML/System.hpp>
 
 namespace app
 {
@@ -45,6 +45,8 @@ void    Application::executer()
 
     sf::Clock   horloge;
     sf::Time    tempsDepuisMAJ = sf::Time::Zero;
+
+//sf::sleep( sf::seconds(0.005f)) ;
 
     while ( m_fenetre.isOpen() )
     {

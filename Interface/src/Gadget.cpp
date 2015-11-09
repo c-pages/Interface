@@ -14,10 +14,12 @@ Gadget::Gadget  ()
 , m_enfants     ( 0 )
 , m_skin        ( std::make_shared <Skin> () )
 , m_style       ( std::make_shared <Style> () )
-, m_actif      ( true )
+, m_actif       ( true )
 , m_visible     ( true )
 , m_aSupprimer  ( false )
 , m_aActualiser ( true )
+, m_id          ( 0 )
+//, m_this        ( std::make_shared<Gadget>(this) )
 //, m_DEBUG_SHAPE ( sf::RectangleShape () )
 //, m_texte   ( new sf::Text () )
 {
@@ -40,6 +42,7 @@ Gadget::Gadget  ( std::shared_ptr<Style>    style )
 , m_visible     ( true )
 , m_aSupprimer  ( false )
 , m_aActualiser ( true )
+, m_id          ( 0 )
 {
 
 }
@@ -54,6 +57,7 @@ Gadget::Gadget  ( std::shared_ptr <Skin>    skin )
 , m_visible     ( true )
 , m_aSupprimer  ( false )
 , m_aActualiser( true )
+, m_id          ( 0 )
 {
 
 }
@@ -79,10 +83,25 @@ Gadget::getPosAbs (  )  const      {
 void
 Gadget::ajouter ( ptr enfant ) {
 
+    enfant->setID   ( m_enfants.size() );
     m_enfants.push_back(  enfant );
     enfant->m_parent = this;
+
 }
 
+
+/////////////////////////////////////////////////
+unsigned int
+Gadget::getID (  ) const {
+    return m_id ;
+};
+
+
+/////////////////////////////////////////////////
+void
+Gadget::setID( unsigned int id ) {
+    m_id = id;
+}
 
 /////////////////////////////////////////////////
 void
@@ -163,6 +182,40 @@ Gadget::aligner (  Gadget& cible , Alignements    align , float ecart  ){
     }
 }
 
+/////////////////////////////////////////////////
+void
+Gadget::demander_mettreAuDessus( )
+{
+    m_parent->mettreAuDessus(  m_id );
+}
+
+
+
+
+
+/////////////////////////////////////////////////
+void
+Gadget::mettreAuDessus( unsigned int ID )
+{
+    // on cherche l'id du gadget à mannipuler
+    ptr     thisPtr = nullptr;
+    for ( auto cible : m_enfants )
+        if ( cible->getID() == ID )
+            thisPtr = cible;
+
+    // on le deplace dans le tableau pour le mettre à la fin
+    if ( thisPtr != nullptr ){
+        m_enfants.erase ( m_enfants.begin() + ID );
+        m_enfants.push_back ( thisPtr );
+    }
+
+    // on actualise les id de la liste
+    int i = 0;
+    for ( auto cible : m_enfants )
+        cible->setID(i++);
+
+
+}
 
 /*
 ///////////////////////////////////////////////////

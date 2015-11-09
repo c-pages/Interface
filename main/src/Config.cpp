@@ -45,7 +45,7 @@ Config::getDureeImage()
 /////////////////////////////////////////////////
 void Config::init()
 {
-    m_dureeImage =     sf::seconds (1.f / 60.f);
+    m_dureeImage =     sf::seconds (1.f / 20.f);
 
     initPolices();
     initTextures();

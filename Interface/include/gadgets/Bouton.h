@@ -51,7 +51,7 @@ public:
     ///
     /////////////////////////////////////////////////
     Bouton ( std::shared_ptr<Skin>  skin
-           , sf::Vector2f           taille = { 10 , 10 });
+           , sf::Vector2f           taille = { 10 , 10 } );
 
 
     /////////////////////////////////////////////////
@@ -59,6 +59,10 @@ public:
     ///
     /////////////////////////////////////////////////
     virtual ~Bouton();
+
+
+
+
 
 
     /////////////////////////////////////////////////
@@ -70,44 +74,6 @@ public:
     /////////////////////////////////////////////////
     virtual     void
     setIcone   ( const sf::Texture*   texture );
-
-
-    /////////////////////////////////////////////////
-    /// \brief Definir la taille du bouton.
-    ///
-    /// \param taille     La nouvelle taille.
-    /// \return Rien
-    ///
-    /////////////////////////////////////////////////
-    virtual     void
-    setSize   ( sf::Vector2f   taille );
-
-    /////////////////////////////////////////////////
-    /// \brief Accesseur de la taille
-    ///
-    /// \return La taille
-    ///
-    /////////////////////////////////////////////////
-    virtual sf::Vector2f
-    getSize ( ) const ;
-
-    /////////////////////////////////////////////////
-    /// \brief Accesseur de la boundingBox en local
-    ///
-    /// \return La boundingBox
-    ///
-    /////////////////////////////////////////////////
-    virtual sf::FloatRect
-    getLocalBounds ( ) const;
-
-    /////////////////////////////////////////////////
-    /// \brief Accesseur de la boundingBox en global
-    ///
-    /// \return  La boundingBox
-    ///
-    /////////////////////////////////////////////////
-    virtual sf::FloatRect
-    getGlobalBounds ( ) const;
 
     /////////////////////////////////////////////////
     /// \brief Definir Couleur du fond.
@@ -149,6 +115,51 @@ public:
     /////////////////////////////////////////////////
     virtual void
     setSkin( std::shared_ptr<Skin>     skin );
+
+
+
+
+
+
+
+
+    /////////////////////////////////////////////////
+    /// \brief Definir la taille du bouton.
+    ///
+    /// \param taille     La nouvelle taille.
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    virtual     void
+    setSize   ( sf::Vector2f   taille );
+
+    /////////////////////////////////////////////////
+    /// \brief Accesseur de la taille
+    ///
+    /// \return La taille
+    ///
+    /////////////////////////////////////////////////
+    virtual sf::Vector2f
+    getSize ( ) const ;
+
+    /////////////////////////////////////////////////
+    /// \brief Accesseur de la boundingBox en local
+    ///
+    /// \return La boundingBox
+    ///
+    /////////////////////////////////////////////////
+    virtual sf::FloatRect
+    getLocalBounds ( ) const;
+
+    /////////////////////////////////////////////////
+    /// \brief Accesseur de la boundingBox en global
+    ///
+    /// \return  La boundingBox
+    ///
+    /////////////////////////////////////////////////
+    virtual sf::FloatRect
+    getGlobalBounds ( ) const;
+
 
     /////////////////////////////////////////////////
     /// \brief Definir la bordure du texte
@@ -219,11 +230,17 @@ public:
 
 
 
+
+
+
     void
     gerer_declenchements( const sf::Event& event );
 
     void
     gerer_etat( const sf::Event& event );
+
+
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -272,10 +289,14 @@ protected:
     virtual void
     majGeom ( );
 
-    /////////////////////////////////////////////////
-    // Les membres static
-    /////////////////////////////////////////////////
+
+
 public:
+
+    /////////////////////////////////////////////////
+    // Les membres statics
+    /////////////////////////////////////////////////
+
     static  Gadget*     ms_btnSurvol;    ///< le bouton qu'on est en train de survoler, pour eviter d'en avoir plusieurs en meme temps quand ils sont l'un sur l'autre.
     static  Gadget*     ms_btnPress;     ///< le bouton qu'on est en train de presser, pour quand le relache on sache sur lequel on était...
 

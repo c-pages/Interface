@@ -264,6 +264,51 @@ public:
     virtual  bool
     contient ( float x, float y );
 
+    /////////////////////////////////////////////////
+    /// \brief
+    ///
+    /// \param
+    /// \param
+    /// \return
+    ///
+    /////////////////////////////////////////////////
+    void
+    mettreAuDessus( unsigned int ID );
+
+    /////////////////////////////////////////////////
+    /// \brief
+    ///
+    /// \param
+    /// \param
+    /// \return
+    ///
+    /////////////////////////////////////////////////
+    void
+    demander_mettreAuDessus( );
+
+    /////////////////////////////////////////////////
+    /// \brief Definir l'état du Gadget.
+    ///
+    /// \param val     bool.
+    ///
+    /// \return Rien
+    ///
+    /////////////////////////////////////////////////
+    void
+    setID ( unsigned int ID );
+
+
+    /////////////////////////////////////////////////
+    /// \brief Accesseur état du Gadget.
+    ///
+    /// \return true si le gadget est actif
+    ///
+    /////////////////////////////////////////////////
+
+unsigned int
+    getID (  ) const;
+
+
 protected:
     /////////////////////////////////////////////////
     /// \brief Actualise le model du Gadget
@@ -318,7 +363,7 @@ protected:
     friend class Fenetre;       ///< \todo corriger le code pour supuprimer ce friend (est là pour acceder aux enfants....)
     friend class Contenant;     ///< \todo corriger le code pour supuprimer ce friend (est là pour acceder aux enfants....)
 
-    std::string             m_nom;          ///< le nom du gadget, (pour l'instant on s'en sert pas mais peut etre un jour...).
+    //std::string             m_nom;          ///< le nom du gadget, (pour l'instant on s'en sert pas mais peut etre un jour...).
     Gadget*                 m_parent;       ///< le gadget m_parent.
     std::vector< ptr >      m_enfants;      ///< Les enfants du bouton.
     std::shared_ptr<Skin>   m_skin;         ///< le skin du gadget.
@@ -328,6 +373,9 @@ protected:
     bool                    m_aSupprimer;   ///< On le passe à true quand on veut supprimer ce gadget (il sera supprimé par son parent au debut de l'actualisation).
     bool                    m_aActualiser;  ///< Si on a changer un truc qui necessite d'actualiser la geometrie, couleur... du gadget (comme un resize ou pendant le survol d'un bouton par exemple).
 
+    unsigned int            m_id;
+
+    //std::shared_ptr<Gadget> m_this;
 
 //    ////////////DEBUG/////////////
 //    sf::RectangleShape      m_DEBUG_SHAPE;

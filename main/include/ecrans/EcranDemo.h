@@ -91,7 +91,8 @@ private:
 
     std::shared_ptr<gui::Groupe>        m_gui;      ///< Le groupe de GUI du menu principal.
     std::shared_ptr<gui::Label >        labelTest;
-    std::shared_ptr<gui::Bouton >       bouton;
+    std::shared_ptr<gui::Bouton >       bouton1;
+    std::shared_ptr<gui::Bouton >       bouton2;
 
 std::shared_ptr<gui::ChampTexte>  m_champ ;
     //std::shared_ptr<Gadget>
