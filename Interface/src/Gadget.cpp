@@ -182,6 +182,8 @@ Gadget::aligner (  Gadget& cible , Alignements    align , float ecart  ){
     }
 }
 
+
+
 /////////////////////////////////////////////////
 void
 Gadget::demander_mettreAuDessus( )
