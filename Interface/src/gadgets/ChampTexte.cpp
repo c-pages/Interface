@@ -268,6 +268,17 @@ ChampTexte::traiter_evenements ( const sf::Event& event )
         demanderActualisation();
     }
 
+
+
+
+    // clignotements
+    if (m_btn->estCoche() )
+        if ( m_timerClignot.getElapsedTime().asSeconds()>.5 ) {
+            m_clignot = not m_clignot;
+            m_timerClignot.restart();
+        }
+
+
 }
 
 
@@ -277,13 +288,6 @@ ChampTexte::traiter_evenements ( const sf::Event& event )
 void
 ChampTexte::actualiser ( float deltaT )
 {
-
-    // clignotements
-    if (m_btn->estCoche() )
-        if ( m_timerClignot.getElapsedTime().asSeconds()>.5 ) {
-            m_clignot = not m_clignot;
-            m_timerClignot.restart();
-        }
 
 
     m_grpUI->actualiser ( deltaT );

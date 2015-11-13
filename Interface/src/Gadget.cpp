@@ -296,6 +296,9 @@ Gadget::contient ( float x, float y )
 void
 Gadget::actualiser ( float deltaT )
 {
+
+
+
     // Supprimer les gadgets enfants en attente de suppression
     for ( int i = m_enfants.size()-1 ; i >= 0; i-- )
         if ( m_enfants[i]->aSupprimer() )

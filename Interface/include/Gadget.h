@@ -354,7 +354,6 @@ public:
     draw( sf::RenderTarget& target, sf::RenderStates states ) const;
 
 
-
     /////////////////////////////////////////////////
     // Les membres
     /////////////////////////////////////////////////
@@ -366,8 +365,10 @@ protected:
     //std::string             m_nom;          ///< le nom du gadget, (pour l'instant on s'en sert pas mais peut etre un jour...).
     Gadget*                 m_parent;       ///< le gadget m_parent.
     std::vector< ptr >      m_enfants;      ///< Les enfants du bouton.
+
     std::shared_ptr<Skin>   m_skin;         ///< le skin du gadget.
     std::shared_ptr<Style>  m_style;        ///< le style du gadget.
+
     bool                    m_actif;        ///< si le gadget est actif ou pas. ( visible mais pas utilisable. )
     bool                    m_visible;      ///< si le gadget est visible ou pas.
     bool                    m_aSupprimer;   ///< On le passe à true quand on veut supprimer ce gadget (il sera supprimé par son parent au debut de l'actualisation).

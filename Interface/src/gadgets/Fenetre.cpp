@@ -228,7 +228,7 @@ Fenetre::initUI_drag()
 {
 
     //  fonctions
-    m_fctDragDebut = [this](){
+    FuncType    m_fctDragDebut = [this](){
         m_dragging          = true;
         m_posFenetreOrig    = getPosition();
         m_posMouseOrig      = sf::Vector2f   (sf::Mouse::getPosition( *m_fenetreSFML )) ;

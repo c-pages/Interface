@@ -148,7 +148,7 @@ EcranDemo::initGUI  ()
     bouton2 = std::shared_ptr<gui::Bouton>  ( new gui::Bouton  (  skinCourant ) );
     bouton2->setPosition ( { 50 , 50 });
     bouton2->setSize ( { 120 , 120 });
-    bouton2->lier ( gui::Evenements::onBtnG_Relache , [this](){
+    bouton2->lier ( gui::Evenements::onBtnG_Press , [this](){
                   bouton2->demander_mettreAuDessus( );
        // gui::Log::print (  "Texte : " + m_champ->getTexte() );
     } );
@@ -165,7 +165,7 @@ EcranDemo::initGUI  ()
     bouton1 = std::shared_ptr<gui::Bouton>  ( new gui::Bouton  (  skinCourant ) );
     bouton1->setPosition ( { 100 , 100 });
     bouton1->setSize ( { 120 , 120 });
-    bouton1->lier ( gui::Evenements::onBtnG_Relache , [this](){
+    bouton1->lier ( gui::Evenements::onBtnG_Press , [this](){
                    bouton1->demander_mettreAuDessus( );
        // gui::Log::print (  "Texte : " + m_champ->getTexte() );
     } );

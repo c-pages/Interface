@@ -224,6 +224,16 @@ Bouton::gerer_etat( const sf::Event& event )
     else    survol = contient( event.mouseButton.x  , event.mouseButton.y );
 
 
+/*
+
+    if ( survol ) {
+        if ( ms_btnSurvol == nullptr  or  ms_btnSurvol->getID() < m_id ) {
+            std::cout << "mettre au dessus : " << m_id  << " "
+            ms_btnSurvol == this;
+        } else survol = false;
+    }
+
+*/
 
 
 

@@ -109,20 +109,7 @@ BoutonSlide::creerUI()
             else
                 m_btnSlide->move ( 0 , -decalage );
         }
-//
 
-
-//
-//        if ( m_orientation == Orientation::Horizontale)
-//            m_btnSlide->setPosition (     {   m_posBtnOrig.x +  mousePos.x - m_posMouseOrig.x , 0 } ) ;
-//        if ( m_orientation == Orientation::Verticale)
-//            m_btnSlide->setPosition (     {  0,  m_posBtnOrig.y +  m_posMouseOrig.y } ) ;
-//
-
-
-//        //m_drag  = false;
-//        m_posMouseOrig  = sf::Vector2f   (sf::Mouse::getPosition( *m_fenetreSFML )) ;
-//        m_btnSlide->setPosition ( m_posMouseOrig ) ;
         m_aActualiser = true;
         majGeom();
 

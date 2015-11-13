@@ -17,8 +17,6 @@ std::map < Config::Styles , std::shared_ptr<gui::Style>>    Config::m_styles = {
 
 
 
-
-
 /////////////////////////////////////////////////
 Config::Config()
 {
@@ -45,6 +43,7 @@ Config::getDureeImage()
 /////////////////////////////////////////////////
 void Config::init()
 {
+
     m_dureeImage =     sf::seconds (1.f / 20.f);
 
     initPolices();
