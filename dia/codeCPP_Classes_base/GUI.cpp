@@ -1,0 +1,45 @@
+/////////////////////////////////////////////////
+// Headers
+/////////////////////////////////////////////////
+#include <GUI.h>
+
+
+
+namespace gui {
+
+/////////////////////////////////////////////////
+void GUI::init ()
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+void GUI::traiterEvenements (const sf::Event&  evenement)
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+void GUI::draw (sf::RenderTarget& target, sf::RenderStates states) const
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+GUI::GUI (sf::RenderWindow fenetreSFML)
+: creer (  )
+, m_gestRessources (  )
+, m_gadgets (  )
+, m_enfants (  )
+, m_fenetreSFML (  )
+, m_skin (  )
+{
+    
+}
+
+
+} // fin namespace gui
+

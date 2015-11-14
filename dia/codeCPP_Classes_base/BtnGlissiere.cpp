@@ -1,0 +1,78 @@
+/////////////////////////////////////////////////
+// Headers
+/////////////////////////////////////////////////
+#include <BtnGlissiere.h>
+
+
+
+namespace gui {
+
+/////////////////////////////////////////////////
+BtnGlissiere::BtnGlissiere (ptr parent, Orientation orientation)
+: m_orientation ( Verticale ou Horizontale )
+, m_longueurglissiere (  )
+, m_btnDrag ( new () )
+, m_btnFond ( new () )
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+void BtnGlissiere::setGlissiereLongueur (int )
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+int BtnGlissiere::getGlissierePos ()
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+virtual void BtnGlissiere::actualiser ()
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+virtual void BtnGlissiere::traiter_evenements (const sf::Event& evenement)
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+void BtnGlissiere::init ()
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+void BtnGlissiere::init_skin ()
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+void BtnGlissiere::init_interactions ()
+{
+    
+}
+
+
+/////////////////////////////////////////////////
+virtual void BtnGlissiere::actualiser_bounds ()
+{
+    
+}
+
+
+} // fin namespace gui
+
